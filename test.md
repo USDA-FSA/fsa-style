@@ -6,3 +6,5 @@
 * Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
 * Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com
 * Sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Added this line on `master` Branch, let's copy it to `rebase-sample` Branch.
