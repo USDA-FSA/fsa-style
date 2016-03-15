@@ -1,33 +1,18 @@
 # FSA Design System
 
-The **FSA Design System** is an Open Source product of HTML/CSS components and an accompanying Visual Style Guide for use on USDA-FSA web sites and apps.
+The **FSA Design System** is an Open Source product of starter **HTML/CSS Framework** and an accompanying **Style Guide** for use on USDA-FSA web sites and apps.
 
-It was created and maintained by the Farm Service Agency Office of Architecture, and is heavily influenced by the [Draft U.S. Web Design Standards](https://playbook.cio.gov/designstandards/) created and maintained by the [U.S. Digital Service](https://www.whitehouse.gov/digital/united-states-digital-service) and [18F](https://18f.gsa.gov/)
+It was created and maintained by the FSA Office of Architecture, and is heavily influenced by the [Draft U.S. Web Design Standards](https://playbook.cio.gov/designstandards/) created and maintained by the [U.S. Digital Service](https://www.whitehouse.gov/digital/united-states-digital-service) and [18F](https://18f.gsa.gov/)
 
-These tools follow industry-standard web accessibility guidelines and use the best practices of existing style libraries and modern web design.
+These tools follow industry-standard web accessibility guidelines and employ  best practices of existing style libraries and modern web design.
 
 ## Getting Started
 
-(Content TBD)
-
-### Download
-
-(Content TBD)
-
-### Install via NPM
-
-(Content TBD)
+(Download or Install via NPM)
 
 ## Building and Running Locally
 
 ### tl;dr
-
-First...
-
-```sh
-cd path/to/project
-```
-...then...
 
 ```sh
 npm start
