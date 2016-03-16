@@ -5,7 +5,7 @@ $outline_color: red;
   outline: 1px solid $outline_color;
 
   &__item {
-    background-color: black;
+    background-color: #ccc;
     width: calc(100% - 10px)
   }
 
