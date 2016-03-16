@@ -77,7 +77,7 @@ module.exports = function (grunt) {
 
   // Register Tasks
   grunt.registerTask('default', ['copy:uswds_assets', 'sass', 'browserSync', 'watch']);
-  grunt.registerTask('test', 'default', function () { grunt.log.writeln('Test that the app runs');});
   grunt.registerTask('lint', 'scsslint');
+  grunt.registerTask('test', 'default', function () { grunt.log.writeln('Test that the app runs');});
 
 };
