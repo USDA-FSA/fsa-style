@@ -1,4 +1,8 @@
-$outline-color: green;
+$outline-color: #008000;
+
+html {
+  font: 16px/1.5 helvetica;
+}
 
 .asdfqwer {
 
@@ -9,13 +13,14 @@ $outline-color: green;
 
   &__item {
     $item-bgc: #ffcdcc;
-    outline: 1px solid $outline-color;
+    outline: 2px solid $outline-color;
+    transition: all ease-in-out .1s;
     flex: 1;
     background-color: $item-bgc;
     list-style-type: none;
     padding: 0;
     margin: 0;
-    padding: .4vw + 20px;
+    padding: 10px;
   }
 
 }
