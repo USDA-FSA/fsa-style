@@ -6,6 +6,23 @@ It was created and maintained by the FSA Office of Architecture, and is heavily 
 
 These tools follow industry-standard web accessibility guidelines and employ  best practices of existing style libraries and modern web design.
 
+## Contents
+
+(Supporting text TBD)
+
+```
+dist/
+├── css/
+├── fonts/
+├── img/
+├── js/
+src/
+├── fonts/
+├── img/
+├── js/
+└── stylesheets/
+```
+
 ## Getting Started
 
 (Download or Install via NPM)
