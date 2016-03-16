@@ -1,8 +1,8 @@
 # FSA Design System
 
-The **FSA Design System** is an Open Source product of starter **HTML/CSS Framework** and an accompanying **Style Guide** for use on USDA-FSA web sites and apps.
+The **FSA Design System** is an Open Source starter **HTML/CSS Framework** and accompanying **Style Guide** for use on USDA-FSA web sites and apps.
 
-It was created and maintained by the FSA Office of Architecture, and is heavily influenced by the [Draft U.S. Web Design Standards](https://playbook.cio.gov/designstandards/) created and maintained by the [U.S. Digital Service](https://www.whitehouse.gov/digital/united-states-digital-service) and [18F](https://18f.gsa.gov/)
+It was created and maintained by the FSA Office of Architecture, and is heavily influenced by the [Draft U.S. Web Design Standards](https://playbook.cio.gov/designstandards/) created and maintained by the [U.S. Digital Service](https://www.whitehouse.gov/digital/united-states-digital-service) and [18F](https://18f.gsa.gov/).
 
 These tools follow industry-standard web accessibility guidelines and employ  best practices of existing style libraries and modern web design.
 
@@ -38,7 +38,7 @@ npm install
 gulp build
 ```
 
-### Build Site
+### Build Design System Site
 
 ``` sh
 gulp website:build
@@ -51,16 +51,11 @@ gulp website:serve
 ```
 
 
-
-
-
-
-
 ## Contributing
 
-For complete instructions on how to contribute code, please read [CONTRIBUTING.md](CONTRIBUTING.md). These instructions also include guidance on how to set up your own copy of the Standards style guide website for development.
+For complete instructions on how to contribute code, please read [CONTRIBUTING.md](CONTRIBUTING.md).
 
-If you have questions or concerns about our contributing workflow, please contact us by [filing a GitHub issue](https://github.com/18F/web-design-standards/issues) or [emailing our team](mailto:uswebdesignstandards@gsa.gov).
+If you have questions or concerns about our contributing workflow, please contact us by [filing a GitHub issue](#https://github.com/usda=fsa/fsa-design-system/issues) or [emailing our team](#mailto:username@usda.gov).
 
 
 ## Reuse of open-source style guides
