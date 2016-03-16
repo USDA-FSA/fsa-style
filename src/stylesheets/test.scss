@@ -1,12 +1,13 @@
-$outline_color: red;
+$outline-color: #f00;
 
 .asdfqwer {
 
-  outline: 1px solid $outline_color;
+  outline: 1px solid $outline-color;
 
   &__item {
-    background-color: #ccc;
-    width: calc(100% - 10px)
+    $item-bgc: #ffcdcc;
+    background-color: $item-bgc;
+    width: calc(100% - 10px);
   }
 
 }

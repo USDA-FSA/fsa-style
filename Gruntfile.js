@@ -37,7 +37,7 @@ module.exports = function (grunt) {
     watch: {
       css: {
         files: ['src/stylesheets/*.scss'],
-        tasks: ['sass'],
+        tasks: ['sass','lint'],
         options: { nospawn: true }
       }
     },
@@ -60,11 +60,7 @@ module.exports = function (grunt) {
 
   // Register Tasks
   grunt.registerTask('default', ['copy:uswds_assets', 'sass', 'watch']);
-  grunt.registerTask(
-    'test', 'default', function () {
-      grunt.log.writeln('Test that the app runs');
-    }
-  );
+  grunt.registerTask('test', 'default', function () { grunt.log.writeln('Test that the app runs');});
   grunt.registerTask('lint', 'scsslint');
 
 };
