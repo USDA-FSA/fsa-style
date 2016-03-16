@@ -1,0 +1,10 @@
+.asdfqwer {
+  outline: 1px solid red;
+}
+
+.asdfqwer__item {
+  background-color: black;
+  width: calc(100% - 10px);
+}
+
+/*# sourceMappingURL=test.css.map */
