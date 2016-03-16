@@ -54,12 +54,29 @@ module.exports = function (grunt) {
         force: true,
         reporterOutput: null
       },
+    },
+
+    // Live Reload and Browser Sync'ing
+    browserSync: {
+      dev: {
+        files: {
+          src : [
+            '*.html',
+            'dist/css/*.css',
+            'dist/js/*.js'
+          ]
+        },
+        options: {
+          watchTask: true,
+          server: './'
+        }
+      }
     }
 
   });
 
   // Register Tasks
-  grunt.registerTask('default', ['copy:uswds_assets', 'sass', 'watch']);
+  grunt.registerTask('default', ['copy:uswds_assets', 'sass', 'browserSync', 'watch']);
   grunt.registerTask('test', 'default', function () { grunt.log.writeln('Test that the app runs');});
   grunt.registerTask('lint', 'scsslint');
 

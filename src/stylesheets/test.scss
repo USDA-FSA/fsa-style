@@ -1,13 +1,21 @@
-$outline-color: #c00;
+$outline-color: green;
 
 .asdfqwer {
 
-  outline: 1px solid $outline-color;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 
   &__item {
     $item-bgc: #ffcdcc;
+    outline: 1px solid $outline-color;
+    flex: 1;
     background-color: $item-bgc;
-    width: calc(100% - 10px);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    padding: .4vw + 20px;
   }
 
 }
