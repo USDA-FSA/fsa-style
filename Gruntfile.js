@@ -9,19 +9,6 @@ module.exports = function (grunt) {
   // Listing Tasks
   grunt.initConfig({
 
-    // Builds Sass
-    // sass: {
-    //   dev: {
-    //     files: {
-    //       'public/stylesheets/prism.css': 'public/sass/prism.scss',
-    //     },
-    //     options: {
-    //       includePaths: ['govuk_modules/public/sass'],
-    //       outputStyle: 'expanded',
-    //       imagePath: '../images'
-    //     }
-    //   }
-    // },
     sass: {
       dist: {
         files: {
@@ -49,7 +36,7 @@ module.exports = function (grunt) {
     // Watches styles and specs for changes
     watch: {
       css: {
-        files: ['public/sass/**/*.scss'],
+        files: ['src/stylesheets/*.scss'],
         tasks: ['sass'],
         options: { nospawn: true }
       }
@@ -72,7 +59,7 @@ module.exports = function (grunt) {
   });
 
   // Register Tasks
-  grunt.registerTask('default', ['copy:uswds_assets', 'sass',]);
+  grunt.registerTask('default', ['copy:uswds_assets', 'sass', 'watch']);
   grunt.registerTask(
     'test', 'default', function () {
       grunt.log.writeln('Test that the app runs');
