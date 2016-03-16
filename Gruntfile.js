@@ -69,43 +69,12 @@ module.exports = function (grunt) {
 
     },
 
-    // workaround for libsass
-    replace: {
-      fixSass: {
-        src: ['govuk_modules/public/sass/**/*.scss'],
-        overwrite: true,
-        replacements: [{
-          from: /filter:chroma(.*);/g,
-          to: 'filter:unquote("chroma$1");'
-        }]
-      }
-    },
-
     // Watches styles and specs for changes
     watch: {
       css: {
         files: ['public/sass/**/*.scss'],
         tasks: ['sass'],
         options: { nospawn: true }
-      }
-    },
-
-    // nodemon watches for changes and restarts app
-    nodemon: {
-      dev: {
-        script: 'app.js',
-        options: {
-          ext: 'html, js'
-        }
-      }
-    },
-
-    concurrent: {
-      target: {
-        tasks: ['watch', 'nodemon'],
-        options: {
-          logConcurrentOutput: true
-        }
       }
     },
 
@@ -130,24 +99,17 @@ module.exports = function (grunt) {
     'grunt-contrib-copy',
     'grunt-contrib-watch',
     'grunt-sass',
-    'grunt-nodemon',
-    'grunt-text-replace',
-    'grunt-concurrent',
     'grunt-scss-lint'
   ].forEach(function (task) {
     grunt.loadNpmTasks(task);
   });
 
   grunt.registerTask('default', [
-    'copy:govuk_template',
     'copy:govuk_assets',
-    'convert_template',
     'copy:govuk_frontend_toolkit_scss',
     'copy:govuk_frontend_toolkit_js',
     'copy:govuk_frontend_toolkit_img',
-    'replace',
     'sass',
-    'concurrent:target'
   ]);
 
   grunt.registerTask(
