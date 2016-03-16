@@ -1,5 +1,12 @@
 module.exports = function (grunt) {
 
+  // Time how long tasks take. Can help when optimizing build times
+  require('time-grunt')(grunt);
+
+  // Load grunt tasks automatically
+  require('load-grunt-tasks')(grunt);
+
+  // Listing Tasks
   grunt.initConfig({
 
     // Builds Sass
@@ -54,31 +61,13 @@ module.exports = function (grunt) {
 
   });
 
-  [
-    'grunt-contrib-copy',
-    'grunt-contrib-watch',
-    'grunt-sass',
-    'grunt-scss-lint'
-  ].forEach(function (task) {
-    grunt.loadNpmTasks(task);
-  });
-
-  grunt.registerTask('default', [
-    'copy:uswds_assets',
-    'sass',
-  ]);
-
+  // Register Tasks
+  grunt.registerTask('default', ['copy:uswds_assets', 'sass',]);
   grunt.registerTask(
-    'test',
-    'default',
-    function () {
+    'test', 'default', function () {
       grunt.log.writeln('Test that the app runs');
     }
   );
-
-  grunt.registerTask(
-    'lint',
-    'scsslint'
-  );
+  grunt.registerTask('lint', 'scsslint');
 
 };
