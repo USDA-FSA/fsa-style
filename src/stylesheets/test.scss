@@ -1,0 +1,12 @@
+$outline_color: red;
+
+.asdfqwer {
+
+  outline: 1px solid $outline_color;
+
+  &__item {
+    background-color: black;
+    width: calc(100% - 10px)
+  }
+
+}

@@ -10,17 +10,28 @@ module.exports = function (grunt) {
   grunt.initConfig({
 
     // Builds Sass
+    // sass: {
+    //   dev: {
+    //     files: {
+    //       'public/stylesheets/prism.css': 'public/sass/prism.scss',
+    //     },
+    //     options: {
+    //       includePaths: ['govuk_modules/public/sass'],
+    //       outputStyle: 'expanded',
+    //       imagePath: '../images'
+    //     }
+    //   }
+    // },
     sass: {
-      dev: {
+      dist: {
         files: {
-          'public/stylesheets/prism.css': 'public/sass/prism.scss',
-        },
-        options: {
-          includePaths: ['govuk_modules/public/sass'],
-          outputStyle: 'expanded',
-          imagePath: '../images'
+          'dist/css/test.css': 'src/stylesheets/test.scss'
         }
-      }
+      },
+      options: {
+        sourceMap: true,
+        outputStyle: 'expanded'
+      },
     },
 
     // Copies templates and assets from external modules and dirs
@@ -47,8 +58,7 @@ module.exports = function (grunt) {
     // Lint scss files
     scsslint: {
       allFiles: [
-        'public/sass/elements/*.scss',
-        'public/sass/elements/forms/*.scss'
+        'src/stylesheets/*.scss'
       ],
       options: {
         bundleExec: false,
