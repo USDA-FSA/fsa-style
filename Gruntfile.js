@@ -62,12 +62,12 @@ module.exports = function (grunt) {
       options: {
         map: {
           inline: false, // save all sourcemaps as separate files...
-          annotation: 'dist/css/maps/' // ...to the specified directory
+          annotation: 'dist/css' // ...to the specified directory
         },
         processors: [
           require('pixrem')(), // add fallbacks for rem units
           require('autoprefixer')({ browsers: 'last 2 versions' }), // add vendor prefixes
-          require('cssnano')() // minify the result
+          // require('cssnano')() // minify the result
         ]
       },
       dist: {
@@ -95,7 +95,7 @@ module.exports = function (grunt) {
   });
 
   // Register Tasks
-  grunt.registerTask('default', ['copy:uswds_assets', 'browserSync', 'watch']);
+  grunt.registerTask('default', ['copy:uswds_assets', 'browserSync', 'sass', 'scsslint', 'watch']);
   grunt.registerTask('lint', 'scsslint');
   grunt.registerTask('test', 'default', function () { grunt.log.writeln('Test that the app runs');});
 
