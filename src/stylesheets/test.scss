@@ -1,11 +1,7 @@
-$outline-color: #0f0;
+$outline-color: #00f;
 
 html {
-  font: 10px/1.5 helvetica;
-}
-
-body {
-  font-size: 1.6rem;
+  font: 16px/1.5 helvetica;
 }
 
 .asdfqwer {
@@ -18,13 +14,18 @@ body {
   &__item {
 
     $item-bgc: rgba(0, 0, 0, .2);
-    outline: 10px solid $outline-color;
-    transition: all ease-in-out .1s;
+
     flex: 1;
+    border: 5px solid $outline-color;
+    transition: all ease-in-out .1s;
     background-color: $item-bgc;
     list-style-type: none;
-    margin: 0 30px 0 0;
-    padding: 20px;
+    margin: 0 20px 0 0;
+    padding: 10px;
+
+    &:first-child {
+      font-weight: bold;
+    }
 
     &:last-child {
       margin-right: 0;
