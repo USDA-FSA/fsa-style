@@ -9,6 +9,7 @@ module.exports = function (grunt) {
   // Listing Tasks
   grunt.initConfig({
 
+    // Sass all the style things
     sass: {
       dist: {
         files: {
@@ -37,7 +38,7 @@ module.exports = function (grunt) {
     watch: {
       css: {
         files: ['src/stylesheets/*.scss'],
-        tasks: ['sass','lint'],
+        tasks: ['sass','scsslint','postcss'],
         options: { nospawn: true }
       }
     },
@@ -54,6 +55,24 @@ module.exports = function (grunt) {
         force: true,
         reporterOutput: null
       },
+    },
+
+    // PostCSS
+    postcss: {
+      options: {
+        map: {
+          inline: false, // save all sourcemaps as separate files...
+          annotation: 'dist/css/maps/' // ...to the specified directory
+        },
+        processors: [
+          require('pixrem')(), // add fallbacks for rem units
+          require('autoprefixer')({ browsers: 'last 2 versions' }), // add vendor prefixes
+          require('cssnano')() // minify the result
+        ]
+      },
+      dist: {
+        src: 'dist/css/*.css'
+      }
     },
 
     // Live Reload and Browser Sync'ing
@@ -76,7 +95,7 @@ module.exports = function (grunt) {
   });
 
   // Register Tasks
-  grunt.registerTask('default', ['copy:uswds_assets', 'sass', 'browserSync', 'watch']);
+  grunt.registerTask('default', ['copy:uswds_assets', 'browserSync', 'watch']);
   grunt.registerTask('lint', 'scsslint');
   grunt.registerTask('test', 'default', function () { grunt.log.writeln('Test that the app runs');});
 
