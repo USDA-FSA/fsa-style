@@ -57,7 +57,7 @@ module.exports = function (grunt) {
       },
     },
 
-    // PostCSS
+    // PostCSS, primarily to autoprefix
     postcss: {
       options: {
         map: {
