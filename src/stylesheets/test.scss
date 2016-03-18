@@ -42,33 +42,48 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 
-$outline-asdfqwer-color: #00f;
+$outline-asdfqwer-color: #f0f;
+
+.fsa-visual-index {
+  max-width: $site-max-width;
+  margin: auto;;
+}
 
 .asdfqwer {
 
-  display: flex;
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @include media($small-screen) {
+    display: flex;
+  }
 
   &__item {
 
     $item-bgc: rgba(0, 0, 0, .2);
 
-    flex: 1;
     border: 10px solid $outline-asdfqwer-color;
     transition: all ease-in-out .1s;
     background-color: $item-bgc;
     list-style-type: none;
-    margin: 0 20px 0 0;
     padding: 10px;
+
+    @include media($small-screen) {
+      flex: 1;
+      border-width: 5px;
+      border-color: darken($outline-asdfqwer-color, 20%);
+      margin: 0 20px 0 0;
+    }
 
     &:first-child {
       font-weight: bold;
     }
 
     &:last-child {
-      margin-right: 0;
+      @include media($small-screen) {
+        margin-right: 0;
+      }
     }
 
   }
