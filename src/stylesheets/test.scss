@@ -40,17 +40,7 @@
 @import '../lib/uswds/stylesheets/components/sidenav';
 @import '../lib/uswds/stylesheets/components/skipnav';
 
-
-
 ///////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
 
 $outline-asdfqwer-color: #00f;
 
@@ -66,7 +56,7 @@ $outline-asdfqwer-color: #00f;
     $item-bgc: rgba(0, 0, 0, .2);
 
     flex: 1;
-    border: 5px solid $outline-asdfqwer-color;
+    border: 10px solid $outline-asdfqwer-color;
     transition: all ease-in-out .1s;
     background-color: $item-bgc;
     list-style-type: none;
