@@ -46,7 +46,7 @@ $outline-asdfqwer-color: #f0f;
 
 .fsa-visual-index {
   max-width: $site-max-width;
-  margin: auto;;
+  margin: auto;
 }
 
 .asdfqwer {
@@ -70,10 +70,24 @@ $outline-asdfqwer-color: #f0f;
     padding: 10px;
 
     @include media($small-screen) {
+
       flex: 1;
       border-width: 5px;
       border-color: darken($outline-asdfqwer-color, 20%);
       margin: 0 20px 0 0;
+
+      &:exactly(4) {
+        background-color: darken($outline-asdfqwer-color, 20%);
+      }
+
+      &:at-least(4) {
+        background-color: darken($outline-asdfqwer-color, 10%);
+      }
+
+      &:at-most(3) {
+        background-color: lighten($outline-asdfqwer-color, 40%);
+      }
+
     }
 
     &:first-child {
