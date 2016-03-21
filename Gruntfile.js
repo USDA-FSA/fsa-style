@@ -52,6 +52,11 @@ module.exports = function (grunt) {
       }
     },
 
+    // Clear files and folders
+		clean: {
+			all: [ 'dist' ]
+		},
+
     // Lint scss files
     scsslint: {
       allFiles: [
@@ -105,8 +110,8 @@ module.exports = function (grunt) {
   });
 
   // Register Tasks
-  grunt.registerTask('default', ['build', 'watch']);
-  grunt.registerTask('build', ['copy:uswds_assets', 'browserSync', 'sass', 'lint', 'postcss']);
+  grunt.registerTask('default', ['build', 'browserSync', 'watch']);
+  grunt.registerTask('build', ['clean', 'copy', 'sass', 'lint', 'postcss']);
   grunt.registerTask('lint', 'scsslint');
   grunt.registerTask('test', 'default', function () { grunt.log.writeln('Test that the app runs');});
 
