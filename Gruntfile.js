@@ -11,14 +11,23 @@ module.exports = function (grunt) {
 
     // Sass all the style things
     sass: {
-      dist: {
+      default: {
         files: {
           'dist/css/test.css': 'src/stylesheets/test.scss'
-        }
+        },
+        options: {
+          sourceMap: true,
+          outputStyle: 'expanded'
+        },
       },
-      options: {
-        sourceMap: true,
-        outputStyle: 'expanded'
+      minify: {
+        files: {
+          'dist/css/test.min.css': 'src/stylesheets/test.scss'
+        },
+        options: {
+          sourceMap: true,
+          outputStyle: 'compressed'
+        },
       },
     },
 
@@ -96,7 +105,8 @@ module.exports = function (grunt) {
   });
 
   // Register Tasks
-  grunt.registerTask('default', ['copy:uswds_assets', 'browserSync', 'sass', 'scsslint', 'watch']);
+  grunt.registerTask('default', ['build', 'watch']);
+  grunt.registerTask('build', ['copy:uswds_assets', 'browserSync', 'sass', 'lint', 'postcss']);
   grunt.registerTask('lint', 'scsslint');
   grunt.registerTask('test', 'default', function () { grunt.log.writeln('Test that the app runs');});
 
