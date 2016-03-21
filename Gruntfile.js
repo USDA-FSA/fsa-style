@@ -9,11 +9,13 @@ module.exports = function (grunt) {
   // Listing Tasks
   grunt.initConfig({
 
+    pkg: grunt.file.readJSON('package.json'),
+
     // Sass all the style things
     sass: {
       default: {
         files: {
-          'dist/css/test.css': 'src/stylesheets/test.scss'
+          'dist/css/<%= pkg.name %>.css': 'src/stylesheets/<%= pkg.name %>.scss'
         },
         options: {
           sourceMap: true,
@@ -22,7 +24,7 @@ module.exports = function (grunt) {
       },
       minify: {
         files: {
-          'dist/css/test.min.css': 'src/stylesheets/test.scss'
+          'dist/css/<%= pkg.name %>.min.css': 'src/stylesheets/<%= pkg.name %>.scss'
         },
         options: {
           sourceMap: true,
