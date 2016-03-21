@@ -1,0 +1,106 @@
+
+// Vendor -------------- //
+
+@import '../lib/uswds/stylesheets/lib/bourbon';
+@import '../lib/uswds/stylesheets/lib/neat';
+@import '../lib/uswds/stylesheets/lib/normalize';
+
+
+// Core -------------- //
+
+@import '../lib/uswds/stylesheets/core/defaults';
+@import '../lib/uswds/stylesheets/core/variables';
+@import '../lib/uswds/stylesheets/core/fonts';
+@import '../lib/uswds/stylesheets/core/base';
+@import '../lib/uswds/stylesheets/core/grid-settings';
+@import '../lib/uswds/stylesheets/core/grid';
+@import '../lib/uswds/stylesheets/core/utilities';
+
+
+// Elements -------------- //
+// Styles basic HTML elements
+
+@import '../lib/uswds/stylesheets/elements/buttons';
+@import '../lib/uswds/stylesheets/elements/figure';
+@import '../lib/uswds/stylesheets/elements/inputs';
+@import '../lib/uswds/stylesheets/elements/labels';
+@import '../lib/uswds/stylesheets/elements/list';
+@import '../lib/uswds/stylesheets/elements/table';
+@import '../lib/uswds/stylesheets/elements/typography';
+
+
+// Components -------------- //
+
+@import '../lib/uswds/stylesheets/components/accordions';
+@import '../lib/uswds/stylesheets/components/alerts';
+@import '../lib/uswds/stylesheets/components/disclaimer';
+@import '../lib/uswds/stylesheets/components/footer';
+@import '../lib/uswds/stylesheets/components/forms';
+@import '../lib/uswds/stylesheets/components/search';
+@import '../lib/uswds/stylesheets/components/sidenav';
+@import '../lib/uswds/stylesheets/components/skipnav';
+
+///////////////////////////////////////////////////////////////////////////////
+
+$outline-asdfqwer-color: #ff0;
+
+.fsa-visual-index {
+  max-width: $site-max-width;
+  margin: auto;
+  padding: 1rem;
+}
+
+.asdfqwer {
+
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include media($small-screen) {
+    display: flex;
+  }
+
+  &__item {
+
+    $item-bgc: rgba(0, 0, 0, .2);
+
+    border: 10px solid $outline-asdfqwer-color;
+    transition: all ease-in-out .1s;
+    background-color: $item-bgc;
+    list-style-type: none;
+    padding: 10px;
+
+    @include media($small-screen) {
+
+      flex: 1;
+      border-width: 5px;
+      border-color: darken($outline-asdfqwer-color, 20%);
+      margin: 0 20px 0 0;
+
+      &:exactly(4) {
+        background-color: darken($outline-asdfqwer-color, 20%);
+      }
+
+      &:at-least(4) {
+        background-color: darken($outline-asdfqwer-color, 10%);
+      }
+
+      &:at-most(3) {
+        background-color: lighten($outline-asdfqwer-color, 40%);
+      }
+
+    }
+
+    &:first-child {
+      font-weight: bold;
+    }
+
+    &:last-child {
+      @include media($small-screen) {
+        margin-right: 0;
+      }
+    }
+
+  }
+
+}
