@@ -1,47 +1,47 @@
 // Vendor -------------- //
 
-@import '../lib/uswds/stylesheets/lib/bourbon';
-@import '../lib/uswds/stylesheets/lib/neat';
-@import '../lib/uswds/stylesheets/lib/normalize';
+@import '../../node_modules/uswds/src/stylesheets/lib/bourbon';
+@import '../../node_modules/uswds/src/stylesheets/lib/neat';
+@import '../../node_modules/uswds/src/stylesheets/lib/normalize';
 
 
 // Core -------------- //
 
-@import '../lib/uswds/stylesheets/core/defaults';
-@import '../lib/uswds/stylesheets/core/variables';
-@import '../lib/uswds/stylesheets/core/fonts';
-@import '../lib/uswds/stylesheets/core/base';
-@import '../lib/uswds/stylesheets/core/grid-settings';
-@import '../lib/uswds/stylesheets/core/grid';
-@import '../lib/uswds/stylesheets/core/utilities';
+@import '../../node_modules/uswds/src/stylesheets/core/defaults';
+@import '../../node_modules/uswds/src/stylesheets/core/variables';
+@import '../../node_modules/uswds/src/stylesheets/core/fonts';
+@import '../../node_modules/uswds/src/stylesheets/core/base';
+@import '../../node_modules/uswds/src/stylesheets/core/grid-settings';
+@import '../../node_modules/uswds/src/stylesheets/core/grid';
+@import '../../node_modules/uswds/src/stylesheets/core/utilities';
 
 
 // Elements -------------- //
 // Styles basic HTML elements
 
-@import '../lib/uswds/stylesheets/elements/buttons';
-@import '../lib/uswds/stylesheets/elements/figure';
-@import '../lib/uswds/stylesheets/elements/inputs';
-@import '../lib/uswds/stylesheets/elements/labels';
-@import '../lib/uswds/stylesheets/elements/list';
-@import '../lib/uswds/stylesheets/elements/table';
-@import '../lib/uswds/stylesheets/elements/typography';
+@import '../../node_modules/uswds/src/stylesheets/elements/buttons';
+@import '../../node_modules/uswds/src/stylesheets/elements/figure';
+@import '../../node_modules/uswds/src/stylesheets/elements/inputs';
+@import '../../node_modules/uswds/src/stylesheets/elements/labels';
+@import '../../node_modules/uswds/src/stylesheets/elements/list';
+@import '../../node_modules/uswds/src/stylesheets/elements/table';
+@import '../../node_modules/uswds/src/stylesheets/elements/typography';
 
 
 // Components -------------- //
 
-@import '../lib/uswds/stylesheets/components/accordions';
-@import '../lib/uswds/stylesheets/components/alerts';
-@import '../lib/uswds/stylesheets/components/disclaimer';
-@import '../lib/uswds/stylesheets/components/footer';
-@import '../lib/uswds/stylesheets/components/forms';
-@import '../lib/uswds/stylesheets/components/search';
-@import '../lib/uswds/stylesheets/components/sidenav';
-@import '../lib/uswds/stylesheets/components/skipnav';
+@import '../../node_modules/uswds/src/stylesheets/components/accordions';
+@import '../../node_modules/uswds/src/stylesheets/components/alerts';
+@import '../../node_modules/uswds/src/stylesheets/components/disclaimer';
+@import '../../node_modules/uswds/src/stylesheets/components/footer';
+@import '../../node_modules/uswds/src/stylesheets/components/forms';
+@import '../../node_modules/uswds/src/stylesheets/components/search';
+@import '../../node_modules/uswds/src/stylesheets/components/sidenav';
+@import '../../node_modules/uswds/src/stylesheets/components/skipnav';
 
 ///////////////////////////////////////////////////////////////////////////////
 
-$outline-asdfqwer-color: #f0f;
+$outline-asdfqwer-color: #ff0;
 
 .fsa-visual-index {
   max-width: $site-max-width;
