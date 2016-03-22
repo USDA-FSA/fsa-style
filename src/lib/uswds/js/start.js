@@ -94,4 +94,3 @@ $(function() {
   validator($('.js-validate_password'));
 
 });
-

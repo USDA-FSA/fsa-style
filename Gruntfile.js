@@ -109,6 +109,18 @@ module.exports = function (grunt) {
       }
     },
 
+    // Browserify them JSs
+    browserify: {
+      main: {
+        files: {
+          'dist/js/<%= pkg.name %>.js': [
+            'src/lib/uswds/js/start.js',
+            // 'path/to/another/file.js'
+          ]
+        }
+      }
+    }
+
   });
 
   // Register Tasks
