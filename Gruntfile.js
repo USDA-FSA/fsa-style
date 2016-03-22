@@ -114,7 +114,7 @@ module.exports = function (grunt) {
       main: {
         files: {
           'dist/js/<%= pkg.name %>.js': [
-            'src/lib/uswds/js/start.js',
+            'node_modules/uswds/src/js/start.js',
             // 'path/to/another/file.js'
           ]
         }
@@ -125,7 +125,7 @@ module.exports = function (grunt) {
 
   // Register Tasks
   grunt.registerTask('default', ['build', 'browserSync', 'watch']);
-  grunt.registerTask('build', ['clean', 'sass', 'postcss', 'lint']);
+  grunt.registerTask('build', ['clean', 'sass', 'postcss', 'browserify', 'lint']);
   grunt.registerTask('lint', 'scsslint');
   grunt.registerTask('test', 'default', function () { grunt.log.writeln('Test that the app runs');});
 
