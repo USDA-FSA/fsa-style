@@ -113,10 +113,13 @@ module.exports = function (grunt) {
     browserify: {
       main: {
         files: {
-          'dist/js/<%= pkg.name %>.js': [
-            'node_modules/uswds/src/js/start.js',
-            // 'path/to/another/file.js'
-          ]
+          'dist/js/<%= pkg.name %>.test.js': [
+            'src/js/test.js'
+          ],
+          // 'dist/js/uswds.js': [
+          //   'node_modules/uswds/src/js/start.js',
+          //   // 'path/to/another/file.js',
+          // ],
         }
       }
     }
