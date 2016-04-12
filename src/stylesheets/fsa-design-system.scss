@@ -44,9 +44,20 @@
 $outline-asdfqwer-color: #ff0;
 
 .fsa-visual-index {
+
   max-width: $site-max-width;
   margin: auto;
   padding: 1rem;
+
+  &__title {
+    padding-top: .5rem;
+    border-top: 2px solid red;
+    font-size: $base-font-size;
+    font-family: $font-sans;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
 }
 
 .asdfqwer {
