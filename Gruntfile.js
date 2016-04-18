@@ -1,47 +1,6 @@
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-// \projects\sandbox\govuk\govuk_elements\Gruntfile.js
-
 module.exports = function (grunt) {
 
   grunt.initConfig({
-
-    // Copies templates and assets from external modules and dirs
-    copy: {
-      USWDS_ASSETS: {
-        files: [
-          {
-            expand: true,
-            src: '**',
-            cwd: 'node_modules/uswds/src/stylesheets',
-            dest: 'src/lib/'
-          }
-        ]
-      },
-    }
 
   });
 
@@ -59,7 +18,7 @@ module.exports = function (grunt) {
 
 
   grunt.registerTask('default', [
-    'copy:USWDS_ASSETS'
+    ''
   ]);
 
   grunt.registerTask(
