@@ -9,16 +9,27 @@ module.exports = function (grunt) {
   // Listing Tasks
   grunt.initConfig({
 
+    pkg: grunt.file.readJSON('package.json'),
+
     // Sass all the style things
     sass: {
-      dist: {
+      default: {
         files: {
-          'dist/css/test.css': 'src/stylesheets/test.scss'
-        }
+          'dist/css/<%= pkg.name %>.css': 'src/stylesheets/<%= pkg.name %>.scss'
+        },
+        options: {
+          sourceMap: true,
+          outputStyle: 'expanded'
+        },
       },
-      options: {
-        sourceMap: true,
-        outputStyle: 'expanded'
+      minify: {
+        files: {
+          'dist/css/<%= pkg.name %>.min.css': 'src/stylesheets/<%= pkg.name %>.scss'
+        },
+        options: {
+          sourceMap: true,
+          outputStyle: 'compressed'
+        },
       },
     },
 
@@ -43,6 +54,11 @@ module.exports = function (grunt) {
       }
     },
 
+    // Clear files and folders
+		clean: {
+			all: [ 'dist' ]
+		},
+
     // Lint scss files
     scsslint: {
       allFiles: [
@@ -66,6 +82,7 @@ module.exports = function (grunt) {
         },
         processors: [
           require('pixrem')(), // add fallbacks for rem units
+          require('postcss-quantity-queries')(), // do things like .asdf:at-least(4) {} ; https://github.com/pascalduez/postcss-quantity-queries
           require('autoprefixer')({ browsers: 'last 2 versions' }), // add vendor prefixes
           // require('cssnano')() // minify the result
         ]
@@ -92,10 +109,26 @@ module.exports = function (grunt) {
       }
     },
 
+    // Browserify them JSs
+    browserify: {
+      main: {
+        files: {
+          'dist/js/<%= pkg.name %>.js': [
+            'src/js/test.js'
+          ],
+          // 'dist/js/uswds.js': [
+          //   'node_modules/uswds/src/js/start.js',
+          //   // 'path/to/another/file.js',
+          // ],
+        }
+      }
+    }
+
   });
 
   // Register Tasks
-  grunt.registerTask('default', ['copy:uswds_assets', 'browserSync', 'sass', 'scsslint', 'watch']);
+  grunt.registerTask('default', ['build', 'browserSync', 'watch']);
+  grunt.registerTask('build', ['clean', 'copy', 'sass', 'postcss', 'browserify', 'lint']);
   grunt.registerTask('lint', 'scsslint');
   grunt.registerTask('test', 'default', function () { grunt.log.writeln('Test that the app runs');});
 
