@@ -1,47 +1,49 @@
 // Vendor -------------- //
 
-@import '../../node_modules/uswds/src/stylesheets/lib/bourbon';
-@import '../../node_modules/uswds/src/stylesheets/lib/neat';
-@import '../../node_modules/uswds/src/stylesheets/lib/normalize';
+@import 'lib/bourbon';
+@import 'lib/neat';
+@import 'lib/normalize';
 
 
 // Core -------------- //
 
-@import '../../node_modules/uswds/src/stylesheets/core/defaults';
-@import '../../node_modules/uswds/src/stylesheets/core/variables';
-@import '../../node_modules/uswds/src/stylesheets/core/fonts';
-@import '../../node_modules/uswds/src/stylesheets/core/base';
-@import '../../node_modules/uswds/src/stylesheets/core/grid-settings';
-@import '../../node_modules/uswds/src/stylesheets/core/grid';
-@import '../../node_modules/uswds/src/stylesheets/core/utilities';
+@import 'core/defaults';
+@import 'core/variables';
+@import 'core/fonts';
+@import 'core/base';
+@import 'core/grid-settings';
+@import 'core/grid';
+@import 'core/utilities';
 
 
 // Elements -------------- //
 // Styles basic HTML elements
 
-@import '../../node_modules/uswds/src/stylesheets/elements/buttons';
-@import '../../node_modules/uswds/src/stylesheets/elements/figure';
-@import '../../node_modules/uswds/src/stylesheets/elements/inputs';
-@import '../../node_modules/uswds/src/stylesheets/elements/labels';
-@import '../../node_modules/uswds/src/stylesheets/elements/list';
-@import '../../node_modules/uswds/src/stylesheets/elements/table';
-@import '../../node_modules/uswds/src/stylesheets/elements/typography';
+@import 'elements/buttons';
+@import 'elements/figure';
+@import 'elements/inputs';
+@import 'elements/labels';
+@import 'elements/list';
+@import 'elements/table';
+@import 'elements/typography';
 
 
 // Components -------------- //
 
-@import '../../node_modules/uswds/src/stylesheets/components/accordions';
-@import '../../node_modules/uswds/src/stylesheets/components/alerts';
-@import '../../node_modules/uswds/src/stylesheets/components/disclaimer';
-@import '../../node_modules/uswds/src/stylesheets/components/footer';
-@import '../../node_modules/uswds/src/stylesheets/components/forms';
-@import '../../node_modules/uswds/src/stylesheets/components/search';
-@import '../../node_modules/uswds/src/stylesheets/components/sidenav';
-@import '../../node_modules/uswds/src/stylesheets/components/skipnav';
+@import 'components/accordions';
+@import 'components/alerts';
+@import 'components/disclaimer';
+@import 'components/footer';
+@import 'components/forms';
+@import 'components/search';
+@import 'components/sidenav';
+@import 'components/skipnav';
 
 ///////////////////////////////////////////////////////////////////////////////
 
-$outline-asdfqwer-color: #ff0;
+@import 'core/18f-overrides';
+@import 'elements/foo-element';
+@import 'components/asdfqwer';
 
 .fsa-visual-index {
 
@@ -56,61 +58,6 @@ $outline-asdfqwer-color: #ff0;
     font-family: $font-sans;
     text-transform: uppercase;
     margin-bottom: 0;
-  }
-
-}
-
-.asdfqwer {
-
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-
-  @include media($small-screen) {
-    display: flex;
-  }
-
-  &__item {
-
-    $item-bgc: rgba(0, 0, 0, .2);
-
-    border: 10px solid $outline-asdfqwer-color;
-    transition: all ease-in-out .1s;
-    background-color: $item-bgc;
-    list-style-type: none;
-    padding: 10px;
-
-    @include media($small-screen) {
-
-      flex: 1;
-      border-width: 5px;
-      border-color: darken($outline-asdfqwer-color, 20%);
-      margin: 0 20px 0 0;
-
-      &:exactly(4) {
-        background-color: darken($outline-asdfqwer-color, 20%);
-      }
-
-      &:at-least(4) {
-        background-color: darken($outline-asdfqwer-color, 10%);
-      }
-
-      &:at-most(3) {
-        background-color: lighten($outline-asdfqwer-color, 40%);
-      }
-
-    }
-
-    &:first-child {
-      font-weight: bold;
-    }
-
-    &:last-child {
-      @include media($small-screen) {
-        margin-right: 0;
-      }
-    }
-
   }
 
 }

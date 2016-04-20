@@ -40,7 +40,7 @@ module.exports = function (grunt) {
         expand: true,
         src: '**',
         cwd: 'node_modules/uswds/src',
-        dest: 'src/lib/uswds'
+        dest: 'src'
       },
 
     },
@@ -56,7 +56,8 @@ module.exports = function (grunt) {
 
     // Clear files and folders
 		clean: {
-			all: [ 'dist' ]
+			dist: [ 'dist' ],
+			uswds_main: [ 'src/stylesheets/all.scss' ],
 		},
 
     // Lint scss files
@@ -128,7 +129,7 @@ module.exports = function (grunt) {
 
   // Register Tasks
   grunt.registerTask('default', ['build', 'browserSync', 'watch']);
-  grunt.registerTask('build', ['clean', 'copy', 'sass', 'postcss', 'browserify', 'lint']);
+  grunt.registerTask('build', ['clean:dist', 'copy', 'clean:uswds_main', 'sass', 'postcss', 'browserify', 'lint']);
   grunt.registerTask('lint', 'scsslint');
   grunt.registerTask('test', 'default', function () { grunt.log.writeln('Test that the app runs');});
 
