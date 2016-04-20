@@ -1,49 +1,49 @@
 // Vendor -------------- //
 
-@import '../../node_modules/uswds/src/stylesheets/lib/bourbon';
-@import '../../node_modules/uswds/src/stylesheets/lib/neat';
-@import '../../node_modules/uswds/src/stylesheets/lib/normalize';
+@import 'lib/bourbon';
+@import 'lib/neat';
+@import 'lib/normalize';
 
 
 // Core -------------- //
 
-@import '../../node_modules/uswds/src/stylesheets/core/defaults';
-@import '../../node_modules/uswds/src/stylesheets/core/variables';
-@import '../../node_modules/uswds/src/stylesheets/core/fonts';
-@import '../../node_modules/uswds/src/stylesheets/core/base';
-@import '../../node_modules/uswds/src/stylesheets/core/grid-settings';
-@import '../../node_modules/uswds/src/stylesheets/core/grid';
-@import '../../node_modules/uswds/src/stylesheets/core/utilities';
+@import 'core/defaults';
+@import 'core/variables';
+@import 'core/fonts';
+@import 'core/base';
+@import 'core/grid-settings';
+@import 'core/grid';
+@import 'core/utilities';
 
 
 // Elements -------------- //
 // Styles basic HTML elements
 
-@import '../../node_modules/uswds/src/stylesheets/elements/buttons';
-@import '../../node_modules/uswds/src/stylesheets/elements/figure';
-@import '../../node_modules/uswds/src/stylesheets/elements/inputs';
-@import '../../node_modules/uswds/src/stylesheets/elements/labels';
-@import '../../node_modules/uswds/src/stylesheets/elements/list';
-@import '../../node_modules/uswds/src/stylesheets/elements/table';
-@import '../../node_modules/uswds/src/stylesheets/elements/typography';
+@import 'elements/buttons';
+@import 'elements/figure';
+@import 'elements/inputs';
+@import 'elements/labels';
+@import 'elements/list';
+@import 'elements/table';
+@import 'elements/typography';
 
 
 // Components -------------- //
 
-@import '../../node_modules/uswds/src/stylesheets/components/accordions';
-@import '../../node_modules/uswds/src/stylesheets/components/alerts';
-@import '../../node_modules/uswds/src/stylesheets/components/disclaimer';
-@import '../../node_modules/uswds/src/stylesheets/components/footer';
-@import '../../node_modules/uswds/src/stylesheets/components/forms';
-@import '../../node_modules/uswds/src/stylesheets/components/search';
-@import '../../node_modules/uswds/src/stylesheets/components/sidenav';
-@import '../../node_modules/uswds/src/stylesheets/components/skipnav';
+@import 'components/accordions';
+@import 'components/alerts';
+@import 'components/disclaimer';
+@import 'components/footer';
+@import 'components/forms';
+@import 'components/search';
+@import 'components/sidenav';
+@import 'components/skipnav';
 
 ///////////////////////////////////////////////////////////////////////////////
 
 @import 'core/18f-overrides';
 @import 'elements/foo-element';
-@import 'components/foo-component';
+@import 'components/asdfqwer';
 
 .fsa-visual-index {
 
