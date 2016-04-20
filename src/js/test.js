@@ -1,6 +1,6 @@
 var booya = false;
 var ayoob = true;
 
-if (ayoob) {
+if (!ayoob) {
   alert('ayoob! yay?')
 }

@@ -39,7 +39,8 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <p>Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor.</p>
 
-    <p><img alt="Placeholder Image and Some Alt Text" src="http://placehold.it/350x150" title="A title element for this placeholder image."></p>
+    <p>
+      <img alt="Placeholder Image and Some Alt Text" src="http://placehold.it/350x150" title="A title element for this placeholder image."></p>
 
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem.</p>
 
@@ -209,35 +210,48 @@
     <fieldset>
       <legend>Legend</legend>
 
-      <p>The Form:</p>
-
       <form>
-        <p><label for="text_field">Text Field:</label><br />
+        <p>
+          <label for="text_field">Text Field:</label>
           <input type="text" id="text_field" />
         </p>
 
-        <p><label for="text_field_disabled">Disabled Text Field:</label><br />
+        <p>
+          <label for="text_field_disabled">Disabled Text Field:</label>
           <input type="text" id="text_field_disabled" disabled value="I'm disabled" />
         </p>
 
-        <p><label for="text_field_readonly">Readonly Text Field:</label><br />
+        <p>
+          <label for="text_field_readonly">Readonly Text Field:</label>
           <input type="text" id="text_field_readonly" readonly value="I'm readonly" />
         </p>
 
-        <p><label for="text_area">Text Area:</label><br />
+        <p>
+          <label for="text_area">Text Area:</label>
           <textarea id="text_area"></textarea>
         </p>
 
-        <p><label for="text_area_disabled">Disabled Text Area:</label><br />
+        <p>
+          <label for="text_area_disabled">Disabled Text Area:</label>
           <textarea id="text_area_disabled" disabled>I'm disabled</textarea>
         </p>
 
-        <p><label for="text_area">Readonly Text Area:</label><br />
+        <p>
+          <label for="text_area">Readonly Text Area:</label>
           <textarea id="text_area" readonly>I'm readonly</textarea>
         </p>
 
-        <p><label for="select_element">Select Element:</label><br />
-          <select id="select_element">
+        <p>
+          <label for="options">Select Element</label>
+          <select name="options" id="options">
+            <option value="value1">Option A</option>
+            <option value="value2">Option B</option>
+            <option value="value3">Option C</option>
+          </select>
+        </p>
+        <p>
+          <label for="optionsOptGroup">Select Element, optgroup</label>
+          <select id="optionsOptGroup">
             <optgroup label="Option Group 1">
               <option value="1">Option 1</option>
               <option value="2">Option 2</option>
@@ -250,70 +264,114 @@
           </select>
         </p>
 
-        <p><label for="select_element_disabled">Disabled Select Element:</label><br/>
+        <p>
+          <label for="select_element_disabled">Disabled Select Element:</label><br/>
           <select id="select_element_disabled" disabled>
             <option value="1">Unselectable Option</option>
             <option value="2">This option should not even be seen</option>
           </select>
         </p>
 
-        <p>Radio Buttons:<br />
-          <label><input type="radio" class="radio" name="radio_button" value="radio_1" /> Radio 1</label><br/>
-          <label><input type="radio" class="radio" name="radio_button" value="radio_2" /> Radio 2</label><br/>
-          <label><input type="radio" class="radio" name="radio_button" value="radio_3" /> Radio 3</label><br/>
-          <label><input type="radio" class="radio" name="radio_button" value="radio_4" disabled /> Radio Disabled</label><br/>
+        <p>
+          Radio Buttons:
         </p>
 
-        <p>Checkboxes:<br />
-          <label><input type="checkbox" class="checkbox" name="checkboxes" value="check_1" /> Checkbox 1</label><br/>
-          <label><input type="checkbox" class="checkbox" name="checkboxes" value="check_2" /> Checkbox 2</label><br/>
-          <label><input type="checkbox" class="checkbox" name="checkboxes" value="check_3" /> Checkbox 3</label><br/>
-          <label><input type="checkbox" class="checkbox" name="checkboxes" value="check_4" disabled /> Checkbox Disabled</label><br/>
-        </p>
+        <fieldset class="usa-fieldset-inputs usa-sans">
+          <legend class="usa-sr-only">Historical figures 2</legend>
+          <ul class="usa-unstyled-list">
+            <li>
+              <input id="pea-soup" type="radio" checked="" name="soup" value="pea">
+              <label for="pea-soup">Elizabeth Cady Stanton</label>
+            </li>
+            <li>
+              <input id="chicken-noodle" type="radio" name="soup" value="chicken-noodle">
+              <label for="chicken-noodle">Susan B. Anthony</label>
+            </li>
+            <li>
+              <input id="tomato" type="radio" name="soup" value="tomato">
+              <label for="tomato">Harriet Tubman</label>
+            </li>
+          </ul>
+        </fieldset>
 
-        <p><label for="password">Password:</label><br />
+
+        <p>Checkboxes:</p>
+        <fieldset class="usa-fieldset-inputs usa-sans">
+          <legend class="usa-sr-only">Historical figures 1</legend>
+          <ul class="usa-unstyled-list">
+            <li>
+              <input id="apple-pie" type="checkbox" name="apple-pie" value="apple-pie" checked="">
+              <label for="apple-pie">Sojourner Truth</label>
+            </li>
+            <li>
+              <input id="key-lime-pie" type="checkbox" name="key-lime-pie" value="key-lime-pie">
+              <label for="key-lime-pie">Frederick Douglass</label>
+            </li>
+            <li>
+              <input id="peach-pie" type="checkbox" name="peach-pie" value="peach-pie">
+              <label for="peach-pie">Booker T. Washington</label>
+            </li>
+            <li>
+              <input id="disabled" type="checkbox" disabled="">
+              <label for="disabled">George Washington Carver</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <p>
+          <label for="password">Password:</label>
           <input type="password" class="password" id="password" />
         </p>
 
-        <p><label for="file">File Input:</label><br />
+        <p>
+          <label for="file">File Input:</label>
           <input type="file" class="file" id="file" />
         </p>
 
         <h3>HTML5-specific Form Elements</h3>
 
-        <p><label for="email">Email:</label><br />
+        <p>
+          <label for="email">Email:</label>
           <input type="email" id="email" />
         </p>
 
-        <p><label for="url">URL:</label><br />
+        <p>
+          <label for="url">URL:</label>
           <input type="url" id="url" />
         </p>
 
-        <p><label for="tel">Telephone:</label><br />
+        <p>
+          <label for="tel">Telephone:</label>
           <input type="tel" id="tel" />
         </p>
 
-        <p><label for="number">Number:</label><br />
+        <p>
+          <label for="number">Number:</label>
           <input type="number" id="number" min="0" max="10" step="1" value="5" />
         </p>
 
-        <p><label for="search">Search:</label><br />
+        <p>
+          <label for="search">Search:</label>
           <input type="search" id="search" />
         </p>
 
-        <p><label for="date">Date:</label><br />
+        <p>
+          <label for="date">Date:</label>
           <input type="date" id="date" />
         </p>
 
-        <p><label for="time">Time:</label><br />
+        <p>
+          <label for="time">Time:</label>
           <input type="time" id="time" />
         </p>
 
-        <p><label for="color">Color:</label><br />
+        <p>
+          <label for="color">Color:</label>
           <input type="color" id="color" />
         </p>
 
-        <p><label for="datalist">Datalist:</label><br />
+        <p>
+          <label for="datalist">Datalist:</label>
           <input list="browsers" name="browser" type="datalist" id="datalist" />
           <datalist id="browsers">
             <option value="Internet Explorer" />
@@ -324,19 +382,23 @@
           </datalist>
         </p>
 
-        <p><label for="range">Range:</label><br />
+        <p>
+          <label for="range">Range:</label>
           <input type="range" id="range" name="points" min="1" max="10" />
         </p>
 
-        <p><label for="output">Output:</label><br />
+        <p>
+          <label for="output">Output:</label>
           <output name="result" id="output">42</output>
         </p>
 
-        <p><label for="progress">Progress:</label><br />
+        <p>
+          <label for="progress">Progress:</label>
           <progress id="progress" value="65" max="100"></progress>
         </p>
 
-        <p><label for="meter">Meter:</label><br />
+        <p>
+          <label for="meter">Meter:</label>
           <meter id="meter" min="200" max="500" value="350">350 degrees</meter>
         </p>
 
