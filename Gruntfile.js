@@ -33,28 +33,28 @@ module.exports = function (grunt) {
       },
     },
 
-    // Copies templates and assets from external modules and dirs
+    // Copies templates and assets from dependencies and/or src
     copy: {
 
-      uswds_fonts: {
-        expand: true,
-        src: '**',
-        cwd: 'node_modules/uswds/src/fonts',
-        dest: 'src/fonts'
-      },
-
-      uswds_js: {
-        expand: true,
-        src: '**',
-        cwd: 'node_modules/uswds/src/js',
-        dest: 'src/js/lib'
-      },
-
-      uswds_assets: {
+      uswds: {
         expand: true,
         src: '**',
         cwd: 'node_modules/uswds/src',
         dest: 'src'
+      },
+
+      fonts: {
+        expand: true,
+        src: '**',
+        cwd: 'src/fonts',
+        dest: 'dist/fonts'
+      },
+
+      img: {
+        expand: true,
+        src: '**',
+        cwd: 'src/img',
+        dest: 'dist/img'
       },
 
     },
@@ -63,7 +63,7 @@ module.exports = function (grunt) {
     watch: {
       css: {
         files: ['src/stylesheets/*.scss'],
-        tasks: ['sass','scsslint','postcss'],
+        tasks: ['sass', 'scsslint', 'postcss'],
         options: { nospawn: true }
       }
     },
@@ -143,7 +143,7 @@ module.exports = function (grunt) {
 
   // Register Tasks
   grunt.registerTask('default', ['build', 'browserSync', 'watch']);
-  grunt.registerTask('build', ['clean:dist', 'copy', 'clean:uswds_main', 'sass', 'postcss', 'browserify', 'lint']);
+  grunt.registerTask('build', ['clean:dist', 'copy:uswds', 'clean:uswds_main', 'copy:fonts', 'copy:img', 'sass', 'postcss', 'browserify', 'lint']);
   grunt.registerTask('lint', 'scsslint');
   grunt.registerTask('test', 'default', function () { grunt.log.writeln('Test that the app runs');});
 
