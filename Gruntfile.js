@@ -36,6 +36,20 @@ module.exports = function (grunt) {
     // Copies templates and assets from external modules and dirs
     copy: {
 
+      uswds_fonts: {
+        expand: true,
+        src: '**',
+        cwd: 'node_modules/uswds/src/fonts',
+        dest: 'src/fonts'
+      },
+
+      uswds_js: {
+        expand: true,
+        src: '**',
+        cwd: 'node_modules/uswds/src/js',
+        dest: 'src/js/lib'
+      },
+
       uswds_assets: {
         expand: true,
         src: '**',
