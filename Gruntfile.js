@@ -74,6 +74,20 @@ module.exports = function (grunt) {
 			uswds_main: [ 'src/stylesheets/all.scss' ],
 		},
 
+    // Make our HTML files perfectly formatted and humanly scannable
+    prettify: {
+      options: {
+        config: '.prettifyrc'
+      },
+      all: {
+        expand: true,
+        cwd: '.ugly/',
+        ext: '.html',
+        src: ['src/*.html'],
+        dest: 'dist'
+      },
+    },
+
     // Lint scss files
     scsslint: {
       allFiles: [
@@ -119,7 +133,7 @@ module.exports = function (grunt) {
         },
         options: {
           watchTask: true,
-          server: './'
+          server: './dist/'
         }
       }
     },
@@ -143,7 +157,7 @@ module.exports = function (grunt) {
 
   // Register Tasks
   grunt.registerTask('default', ['build', 'browserSync', 'watch']);
-  grunt.registerTask('build', ['clean:dist', 'copy:uswds', 'clean:uswds_main', 'copy:fonts', 'copy:img', 'sass', 'postcss', 'browserify', 'lint']);
+  grunt.registerTask('build', ['clean:dist', 'copy:uswds', 'clean:uswds_main', 'copy:fonts', 'copy:img', 'sass', 'postcss', 'prettify', 'browserify', 'lint']);
   grunt.registerTask('lint', 'scsslint');
   grunt.registerTask('test', 'default', function () { grunt.log.writeln('Test that the app runs');});
 
