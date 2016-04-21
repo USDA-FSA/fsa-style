@@ -81,10 +81,10 @@ module.exports = function (grunt) {
       },
       all: {
         expand: true,
-        cwd: '.ugly/',
+        cwd: 'src/',
         ext: '.html',
-        src: ['src/*.html'],
-        dest: 'dist'
+        src: ['*.html'],
+        dest: 'dist/'
       },
     },
 
