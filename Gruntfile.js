@@ -59,13 +59,19 @@ module.exports = function (grunt) {
 
     },
 
-    // Watches styles and specs for changes
+    // Watches files for changes and run relevant tasks
     watch: {
       css: {
         files: ['src/stylesheets/*.scss'],
         tasks: ['sass', 'scsslint', 'postcss'],
         options: { nospawn: true }
-      }
+      },
+      html: {
+        files: [
+          'src/*.html',
+        ],
+        tasks: ['prettify'] // 'simple_include'
+      },
     },
 
     // Clear files and folders
@@ -126,7 +132,7 @@ module.exports = function (grunt) {
       dev: {
         files: {
           src : [
-            '*.html',
+            'dist/*.html',
             'dist/css/*.css',
             'dist/js/*.js'
           ]
