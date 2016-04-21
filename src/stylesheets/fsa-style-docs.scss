@@ -1,0 +1,238 @@
+// Vendor -------------- //
+
+@import 'lib/bourbon';
+@import 'lib/neat';
+@import 'lib/normalize';
+
+// Core -------------- //
+
+@import 'core/defaults';
+@import 'core/variables';
+@import 'core/fonts';
+@import 'core/base';
+@import 'core/grid-settings';
+@import 'core/grid';
+@import 'core/utilities';
+
+.docs {
+
+  outline: 1px solid blue;
+
+  // -----------------------------------------------------------------------------
+  // Docs Variables. TODO: move to styleshets/core/fsa-variables.scss
+
+  $size-base          : 4px;
+  $size-small         : $size-base * 2;  // 8px
+  $size-default       : $size-base * 3;  // 12px
+  $size-medium        : $size-base * 6;  // 24px
+  $size-large         : $size-base * 9;  // 36px
+  $size-extra-large   : $size-medium * 2; // 48px
+
+  &_page {
+    padding: $size-default;
+  }
+
+  &_title {
+    // @include fz(8);
+    // font-family: $ff-bold;
+    // font-weight: $base-font-weight;
+    // color: orange;
+    text-align: center;
+    margin-top: $size-large;
+    margin-bottom: $size-medium;
+  }
+
+  &_sub-title {
+    // @include fz(7);
+    // font-weight: $base-font-weight;
+    // color: orange;
+    text-align: center;
+    margin-top: $size-default;
+    margin-bottom: $size-default;
+  }
+
+  &_section {
+    margin-bottom: $size-extra-large;
+  }
+
+  &_bd {
+    max-width: $site-max-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &_main {
+    padding-top: 50px;
+    // background-color: $color-white;
+  }
+
+  &_figure-group {
+    // @include fz(7);
+    border-top: 4px solid orange;
+    color: orange;
+    text-transform: uppercase;
+    // font-family: $ff-bold;
+    // font-weight: $base-font-weight;
+  }
+
+  &_figure {
+
+    // @include fz(4);
+    border-top: 1px solid orange;
+    color: orange;
+    text-transform: uppercase;
+    // font-family: $ff-bold;
+    // font-weight: $base-font-weight;
+    margin-top: $size-large;
+
+    .docs_figure-group + & {
+
+      //margin-top: $size-large;
+
+    }
+
+  }
+
+  &_sub_style {
+    // @include fz(3);
+    color: orange;
+  }
+
+  &_nav {
+    padding: 0;
+    background-color: $color-gray-dark;
+    color: $color-white;
+    margin: -12px -12px 0;
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+    // @include breakpoint(XL) {
+    //   position: fixed;
+    // }
+  }
+  &_primary-nav {
+
+    list-style: none;
+    margin-bottom: 0;
+
+    li {
+      display: inline-block;
+    }
+    a {
+      color: $color-white;
+      display: inline-block;
+      padding: $size-small;
+      // @include breakpoint(XL) {
+      //   padding: 16px;
+      // }
+      &:hover {
+        background: $color-black;
+      }
+    }
+    .top {
+      display: none;
+      // @include breakpoint(XL) {
+      //   display: block;
+      //   float: right;
+      // }
+    }
+  }
+
+  // -----------------------------------------------------------------------------
+  // Color
+
+  &_colors {
+
+    // @include fz(2);
+    margin-bottom: $size-default;
+
+    // @include breakpoint(MML) {
+    //   display: flex;
+    // }
+
+    &_item {
+      flex: 1;
+    }
+
+    &_swatch {
+      height: 75px;
+    }
+
+    &_title {
+      // font-family: $ff-bold;
+      // font-weight: $base-font-weight;
+      margin:
+        $size-small
+        $size-small
+        0
+      ;
+    }
+
+    &_attr {
+      margin: 0 $size-small;
+    }
+
+  }
+
+  // -----------------------------------------------------------------------------
+  // Fonts
+
+  &_font {
+
+    &--lato-regular {
+      // @include fz(7);
+      // font-family: $ff-base;
+    }
+
+    &--lato-light {
+      // @include fz(7);
+      // font-family: $ff-light;
+    }
+
+    &--lato-bold {
+      // @include fz(7);
+      // font-family: $ff-bold;
+    }
+
+    &--helvetica {
+      // @include fz(7);
+      // font-family: Helvetica;
+    }
+
+  }
+
+  // -----------------------------------------------------------------------------
+  // Typography
+
+  &_typography {
+
+    // &--fz-0 { @include fz(0); }
+    // &--fz-1 { @include fz(1); }
+    // &--fz-2 { @include fz(2); }
+    // &--fz-3 { @include fz(3); }
+    // &--fz-4 { @include fz(4); }
+    // &--fz-5 { @include fz(5); }
+    // &--fz-6 { @include fz(6); }
+    // &--fz-7 { @include fz(7); }
+    // &--fz-8 { @include fz(8); }
+
+  }
+
+}
+
+.fsa-visual-index {
+
+  max-width: $site-max-width;
+  margin: auto;
+  padding: 1rem;
+
+  &__title {
+    padding-top: .5rem;
+    border-top: 4px solid $color-green;
+    font-size: $base-font-size;
+    font-family: $font-sans;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+}

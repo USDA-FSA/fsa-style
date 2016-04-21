@@ -44,20 +44,3 @@
 @import 'core/18f-overrides';
 @import 'elements/foo-element';
 @import 'components/asdfqwer';
-
-.fsa-visual-index {
-
-  max-width: $site-max-width;
-  margin: auto;
-  padding: 1rem;
-
-  &__title {
-    padding-top: .5rem;
-    border-top: 4px solid $color-green;
-    font-size: $base-font-size;
-    font-family: $font-sans;
-    text-transform: uppercase;
-    margin-bottom: 0;
-  }
-
-}
