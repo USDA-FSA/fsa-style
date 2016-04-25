@@ -2,21 +2,15 @@
 
 @import 'lib/bourbon';
 @import 'lib/neat';
-@import 'lib/normalize';
 
 // Core -------------- //
 
 @import 'core/defaults';
 @import 'core/variables';
-@import 'core/fonts';
-@import 'core/base';
 @import 'core/grid-settings';
-@import 'core/grid';
 @import 'core/utilities';
 
 .docs {
-
-  outline: 1px solid blue;
 
   // -----------------------------------------------------------------------------
   // Docs Variables. TODO: move to styleshets/core/fsa-variables.scss
@@ -28,6 +22,8 @@
   $size-large         : $size-base * 9;  // 36px
   $size-extra-large   : $size-medium * 2; // 48px
 
+  $color-annotation: shade($color-gold,10%);
+
   &_page {
     padding: $size-default;
   }
@@ -36,7 +32,7 @@
     // @include fz(8);
     // font-family: $ff-bold;
     // font-weight: $base-font-weight;
-    // color: orange;
+    // color: $color-annotation;
     text-align: center;
     margin-top: $size-large;
     margin-bottom: $size-medium;
@@ -45,7 +41,7 @@
   &_sub-title {
     // @include fz(7);
     // font-weight: $base-font-weight;
-    // color: orange;
+    // color: $color-annotation;
     text-align: center;
     margin-top: $size-default;
     margin-bottom: $size-default;
@@ -68,8 +64,8 @@
 
   &_figure-group {
     // @include fz(7);
-    border-top: 4px solid orange;
-    color: orange;
+    border-top: 4px solid $color-annotation;
+    color: $color-annotation;
     text-transform: uppercase;
     // font-family: $ff-bold;
     // font-weight: $base-font-weight;
@@ -78,8 +74,8 @@
   &_figure {
 
     // @include fz(4);
-    border-top: 1px solid orange;
-    color: orange;
+    border-top: 1px solid $color-annotation;
+    color: $color-annotation;
     text-transform: uppercase;
     // font-family: $ff-bold;
     // font-weight: $base-font-weight;
@@ -95,47 +91,57 @@
 
   &_sub_style {
     // @include fz(3);
-    color: orange;
+    color: $color-annotation;
   }
 
   &_nav {
     padding: 0;
     background-color: $color-gray-dark;
     color: $color-white;
-    margin: -12px -12px 0;
     width: 100%;
     position: absolute;
     z-index: 100;
-    // @include breakpoint(XL) {
-    //   position: fixed;
-    // }
+    @include media($large-screen) {
+      position: fixed;
+    }
   }
+
   &_primary-nav {
 
-    list-style: none;
-    margin-bottom: 0;
+    @include unstyled-list();
+    max-width: $site-max-width;
+    margin-left: auto;
+    margin-right: auto;
 
     li {
       display: inline-block;
     }
+
     a {
       color: $color-white;
       display: inline-block;
       padding: $size-small;
-      // @include breakpoint(XL) {
-      //   padding: 16px;
-      // }
+
+      @include media($large-screen) {
+        padding: 16px;
+      }
+
       &:hover {
         background: $color-black;
       }
     }
+
     .top {
+
       display: none;
-      // @include breakpoint(XL) {
-      //   display: block;
-      //   float: right;
-      // }
+
+      @include media($large-screen) {
+        display: block;
+        float: right;
+      }
+
     }
+
   }
 
   // -----------------------------------------------------------------------------
@@ -145,10 +151,11 @@
 
     // @include fz(2);
     margin-bottom: $size-default;
+    @include unstyled-list();
 
-    // @include breakpoint(MML) {
-    //   display: flex;
-    // }
+    @include media($large-screen) {
+      display: flex;
+    }
 
     &_item {
       flex: 1;
