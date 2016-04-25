@@ -4,17 +4,17 @@
 @import 'lib/neat';
 @import 'lib/normalize';
 
-
-// Core -------------- //
+// Core (non-rendering) -------------- //
 
 @import 'core/defaults';
-@import 'core/variables';
 @import 'core/fonts';
-@import 'core/base';
 @import 'core/grid-settings';
+
+// Core (rendering) -------------- //
+@import 'core/base';
+@import 'core/base--fsa';
 @import 'core/grid';
 @import 'core/utilities';
-
 
 // Elements -------------- //
 // Styles basic HTML elements
@@ -41,6 +41,5 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 
-@import 'core/18f-overrides';
 @import 'elements/foo-element';
 @import 'components/asdfqwer';
