@@ -22,7 +22,10 @@
   $size-large         : $size-base * 9;  // 36px
   $size-extra-large   : $size-medium * 2; // 48px
 
-  $color-annotation: shade($color-gold,10%);
+  $color-fsa-primary: $color-green;
+  $color-fsa-primary-dark: shade($color-fsa-primary, 28%);
+
+  $color-annotation: $color-primary-darker;
 
   &_page {
     padding: $size-default;
@@ -32,7 +35,7 @@
     // @include fz(8);
     // font-family: $ff-bold;
     // font-weight: $base-font-weight;
-    // color: $color-annotation;
+    color: $color-annotation;
     text-align: center;
     margin-top: $size-large;
     margin-bottom: $size-medium;
@@ -96,11 +99,17 @@
 
   &_nav {
     padding: 0;
-    background-color: $color-gray-dark;
+    background-color: $color-fsa-primary-dark;
     color: $color-white;
     width: 100%;
     position: absolute;
     z-index: 100;
+    margin:
+      (-$size-default)
+      0
+      0
+      (-$size-default)
+    ;
     @include media($large-screen) {
       position: fixed;
     }
