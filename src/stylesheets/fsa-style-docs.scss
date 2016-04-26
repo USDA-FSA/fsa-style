@@ -114,7 +114,14 @@
     width: 100%;
     position: absolute;
     z-index: 100;
-    margin: -$size-default 0 0 -$size-default;
+
+    // scss-lint:disable SelectorFormat TrailingSemicolon SpaceAfterPropertyColon
+    margin:
+      -$size-default
+      0
+      0
+      -$size-default
+    ;
 
     @include media($large-screen) {
       position: fixed;
