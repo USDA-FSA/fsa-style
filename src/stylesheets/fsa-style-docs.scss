@@ -10,6 +10,15 @@
 @import 'core/grid-settings';
 @import 'core/utilities';
 
+.grid {
+  &_unit {
+    &--dark {
+      background-color: red;
+    }
+  }
+}
+
+
 .docs {
 
   // -----------------------------------------------------------------------------
@@ -133,6 +142,7 @@
         padding: 16px;
       }
 
+      // scss-lint:disable NestingDepth
       &:hover {
         background: $color-black;
       }
