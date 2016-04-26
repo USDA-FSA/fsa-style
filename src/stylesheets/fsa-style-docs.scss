@@ -98,21 +98,19 @@
   }
 
   &_nav {
+
     padding: 0;
     background-color: $color-fsa-primary-dark;
     color: $color-white;
     width: 100%;
     position: absolute;
     z-index: 100;
-    margin:
-      (-$size-default)
-      0
-      0
-      (-$size-default)
-    ;
+    margin: -$size-default 0 0 -$size-default;
+
     @include media($large-screen) {
       position: fixed;
     }
+
   }
 
   &_primary-nav {
@@ -159,8 +157,9 @@
   &_colors {
 
     // @include fz(2);
-    margin-bottom: $size-default;
+
     @include unstyled-list();
+    margin-bottom: $size-default;
 
     @include media($large-screen) {
       display: flex;
@@ -177,11 +176,7 @@
     &_title {
       // font-family: $ff-bold;
       // font-weight: $base-font-weight;
-      margin:
-        $size-small
-        $size-small
-        0
-      ;
+      margin: $size-small $size-small 0;
     }
 
     &_attr {
