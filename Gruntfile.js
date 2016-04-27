@@ -64,7 +64,10 @@ module.exports = function (grunt) {
     // Watches files for changes and run relevant tasks
     watch: {
       css: {
-        files: ['src/stylesheets/*.scss'],
+        files: [
+          'src/stylesheets/*.scss',
+          'src/stylesheets/**/*.scss'
+        ],
         tasks: ['sass', 'scsslint', 'postcss'],
         options: { nospawn: true }
       },
