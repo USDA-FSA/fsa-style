@@ -27,11 +27,11 @@
 
   $color-annotation: $color-primary-darker;
 
-  &_page {
+  &__page {
     padding: $size-default;
   }
 
-  &_title {
+  &__title {
     // @include fz(8);
     // font-family: $ff-bold;
     // font-weight: $base-font-weight;
@@ -41,7 +41,7 @@
     margin-bottom: $size-medium;
   }
 
-  &_sub-title {
+  &__sub-title {
     // @include fz(7);
     // font-weight: $base-font-weight;
     // color: $color-annotation;
@@ -50,22 +50,22 @@
     margin-bottom: $size-default;
   }
 
-  &_section {
+  &__section {
     margin-bottom: $size-extra-large;
   }
 
-  &_bd {
+  &__bd {
     max-width: $site-max-width;
     margin-left: auto;
     margin-right: auto;
   }
 
-  &_main {
+  &__main {
     padding-top: 50px;
     // background-color: $color-white;
   }
 
-  &_figure-group {
+  &__figure-group {
     // @include fz(7);
     border-top: 4px solid $color-annotation;
     color: $color-annotation;
@@ -74,7 +74,7 @@
     // font-weight: $base-font-weight;
   }
 
-  &_figure {
+  &__figure {
 
     // @include fz(4);
     border-top: 1px solid $color-annotation;
@@ -84,7 +84,7 @@
     // font-weight: $base-font-weight;
     margin-top: $size-large;
 
-    .docs_figure-group + & {
+    .docs__figure-group + & {
 
       //margin-top: $size-large;
 
@@ -92,12 +92,12 @@
 
   }
 
-  &_sub_style {
+  &__sub_style {
     // @include fz(3);
     color: $color-annotation;
   }
 
-  &_nav {
+  &__nav {
 
     padding: 0;
     background-color: $color-fsa-primary-dark;
@@ -120,7 +120,7 @@
 
   }
 
-  &_primary-nav {
+  &__primary-nav {
 
     @include unstyled-list();
     max-width: $site-max-width;
@@ -162,7 +162,7 @@
   // -----------------------------------------------------------------------------
   // Color
 
-  &_colors {
+  &__colors {
 
     // @include fz(2);
 
@@ -173,21 +173,21 @@
       display: flex;
     }
 
-    &_item {
+    &__item {
       flex: 1;
     }
 
-    &_swatch {
+    &__swatch {
       height: 75px;
     }
 
-    &_title {
+    &__title {
       // font-family: $ff-bold;
       // font-weight: $base-font-weight;
       margin: $size-small $size-small 0;
     }
 
-    &_attr {
+    &__attr {
       margin: 0 $size-small;
     }
 
@@ -196,7 +196,7 @@
   // -----------------------------------------------------------------------------
   // Fonts
 
-  &_font {
+  &__font {
 
     &--lato-regular {
       // @include fz(7);
@@ -223,7 +223,7 @@
   // -----------------------------------------------------------------------------
   // Typography
 
-  &_typography {
+  &__typography {
 
     // &--fz-0 { @include fz(0); }
     // &--fz-1 { @include fz(1); }
