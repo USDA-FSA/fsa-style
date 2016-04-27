@@ -99,7 +99,8 @@ module.exports = function (grunt) {
     // Lint scss files
     scsslint: {
       allFiles: [
-        'src/stylesheets/*.scss'
+        'src/stylesheets/*.scss',
+        'src/stylesheets/**/*.scss'
       ],
       options: {
         bundleExec: false,

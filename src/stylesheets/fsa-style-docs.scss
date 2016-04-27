@@ -6,18 +6,9 @@
 // Core -------------- //
 
 @import 'core/defaults';
-@import 'core/variables';
+@import 'core/variables--fsa';
 @import 'core/grid-settings';
 @import 'core/utilities';
-
-.grid {
-  &_unit {
-    &--dark {
-      background-color: red;
-    }
-  }
-}
-
 
 .docs {
 
