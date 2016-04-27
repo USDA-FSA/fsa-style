@@ -9,6 +9,7 @@
 @import 'core/variables--fsa';
 @import 'core/grid-settings';
 @import 'core/utilities';
+@import 'core/utilities--fsa';
 
 .docs {
 
@@ -115,7 +116,8 @@
     ;
 
     @include media($large-screen) {
-      position: fixed;
+      @include position(fixed, 0px 0px 0 0px); // scss-lint:disable ZeroUnit
+      margin: 0;
     }
 
   }

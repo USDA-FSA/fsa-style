@@ -1,0 +1,109 @@
+// -----------------------------------------------------------------------------
+// Typography
+
+// "fz" is Emmet abbr for "font-size"
+//   http://docs.emmet.io/css-abbreviations/
+//   http://docs.emmet.io/cheat-sheet/
+
+@mixin fz($font-size) {
+  @if $font-size == 0 { font-size: $fz-0; line-height: $lh-0; }
+  @if $font-size == 1 { font-size: $fz-1; line-height: $lh-1; }
+  @if $font-size == 2 { font-size: $fz-2; line-height: $lh-2; }
+  @if $font-size == 3 { font-size: $fz-3; line-height: $lh-3; }
+  @if $font-size == 4 { font-size: $fz-4; line-height: $lh-4; }
+  @if $font-size == 5 { font-size: $fz-5; line-height: $lh-5; }
+  @if $font-size == 6 { font-size: $fz-6; line-height: $lh-6; }
+  @if $font-size == 7 { font-size: $fz-7; line-height: $lh-7; }
+  @if $font-size == 8 { font-size: $fz-8; line-height: $lh-8; }
+}
+
+// -----------------------------------------------------------------------------
+// CSS Triangles
+// We use this to create equilateral triangles
+// $triangle-size - Used to set border-size. No default, set a px or em size.
+// $triangle-color - Used to set border-color which makes up triangle. No default
+// $triangle-direction - Used to determine which direction triangle points. Options: top, bottom, left, right
+// Sourced from foundation.zurb.com
+//
+// Example usage:
+// @include css-triangle(10px, #fff, top);
+@mixin css-triangle($triangle-size, $triangle-color, $triangle-direction) {
+
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border: inset $triangle-size;
+
+  @if ($triangle-direction == top) {
+    border-color: $triangle-color transparent transparent;
+    border-top-style: solid;
+  }
+
+  @if ($triangle-direction == bottom) {
+    border-color: transparent transparent $triangle-color;
+    border-bottom-style: solid;
+  }
+
+  @if ($triangle-direction == left) {
+    border-color: transparent transparent transparent $triangle-color;
+    border-left-style: solid;
+  }
+
+  @if ($triangle-direction == right) {
+    border-color: transparent $triangle-color transparent transparent;
+    border-right-style: solid;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Positioning
+// If one of "$coordinates" is unitless, it omits the prop/val pair,
+// e.g. '0' instead of '0px'
+//
+// Example usage:
+// @include position(absolute, 0px 0px 0px 0); (note last 0 has no
+// unit, e.g. 'px')
+
+@mixin position($position: relative, $coordinates: 0 0 0 0) {
+
+  @if type-of($position) == list {
+    $coordinates: $position;
+    $position: relative;
+  }
+
+  $top: nth($coordinates, 1);
+  $right: nth($coordinates, 2);
+  $bottom: nth($coordinates, 3);
+  $left: nth($coordinates, 4);
+
+  position: $position;
+
+  @if $top == auto {
+    top: $top;
+  }
+  @else if not(unitless($top)) {
+    top: $top;
+  }
+
+  @if $right == auto {
+    right: $right;
+  }
+  @else if not(unitless($right)) {
+    right: $right;
+  }
+
+  @if $bottom == auto {
+    bottom: $bottom;
+  }
+  @else if not(unitless($bottom)) {
+    bottom: $bottom;
+  }
+
+  @if $left == auto {
+    left: $left;
+  }
+  @else if not(unitless($left)) {
+    left: $left;
+  }
+}
