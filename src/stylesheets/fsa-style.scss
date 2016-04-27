@@ -5,7 +5,6 @@
 @import 'lib/normalize';
 
 // Core (non-rendering) -------------- //
-
 @import 'core/defaults';
 @import 'core/variables--fsa';
 @import 'core/fonts';
@@ -28,6 +27,7 @@
 @import 'elements/list';
 @import 'elements/table';
 @import 'elements/typography';
+@import 'elements/typography--fsa';
 
 
 // Components -------------- //

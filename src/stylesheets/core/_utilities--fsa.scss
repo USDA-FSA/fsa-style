@@ -6,15 +6,16 @@
 //   http://docs.emmet.io/cheat-sheet/
 
 @mixin fz($font-size) {
-  @if $font-size == 0 { font-size: $fz-0; line-height: $lh-0; }
-  @if $font-size == 1 { font-size: $fz-1; line-height: $lh-1; }
-  @if $font-size == 2 { font-size: $fz-2; line-height: $lh-2; }
-  @if $font-size == 3 { font-size: $fz-3; line-height: $lh-3; }
-  @if $font-size == 4 { font-size: $fz-4; line-height: $lh-4; }
-  @if $font-size == 5 { font-size: $fz-5; line-height: $lh-5; }
-  @if $font-size == 6 { font-size: $fz-6; line-height: $lh-6; }
-  @if $font-size == 7 { font-size: $fz-7; line-height: $lh-7; }
-  @if $font-size == 8 { font-size: $fz-8; line-height: $lh-8; }
+  @if $font-size == 0 { font-size: $font-size-0; }
+  @if $font-size == 1 { font-size: $font-size-1; }
+  @if $font-size == 2 { font-size: $font-size-2; }
+  @if $font-size == 3 { font-size: $font-size-3; }
+  @if $font-size == 4 { font-size: $font-size-4; line-height: $heading-line-height; }
+  @if $font-size == 5 { font-size: $font-size-5; line-height: $heading-line-height; }
+  @if $font-size == 6 { font-size: $font-size-6; line-height: $heading-line-height; }
+  @if $font-size == 7 { font-size: $font-size-7; line-height: $heading-line-height; }
+  @if $font-size == 8 { font-size: $font-size-8; line-height: $heading-line-height; }
+  @if $font-size == 9 { font-size: $font-size-9; line-height: $heading-line-height; }
 }
 
 // -----------------------------------------------------------------------------
@@ -64,7 +65,6 @@
 // Example usage:
 // @include position(absolute, 0px 0px 0px 0); (note last 0 has no
 // unit, e.g. 'px')
-
 @mixin position($position: relative, $coordinates: 0 0 0 0) {
 
   @if type-of($position) == list {
@@ -105,5 +105,29 @@
   }
   @else if not(unitless($left)) {
     left: $left;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Reset <ul> (note, you'll likely want reset-li() too
+@mixin reset-ul() {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+// -----------------------------------------------------------------------------
+// Reset <ul> (note, you'll likely want reset-li() too
+@mixin reset-li() {
+  display: list-item;
+  margin: 0;
+
+  &:before {
+    display: none;
+  }
+
+  &:after {
+    display: none;
   }
 }
