@@ -77,6 +77,15 @@ module.exports = function (grunt) {
         ],
         tasks: ['prettify'] // 'simple_include'
       },
+      img: {
+        files: [
+          'src/img/**/*.jpeg',
+          'src/img/**/*.jpg',
+          'src/img/**/*.gif',
+          'src/img/**/*.svg',
+        ],
+        tasks: ['copy:img']
+      },
     },
 
     // Clear files and folders
@@ -138,6 +147,10 @@ module.exports = function (grunt) {
       dev: {
         files: {
           src : [
+            'dist/**/*.gif',
+            'dist/**/*.svg',
+            'dist/**/*.jpg',
+            'dist/**/*.jpeg',
             'dist/*.html',
             'dist/css/*.css',
             'dist/js/*.js'
