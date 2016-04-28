@@ -11,6 +11,8 @@
 @import 'core/utilities';
 @import 'core/utilities--fsa';
 
+$color-annotation: $color-orange;
+
 .docs {
 
   // -----------------------------------------------------------------------------
@@ -23,20 +25,18 @@
   $size-large         : $size-base * 9;  // 36px
   $size-extra-large   : $size-medium * 2; // 48px
 
-  $color-annotation: $color-orange;
-
   &__page {
     padding: $size-default;
   }
 
   &__title {
-    // @include fz(8);
+    @include font-size(8);
     // font-family: $ff-bold;
     // font-weight: $base-font-weight;
   }
 
   &__sub-title {
-    // @include fz(7);
+    @include font-size(7);
     // font-weight: $base-font-weight;
     // color: $color-annotation;
     text-align: center;
@@ -60,7 +60,7 @@
   }
 
   &__figure-group {
-    // @include fz(7);
+    @include font-size(7);
     border-top: 4px solid $color-annotation;
     color: $color-annotation;
     text-transform: uppercase;
@@ -70,7 +70,7 @@
 
   &__figure {
 
-    // @include fz(4);
+    @include font-size(4);
     border-top: 1px solid $color-annotation;
     color: $color-annotation;
     text-transform: uppercase;
@@ -87,7 +87,7 @@
   }
 
   &__sub_style {
-    // @include fz(3);
+    @include font-size(3);
     color: $color-annotation;
   }
 
@@ -117,13 +117,28 @@
 
   &__primary-nav {
 
-    @include unstyled-list();
+    @include reset-ul();
     max-width: $site-max-width;
     margin-left: auto;
     margin-right: auto;
 
-    li {
+    &-item {
+
+      @include reset-li();
       display: inline-block;
+
+      // scss-lint:disable NestingDepth
+      &--top {
+
+        display: none;
+
+        @include media($large-screen) {
+          display: block;
+          float: right;
+        }
+
+      }
+
     }
 
     a {
@@ -141,17 +156,6 @@
       }
     }
 
-    .top {
-
-      display: none;
-
-      @include media($large-screen) {
-        display: block;
-        float: right;
-      }
-
-    }
-
   }
 
   // -----------------------------------------------------------------------------
@@ -159,9 +163,8 @@
 
   &__colors {
 
-    // @include fz(2);
+    @include reset-ul();
 
-    @include unstyled-list();
     margin-bottom: $size-default;
 
     @include media($large-screen) {
@@ -169,6 +172,7 @@
     }
 
     &__item {
+      @include reset-li();
       flex: 1;
     }
 
@@ -183,7 +187,17 @@
     }
 
     &__attr {
+
+      @include reset-ul;
+      @include font-size(1);
       margin: 0 $size-small;
+      font-family: $font-mono;
+
+      // scss-lint:disable NestingDepth
+      &-item {
+        @include reset-li;
+      }
+
     }
 
   }
@@ -194,22 +208,22 @@
   &__font {
 
     &--lato-regular {
-      // @include fz(7);
+      @include font-size(7);
       // font-family: $ff-base;
     }
 
     &--lato-light {
-      // @include fz(7);
+      @include font-size(7);
       // font-family: $ff-light;
     }
 
     &--lato-bold {
-      // @include fz(7);
+      @include font-size(7);
       // font-family: $ff-bold;
     }
 
     &--helvetica {
-      // @include fz(7);
+      @include font-size(7);
       // font-family: Helvetica;
     }
 
@@ -229,7 +243,7 @@
     }
 
     &__attr {
-      @include fz(1);
+      @include font-size(1);
       flex: 1;
       width: 190px;
       background-color: $color-white;
@@ -238,16 +252,16 @@
       border: 1px solid $color_gray_lighter;
     }
 
-    &__size--0 { @include fz(0); }
-    &__size--1 { @include fz(1); }
-    &__size--2 { @include fz(2); }
-    &__size--3 { @include fz(3); }
-    &__size--4 { @include fz(4); }
-    &__size--5 { @include fz(5); }
-    &__size--6 { @include fz(6); }
-    &__size--7 { @include fz(7); }
-    &__size--8 { @include fz(8); }
-    &__size--9 { @include fz(9); }
+    &__size--0 { @include font-size(0); }
+    &__size--1 { @include font-size(1); }
+    &__size--2 { @include font-size(2); }
+    &__size--3 { @include font-size(3); }
+    &__size--4 { @include font-size(4); }
+    &__size--5 { @include font-size(5); }
+    &__size--6 { @include font-size(6); }
+    &__size--7 { @include font-size(7); }
+    &__size--8 { @include font-size(8); }
+    &__size--9 { @include font-size(9); }
 
   }
 
@@ -260,9 +274,10 @@
   padding: 1rem;
 
   &__title {
-    padding-top: .5rem;
-    border-top: 4px solid $color-green;
     font-size: $base-font-size;
+    color: $color-annotation;
+    padding-top: .5rem;
+    border-top: 4px solid $color-annotation;
     font-family: $font-sans;
     text-transform: uppercase;
     margin-bottom: 0;

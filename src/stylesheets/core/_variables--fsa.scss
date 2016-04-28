@@ -7,8 +7,11 @@
 // ---------------------------------------------------------------------------
 // Colors
 
+$color-fsa-base: $color-base;
 $color-fsa-primary: $color-green;
 $color-fsa-primary-dark: shade($color-fsa-primary, 28%);
+$color-fsa-secondary: $color-primary-darker;
+$color-fsa-tertiary: $color-gray-warm-dark;
 
 $color-black: #000;
 $color-title: $color-primary-darker;
@@ -17,7 +20,10 @@ $color-orange: #eb6321;
 // ---------------------------------------------------------------------------
 // Typography
 
-// Font Scale
+$font-mono: Consolas, Menlo, Monaco, "Lucida Console", "Courier New", monospace;
+
+
+// Font Size Scale
 $font-size-0 : $h6-font-size;
 $font-size-1 : $small-font-size;
 $font-size-2 : $h5-font-size;

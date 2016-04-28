@@ -18,80 +18,99 @@
 <body class="docs__page">
   <nav class="docs__nav">
     <ul class="docs__primary-nav">
-      <li><a href="#color">Colors</a></li>
-      <li><a href="#logo">Logo</a></li>
-      <li><a href="#type">Typography</a></li>
-      <li><a href="#btn">Buttons</a></li>
-      <li><a href="#forms">Forms</a></li>
-      <li><a href="#nav">Navigation</a></li>
-      <li><a href="#frames">Frames</a></li>
-      <li><a href="#grid">Grid</a></li>
-      <li class="top"><a href="#top">Top</a></li>
+      <li class="docs__primary-nav-item"><a href="#color">Colors</a></li>
+      <li class="docs__primary-nav-item"><a href="#logo">Logo</a></li>
+      <li class="docs__primary-nav-item"><a href="#type">Typography</a></li>
+      <li class="docs__primary-nav-item"><a href="#btn">Buttons</a></li>
+      <li class="docs__primary-nav-item"><a href="#forms">Forms</a></li>
+      <li class="docs__primary-nav-item"><a href="#nav">Navigation</a></li>
+      <li class="docs__primary-nav-item"><a href="#frames">Frames</a></li>
+      <li class="docs__primary-nav-item"><a href="#grid">Grid</a></li>
+      <li class="docs__primary-nav-item docs__primary-nav-item--top"><a href="#top">Top</a></li>
     </ul>
   </nav>
 
   <main class="docs__main" id="top">
+
     <h1 class="docs__bd docs__title" id="top">FSA Visual Language</h1>
 
     <section class="docs__section">
       <h2 class="docs__bd docs__figure-group" id="color">Colors</h2>
-      <h3 class="docs__bd docs__figure">Primary</h3>
+      <h3 class="docs__bd docs__figure">Base</h3>
       <div class="docs__bd">
         <ul class="docs__colors">
           <li class="docs__colors__item">
-            <div class="docs__colors__swatch" style="background-color: #0073ae;"></div>
-            <div class="docs__colors__title">Blue</div>
+            <div class="docs__colors__swatch" style="background-color: #212121;"></div>
+            <div class="docs__colors__title">Base</div>
             <ul class="docs__colors__attr">
-              <li>#0073ae</li>
-              <li>$blue</li>
+              <li class="docs__colors__attr-item">#212121</li>
+              <li class="docs__colors__attr-item">$color-fsa-base</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <h3 class="docs__bd docs__figure">Core Palette</h3>
+      <div class="docs__bd">
+        <ul class="docs__colors">
+          <li class="docs__colors__item">
+            <div class="docs__colors__swatch" style="background-color: #2e8540;"></div>
+            <div class="docs__colors__title">Primary</div>
+            <ul class="docs__colors__attr">
+              <li class="docs__colors__attr-item">#2e8540</li>
+              <li class="docs__colors__attr-item">$color-fsa-primary</li>
             </ul>
           </li>
           <li class="docs__colors__item">
-            <div class="docs__colors__swatch" style="background-color: #ff8800;"></div>
-            <div class="docs__colors__title">Orange</div>
+            <div class="docs__colors__swatch" style="background-color: #205493;"></div>
+             <div class="docs__colors__title">Secondary</div>
             <ul class="docs__colors__attr">
-              <li>#ff8800</li>
-              <li>$orange</li>
+              <li class="docs__colors__attr-item">#205493</li>
+              <li class="docs__colors__attr-item">$color-fsa-secondary</li>
             </ul>
           </li>
           <li class="docs__colors__item">
-            <div class="docs__colors__swatch" style="background-color: #585858;"></div>
-            <div class="docs__colors__title">Dark Gray</div>
+            <div class="docs__colors__swatch" style="background-color: #494440;"></div>
+             <div class="docs__colors__title">Tertiary</div>
             <ul class="docs__colors__attr">
-              <li>#585858</li>
-              <li>$gray-dark</li>
+              <li class="docs__colors__attr-item">#494440</li>
+              <li class="docs__colors__attr-item">$color-fsa-tertiary</li>
             </ul>
           </li>
-          <li class="docs__colors__item">
-            <div class="docs__colors__swatch" style="background-color: #a9a9a9;"></div>
-            <div class="docs__colors__title">Medium Gray</div>
-            <ul class="docs__colors__attr">
-              <li>#a9a9a9</li>
-              <li>$gray-medium</li>
-            </ul>
-          </li>
-          <li class="docs__colors__item">
-            <div class="docs__colors__swatch" style="background-color: #dcdcdc;"></div>
-            <div class="docs__colors__title">Light Gray</div>
-            <ul class="docs__colors__attr">
-              <li>#dcdcdc</li>
-              <li>$gray-light</li>
-            </ul>
-          </li>
-          <li class="docs__colors__item">
-            <div class="docs__colors__swatch" style="background-color: rgb(255,255,255); outline: 1px solid #dcdcdc; outline-offset: -1px"></div>
-            <div class="docs__colors__title">White</div>
-            <ul class="docs__colors__attr">
-              <li>#fff</li>
-              <li>$white</li>
-            </ul>
-          </li>
+        </ul>
+      </div>
+      <h3 class="docs__bd docs__figure">Core - Tints and Shades</h3>
+      <div class="docs__bd">
+        <ul class="docs__colors">
           <li class="docs__colors__item">
             <div class="docs__colors__swatch" style="background-color: #000;"></div>
-            <div class="docs__colors__title">Black</div>
+            <div class="docs__colors__title">[item]</div>
             <ul class="docs__colors__attr">
-              <li>#000</li>
-              <li>$black</li>
+              <li class="docs__colors__attr-item">[hex]</li>
+              <li class="docs__colors__attr-item">[variable]</li>
+            </ul>
+          </li>
+          <li class="docs__colors__item">
+            <div class="docs__colors__swatch" style="background-color: #333;"></div>
+            <div class="docs__colors__title">[item]</div>
+            <ul class="docs__colors__attr">
+              <li class="docs__colors__attr-item">[hex]</li>
+              <li class="docs__colors__attr-item">[variable]</li>
+            </ul>
+          </li>
+          <li class="docs__colors__item">
+            <div class="docs__colors__swatch" style="background-color: #666;"></div>
+            <div class="docs__colors__title">[item]</div>
+            <ul class="docs__colors__attr">
+              <li class="docs__colors__attr-item">[hex]</li>
+              <li class="docs__colors__attr-item">[variable]</li>
+            </ul>
+          </li>
+          <li class="docs__colors__item">
+            <div class="docs__colors__swatch" style="background-color: #ccc;"></div>
+            <div class="docs__colors__title">[item]</div>
+            <ul class="docs__colors__attr">
+              <li class="docs__colors__attr-item">[hex]</li>
+              <li class="docs__colors__attr-item">[variable]</li>
             </ul>
           </li>
         </ul>
@@ -103,24 +122,24 @@
             <div class="docs__colors__swatch" style="background-color: #004273"></div>
             <div class="docs__colors__title">Dark Blue</div>
             <ul class="docs__colors__attr">
-              <li>$blue-dark</li>
-              <li>#004273</li>
+              <li class="docs__colors__attr-item">$blue-dark</li>
+              <li class="docs__colors__attr-item">#004273</li>
             </ul>
           </li>
           <li class="docs__colors__item">
             <div class="docs__colors__swatch" style="background-color: #0073ae;"></div>
             <div class="docs__colors__title">Blue</div>
             <ul class="docs__colors__attr">
-              <li>$blue</li>
-              <li>#0073ae</li>
+              <li class="docs__colors__attr-item">$blue</li>
+              <li class="docs__colors__attr-item">#0073ae</li>
             </ul>
           </li>
           <li class="docs__colors__item">
             <div class="docs__colors__swatch" style="background-color: #42a8d9"></div>
             <div class="docs__colors__title">Light Blue</div>
             <ul class="docs__colors__attr">
-              <li>#42a8d9</li>
-              <li>$blue-light</li>
+              <li class="docs__colors__attr-item">#42a8d9</li>
+              <li class="docs__colors__attr-item">$blue-light</li>
             </ul>
           </li>
         </ul>
@@ -129,24 +148,24 @@
             <div class="docs__colors__swatch" style="background-color: #eb6321"></div>
             <div class="docs__colors__title">Dark Orange</div>
             <ul class="docs__colors__attr">
-              <li>$orange-dark</li>
-              <li>#eb6321</li>
+              <li class="docs__colors__attr-item">$orange-dark</li>
+              <li class="docs__colors__attr-item">#eb6321</li>
             </ul>
           </li>
           <li class="docs__colors__item">
             <div class="docs__colors__swatch" style="background-color: #ff8800;"></div>
             <div class="docs__colors__title">Orange</div>
             <ul class="docs__colors__attr">
-              <li>#ff8800</li>
-              <li>$orange</li>
+              <li class="docs__colors__attr-item">#ff8800</li>
+              <li class="docs__colors__attr-item">$orange</li>
             </ul>
           </li>
           <li class="docs__colors__item">
             <div class="docs__colors__swatch" style="background-color: #f8ad4d"></div>
             <div class="docs__colors__title">Light Orange</div>
             <ul class="docs__colors__attr">
-              <li>$orange-light</li>
-              <li>#f8ad4d</li>
+              <li class="docs__colors__attr-item">$orange-light</li>
+              <li class="docs__colors__attr-item">#f8ad4d</li>
             </ul>
           </li>
         </ul>
@@ -155,24 +174,24 @@
             <div class="docs__colors__swatch" style="background-color: #39aeca"></div>
             <div class="docs__colors__title">Dark Turquoise</div>
             <ul class="docs__colors__attr">
-              <li>$turquoise-dark</li>
-              <li>#39aeca</li>
+              <li class="docs__colors__attr-item">$turquoise-dark</li>
+              <li class="docs__colors__attr-item">#39aeca</li>
             </ul>
           </li>
           <li class="docs__colors__item">
             <div class="docs__colors__swatch" style="background-color: #43cef0"></div>
             <div class="docs__colors__title">Turquoise </div>
             <ul class="docs__colors__attr">
-              <li>$turquoise</li>
-              <li>#43cef0</li>
+              <li class="docs__colors__attr-item">$turquoise</li>
+              <li class="docs__colors__attr-item">#43cef0</li>
             </ul>
           </li>
           <li class="docs__colors__item">
             <div class="docs__colors__swatch" style="background-color: #99e6fa"></div>
             <div class="docs__colors__title">Light Turquoise</div>
             <ul class="docs__colors__attr">
-              <li>$turquoise-light</li>
-              <li>#99e6fa</li>
+              <li class="docs__colors__attr-item">$turquoise-light</li>
+              <li class="docs__colors__attr-item">#99e6fa</li>
             </ul>
           </li>
         </ul>
@@ -181,24 +200,24 @@
             <div class="docs__colors__swatch" style="background-color: #22721f"></div>
             <div class="docs__colors__title">Dark Green</div>
             <ul class="docs__colors__attr">
-              <li>$green-dark</li>
-              <li>#22721f</li>
+              <li class="docs__colors__attr-item">$green-dark</li>
+              <li class="docs__colors__attr-item">#22721f</li>
             </ul>
           </li>
           <li class="docs__colors__item">
             <div class="docs__colors__swatch" style="background-color: #34ac4a"></div>
             <div class="docs__colors__title">Green </div>
             <ul class="docs__colors__attr">
-              <li>$green</li>
-              <li>#34ac4a</li>
+              <li class="docs__colors__attr-item">$green</li>
+              <li class="docs__colors__attr-item">#34ac4a</li>
             </ul>
           </li>
           <li class="docs__colors__item">
             <div class="docs__colors__swatch" style="background-color: #8ac75a"></div>
             <div class="docs__colors__title">Light Green</div>
             <ul class="docs__colors__attr">
-              <li>$green-light</li>
-              <li>#8ac75a</li>
+              <li class="docs__colors__attr-item">$green-light</li>
+              <li class="docs__colors__attr-item">#8ac75a</li>
             </ul>
           </li>
         </ul>
@@ -210,8 +229,8 @@
             <div class="docs__colors__swatch" style="background-color: #fafafa"></div>
             <div class="docs__colors__title">Off White (Megamenu background)</div>
             <ul class="docs__colors__attr">
-              <li>#fafafa</li>
-              <li>$off-white</li>
+              <li class="docs__colors__attr-item">#fafafa</li>
+              <li class="docs__colors__attr-item">$off-white</li>
               <li>used as: rgba(250,250,250,.93);</li>
             </ul>
           </li>
@@ -219,16 +238,16 @@
             <div class="docs__colors__swatch" style="background-color: #f2f2f2"></div>
             <div class="docs__colors__title">Lightest Gray (Mobile menu background)</div>
             <ul class="docs__colors__attr">
-              <li>$gray-lightest</li>
-              <li>#f2f2f2</li>
+              <li class="docs__colors__attr-item">$gray-lightest</li>
+              <li class="docs__colors__attr-item">#f2f2f2</li>
             </ul>
           </li>
           <li class="docs__colors__item">
             <div class="docs__colors__swatch" style="background-color: #e8e8e8;"></div>
             <div class="docs__colors__title">Very Light Gray (Mobile menu drawer face)</div>
             <ul class="docs__colors__attr">
-              <li>#e8e8e8</li>
-              <li>$blue</li>
+              <li class="docs__colors__attr-item">#e8e8e8</li>
+              <li class="docs__colors__attr-item">$blue</li>
             </ul>
           </li>
         </ul>
