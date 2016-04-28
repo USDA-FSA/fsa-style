@@ -1,8 +1,18 @@
 
 // ---------------------------------------------------------------------------
 // ---------------------------------------------------------------------------
-// OVERRIDES variables set in `_defaults.scss`
-// or creates NEW ones specific to FSA
+// NEW variables specific to FSA
+// or OVERRIDES those set in `_defaults.scss`
+
+// ---------------------------------------------------------------------------
+// Colors
+
+$color-fsa-primary: $color-green;
+$color-fsa-primary-dark: shade($color-fsa-primary, 28%);
+
+$color-black: #000;
+$color-title: $color-primary-darker;
+$color-orange: #eb6321;
 
 // ---------------------------------------------------------------------------
 // Typography
@@ -18,8 +28,3 @@ $font-size-6 : $lead-font-size;
 $font-size-7 : $h2-font-size;
 $font-size-8 : $h1-font-size;
 $font-size-9 : $title-font-size;
-
-// ---------------------------------------------------------------------------
-// Colors
-
-$color-black: #000;

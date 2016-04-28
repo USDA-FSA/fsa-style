@@ -23,10 +23,7 @@
   $size-large         : $size-base * 9;  // 36px
   $size-extra-large   : $size-medium * 2; // 48px
 
-  $color-fsa-primary: $color-green;
-  $color-fsa-primary-dark: shade($color-fsa-primary, 28%);
-
-  $color-annotation: $color-primary-darker;
+  $color-annotation: $color-orange;
 
   &__page {
     padding: $size-default;
@@ -36,7 +33,7 @@
     // @include fz(8);
     // font-family: $ff-bold;
     // font-weight: $base-font-weight;
-    color: $color-annotation;
+    // color: $color-annotation;
     margin-top: $size-large;
     margin-bottom: $size-medium;
   }
@@ -143,7 +140,7 @@
 
       // scss-lint:disable NestingDepth
       &:hover {
-        background: $color-black;
+        background: rgba(0, 0, 0, .2);
       }
     }
 
