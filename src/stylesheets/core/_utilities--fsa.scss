@@ -1,4 +1,56 @@
 // -----------------------------------------------------------------------------
+// Breakpoints
+$breakpoints: (
+  '(min-width: 15em)' 'XS',       //  240px at 16px base font
+  '(min-width: 20em)' 'S',        //  320px at 16px base font
+  '(min-width: 30em)' 'SM',       //  480px at 16px base font
+  '(min-width: 35em)' 'M',        //  560px at 16px base font
+  '(min-width: 42em)' 'MML',      //  672px at 16px base font
+  '(min-width: 48em)' 'ML',       //  768px at 16px base font
+  '(min-width: 54em)' 'MLL',      //  864px at 16px base font
+  '(min-width: 61.25em)' 'L',     //  980px at 16px base font
+  '(min-width: 64em)' 'XL',       // 1024px at 16px base font
+  '(min-width: 78.75em)' 'XXL'    // 1260px at 16px base font
+);
+
+//  From HugoG: http://hugogiraudel.com/2014/01/13/sass-string-replacement-function/
+// http://sassmeister.com/gist/1b4f2da5527830088e4d
+// Replace `$search` with `$replace` in `$string`
+// @param {String} $string - Initial string
+// @param {String} $search - Substring to replace
+// @param {String} $replace ('') - New value
+// @return {String} - Updated string
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+@mixin breakpoint($point, $direction: 'up') {
+  @each $breakpoint in $breakpoints {
+    $query: nth($breakpoint, 1);
+    $name: nth($breakpoint, 2);
+
+    @if $direction == up {
+      @if ($name == $point) {
+        @media #{$query} { @content }
+      }
+    } @else {
+      @if ($name == $point) {
+        @media #{str-replace($query, "min", "max")} {
+          @content
+        }
+      }
+    }
+  }
+}
+
+
+// -----------------------------------------------------------------------------
 // Typography
 
 // "fz" is Emmet abbr for "font-size"
