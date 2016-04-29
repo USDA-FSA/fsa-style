@@ -1,5 +1,6 @@
 // -----------------------------------------------------------------------------
 // Breakpoints
+// scss-lint:disable SpaceAfterComma
 $breakpoints: (
   '(min-width: 15em)' 'XS',       //  240px at 16px base font
   '(min-width: 20em)' 'S',        //  320px at 16px base font
@@ -30,6 +31,8 @@ $breakpoints: (
   @return $string;
 }
 
+// -----------------------------------------------------------------------------
+// Breakpoints: Primary collection of available media query breakpoints
 @mixin breakpoint($point, $direction: 'up') {
   @each $breakpoint in $breakpoints {
     $query: nth($breakpoint, 1);
@@ -49,14 +52,11 @@ $breakpoints: (
   }
 }
 
-
 // -----------------------------------------------------------------------------
-// Typography
-
-// "fz" is Emmet abbr for "font-size"
-//   http://docs.emmet.io/css-abbreviations/
-//   http://docs.emmet.io/cheat-sheet/
-
+// Typography: Progressive font-size scale
+//
+// Example usage: @include font-size(0); is SMALLEST available size
+// Example usage: @include font-size(9); is LARGEST available size
 @mixin font-size($font-size: 3) {
   @if $font-size == 0 { font-size: $font-size-0; }
   @if $font-size == 1 { font-size: $font-size-1; }
