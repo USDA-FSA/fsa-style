@@ -86,7 +86,7 @@ $color-annotation: $color-orange;
   &__nav {
 
     padding: 0;
-    background-color: $color-fsa-primary-dark;
+    background-color: $color-fsa-primary;
     color: $color-white;
     width: 100%;
     position: absolute;
@@ -257,7 +257,56 @@ $color-annotation: $color-orange;
 
   }
 
+  &__swatch-list {
+
+    @include reset-ul;
+    margin-bottom: 1em;
+
+    &__item {
+
+      @include reset-li;
+      background-color: black;
+      padding: 20px;
+
+    }
+
+  }
+
 }
+
+
+.color-fsa-primary {
+  background-color: $color-fsa-primary;
+}
+.color-fsa-primary-dark {
+  background-color: $color-fsa-primary-dark;
+}
+.color-fsa-primary-light {
+  background-color: $color-fsa-primary-light;
+}
+.color-fsa-primary-lighter {
+  background-color: $color-fsa-primary-lighter;
+}
+.color-fsa-primary-lightest {
+  background-color: $color-fsa-primary-lightest;
+}
+
+.color-fsa-secondary {
+  background-color: $color-fsa-secondary;
+}
+.color-fsa-secondary-dark {
+  background-color: $color-fsa-secondary-dark;
+}
+.color-fsa-secondary-light {
+  background-color: $color-fsa-secondary-light;
+}
+.color-fsa-secondary-lighter {
+  background-color: $color-fsa-secondary-lighter;
+}
+.color-fsa-secondary-lightest {
+  background-color: $color-fsa-secondary-lightest;
+}
+
 
 .fsa-visual-index {
 

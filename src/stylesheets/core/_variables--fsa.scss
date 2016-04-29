@@ -7,14 +7,36 @@
 // ---------------------------------------------------------------------------
 // Colors
 
-$color-fsa-base: $color-base;
-$color-fsa-primary: $color-green;
-$color-fsa-primary-dark: shade($color-fsa-primary, 28%);
-$color-fsa-secondary: $color-primary-darker;
-$color-fsa-tertiary: $color-gray-warm-dark;
-
+// Core Colors
+$color-white: #fff;
 $color-black: #000;
+$color-fsa-white: $color-white; // Just in case
+$color-fsa-black: $color-black; // Just in case
+$color-fsa-base: $color-base;
+
+$color-fsa-primary: shade($color-green, 25%);
+$color-fsa-primary-light: tint($color-fsa-primary, 25%);
+$color-fsa-primary-lighter: tint($color-fsa-primary, 50%);
+$color-fsa-primary-lightest: tint($color-fsa-primary, 75%);
+$color-fsa-primary-dark: shade($color-fsa-primary, 25%);
+
+$color-fsa-secondary: $color-primary-darker;
+$color-fsa-secondary-light: tint($color-fsa-secondary, 25%);
+$color-fsa-secondary-lighter: tint($color-fsa-secondary, 50%);
+$color-fsa-secondary-lightest: tint($color-fsa-secondary, 75%);
+$color-fsa-secondary-dark: shade($color-fsa-secondary, 25%);
+
+$color-fsa-tertiary: $color-gray-warm-dark;
+$color-fsa-tertiary-light: tint($color-fsa-tertiary, 25%);
+$color-fsa-tertiary-lighter: tint($color-fsa-tertiary, 50%);
+$color-fsa-tertiary-lightest: tint($color-fsa-tertiary, 75%);
+$color-fsa-tertiary-dark: shade($color-fsa-tertiary, 25%);
+
+
+// Semantic
 $color-title: $color-primary-darker;
+
+// Docs and Annotation
 $color-orange: #eb6321;
 
 // ---------------------------------------------------------------------------
