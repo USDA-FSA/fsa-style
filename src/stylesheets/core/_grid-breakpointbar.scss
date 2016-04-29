@@ -20,7 +20,7 @@ body::before {
   left: 0;
   right: 0;
   z-index: 99;
-  content: '0px - 239px';
+  content: '0px - 239px'; // scss-lint:disable ZeroUnit
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, .6);
   background: rgba(0, 0, 0, 1);
