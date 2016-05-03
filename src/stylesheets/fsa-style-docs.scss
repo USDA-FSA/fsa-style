@@ -182,8 +182,7 @@ $color-annotation: $color-orange;
 
       @include reset-ul;
       @include font-size(1);
-      margin: 0 $size-small;
-      font-family: $font-mono;
+      margin: 0 $size-small 1em;
 
       // scss-lint:disable NestingDepth
       &-item {
@@ -265,8 +264,13 @@ $color-annotation: $color-orange;
     &__item {
 
       @include reset-li;
-      background-color: black;
-      padding: 20px;
+      @include font-size(1);
+      // background-color: black;
+      padding: $size-extra-large $size-default $size-default;
+
+      &--main {
+        padding-top: $size-extra-large * 2;
+      }
 
     }
 
@@ -305,6 +309,19 @@ $color-annotation: $color-orange;
 }
 .color-fsa-secondary-lightest {
   background-color: $color-fsa-secondary-lightest;
+}
+
+.color-fsa-tertiary {
+  background-color: $color-fsa-tertiary;
+}
+.color-fsa-tertiary-light {
+  background-color: $color-fsa-tertiary-light;
+}
+.color-fsa-tertiary-lighter {
+  background-color: $color-fsa-tertiary-lighter;
+}
+.color-fsa-tertiary-lightest {
+  background-color: $color-fsa-tertiary-lightest;
 }
 
 

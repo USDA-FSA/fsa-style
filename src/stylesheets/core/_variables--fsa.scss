@@ -27,14 +27,14 @@ $color-fsa-secondary-lightest: tint($color-fsa-secondary, 75%);
 $color-fsa-secondary-dark: shade($color-fsa-secondary, 25%);
 
 $color-fsa-tertiary: $color-gray-warm-dark;
-$color-fsa-tertiary-light: tint($color-fsa-tertiary, 25%);
-$color-fsa-tertiary-lighter: tint($color-fsa-tertiary, 50%);
-$color-fsa-tertiary-lightest: tint($color-fsa-tertiary, 75%);
-$color-fsa-tertiary-dark: shade($color-fsa-tertiary, 25%);
+$color-fsa-tertiary-light: tint($color-fsa-tertiary, 40%);
+$color-fsa-tertiary-lighter: tint($color-fsa-tertiary, 70%);
+$color-fsa-tertiary-lightest: tint($color-fsa-tertiary, 90%);
 
 
 // Semantic
 $color-title: $color-primary-darker;
+$color-fsa-site-bg: tint($color-fsa-secondary, 97%);
 
 // Docs and Annotation
 $color-orange: #eb6321;
