@@ -79,7 +79,7 @@ $color-annotation: $color-fsa-secondary-dark;
   &__nav {
 
     padding: 0;
-    background-color: $color-fsa-primary;
+    background-color: $color-fsa-tertiary;
     color: $color-white;
     width: 100%;
     position: absolute;
@@ -284,11 +284,11 @@ $color-annotation: $color-fsa-secondary-dark;
 }
 
 
-.color-fsa-primary {
-  background-color: $color-fsa-primary;
-}
 .color-fsa-primary-dark {
   background-color: $color-fsa-primary-dark;
+}
+.color-fsa-primary {
+  background-color: $color-fsa-primary;
 }
 .color-fsa-primary-light {
   background-color: $color-fsa-primary-light;
@@ -300,11 +300,11 @@ $color-annotation: $color-fsa-secondary-dark;
   background-color: $color-fsa-primary-lightest;
 }
 
-.color-fsa-secondary {
-  background-color: $color-fsa-secondary;
-}
 .color-fsa-secondary-dark {
   background-color: $color-fsa-secondary-dark;
+}
+.color-fsa-secondary {
+  background-color: $color-fsa-secondary;
 }
 .color-fsa-secondary-light {
   background-color: $color-fsa-secondary-light;
@@ -327,6 +327,38 @@ $color-annotation: $color-fsa-secondary-dark;
 }
 .color-fsa-tertiary-lightest {
   background-color: $color-fsa-tertiary-lightest;
+}
+
+.color-fsa-aqua-dark {
+  background-color: $color-fsa-aqua-dark;
+}
+.color-fsa-aqua {
+  background-color: $color-fsa-aqua;
+}
+.color-fsa-aqua-light {
+  background-color: $color-fsa-aqua-light;
+}
+.color-fsa-aqua-lighter {
+  background-color: $color-fsa-aqua-lighter;
+}
+.color-fsa-aqua-lightest {
+  background-color: $color-fsa-aqua-lightest;
+}
+
+.color-fsa-red-dark {
+  background-color: $color-fsa-red-dark;
+}
+.color-fsa-red {
+  background-color: $color-fsa-red;
+}
+.color-fsa-red-light {
+  background-color: $color-fsa-red-light;
+}
+.color-fsa-red-lighter {
+  background-color: $color-fsa-red-lighter;
+}
+.color-fsa-red-lightest {
+  background-color: $color-fsa-red-lightest;
 }
 
 

@@ -43,6 +43,19 @@ $color-fsa-tertiary-lighter: tint($color-fsa-tertiary, 70%);
 $color-fsa-tertiary-lightest: tint($color-fsa-tertiary, 90%);
 
 
+// Accent Colors
+$color-fsa-aqua: $color-primary-alt-dark;
+$color-fsa-aqua-light: $color-primary-alt;
+$color-fsa-aqua-lighter: $color-primary-alt-light;
+$color-fsa-aqua-lightest: $color-primary-alt-lightest;
+$color-fsa-aqua-dark: $color-primary-alt-darkest;
+
+$color-fsa-red: $color-secondary-dark;
+$color-fsa-red-light: tint($color-secondary-dark, 35%);
+$color-fsa-red-lighter: tint($color-secondary-dark, 60%);
+$color-fsa-red-lightest: tint($color-secondary-dark, 85%);
+$color-fsa-red-dark: shade($color-secondary-dark, 10%);
+
 // Semantic
 $color-title: $color-primary-darker;
 $color-fsa-site-bg: tint($color-fsa-secondary, 97%);
