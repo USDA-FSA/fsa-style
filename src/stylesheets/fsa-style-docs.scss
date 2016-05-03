@@ -24,6 +24,8 @@ $color-annotation: $color-fsa-red;
   }
 
   &__title {
+    @include font-size(9);
+    font-weight: $font-normal;
     margin-top: 0;
     text-align: center;
     font-family: $font-sans;
