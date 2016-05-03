@@ -5,6 +5,17 @@
 // or OVERRIDES those set in `_defaults.scss`
 
 // ---------------------------------------------------------------------------
+// Sizing Units
+
+$size-base          : 4px;
+$size-small         : $size-base * 2;  // 8px
+$size-default       : $size-base * 3;  // 12px
+$size-medium        : $size-base * 6;  // 24px
+$size-large         : $size-base * 9;  // 36px
+$size-extra-large   : $size-medium * 2; // 48px
+
+
+// ---------------------------------------------------------------------------
 // Colors
 
 // Core Colors
@@ -36,8 +47,6 @@ $color-fsa-tertiary-lightest: tint($color-fsa-tertiary, 90%);
 $color-title: $color-primary-darker;
 $color-fsa-site-bg: tint($color-fsa-secondary, 97%);
 
-// Docs and Annotation
-$color-orange: #eb6321;
 
 // ---------------------------------------------------------------------------
 // Typography
