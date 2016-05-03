@@ -39,8 +39,9 @@ $color-fsa-secondary-dark: shade($color-fsa-secondary, 25%);
 
 $color-fsa-tertiary: $color-gray-warm-dark;
 $color-fsa-tertiary-light: tint($color-fsa-tertiary, 40%);
-$color-fsa-tertiary-lighter: tint($color-fsa-tertiary, 70%);
+$color-fsa-tertiary-lighter: tint($color-fsa-tertiary, 60%);
 $color-fsa-tertiary-lightest: tint($color-fsa-tertiary, 90%);
+$color-fsa-tertiary-dark: $color-fsa-base;
 
 
 // Accent Colors
@@ -54,7 +55,7 @@ $color-fsa-red: $color-secondary-dark;
 $color-fsa-red-light: tint($color-secondary-dark, 35%);
 $color-fsa-red-lighter: tint($color-secondary-dark, 60%);
 $color-fsa-red-lightest: tint($color-secondary-dark, 85%);
-$color-fsa-red-dark: shade($color-secondary-dark, 10%);
+$color-fsa-red-dark: $color-secondary-darkest;
 
 // Semantic
 $color-title: $color-primary-darker;

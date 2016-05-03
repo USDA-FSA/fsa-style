@@ -12,7 +12,7 @@
 @import 'core/utilities--fsa';
 @import 'core/grid-breakpointbar';
 
-$color-annotation: $color-fsa-secondary-dark;
+$color-annotation: $color-fsa-red;
 
 .docs {
 
@@ -25,7 +25,8 @@ $color-annotation: $color-fsa-secondary-dark;
 
   &__title {
     margin-top: 0;
-    display: none;
+    text-align: center;
+    font-family: $font-sans;
   }
 
   &__section {
@@ -316,6 +317,9 @@ $color-annotation: $color-fsa-secondary-dark;
   background-color: $color-fsa-secondary-lightest;
 }
 
+.color-fsa-tertiary-dark {
+  background-color: $color-fsa-tertiary-dark;
+}
 .color-fsa-tertiary {
   background-color: $color-fsa-tertiary;
 }
