@@ -1,8 +1,8 @@
 # License
 
 **CONTENT TBD**
-**MOST LIKELY A STRAIGHT COPY OF [18F/open-source-policy](https://github.com/18F/open-source-policy/blob/master/LICENSE.md)** and/or heavily influenced by **[18F/web-design-standards/LICENSE.md](https://github.com/18F/web-design-standards/blob/18f-pages-staging/LICENSE.md)**
 
+Most likely a straight copy of [18F/open-source-policy](https://github.com/18F/open-source-policy/blob/master/LICENSE.md) and/or heavily influenced by [18F/web-design-standards/LICENSE.md](https://github.com/18F/web-design-standards/blob/18f-pages-staging/LICENSE.md)
 
 Everything will in the **Public Domain** or **Free**.
 
