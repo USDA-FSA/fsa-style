@@ -1,7 +1,20 @@
 /* FSA-specific overrides/additions */
 
 body {
-  background-color: $color-gray-lightest;
+  background-color: $color-fsa-site-bg;
   line-height: $base-line-height;
   color: $color-fsa-base;
+}
+
+pre,
+code,
+kbd,
+samp,
+tt {
+  @include font-size(0);
+  font-family: $font-mono;
+  border-radius: 2px;
+  background-color: transparentize($color-fsa-white, .1);
+  padding: 1px 2px;
+  border: 1px solid $color-fsa-tertiary-lightest;
 }

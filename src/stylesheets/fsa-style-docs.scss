@@ -12,28 +12,23 @@
 @import 'core/utilities--fsa';
 @import 'core/grid-breakpointbar';
 
-$color-annotation: $color-orange;
+$color-annotation: $color-fsa-red;
 
 .docs {
 
   // -----------------------------------------------------------------------------
   // Docs Variables. TODO: move to styleshets/core/fsa-variables.scss
 
-  $size-base          : 4px;
-  $size-small         : $size-base * 2;  // 8px
-  $size-default       : $size-base * 3;  // 12px
-  $size-medium        : $size-base * 6;  // 24px
-  $size-large         : $size-base * 9;  // 36px
-  $size-extra-large   : $size-medium * 2; // 48px
-
   &__page {
     padding: $size-default;
   }
 
   &__title {
-    // @include font-size(8);
-    // font-family: $ff-bold;
-    // font-weight: $base-font-weight;
+    @include font-size(9);
+    font-weight: $font-normal;
+    margin-top: 0;
+    text-align: center;
+    font-family: $font-sans;
   }
 
   &__section {
@@ -52,18 +47,18 @@ $color-annotation: $color-orange;
   }
 
   &__figure-group {
-    @include font-size(7);
-    border-top: 4px solid $color-annotation;
+    @include font-size(5);
+    font-family: $font-sans;
     color: $color-annotation;
+    border-top: 2px solid;
     text-transform: uppercase;
-    // font-family: $ff-bold;
-    // font-weight: $base-font-weight;
   }
 
   &__figure {
 
-    @include font-size(4);
-    border-top: 1px solid $color-annotation;
+    @include font-size(3);
+    font-family: $font-sans;
+    border-top: 1px solid;
     color: $color-annotation;
     text-transform: uppercase;
     // font-family: $ff-bold;
@@ -72,21 +67,22 @@ $color-annotation: $color-orange;
 
     .docs__figure-group + & {
 
-      //margin-top: $size-large;
+      // margin-top: $size-large;
 
     }
 
   }
 
   &__sub_style {
-    @include font-size(3);
+    @include font-size(1);
+    font-family: $font-sans;
     color: $color-annotation;
   }
 
   &__nav {
 
     padding: 0;
-    background-color: $color-fsa-primary;
+    background-color: $color-fsa-tertiary;
     color: $color-white;
     width: 100%;
     position: absolute;
@@ -114,6 +110,11 @@ $color-annotation: $color-orange;
     margin-left: auto;
     margin-right: auto;
 
+    @include breakpoint(XL) {
+      max-width: ($site-max-width + $size-medium);
+    }
+
+
     &-item {
 
       @include reset-li();
@@ -134,18 +135,24 @@ $color-annotation: $color-orange;
     }
 
     a {
+      @include font-size (0);
       color: $color-white;
       display: inline-block;
       padding: $size-small;
 
+      @include breakpoint(ML) {
+        @include font-size (1);
+      }
+
       @include breakpoint(L) {
-        padding: 16px;
+        padding: $size-default;
       }
 
       // scss-lint:disable NestingDepth
       &:hover {
         background: rgba(0, 0, 0, .2);
       }
+
     }
 
   }
@@ -182,8 +189,7 @@ $color-annotation: $color-orange;
 
       @include reset-ul;
       @include font-size(1);
-      margin: 0 $size-small;
-      font-family: $font-mono;
+      margin: 0 $size-small 1em;
 
       // scss-lint:disable NestingDepth
       &-item {
@@ -265,8 +271,14 @@ $color-annotation: $color-orange;
     &__item {
 
       @include reset-li;
-      background-color: black;
-      padding: 20px;
+      @include font-size(1);
+      // background-color: black;
+      padding: $size-extra-large $size-default $size-default;
+
+      // scss-lint:disable NestingDepth
+      &--main {
+        padding-top: $size-extra-large * 2;
+      }
 
     }
 
@@ -275,11 +287,11 @@ $color-annotation: $color-orange;
 }
 
 
-.color-fsa-primary {
-  background-color: $color-fsa-primary;
-}
 .color-fsa-primary-dark {
   background-color: $color-fsa-primary-dark;
+}
+.color-fsa-primary {
+  background-color: $color-fsa-primary;
 }
 .color-fsa-primary-light {
   background-color: $color-fsa-primary-light;
@@ -291,11 +303,11 @@ $color-annotation: $color-orange;
   background-color: $color-fsa-primary-lightest;
 }
 
-.color-fsa-secondary {
-  background-color: $color-fsa-secondary;
-}
 .color-fsa-secondary-dark {
   background-color: $color-fsa-secondary-dark;
+}
+.color-fsa-secondary {
+  background-color: $color-fsa-secondary;
 }
 .color-fsa-secondary-light {
   background-color: $color-fsa-secondary-light;
@@ -305,6 +317,54 @@ $color-annotation: $color-orange;
 }
 .color-fsa-secondary-lightest {
   background-color: $color-fsa-secondary-lightest;
+}
+
+.color-fsa-tertiary-dark {
+  background-color: $color-fsa-tertiary-dark;
+}
+.color-fsa-tertiary {
+  background-color: $color-fsa-tertiary;
+}
+.color-fsa-tertiary-light {
+  background-color: $color-fsa-tertiary-light;
+}
+.color-fsa-tertiary-lighter {
+  background-color: $color-fsa-tertiary-lighter;
+}
+.color-fsa-tertiary-lightest {
+  background-color: $color-fsa-tertiary-lightest;
+}
+
+.color-fsa-aqua-dark {
+  background-color: $color-fsa-aqua-dark;
+}
+.color-fsa-aqua {
+  background-color: $color-fsa-aqua;
+}
+.color-fsa-aqua-light {
+  background-color: $color-fsa-aqua-light;
+}
+.color-fsa-aqua-lighter {
+  background-color: $color-fsa-aqua-lighter;
+}
+.color-fsa-aqua-lightest {
+  background-color: $color-fsa-aqua-lightest;
+}
+
+.color-fsa-red-dark {
+  background-color: $color-fsa-red-dark;
+}
+.color-fsa-red {
+  background-color: $color-fsa-red;
+}
+.color-fsa-red-light {
+  background-color: $color-fsa-red-light;
+}
+.color-fsa-red-lighter {
+  background-color: $color-fsa-red-lighter;
+}
+.color-fsa-red-lightest {
+  background-color: $color-fsa-red-lightest;
 }
 
 

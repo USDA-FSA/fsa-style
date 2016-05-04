@@ -5,6 +5,17 @@
 // or OVERRIDES those set in `_defaults.scss`
 
 // ---------------------------------------------------------------------------
+// Sizing Units
+
+$size-base          : 4px;
+$size-small         : $size-base * 2;  // 8px
+$size-default       : $size-base * 3;  // 12px
+$size-medium        : $size-base * 6;  // 24px
+$size-large         : $size-base * 9;  // 36px
+$size-extra-large   : $size-medium * 2; // 48px
+
+
+// ---------------------------------------------------------------------------
 // Colors
 
 // Core Colors
@@ -27,17 +38,29 @@ $color-fsa-secondary-lightest: tint($color-fsa-secondary, 75%);
 $color-fsa-secondary-dark: shade($color-fsa-secondary, 25%);
 
 $color-fsa-tertiary: $color-gray-warm-dark;
-$color-fsa-tertiary-light: tint($color-fsa-tertiary, 25%);
-$color-fsa-tertiary-lighter: tint($color-fsa-tertiary, 50%);
-$color-fsa-tertiary-lightest: tint($color-fsa-tertiary, 75%);
-$color-fsa-tertiary-dark: shade($color-fsa-tertiary, 25%);
+$color-fsa-tertiary-light: tint($color-fsa-tertiary, 40%);
+$color-fsa-tertiary-lighter: tint($color-fsa-tertiary, 60%);
+$color-fsa-tertiary-lightest: tint($color-fsa-tertiary, 90%);
+$color-fsa-tertiary-dark: $color-fsa-base;
 
+
+// Accent Colors
+$color-fsa-aqua: $color-primary-alt-dark;
+$color-fsa-aqua-light: $color-primary-alt;
+$color-fsa-aqua-lighter: $color-primary-alt-light;
+$color-fsa-aqua-lightest: $color-primary-alt-lightest;
+$color-fsa-aqua-dark: $color-primary-alt-darkest;
+
+$color-fsa-red: $color-secondary-dark;
+$color-fsa-red-light: tint($color-secondary-dark, 35%);
+$color-fsa-red-lighter: tint($color-secondary-dark, 60%);
+$color-fsa-red-lightest: tint($color-secondary-dark, 85%);
+$color-fsa-red-dark: $color-secondary-darkest;
 
 // Semantic
 $color-title: $color-primary-darker;
+$color-fsa-site-bg: tint($color-fsa-secondary, 97%);
 
-// Docs and Annotation
-$color-orange: #eb6321;
 
 // ---------------------------------------------------------------------------
 // Typography
