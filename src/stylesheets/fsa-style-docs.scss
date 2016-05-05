@@ -25,6 +25,7 @@ $color-annotation: $color-fsa-red;
 
   &__title {
     @include font-size(9);
+    color: $color-base;
     font-weight: $font-normal;
     margin-top: 0;
     text-align: center;
@@ -61,6 +62,7 @@ $color-annotation: $color-fsa-red;
     border-top: 1px solid;
     color: $color-annotation;
     text-transform: uppercase;
+    margin-bottom: 1em;
     // font-family: $ff-bold;
     // font-weight: $base-font-weight;
     margin-top: $size-large;
@@ -248,6 +250,12 @@ $color-annotation: $color-fsa-red;
       padding: $size-small;
       margin-right: $size-small;
       border: 1px solid $color_gray_lighter;
+    }
+
+    &__size {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
 
     &__size--0 { @include font-size(0); }
