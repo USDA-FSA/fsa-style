@@ -76,7 +76,7 @@ $color-annotation: $color-fsa-red;
   }
 
   &__sub_style {
-    @include font-size(1);
+    @include font-size(0);
     font-family: $font-sans;
     color: $color-annotation;
   }
