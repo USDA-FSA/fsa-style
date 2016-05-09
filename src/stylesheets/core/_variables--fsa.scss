@@ -65,7 +65,13 @@ $color-fsa-site-bg: tint($color-fsa-secondary, 97%);
 // ---------------------------------------------------------------------------
 // Typography
 
-$font-mono: Consolas, Menlo, Monaco, "Lucida Console", "Courier New", monospace;
+$font-sans:  'Source Sans Pro', $helvetica !default;
+$font-serif: 'Merriweather', $georgia !default;
+$font-mono:  Consolas, Menlo, Monaco, "Lucida Console", "Courier New", monospace;
+
+$font-light:  300;
+$font-normal: 400;
+$font-bold:   700;
 
 
 // Font Size Scale

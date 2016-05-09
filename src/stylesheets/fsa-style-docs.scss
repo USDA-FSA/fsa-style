@@ -26,7 +26,6 @@ $color-annotation: $color-fsa-red;
   &__title {
     @include font-size(9);
     color: $color-base;
-    font-weight: $font-normal;
     margin-top: 0;
     text-align: center;
     font-family: $font-sans;
@@ -50,6 +49,7 @@ $color-annotation: $color-fsa-red;
   &__figure-group {
     @include font-size(5);
     font-family: $font-sans;
+    font-weight: $font-normal;
     color: $color-annotation;
     border-top: 2px solid;
     text-transform: uppercase;
@@ -59,12 +59,11 @@ $color-annotation: $color-fsa-red;
 
     @include font-size(3);
     font-family: $font-sans;
+    font-weight: $font-normal;
     border-top: 1px solid;
     color: $color-annotation;
     text-transform: uppercase;
     margin-bottom: 1em;
-    // font-family: $ff-bold;
-    // font-weight: $base-font-weight;
     margin-top: $size-large;
 
     .docs__figure-group + & {
@@ -76,8 +75,9 @@ $color-annotation: $color-fsa-red;
   }
 
   &__sub_style {
-    @include font-size(0);
+    @include font-size(1);
     font-family: $font-sans;
+    font-weight: $font-normal;
     color: $color-annotation;
   }
 
@@ -207,24 +207,22 @@ $color-annotation: $color-fsa-red;
 
   &__font {
 
-    &--lato-regular {
-      @include font-size(7);
-      // font-family: $ff-base;
+    display: flex;
+    align-items: center;
+
+    &--source-sans-pro {
+      font-family: $font-sans;
     }
 
-    &--lato-light {
-      @include font-size(7);
-      // font-family: $ff-light;
+    &--merriweather {
+      font-family: $font-serif;
     }
 
-    &--lato-bold {
-      @include font-size(7);
-      // font-family: $ff-bold;
-    }
-
-    &--helvetica {
-      @include font-size(7);
-      // font-family: Helvetica;
+    &__preview {
+      width: 160px;
+      font-size: 104px;
+      line-height: 1;
+      text-align: center;
     }
 
   }
@@ -238,14 +236,11 @@ $color-annotation: $color-fsa-red;
 
     &__item {
       @include reset-li();
-      display: flex;
       margin-bottom: 1em;
     }
 
     &__attr {
       @include font-size(1);
-      flex: 1;
-      width: 190px;
       background-color: $color-white;
       padding: $size-small;
       margin-right: $size-small;
@@ -256,6 +251,7 @@ $color-annotation: $color-fsa-red;
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
+      margin-top: 0;
     }
 
     &__size--0 { @include font-size(0); }
