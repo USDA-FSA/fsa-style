@@ -19,3 +19,14 @@ h6 {
   font-weight: $font-bold;
   margin-bottom: 0;
 }
+
+.usa-font-lead {
+
+  font-weight: $font-light;
+
+  b,
+  strong {
+    font-weight: bolder;
+  }
+
+}

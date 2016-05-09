@@ -65,15 +65,6 @@ $color-fsa-site-bg: tint($color-fsa-secondary, 97%);
 // ---------------------------------------------------------------------------
 // Typography
 
-$font-sans:  'Source Sans Pro', $helvetica !default;
-$font-serif: 'Merriweather', $georgia !default;
-$font-mono:  Consolas, Menlo, Monaco, "Lucida Console", "Courier New", monospace;
-
-$font-light:  300;
-$font-normal: 400;
-$font-bold:   700;
-
-
 // Font Size Scale
 $font-size-0 : $h6-font-size;
 $font-size-1 : $small-font-size;
@@ -85,3 +76,14 @@ $font-size-6 : $lead-font-size;
 $font-size-7 : $h2-font-size;
 $font-size-8 : $h1-font-size;
 $font-size-9 : $title-font-size;
+
+$lead-font-size: $font-size-5;
+$lead-line-height: 1.7;
+
+$font-sans:  'Source Sans Pro', $helvetica !default;
+$font-serif: 'Merriweather', $georgia !default;
+$font-mono:  Consolas, Menlo, Monaco, "Lucida Console", "Courier New", monospace;
+
+$font-light:  300;
+$font-normal: 400;
+$font-bold:   700;

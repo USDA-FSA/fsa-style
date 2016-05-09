@@ -16,12 +16,9 @@ $color-annotation: $color-fsa-red;
 
 .docs {
 
-  // -----------------------------------------------------------------------------
-  // Docs Variables. TODO: move to styleshets/core/fsa-variables.scss
 
-  &__page {
-    padding: $size-default;
-  }
+  // -----------------------------------------------------------------------------
+  // Doc Titles
 
   &__title {
     @include font-size(9);
@@ -29,21 +26,6 @@ $color-annotation: $color-fsa-red;
     margin-top: 0;
     text-align: center;
     font-family: $font-sans;
-  }
-
-  &__section {
-    margin-bottom: $size-extra-large;
-  }
-
-  &__bd {
-    max-width: $site-max-width;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  &__main {
-    padding-top: 50px;
-    // background-color: $color-white;
   }
 
   &__figure-group {
@@ -80,6 +62,9 @@ $color-annotation: $color-fsa-red;
     font-weight: $font-normal;
     color: $color-annotation;
   }
+
+  // -----------------------------------------------------------------------------
+  // Nav
 
   &__nav {
 
@@ -160,6 +145,27 @@ $color-annotation: $color-fsa-red;
   }
 
   // -----------------------------------------------------------------------------
+  // Structure
+
+  &__page {
+    padding: $size-default;
+  }
+
+  &__section {
+    margin-bottom: $size-extra-large;
+  }
+
+  &__bd {
+    max-width: $site-max-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__main {
+    padding-top: 50px;
+  }
+
+  // -----------------------------------------------------------------------------
   // Color
 
   &__colors {
@@ -202,27 +208,23 @@ $color-annotation: $color-fsa-red;
 
   }
 
-  // -----------------------------------------------------------------------------
-  // Fonts
+  &__swatch-list {
 
-  &__font {
+    @include reset-ul;
+    margin-bottom: 1em;
 
-    display: flex;
-    align-items: center;
+    &__item {
 
-    &--source-sans-pro {
-      font-family: $font-sans;
-    }
+      @include reset-li;
+      @include font-size(1);
+      // background-color: black;
+      padding: $size-extra-large $size-default $size-default;
 
-    &--merriweather {
-      font-family: $font-serif;
-    }
+      // scss-lint:disable NestingDepth
+      &--main {
+        padding-top: $size-extra-large * 2;
+      }
 
-    &__preview {
-      width: 160px;
-      font-size: 104px;
-      line-height: 1;
-      text-align: center;
     }
 
   }
@@ -232,19 +234,12 @@ $color-annotation: $color-fsa-red;
 
   &__typography {
 
-    @include reset-ul();
+    @include outer-container(100%);
 
-    &__item {
-      @include reset-li();
-      margin-bottom: 1em;
-    }
-
-    &__attr {
-      @include font-size(1);
-      background-color: $color-white;
-      padding: $size-small;
-      margin-right: $size-small;
-      border: 1px solid $color_gray_lighter;
+    &__u {
+      @include breakpoint(ML) {
+        @include span-columns(6);
+      }
     }
 
     &__size {
@@ -267,29 +262,76 @@ $color-annotation: $color-fsa-red;
 
   }
 
-  &__swatch-list {
+  &__font {
 
-    @include reset-ul;
-    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
 
-    &__item {
+    &--source-sans-pro {
 
-      @include reset-li;
-      @include font-size(1);
-      // background-color: black;
-      padding: $size-extra-large $size-default $size-default;
+      font-family: $font-sans;
+      font-weight: $font-normal;
 
-      // scss-lint:disable NestingDepth
-      &--main {
-        padding-top: $size-extra-large * 2;
+      &-light {
+        font-weight: $font-light;
+      }
+
+      &-bold {
+        font-weight: $font-bold;
       }
 
     }
 
+    &--merriweather {
+
+      font-family: $font-serif;
+      font-weight: $font-normal;
+
+      &-light {
+        font-weight: $font-light;
+      }
+
+      &-bold {
+        font-weight: $font-bold;
+      }
+
+    }
+
+    &__preview {
+
+      @include font-size(9);
+      flex: 1;
+      line-height: 1;
+      margin: 0;
+      margin-right: $size-default;
+
+      @include breakpoint(SM) {
+        font-size: 84px;
+        text-align: center;
+      }
+
+      @include breakpoint(ML) {
+        // font-size: 104px;
+      }
+
+    }
+
+    &__details {
+      flex: 2;
+      overflow: hidden;
+    }
+
+    &__item {
+      margin: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+
   }
 
 }
-
 
 .color-fsa-primary-dark {
   background-color: $color-fsa-primary-dark;
