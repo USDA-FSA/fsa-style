@@ -16,40 +16,22 @@ $color-annotation: $color-fsa-red;
 
 .docs {
 
-  // -----------------------------------------------------------------------------
-  // Docs Variables. TODO: move to styleshets/core/fsa-variables.scss
 
-  &__page {
-    padding: $size-default;
-  }
+  // -----------------------------------------------------------------------------
+  // Doc Titles
 
   &__title {
     @include font-size(9);
     color: $color-base;
-    font-weight: $font-normal;
     margin-top: 0;
     text-align: center;
     font-family: $font-sans;
   }
 
-  &__section {
-    margin-bottom: $size-extra-large;
-  }
-
-  &__bd {
-    max-width: $site-max-width;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  &__main {
-    padding-top: 50px;
-    // background-color: $color-white;
-  }
-
   &__figure-group {
     @include font-size(5);
     font-family: $font-sans;
+    font-weight: $font-normal;
     color: $color-annotation;
     border-top: 2px solid;
     text-transform: uppercase;
@@ -59,12 +41,11 @@ $color-annotation: $color-fsa-red;
 
     @include font-size(3);
     font-family: $font-sans;
+    font-weight: $font-normal;
     border-top: 1px solid;
     color: $color-annotation;
     text-transform: uppercase;
     margin-bottom: 1em;
-    // font-family: $ff-bold;
-    // font-weight: $base-font-weight;
     margin-top: $size-large;
 
     .docs__figure-group + & {
@@ -76,10 +57,14 @@ $color-annotation: $color-fsa-red;
   }
 
   &__sub_style {
-    @include font-size(0);
+    @include font-size(1);
     font-family: $font-sans;
+    font-weight: $font-normal;
     color: $color-annotation;
   }
+
+  // -----------------------------------------------------------------------------
+  // Nav
 
   &__nav {
 
@@ -160,6 +145,27 @@ $color-annotation: $color-fsa-red;
   }
 
   // -----------------------------------------------------------------------------
+  // Structure
+
+  &__page {
+    padding: $size-default;
+  }
+
+  &__section {
+    margin-bottom: $size-extra-large;
+  }
+
+  &__bd {
+    max-width: $site-max-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__main {
+    padding-top: 50px;
+  }
+
+  // -----------------------------------------------------------------------------
   // Color
 
   &__colors {
@@ -202,75 +208,6 @@ $color-annotation: $color-fsa-red;
 
   }
 
-  // -----------------------------------------------------------------------------
-  // Fonts
-
-  &__font {
-
-    &--lato-regular {
-      @include font-size(7);
-      // font-family: $ff-base;
-    }
-
-    &--lato-light {
-      @include font-size(7);
-      // font-family: $ff-light;
-    }
-
-    &--lato-bold {
-      @include font-size(7);
-      // font-family: $ff-bold;
-    }
-
-    &--helvetica {
-      @include font-size(7);
-      // font-family: Helvetica;
-    }
-
-  }
-
-  // -----------------------------------------------------------------------------
-  // Typography
-
-  &__typography {
-
-    @include reset-ul();
-
-    &__item {
-      @include reset-li();
-      display: flex;
-      margin-bottom: 1em;
-    }
-
-    &__attr {
-      @include font-size(1);
-      flex: 1;
-      width: 190px;
-      background-color: $color-white;
-      padding: $size-small;
-      margin-right: $size-small;
-      border: 1px solid $color_gray_lighter;
-    }
-
-    &__size {
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-    }
-
-    &__size--0 { @include font-size(0); }
-    &__size--1 { @include font-size(1); }
-    &__size--2 { @include font-size(2); }
-    &__size--3 { @include font-size(3); }
-    &__size--4 { @include font-size(4); }
-    &__size--5 { @include font-size(5); }
-    &__size--6 { @include font-size(6); }
-    &__size--7 { @include font-size(7); }
-    &__size--8 { @include font-size(8); }
-    &__size--9 { @include font-size(9); }
-
-  }
-
   &__swatch-list {
 
     @include reset-ul;
@@ -292,8 +229,109 @@ $color-annotation: $color-fsa-red;
 
   }
 
-}
+  // -----------------------------------------------------------------------------
+  // Typography
 
+  &__typography {
+
+    @include outer-container(100%);
+
+    &__u {
+      @include breakpoint(ML) {
+        @include span-columns(6);
+      }
+    }
+
+    &__size {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-top: 0;
+    }
+
+    &__size--0 { @include font-size(0); }
+    &__size--1 { @include font-size(1); }
+    &__size--2 { @include font-size(2); }
+    &__size--3 { @include font-size(3); }
+    &__size--4 { @include font-size(4); }
+    &__size--5 { @include font-size(5); }
+    &__size--6 { @include font-size(6); }
+    &__size--7 { @include font-size(7); }
+    &__size--8 { @include font-size(8); }
+    &__size--9 { @include font-size(9); }
+
+  }
+
+  &__font {
+
+    display: flex;
+    align-items: center;
+
+    &--source-sans-pro {
+
+      font-family: $font-sans;
+      font-weight: $font-normal;
+
+      &-light {
+        font-weight: $font-light;
+      }
+
+      &-bold {
+        font-weight: $font-bold;
+      }
+
+    }
+
+    &--merriweather {
+
+      font-family: $font-serif;
+      font-weight: $font-normal;
+
+      &-light {
+        font-weight: $font-light;
+      }
+
+      &-bold {
+        font-weight: $font-bold;
+      }
+
+    }
+
+    &__preview {
+
+      @include font-size(9);
+      flex: 1;
+      line-height: 1;
+      margin: 0;
+      margin-right: $size-default;
+
+      @include breakpoint(SM) {
+        font-size: 84px;
+        text-align: center;
+      }
+
+      @include breakpoint(ML) {
+        // font-size: 104px;
+      }
+
+    }
+
+    &__details {
+      flex: 2;
+      overflow: hidden;
+    }
+
+    &__item {
+      margin: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+
+  }
+
+}
 
 .color-fsa-primary-dark {
   background-color: $color-fsa-primary-dark;
