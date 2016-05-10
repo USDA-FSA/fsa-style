@@ -16,7 +16,6 @@ $color-annotation: $color-fsa-red;
 
 .docs {
 
-
   // -----------------------------------------------------------------------------
   // Doc Titles
 
@@ -24,7 +23,7 @@ $color-annotation: $color-fsa-red;
     @include font-size(9);
     color: $color-base;
     margin-top: 0;
-    text-align: center;
+    // text-align: center;
     font-family: $font-sans;
   }
 
@@ -166,6 +165,48 @@ $color-annotation: $color-fsa-red;
   }
 
   // -----------------------------------------------------------------------------
+  // Logo
+
+  &__logo {
+
+    &__item {
+
+      display: inline-block;
+      padding: $size-medium;
+
+      & + & {
+        margin-left: $size-default;
+      }
+
+      &--transparent {
+
+        $bgc: rgba(0, 0, 0, .15);
+        $bgc--tile: $bgc;
+
+        background-color: $bgc;
+
+        // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
+        background-image:
+          linear-gradient(45deg, $bgc--tile 25%, transparent 25%, transparent 75%, $bgc--tile 75%, $bgc--tile),
+          linear-gradient(45deg, $bgc--tile 25%, transparent 25%, transparent 75%, $bgc--tile 75%, $bgc--tile)
+        ;
+        background-size: 20px 20px;
+        background-position: 0 0, 50px 50px;
+      }
+
+    }
+
+    &__demo {
+
+      height: $size-extra-large * 2;
+      display: block;
+
+    }
+
+  }
+
+
+  // -----------------------------------------------------------------------------
   // Color
 
   &__colors {
@@ -269,9 +310,11 @@ $color-annotation: $color-fsa-red;
 
     &--source-sans-pro {
 
+
       font-family: $font-sans;
       font-weight: $font-normal;
 
+      // scss-lint:disable NestingDepth
       &-light {
         font-weight: $font-light;
       }
@@ -287,6 +330,7 @@ $color-annotation: $color-fsa-red;
       font-family: $font-serif;
       font-weight: $font-normal;
 
+      // scss-lint:disable NestingDepth
       &-light {
         font-weight: $font-light;
       }
@@ -327,7 +371,6 @@ $color-annotation: $color-fsa-red;
       white-space: nowrap;
       text-overflow: ellipsis;
     }
-
 
   }
 
