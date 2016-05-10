@@ -1,3 +1,12 @@
+html,
+button,
+input,
+select,
+textarea {
+// [class *= "fsa-g"]
+  font-family: $font-sans;
+}
+
 h1,
 h2,
 h3,
