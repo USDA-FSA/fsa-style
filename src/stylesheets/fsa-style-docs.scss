@@ -16,7 +16,6 @@ $color-annotation: $color-fsa-red;
 
 .docs {
 
-
   // -----------------------------------------------------------------------------
   // Doc Titles
 
@@ -24,7 +23,7 @@ $color-annotation: $color-fsa-red;
     @include font-size(9);
     color: $color-base;
     margin-top: 0;
-    text-align: center;
+    // text-align: center;
     font-family: $font-sans;
   }
 
@@ -33,7 +32,7 @@ $color-annotation: $color-fsa-red;
     font-family: $font-sans;
     font-weight: $font-normal;
     color: $color-annotation;
-    border-top: 2px solid;
+    border-bottom: 2px solid;
     text-transform: uppercase;
   }
 
@@ -42,7 +41,7 @@ $color-annotation: $color-fsa-red;
     @include font-size(3);
     font-family: $font-sans;
     font-weight: $font-normal;
-    border-top: 1px solid;
+    border-bottom: 1px solid;
     color: $color-annotation;
     text-transform: uppercase;
     margin-bottom: 1em;
@@ -166,6 +165,51 @@ $color-annotation: $color-fsa-red;
   }
 
   // -----------------------------------------------------------------------------
+  // Logo
+
+  &__logo {
+
+    @include outer-container(100%);
+
+    &__item {
+
+      // scss-lint:disable NestingDepth
+      $bgc: rgba(0, 0, 0, .15);
+      $bgc--tile: $bgc;
+
+      @include span-columns(4);
+      padding: $size-small;
+      background-color: $bgc;
+
+      // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
+      background-image:
+        linear-gradient(45deg, $bgc--tile 25%, transparent 25%, transparent 75%, $bgc--tile 75%, $bgc--tile),
+        linear-gradient(45deg, $bgc--tile 25%, transparent 25%, transparent 75%, $bgc--tile 75%, $bgc--tile)
+      ;
+      background-size: 20px 20px;
+      background-position: 0 0, 50px 50px;
+
+      @include breakpoint(M) {
+        padding: $size-medium;
+      }
+
+      @include breakpoint(ML) {
+        padding: $size-medium $size-extra-large;
+      }
+
+    }
+
+    &__demo {
+
+      // height: $size-extra-large * 2;
+      display: block;
+
+    }
+
+  }
+
+
+  // -----------------------------------------------------------------------------
   // Color
 
   &__colors {
@@ -269,9 +313,11 @@ $color-annotation: $color-fsa-red;
 
     &--source-sans-pro {
 
+
       font-family: $font-sans;
       font-weight: $font-normal;
 
+      // scss-lint:disable NestingDepth
       &-light {
         font-weight: $font-light;
       }
@@ -287,6 +333,7 @@ $color-annotation: $color-fsa-red;
       font-family: $font-serif;
       font-weight: $font-normal;
 
+      // scss-lint:disable NestingDepth
       &-light {
         font-weight: $font-light;
       }
@@ -328,7 +375,12 @@ $color-annotation: $color-fsa-red;
       text-overflow: ellipsis;
     }
 
+  }
 
+  &__overflow-demo {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
 }
