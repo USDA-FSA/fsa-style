@@ -186,7 +186,7 @@ linters:
     properties: {}
 
   PseudoElement:
-    enabled: true
+    enabled: false
 
   QualifyingElement:
     enabled: true
@@ -235,7 +235,7 @@ linters:
     style: one_space # or 'no_space', 'at_least_one_space' or 'one_space_or_newline'
 
   SpaceAfterVariableName:
-    enabled: true
+    enabled: false
 
   SpaceAroundOperator:
     enabled: true
