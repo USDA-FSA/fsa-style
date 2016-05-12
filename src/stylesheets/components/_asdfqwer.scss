@@ -27,19 +27,19 @@ $outline-asdfqwer-color: $color-primary-alt;
 
       flex: 1;
       border-width: 5px;
-      border-color: darken($outline-asdfqwer-color, 20%);
+      border-color: shade($outline-asdfqwer-color, 20%);
       margin: 0 20px 0 0;
 
       &:exactly(4) {
-        background-color: darken($outline-asdfqwer-color, 20%);
+        background-color: shade($outline-asdfqwer-color, 20%);
       }
 
       &:at-least(4) {
-        background-color: darken($outline-asdfqwer-color, 10%);
+        background-color: shade($outline-asdfqwer-color, 10%);
       }
 
       &:at-most(3) {
-        background-color: lighten($outline-asdfqwer-color, 40%);
+        background-color: tint($outline-asdfqwer-color, 40%);
       }
 
     }
