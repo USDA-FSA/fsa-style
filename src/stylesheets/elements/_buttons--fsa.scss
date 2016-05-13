@@ -1,0 +1,179 @@
+/* ---------------------------------------------------------------------------*/
+/* BASE: BUTTONS                                                              */
+
+$button-padding           : $size-default;
+$button-text              : $color-fsa-white;
+$button-line-height       : 1;
+$button-border-radius     : 2px;
+$button-font-family       : $font-sans;
+
+$button-default           : $color-fsa-primary;
+$button-default-text      : $button-text;
+$button-default-hover     : $color-fsa-primary-light;
+$button-default-active    : $color-fsa-primary-dark;
+
+$button-primary           : $color-fsa-secondary;
+$button-primary-text      : $button-text;
+$button-primary-hover     : $color-fsa-secondary-light;
+$button-primary-active    : $color-fsa-secondary-dark;
+
+$button-secondary        : $blue-dark;
+$button-secondary-text   : $button-text;
+$button-secondary-hover  : lighten($blue-dark, 8%);
+$button-secondary-active : darken($blue-dark, 8%);
+
+$button-alt        : $color-fsa-white;
+$button-alt-text   : $color-fsa-base;
+$button-alt-border : $color-fsa-tertiary;
+$button-alt-hover  : $color-fsa-tertiary-light;
+$button-alt-active : $color-fsa-tertiary-dark;
+
+.btn {
+
+  // -------------------------------------------------------------------------
+  // reset
+  @include font-smoothing(on);
+  user-select: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  line-height: $button-line-height;
+
+  // -------------------------------------------------------------------------
+  // normalize
+  @include font-size(2);
+  font-family: $button-font-family;
+  display: inline-block;
+  border-radius: $button-border-radius;
+
+  // scss-lint:disable Shorthand
+  padding: ($button-padding - 1px) ($button-padding * 2) ($button-padding - 1px);
+
+  // -------------------------------------------------------------------------
+  // default
+  background-color: $button-default;
+  color: $button-default-text;
+
+  &:hover {
+    text-decoration: none;
+    color: $button-default-text;
+  }
+
+  &:hover:not(.btn--disabled) {
+    color: $white;
+    background-color: $button-default-hover;
+  }
+
+  &:focus:not(.btn--disabled),
+  &:active:not(.btn--disabled) {
+    color: $white;
+    outline: 0;
+    background-color: $button-default-active;
+  }
+
+  // -------------------------------------------------------------------------
+  // variations, modifiers
+
+  &--primary {
+
+    background-color: $button-primary;
+    color: $button-primary-text;
+
+    &:hover {
+      text-decoration: none;
+      color: $button-primary-text;
+    }
+
+    &:hover:not(.btn--disabled) {
+      background-color: $button-primary-hover;
+    }
+
+    &:focus:not(.btn--disabled),
+    &:active:not(.btn--disabled) {
+      color: $button-primary-text;
+      outline: 0;
+      background-color: $button-primary-hover;
+    }
+
+  }
+
+  &--secondary {
+
+    color: $button-secondary-text;
+    background-color: $button-secondary;
+
+    &:hover:not(.btn--disabled) {
+      color: $button-secondary-text;
+      background-color: $button-secondary-hover;
+    }
+
+    &:focus:not(.btn--disabled),
+    &:active:not(.btn--disabled) {
+      color: $button-secondary-text;
+      outline: 0;
+      background-color: $button-secondary-hover;
+    }
+
+  }
+
+  &--alt {
+
+    color: $button-alt-text;
+    background-color: $button-alt;
+    box-shadow: 0 0 0 1px $button-alt-border inset;
+
+    &:hover {
+      color: inherit;
+    }
+
+    &:hover:not(.btn--disabled) {
+      color: $button-alt-text;
+      background-color: $button-alt-hover;
+    }
+
+    &:focus:not(.btn--disabled),
+    &:active:not(.btn--disabled) {
+      color: $button-alt-text;
+      outline: 0;
+      background-color: $button-alt-hover;
+    }
+
+  }
+
+  &--block {
+    width: 100%;
+    display: block;
+  }
+
+  &--disabled {
+
+    opacity: .5;
+    cursor: not-allowed;
+
+    &:focus,
+    &:active {
+      outline: 0;
+    }
+
+    &:hover {
+      cursor: not-allowed;
+    }
+
+  }
+
+  &--large {
+
+    padding:
+      (($button-padding * 2) - 3px)
+      ($size-large)
+      (($button-padding * 2) - 3px)
+    ;
+    font-size: $font-size-6; // no we're not using mixin cuz we don't want its line-height
+    border-radius: ($button-border-radius * 2);
+
+  }
+
+}
