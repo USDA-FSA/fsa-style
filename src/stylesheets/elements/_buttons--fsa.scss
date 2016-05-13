@@ -11,22 +11,22 @@ $button-font-size         : $font-size-3;
 
 $button-default           : $color-fsa-tertiary;
 $button-default-text      : $button-text;
-$button-default-hover     : $color-fsa-tertiary-light;
-$button-default-active    : $color-fsa-tertiary-dark;
+$button-default-hover     : shade($button-default, 25%);
+$button-default-active    : shade($button-default, 55%);
 
 $button-primary           : $color-fsa-secondary;
 $button-primary-text      : $button-text;
-$button-primary-hover     : $color-fsa-secondary-light;
-$button-primary-active    : $color-fsa-secondary-dark;
+$button-primary-hover     : shade($button-primary, 25%);
+$button-primary-active    : shade($button-primary, 45%);
 
 $button-secondary        : $color-fsa-red;
 $button-secondary-text   : $button-text;
-$button-secondary-hover  : $color-fsa-red-light;
-$button-secondary-active : $color-fsa-red-dark;
+$button-secondary-hover  : shade($button-secondary, 25%);
+$button-secondary-active : shade($button-secondary, 45%);
 
 $button-alt              : $color-fsa-white;
 $button-alt-text         : $color-fsa-secondary;
-$button-alt-hover        : $color-fsa-tertiary-lightest;
+$button-alt-hover        : shade($button-alt, 5%);
 $button-alt-active       : $color-fsa-white;
 $button-alt-border       : $color-fsa-secondary;
 $button-alt-border-width : 2px;
@@ -81,6 +81,7 @@ $button-alt-border-width : 2px;
     outline: 0;
     background-color: $button-default-active;
     text-decoration: none;
+    box-shadow: none;
   }
 
   // -------------------------------------------------------------------------
@@ -154,6 +155,7 @@ $button-alt-border-width : 2px;
       color: $button-alt-text;
       outline: 0;
       background-color: $button-alt-active;
+      box-shadow: 0 0 0 ($button-alt-border-width + 1px) shade($button-alt-text,20%) inset;
     }
 
   }
@@ -186,7 +188,7 @@ $button-alt-border-width : 2px;
       ($size-default)
       ($size-small)
     ;
-    font-size: $font-size-0; // no we're not using mixin cuz we don't want its line-height
+    font-size: $font-size-1; // no we're not using mixin cuz we don't want its line-height
     border-radius: ($button-border-radius / 2);
 
   }
@@ -198,8 +200,8 @@ $button-alt-border-width : 2px;
       ($size-large)
       (($button-padding * 2) - 3px)
     ;
-    font-size: $font-size-5; // no we're not using mixin cuz we don't want its line-height
-    font-weight: $font-normal;
+    font-size: $font-size-6; // no we're not using mixin cuz we don't want its line-height
+    font-weight: $font-light;
     border-radius: ($button-border-radius * 2);
 
   }
