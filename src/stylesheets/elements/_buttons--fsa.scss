@@ -24,11 +24,12 @@ $button-secondary-text   : $button-text;
 $button-secondary-hover  : $color-fsa-red-light;
 $button-secondary-active : $color-fsa-red-dark;
 
-$button-alt        : $color-fsa-white;
-$button-alt-text   : $color-fsa-tertiary-dark;
-$button-alt-border : $color-fsa-tertiary-lighter;
-$button-alt-hover  : $color-fsa-tertiary-lightest;
-$button-alt-active : $color-fsa-white;
+$button-alt              : $color-fsa-white;
+$button-alt-text         : $color-fsa-secondary;
+$button-alt-hover        : $color-fsa-tertiary-lightest;
+$button-alt-active       : $color-fsa-white;
+$button-alt-border       : $color-fsa-secondary;
+$button-alt-border-width : 2px;
 
 .btn {
 
@@ -133,7 +134,7 @@ $button-alt-active : $color-fsa-white;
 
     color: $button-alt-text;
     background-color: $button-alt;
-    box-shadow: 0 0 0 1px $button-alt-border inset;
+    box-shadow: 0 0 0 $button-alt-border-width $button-alt-border inset;
 
     &:visited {
       color: $button-alt-text;
@@ -164,7 +165,7 @@ $button-alt-active : $color-fsa-white;
 
   &--disabled {
 
-    opacity: .5;
+    opacity: .4;
     cursor: not-allowed;
 
     &:focus,
