@@ -1,0 +1,5 @@
+form {
+  @include media($medium-screen) {
+    max-width: none;
+  }
+}
