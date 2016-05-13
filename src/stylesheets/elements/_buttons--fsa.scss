@@ -158,6 +158,14 @@ $button-alt-border-width : 2px;
       box-shadow: 0 0 0 ($button-alt-border-width + 1px) shade($button-alt-text,20%) inset;
     }
 
+    &.btn--disabled {
+      color: $button-alt-text;
+      &:hover {
+        color: $button-alt-text;
+      }
+    }
+
+
   }
 
   &--block {
@@ -167,7 +175,10 @@ $button-alt-border-width : 2px;
 
   &--disabled {
 
+    $color-transparentized: transparentize($button-default-text, .5);
+
     opacity: .4;
+    color: $color-transparentized;
     cursor: not-allowed;
 
     &:focus,
@@ -177,6 +188,7 @@ $button-alt-border-width : 2px;
 
     &:hover {
       cursor: not-allowed;
+      color: $color-transparentized;
     }
 
   }
