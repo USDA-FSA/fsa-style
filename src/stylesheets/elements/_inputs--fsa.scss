@@ -1,0 +1,39 @@
+// Block form elements
+input,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+input[type="file"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+textarea,
+select  {
+  // border: 0;
+  // padding: 0;
+  // border-color: $color-fsa-tertiary-light;
+  // margin: 0;
+  // max-width: none;
+  // width: auto;
+  // display: inline-block;
+  &:disabled {
+    opacity: .5;
+  }
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  max-width: none;
+  resize: vertical;
+}
+
+// select {
+//   appearance: initial;
+// }

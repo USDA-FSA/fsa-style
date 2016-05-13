@@ -4,29 +4,31 @@
 $button-padding           : $size-default;
 $button-text              : $color-fsa-white;
 $button-line-height       : 1;
-$button-border-radius     : 2px;
+$button-border-radius     : 4px;
 $button-font-family       : $font-sans;
+$button-font-weight       : $font-normal;
+$button-font-size         : $font-size-3;
 
-$button-default           : $color-fsa-primary;
+$button-default           : $color-fsa-tertiary;
 $button-default-text      : $button-text;
-$button-default-hover     : $color-fsa-primary-light;
-$button-default-active    : $color-fsa-primary-dark;
+$button-default-hover     : $color-fsa-tertiary-light;
+$button-default-active    : $color-fsa-tertiary-dark;
 
 $button-primary           : $color-fsa-secondary;
 $button-primary-text      : $button-text;
 $button-primary-hover     : $color-fsa-secondary-light;
 $button-primary-active    : $color-fsa-secondary-dark;
 
-$button-secondary        : $blue-dark;
+$button-secondary        : $color-fsa-red;
 $button-secondary-text   : $button-text;
-$button-secondary-hover  : lighten($blue-dark, 8%);
-$button-secondary-active : darken($blue-dark, 8%);
+$button-secondary-hover  : $color-fsa-red-light;
+$button-secondary-active : $color-fsa-red-dark;
 
 $button-alt        : $color-fsa-white;
-$button-alt-text   : $color-fsa-base;
-$button-alt-border : $color-fsa-tertiary;
-$button-alt-hover  : $color-fsa-tertiary-light;
-$button-alt-active : $color-fsa-tertiary-dark;
+$button-alt-text   : $color-fsa-tertiary-dark;
+$button-alt-border : $color-fsa-tertiary-light;
+$button-alt-hover  : $color-fsa-tertiary-lightest;
+$button-alt-active : $color-fsa-tertiary-lighter;
 
 .btn {
 
@@ -44,8 +46,9 @@ $button-alt-active : $color-fsa-tertiary-dark;
 
   // -------------------------------------------------------------------------
   // normalize
-  @include font-size(2);
+  font-size: $button-font-size;
   font-family: $button-font-family;
+  font-weight: $button-font-weight;
   display: inline-block;
   border-radius: $button-border-radius;
 
@@ -57,21 +60,26 @@ $button-alt-active : $color-fsa-tertiary-dark;
   background-color: $button-default;
   color: $button-default-text;
 
+  &:visited {
+    color: $button-default-text;
+  }
+
   &:hover {
     text-decoration: none;
     color: $button-default-text;
   }
 
   &:hover:not(.btn--disabled) {
-    color: $white;
+    color: $button-text;
     background-color: $button-default-hover;
   }
 
   &:focus:not(.btn--disabled),
   &:active:not(.btn--disabled) {
-    color: $white;
+    color: $button-text;
     outline: 0;
     background-color: $button-default-active;
+    text-decoration: none;
   }
 
   // -------------------------------------------------------------------------
@@ -81,6 +89,10 @@ $button-alt-active : $color-fsa-tertiary-dark;
 
     background-color: $button-primary;
     color: $button-primary-text;
+
+    &:visited {
+      color: $button-primary-text;
+    }
 
     &:hover {
       text-decoration: none;
@@ -94,8 +106,7 @@ $button-alt-active : $color-fsa-tertiary-dark;
     &:focus:not(.btn--disabled),
     &:active:not(.btn--disabled) {
       color: $button-primary-text;
-      outline: 0;
-      background-color: $button-primary-hover;
+      background-color: $button-primary-active;
     }
 
   }
@@ -113,8 +124,7 @@ $button-alt-active : $color-fsa-tertiary-dark;
     &:focus:not(.btn--disabled),
     &:active:not(.btn--disabled) {
       color: $button-secondary-text;
-      outline: 0;
-      background-color: $button-secondary-hover;
+      background-color: $button-secondary-active;
     }
 
   }
@@ -124,6 +134,10 @@ $button-alt-active : $color-fsa-tertiary-dark;
     color: $button-alt-text;
     background-color: $button-alt;
     box-shadow: 0 0 0 1px $button-alt-border inset;
+
+    &:visited {
+      color: $button-alt-text;
+    }
 
     &:hover {
       color: inherit;
@@ -138,7 +152,7 @@ $button-alt-active : $color-fsa-tertiary-dark;
     &:active:not(.btn--disabled) {
       color: $button-alt-text;
       outline: 0;
-      background-color: $button-alt-hover;
+      background-color: $button-alt-active;
     }
 
   }
@@ -164,6 +178,18 @@ $button-alt-active : $color-fsa-tertiary-dark;
 
   }
 
+  &--small {
+
+    padding:
+      ($size-small)
+      ($size-default)
+      ($size-small)
+    ;
+    font-size: $font-size-0; // no we're not using mixin cuz we don't want its line-height
+    border-radius: ($button-border-radius / 2);
+
+  }
+
   &--large {
 
     padding:
@@ -171,7 +197,8 @@ $button-alt-active : $color-fsa-tertiary-dark;
       ($size-large)
       (($button-padding * 2) - 3px)
     ;
-    font-size: $font-size-6; // no we're not using mixin cuz we don't want its line-height
+    font-size: $font-size-5; // no we're not using mixin cuz we don't want its line-height
+    font-weight: $font-normal;
     border-radius: ($button-border-radius * 2);
 
   }
