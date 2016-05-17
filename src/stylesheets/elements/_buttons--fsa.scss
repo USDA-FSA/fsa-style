@@ -1,0 +1,221 @@
+/* ---------------------------------------------------------------------------*/
+/* BASE: BUTTONS                                                              */
+
+$button-padding           : $size-default;
+$button-text              : $color-fsa-white;
+$button-line-height       : 1;
+$button-border-radius     : 4px;
+$button-font-family       : $font-sans;
+$button-font-weight       : $font-normal;
+$button-font-size         : $font-size-3;
+
+$button-default           : $color-fsa-tertiary;
+$button-default-text      : $button-text;
+$button-default-hover     : shade($button-default, 25%);
+$button-default-active    : shade($button-default, 55%);
+
+$button-primary           : $color-fsa-secondary;
+$button-primary-text      : $button-text;
+$button-primary-hover     : shade($button-primary, 25%);
+$button-primary-active    : shade($button-primary, 45%);
+
+$button-secondary        : $color-fsa-red;
+$button-secondary-text   : $button-text;
+$button-secondary-hover  : shade($button-secondary, 25%);
+$button-secondary-active : shade($button-secondary, 45%);
+
+$button-alt              : $color-fsa-white;
+$button-alt-text         : $color-fsa-secondary;
+$button-alt-hover        : shade($button-alt, 5%);
+$button-alt-active       : $color-fsa-white;
+$button-alt-border       : $color-fsa-secondary;
+$button-alt-border-width : 2px;
+
+.btn {
+
+  // -------------------------------------------------------------------------
+  // reset
+  @include font-smoothing(on);
+  user-select: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  line-height: $button-line-height;
+
+  // -------------------------------------------------------------------------
+  // normalize
+  font-size: $button-font-size;
+  font-family: $button-font-family;
+  font-weight: $button-font-weight;
+  display: inline-block;
+  border-radius: $button-border-radius;
+
+  // scss-lint:disable Shorthand
+  padding: ($button-padding - 1px) ($button-padding * 2) ($button-padding - 1px);
+
+  // -------------------------------------------------------------------------
+  // default
+  background-color: $button-default;
+  color: $button-default-text;
+
+  &:visited {
+    color: $button-default-text;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: $button-default-text;
+  }
+
+  &:hover:not(.btn--disabled) {
+    color: $button-text;
+    background-color: $button-default-hover;
+  }
+
+  &:focus:not(.btn--disabled),
+  &:active:not(.btn--disabled) {
+    color: $button-text;
+    outline: 0;
+    background-color: $button-default-active;
+    text-decoration: none;
+    box-shadow: none;
+  }
+
+  // -------------------------------------------------------------------------
+  // variations, modifiers
+
+  &--primary {
+
+    background-color: $button-primary;
+    color: $button-primary-text;
+
+    &:visited {
+      color: $button-primary-text;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $button-primary-text;
+    }
+
+    &:hover:not(.btn--disabled) {
+      background-color: $button-primary-hover;
+    }
+
+    &:focus:not(.btn--disabled),
+    &:active:not(.btn--disabled) {
+      color: $button-primary-text;
+      background-color: $button-primary-active;
+    }
+
+  }
+
+  &--secondary {
+
+    color: $button-secondary-text;
+    background-color: $button-secondary;
+
+    &:hover:not(.btn--disabled) {
+      color: $button-secondary-text;
+      background-color: $button-secondary-hover;
+    }
+
+    &:focus:not(.btn--disabled),
+    &:active:not(.btn--disabled) {
+      color: $button-secondary-text;
+      background-color: $button-secondary-active;
+    }
+
+  }
+
+  &--alt {
+
+    color: $button-alt-text;
+    background-color: $button-alt;
+    box-shadow: 0 0 0 $button-alt-border-width $button-alt-border inset;
+
+    &:visited {
+      color: $button-alt-text;
+    }
+
+    &:hover {
+      color: inherit;
+    }
+
+    &:hover:not(.btn--disabled) {
+      color: $button-alt-text;
+      background-color: $button-alt-hover;
+    }
+
+    &:focus:not(.btn--disabled),
+    &:active:not(.btn--disabled) {
+      color: $button-alt-text;
+      outline: 0;
+      background-color: $button-alt-active;
+      box-shadow: 0 0 0 ($button-alt-border-width + 1px) shade($button-alt-text,20%) inset;
+    }
+
+    &.btn--disabled {
+      color: $button-alt-text;
+      &:hover {
+        color: $button-alt-text;
+      }
+    }
+
+
+  }
+
+  &--block {
+    width: 100%;
+    display: block;
+  }
+
+  &--disabled {
+
+    $color-transparentized: transparentize($button-default-text, .5);
+
+    opacity: .4;
+    color: $color-transparentized;
+    cursor: not-allowed;
+
+    &:focus,
+    &:active {
+      outline: 0;
+    }
+
+    &:hover {
+      cursor: not-allowed;
+      color: $color-transparentized;
+    }
+
+  }
+
+  &--small {
+
+    padding:
+      ($size-small)
+      ($size-default)
+      ($size-small)
+    ;
+    font-size: $font-size-1; // no we're not using mixin cuz we don't want its line-height
+    border-radius: ($button-border-radius / 2);
+
+  }
+
+  &--large {
+
+    padding:
+      (($button-padding * 2) - 3px)
+      ($size-large)
+      (($button-padding * 2) - 3px)
+    ;
+    font-size: $font-size-6; // no we're not using mixin cuz we don't want its line-height
+    font-weight: $font-light;
+    border-radius: ($button-border-radius * 2);
+
+  }
+
+}
