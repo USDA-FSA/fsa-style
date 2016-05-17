@@ -12,7 +12,7 @@ kbd,
 samp,
 tt {
 
-  @include font-size(0);
+  @include font-size(1);
   font-family: $font-mono;
   border-radius: 2px;
   background-color: transparentize($color-fsa-white, .1);
