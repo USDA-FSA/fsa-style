@@ -24,8 +24,7 @@
 @import 'elements/buttons--fsa';
 @import 'elements/figure';
 // @import 'elements/inputs';
-// @import 'elements/inputs--fsa';
-@import 'elements/forms--fsa';
+@import 'elements/form-elements--fsa';
 @import 'elements/labels';
 @import 'elements/list';
 @import 'elements/table';
@@ -39,8 +38,9 @@
 @import 'components/alerts';
 @import 'components/disclaimer';
 @import 'components/footer';
-@import 'components/forms';
+// @import 'components/forms';
 @import 'components/forms--fsa';
+@import 'components/form-structure--fsa';
 @import 'components/search';
 @import 'components/sidenav';
 @import 'components/skipnav';

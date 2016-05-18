@@ -90,3 +90,25 @@ $font-mono:  Consolas, Menlo, Monaco, "Lucida Console", "Courier New", monospace
 $font-light:  300;
 $font-normal: 400;
 $font-bold:   700;
+
+// ---------------------------------------------------------------------------
+// Forms
+
+$form-font                     : $font-sans;
+$form-text-size                : $font-size-3;
+$form-text-size--sm            : $font-size-2;
+$form-text-size--lg            : $font-size-6;
+$form-text-color               : $color-fsa-base;
+$form-placeholder-color        : $color-fsa-tertiary-lighter;
+$form-outline-color            : $color-fsa-tertiary-lighter;
+$form-focus-color              : $color-fsa-secondary-light;
+$form-error-color              : $color-fsa-red;
+$form-error-color-focus        : $color-fsa-base;
+$form-error-color-bg           : $color-fsa-red-lightest;
+$form-disabled-bg-color        : $color-fsa-tertiary-lightest;
+$form-radio-check-border-width : 2px;
+$form-checkbox-fill            : $color-fsa-secondary;
+$form-radiocheckbox-size       : 18px;
+$form-border-radius            : 0;
+$form-padding                  : $size-small;
+$form-select-bgc               : orangered;

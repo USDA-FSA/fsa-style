@@ -12,7 +12,7 @@
 @import 'core/utilities--fsa';
 @import 'core/grid-breakpointbar';
 
-$color-annotation: $color-fsa-red;
+$color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
 .docs {
 
@@ -20,30 +20,28 @@ $color-annotation: $color-fsa-red;
   // Doc Titles
 
   &__title {
-    @include font-size(9);
-    color: $color-base;
-    margin-top: 0;
-    // text-align: center;
-    font-family: $font-sans;
+    // @include font-size(9);
+    // font-family: $font-sans;
+    // margin-top: 0;
   }
 
   &__figure-group {
-    @include font-size(5);
-    font-family: $font-sans;
-    font-weight: $font-normal;
+    // @include font-size(5);
+    // font-family: $font-sans;
+    // text-transform: uppercase;
+    font-weight: $font-bold;
     color: $color-annotation;
     border-bottom: 2px solid;
-    text-transform: uppercase;
   }
 
   &__figure {
 
-    @include font-size(3);
-    font-family: $font-sans;
-    font-weight: $font-normal;
+    // @include font-size(3);
+    // font-family: $font-sans;
+    // text-transform: uppercase;
+    font-weight: $font-bold;
     border-bottom: 1px solid;
     color: $color-annotation;
-    text-transform: uppercase;
     margin-bottom: 1em;
     margin-top: $size-large;
 
@@ -56,9 +54,9 @@ $color-annotation: $color-fsa-red;
   }
 
   &__sub_style {
-    @include font-size(1);
-    font-family: $font-sans;
-    font-weight: $font-normal;
+    // @include font-size(1);
+    // font-family: $font-sans;
+    font-weight: $font-bold;
     color: $color-annotation;
   }
 
@@ -207,7 +205,6 @@ $color-annotation: $color-fsa-red;
     }
 
   }
-
 
   // -----------------------------------------------------------------------------
   // Color
@@ -465,7 +462,6 @@ $color-annotation: $color-fsa-red;
 .color-fsa-red-lightest {
   background-color: $color-fsa-red-lightest;
 }
-
 
 .fsa-visual-index {
 

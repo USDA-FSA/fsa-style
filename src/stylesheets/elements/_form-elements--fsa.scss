@@ -1,25 +1,6 @@
-$form-font                     : $font-sans;
-$form-text-size                : $font-size-3;
-$form-text-size--sm            : $font-size-2;
-$form-text-size--lg            : $font-size-6;
-$form-text-color               : $color-fsa-base;
-$form-placeholder-color        : $color-fsa-tertiary-lighter;
-$form-outline-color            : $color-fsa-tertiary-lighter;
-$form-focus-color              : $color-fsa-secondary-light;
-$form-error-color              : $color-fsa-red;
-$form-error-color-focus        : $color-fsa-red-dark;
-$form-error-color-bg           : $color-fsa-red-lightest;
-$form-disabled-bg-color        : $color-fsa-tertiary-lightest;
-$form-radio-check-border-width : 2px;
-$form-checkbox-fill            : $color-fsa-secondary;
-$form-radiocheckbox-size       : 18px;
-$form-border-radius            : 0;
-$form-padding                  : $size-small;
-$form-select-bgc               : orangered;
-
 %form-radiocheckbox-redux {
 
-  display:inline-block;
+  display: inline-block;
   vertical-align: middle;
   font-weight: normal;
   cursor: pointer;
@@ -33,14 +14,14 @@ $form-select-bgc               : orangered;
 
   .nub {
     @include position(relative, -1px 0 0 0);
-    transition: border 0.23s ease-out;
+    transition: border .23s ease-out;
     margin: 0;
     padding: 0;
     border: 1px solid $form-outline-color;
     display: inline-block;
     vertical-align: middle;
-    width:   $form-radiocheckbox-size;
-    height:  $form-radiocheckbox-size;
+    width: $form-radiocheckbox-size;
+    height: $form-radiocheckbox-size;
     margin-right: $size-base;
     cursor: pointer;
     background-color: $white;
@@ -116,6 +97,7 @@ $form-select-bgc               : orangered;
 
     &:focus {
       box-shadow: 0 0 0 2px $form-error-color-focus inset;
+      border-color: transparent;
     }
 
   }

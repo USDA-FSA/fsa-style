@@ -162,6 +162,7 @@ $button-alt-border-width : 2px;
       box-shadow: none;
     }
 
+    // scss-lint:disable SelectorFormat
     &.btn--disabled {
       color: $button-alt-text;
       &:hover {
@@ -213,6 +214,8 @@ $button-alt-border-width : 2px;
   &--large {
 
     height: $button-height--lg;
+
+    // scss-lint:disable SpaceAfterPropertyColon
     padding:
       (($button-padding * 2) - 3px)
       ($size-large)
