@@ -53,9 +53,10 @@ $color-fsa-aqua-dark: $color-primary-alt-darkest;
 
 $color-fsa-red: $color-secondary-dark;
 $color-fsa-red-light: tint($color-secondary-dark, 35%);
-$color-fsa-red-lighter: tint($color-secondary-dark, 60%);
-$color-fsa-red-lightest: tint($color-secondary-dark, 85%);
+$color-fsa-red-lighter: tint($color-secondary-dark, 70%);
+$color-fsa-red-lightest: tint($color-secondary-dark, 90%);
 $color-fsa-red-dark: $color-secondary-darkest;
+
 
 // Semantic
 $color-title: $color-primary-darker;
