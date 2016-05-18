@@ -13,11 +13,12 @@ samp,
 tt {
 
   @include font-size(1);
+  color: $color-fsa-secondary-dark;
   font-family: $font-mono;
   border-radius: 2px;
   background-color: transparentize($color-fsa-white, .1);
-  padding: 1px 2px;
-  border: 1px solid $color-fsa-tertiary-lightest;
+  padding: ($size-base / 2) $size-base;
+  border: 1px solid $color-fsa-tertiary-lighter;
 
   code {
     border: 0;
