@@ -27,7 +27,7 @@ $button-secondary-active : shade($button-secondary, 45%);
 $button-alt              : $color-fsa-white;
 $button-alt-text         : $color-fsa-secondary;
 $button-alt-hover        : shade($button-alt, 5%);
-$button-alt-active       : $color-fsa-white;
+$button-alt-active       : $color-fsa-secondary;
 $button-alt-border       : $color-fsa-secondary;
 $button-alt-border-width : 2px;
 
@@ -152,10 +152,10 @@ $button-alt-border-width : 2px;
 
     &:focus:not(.btn--disabled),
     &:active:not(.btn--disabled) {
-      color: $button-alt-text;
+      color: $button-alt-hover;
       outline: 0;
       background-color: $button-alt-active;
-      box-shadow: 0 0 0 ($button-alt-border-width + 1px) shade($button-alt-text,20%) inset;
+      box-shadow: none;
     }
 
     &.btn--disabled {
