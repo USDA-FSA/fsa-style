@@ -1,6 +1,9 @@
 /* ---------------------------------------------------------------------------*/
 /* BASE: BUTTONS                                                              */
 
+$button-height            : 39px;
+$button-height--sm        : 30px;
+$button-height--lg        : 62px;
 $button-padding           : $size-default;
 $button-text              : $color-fsa-white;
 $button-line-height       : 1;
@@ -36,6 +39,7 @@ $button-alt-border-width : 2px;
   // -------------------------------------------------------------------------
   // reset
   @include font-smoothing(on);
+  height: $button-height;
   user-select: none;
   padding: 0;
   margin: 0;
@@ -195,6 +199,7 @@ $button-alt-border-width : 2px;
 
   &--small {
 
+    height: $button-height--sm;
     padding:
       ($size-small)
       ($size-default)
@@ -207,6 +212,7 @@ $button-alt-border-width : 2px;
 
   &--large {
 
+    height: $button-height--lg;
     padding:
       (($button-padding * 2) - 3px)
       ($size-large)

@@ -1,0 +1,149 @@
+$form-font                     : $font-sans;
+$form-text-size                : $font-size-3;
+$form-text-size--sm            : $font-size-2;
+$form-text-size--lg            : $font-size-6;
+$form-text-color               : $color-fsa-base;
+$form-placeholder-color        : $color-fsa-tertiary-lighter;
+$form-outline-color            : $color-fsa-tertiary-lighter;
+$form-focus-color              : $color-fsa-secondary-light;
+$form-error-color              : $color-fsa-red;
+$form-error-color-focus        : $color-fsa-red-dark;
+$form-error-color-bg           : $color-fsa-red-lightest;
+$form-disabled-bg-color        : $color-fsa-tertiary-lightest;
+$form-radio-check-border-width : 2px;
+$form-checkbox-fill            : $color-fsa-secondary;
+$form-radiocheckbox-size       : 18px;
+$form-border-radius            : 0;
+$form-padding                  : $size-small;
+$form-select-bgc               : orangered;
+
+%form-radiocheckbox-redux {
+
+  display:inline-block;
+  vertical-align: middle;
+  font-weight: normal;
+  cursor: pointer;
+  user-select: none;
+
+  input {
+    @include position(absolute, 0 0 0 0);
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .nub {
+    @include position(relative, -1px 0 0 0);
+    transition: border 0.23s ease-out;
+    margin: 0;
+    padding: 0;
+    border: 1px solid $form-outline-color;
+    display: inline-block;
+    vertical-align: middle;
+    width:   $form-radiocheckbox-size;
+    height:  $form-radiocheckbox-size;
+    margin-right: $size-base;
+    cursor: pointer;
+    background-color: $white;
+  }
+
+  &.is-disabled {
+    cursor: not-allowed;
+    .nub {
+      opacity: .5;
+      background-color: $form-disabled-bg-color;
+      cursor: not-allowed;
+    }
+  }
+
+  :checked + .nub {
+    //border-width: 2px;
+  }
+
+  :focus + .nub {
+    border-color: $form-focus-color;
+    border-width: $form-radio-check-border-width;
+  }
+
+}
+
+.form-text,
+.form-textarea {
+
+  height: $button-height;
+  border-radius: $form-border-radius;
+  box-shadow: none;
+  appearance: none;
+  border: 1px solid $form-outline-color;
+  // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
+  padding:
+    ($form-padding - 1px) // to achieve vertical alignment
+    ($form-padding)
+    ($form-padding)
+  ;
+  margin: 0;
+  background-color: $white;
+  color: $form-text-color;
+  display: inline-block;;
+  line-height: 1;
+  font-family: $form-font;
+  font-size: $form-text-size;
+
+  @include placeholder {
+    color: $form-placeholder-color;
+  }
+
+  &:focus {
+    border-color: $form-focus-color;
+    box-shadow: 0 0 0 1px $form-focus-color inset;
+    outline: 0;
+  }
+
+  &--disabled {
+    opacity: .5;
+    background-color: $form-disabled-bg-color;
+    cursor: not-allowed;
+  }
+
+  &--error {
+
+    border-color: $form-error-color;
+    box-shadow: 0 0 0 1px $form-error-color inset;
+    background-color: $form-error-color-bg;
+
+    @include placeholder {
+      color: shade($form-placeholder-color, 20%);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px $form-error-color-focus inset;
+    }
+
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
+  }
+
+  &--small {
+    height: $button-height--sm;
+    font-size: $form-text-size--sm;
+  }
+
+  &--large {
+    height: $button-height--lg;
+    font-size: $form-text-size--lg;
+    padding-left: $form-padding + $size-base;
+  }
+
+}
+
+.form-textarea {
+  min-height: 16rem;
+  display: block;
+  max-width: none;
+  width: 100%;
+  line-height: $base-line-height;
+  padding: $form-padding;
+  resize: vertical;
+}

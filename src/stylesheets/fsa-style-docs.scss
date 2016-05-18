@@ -246,6 +246,7 @@ $color-annotation: $color-fsa-red;
       // scss-lint:disable NestingDepth
       &-item {
         @include reset-li;
+        margin-bottom: $size-base;
       }
 
     }
