@@ -148,9 +148,10 @@
 
 .form-checkbox,
 .form-radio {
+  $outline-color: shade($form-outline-color, 20%);
   appearance: none;
   background-color: $white;
-  border: 1px solid shade($form-outline-color, 20%);
+  border: 1px solid $outline-color;
   // transition: border .23s ease-out;
   display: inline-block;
   height: 1em;
@@ -171,6 +172,7 @@
     cursor: text;
     cursor: not-allowed;
     opacity: .3;
+    background-color: $outline-color;
   }
 
   // &:focus {
