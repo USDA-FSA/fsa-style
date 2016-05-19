@@ -20,77 +20,295 @@
   <main class="docs__main" id="top">
 
     <section class="docs__section">
-      <div class="docs__bd">
-        <h3 class="docs__bd docs__figure">Input text - Default</h3>
+      <div class="docs__bd" style="max-width:none;">
         <h3 class="docs__bd docs__figure">Input Radio & Checkbox</h3>
 
         <p>
-          <label><input checked name="name" type="radio"> Radio</label>
+          <label><input class="form-radio" checked name="radio-group-sample" type="radio"> Radio</label>
         </p>
         <p>
-          <label><input name="name" type="radio"> Radio</label>
+          <label><input class="form-radio" name="radio-group-sample" type="radio"> Radio</label>
         </p>
         <p>
-          <label><input disabled name="name" type="radio"> Radio</label>
+          <label><input class="form-radio" disabled name="radio-group-sample" type="radio"> Radio</label>
         </p>
         <p>
-          <label><input checked name="name" type="checkbox"> Checkbox</label>
+          <label><input class="form-radio" checked disabled name="radio-group-sample--solo" type="radio"> Radio</label>
         </p>
         <p>
-          <label><input name="name" type="checkbox"> Checkbox</label>
+          <label><input class="form-checkbox" checked name="name" type="checkbox"> Checkbox</label>
         </p>
         <p>
-          <label><input disabled name="name" type="checkbox"> Checkbox </label>
+          <label><input class="form-checkbox" name="name" type="checkbox"> Checkbox</label>
+        </p>
+        <p>
+          <label><input class="form-checkbox" disabled name="name" type="checkbox"> Checkbox </label>
+        </p>
+        <p>
+          <label><input class="form-checkbox" checked=" "disabled name="name" type="checkbox"> Checkbox </label>
         </p>
 
-        <div hidden>
-          &[type='checkbox'], &[type='radio']
-             background-color: $input-background-color
-             border: $border-width solid #888
-             display: inline-block
-             height: 1em
-             margin: 0 0.3em -0.1em 0
-             padding: 0
-             position: relative
-             top: 0
-             width: 1em
-             overflow: hidden
-             &:checked
-               background-color: $input-checkbox-checked
-               border-color: $input-checkbox-checked
-             &:disabled
-               opacity: 0.3
-
-           &[type='checkbox']
-             border-radius: $radius
-             &:checked
-               border: none
-               &:before
-                 bottom: 0
-                 color: white
-                 content: $font-icons-icon-check
-                 font-family: $icons
-                 font-size: 1em
-                 left: 0
-                 line-height: 1
-                 position: absolute
-                 right: 0
-                 text-align: center
-                 top: 0
-
-           &[type='radio']
-             border-radius: $round
-             &:checked
-               &:before
-                 color: white
-                 content: ' '
-                 height: 1em
-                 overflow: hidden
-                 position: absolute
-                 text-align: center
-                 top: 0
-                 width: 1em
-
+        <div class="temp-asdfasdfasdf">
+          <div class="docs__typography__size--0">
+            <p>
+              <label><input class="form-radio" checked name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" disabled name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" checked disabled name="radio-group-sample--solo" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" checked name="name" type="checkbox"> Checkbox</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" name="name" type="checkbox"> Checkbox</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" disabled name="name" type="checkbox"> Checkbox </label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" checked=" "disabled name="name" type="checkbox"> Checkbox </label>
+            </p>
+          </div>
+          <div class="docs__typography__size--1">
+            <p>
+              <label><input class="form-radio" checked name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" disabled name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" checked disabled name="radio-group-sample--solo" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" checked name="name" type="checkbox"> Checkbox</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" name="name" type="checkbox"> Checkbox</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" disabled name="name" type="checkbox"> Checkbox </label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" checked=" "disabled name="name" type="checkbox"> Checkbox </label>
+            </p>
+          </div>
+          <div class="docs__typography__size--2">
+            <p>
+              <label><input class="form-radio" checked name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" disabled name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" checked disabled name="radio-group-sample--solo" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" checked name="name" type="checkbox"> Checkbox</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" name="name" type="checkbox"> Checkbox</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" disabled name="name" type="checkbox"> Checkbox </label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" checked=" "disabled name="name" type="checkbox"> Checkbox </label>
+            </p>
+          </div>
+          <div class="docs__typography__size--3">
+            <p>
+              <label><input class="form-radio" checked name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" disabled name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" checked disabled name="radio-group-sample--solo" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" checked name="name" type="checkbox"> Checkbox</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" name="name" type="checkbox"> Checkbox</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" disabled name="name" type="checkbox"> Checkbox </label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" checked=" "disabled name="name" type="checkbox"> Checkbox </label>
+            </p>
+          </div>
+          <div class="docs__typography__size--4">
+            <p>
+              <label><input class="form-radio" checked name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" disabled name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" checked disabled name="radio-group-sample--solo" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" checked name="name" type="checkbox"> Checkbox</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" name="name" type="checkbox"> Checkbox</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" disabled name="name" type="checkbox"> Checkbox </label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" checked=" "disabled name="name" type="checkbox"> Checkbox </label>
+            </p>
+          </div>
+          <div class="docs__typography__size--5">
+            <p>
+              <label><input class="form-radio" checked name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" disabled name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" checked disabled name="radio-group-sample--solo" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" checked name="name" type="checkbox"> Checkbox</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" name="name" type="checkbox"> Checkbox</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" disabled name="name" type="checkbox"> Checkbox </label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" checked=" "disabled name="name" type="checkbox"> Checkbox </label>
+            </p>
+          </div>
+          <div class="docs__typography__size--6">
+            <p>
+              <label><input class="form-radio" checked name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" disabled name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" checked disabled name="radio-group-sample--solo" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" checked name="name" type="checkbox"> Checkbox</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" name="name" type="checkbox"> Checkbox</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" disabled name="name" type="checkbox"> Checkbox </label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" checked=" "disabled name="name" type="checkbox"> Checkbox </label>
+            </p>
+          </div>
+          <div class="docs__typography__size--7">
+            <p>
+              <label><input class="form-radio" checked name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" disabled name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" checked disabled name="radio-group-sample--solo" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" checked name="name" type="checkbox"> Checkbox</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" name="name" type="checkbox"> Checkbox</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" disabled name="name" type="checkbox"> Checkbox </label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" checked=" "disabled name="name" type="checkbox"> Checkbox </label>
+            </p>
+          </div>
+          <div class="docs__typography__size--8">
+            <p>
+              <label><input class="form-radio" checked name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" disabled name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" checked disabled name="radio-group-sample--solo" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" checked name="name" type="checkbox"> Checkbox</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" name="name" type="checkbox"> Checkbox</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" disabled name="name" type="checkbox"> Checkbox </label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" checked=" "disabled name="name" type="checkbox"> Checkbox </label>
+            </p>
+          </div>
+          <div class="docs__typography__size--9">
+            <p>
+              <label><input class="form-radio" checked name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" disabled name="radio-group-sample" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-radio" checked disabled name="radio-group-sample--solo" type="radio"> Radio</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" checked name="name" type="checkbox"> Checkbox</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" name="name" type="checkbox"> Checkbox</label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" disabled name="name" type="checkbox"> Checkbox </label>
+            </p>
+            <p>
+              <label><input class="form-checkbox" checked=" "disabled name="name" type="checkbox"> Checkbox </label>
+            </p>
+          </div>
         </div>
 
       </div>

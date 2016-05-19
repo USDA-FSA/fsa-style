@@ -1,3 +1,6 @@
+////////////////////////////////////////////////////////////////////////
+// Text Fields
+
 %form-radiocheckbox-redux {
 
   display: inline-block;
@@ -128,4 +131,91 @@
   line-height: $base-line-height;
   padding: $form-padding;
   resize: vertical;
+}
+
+////////////////////////////////////////////////////////////////////////
+// Checkbox and Radio
+
+.temp-asdfasdfasdf {
+  display: flex;
+
+  & > div {
+    flex: 1;
+    padding: 0 8px;
+  }
+
+}
+
+.form-checkbox,
+.form-radio {
+  appearance: none;
+  background-color: $white;
+  border: 1px solid $form-outline-color;
+  transition: border .23s ease-out;
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  margin: 0 .3em -.1em 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:checked {
+    background-color: $form-checkbox-fill;
+    border-color: $form-checkbox-fill;
+  }
+
+  &:disabled {
+    cursor: text;
+    cursor: not-allowed;
+    opacity: 0.3;
+  }
+}
+
+.form-checkbox {
+
+  border-radius: 2px;
+
+  &:checked {
+
+    border: 0;
+
+    &:before {
+      bottom: 0;
+      color: white;
+      content: '\00D7';
+      font-family: $font-sans;
+      font-weight: $font-bold;
+      font-size: 1.2em;
+      left: 0;
+      line-height: 1;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: -.1em;
+    }
+
+  }
+
+}
+
+.form-radio {
+
+  border-radius: 100%;
+
+  &:checked {
+
+    &:before {
+      @include position(absolute, 1px 1px 1px 1px);
+      box-shadow: 0 0 0 .2em $white inset;
+      border-radius: 100%;
+      color: white;
+      content: ' ';
+      overflow: hidden;
+      text-align: center;
+    }
+
+  }
 }
