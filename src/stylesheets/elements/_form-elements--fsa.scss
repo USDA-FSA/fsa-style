@@ -150,8 +150,8 @@
 .form-radio {
   appearance: none;
   background-color: $white;
-  border: 1px solid $form-outline-color;
-  transition: border .23s ease-out;
+  border: 1px solid shade($form-outline-color, 20%);
+  // transition: border .23s ease-out;
   display: inline-block;
   height: 1em;
   width: 1em;
@@ -170,8 +170,14 @@
   &:disabled {
     cursor: text;
     cursor: not-allowed;
-    opacity: 0.3;
+    opacity: .3;
   }
+
+  // &:focus {
+  //   border: 4px solid $form-focus-color;
+  //   outline: 0;
+  // }
+
 }
 
 .form-checkbox {
