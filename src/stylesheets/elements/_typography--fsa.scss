@@ -1,3 +1,7 @@
+p {
+  line-height: inherit;
+}
+
 html,
 button,
 input,
@@ -29,6 +33,7 @@ h6 {
   margin-bottom: 0;
 }
 
+.fsa-font-lead,
 .usa-font-lead {
 
   font-weight: $font-light;

@@ -1,54 +1,54 @@
 ////////////////////////////////////////////////////////////////////////
 // Text Fields
 
-%form-radiocheckbox-redux {
-
-  display: inline-block;
-  vertical-align: middle;
-  font-weight: normal;
-  cursor: pointer;
-  user-select: none;
-
-  input {
-    @include position(absolute, 0 0 0 0);
-    opacity: 0;
-    cursor: pointer;
-  }
-
-  .nub {
-    @include position(relative, -1px 0 0 0);
-    transition: border .23s ease-out;
-    margin: 0;
-    padding: 0;
-    border: 1px solid $form-outline-color;
-    display: inline-block;
-    vertical-align: middle;
-    width: $form-radiocheckbox-size;
-    height: $form-radiocheckbox-size;
-    margin-right: $size-base;
-    cursor: pointer;
-    background-color: $white;
-  }
-
-  &.is-disabled {
-    cursor: not-allowed;
-    .nub {
-      opacity: .5;
-      background-color: $form-disabled-bg-color;
-      cursor: not-allowed;
-    }
-  }
-
-  :checked + .nub {
-    //border-width: 2px;
-  }
-
-  :focus + .nub {
-    border-color: $form-focus-color;
-    border-width: $form-radio-check-border-width;
-  }
-
-}
+// %form-radiocheckbox-redux {
+//
+//   display: inline-block;
+//   vertical-align: middle;
+//   font-weight: normal;
+//   cursor: pointer;
+//   user-select: none;
+//
+//   input {
+//     @include position(absolute, 0 0 0 0);
+//     opacity: 0;
+//     cursor: pointer;
+//   }
+//
+//   .nub {
+//     @include position(relative, -1px 0 0 0);
+//     transition: border .23s ease-out;
+//     margin: 0;
+//     padding: 0;
+//     border: 1px solid $form-outline-color;
+//     display: inline-block;
+//     vertical-align: middle;
+//     width: $form-radiocheckbox-size;
+//     height: $form-radiocheckbox-size;
+//     margin-right: $size-base;
+//     cursor: pointer;
+//     background-color: $white;
+//   }
+//
+//   &.is-disabled {
+//     cursor: not-allowed;
+//     .nub {
+//       opacity: .5;
+//       background-color: $form-disabled-bg-color;
+//       cursor: not-allowed;
+//     }
+//   }
+//
+//   :checked + .nub {
+//     //border-width: 2px;
+//   }
+//
+//   :focus + .nub {
+//     border-color: $form-focus-color;
+//     border-width: $form-radio-check-border-width;
+//   }
+//
+// }
 
 .form-text,
 .form-textarea {
@@ -142,26 +142,27 @@
   & > div {
     flex: 1;
     padding: 0 8px;
+    white-space: nowrap;
   }
 
 }
 
 .form-checkbox,
 .form-radio {
-  $outline-color: shade($form-outline-color, 20%);
+  $outline-color: shade($form-outline-color, 30%);
   appearance: none;
   background-color: $white;
   border: 1px solid $outline-color;
-  // transition: border .23s ease-out;
   display: inline-block;
-  height: 1em;
-  width: 1em;
+  height: 1.3em;
+  width: 1.3em;
   margin: 0 .3em -.1em 0;
   padding: 0;
   position: relative;
   top: 0;
   overflow: hidden;
   cursor: pointer;
+  vertical-align: top;
 
   &:checked {
     background-color: $form-checkbox-fill;
@@ -171,8 +172,8 @@
   &:disabled {
     cursor: text;
     cursor: not-allowed;
-    opacity: .3;
-    background-color: $outline-color;
+    opacity: .35;
+    // background-color: transparentize($outline-color, .8);
   }
 
   // &:focus {
@@ -191,18 +192,17 @@
     border: 0;
 
     &:before {
-      bottom: 0;
+
       color: white;
       content: '\00D7';
       font-family: $font-sans;
       font-weight: $font-bold;
-      font-size: 1.2em;
-      left: 0;
+      font-size: 1.4em;
       line-height: 1;
-      position: absolute;
-      right: 0;
+
       text-align: center;
-      top: -.1em;
+      @include position(absolute, -.05em 0px 0px 0px);
+
     }
 
   }
@@ -226,4 +226,5 @@
     }
 
   }
+
 }
