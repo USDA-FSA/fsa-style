@@ -1,0 +1,86 @@
+////////////////////////////////////////////////////////////////////////
+// Text Fields
+
+.form-text,
+.form-textarea {
+
+  height: $button-height;
+  border-radius: $form-border-radius;
+  box-shadow: none;
+  appearance: none;
+  border: 1px solid $form-outline-color;
+  // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
+  padding:
+    ($form-padding - 1px) // to achieve vertical alignment
+    ($form-padding)
+    ($form-padding)
+  ;
+  margin: 0;
+  background-color: $white;
+  color: $form-text-color;
+  display: inline-block;;
+  line-height: 1;
+  font-family: $form-font;
+  font-size: $form-text-size;
+  max-width: 100%;
+
+  @include placeholder {
+    color: $form-placeholder-color;
+  }
+
+  &:focus {
+    border-color: $form-focus-color;
+    box-shadow: 0 0 0 1px $form-focus-color inset;
+    outline: 0;
+  }
+
+  &--disabled {
+    opacity: .5;
+    background-color: $form-disabled-bg-color;
+    cursor: not-allowed;
+  }
+
+  &--error {
+
+    border-color: $form-error-color;
+    box-shadow: 0 0 0 1px $form-error-color inset;
+    background-color: $form-error-color-bg;
+
+    @include placeholder {
+      color: shade($form-placeholder-color, 20%);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px $form-error-color-focus inset;
+      border-color: transparent;
+    }
+
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
+  }
+
+  &--small {
+    height: $button-height--sm;
+    font-size: $form-text-size--sm;
+  }
+
+  &--large {
+    height: $button-height--lg;
+    font-size: $form-text-size--lg;
+    padding-left: $form-padding + $size-base;
+  }
+
+}
+
+.form-textarea {
+  min-height: 15rem;
+  display: block;
+  max-width: none;
+  width: 100%;
+  line-height: $base-line-height;
+  padding: $form-padding;
+  resize: vertical;
+}
