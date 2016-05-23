@@ -6,8 +6,8 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>FSA Visual Language</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/fsa-style.min.css" media="all" />
-  <link rel="stylesheet" href="css/fsa-style-docs.min.css" media="all" />
+  <link rel="stylesheet" href="css/fsa-style.min.css" media="all">
+  <link rel="stylesheet" href="css/fsa-style-docs.min.css" media="all">
   <!--[if lt IE 9]>
     <script src="dist/js/vendor/html5shiv.js"></script>
     <script src="dist/js/vendor/respond.js"></script>
@@ -499,17 +499,17 @@
         <p><code>class="btn btn--[variant]"</code> can be applied to nearly any element, some samples:</p>
         <p>
           <button class="btn">&lt;button&gt;</button>
-          <input class="btn" type="button" value="&lt;input type=button&gt;" />
-          <input class="btn" type="reset" value="&lt;input type=reset&gt;" />
-          <input class="btn" type="submit" value="&lt;input type=submit&gt;" />
+          <input class="btn" type="button" value="&lt;input type=button&gt;">
+          <input class="btn" type="reset" value="&lt;input type=reset&gt;">
+          <input class="btn" type="submit" value="&lt;input type=submit&gt;">
           <a class="btn" href="//fsa.usda.gov">&lt;a&gt;</a>
           <span class="btn">&lt;span&gt;</span>
         </p>
         <p>
           <button class="btn btn--disabled">&lt;button&gt;</button>
-          <input class="btn btn--disabled" type="button" value="&lt;input type=button&gt;" disabled />
-          <input class="btn btn--disabled" type="reset" value="&lt;input type=reset&gt;" disabled />
-          <input class="btn btn--disabled" type="submit" value="&lt;input type=submit&gt;" disabled />
+          <input class="btn btn--disabled" type="button" value="&lt;input type=button&gt;" disabled="">
+          <input class="btn btn--disabled" type="reset" value="&lt;input type=reset&gt;" disabled="">
+          <input class="btn btn--disabled" type="submit" value="&lt;input type=submit&gt;" disabled="">
           <a class="btn btn--disabled" href="//fsa.usda.gov">&lt;a&gt;</a>
           <span class="btn btn--disabled">&lt;span&gt;</span>
         </p>
@@ -527,7 +527,7 @@
           <input class="form-text" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--disabled" disabled type="text" name="some_name" value="disabled">
+          <input class="form-text form-text--disabled" disabled="" type="text" name="some_name" value="disabled">
         </p>
         <h4 class="docs__sub_style">Block (full-width)</h4>
         <p>
@@ -537,7 +537,7 @@
           <input class="form-text form-text--block" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--block form-text--disabled" disabled type="text" name="some_name" value="disabled">
+          <input class="form-text form-text--block form-text--disabled" disabled="" type="text" name="some_name" value="disabled">
         </p>
         <h4 class="docs__sub_style">Error</h4>
         <p>
@@ -556,7 +556,7 @@
           <input class="form-text form-text--small" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--small form-text--disabled" disabled type="text" name="some_name" value="disabled">
+          <input class="form-text form-text--small form-text--disabled" disabled="" type="text" name="some_name" value="disabled">
         </p>
         <h4 class="docs__sub_style">Block (full-width)</h4>
         <p>
@@ -566,7 +566,7 @@
           <input class="form-text form-text--small form-text--block" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--small form-text--block form-text--disabled" disabled type="text" name="some_name" value="disabled">
+          <input class="form-text form-text--small form-text--block form-text--disabled" disabled="" type="text" name="some_name" value="disabled">
         </p>
         <h4 class="docs__sub_style">Error</h4>
         <p>
@@ -585,7 +585,7 @@
           <input class="form-text form-text--large" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--large form-text--disabled" disabled type="text" name="some_name" value="disabled">
+          <input class="form-text form-text--large form-text--disabled" disabled="" type="text" name="some_name" value="disabled">
         </p>
         <h4 class="docs__sub_style">Block (full-width)</h4>
         <p>
@@ -595,7 +595,7 @@
           <input class="form-text form-text--large form-text--block" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--large form-text--block form-text--disabled" disabled type="text" name="some_name" value="disabled">
+          <input class="form-text form-text--large form-text--block form-text--disabled" disabled="" type="text" name="some_name" value="disabled">
         </p>
         <h4 class="docs__sub_style">Error</h4>
         <p>
@@ -612,17 +612,46 @@
         </p>
         <h4 class="docs__sub_style">Disabled</h4>
         <p>
-          <textarea class="form-textarea form-textarea--disabled" disabled name="Name" placeholder="">disabled textarea</textarea>
+          <textarea class="form-textarea form-textarea--disabled" disabled="" name="Name" placeholder="">disabled="" textarea</textarea>
         </p>
         <h4 class="docs__sub_style">Error</h4>
         <p>
-          <textarea class="form-textarea form-textarea--error" name="Name" placeholder="">disabled textarea</textarea>
+          <textarea class="form-textarea form-textarea--error" name="Name" placeholder="">disabled="" textarea</textarea>
         </p>
-        <div style="outline: 1px solid Orangered;background-color:#ccc;text-align:center;font-size:3em;padding: 100px 20px">
-          <p>
-            <a href="forms(working).html">forms(working).html</a>
-          </p>
-        </div>
+        <h3 class="docs__bd docs__figure">Checkbox</h3>
+        <p>
+          <input class="fsa-checkbox" id="apple-pie" type="checkbox" name="pies" value="apple-pie" checked="">
+          <label for="apple-pie">Checkbox with a long label cepteur sint occaecat cupidatat non proident id est laborum</label>
+        </p>
+        <p>
+          <input class="fsa-checkbox" id="key-lime-pie" type="checkbox" name="pies" value="key-lime-pie">
+          <label for="key-lime-pie">Checkbox</label>
+        </p>
+        <p>
+          <input class="fsa-checkbox" id="disabled" type="checkbox" name="pies" disabled="">
+          <label for="disabled">Checkbox</label>
+        </p>
+        <p>
+          <input class="fsa-checkbox" id="moms-apple-pie" type="checkbox" name="pies" value="moms-apple-pie" checked="" disabled="">
+          <label for="moms-apple-pie">Checkbox</label>
+        </p>
+        <h3 class="docs__bd docs__figure">Radio</h3>
+        <p>
+          <input class="fsa-radio" id="chicken-noodle" type="radio" name="soup" value="chicken-noodle" checked="">
+          <label for="chicken-noodle">Radio with a long label cepteur sint occaecat cupidatat non proident id est laborum</label>
+        </p>
+        <p>
+          <input class="fsa-radio" id="tomato" type="radio" name="soup" value="tomato">
+          <label for="tomato">Radio</label>
+        </p>
+        <p>
+          <input class="fsa-radio" id="cucumber" type="radio" name="soup" value="cucumber" disabled="">
+          <label for="cucumber">Radio</label>
+        </p>
+        <p>
+          <input class="fsa-radio" id="lettuce" type="radio" name="qweraewr" value="lettuce" disabled="" checked="">
+          <label for="lettuce">Radio</label>
+        </p>
 
       </div>
     </section>
@@ -669,7 +698,7 @@
     <h2 id="figure-caption">Figure-Caption</h2>
 
     <figure>
-      <img src="http://placehold.it/350x150" alt="A placeholder figure image." />
+      <img src="http://placehold.it/350x150" alt="A placeholder figure image.">
       <figcaption>The figcaption element example</figcaption>
     </figure>
 
@@ -808,15 +837,15 @@ for (i = 0; i < divs.length; ++i) {
 
     <h2>The Audio Element:</h2>
     <audio controls>
-      <source src="http://www.w3schools.com/tags/horse.ogg" type="audio/ogg" />
-      <source src="http://www.w3schools.com/tags/horse.mp3" type="audio/mpeg" />
+      <source src="http://www.w3schools.com/tags/horse.ogg" type="audio/ogg">
+      <source src="http://www.w3schools.com/tags/horse.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
 
     <h2>The Video Element:</h2>
     <video width="320" height="240" controls>
-      <source src="http://www.w3schools.com/tags/movie.mp4" type="video/mp4" />
-      <source src="http://www.w3schools.com/tags/movie.ogg" type="video/ogg" />
+      <source src="http://www.w3schools.com/tags/movie.mp4" type="video/mp4">
+      <source src="http://www.w3schools.com/tags/movie.ogg" type="video/ogg">
       Your browser does not support the video tag.
     </video>
 
@@ -833,17 +862,17 @@ for (i = 0; i < divs.length; ++i) {
       <form>
         <p>
           <label for="text_field">Text Field:</label>
-          <input type="text" id="text_field" />
+          <input type="text" id="text_field">
         </p>
 
         <p>
           <label for="text_field_disabled">Disabled Text Field:</label>
-          <input type="text" id="text_field_disabled" disabled value="I'm disabled" />
+          <input type="text" id="text_field_disabled" disabled="" value="I'm disabled">
         </p>
 
         <p>
           <label for="text_field_readonly">Readonly Text Field:</label>
-          <input type="text" id="text_field_readonly" readonly value="I'm readonly" />
+          <input type="text" id="text_field_readonly" readonly value="I'm readonly">
         </p>
 
         <p>
@@ -853,7 +882,7 @@ for (i = 0; i < divs.length; ++i) {
 
         <p>
           <label for="text_area_disabled">Disabled Text Area:</label>
-          <textarea id="text_area_disabled" disabled>I'm disabled</textarea>
+          <textarea id="text_area_disabled" disabled="">I'm disabled</textarea>
         </p>
 
         <p>
@@ -879,14 +908,14 @@ for (i = 0; i < divs.length; ++i) {
             <optgroup label="Option Group 2">
               <option value="1">Option 1</option>
               <option value="2">Option 2</option>
-              <option value="3" disabled>Disabled Option</option>
+              <option value="3" disabled="">Disabled Option</option>
             </optgroup>
           </select>
         </p>
 
         <p>
-          <label for="select_element_disabled">Disabled Select Element:</label><br/>
-          <select id="select_element_disabled" disabled>
+          <label for="select_element_disabled">Disabled Select Element:</label><br>
+          <select id="select_element_disabled" disabled="">
             <option value="1">Unselectable Option</option>
             <option value="2">This option should not even be seen</option>
           </select>
@@ -939,71 +968,71 @@ for (i = 0; i < divs.length; ++i) {
 
         <p>
           <label for="password">Password:</label>
-          <input type="password" class="password" id="password" />
+          <input type="password" class="password" id="password">
         </p>
 
         <p>
           <label for="file">File Input:</label>
-          <input type="file" class="file" id="file" />
+          <input type="file" class="file" id="file">
         </p>
 
         <h3>HTML5-specific Form Elements</h3>
 
         <p>
           <label for="email">Email:</label>
-          <input type="email" id="email" />
+          <input type="email" id="email">
         </p>
 
         <p>
           <label for="url">URL:</label>
-          <input type="url" id="url" />
+          <input type="url" id="url">
         </p>
 
         <p>
           <label for="tel">Telephone:</label>
-          <input type="tel" id="tel" />
+          <input type="tel" id="tel">
         </p>
 
         <p>
           <label for="number">Number:</label>
-          <input type="number" id="number" min="0" max="10" step="1" value="5" />
+          <input type="number" id="number" min="0" max="10" step="1" value="5">
         </p>
 
         <p>
           <label for="search">Search:</label>
-          <input type="search" id="search" />
+          <input type="search" id="search">
         </p>
 
         <p>
           <label for="date">Date:</label>
-          <input type="date" id="date" />
+          <input type="date" id="date">
         </p>
 
         <p>
           <label for="time">Time:</label>
-          <input type="time" id="time" />
+          <input type="time" id="time">
         </p>
 
         <p>
           <label for="color">Color:</label>
-          <input type="color" id="color" />
+          <input type="color" id="color">
         </p>
 
         <p>
           <label for="datalist">Datalist:</label>
-          <input list="browsers" name="browser" type="datalist" id="datalist" />
+          <input list="browsers" name="browser" type="datalist" id="datalist">
           <datalist id="browsers">
-            <option value="Internet Explorer" />
-            <option value="Firefox" />
-            <option value="Chrome" />
-            <option value="Opera" />
-            <option value="Safari" />
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
           </datalist>
         </p>
 
         <p>
           <label for="range">Range:</label>
-          <input type="range" id="range" name="points" min="1" max="10" />
+          <input type="range" id="range" name="points" min="1" max="10">
         </p>
 
         <p>
@@ -1023,8 +1052,8 @@ for (i = 0; i < divs.length; ++i) {
 
         <p>
           <button class="button">Button Element</button>
-          <input class="button" type="reset" value="Clear" />
-          <input class="button" type="submit" value="Submit" />
+          <input class="button" type="reset" value="Clear">
+          <input class="button" type="submit" value="Submit">
         </p>
       </form>
 
