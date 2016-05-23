@@ -18,9 +18,9 @@
   border: 1px solid $form-outline-color;
   // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
   padding:
+    ($form-padding)
+    ($form-padding)
     ($form-padding - 1px) // to achieve vertical alignment
-    ($form-padding)
-    ($form-padding)
   ;
   margin: 0;
   background-color: $white;
@@ -37,8 +37,15 @@
   @include fsa-selectfooyeahwhoopdeedooyoubetterfixthis();
 
   &--block {
-    display: block;;
+    display: block;
     width: 100%;
   }
+
+  &:focus {
+    border-color: $form-focus-color;
+    box-shadow: 0 0 0 1px $form-focus-color inset;
+    outline: 0;
+  }
+
 
 }
