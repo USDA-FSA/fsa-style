@@ -34,7 +34,7 @@ $button-alt-active       : $color-fsa-secondary;
 $button-alt-border       : $color-fsa-secondary;
 $button-alt-border-width : 2px;
 
-.btn {
+.fsa-btn {
 
   // -------------------------------------------------------------------------
   // reset
@@ -62,6 +62,7 @@ $button-alt-border-width : 2px;
 
   // -------------------------------------------------------------------------
   // default
+
   background-color: $button-default;
   color: $button-default-text;
 
@@ -93,7 +94,7 @@ $button-alt-border-width : 2px;
 
   &[disabled] {
 
-    $color-transparentized: transparentize($button-default-text, .5);
+    $color-transparentized: transparentize($button-default-text, .35);
 
     opacity: .4;
     color: $color-transparentized;
@@ -116,7 +117,6 @@ $button-alt-border-width : 2px;
     }
 
   }
-
 
   &--primary {
 
