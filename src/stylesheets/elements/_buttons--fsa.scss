@@ -201,6 +201,7 @@ $button-alt-border-width : 2px;
   &--small {
 
     height: $button-height--sm;
+    // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon
     padding:
       ($size-small)
       ($size-default)
@@ -215,7 +216,7 @@ $button-alt-border-width : 2px;
 
     height: $button-height--lg;
 
-    // scss-lint:disable SpaceAfterPropertyColon
+    // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon
     padding:
       (($button-padding * 2) - 3px)
       ($size-large)

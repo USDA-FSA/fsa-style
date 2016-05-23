@@ -1,49 +1,50 @@
 // Vendor -------------- //
 
-@import 'lib/bourbon';
-@import 'lib/neat';
-@import 'lib/normalize';
+@import 'lib/bourbon'; // USWDS
+@import 'lib/neat'; // USWDS
+@import 'lib/normalize'; // USWDS
 
 // Core (non-rendering) -------------- //
-@import 'core/defaults';
+@import 'core/defaults'; // USWDS
 @import 'core/variables--fsa';
-@import 'core/fonts';
-@import 'core/grid-settings';
+@import 'core/fonts'; // USWDS
+@import 'core/grid-settings'; // USWDS
 
 // Core (rendering) -------------- //
-@import 'core/utilities';
+@import 'core/utilities'; // USWDS
 @import 'core/utilities--fsa';
-@import 'core/base';
+@import 'core/base'; // USWDS
 @import 'core/base--fsa';
-@import 'core/grid';
+@import 'core/grid'; // USWDS
 
 // Elements -------------- //
 // Styles basic HTML elements
 
-// @import 'elements/buttons';
+// @import 'elements/buttons'; // USWDS
 @import 'elements/buttons--fsa';
-@import 'elements/figure';
-// @import 'elements/inputs';
-@import 'elements/form-elements--fsa';
-@import 'elements/labels';
-@import 'elements/list';
-@import 'elements/table';
-@import 'elements/typography';
+@import 'elements/figure'; // USWDS
+// @import 'elements/inputs'; // USWDS
+@import 'elements/form-elements.textfields--fsa';
+@import 'elements/form-elements.checkbox-radio--fsa';
+@import 'elements/labels'; // USWDS
+@import 'elements/list'; // USWDS
+@import 'elements/table'; // USWDS
+@import 'elements/typography'; // USWDS
 @import 'elements/typography--fsa';
 
 
 // Components -------------- //
 
-@import 'components/accordions';
-@import 'components/alerts';
-@import 'components/disclaimer';
-@import 'components/footer';
-// @import 'components/forms';
+@import 'components/accordions'; // USWDS
+@import 'components/alerts'; // USWDS
+@import 'components/disclaimer'; // USWDS
+@import 'components/footer'; // USWDS
+// @import 'components/forms'; // USWDS
 @import 'components/forms--fsa';
 @import 'components/form-structure--fsa';
-@import 'components/search';
-@import 'components/sidenav';
-@import 'components/skipnav';
+@import 'components/search'; // USWDS
+@import 'components/sidenav'; // USWDS
+@import 'components/skipnav'; // USWDS
 
 ///////////////////////////////////////////////////////////////////////////////
 
