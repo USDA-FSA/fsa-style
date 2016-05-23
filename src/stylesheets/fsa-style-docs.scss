@@ -477,21 +477,3 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 .color-fsa-red-lightest {
   background-color: $color-fsa-red-lightest;
 }
-
-.fsa-visual-index {
-
-  max-width: $site-max-width;
-  margin: auto;
-  padding: 1rem;
-
-  &__title {
-    font-size: $base-font-size;
-    color: $color-annotation;
-    padding-top: .5rem;
-    border-top: 4px solid $color-annotation;
-    font-family: $font-sans;
-    text-transform: uppercase;
-    margin-bottom: 0;
-  }
-
-}
