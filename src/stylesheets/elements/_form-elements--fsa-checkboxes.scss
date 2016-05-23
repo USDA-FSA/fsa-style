@@ -1,0 +1,93 @@
+.exp-form-checkbox,
+.exp-form-radio {
+
+  // @include sr-only();
+  position: absolute;
+  opacity: 0;
+
+  .lt-ie9 & {
+    border: 0;
+    float: left;
+    margin: 0.4em 0.4em 0 0;
+    position: static;
+    width: auto;
+  }
+
+}
+
+.exp-form-checkbox + label,
+.exp-form-radio + label {
+  cursor: pointer;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+
+.exp-form-checkbox + label::before,
+.exp-form-radio + label::before {
+  background: white;
+  border-radius: $border-radius;
+  box-shadow: 0 0 0 1px $color-gray-medium;
+  content: '\a0';
+  display: inline-block;
+  height: 1.8rem;
+  line-height: 0.8;
+  margin-right: 0.6em;
+  text-indent: 0.15em;
+  vertical-align: 0.2em;
+  width: 1.8rem;
+}
+
+.exp-form-radio + label::before {
+  box-shadow: 0 0 0 2px $color-white, 0 0 0 3px $color-gray-medium;
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+.exp-form-radio + label::before {
+  border-radius: 100%;
+}
+
+.exp-form-checkbox:checked + label::before,
+.exp-form-radio:checked + label::before {
+  background-color: $color-primary;
+  box-shadow: 0 0 0 1px $color-primary;
+}
+
+.exp-form-radio:checked + label::before {
+  box-shadow: 0 0 0 2px $color-white, 0 0 0 4px $color-primary;
+}
+
+.exp-form-radio:focus + label::before {
+  box-shadow: 0 0 0 2px $color-white, 0 0 0 4px $color-primary, 0 0 3px 4px $color-focus, 0 0 7px 4px $color-focus;
+}
+
+.exp-form-checkbox:checked + label::before {
+  background-image: url('../img/correct8.png');
+  background-image: url('../img/correct8.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.exp-form-checkbox:focus + label::before {
+  box-shadow: 0 0 0 1px $color-white, 0 0 0 3px $color-primary;
+}
+
+.exp-form-checkbox:disabled + label {
+  color: $color-gray;
+}
+
+.exp-form-checkbox:disabled:checked + label,
+.exp-form-radio:disabled:checked + label {
+  color: $color-gray;
+  &:after {
+    content: ' :disabled:checked';
+    color: orangered;
+  }
+}
+
+.exp-form-checkbox:disabled + label::before,
+.exp-form-radio:disabled + label::before {
+  background: $color-gray-lighter;
+  box-shadow: 0 0 0 1px $color-gray-light;
+  cursor: not-allowed;
+}
