@@ -1,6 +1,44 @@
 ////////////////////////////////////////////////////////////////////////
 // Select
 
-select {
-  outline: 1px solid red;
+@mixin fsa-selectfooyeahwhoopdeedooyoubetterfixthis {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: $color-white;
+  background-image: url('../img/arrow-down.png');
+  background-image: url('../img/arrow-down.svg');
+  background-position: right 1.3rem center;
+  background-repeat: no-repeat;
+  background-size: 1.3rem;
+  height: $button-height;
+  border-radius: $form-border-radius;
+  box-shadow: none;
+  appearance: none;
+  border: 1px solid $form-outline-color;
+  // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
+  padding:
+    ($form-padding - 1px) // to achieve vertical alignment
+    ($form-padding)
+    ($form-padding)
+  ;
+  margin: 0;
+  background-color: $white;
+  color: $form-text-color;
+  display: inline-block;;
+  line-height: 1;
+  font-family: $form-font;
+  font-size: $form-text-size;
+  max-width: 100%;
+}
+
+.fsa-select {
+
+  @include fsa-selectfooyeahwhoopdeedooyoubetterfixthis();
+
+  &--block {
+    display: block;;
+    width: 100%;
+  }
+
 }
