@@ -47,5 +47,10 @@
     outline: 0;
   }
 
+  &[disabled] {
+    opacity: .5;
+    background-color: $form-disabled-bg-color;
+    cursor: not-allowed;
+  }
 
 }
