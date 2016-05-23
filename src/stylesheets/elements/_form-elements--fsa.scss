@@ -45,7 +45,6 @@
 //
 //   :focus + .nub {
 //     border-color: $form-focus-color;
-//     border-width: $form-radio-check-border-width;
 //   }
 //
 // }
@@ -149,10 +148,9 @@
 
 .form-checkbox,
 .form-radio {
-  $outline-color: shade($form-outline-color, 30%);
   appearance: none;
   background-color: $white;
-  border: 1px solid $outline-color;
+  border: 1px solid $form-outline-color;
   display: inline-block;
   height: 1.3em;
   width: 1.3em;
@@ -165,8 +163,8 @@
   vertical-align: top;
 
   &:checked {
-    background-color: $form-checkbox-fill;
-    border-color: $form-checkbox-fill;
+    background-color: $form-checkbox-radio-fill;
+    border-color: $form-checkbox-radio-fill;
   }
 
   &:disabled {
