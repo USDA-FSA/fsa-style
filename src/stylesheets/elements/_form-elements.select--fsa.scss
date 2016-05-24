@@ -1,23 +1,16 @@
 ////////////////////////////////////////////////////////////////////////
 // Select
 
-@mixin fsa-select-starter-styles {
+.fsa-select {
 
-  appearance: none;
-  background-color: $color-white;
+  @include fsa-shared-form-properties();
+
   background-image: url('../img/arrow-down.png');
   background-image: url('../img/arrow-down.svg');
   background-position: right 1.3rem center;
   background-repeat: no-repeat;
   background-size: 1.3rem;
 
-  display: inline-block;
-  height: $button-height;
-  border: 1px solid $form-outline-color;
-  max-width: 100%;
-  margin: 0;
-  border-radius: $form-border-radius;
-  box-shadow: none;
   // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
   padding:
     ($form-padding - 2px) // to achieve vertical alignment
@@ -26,10 +19,6 @@
     ($form-padding)
   ;
 
-  font-family: $form-font;
-  font-size: $form-text-size;
-  color: $form-text-color;
-  line-height: 1;
   text-overflow: ellipsis;
 
   vertical-align: middle;
@@ -51,13 +40,6 @@
     border-color: $form-focus-color;
     box-shadow: 0 0 0 1px $form-focus-color inset;
   }
-
-}
-
-.fsa-select {
-
-  @include fsa-select-starter-styles();
-  @include fsa-space-between();
 
   &--block {
     display: block;

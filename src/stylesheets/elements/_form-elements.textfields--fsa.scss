@@ -1,18 +1,10 @@
 ////////////////////////////////////////////////////////////////////////
 // Text Fields
 
-@mixin form-text-starter-styles {
+.form-text,
+.form-textarea {
 
-  appearance: none;
-  background-color: $color-white;
-
-  display: inline-block;
-  height: $button-height;
-  border: 1px solid $form-outline-color;
-  max-width: 100%;
-  margin: 0;
-  border-radius: $form-border-radius;
-  box-shadow: none;
+  @include fsa-shared-form-properties();
 
   // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
   padding:
@@ -20,10 +12,6 @@
     ($form-padding)
     ($form-padding)
   ;
-  font-family: $form-font;
-  font-size: $form-text-size;
-  color: $form-text-color;
-  line-height: 1;
 
   @include placeholder {
     color: $form-placeholder-color;
@@ -33,13 +21,6 @@
     border-color: $form-focus-color;
     box-shadow: 0 0 0 1px $form-focus-color inset;
   }
-
-}
-
-.form-text,
-.form-textarea {
-
-  @include fsa-space-between();
 
   &[disabled] {
     opacity: .5;

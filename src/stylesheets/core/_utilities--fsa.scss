@@ -185,17 +185,6 @@ $breakpoints: (
 }
 
 // -----------------------------------------------------------------------------
-// Space between form elements
-@mixin fsa-space-between() {
-  & + .fsa-select,
-  & + .form-text,
-  & + .fsa-btn {
-    margin-left: $form-between-space;
-  }
-}
-
-
-// -----------------------------------------------------------------------------
 // Font Smoothing
 @mixin font-smoothing($value: on) {
   @if $value == on {
@@ -205,4 +194,38 @@ $breakpoints: (
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: auto;
   }
+}
+
+// -----------------------------------------------------------------------------
+// Space between form elements
+@mixin fsa-space-between() {
+  // scss-lint:disable UnnecessaryParentReference
+  & + .fsa-select,
+  & + .form-text,
+  & + .fsa-btn {
+    margin-left: $form-between-space;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Shared properties between select and input text elements
+@mixin fsa-shared-form-properties() {
+
+  @include fsa-space-between();
+
+  appearance: none;
+  display: inline-block;
+  height: $button-height;
+  border: 1px solid $form-outline-color;
+  max-width: 100%;
+  margin: 0;
+  border-radius: $form-border-radius;
+  box-shadow: none;
+  font-family: $form-font;
+  font-size: $form-text-size;
+  color: $form-text-color;
+  line-height: 1;
+  background-color: $color-white;
+
+
 }
