@@ -18,12 +18,11 @@
   border: 1px solid $form-outline-color;
   // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
   padding:
-    ($form-padding)
+    ($form-padding - 2px) // to achieve vertical alignment
     ($form-padding * 4) // to prevent text beneath arrow
     ($form-padding - 1px) // to achieve vertical alignment
     ($form-padding)
   ;
-  *padding-right: $form-padding;
   margin: 0;
   background-color: $white;
   color: $form-text-color;
@@ -32,10 +31,20 @@
   font-family: $form-font;
   font-size: $form-text-size;
   max-width: 100%;
+  text-overflow: ellipsis;
 
   vertical-align: middle;
   position: relative;
   top: -1px;
+
+  @supports (-webkit-appearance: none) {
+    /* Webkit only */
+    // yep, a SINGLE pixel bugged me enough to do this
+    padding-top: $form-padding - 1px;
+  }
+
+  // @media screen and (-webkit-min-device-pixel-ratio: 0) {
+  // }
 }
 
 .fsa-select {
@@ -84,4 +93,10 @@
   }
 
 
+}
+
+// scss-lint:disable all
+_:-ms-input-placeholder, :root .fsa-select {
+  // IE doesn't like the extra padding on right.
+  padding-right: $form-padding / 2;
 }
