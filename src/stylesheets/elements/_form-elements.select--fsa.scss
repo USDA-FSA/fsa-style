@@ -86,13 +86,18 @@
   }
 
   &--small {
-    outline: 2px dotted green;
-    outline-offset: 5px;
+    height: $button-height--sm;
+    padding-top: $size-small - 1px;
+    padding-bottom: $size-small + 1px;
+    font-size: $font-size-1; // no we're not using mixin cuz we don't want its line-height
   }
 
   &--large {
-    outline: 2px dotted orange;
-    outline-offset: 5px;
+    height: $button-height--lg;
+    padding-top: ($button-padding * 2) - 3px;
+    padding-bottom: ($button-padding * 2) - 3px;
+    font-size: $font-size-6; // no we're not using mixin cuz we don't want its line-height
+
   }
 
 }
