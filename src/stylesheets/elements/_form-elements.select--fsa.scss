@@ -19,9 +19,11 @@
   // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
   padding:
     ($form-padding)
-    ($form-padding)
+    ($form-padding * 4) // to prevent text beneath arrow
     ($form-padding - 1px) // to achieve vertical alignment
+    ($form-padding)
   ;
+  *padding-right: $form-padding;
   margin: 0;
   background-color: $white;
   color: $form-text-color;
@@ -30,6 +32,10 @@
   font-family: $form-font;
   font-size: $form-text-size;
   max-width: 100%;
+
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
 }
 
 .fsa-select {
@@ -52,5 +58,30 @@
     background-color: $form-disabled-bg-color;
     cursor: not-allowed;
   }
+
+  &--error {
+
+    border-color: $form-error-color;
+    box-shadow: 0 0 0 1px $form-error-color inset;
+    background-color: $form-error-color-bg;
+
+    @include placeholder {
+      color: shade($form-placeholder-color, 20%);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px $form-error-color-focus inset;
+      border-color: transparent;
+    }
+
+  }
+
+  &::-moz-focus-inner,
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+    outline: 1px solid red;
+  }
+
 
 }
