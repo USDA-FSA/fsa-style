@@ -185,6 +185,17 @@ $breakpoints: (
 }
 
 // -----------------------------------------------------------------------------
+// Space between form elements
+@mixin fsa-space-between() {
+  & + .fsa-select,
+  & + .form-text,
+  & + .fsa-btn {
+    margin-left: $form-between-space;
+  }
+}
+
+
+// -----------------------------------------------------------------------------
 // Font Smoothing
 @mixin font-smoothing($value: on) {
   @if $value == on {

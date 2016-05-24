@@ -36,6 +36,8 @@ $button-alt-border-width : 2px;
 
 .fsa-btn {
 
+  @include fsa-space-between();
+
   // -------------------------------------------------------------------------
   // reset
   @include font-smoothing(on);
@@ -91,7 +93,6 @@ $button-alt-border-width : 2px;
   &:focus:not([disabled]),
   &:active:not([disabled]) {
     color: $button-text;
-    outline: 0;
     background-color: $button-default-active;
     text-decoration: none;
     box-shadow: none;
@@ -116,7 +117,7 @@ $button-alt-border-width : 2px;
 
     &:focus,
     &:active {
-      outline: 0;
+      // outline: 0;
     }
 
     &:hover {
@@ -192,7 +193,6 @@ $button-alt-border-width : 2px;
     &:focus:not([disabled]),
     &:active:not([disabled]) {
       color: $button-alt-hover;
-      outline: 0;
       background-color: $button-alt-active;
       box-shadow: none;
     }

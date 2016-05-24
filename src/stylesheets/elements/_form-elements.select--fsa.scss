@@ -1,9 +1,8 @@
 ////////////////////////////////////////////////////////////////////////
 // Select
 
-@mixin fsa-selectfooyeahwhoopdeedooyoubetterfixthis {
-  -moz-appearance: none;
-  -webkit-appearance: none;
+@mixin fsa-select-starter-styles {
+
   appearance: none;
   background-color: $color-white;
   background-image: url('../img/arrow-down.png');
@@ -11,11 +10,14 @@
   background-position: right 1.3rem center;
   background-repeat: no-repeat;
   background-size: 1.3rem;
+
+  display: inline-block;
   height: $button-height;
+  border: 1px solid $form-outline-color;
+  max-width: 100%;
+  margin: 0;
   border-radius: $form-border-radius;
   box-shadow: none;
-  appearance: none;
-  border: 1px solid $form-outline-color;
   // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
   padding:
     ($form-padding - 2px) // to achieve vertical alignment
@@ -23,14 +25,11 @@
     ($form-padding - 1px) // to achieve vertical alignment
     ($form-padding)
   ;
-  margin: 0;
-  background-color: $white;
-  color: $form-text-color;
-  display: inline-block;;
-  line-height: 1;
+
   font-family: $form-font;
   font-size: $form-text-size;
-  max-width: 100%;
+  color: $form-text-color;
+  line-height: 1;
   text-overflow: ellipsis;
 
   vertical-align: middle;
@@ -43,23 +42,26 @@
     padding-top: $form-padding - 1px;
   }
 
-  // @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  // }
-}
-
-.fsa-select {
-
-  @include fsa-selectfooyeahwhoopdeedooyoubetterfixthis();
-
-  &--block {
-    display: block;
-    width: 100%;
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    // IE doesn't like the extra padding on right.
+    padding-right: $form-padding / 2;
   }
 
   &:focus {
     border-color: $form-focus-color;
     box-shadow: 0 0 0 1px $form-focus-color inset;
-    outline: 0;
+  }
+
+}
+
+.fsa-select {
+
+  @include fsa-select-starter-styles();
+  @include fsa-space-between();
+
+  &--block {
+    display: block;
+    width: 100%;
   }
 
   &[disabled] {
@@ -86,24 +88,39 @@
   }
 
   &--small {
+
     height: $button-height--sm;
-    padding-top: $size-small - 1px;
+    padding-top: $size-small - 4px;
     padding-bottom: $size-small + 1px;
     font-size: $font-size-1; // no we're not using mixin cuz we don't want its line-height
+
+    @supports (-webkit-appearance: none) {
+      padding-top: $form-padding - 1px;
+    }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      padding-top: $form-padding - 1px;
+    }
+
   }
 
   &--large {
+
     height: $button-height--lg;
-    padding-top: ($button-padding * 2) - 3px;
+    padding-top: ($button-padding * 2) - 9px;
     padding-bottom: ($button-padding * 2) - 3px;
     font-size: $font-size-6; // no we're not using mixin cuz we don't want its line-height
+    top: -3px;
+
+    @supports (-webkit-appearance: none) {
+      padding-top: ($button-padding * 2) - 4px;
+    }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      padding-top: ($button-padding * 2) - 4px;
+    }
 
   }
 
-}
 
-// scss-lint:disable all
-_:-ms-input-placeholder, :root .fsa-select {
-  // IE doesn't like the extra padding on right.
-  padding-right: $form-padding / 2;
 }
