@@ -48,6 +48,14 @@ $button-alt-border-width : 2px;
   cursor: pointer;
   text-align: center;
   line-height: $button-line-height;
+  position: relative;
+  top: 1px;
+
+  @supports (-webkit-appearance:none) {
+    // Webkit only.
+    // yes, a single pixel. sorry, not sorry
+    top: 0;
+  }
 
   // -------------------------------------------------------------------------
   // normalize
