@@ -85,13 +85,15 @@
 
   }
 
-  &::-moz-focus-inner,
-  &::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-    outline: 1px solid red;
+  &--small {
+    outline: 2px dotted green;
+    outline-offset: 5px;
   }
 
+  &--large {
+    outline: 2px dotted orange;
+    outline-offset: 5px;
+  }
 
 }
 
