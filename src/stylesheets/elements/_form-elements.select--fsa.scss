@@ -52,6 +52,25 @@
     cursor: not-allowed;
   }
 
+  &[multiple] {
+
+    // we actually don't want this to be used, but this style supports
+    // it just in case. designers and developers should be
+    // encouraged to use alternate solution, e.g. multiple checkboxes
+    height: auto;
+    background-image: none;
+    padding: 0;
+
+    option {
+      padding: ($form-padding / 2) $form-padding;
+      &:hover {
+        cursor: pointer;
+        background-color: $color-fsa-tertiary-lightest;
+      }
+    }
+
+  }
+
   &--error {
 
     border-color: $form-error-color;
@@ -103,6 +122,5 @@
     }
 
   }
-
 
 }
