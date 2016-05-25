@@ -292,27 +292,15 @@
       </div>
       <h3 class="docs__bd docs__figure">Unordered List</h3>
       <div class="docs__bd">
-        <h4 class="docs__sub_style">List - Bullet</h4>
-        <ul class="list--bullet">
+        <ul>
           <li>List item one</li>
           <li>List item two</li>
           <li>List item three</li>
         </ul>
-        <h4 class="docs__sub_style">List - Drawer</h4>
-        <ul class="list--drawer">
-          <li>List item One</li>
-          <li>List item Two</li>
-          <li class="list--drawer--is-expanded">
-            List item Three
-            <div class="list--drawer__contents">
-              Drawer contents
-            </div>
-          </li>
-        </ul>
       </div>
       <h3 class="docs__bd docs__figure">Ordered List</h3>
       <div class="docs__bd">
-        <ol class="list--ordered">
+        <ol>
           <li>List item one</li>
           <li>List item two</li>
           <li>List item three</li>
@@ -320,7 +308,16 @@
       </div>
       <h3 class="docs__bd docs__figure">Inline List</h3>
       <div class="docs__bd">
-        <ul class="list--inline">
+        <ul class="fsa-inline-list">
+          <li>List item one</li>
+          <li>List item two</li>
+          <li>List item three</li>
+        </ul>
+      </div>
+      <h3 class="docs__bd docs__figure">Unstyled List</h3>
+      <div class="docs__bd">
+        <p>Use SASS Mixins <code>reset-ul()</code> and <code>reset-li()</code> where possible instead of <code>class="fsa-unstyled-list"</code></p>
+        <ul class="fsa-unstyled-list">
           <li>List item one</li>
           <li>List item two</li>
           <li>List item three</li>
@@ -487,139 +484,139 @@
         <h3 class="docs__bd docs__figure">Input text - Default</h3>
         <h4 class="docs__sub_style">Default</h4>
         <p>
-          <input class="form-text" type="text" name="some_name" value="" placeholder="Placeholder">
+          <input class="fsa-text" type="text" name="some_name" value="" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text" type="text" name="some_name" value="Value" placeholder="Placeholder">
+          <input class="fsa-text" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text" type="password" name="some_name" value="pa55w0rd" placeholder="Placeholder">
+          <input class="fsa-text" type="password" name="some_name" value="pa55w0rd" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text" disabled="" type="text" name="some_name" value="disabled">
+          <input class="fsa-text" disabled="" type="text" name="some_name" value="disabled">
         </p>
         <p>
-          <input class="form-text" readonly="" type="text" name="some_name" value="readonly">
+          <input class="fsa-text" readonly="" type="text" name="some_name" value="readonly">
         </p>
         <h4 class="docs__sub_style">Block (full-width)</h4>
         <p>
-          <input class="form-text form-text--block" type="text" name="some_name" value="" placeholder="Placeholder">
+          <input class="fsa-text fsa-text--block" type="text" name="some_name" value="" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--block" type="text" name="some_name" value="Value" placeholder="Placeholder">
+          <input class="fsa-text fsa-text--block" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--block" type="password" name="some_name" value="pa55w0rd" placeholder="Placeholder">
+          <input class="fsa-text fsa-text--block" type="password" name="some_name" value="pa55w0rd" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--block" disabled="" type="text" name="some_name" value="disabled">
+          <input class="fsa-text fsa-text--block" disabled="" type="text" name="some_name" value="disabled">
         </p>
         <p>
-          <input class="form-text form-text--block" readonly="" type="text" name="some_name" value="readonly">
+          <input class="fsa-text fsa-text--block" readonly="" type="text" name="some_name" value="readonly">
         </p>
         <h4 class="docs__sub_style">Error</h4>
         <p>
-          <input class="form-text form-text--error" type="text" name="some_name" value="Value" placeholder="Placeholder">
+          <input class="fsa-text fsa-text--error" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--error" type="password" name="some_name" value="pa55w0rd" placeholder="Placeholder">
+          <input class="fsa-text fsa-text--error" type="password" name="some_name" value="pa55w0rd" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--error form-text--block" type="text" name="some_name" value="Value" placeholder="Placeholder">
+          <input class="fsa-text fsa-text--error fsa-text--block" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
 
         <h3 class="docs__bd docs__figure">Input text - Small</h3>
         <h4 class="docs__sub_style">Default</h4>
         <p>
-          <input class="form-text form-text--small" type="text" name="some_name" value="" placeholder="Placeholder">
+          <input class="fsa-text fsa-text--small" type="text" name="some_name" value="" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--small" type="text" name="some_name" value="Value" placeholder="Placeholder">
+          <input class="fsa-text fsa-text--small" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--small" type="password" name="some_name" value="pa55w0rd" placeholder="Placeholder">
+          <input class="fsa-text fsa-text--small" type="password" name="some_name" value="pa55w0rd" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--small" disabled="" type="text" name="some_name" value="disabled">
+          <input class="fsa-text fsa-text--small" disabled="" type="text" name="some_name" value="disabled">
         </p>
         <h4 class="docs__sub_style">Block (full-width)</h4>
         <p>
-          <input class="form-text form-text--small form-text--block" type="text" name="some_name" value="" placeholder="Placeholder">
+          <input class="fsa-text fsa-text--small fsa-text--block" type="text" name="some_name" value="" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--small form-text--block" type="text" name="some_name" value="Value" placeholder="Placeholder">
+          <input class="fsa-text fsa-text--small fsa-text--block" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--small form-text--block" type="password" name="some_name" value="pa55w0rd" placeholder="placeholder">
+          <input class="fsa-text fsa-text--small fsa-text--block" type="password" name="some_name" value="pa55w0rd" placeholder="placeholder">
         </p>
         <p>
-          <input class="form-text form-text--small form-text--block" disabled="" type="text" name="some_name" value="disabled">
+          <input class="fsa-text fsa-text--small fsa-text--block" disabled="" type="text" name="some_name" value="disabled">
         </p>
         <h4 class="docs__sub_style">Error</h4>
         <p>
-          <input class="form-text form-text--small form-text--error" type="text" name="some_name" value="Value" placeholder="Placeholder">
+          <input class="fsa-text fsa-text--small fsa-text--error" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--small form-text--error" type="password" name="some_name" value="pa55w0rd" placeholder="Placeholder">
+          <input class="fsa-text fsa-text--small fsa-text--error" type="password" name="some_name" value="pa55w0rd" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--small form-text--error form-text--block" type="text" name="some_name" value="Value" placeholder="Placeholder">
+          <input class="fsa-text fsa-text--small fsa-text--error fsa-text--block" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
 
         <h3 class="docs__bd docs__figure">Input text - Large</h3>
         <h4 class="docs__sub_style">Default</h4>
         <p>
-          <input class="form-text form-text--large" type="text" name="some_name" value="" placeholder="Placeholder">
+          <input class="fsa-text fsa-text--large" type="text" name="some_name" value="" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--large" type="text" name="some_name" value="Value" placeholder="Placeholder">
+          <input class="fsa-text fsa-text--large" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--large" type="password" name="some_name" value="pa55w0rd" placeholder="Placeholder">
+          <input class="fsa-text fsa-text--large" type="password" name="some_name" value="pa55w0rd" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--large" disabled="" type="text" name="some_name" value="disabled">
+          <input class="fsa-text fsa-text--large" disabled="" type="text" name="some_name" value="disabled">
         </p>
         <h4 class="docs__sub_style">Block (full-width)</h4>
         <p>
-          <input class="form-text form-text--large form-text--block" type="text" name="some_name" value="" placeholder="Placeholder">
+          <input class="fsa-text fsa-text--large fsa-text--block" type="text" name="some_name" value="" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--large form-text--block" type="text" name="some_name" value="Value" placeholder="Placeholder">
+          <input class="fsa-text fsa-text--large fsa-text--block" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--large form-text--block" type="password" name="some_name" value="pa55w0rd" placeholder="Placeholder">
+          <input class="fsa-text fsa-text--large fsa-text--block" type="password" name="some_name" value="pa55w0rd" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--large form-text--block" disabled="" type="text" name="some_name" value="disabled">
+          <input class="fsa-text fsa-text--large fsa-text--block" disabled="" type="text" name="some_name" value="disabled">
         </p>
         <h4 class="docs__sub_style">Error</h4>
         <p>
-          <input class="form-text form-text--large form-text--error" type="text" name="some_name" value="Value" placeholder="Placeholder">
+          <input class="fsa-text fsa-text--large fsa-text--error" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--large form-text--error" type="password" name="some_name" value="pa55w0rd" placeholder="Placeholder">
+          <input class="fsa-text fsa-text--large fsa-text--error" type="password" name="some_name" value="pa55w0rd" placeholder="Placeholder">
         </p>
         <p>
-          <input class="form-text form-text--large form-text--error form-text--block" type="text" name="some_name" value="Value" placeholder="Placeholder">
+          <input class="fsa-text fsa-text--large fsa-text--error fsa-text--block" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
 
         <h3 class="docs__bd docs__figure">Textarea</h3>
         <h4 class="docs__sub_style">Default</h4>
         <p>
-          <textarea class="form-textarea" name="Name" placeholder="Placeholder">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+          <textarea class="fsa-textarea" name="Name" placeholder="Placeholder">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
         </p>
         <h4 class="docs__sub_style">Disabled</h4>
         <p>
-          <textarea class="form-textarea" disabled="" name="Name" placeholder="">disabled textarea</textarea>
+          <textarea class="fsa-textarea" disabled="" name="Name" placeholder="">disabled textarea</textarea>
         </p>
         <h4 class="docs__sub_style">Readonly</h4>
         <p>
-          <textarea class="form-textarea" readonly="" name="Name" placeholder="">readonly textarea</textarea>
+          <textarea class="fsa-textarea" readonly="" name="Name" placeholder="">readonly textarea</textarea>
         </p>
         <h4 class="docs__sub_style">Error</h4>
         <p>
-          <textarea class="form-textarea form-textarea--error" name="Name" placeholder="">error textarea</textarea>
+          <textarea class="fsa-textarea fsa-textarea--error" name="Name" placeholder="">error textarea</textarea>
         </p>
         <h3 class="docs__bd docs__figure">Checkbox</h3>
         <p>

@@ -161,7 +161,7 @@ $breakpoints: (
 }
 
 // -----------------------------------------------------------------------------
-// Reset <ul> (note, you'll likely want reset-li() too
+// Reset <ul> (note, you'll likely want to reset-li() too
 @mixin reset-ul() {
   display: block;
   list-style-type: none;
@@ -170,8 +170,9 @@ $breakpoints: (
 }
 
 // -----------------------------------------------------------------------------
-// Reset <ul> (note, you'll likely want reset-li() too
+// Reset <li>
 @mixin reset-li() {
+
   display: list-item;
   margin: 0;
 
@@ -182,6 +183,7 @@ $breakpoints: (
   &:after {
     display: none;
   }
+
 }
 
 // -----------------------------------------------------------------------------

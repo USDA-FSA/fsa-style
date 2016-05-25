@@ -1,0 +1,43 @@
+////////////////////////////////////////////////////////////////////////
+// Lists
+
+.fsa-unstyled-list {
+  // scss-lint:disable PlaceholderInExtend
+  @extend .usa-unstyled-list;
+}
+
+.fsa-inline-list {
+  // scss-lint:disable PlaceholderInExtend
+  @extend .usa-unstyled-list;
+
+  > li {
+
+    display: inline-block;
+    margin-right: $size-default;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+  }
+
+}
+
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+dl {
+  margin: 0 0 1em;
+}
+
+dt {
+  font-weight: $font-bold;
+  margin-bottom: 0;
+  dd + & {
+    margin-top: .75em;
+  }
+}
