@@ -1,6 +1,9 @@
 /* ---------------------------------------------------------------------------*/
 /* BASE: BUTTONS                                                              */
 
+$button-height            : 39px;
+$button-height--sm        : 30px;
+$button-height--lg        : 62px;
 $button-padding           : $size-default;
 $button-text              : $color-fsa-white;
 $button-line-height       : 1;
@@ -27,15 +30,18 @@ $button-secondary-active : shade($button-secondary, 45%);
 $button-alt              : $color-fsa-white;
 $button-alt-text         : $color-fsa-secondary;
 $button-alt-hover        : shade($button-alt, 5%);
-$button-alt-active       : $color-fsa-white;
+$button-alt-active       : $color-fsa-secondary;
 $button-alt-border       : $color-fsa-secondary;
 $button-alt-border-width : 2px;
 
-.btn {
+.fsa-btn {
+
+  @include fsa-space-between();
 
   // -------------------------------------------------------------------------
   // reset
   @include font-smoothing(on);
+  height: $button-height;
   user-select: none;
   padding: 0;
   margin: 0;
@@ -44,6 +50,14 @@ $button-alt-border-width : 2px;
   cursor: pointer;
   text-align: center;
   line-height: $button-line-height;
+  position: relative;
+  top: 1px;
+
+  @supports (-webkit-appearance:none) {
+    // Webkit only.
+    // yes, a single pixel. sorry, not sorry
+    top: 0;
+  }
 
   // -------------------------------------------------------------------------
   // normalize
@@ -58,6 +72,7 @@ $button-alt-border-width : 2px;
 
   // -------------------------------------------------------------------------
   // default
+
   background-color: $button-default;
   color: $button-default-text;
 
@@ -70,15 +85,14 @@ $button-alt-border-width : 2px;
     color: $button-default-text;
   }
 
-  &:hover:not(.btn--disabled) {
+  &:hover:not([disabled]) {
     color: $button-text;
     background-color: $button-default-hover;
   }
 
-  &:focus:not(.btn--disabled),
-  &:active:not(.btn--disabled) {
+  &:focus:not([disabled]),
+  &:active:not([disabled]) {
     color: $button-text;
-    outline: 0;
     background-color: $button-default-active;
     text-decoration: none;
     box-shadow: none;
@@ -86,6 +100,32 @@ $button-alt-border-width : 2px;
 
   // -------------------------------------------------------------------------
   // variations, modifiers
+
+  &[disabled] {
+
+    $color-transparentized: transparentize($button-default-text, .35);
+
+    opacity: .4;
+    color: $color-transparentized;
+    cursor: not-allowed;
+
+    color: $color-transparentized;
+
+    &:visited {
+      color: $color-transparentized;
+    }
+
+    &:focus,
+    &:active {
+      // outline: 0;
+    }
+
+    &:hover {
+      cursor: not-allowed;
+      color: $color-transparentized;
+    }
+
+  }
 
   &--primary {
 
@@ -101,12 +141,12 @@ $button-alt-border-width : 2px;
       color: $button-primary-text;
     }
 
-    &:hover:not(.btn--disabled) {
+    &:hover:not([disabled]) {
       background-color: $button-primary-hover;
     }
 
-    &:focus:not(.btn--disabled),
-    &:active:not(.btn--disabled) {
+    &:focus:not([disabled]),
+    &:active:not([disabled]) {
       color: $button-primary-text;
       background-color: $button-primary-active;
     }
@@ -118,13 +158,13 @@ $button-alt-border-width : 2px;
     color: $button-secondary-text;
     background-color: $button-secondary;
 
-    &:hover:not(.btn--disabled) {
+    &:hover:not([disabled]) {
       color: $button-secondary-text;
       background-color: $button-secondary-hover;
     }
 
-    &:focus:not(.btn--disabled),
-    &:active:not(.btn--disabled) {
+    &:focus:not([disabled]),
+    &:active:not([disabled]) {
       color: $button-secondary-text;
       background-color: $button-secondary-active;
     }
@@ -145,26 +185,25 @@ $button-alt-border-width : 2px;
       color: inherit;
     }
 
-    &:hover:not(.btn--disabled) {
+    &:hover:not([disabled]) {
       color: $button-alt-text;
       background-color: $button-alt-hover;
     }
 
-    &:focus:not(.btn--disabled),
-    &:active:not(.btn--disabled) {
-      color: $button-alt-text;
-      outline: 0;
+    &:focus:not([disabled]),
+    &:active:not([disabled]) {
+      color: $button-alt-hover;
       background-color: $button-alt-active;
-      box-shadow: 0 0 0 ($button-alt-border-width + 1px) shade($button-alt-text,20%) inset;
+      box-shadow: none;
     }
 
-    &.btn--disabled {
+    // scss-lint:disable SelectorFormat
+    &[disabled] {
       color: $button-alt-text;
       &:hover {
         color: $button-alt-text;
       }
     }
-
 
   }
 
@@ -173,28 +212,10 @@ $button-alt-border-width : 2px;
     display: block;
   }
 
-  &--disabled {
-
-    $color-transparentized: transparentize($button-default-text, .5);
-
-    opacity: .4;
-    color: $color-transparentized;
-    cursor: not-allowed;
-
-    &:focus,
-    &:active {
-      outline: 0;
-    }
-
-    &:hover {
-      cursor: not-allowed;
-      color: $color-transparentized;
-    }
-
-  }
-
   &--small {
 
+    height: $button-height--sm;
+    // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon Shorthand
     padding:
       ($size-small)
       ($size-default)
@@ -207,6 +228,9 @@ $button-alt-border-width : 2px;
 
   &--large {
 
+    height: $button-height--lg;
+
+    // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon
     padding:
       (($button-padding * 2) - 3px)
       ($size-large)
