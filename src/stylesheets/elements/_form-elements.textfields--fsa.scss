@@ -28,6 +28,12 @@
     cursor: not-allowed;
   }
 
+  &[readonly] {
+    // opacity: .5;
+    background-color: $color-fsa-site-bg;
+    cursor: default;
+  }
+
   &--error {
 
     border-color: $form-error-color;
