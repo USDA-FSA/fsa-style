@@ -1,0 +1,58 @@
+////////////////////////////////////////////////////////////////////////
+// Table
+
+$table-bgc:          $color-fsa-white;
+$table-header-bgc:   $color-fsa-tertiary-lightest;
+$table-border-color: $table-header-bgc;
+$table-padding:      1.5rem;
+
+.fsa-table {
+  border-spacing: 0;
+  margin: 2em 0;
+  min-width: 100%;
+  background-color: $table-bgc;
+
+  th,
+  td {
+    text-align: left;
+    border: 1px solid $table-border-color;
+    padding: $table-padding;
+    vertical-align: top;
+  }
+
+  thead {
+    tr {
+      background-color: $table-header-bgc;
+    }
+
+    th {
+      text-align: left;
+    }
+  }
+
+  tbody {
+    th {
+      font-weight: $font-normal;
+    }
+  }
+
+}
+
+.fsa-table--borderless {
+  background-color: transparent;
+  thead {
+    tr {
+      background-color: transparent;
+
+      th {
+        border-top: 0;
+      }
+    }
+  }
+
+  th,
+  td {
+    border-left: 0;
+    border-right: 0;
+  }
+}
