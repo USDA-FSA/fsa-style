@@ -7,6 +7,7 @@ $table-border-color: $table-header-bgc;
 $table-padding:      1.5rem;
 
 .fsa-table {
+
   border-spacing: 0;
   margin: 2em 0;
   min-width: 100%;
@@ -14,10 +15,13 @@ $table-padding:      1.5rem;
 
   th,
   td {
+
     text-align: left;
     border: 1px solid $table-border-color;
     padding: $table-padding;
     vertical-align: top;
+
+
   }
 
   thead {
@@ -36,23 +40,25 @@ $table-padding:      1.5rem;
     }
   }
 
-}
+  &--borderless {
 
-.fsa-table--borderless {
-  background-color: transparent;
-  thead {
-    tr {
-      background-color: transparent;
+    background-color: transparent;
 
+    th,
+    td {
+      border-left: 0;
+      border-right: 0;
+    }
+
+    thead {
+      tr {
+        background-color: transparent;
+      }
       th {
         border-top: 0;
       }
     }
+
   }
 
-  th,
-  td {
-    border-left: 0;
-    border-right: 0;
-  }
 }
