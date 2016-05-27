@@ -382,6 +382,30 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   }
 
   // -----------------------------------------------------------------------------
+  // Sizing
+
+  &__size {
+
+    &__u {
+
+      width: $size-base;
+      height: $size-base;
+      display: block;
+      background-color: black;
+
+      // scss-lint:disable all
+      &--base        { width: $size-base;        height: $size-base;        }
+      &--small       { width: $size-small;       height: $size-small;       }
+      &--default     { width: $size-default;     height: $size-default;     }
+      &--medium      { width: $size-medium;      height: $size-medium;      }
+      &--large       { width: $size-large;       height: $size-large;       }
+      &--extra-large { width: $size-extra-large; height: $size-extra-large; }
+
+    }
+
+  }
+
+  // -----------------------------------------------------------------------------
   // Buttons
 
   &__buttons {
