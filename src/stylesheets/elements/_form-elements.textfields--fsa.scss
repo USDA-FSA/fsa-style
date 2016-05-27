@@ -1,8 +1,8 @@
 ////////////////////////////////////////////////////////////////////////
 // Text Fields
 
-.fsa-text,
-.fsa-textarea {
+.fsa-input,
+.fsa-asdftextarea {
 
   @include fsa-shared-form-properties();
 
@@ -69,7 +69,7 @@
 
 }
 
-.fsa-textarea {
+.fsa-asdftextarea {
   min-height: 15rem;
   display: block;
   max-width: none;
