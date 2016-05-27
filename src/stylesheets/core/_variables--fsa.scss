@@ -62,7 +62,7 @@ $color-fsa-red-dark: $color-secondary-darkest;
 
 
 // Semantic
-$color-title: $color-primary-darker;
+$color-title: $color-fsa-secondary;
 $color-fsa-site-bg: tint($color-fsa-secondary, 97%); // Super light gray bg, but with a slight tint of blue
 
 // Fixes bug in USWDS
