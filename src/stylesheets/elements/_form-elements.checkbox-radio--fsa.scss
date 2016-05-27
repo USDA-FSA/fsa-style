@@ -28,6 +28,21 @@
   display: inline-block;
 }
 
+.fsa-checkbox + :not(label),
+.fsa-radio + :not(label) {
+  &:before {
+    display: block;
+    background-color: $color-fsa-tertiary-lighter;
+    padding: $size-default;
+    margin-bottom: 1em;
+    content: 'CSS ERROR: checkbox or radio requires a <label> element immediately following it. Refer to FSA Design System for guidance. ';
+    color: orangered;
+    border: 4px solid orangered;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
 .fsa-radio + label {
   $indent-amount: 1.6em;
   text-indent: -$indent-amount;
