@@ -107,6 +107,8 @@ th {
 
     @include breakpoint(M, down) {
 
+      background-color: $table-bgc;
+
       border-top: 1px solid $table-border-color;
 
       thead {
