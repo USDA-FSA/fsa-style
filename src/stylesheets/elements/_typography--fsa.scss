@@ -12,23 +12,65 @@ textarea {
 }
 
 h1,
+.h1 {
+  @include h1();
+}
+
+h2,
+.h2 {
+  @include h2();
+}
+
+h3,
+.h3 {
+  @include h3();
+}
+
+h4,
+.h4 {
+  @include h4();
+}
+
+h5,
+.h5 {
+  @include h5();
+}
+
+h6,
+.h6 {
+  @include h6();
+}
+
+
+h1,
 h2,
 h3,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.h1,
+.h2,
+.h3,
+.h3,
+.h4,
+.h5,
+.h6 {
   color: $color-title;
   font-weight: $font-light;
 }
 
 h3,
 h4,
-h5 {
+h5,
+.h3,
+.h4,
+.h5 {
   font-weight: $font-normal;
 }
 
-h6 {
+h6,
+.h6 {
   font-weight: $font-bold;
   margin-bottom: 0;
 }
