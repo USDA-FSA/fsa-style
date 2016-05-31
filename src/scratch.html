@@ -23,7 +23,18 @@
     <section class="docs__section">
       <div class="docs__bd">
           <p><a href="index.html">&larr; Visual Index</a></p>
-          <h1 class="docs__figure-group">Asdf</h1>
+          <p>
+            <button type="button" data-behavior="demo-ShowIndeterminate">Show indeterminate</button>
+          </p>
+          <p>
+            <input class="fsa-checkbox" type="checkbox" id="checkie">
+            <label for="checkie" id="checkie-label">label</label>
+          </p>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.min.js"></script>
+          <script>
+            $('#checkie').addClass('fsa-checkbox--indeterminate');
+          </script>
+
           <p>
             <input class="fsa-input fsa-input--small" type="text" name="name" value="">
             <select class="fsa-select fsa-select--small" name="">
