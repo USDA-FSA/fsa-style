@@ -24,15 +24,20 @@
       <div class="docs__bd">
           <p><a href="index.html">&larr; Visual Index</a></p>
           <p>
-            <button type="button" data-behavior="demo-ShowIndeterminate">Show indeterminate</button>
+            <input class="fsa-checkbox" type="checkbox" id="checkie">
+            <label for="checkie">Indeterminate</label>
           </p>
           <p>
-            <input class="fsa-checkbox" type="checkbox" id="checkie">
-            <label for="checkie" id="checkie-label">label</label>
+            <input class="fsa-checkbox" type="checkbox" id="qwerqwer" checked="">
+            <label for="qwerqwer">Checked</label>
+          </p>
+          <p>
+            <input class="fsa-checkbox" type="checkbox" id="asdfasdfwqwer">
+            <label for="asdfasdfwqwer">Unchecked</label>
           </p>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.min.js"></script>
           <script>
-            $('#checkie').addClass('fsa-checkbox--indeterminate');
+            $('#checkie').prop("indeterminate", true);
           </script>
 
           <p>

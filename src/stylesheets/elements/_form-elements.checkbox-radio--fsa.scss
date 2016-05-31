@@ -72,6 +72,7 @@
   border-radius: 100%;
 }
 
+.fsa-checkbox:indeterminate + label::before,
 .fsa-checkbox:checked + label::before,
 .fsa-radio:checked + label::before {
   background-color: $form-checkbox-radio-fill;
@@ -99,6 +100,13 @@
 .fsa-checkbox:checked + label::before {
   background-image: url('../img/correct8.png');
   background-image: url('../img/correct8.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.fsa-checkbox:indeterminate + label::before {
+  background-image: url('../img/dash.png');
+  background-image: url('../img/dash.svg');
   background-position: 50%;
   background-repeat: no-repeat;
 }
