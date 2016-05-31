@@ -23,7 +23,23 @@
     <section class="docs__section">
       <div class="docs__bd">
           <p><a href="index.html">&larr; Visual Index</a></p>
-          <h1 class="docs__figure-group">Asdf</h1>
+          <p>
+            <input class="fsa-checkbox" type="checkbox" id="checkie">
+            <label for="checkie">Indeterminate</label>
+          </p>
+          <p>
+            <input class="fsa-checkbox" type="checkbox" id="qwerqwer" checked="">
+            <label for="qwerqwer">Checked</label>
+          </p>
+          <p>
+            <input class="fsa-checkbox" type="checkbox" id="asdfasdfwqwer">
+            <label for="asdfasdfwqwer">Unchecked</label>
+          </p>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.min.js"></script>
+          <script>
+            $('#checkie').prop("indeterminate", true);
+          </script>
+
           <p>
             <input class="fsa-input fsa-input--small" type="text" name="name" value="">
             <select class="fsa-select fsa-select--small" name="">
@@ -139,13 +155,13 @@
           <h1 class="docs__figure-group" id="monospace">Monospace / Preformatted</h1>
           <p>Code block wrapped in "pre" and "code" tags</p>
           <pre><code>// Loop through Divs using Javascript.
-        var divs = document.querySelectorAll('div'), i;
+var divs = document.querySelectorAll('div'), i;
 
-        // A long comment consectetur adipisicing elit. Eum saepe soluta inventore, ex fuga qui sit veniam dolores ipsam! Consequatur fugit eum labore saepe, cumque quibusdam odit. Consequatur, corporis accusamus!
+// A long comment consectetur adipisicing elit. Eum saepe soluta inventore, ex fuga qui sit veniam dolores ipsam! Consequatur fugit eum labore saepe, cumque quibusdam odit. Consequatur, corporis accusamus!
 
-        for (i = 0; i < divs.length; ++i) {
-        divs[i].style.color = "green";
-        }</code></pre>
+for (i = 0; i < divs.length; ++i) {
+divs[i].style.color = "green";
+}</code></pre>
           <p>Monospace Text wrapped in "pre" tags</p>
           <pre><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p></pre>
 
