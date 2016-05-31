@@ -95,7 +95,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     margin-right: auto;
 
     @include breakpoint(XL) {
-      max-width: ($site-max-width + $size-medium);
+      max-width: ($site-max-width + 24px);
     }
 
 
@@ -159,7 +159,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   }
 
   &__main {
-    padding-top: 50px;
+    padding-top: 5rem;
   }
 
   // -----------------------------------------------------------------------------
@@ -184,8 +184,8 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
         linear-gradient(45deg, $bgc--tile 25%, transparent 25%, transparent 75%, $bgc--tile 75%, $bgc--tile),
         linear-gradient(45deg, $bgc--tile 25%, transparent 25%, transparent 75%, $bgc--tile 75%, $bgc--tile)
       ;
-      background-size: 20px 20px;
-      background-position: 0 0, 50px 50px;
+      background-size: 2rem 2rem;
+      background-position: 0 0, 5rem 5rem;
 
       @include breakpoint(M) {
         padding: $size-medium;
@@ -225,7 +225,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     }
 
     &__swatch {
-      height: 75px;
+      height: 7.5rem;
     }
 
     &__title {
@@ -351,7 +351,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       margin-right: $size-default;
 
       @include breakpoint(SM) {
-        font-size: 84px;
+        font-size: 8.4rem;
         text-align: center;
       }
 
@@ -379,6 +379,30 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+  }
+
+  // -----------------------------------------------------------------------------
+  // Sizing
+
+  &__size {
+
+    &__u {
+
+      width: $size-base;
+      height: $size-base;
+      display: block;
+      background-color: black;
+
+      // scss-lint:disable all
+      &--base        { width: $size-base;        height: $size-base;        }
+      &--small       { width: $size-small;       height: $size-small;       }
+      &--default     { width: $size-default;     height: $size-default;     }
+      &--medium      { width: $size-medium;      height: $size-medium;      }
+      &--large       { width: $size-large;       height: $size-large;       }
+      &--extra-large { width: $size-extra-large; height: $size-extra-large; }
+
+    }
+
   }
 
   // -----------------------------------------------------------------------------

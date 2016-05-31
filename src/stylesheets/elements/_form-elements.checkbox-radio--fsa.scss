@@ -38,7 +38,7 @@
     content: 'CSS ERROR: checkbox or radio requires a <label> element immediately following it. Refer to FSA Design System for guidance. ';
     color: orangered;
     border: 4px solid orangered;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: bold;
   }
 }
@@ -62,7 +62,7 @@
   text-indent: .15em;
   vertical-align: .2em;
   width: 1.8rem;
-  margin-left: 1px;
+  margin-left: .1rem;
 }
 
 .fsa-radio + label::before {
@@ -79,7 +79,7 @@
 }
 
 .fsa-radio:checked + label::before {
-  // scss-lint:disable TrailingWhitespace TrailingSemicolon SpaceAfterPropertyColon
+  // scss-lint:disable all
   box-shadow:
     0 0 0 2px $color-white,
     0 0 0 4px $form-checkbox-radio-fill
@@ -87,7 +87,13 @@
 }
 
 .fsa-radio:focus + label::before {
-  box-shadow: 0 0 0 2px $color-white, 0 0 0 4px $form-checkbox-radio-fill, 0 0 3px 4px $color-focus, 0 0 7px 4px $color-focus;
+  // scss-lint:disable all
+  box-shadow:
+    0 0 0 .2rem $color-white,
+    0 0 0 .4rem $form-checkbox-radio-fill,
+    0 0 .3rem .4rem $color-focus,
+    0 0 .7rem .4rem $color-focus
+  ;
 }
 
 .fsa-checkbox:checked + label::before {
@@ -116,12 +122,20 @@
 }
 
 .fsa-radio:disabled + label::before {
-  box-shadow: 0 0 0 2px $white, 0 0 0 3px $form-checkbox-radio-outline-color;
+  // scss-lint:disable all
+  box-shadow:
+    0 0 0 2px $white,
+    0 0 0 3px $form-checkbox-radio-outline-color
+  ;
 }
 
 .fsa-radio:disabled:checked + label::before {
   background-color: $form-checkbox-radio-fill;
-  box-shadow: 0 0 0 2px #fff, 0 0 0 4px $form-checkbox-radio-fill;
+  // scss-lint:disable all
+  box-shadow:
+    0 0 0 2px #fff,
+    0 0 0 4px $form-checkbox-radio-fill
+  ;
   opacity: .3;
 }
 
