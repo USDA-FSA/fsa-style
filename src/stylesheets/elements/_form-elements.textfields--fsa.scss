@@ -8,7 +8,7 @@
 
   // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
   padding:
-    ($form-padding - 1px) // to achieve vertical alignment
+    ($form-padding - .1rem) // to achieve vertical alignment
     ($form-padding)
     ($form-padding)
   ;
@@ -45,7 +45,7 @@
     }
 
     &:focus {
-      box-shadow: 0 0 0 2px $form-error-color-focus inset;
+      box-shadow: 0 0 0 .2rem $form-error-color-focus inset;
       border-color: transparent;
     }
 

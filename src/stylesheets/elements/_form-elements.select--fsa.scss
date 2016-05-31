@@ -13,9 +13,9 @@
 
   // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
   padding:
-    ($form-padding - 2px) // to achieve vertical alignment
+    ($form-padding - .2rem) // to achieve vertical alignment
     ($form-padding * 4) // to prevent text beneath arrow
-    ($form-padding - 1px) // to achieve vertical alignment
+    ($form-padding - .1rem) // to achieve vertical alignment
     ($form-padding)
   ;
 
@@ -23,12 +23,12 @@
 
   vertical-align: middle;
   position: relative;
-  top: -1px;
+  top: -.1rem;
 
   @supports (-webkit-appearance: none) {
     /* Webkit only */
     // yep, a SINGLE pixel bugged me enough to do this
-    padding-top: $form-padding - 1px;
+    padding-top: $form-padding - .1rem;
   }
 
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -82,7 +82,7 @@
     }
 
     &:focus {
-      box-shadow: 0 0 0 2px $form-error-color-focus inset;
+      box-shadow: 0 0 0 .2rem $form-error-color-focus inset;
       border-color: transparent;
     }
 
@@ -91,16 +91,16 @@
   &--small {
 
     height: $button-height--sm;
-    padding-top: $size-small - 4px;
-    padding-bottom: $size-small + 1px;
+    padding-top: $size-small - .4rem;
+    padding-bottom: $size-small + .1rem;
     font-size: $font-size-1; // no we're not using mixin cuz we don't want its line-height
 
     @supports (-webkit-appearance: none) {
-      padding-top: $form-padding - 1px;
+      padding-top: $form-padding - .1rem;
     }
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      padding-top: $form-padding - 1px;
+      padding-top: $form-padding - .1rem;
     }
 
   }
@@ -108,17 +108,17 @@
   &--large {
 
     height: $button-height--lg;
-    padding-top: ($button-padding * 2) - 9px;
-    padding-bottom: ($button-padding * 2) - 3px;
+    padding-top: ($button-padding * 2) - .9rem;
+    padding-bottom: ($button-padding * 2) - .3rem;
     font-size: $font-size-6; // no we're not using mixin cuz we don't want its line-height
-    top: -3px;
+    top: -.3rem;
 
     @supports (-webkit-appearance: none) {
-      padding-top: ($button-padding * 2) - 4px;
+      padding-top: ($button-padding * 2) - .4rem;
     }
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      padding-top: ($button-padding * 2) - 4px;
+      padding-top: ($button-padding * 2) - .4rem;
     }
 
   }

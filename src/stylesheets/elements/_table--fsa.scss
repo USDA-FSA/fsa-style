@@ -74,7 +74,7 @@ th {
   &--borderless {
 
     background-color: transparent;
-    border-top: 2px solid $table-border-color;
+    border-top: .2rem solid $table-border-color;
 
     th,
     td {

@@ -7,7 +7,7 @@
 // ---------------------------------------------------------------------------
 // Sizing Units
 
-$size-base          : 4px; //rem(4px)
+$size-base          : .4rem; //rem(4px)
 $size-small         : $size-base * 2;  // 8px
 $size-default       : $size-base * 3;  // 12px
 $size-medium        : $size-base * 6;  // 24px
@@ -115,7 +115,7 @@ $form-border-radius            : 0; // currently zero, but play with this if you
 $form-checkbox-radio-outline-color : shade($form-outline-color, 30%);
 $form-checkbox-radio-fill      : $color-fsa-secondary;
 $form-checkbox-fill            : $color-fsa-secondary;
-$form-radiocheckbox-size       : 18px;
+$form-radiocheckbox-size       : 1.8rem;
 $form-padding                  : $size-small;
 $form-select-bgc               : orangered;
-$form-between-space            : $size-base - 2px;
+$form-between-space            : $size-base - .2rem;

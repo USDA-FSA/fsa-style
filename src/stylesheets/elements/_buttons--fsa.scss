@@ -1,13 +1,13 @@
 /* ---------------------------------------------------------------------------*/
 /* BASE: BUTTONS                                                              */
 
-$button-height            : 39px;
-$button-height--sm        : 30px;
-$button-height--lg        : 62px;
+$button-height            : 3.9rem; // 39px
+$button-height--sm        : 3rem; // 30px
+$button-height--lg        : 6.2rem;
 $button-padding           : $size-default;
 $button-text              : $color-fsa-white;
 $button-line-height       : 1;
-$button-border-radius     : 4px;
+$button-border-radius     : .4rem;
 $button-font-family       : $font-sans;
 $button-font-weight       : $font-normal;
 $button-font-size         : $font-size-3;
@@ -32,7 +32,7 @@ $button-alt-text         : $color-fsa-secondary;
 $button-alt-hover        : shade($button-alt, 5%);
 $button-alt-active       : $color-fsa-secondary;
 $button-alt-border       : $color-fsa-secondary;
-$button-alt-border-width : 2px;
+$button-alt-border-width : .2rem;
 
 .fsa-btn {
 
@@ -51,7 +51,7 @@ $button-alt-border-width : 2px;
   text-align: center;
   line-height: $button-line-height;
   position: relative;
-  top: 1px;
+  top: .1rem;
 
   @supports (-webkit-appearance:none) {
     // Webkit only.
@@ -68,7 +68,7 @@ $button-alt-border-width : 2px;
   border-radius: $button-border-radius;
 
   // scss-lint:disable Shorthand
-  padding: ($button-padding - 1px) ($button-padding * 2) ($button-padding - 1px);
+  padding: ($button-padding - .1rem) ($button-padding * 2) ($button-padding - .1rem);
 
   // -------------------------------------------------------------------------
   // default
@@ -232,9 +232,9 @@ $button-alt-border-width : 2px;
 
     // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon
     padding:
-      (($button-padding * 2) - 3px)
+      (($button-padding * 2) - .3rem)
       ($size-large)
-      (($button-padding * 2) - 3px)
+      (($button-padding * 2) - .3rem)
     ;
     font-size: $font-size-6; // no we're not using mixin cuz we don't want its line-height
     font-weight: $font-light;
