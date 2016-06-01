@@ -36,7 +36,7 @@
 .fsa-radio + :not(label) {
   &:before {
     display: block;
-    background-color: $color-fsa-tertiary-lighter;
+    background-color: $color-fsa-tertiary-200;
     padding: $size-default;
     margin-bottom: 1em;
     content: 'CSS ERROR: checkbox or radio requires a <label> element immediately following it. Refer to FSA Design System for guidance. ';
