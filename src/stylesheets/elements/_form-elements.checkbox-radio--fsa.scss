@@ -1,6 +1,9 @@
 ////////////////////////////////////////////////////////////////////////
 // Text Fields
 
+// Mostly a straight copy of USWDS checkbox and radio elements,
+// with a few adjustments
+
 .fsa-checkbox,
 .fsa-radio {
 
@@ -14,6 +17,7 @@
     margin: .4em .4em 0 0;
     position: static;
     width: auto;
+    opacity: 1;
   }
 
 }
@@ -63,6 +67,12 @@
   vertical-align: .2em;
   width: 1.8rem;
   margin-left: .1rem;
+
+  .lt-ie9 & {
+    outline: 1px solid red;
+    display: none;
+  }
+
 }
 
 .fsa-radio + label::before {
