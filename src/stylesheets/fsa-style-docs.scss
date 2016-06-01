@@ -423,81 +423,91 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 }
 
 .color-fsa-primary-dark {
-  background-color: $color-fsa-primary-dark;
+  background-color: $color-fsa-primary-900;
 }
 .color-fsa-primary {
   background-color: $color-fsa-primary;
 }
 .color-fsa-primary-light {
-  background-color: $color-fsa-primary-light;
+  background-color: $color-fsa-primary-300;
 }
 .color-fsa-primary-lighter {
-  background-color: $color-fsa-primary-lighter;
+  background-color: $color-fsa-primary-200;
 }
 .color-fsa-primary-lightest {
-  background-color: $color-fsa-primary-lightest;
+  background-color: $color-fsa-primary-100;
 }
 
 .color-fsa-secondary-dark {
-  background-color: $color-fsa-secondary-dark;
+  background-color: $color-fsa-secondary-900;
 }
 .color-fsa-secondary {
   background-color: $color-fsa-secondary;
 }
 .color-fsa-secondary-light {
-  background-color: $color-fsa-secondary-light;
+  background-color: $color-fsa-secondary-300;
 }
 .color-fsa-secondary-lighter {
-  background-color: $color-fsa-secondary-lighter;
+  background-color: $color-fsa-secondary-200;
 }
 .color-fsa-secondary-lightest {
-  background-color: $color-fsa-secondary-lightest;
+  background-color: $color-fsa-secondary-100;
 }
 
 .color-fsa-tertiary-dark {
-  background-color: $color-fsa-tertiary-dark;
+  background-color: $color-fsa-tertiary-900;
 }
 .color-fsa-tertiary {
   background-color: $color-fsa-tertiary;
 }
 .color-fsa-tertiary-light {
-  background-color: $color-fsa-tertiary-light;
+  background-color: $color-fsa-tertiary-300;
 }
 .color-fsa-tertiary-lighter {
-  background-color: $color-fsa-tertiary-lighter;
+  background-color: $color-fsa-tertiary-200;
 }
 .color-fsa-tertiary-lightest {
-  background-color: $color-fsa-tertiary-lightest;
+  background-color: $color-fsa-tertiary-100;
 }
 
 .color-fsa-aqua-dark {
-  background-color: $color-fsa-aqua-dark;
+  background-color: $color-fsa-aqua-900;
 }
 .color-fsa-aqua {
   background-color: $color-fsa-aqua;
 }
 .color-fsa-aqua-light {
-  background-color: $color-fsa-aqua-light;
+  background-color: $color-fsa-aqua-300;
 }
 .color-fsa-aqua-lighter {
-  background-color: $color-fsa-aqua-lighter;
+  background-color: $color-fsa-aqua-200;
 }
 .color-fsa-aqua-lightest {
-  background-color: $color-fsa-aqua-lightest;
+  background-color: $color-fsa-aqua-100;
 }
 
 .color-fsa-red-dark {
-  background-color: $color-fsa-red-dark;
+  background-color: $color-fsa-red-900;
 }
 .color-fsa-red {
   background-color: $color-fsa-red;
 }
 .color-fsa-red-light {
-  background-color: $color-fsa-red-light;
+  background-color: $color-fsa-red-300;
 }
 .color-fsa-red-lighter {
-  background-color: $color-fsa-red-lighter;
+  background-color: $color-fsa-red-200;
 }
 .color-fsa-red-lightest {
-  background-color: $color-fsa-red-lightest;
+  background-color: $color-fsa-red-100;
+}
+
+.color-fsa-link {
+  background-color: $color-fsa-link;
+}
+.color-fsa-link-hover {
+  background-color: $color-fsa-link-hover;
+}
+.color-fsa-link-visited {
+  background-color: $color-fsa-link-visited;
 }
