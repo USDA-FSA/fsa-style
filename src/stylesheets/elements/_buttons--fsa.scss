@@ -108,6 +108,7 @@ $button-alt-border-width : .2rem;
     opacity: .4;
     color: $color-transparentized;
     cursor: not-allowed;
+    pointer-events: none;
 
     color: $color-transparentized;
 

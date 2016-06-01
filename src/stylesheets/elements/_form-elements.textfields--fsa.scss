@@ -2,7 +2,7 @@
 // Text Fields
 
 .fsa-input,
-.fsa-asdftextarea {
+.fsa-textarea {
 
   @include fsa-shared-form-properties();
 
@@ -26,10 +26,10 @@
     opacity: .5;
     background-color: $form-disabled-bg-color;
     cursor: not-allowed;
+    pointer-events: none;
   }
 
   &[readonly] {
-    // opacity: .5;
     background-color: $color-fsa-site-bg;
     cursor: default;
   }
@@ -69,7 +69,7 @@
 
 }
 
-.fsa-asdftextarea {
+.fsa-textarea {
   min-height: 15rem;
   display: block;
   max-width: none;
