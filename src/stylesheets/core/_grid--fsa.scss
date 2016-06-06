@@ -1,0 +1,129 @@
+////////////////////////////////////////////////////////////////////////
+// FSA Grids
+
+// scss-lint:disable PropertySpelling
+
+$fsa-g-gutter: $size-medium;
+$fsa-g-columns: 12;
+
+@mixin fsa-grid-row() {
+  letter-spacing: -.31em;
+  *letter-spacing: normal;
+  *word-spacing: -.43em;
+  text-rendering: optimizespeed;
+  font-family: $font-base;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  margin-left: -$fsa-g-gutter;
+}
+
+@mixin fsa-grid-column() {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+  padding-left: $fsa-g-gutter;
+}
+
+@mixin fsa-grid-column-width($numerator, $denominator: $fsa-g-columns) {
+  width: ($numerator / $denominator) * 100%;
+}
+
+.fsa-g {
+
+  @include fsa-grid-row();
+
+  &__demo {
+    background-color: rgba(0, 0, 0, .1);
+  }
+
+  &__u {
+    @include fsa-grid-column();
+    flex: 1;
+  }
+
+  &__1,
+  &__1-1,
+  &__1-12,
+  &__1-2,
+  &__1-3,
+  &__1-4,
+  &__1-6,
+  &__10-12,
+  &__11-12,
+  &__12-12,
+  &__2-12,
+  &__2-3,
+  &__3-12,
+  &__3-4,
+  &__4-12,
+  &__5-12,
+  &__5-6,
+  &__6-12,
+  &__7-12,
+  &__8-12,
+  &__9-12 {
+    @include fsa-grid-column();
+  }
+
+  &__1-12 {
+    @include fsa-grid-column-width(1);
+  }
+
+  &__1-6,
+  &__2-12 {
+    @include fsa-grid-column-width(2);
+  }
+
+  &__1-4,
+  &__3-12 {
+    @include fsa-grid-column-width(3);
+  }
+
+  &__1-3,
+  &__4-12 {
+    @include fsa-grid-column-width(4);
+  }
+
+  &__5-12 {
+    @include fsa-grid-column-width(5);
+  }
+
+  &__1-2,
+  &__6-12 {
+    @include fsa-grid-column-width(6);
+  }
+
+  &__7-12 {
+    @include fsa-grid-column-width(7);
+  }
+
+  &__2-3,
+  &__8-12 {
+    @include fsa-grid-column-width(8);
+  }
+
+  &__3-4,
+  &__9-12 {
+    @include fsa-grid-column-width(9);
+  }
+
+  &__10-12,
+  &__5-6 {
+    @include fsa-grid-column-width(10);
+  }
+  &__11-12 {
+    @include fsa-grid-column-width(11);
+  }
+
+  &__1,
+  &__1-1,
+  &__12-12 {
+    @include fsa-grid-column-width(12);
+  }
+
+}
