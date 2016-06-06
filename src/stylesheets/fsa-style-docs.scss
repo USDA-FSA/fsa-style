@@ -172,7 +172,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     &__item {
 
       // scss-lint:disable NestingDepth
-      $bgc: rgba(0, 0, 0, .15);
+      $bgc: rgba(0, 0, 0, .10);
       $bgc--tile: $bgc;
 
       @include span-columns(4);
@@ -226,6 +226,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
     &__swatch {
       height: 7.5rem;
+      display: flex;
     }
 
     &__title {
@@ -384,26 +385,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   // -----------------------------------------------------------------------------
   // Sizing
 
-  &__size {
-
-    &__u {
-
-      width: $size-base;
-      height: $size-base;
-      display: block;
-      background-color: black;
-
-      // scss-lint:disable all
-      &--base        { width: $size-base;        height: $size-base;        }
-      &--small       { width: $size-small;       height: $size-small;       }
-      &--default     { width: $size-default;     height: $size-default;     }
-      &--medium      { width: $size-medium;      height: $size-medium;      }
-      &--large       { width: $size-large;       height: $size-large;       }
-      &--extra-large { width: $size-extra-large; height: $size-extra-large; }
-
-    }
-
-  }
+  // asdfasdfasdf
 
   // -----------------------------------------------------------------------------
   // Buttons
@@ -421,6 +403,65 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   }
 
 }
+
+
+.size-swatch {
+
+  // scss-lint:disable NestingDepth
+  $bgc: rgba(0, 0, 0, .10);
+  $bgc--tile: $bgc;
+
+  background-color: $bgc;
+  margin: 0 $size-small;
+
+  // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
+  background-image:
+    linear-gradient(45deg, $bgc--tile 25%, transparent 25%, transparent 75%, $bgc--tile 75%, $bgc--tile),
+    linear-gradient(45deg, $bgc--tile 25%, transparent 25%, transparent 75%, $bgc--tile 75%, $bgc--tile)
+  ;
+  background-size: 2rem 2rem;
+  background-position: 0 0, 5rem 5rem;
+
+  &__blotch {
+
+    background-color: $color-black;
+    display: block;
+    margin: auto;
+
+    &--base {
+      width: $size-base;
+      height: $size-base;
+    }
+
+    &--small {
+      width: $size-small;
+      height: $size-small;
+    }
+
+    &--default {
+      width: $size-default;
+      height: $size-default;
+    }
+
+    &--medium {
+      width: $size-medium;
+      height: $size-medium;
+    }
+
+    &--large {
+      width: $size-large;
+      height: $size-large;
+    }
+
+    &--extra-large {
+      width: $size-extra-large;
+      height: $size-extra-large;
+    }
+
+  }
+
+}
+
 
 .color-fsa-primary-dark {
   background-color: $color-fsa-primary-900;
