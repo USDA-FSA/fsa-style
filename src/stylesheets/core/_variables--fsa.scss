@@ -104,9 +104,15 @@ $form-text-color               : $color-fsa-base;
 $form-placeholder-color        : $color-fsa-tertiary-200;
 $form-outline-color            : $color-fsa-tertiary-200;
 $form-focus-color              : $color-fsa-secondary-300;
+
 $form-error-color              : $color-fsa-red;
 $form-error-color-focus        : $color-fsa-base;
 $form-error-color-bg           : $color-fsa-red-100;
+
+$form-positive-color           : $color-green; // Note this isn't $color-fsa-primary
+$form-positive-color-focus     : $form-focus-color;
+$form-positive-color-bg        : $color-white;
+
 $form-disabled-bg-color        : $color-fsa-tertiary-100;
 $form-border-radius            : 0; // currently zero, but play with this if you want
 

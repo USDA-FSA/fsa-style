@@ -51,6 +51,23 @@
 
   }
 
+  &--positive {
+
+    border-color: $form-positive-color;
+    box-shadow: 0 0 0 1px $form-positive-color inset;
+    background-color: $form-positive-color-bg;
+
+    @include placeholder {
+      color: shade($form-placeholder-color, 20%);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 .2rem $form-positive-color-focus inset;
+      border-color: transparent;
+    }
+
+  }
+
   &--block {
     display: block;
     width: 100%;
