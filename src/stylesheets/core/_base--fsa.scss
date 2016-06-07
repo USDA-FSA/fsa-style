@@ -16,7 +16,7 @@ tt {
   color: $color-fsa-secondary-900;
   font-family: $font-mono;
   border-radius: 2px;
-  background-color: transparentize($color-fsa-white, .1);
+  background-color: $color-fsa-white;
   padding: ($size-base / 2) $size-base;
   border: 1px solid $color-fsa-tertiary-200;
 

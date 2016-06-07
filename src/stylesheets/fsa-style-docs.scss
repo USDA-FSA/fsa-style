@@ -207,9 +207,9 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   }
 
   // -----------------------------------------------------------------------------
-  // Color
+  // Attribute List
 
-  &__colors {
+  &__attr-list {
 
     @include reset-ul();
 
@@ -217,6 +217,10 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
     @include breakpoint(ML) {
       display: flex;
+    }
+
+    &--sizes {
+      margin-right: -$size-medium;
     }
 
     &__item {
@@ -230,16 +234,17 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     }
 
     &__title {
-      // font-family: $ff-bold;
-      // font-weight: $base-font-weight;
-      margin: $size-small $size-small 0;
+      @include font-size(3);
+      color: $color-annotation;
+      font-family: $font-serif;
+      // margin: $size-small $size-small;
     }
 
     &__attr {
 
       @include reset-ul;
       @include font-size(1);
-      margin: 0 $size-small 1em;
+      margin: $size-small 0 1em;
 
       // scss-lint:disable NestingDepth
       &-item {
@@ -413,8 +418,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   }
 
-
-
 }
 
 
@@ -425,7 +428,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   $bgc--tile: $bgc;
 
   background-color: $bgc;
-  margin: 0 $size-small;
+  margin: 0 $size-medium 0 0;
 
   // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
   background-image:
