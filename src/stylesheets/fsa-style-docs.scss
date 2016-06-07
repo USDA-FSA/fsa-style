@@ -277,14 +277,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   &__typography {
 
-    @include outer-container(100%);
-
-    &__u {
-      @include breakpoint(ML) {
-        @include span-columns(6);
-      }
-    }
-
     &__size {
       overflow: hidden;
       white-space: nowrap;
