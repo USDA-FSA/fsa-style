@@ -384,8 +384,19 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   // -----------------------------------------------------------------------------
   // Sizing
+  // Grids
 
-  // asdfasdfasdf
+  &__grid-inventory {
+    &-item {
+      // background-color: $color-fsa-white;
+      margin-bottom: $size-base;
+      margin-left: 0;
+      padding-left: 0;
+      > div {
+        padding-left: 0;
+      }
+    }
+  }
 
   // -----------------------------------------------------------------------------
   // Buttons
@@ -401,6 +412,8 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     }
 
   }
+
+
 
 }
 

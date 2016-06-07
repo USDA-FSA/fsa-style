@@ -8,14 +8,15 @@
 @import 'core/defaults'; // USWDS
 @import 'core/variables--fsa';
 @import 'core/fonts'; // USWDS
-@import 'core/grid-settings'; // USWDS
+// @import 'core/grid-settings'; // USWDS
 
 // Core (rendering) -------------- //
 @import 'core/utilities'; // USWDS
 @import 'core/utilities--fsa';
 @import 'core/base'; // USWDS
 @import 'core/base--fsa';
-@import 'core/grid'; // USWDS
+// @import 'core/grid'; // USWDS
+@import 'core/grid--fsa';
 
 // Elements -------------- //
 // Styles basic HTML elements
