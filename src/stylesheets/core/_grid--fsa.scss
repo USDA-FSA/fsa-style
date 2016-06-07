@@ -1,6 +1,8 @@
 ////////////////////////////////////////////////////////////////////////
 // FSA Grids
 
+// Customization and SCSS'ification of Pure Grids, formerly known as YUI Grids.
+
 // scss-lint:disable PropertySpelling
 
 $fsa-g-gutter: $size-medium;
@@ -33,6 +35,95 @@ $fsa-g-columns: 12;
   width: ($numerator / $denominator) * 100%;
 }
 
+@mixin fsa-grid($namespace: '') {
+
+  .fsa-g__#{$namespace}u {
+    @include fsa-grid-column();
+    flex: 1;
+  }
+
+  .fsa-g__1#{$namespace},
+  .fsa-g__1\/1#{$namespace},
+  .fsa-g__1\/12#{$namespace},
+  .fsa-g__1\/2#{$namespace},
+  .fsa-g__1\/3#{$namespace},
+  .fsa-g__1\/4#{$namespace},
+  .fsa-g__1\/6#{$namespace},
+  .fsa-g__10\/12#{$namespace},
+  .fsa-g__11\/12#{$namespace},
+  .fsa-g__12\/12#{$namespace},
+  .fsa-g__2\/12#{$namespace},
+  .fsa-g__2\/3#{$namespace},
+  .fsa-g__3\/12#{$namespace},
+  .fsa-g__3\/4#{$namespace},
+  .fsa-g__4\/12#{$namespace},
+  .fsa-g__5\/12#{$namespace},
+  .fsa-g__5\/6#{$namespace},
+  .fsa-g__6\/12#{$namespace},
+  .fsa-g__7\/12#{$namespace},
+  .fsa-g__8\/12#{$namespace},
+  .fsa-g__9\/12#{$namespace} {
+    @include fsa-grid-column();
+  }
+
+  .fsa-g__1\/12#{$namespace} {
+    @include fsa-grid-column-width(1);
+  }
+
+  .fsa-g__1\/6#{$namespace},
+  .fsa-g__2\/12#{$namespace} {
+    @include fsa-grid-column-width(2);
+  }
+
+  .fsa-g__1\/4#{$namespace},
+  .fsa-g__3\/12#{$namespace} {
+    @include fsa-grid-column-width(3);
+  }
+
+  .fsa-g__1\/3#{$namespace},
+  .fsa-g__4\/12#{$namespace} {
+    @include fsa-grid-column-width(4);
+  }
+
+  .fsa-g__5\/12#{$namespace} {
+    @include fsa-grid-column-width(5);
+  }
+
+  .fsa-g__1\/2#{$namespace},
+  .fsa-g__6\/12#{$namespace} {
+    @include fsa-grid-column-width(6);
+  }
+
+  .fsa-g__7\/12#{$namespace} {
+    @include fsa-grid-column-width(7);
+  }
+
+  .fsa-g__2\/3#{$namespace},
+  .fsa-g__8\/12#{$namespace} {
+    @include fsa-grid-column-width(8);
+  }
+
+  .fsa-g__3\/4#{$namespace},
+  .fsa-g__9\/12#{$namespace} {
+    @include fsa-grid-column-width(9);
+  }
+
+  .fsa-g__10\/12#{$namespace},
+  .fsa-g__5\/6#{$namespace} {
+    @include fsa-grid-column-width(10);
+  }
+  .fsa-g__11\/12#{$namespace} {
+    @include fsa-grid-column-width(11);
+  }
+
+  .fsa-g__1#{$namespace},
+  .fsa-g__1\/1#{$namespace},
+  .fsa-g__12\/12#{$namespace} {
+    @include fsa-grid-column-width(12);
+  }
+
+}
+
 .fsa-g {
 
   @include fsa-grid-row();
@@ -41,89 +132,20 @@ $fsa-g-columns: 12;
     background-color: rgba(0, 0, 0, .1);
   }
 
-  &__u {
-    @include fsa-grid-column();
-    flex: 1;
-  }
-
-  &__1,
-  &__1-1,
-  &__1-12,
-  &__1-2,
-  &__1-3,
-  &__1-4,
-  &__1-6,
-  &__10-12,
-  &__11-12,
-  &__12-12,
-  &__2-12,
-  &__2-3,
-  &__3-12,
-  &__3-4,
-  &__4-12,
-  &__5-12,
-  &__5-6,
-  &__6-12,
-  &__7-12,
-  &__8-12,
-  &__9-12 {
-    @include fsa-grid-column();
-  }
-
-  &__1-12 {
-    @include fsa-grid-column-width(1);
-  }
-
-  &__1-6,
-  &__2-12 {
-    @include fsa-grid-column-width(2);
-  }
-
-  &__1-4,
-  &__3-12 {
-    @include fsa-grid-column-width(3);
-  }
-
-  &__1-3,
-  &__4-12 {
-    @include fsa-grid-column-width(4);
-  }
-
-  &__5-12 {
-    @include fsa-grid-column-width(5);
-  }
-
-  &__1-2,
-  &__6-12 {
-    @include fsa-grid-column-width(6);
-  }
-
-  &__7-12 {
-    @include fsa-grid-column-width(7);
-  }
-
-  &__2-3,
-  &__8-12 {
-    @include fsa-grid-column-width(8);
-  }
-
-  &__3-4,
-  &__9-12 {
-    @include fsa-grid-column-width(9);
-  }
-
-  &__10-12,
-  &__5-6 {
-    @include fsa-grid-column-width(10);
-  }
-  &__11-12 {
-    @include fsa-grid-column-width(11);
-  }
-
-  &__1,
-  &__1-1,
-  &__12-12 {
-    @include fsa-grid-column-width(12);
-  }
-
 }
+
+@include fsa-grid();
+
+@include breakpoint(M) {
+  @include fsa-grid(\@m);
+}
+
+// S
+// SM
+// M
+// MML
+// ML
+// MLL
+// L
+// XL
+// XXL
