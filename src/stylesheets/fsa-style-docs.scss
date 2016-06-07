@@ -171,14 +171,13 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     $bgc: rgba(0, 0, 0, .10);
     $bgc--tile: $bgc;
 
-    // @include span-columns(4);
     padding: $size-small;
     background-color: $bgc;
 
     // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
     background-image:
-    linear-gradient(45deg, $bgc--tile 25%, transparent 25%, transparent 75%, $bgc--tile 75%, $bgc--tile),
-    linear-gradient(45deg, $bgc--tile 25%, transparent 25%, transparent 75%, $bgc--tile 75%, $bgc--tile)
+      linear-gradient(45deg, $bgc--tile 25%, transparent 25%, transparent 75%, $bgc--tile 75%, $bgc--tile),
+      linear-gradient(45deg, $bgc--tile 25%, transparent 25%, transparent 75%, $bgc--tile 75%, $bgc--tile)
     ;
     background-size: 2rem 2rem;
     background-position: 0 0, 5rem 5rem;
@@ -194,9 +193,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     }
 
     &__demo {
-
       display: block;
-
     }
 
   }
@@ -388,21 +385,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
         padding-left: 0;
       }
     }
-  }
-
-  // -----------------------------------------------------------------------------
-  // Buttons
-
-  &__buttons {
-
-    @include outer-container(100%);
-
-    &__u {
-      @include breakpoint(ML) {
-        @include span-columns(6);
-      }
-    }
-
   }
 
 }
