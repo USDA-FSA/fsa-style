@@ -167,39 +167,34 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   &__logo {
 
-    @include outer-container(100%);
+    // scss-lint:disable NestingDepth
+    $bgc: rgba(0, 0, 0, .10);
+    $bgc--tile: $bgc;
 
-    &__item {
+    // @include span-columns(4);
+    padding: $size-small;
+    background-color: $bgc;
 
-      // scss-lint:disable NestingDepth
-      $bgc: rgba(0, 0, 0, .10);
-      $bgc--tile: $bgc;
+    // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
+    background-image:
+    linear-gradient(45deg, $bgc--tile 25%, transparent 25%, transparent 75%, $bgc--tile 75%, $bgc--tile),
+    linear-gradient(45deg, $bgc--tile 25%, transparent 25%, transparent 75%, $bgc--tile 75%, $bgc--tile)
+    ;
+    background-size: 2rem 2rem;
+    background-position: 0 0, 5rem 5rem;
 
-      @include span-columns(4);
-      padding: $size-small;
-      background-color: $bgc;
+    padding: $size-default;
 
-      // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
-      background-image:
-        linear-gradient(45deg, $bgc--tile 25%, transparent 25%, transparent 75%, $bgc--tile 75%, $bgc--tile),
-        linear-gradient(45deg, $bgc--tile 25%, transparent 25%, transparent 75%, $bgc--tile 75%, $bgc--tile)
-      ;
-      background-size: 2rem 2rem;
-      background-position: 0 0, 5rem 5rem;
+    @include breakpoint(SM) {
+      padding: $size-medium;
+    }
 
-      @include breakpoint(M) {
-        padding: $size-medium;
-      }
-
-      @include breakpoint(ML) {
-        padding: $size-medium $size-extra-large;
-      }
-
+    @include breakpoint(ML) {
+      padding: $size-medium $size-extra-large;
     }
 
     &__demo {
 
-      // height: $size-extra-large * 2;
       display: block;
 
     }
