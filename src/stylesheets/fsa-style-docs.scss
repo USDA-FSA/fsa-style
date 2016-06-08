@@ -378,7 +378,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   &__utilities {
 
-
     &__demo {
       @include checkerboard();
       border-top: 1px solid $color-fsa-site-bg;
@@ -387,8 +386,11 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
     &__demo-item {
       background-color: $color-fsa-tertiary-100;
-      // margin-bottom: $size-large;
       padding: $size-small;
+      &:hover {
+        outline: 1px solid $color-fsa-tertiary-300;
+        outline-offset: -1px;
+      }
     }
 
   }
