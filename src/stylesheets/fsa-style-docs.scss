@@ -167,22 +167,9 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   &__logo {
 
-    // scss-lint:disable NestingDepth
-    $bgc: rgba(0, 0, 0, .10);
-    $bgc--tile: $bgc;
+    @include checkerboard();
 
     padding: $size-small;
-    background-color: $bgc;
-
-    // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
-    background-image:
-      linear-gradient(45deg, $bgc--tile 25%, transparent 25%, transparent 75%, $bgc--tile 75%, $bgc--tile),
-      linear-gradient(45deg, $bgc--tile 25%, transparent 25%, transparent 75%, $bgc--tile 75%, $bgc--tile)
-    ;
-    background-size: 2rem 2rem;
-    background-position: 0 0, 5rem 5rem;
-
-    padding: $size-default;
 
     @include breakpoint(SM) {
       padding: $size-medium;
@@ -211,7 +198,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       display: flex;
     }
 
-    &--sizes {
+    &--spaced {
       margin-right: -$size-medium;
     }
 
@@ -372,8 +359,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   }
 
   // -----------------------------------------------------------------------------
-  // Sizing
-  // Grids
+  // Grid Demo
 
   &__grid-inventory {
     &-item {
@@ -387,25 +373,34 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     }
   }
 
+  // -----------------------------------------------------------------------------
+  // Utilities
+
+  &__utilities {
+
+
+    &__demo {
+      @include checkerboard();
+      border-top: 1px solid $color-fsa-site-bg;
+      border-bottom: 1px solid $color-fsa-site-bg;
+    }
+
+    &__demo-item {
+      background-color: $color-fsa-tertiary-100;
+      // margin-bottom: $size-large;
+      padding: $size-small;
+    }
+
+  }
+
 }
 
 
 .size-swatch {
 
-  // scss-lint:disable NestingDepth
-  $bgc: rgba(0, 0, 0, .10);
-  $bgc--tile: $bgc;
+  @include checkerboard();
 
-  background-color: $bgc;
   margin: 0 $size-medium 0 0;
-
-  // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
-  background-image:
-    linear-gradient(45deg, $bgc--tile 25%, transparent 25%, transparent 75%, $bgc--tile 75%, $bgc--tile),
-    linear-gradient(45deg, $bgc--tile 25%, transparent 25%, transparent 75%, $bgc--tile 75%, $bgc--tile)
-  ;
-  background-size: 2rem 2rem;
-  background-position: 0 0, 5rem 5rem;
 
   &__blotch {
 
@@ -446,7 +441,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   }
 
 }
-
 
 .color-fsa-primary-dark {
   background-color: $color-fsa-primary-900;

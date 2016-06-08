@@ -1,2 +1,118 @@
 ////////////////////////////////////////////////////////////////////////
 // Styling Utilities
+
+.fsa {
+
+  // scss-lint:disable ImportantRule
+
+  // Margins -------------------------------------------------------------------
+
+  &-m-t {
+
+    &--xxs {
+      margin-top: $size-base !important;
+    }
+
+    &--xs {
+      margin-top: $size-small !important;
+    }
+
+    &--s {
+      margin-top: $size-default !important;
+    }
+
+    &--m {
+      margin-top: $size-medium !important;
+    }
+
+    &--l {
+      margin-top: $size-large !important;
+    }
+
+    &--xl {
+      margin-top: $size-extra-large !important;
+    }
+  }
+
+  &-m-r {
+
+    &--xxs {
+      margin-right: $size-base !important;
+    }
+
+    &--xs {
+      margin-right: $size-small !important;
+    }
+
+    &--s {
+      margin-right: $size-default !important;
+    }
+
+    &--m {
+      margin-right: $size-medium !important;
+    }
+
+    &--l {
+      margin-right: $size-large !important;
+    }
+
+    &--xl {
+      margin-right: $size-extra-large !important;
+    }
+  }
+
+  &-m-b {
+
+    &--xxs {
+      margin-bottom: $size-base !important;
+    }
+
+    &--xs {
+      margin-bottom: $size-small !important;
+    }
+
+    &--s {
+      margin-bottom: $size-default !important;
+    }
+
+    &--m {
+      margin-bottom: $size-medium !important;
+    }
+
+    &--l {
+      margin-bottom: $size-large !important;
+    }
+
+    &--xl {
+      margin-bottom: $size-extra-large !important;
+    }
+  }
+
+  &-m-l {
+
+    &--xxs {
+      margin-left: $size-base !important;
+    }
+
+    &--xs {
+      margin-left: $size-small !important;
+    }
+
+    &--s {
+      margin-left: $size-default !important;
+    }
+
+    &--m {
+      margin-left: $size-medium !important;
+    }
+
+    &--l {
+      margin-left: $size-large !important;
+    }
+
+    &--xl {
+      margin-left: $size-extra-large !important;
+    }
+  }
+
+}
