@@ -20,7 +20,6 @@ exclude: [
   # USWDS elements
   'src/stylesheets/elements/_buttons.scss',
   'src/stylesheets/elements/_figure.scss',
-  'src/stylesheets/elements/_foo-element.scss',
   'src/stylesheets/elements/_inputs.scss',
   'src/stylesheets/elements/_labels.scss',
   'src/stylesheets/elements/_list.scss',
