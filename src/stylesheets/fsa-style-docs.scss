@@ -387,23 +387,15 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
     &__demo-item {
 
-      background-color: $color-fsa-tertiary-100;
-
-      &--transparent {
-        @include checkerboard();
-
-      }
+      background-color: white;
+      border: 1px solid $color-fsa-tertiary-100;
 
       code {
 
-        background-color: transparent;
+        background-color: $color-fsa-tertiary-100;
         border: 0;
         padding: 0;
         display: block;
-
-        &:hover {
-          background-color: transparentize($color-fsa-tertiary, .8);
-        }
 
       }
 
