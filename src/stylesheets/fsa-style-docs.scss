@@ -382,15 +382,21 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       @include checkerboard();
       border-top: 1px solid $color-fsa-site-bg;
       border-bottom: 1px solid $color-fsa-site-bg;
+      margin-bottom: $size-default;
     }
 
     &__demo-item {
       background-color: $color-fsa-tertiary-100;
-      padding: $size-small;
-      &:hover {
-        outline: 1px solid $color-fsa-tertiary-300;
-        outline-offset: -1px;
+      // padding: $size-small;
+      // outline: 1px solid $color-fsa-tertiary-200;
+      // outline-offset: -1px;
+
+      code {
+        background-color: transparent;
+        border: 0;
+        padding: 0;
       }
+
     }
 
   }

@@ -7,6 +7,33 @@
 
   // Margins -------------------------------------------------------------------
 
+  &-m {
+
+    &--xxs {
+      margin: $size-base !important;
+    }
+
+    &--xs {
+      margin: $size-small !important;
+    }
+
+    &--s {
+      margin: $size-default !important;
+    }
+
+    &--m {
+      margin: $size-medium !important;
+    }
+
+    &--l {
+      margin: $size-large !important;
+    }
+
+    &--xl {
+      margin: $size-extra-large !important;
+    }
+  }
+
   &-m-t {
 
     &--xxs {
