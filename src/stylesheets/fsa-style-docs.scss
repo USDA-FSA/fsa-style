@@ -333,9 +333,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   }
 
-  &__overflow-demo {
-    @include fsa-ellipsis();
-  }
 
   // -----------------------------------------------------------------------------
   // Grid Demo

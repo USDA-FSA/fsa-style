@@ -319,16 +319,29 @@
 
   &-text {
 
-    &--0 { @include font-size(0); }
-    &--1 { @include font-size(1); }
-    &--2 { @include font-size(2); }
-    &--3 { @include font-size(3); }
-    &--4 { @include font-size(4); }
-    &--5 { @include font-size(5); }
-    &--6 { @include font-size(6); }
-    &--7 { @include font-size(7); }
-    &--8 { @include font-size(8); }
-    &--9 { @include font-size(9); }
+    // scss-lint:disable PlaceholderInExtend
+
+    &--h1 { @extend .h1; }
+    &--h2 { @extend .h2; }
+    &--h3 { @extend .h3; }
+    &--h4 { @extend .h4; }
+    &--h5 { @extend .h5; }
+    &--h6 { @extend .h6; }
+
+    &-size {
+
+      &--0 { @include font-size(0); }
+      &--1 { @include font-size(1); }
+      &--2 { @include font-size(2); }
+      &--3 { @include font-size(3); }
+      &--4 { @include font-size(4); }
+      &--5 { @include font-size(5); }
+      &--6 { @include font-size(6); }
+      &--7 { @include font-size(7); }
+      &--8 { @include font-size(8); }
+      &--9 { @include font-size(9); }
+
+    }
 
     &-align {
       &--right  { text-align: right; }
