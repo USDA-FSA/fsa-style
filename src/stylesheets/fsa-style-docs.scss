@@ -167,22 +167,9 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   &__logo {
 
-    // scss-lint:disable NestingDepth
-    $bgc: rgba(0, 0, 0, .10);
-    $bgc--tile: $bgc;
+    @include checkerboard();
 
     padding: $size-small;
-    background-color: $bgc;
-
-    // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
-    background-image:
-      linear-gradient(45deg, $bgc--tile 25%, transparent 25%, transparent 75%, $bgc--tile 75%, $bgc--tile),
-      linear-gradient(45deg, $bgc--tile 25%, transparent 25%, transparent 75%, $bgc--tile 75%, $bgc--tile)
-    ;
-    background-size: 2rem 2rem;
-    background-position: 0 0, 5rem 5rem;
-
-    padding: $size-default;
 
     @include breakpoint(SM) {
       padding: $size-medium;
@@ -211,7 +198,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       display: flex;
     }
 
-    &--sizes {
+    &--spaced {
       margin-right: -$size-medium;
     }
 
@@ -274,23 +261,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   &__typography {
 
-    &__size {
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      margin-top: 0;
-    }
-
-    &__size--0 { @include font-size(0); }
-    &__size--1 { @include font-size(1); }
-    &__size--2 { @include font-size(2); }
-    &__size--3 { @include font-size(3); }
-    &__size--4 { @include font-size(4); }
-    &__size--5 { @include font-size(5); }
-    &__size--6 { @include font-size(6); }
-    &__size--7 { @include font-size(7); }
-    &__size--8 { @include font-size(8); }
-    &__size--9 { @include font-size(9); }
 
   }
 
@@ -357,34 +327,58 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     }
 
     &__item {
+      @include fsa-ellipsis();
       margin: 0;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
     }
 
   }
 
-  &__overflow-demo {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
 
   // -----------------------------------------------------------------------------
-  // Sizing
-  // Grids
+  // Grid Demo
 
   &__grid-inventory {
     &-item {
-      // background-color: $color-fsa-white;
+
       margin-bottom: $size-base;
       margin-left: 0;
       padding-left: 0;
+
       > div {
         padding-left: 0;
       }
+
     }
+  }
+
+  // -----------------------------------------------------------------------------
+  // Utilities
+
+  &__utilities {
+
+    &__demo {
+      @include checkerboard();
+      border-top: 1px solid $color-fsa-site-bg;
+      border-bottom: 1px solid $color-fsa-site-bg;
+      margin-bottom: $size-default;
+    }
+
+    &__demo-item {
+
+      background-color: white;
+      border: 1px solid $color-fsa-tertiary-300;
+
+      code {
+
+        background-color: $color-fsa-tertiary-100;
+        border: 0;
+        padding: 0;
+        display: block;
+
+      }
+
+    }
+
   }
 
 }
@@ -392,20 +386,9 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
 .size-swatch {
 
-  // scss-lint:disable NestingDepth
-  $bgc: rgba(0, 0, 0, .10);
-  $bgc--tile: $bgc;
+  @include checkerboard();
 
-  background-color: $bgc;
   margin: 0 $size-medium 0 0;
-
-  // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
-  background-image:
-    linear-gradient(45deg, $bgc--tile 25%, transparent 25%, transparent 75%, $bgc--tile 75%, $bgc--tile),
-    linear-gradient(45deg, $bgc--tile 25%, transparent 25%, transparent 75%, $bgc--tile 75%, $bgc--tile)
-  ;
-  background-size: 2rem 2rem;
-  background-position: 0 0, 5rem 5rem;
 
   &__blotch {
 
@@ -446,7 +429,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   }
 
 }
-
 
 .color-fsa-primary-dark {
   background-color: $color-fsa-primary-900;
