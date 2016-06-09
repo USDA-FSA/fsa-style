@@ -231,6 +231,9 @@ $breakpoints: (
 
 }
 
+// -----------------------------------------------------------------------------
+// Background pattern to denote "transparent"; think Photoshop
+
 @mixin checkerboard($color: rgba(0, 0, 0, .10)) {
 
   background-color: $color;
@@ -243,4 +246,14 @@ $breakpoints: (
   background-size: 2rem 2rem;
   background-position: 0 0, 5rem 5rem;
 
+}
+
+// -----------------------------------------------------------------------------
+// Dot dot dot por favor
+@mixin fsa-ellipsis {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
 }

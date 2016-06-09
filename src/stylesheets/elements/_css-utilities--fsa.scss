@@ -289,7 +289,7 @@
 
   }
 
-  // FLoats- -------------------------------------------------------------------
+  // Floats- -------------------------------------------------------------------
 
   &-clear {
     clear: both;
@@ -310,5 +310,25 @@
     }
 
   }
+
+  // Text--- -------------------------------------------------------------------
+
+  &-ellipsis {
+    @include fsa-ellipsis();
+  }
+
+  &-text {
+    &--0 { @include font-size(0); }
+    &--1 { @include font-size(1); }
+    &--2 { @include font-size(2); }
+    &--3 { @include font-size(3); }
+    &--4 { @include font-size(4); }
+    &--5 { @include font-size(5); }
+    &--6 { @include font-size(6); }
+    &--7 { @include font-size(7); }
+    &--8 { @include font-size(8); }
+    &--9 { @include font-size(9); }
+  }
+
 
 }

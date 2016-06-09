@@ -261,23 +261,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   &__typography {
 
-    &__size {
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      margin-top: 0;
-    }
-
-    &__size--0 { @include font-size(0); }
-    &__size--1 { @include font-size(1); }
-    &__size--2 { @include font-size(2); }
-    &__size--3 { @include font-size(3); }
-    &__size--4 { @include font-size(4); }
-    &__size--5 { @include font-size(5); }
-    &__size--6 { @include font-size(6); }
-    &__size--7 { @include font-size(7); }
-    &__size--8 { @include font-size(8); }
-    &__size--9 { @include font-size(9); }
 
   }
 
@@ -344,18 +327,14 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     }
 
     &__item {
+      @include fsa-ellipsis();
       margin: 0;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
     }
 
   }
 
   &__overflow-demo {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    @include fsa-ellipsis();
   }
 
   // -----------------------------------------------------------------------------
@@ -363,13 +342,15 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   &__grid-inventory {
     &-item {
-      // background-color: $color-fsa-white;
+
       margin-bottom: $size-base;
       margin-left: 0;
       padding-left: 0;
+
       > div {
         padding-left: 0;
       }
+
     }
   }
 
@@ -388,7 +369,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     &__demo-item {
 
       background-color: white;
-      // border: 1px solid $color-fsa-tertiary-100;
+      border: 1px solid $color-fsa-tertiary-300;
 
       code {
 
