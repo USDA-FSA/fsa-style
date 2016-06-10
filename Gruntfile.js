@@ -185,7 +185,7 @@ module.exports = function (grunt) {
         dir: 'dist',
         commit: true,
         push: true,
-        message: 'Deployed %sourceBranch% w/ commit %sourceCommit% to %sourceName%'
+        message: 'Deployed %sourceBranch% w/ commit %sourceCommit% to %sourceName%/gh-pages'
       },
       pages: {
         options: {
