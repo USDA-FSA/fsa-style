@@ -55,6 +55,16 @@
 
 // Shame -------------- //
 
+.asdfqwerkjhiut {
+
+  display: flex;
+
+  &__thing {
+    flex: 1;
+  }
+
+}
+
 ///////////////////////////////////////////////////////////////////////////////
 // EXPERIMENTAL AREA
 // @import 'components/asdfqwer';
