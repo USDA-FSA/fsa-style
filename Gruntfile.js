@@ -176,7 +176,32 @@ module.exports = function (grunt) {
           // ],
         }
       }
+    },
+
+    // Deploying to gh-pages
+    // Docs: https://github.com/robwierzbowski/grunt-build-control
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Deployed %sourceBranch% w/ commit %sourceCommit% to %sourceName%/gh-pages'
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com:USDA-FSA/fsa-style.git',
+          branch: 'gh-pages'
+        }
+      },
+      local: {
+        options: {
+          remote: '../',
+          branch: 'build'
+        }
+      }
     }
+
+
 
   });
 
@@ -194,6 +219,7 @@ module.exports = function (grunt) {
     'browserify',
     'lint'
   ]);
+  grunt.registerTask('deploy', ['buildcontrol:pages']);
 
   grunt.registerTask('lint', 'scsslint');
   grunt.registerTask('test', 'default', function () { grunt.log.writeln('Test that the app runs');});
