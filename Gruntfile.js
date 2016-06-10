@@ -191,7 +191,7 @@ module.exports = function (grunt) {
         options: {
           remote: 'git@github.com:USDA-FSA/fsa-style.git',
           branch: 'gh-pages',
-          tag: pkg.version
+          tag: '<%= pkg.version %>'
         }
       },
       // heroku: {
