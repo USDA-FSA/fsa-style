@@ -190,8 +190,7 @@ module.exports = function (grunt) {
       pages: {
         options: {
           remote: 'git@github.com:USDA-FSA/fsa-style.git',
-          branch: 'gh-pages',
-          tag: '<%= pkg.version %>'
+          branch: 'gh-pages'
         }
       },
       local: {
