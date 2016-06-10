@@ -208,7 +208,6 @@ module.exports = function (grunt) {
 
   // Register Tasks
   grunt.registerTask('default', ['build', 'browserSync', 'watch']);
-  grunt.registerTask('deploy', ['default', 'buildcontrol:pages']);
   grunt.registerTask('build', [
     'clean:dist',
     'copy:uswds',
@@ -221,6 +220,7 @@ module.exports = function (grunt) {
     'browserify',
     'lint'
   ]);
+  grunt.registerTask('deploy', ['build', 'buildcontrol:pages']);
 
   grunt.registerTask('lint', 'scsslint');
   grunt.registerTask('test', 'default', function () { grunt.log.writeln('Test that the app runs');});
