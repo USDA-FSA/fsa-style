@@ -3277,4 +3277,14 @@ h6,
 .fsa-text-align--left {
   text-align: left;
 }
+
+.asdfqwerkjhiut {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.asdfqwerkjhiut__thing {
+  -ms-flex: 1;
+      flex: 1;
+}
 /*# sourceMappingURL=fsa-style.css.map */
