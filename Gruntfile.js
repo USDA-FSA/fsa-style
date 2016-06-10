@@ -208,6 +208,7 @@ module.exports = function (grunt) {
 
   // Register Tasks
   grunt.registerTask('default', ['build', 'browserSync', 'watch']);
+  grunt.registerTask('deploy', ['default', 'buildcontrol:pages']);
   grunt.registerTask('build', [
     'clean:dist',
     'copy:uswds',
