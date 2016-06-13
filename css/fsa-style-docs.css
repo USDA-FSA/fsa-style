@@ -113,6 +113,13 @@ html:hover body::before {
   display: block;
 }
 
+.docs__notice {
+  padding: 19.2px;
+  padding: 1.2rem;
+  background-color: #fff1d2;
+  text-align: center;
+}
+
 .docs__figure-group {
   color: #205493;
   border-bottom: 2px solid;
@@ -435,6 +442,8 @@ html:hover body::before {
   white-space: nowrap;
   word-wrap: normal;
   margin: 0;
+  letter-spacing: 6.4px;
+  letter-spacing: 0.4rem;
 }
 
 .docs__grid-inventory-item {
