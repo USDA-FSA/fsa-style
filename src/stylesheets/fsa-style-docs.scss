@@ -16,6 +16,12 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
 .docs {
 
+  &__notice {
+    padding: $size-default;
+    background-color: $color-gold-lightest;
+    text-align: center;
+  }
+
   // -----------------------------------------------------------------------------
   // Doc Titles
 
@@ -259,11 +265,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   // -----------------------------------------------------------------------------
   // Typography
 
-  &__typography {
-
-
-  }
-
   &__font {
 
     display: flex;
@@ -329,6 +330,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     &__item {
       @include fsa-ellipsis();
       margin: 0;
+      letter-spacing: $size-base;
     }
 
   }
