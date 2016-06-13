@@ -2394,32 +2394,32 @@ li {
   margin-bottom: 0.5em;
 }
 
-.usa-unstyled-list, .fsa-unstyled-list, .fsa-inline-list {
+.usa-unstyled-list, .fsa-list--unstyled, .fsa-list--inline {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.usa-unstyled-list li, .fsa-unstyled-list li, .fsa-inline-list li {
+.usa-unstyled-list li, .fsa-list--unstyled li, .fsa-list--inline li {
   display: list-item;
   margin: 0;
 }
 
-.usa-unstyled-list li::before, .fsa-unstyled-list li::before, .fsa-inline-list li::before {
+.usa-unstyled-list li::before, .fsa-list--unstyled li::before, .fsa-list--inline li::before {
   display: none;
 }
 
-.usa-unstyled-list li::after, .fsa-unstyled-list li::after, .fsa-inline-list li::after {
+.usa-unstyled-list li::after, .fsa-list--unstyled li::after, .fsa-list--inline li::after {
   display: none;
 }
 
-.fsa-inline-list > li {
+.fsa-list--inline > li {
   display: inline-block;
   margin-right: 12px;
   margin-right: 1.2rem;
 }
 
-.fsa-inline-list > li:last-child {
+.fsa-list--inline > li:last-child {
   margin-right: 0;
 }
 
@@ -2862,6 +2862,7 @@ h6,
   font-weight: 700;
 }
 
+.fsa-text--lead,
 .fsa-font-lead,
 .usa-font-lead {
   font-weight: 300;
@@ -2869,6 +2870,8 @@ h6,
   font-size: 2rem;
 }
 
+.fsa-text--lead b,
+.fsa-text--lead strong,
 .fsa-font-lead b,
 .fsa-font-lead strong,
 .usa-font-lead b,
@@ -3200,6 +3203,14 @@ h6,
 
 .fsa-float--right {
   float: right;
+}
+
+.fsa-font--sans {
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+}
+
+.fsa-font--serif {
+  font-family: "Merriweather", "Georgia", "Cambria", "Times New Roman", "Times", serif;
 }
 
 .fsa-ellipsis {
