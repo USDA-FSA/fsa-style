@@ -1,24 +1,27 @@
 ////////////////////////////////////////////////////////////////////////
 // Lists
 
-.fsa-unstyled-list {
-  // scss-lint:disable PlaceholderInExtend
-  @extend .usa-unstyled-list;
-}
+.fsa-list {
 
-.fsa-inline-list {
-  // scss-lint:disable PlaceholderInExtend
-  @extend .usa-unstyled-list;
+  &--unstyled {
+    // scss-lint:disable PlaceholderInExtend
+    @extend .usa-unstyled-list;
+  }
 
-  > li {
+  &--inline {
+    // scss-lint:disable PlaceholderInExtend
+    @extend .usa-unstyled-list;
 
-    display: inline-block;
-    margin-right: $size-default;
+    > li {
 
-    &:last-child {
-      margin-right: 0;
+      display: inline-block;
+      margin-right: $size-default;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
     }
-
   }
 
 }
