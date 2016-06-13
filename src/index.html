@@ -360,6 +360,7 @@
       </div>
       <h3 class="docs__bd docs__figure">Headers</h3>
       <div class="docs__bd">
+        <p class="docs__code-sample"><code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code></p>
         <h1>h1 header</h1>
         <p class="fsa-ellipsis">Lorem ipsum dolor <strong>bold text</strong> dignissim brevitas <em>italicized text</em> vindico nisl. <a href="http://fsa.usda.gov/">Inline link</a> olim aliquip tego ideo, iustum validus regula. Incassum mos luptatum acsi jugis iusto vel.</p>
         <h2>h2 header</h2>
@@ -375,12 +376,14 @@
       </div>
       <h3 class="docs__bd docs__figure">Intro Text</h3>
       <div class="docs__bd">
-        <p class="fsa-font-lead">
+        <p class="docs__code-sample"><code>class="fsa-text--lead"</code></p>
+        <p class="fsa-text--lead">
           Lorem ipsum dolor <strong>bold text</strong> dignissim brevitas <em>italicized text</em> vindico nisl. <a href="link-to-nowhere.html">Inline link</a> olim aliquip tego ideo, iustum validus regula. Enim conventio praesent, duis hendrerit consequat ingenium neque et saepius suscipere velit. Ideo enim mara facilisis ad, validus abluo eligo odio.
         </p>
       </div>
       <h3 class="docs__bd docs__figure">Unordered List</h3>
       <div class="docs__bd">
+        <p class="docs__code-sample"><code>&lt;ul&gt;</code></p>
         <ul>
           <li>List item one</li>
           <li>List item two</li>
@@ -389,6 +392,7 @@
       </div>
       <h3 class="docs__bd docs__figure">Ordered List</h3>
       <div class="docs__bd">
+        <p class="docs__code-sample"><code>&lt;ol&gt;</code></p>
         <ol>
           <li>List item one</li>
           <li>List item two</li>
@@ -397,6 +401,7 @@
       </div>
       <h3 class="docs__bd docs__figure">Inline List</h3>
       <div class="docs__bd">
+        <p class="docs__code-sample"><code>class="fsa-list--inline"</code></p>
         <ul class="fsa-list--inline">
           <li>List item one</li>
           <li>List item two</li>
@@ -405,7 +410,8 @@
       </div>
       <h3 class="docs__bd docs__figure">Unstyled List</h3>
       <div class="docs__bd">
-        <p>Use SASS Mixins <code>reset-ul()</code> and <code>reset-li()</code> where possible instead of <code>class="fsa-list--unstyled"</code></p>
+        <p>Use SASS Mixins <code>@include reset-ul()</code> and <code>@include reset-li()</code> where possible over <code>class="fsa-list--unstyled"</code></p>
+        <p class="docs__code-sample"><code>class="fsa-list--unstyled"</code></p>
         <ul class="fsa-list--unstyled">
           <li>List item one</li>
           <li>List item two</li>
@@ -414,7 +420,8 @@
       </div>
       <h3 class="docs__bd docs__figure">Definition List</h3>
       <div class="docs__bd">
-        <dl class="list--definition">
+        <p class="docs__code-sample"><code>&lt;dl&gt;</code></p>
+        <dl>
           <dt>Definition List Title</dt>
           <dd>This is a definition list division.</dd>
           <dt>Inkscape</dt>
@@ -432,6 +439,7 @@
     <section class="docs__section" id="btn">
       <h2 class="docs__bd docs__figure-group">Buttons</h2>
       <div class="docs__bd">
+        <p class="docs__code-sample"><code>class="fsa-btn fsa-btn--[type]"</code></p>
         <h3 class="docs__bd docs__figure">Primary</h3>
         <div class="fsa-grid">
           <div class="fsa-grid__1 fsa-grid__1/2@ml">
@@ -561,6 +569,7 @@
       <div class="docs__bd">
         <h3 class="docs__bd docs__figure">Input text - Default</h3>
         <h4 class="docs__sub_style">Default</h4>
+        <p class="docs__code-sample"><code>class="fsa-input"</code></p>
         <p>
           <input class="fsa-input" type="text" name="some_name" value="" placeholder="Placeholder">
         </p>
@@ -577,6 +586,7 @@
           <input class="fsa-input" readonly="" type="text" name="some_name" value="readonly">
         </p>
         <h4 class="docs__sub_style">Block (full-width)</h4>
+        <p class="docs__code-sample"><code>class="fsa-input fsa-input--block"</code></p>
         <p>
           <input class="fsa-input fsa-input--block" type="text" name="some_name" value="" placeholder="Placeholder">
         </p>
@@ -593,6 +603,7 @@
           <input class="fsa-input fsa-input--block" readonly="" type="text" name="some_name" value="readonly">
         </p>
         <h4 class="docs__sub_style">Error</h4>
+        <p class="docs__code-sample"><code>class="fsa-input fsa-input--error"</code></p>
         <p>
           <input class="fsa-input fsa-input--error" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
@@ -604,6 +615,7 @@
         </p>
 
         <h4 class="docs__sub_style">Positive</h4>
+        <p class="docs__code-sample"><code>class="fsa-input fsa-input--positive"</code></p>
         <p>
           <input class="fsa-input fsa-input--positive" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
@@ -616,6 +628,7 @@
 
         <h3 class="docs__bd docs__figure">Input text - Small</h3>
         <h4 class="docs__sub_style">Default</h4>
+        <p class="docs__code-sample"><code>class="fsa-input fsa-input--small"</code></p>
         <p>
           <input class="fsa-input fsa-input--small" type="text" name="some_name" value="" placeholder="Placeholder">
         </p>
@@ -629,6 +642,7 @@
           <input class="fsa-input fsa-input--small" disabled="" type="text" name="some_name" value="disabled">
         </p>
         <h4 class="docs__sub_style">Block (full-width)</h4>
+        <p class="docs__code-sample"><code>class="fsa-input fsa-input--small fsa-input--block"</code></p>
         <p>
           <input class="fsa-input fsa-input--small fsa-input--block" type="text" name="some_name" value="" placeholder="Placeholder">
         </p>
@@ -642,6 +656,7 @@
           <input class="fsa-input fsa-input--small fsa-input--block" disabled="" type="text" name="some_name" value="disabled">
         </p>
         <h4 class="docs__sub_style">Error</h4>
+        <p class="docs__code-sample"><code>class="fsa-input fsa-input--small fsa-input--error"</code></p>
         <p>
           <input class="fsa-input fsa-input--small fsa-input--error" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
@@ -653,6 +668,7 @@
         </p>
 
         <h4 class="docs__sub_style">Positive</h4>
+        <p class="docs__code-sample"><code>class="fsa-input fsa-input--small fsa-input--positive"</code></p>
         <p>
           <input class="fsa-input fsa-input--small fsa-input--positive" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
@@ -665,6 +681,7 @@
 
         <h3 class="docs__bd docs__figure">Input text - Large</h3>
         <h4 class="docs__sub_style">Default</h4>
+        <p class="docs__code-sample"><code>class="fsa-input fsa-input--large"</code></p>
         <p>
           <input class="fsa-input fsa-input--large" type="text" name="some_name" value="" placeholder="Placeholder">
         </p>
@@ -678,6 +695,7 @@
           <input class="fsa-input fsa-input--large" disabled="" type="text" name="some_name" value="disabled">
         </p>
         <h4 class="docs__sub_style">Block (full-width)</h4>
+        <p class="docs__code-sample"><code>class="fsa-input fsa-input--large fsa-input--block"</code></p>
         <p>
           <input class="fsa-input fsa-input--large fsa-input--block" type="text" name="some_name" value="" placeholder="Placeholder">
         </p>
@@ -691,6 +709,7 @@
           <input class="fsa-input fsa-input--large fsa-input--block" disabled="" type="text" name="some_name" value="disabled">
         </p>
         <h4 class="docs__sub_style">Error</h4>
+        <p class="docs__code-sample"><code>class="fsa-input fsa-input--large fsa-input--error"</code></p>
         <p>
           <input class="fsa-input fsa-input--large fsa-input--error" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
@@ -701,6 +720,7 @@
           <input class="fsa-input fsa-input--large fsa-input--error fsa-input--block" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
         <h4 class="docs__sub_style">Positive</h4>
+        <p class="docs__code-sample"><code>class="fsa-input fsa-input--large fsa-input--positive"</code></p>
         <p>
           <input class="fsa-input fsa-input--large fsa-input--positive" type="text" name="some_name" value="Value" placeholder="Placeholder">
         </p>
@@ -713,26 +733,32 @@
 
         <h3 class="docs__bd docs__figure">Textarea</h3>
         <h4 class="docs__sub_style">Default</h4>
+        <p class="docs__code-sample"><code>class="fsa-textarea"</code></p>
         <p>
           <textarea class="fsa-textarea" name="Name" placeholder="Placeholder">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
         </p>
         <h4 class="docs__sub_style">Disabled</h4>
+        <p class="docs__code-sample"><code>class="fsa-textarea" disabled=""</code></p>
         <p>
           <textarea class="fsa-textarea" disabled="" name="Name" placeholder="">disabled textarea</textarea>
         </p>
         <h4 class="docs__sub_style">Readonly</h4>
+        <p class="docs__code-sample"><code>class="fsa-textarea" readonly=""</code></p>
         <p>
           <textarea class="fsa-textarea" readonly="" name="Name" placeholder="">readonly textarea</textarea>
         </p>
         <h4 class="docs__sub_style">Error</h4>
+        <p class="docs__code-sample"><code>class="fsa-textarea fsa-textarea--error"</code></p>
         <p>
           <textarea class="fsa-textarea fsa-textarea--error" name="Name" placeholder="">error textarea</textarea>
         </p>
         <h4 class="docs__sub_style">Positive</h4>
+        <p class="docs__code-sample"><code>class="fsa-textarea fsa-textarea--positive"</code></p>
         <p>
           <textarea class="fsa-textarea fsa-textarea--positive" name="Name" placeholder="">positive result textarea</textarea>
         </p>
         <h3 class="docs__bd docs__figure">Checkbox</h3>
+        <p class="docs__code-sample"><code>&lt;input class="fsa-checkbox" type="checkbox" id="foo"&gt; &lt;label for="foo"&gt;[label]&lt;/label&gt;</code></p>
         <p>
           <input class="fsa-checkbox" id="apple-pie" type="checkbox" name="pies" value="apple-pie" checked="">
           <label for="apple-pie">Checkbox with a long label cepteur sint occaecat cupidatat non proident id est laborum</label>
@@ -750,6 +776,7 @@
           <label for="moms-apple-pie">Checkbox</label>
         </p>
         <h3 class="docs__bd docs__figure">Radio</h3>
+        <p class="docs__code-sample"><code>&lt;input class="fsa-radio" type="checkbox" id="bar"&gt; &lt;label for="bar"&gt;[label]&lt;/label&gt;</code></p>
         <p>
           <input class="fsa-radio" id="chicken-noodle" type="radio" name="soup" value="chicken-noodle" checked="">
           <label for="chicken-noodle">Radio with a long label cepteur sint occaecat cupidatat non proident id est laborum</label>
@@ -768,6 +795,7 @@
         </p>
         <h3 class="docs__bd docs__figure">Select - Default</h3>
         <h4 class="docs__sub_style">Default</h4>
+        <p class="docs__code-sample"><code>class="fsa-select"</code></p>
         <p>
           <select class="fsa-select" name="State">
             <option value="" selected>- Select a State -</option>
@@ -881,6 +909,7 @@
           </select>
         </p>
         <h4 class="docs__sub_style">Block (full-width)</h4>
+        <p class="docs__code-sample"><code>class="fsa-select fsa-select--block"</code></p>
         <p>
           <select class="fsa-select fsa-select--block" name="State">
             <option value="" selected>- Select a State -</option>
@@ -994,6 +1023,7 @@
           </select>
         </p>
         <h4 class="docs__sub_style">Error</h4>
+        <p class="docs__code-sample"><code>class="fsa-select fsa-select--error"</code></p>
         <p>
           <select class="fsa-select fsa-select--error" name="State">
             <option value="" selected>- Select a State -</option>
@@ -1051,6 +1081,7 @@
           </select>
         </p>
         <h4 class="docs__sub_style">Positive</h4>
+        <p class="docs__code-sample"><code>class="fsa-select fsa-select--positive"</code></p>
         <p>
           <select class="fsa-select fsa-select--positive" name="State">
             <option value="" selected>- Select a State -</option>
@@ -1108,6 +1139,7 @@
           </select>
         </p>
         <h4 class="docs__sub_style">Error, Block</h4>
+        <p class="docs__code-sample"><code>class="fsa-select fsa-select--error fsa-select--block"</code></p>
         <p>
           <select class="fsa-select fsa-select--error fsa-select--block" name="State">
             <option value="" selected>- Select a State -</option>
@@ -1165,6 +1197,7 @@
           </select>
         </p>
         <h4 class="docs__sub_style">Positive, Block</h4>
+        <p class="docs__code-sample"><code>class="fsa-select fsa-select--positive fsa-select--block"</code></p>
         <p>
           <select class="fsa-select fsa-select--positive fsa-select--block" name="State">
             <option value="" selected>- Select a State -</option>
@@ -1223,6 +1256,7 @@
         </p>
         <h3 class="docs__bd docs__figure">Select - Small</h3>
         <h4 class="docs__sub_style">Default</h4>
+        <p class="docs__code-sample"><code>class="fsa-select fsa-select--small"</code></p>
         <p>
           <select class="fsa-select fsa-select--small" name="State">
             <option value="" selected>- Select a State -</option>
@@ -1280,6 +1314,7 @@
           </select>
         </p>
         <h4 class="docs__sub_style">Block (full-width)</h4>
+        <p class="docs__code-sample"><code>class="fsa-select fsa-select--small fsa-select--block"</code></p>
         <p>
           <select class="fsa-select fsa-select--small fsa-select--block" name="State">
             <option value="" selected>- Select a State -</option>
@@ -1337,6 +1372,7 @@
           </select>
         </p>
         <h4 class="docs__sub_style">Error</h4>
+        <p class="docs__code-sample"><code>class="fsa-select fsa-select--small fsa-select--error"</code></p>
         <p>
           <select class="fsa-select fsa-select--small fsa-select--error" name="State">
             <option value="" selected>- Select a State -</option>
@@ -1394,6 +1430,7 @@
           </select>
         </p>
         <h4 class="docs__sub_style">Positive</h4>
+        <p class="docs__code-sample"><code>class="fsa-select fsa-select--small fsa-select--positive"</code></p>
         <p>
           <select class="fsa-select fsa-select--small fsa-select--positive" name="State">
             <option value="" selected>- Select a State -</option>
@@ -1451,6 +1488,7 @@
           </select>
         </p>
         <h4 class="docs__sub_style">Error, Block</h4>
+        <p class="docs__code-sample"><code>class="fsa-select fsa-select--small fsa-select--error fsa-select--block"</code></p>
         <p>
           <select class="fsa-select fsa-select--small fsa-select--error fsa-select--block" name="State">
             <option value="" selected>- Select a State -</option>
@@ -1508,6 +1546,7 @@
           </select>
         </p>
         <h4 class="docs__sub_style">Positive, Block</h4>
+        <p class="docs__code-sample"><code>class="fsa-select fsa-select--small fsa-select--positive fsa-select--block"</code></p>
         <p>
           <select class="fsa-select fsa-select--small fsa-select--positive fsa-select--block" name="State">
             <option value="" selected>- Select a State -</option>
@@ -1566,6 +1605,7 @@
         </p>
         <h3 class="docs__bd docs__figure">Select - Large</h3>
         <h4 class="docs__sub_style">Default</h4>
+        <p class="docs__code-sample"><code>class="fsa-select fsa-select--large"</code></p>
         <p>
           <select class="fsa-select fsa-select--large" name="State">
             <option value="" selected>- Select a State -</option>
@@ -1623,6 +1663,7 @@
           </select>
         </p>
         <h4 class="docs__sub_style">Block (full-width)</h4>
+        <p class="docs__code-sample"><code>class="fsa-select fsa-select--large fsa-select--block"</code></p>
         <p>
           <select class="fsa-select fsa-select--large fsa-select--block" name="State">
             <option value="" selected>- Select a State -</option>
@@ -1680,6 +1721,7 @@
           </select>
         </p>
         <h4 class="docs__sub_style">Error</h4>
+        <p class="docs__code-sample"><code>class="fsa-select fsa-select--large fsa-select--error"</code></p>
         <p>
           <select class="fsa-select fsa-select--large fsa-select--error" name="State">
             <option value="" selected>- Select a State -</option>
@@ -1737,6 +1779,7 @@
           </select>
         </p>
         <h4 class="docs__sub_style">Positive</h4>
+        <p class="docs__code-sample"><code>class="fsa-select fsa-select--large fsa-select--positive"</code></p>
         <p>
           <select class="fsa-select fsa-select--large fsa-select--positive" name="State">
             <option value="" selected>- Select a State -</option>
@@ -1794,6 +1837,7 @@
           </select>
         </p>
         <h4 class="docs__sub_style">Error, Block</h4>
+        <p class="docs__code-sample"><code>class="fsa-select fsa-select--large fsa-select--error fsa-select--block"</code></p>
         <p>
           <select class="fsa-select fsa-select--large fsa-select--error fsa-select--block" name="State">
             <option value="" selected>- Select a State -</option>
@@ -1851,6 +1895,7 @@
           </select>
         </p>
         <h4 class="docs__sub_style">Positive, Block</h4>
+        <p class="docs__code-sample"><code>class="fsa-select fsa-select--large fsa-select--positive fsa-select--block"</code></p>
         <p>
           <select class="fsa-select fsa-select--large fsa-select--positive fsa-select--block" name="State">
             <option value="" selected>- Select a State -</option>
@@ -1914,6 +1959,7 @@
       <div class="docs__bd">
         <h3 class="docs__bd docs__figure">Default</h3>
 
+        <p class="docs__code-sample"><code>class="fsa-table"</code></p>
         <table class="fsa-table">
           <thead>
             <tr>
@@ -1997,6 +2043,7 @@
 
         <h3 class="docs__bd docs__figure">Borderless</h3>
 
+        <p class="docs__code-sample"><code>class="fsa-table fsa-table--borderless"</code></p>
         <table class="fsa-table fsa-table--borderless">
           <thead>
             <tr>
@@ -2080,6 +2127,7 @@
 
         <h3 class="docs__bd docs__figure">Responsive</h3>
 
+        <p class="docs__code-sample"><code>class="fsa-table fsa-table--responsive"</code></p>
         <table class="fsa-table fsa-table--responsive">
           <thead>
             <tr>
@@ -2162,6 +2210,7 @@
         </table>
 
         <h3 class="docs__bd docs__figure">Plain</h3>
+        <p class="docs__code-sample"><code>&lt;table&gt;</code></p>
         <table>
           <thead>
             <tr>
@@ -2430,9 +2479,7 @@
     <section class="docs__section" id="utilities">
       <h2 class="docs__bd docs__figure-group">Utilities</h2>
       <div class="docs__bd">
-        <p style="outline: 1px solid Orangered; background-color: #ccc; padding: 1em; text-align: center; font-size: 40px;">Drafting in <a href="working.html">working.html</a></p>
         <div class="docs__bd">
-
           <h3 class="docs__bd docs__figure">Margins</h3>
           <div class="fsa-grid">
             <div class="fsa-grid__1 fsa-grid__1/2@sm fsa-grid__1/4@m">
@@ -2679,62 +2726,78 @@
 
           <h3 class="docs__bd docs__figure">Floats</h3>
           <h4 class="docs__sub_style">Left</h4>
+          <p class="docs__code-sample"><code>class="fsa-float--left"</code></p>
           <div class="fsa-clearfix">
             <p class="fsa-float--left">I'm floating to left</p>
           </div>
           <h4 class="docs__sub_style">Right</h4>
+          <p class="docs__code-sample"><code>class="fsa-float--right"</code></p>
           <div class="fsa-clearfix">
             <p class="fsa-float--right">I'm floating to right</p>
           </div>
           <h4 class="docs__sub_style">Clearfix</h4>
+          <p class="docs__code-sample"><code>class="fsa-clearfix"</code></p>
           <div class="fsa-clearfix">
             <p class="fsa-float--left">I'm floating to left</p>
             <p class="fsa-float--right">I'm floating to right</p>
           </div>
           <p>The above has been cleared</p>
           <h4 class="docs__sub_style">Clear</h4>
+          <p class="docs__code-sample"><code>class="fsa-clear"</code></p>
           <p class="fsa-float--left">I'm floating to left</p>
           <p class="fsa-clear">I've been cleared</p>
 
+          <h3 class="docs__bd docs__figure">Font</h3>
+          <h4 class="docs__sub_style">Sans-Serif <small> (Default)</small></h4>
+          <p class="docs__code-sample"><code>class="fsa-font--sans"</code></p>
+          <p class="fsa-ellipsis fsa-font--sans">Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
+          <h4 class="docs__sub_style">Serif</h4>
+          <p class="docs__code-sample"><code>class="fsa-font--serif"</code></p>
+          <p class="fsa-ellipsis fsa-font--serif">Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
+
           <h3 class="docs__bd docs__figure">Text Size</h3>
-          <p class="fsa-ellipsis fsa-text-size--0"><code>fsa-text-size--0</code> Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
-          <p class="fsa-ellipsis fsa-text-size--1"><code>fsa-text-size--1</code> Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
-          <p class="fsa-ellipsis fsa-text-size--2"><code>fsa-text-size--2</code> Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
-          <p class="fsa-ellipsis fsa-text-size--3"><code>fsa-text-size--3</code> Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
-          <p class="fsa-ellipsis fsa-text-size--4"><code>fsa-text-size--4</code> Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
-          <p class="fsa-ellipsis fsa-text-size--5"><code>fsa-text-size--5</code> Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
-          <p class="fsa-ellipsis fsa-text-size--6"><code>fsa-text-size--6</code> Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
-          <p class="fsa-ellipsis fsa-text-size--7"><code>fsa-text-size--7</code> Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
-          <p class="fsa-ellipsis fsa-text-size--8"><code>fsa-text-size--8</code> Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
-          <p class="fsa-ellipsis fsa-text-size--9"><code>fsa-text-size--9</code> Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
+          <p class="docs__code-sample"><code>class="fsa-text-size--[n]"</code></p>
+          <p class="fsa-ellipsis fsa-text-size--0">Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
+          <p class="fsa-ellipsis fsa-text-size--1">Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
+          <p class="fsa-ellipsis fsa-text-size--2">Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
+          <p class="fsa-ellipsis fsa-text-size--3">Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
+          <p class="fsa-ellipsis fsa-text-size--4">Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
+          <p class="fsa-ellipsis fsa-text-size--5">Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
+          <p class="fsa-ellipsis fsa-text-size--6">Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
+          <p class="fsa-ellipsis fsa-text-size--7">Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
+          <p class="fsa-ellipsis fsa-text-size--8">Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
+          <p class="fsa-ellipsis fsa-text-size--9">Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
 
           <h3 class="docs__bd docs__figure">Text Alignment</h3>
           <h4 class="docs__sub_style">Right</h4>
+          <p class="docs__code-sample"><code>class="fsa-text-align--right"</code></p>
           <p class="fsa-text-align--right">I'm aligned right</p>
           <h4 class="docs__sub_style">Centered</h4>
+          <p class="docs__code-sample"><code>class="fsa-text-align--center"</code></p>
           <p class="fsa-text-align--center">I'm aligned center</p>
           <h4 class="docs__sub_style">Left</h4>
+          <p class="docs__code-sample"><code>class="fsa-text-align--left"</code></p>
           <p class="fsa-text-align--left">I'm aligned left</p>
 
           <h3 class="docs__bd docs__figure">Text Headers</h3>
           <p>While <code>h1</code> – <code>h6</code> elements have a hierarchical style assigned, sometimes the heading level may vary depending on its context. These CSS Utilities below enable you to maintain the visual hierarchy independent from the structural HTML heading level.</p>
 
-          <h4 class="docs__sub_style"><code>fsa-text--h1</code></h4>
+          <p class="docs__code-sample"><code> class="fsa-text--h1"</code></p>
           <h2 class="fsa-text--h1">h2 that looks like an h1</h2>
 
-          <h4 class="docs__sub_style"><code>fsa-text--h2</code></h4>
+          <p class="docs__code-sample"><code> class="fsa-text--h2"</code></p>
           <h2 class="fsa-text--h2">h2 that looks like an h2</h2>
 
-          <h4 class="docs__sub_style"><code>fsa-text--h3</code></h4>
+          <p class="docs__code-sample"><code> class="fsa-text--h3"</code></p>
           <h2 class="fsa-text--h3">h2 that looks like an h3</h2>
 
-          <h4 class="docs__sub_style"><code>fsa-text--h4</code></h4>
+          <p class="docs__code-sample"><code> class="fsa-text--h4"</code></p>
           <h2 class="fsa-text--h4">h2 that looks like an h4</h2>
 
-          <h4 class="docs__sub_style"><code>fsa-text--h5</code></h4>
+          <p class="docs__code-sample"><code> class="fsa-text--h5"</code></p>
           <h2 class="fsa-text--h5">h2 that looks like an h5</h2>
 
-          <h4 class="docs__sub_style"><code>fsa-text--h6</code></h4>
+          <p class="docs__code-sample"><code> class="fsa-text--h6"</code></p>
           <h2 class="fsa-text--h6">h2 that looks like an h6</h2>
 
         </div>
