@@ -136,6 +136,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
         margin-right: 0;
         padding: $size-small;
         color: $color-white;
+        text-decoration: none;
       }
 
       @include breakpoint(L) {
