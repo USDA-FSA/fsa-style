@@ -548,6 +548,28 @@ mark {
   background-color: #fff1d2;
 }
 
+blockquote {
+  font-size: 15px;
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 0;
+  font-family: "Merriweather", "Georgia", "Cambria", "Times New Roman", "Times", serif;
+  padding-left: 12px;
+  padding-left: 1.2rem;
+  border-left: 4px solid #c8c7c6;
+  border-left: 0.4rem solid #c8c7c6;
+  max-width: 530px;
+  max-width: 53rem;
+}
+
+@media (min-width: 48em) {
+  blockquote {
+    font-size: 2rem;
+    line-height: 1.3;
+    padding-left: 2.4rem;
+  }
+}
+
 .fsa-grid {
   letter-spacing: -.31em;
   *letter-spacing: normal;
@@ -1824,19 +1846,6 @@ img {
   max-width: 100%;
 }
 
-.media_link {
-  display: inline-block;
-  line-height: 0;
-}
-
-@-moz-document url-prefix() {
-  .media_link {
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-  }
-}
-
 .fsa-input,
 .fsa-textarea {
   -webkit-appearance: none;
@@ -2937,6 +2946,16 @@ h6,
 .usa-flag_icon {
   margin-right: 2px;
   margin-right: .2rem;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+figure {
+  margin: 0;
 }
 
 .fsa-m--none {
