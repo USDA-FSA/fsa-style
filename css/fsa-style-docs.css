@@ -120,6 +120,16 @@ html:hover body::before {
   text-align: center;
 }
 
+.docs__title {
+  margin-top: 1em;
+}
+
+@media (min-width: 48em) {
+  .docs__title {
+    margin-top: 2em;
+  }
+}
+
 .docs__figure-group {
   color: #205493;
   border-bottom: 2px solid;
@@ -137,17 +147,6 @@ html:hover body::before {
   color: #205493;
 }
 
-.docs__nav {
-  padding: 0;
-  background-color: #494440;
-  color: #fff;
-  width: 100%;
-  position: absolute;
-  z-index: 100;
-  margin: -19.2px 0 0 -19.2px;
-  margin: -1.2rem 0 0 -1.2rem;
-}
-
 @media (min-width: 48em) {
   .docs__nav {
     position: fixed;
@@ -155,6 +154,8 @@ html:hover body::before {
     right: 0px;
     left: 0px;
     margin: 0;
+    background-color: #494440;
+    color: #fff;
   }
 }
 
@@ -166,6 +167,13 @@ html:hover body::before {
   max-width: 1040px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 1em;
+}
+
+@media (min-width: 48em) {
+  .docs__primary-nav {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 64em) {
@@ -200,17 +208,18 @@ html:hover body::before {
 }
 
 .docs__primary-nav a {
-  font-size: 20.8px;
-  font-size: 1.3rem;
-  color: #fff;
   display: inline-block;
-  padding: 12.8px;
-  padding: 0.8rem;
+  margin-right: 6.4px;
+  margin-right: 0.4rem;
+  text-decoration: underline;
 }
 
 @media (min-width: 48em) {
   .docs__primary-nav a {
     font-size: 1.4rem;
+    margin-right: 0;
+    padding: 0.8rem;
+    color: #fff;
   }
 }
 
@@ -220,13 +229,20 @@ html:hover body::before {
   }
 }
 
-.docs__primary-nav a:hover {
-  background: rgba(0, 0, 0, 0.2);
+.docs__primary-nav a:visited {
+  color: #0071bc;
 }
 
-.docs__page {
-  padding: 19.2px;
-  padding: 1.2rem;
+@media (min-width: 48em) {
+  .docs__primary-nav a:visited {
+    color: #fff;
+  }
+}
+
+@media (min-width: 48em) {
+  .docs__primary-nav a:hover {
+    background: rgba(0, 0, 0, 0.2);
+  }
 }
 
 .docs__section {
@@ -243,6 +259,8 @@ html:hover body::before {
 .docs__main {
   padding-top: 80px;
   padding-top: 5rem;
+  padding: 0 19.2px;
+  padding: 0 1.2rem;
 }
 
 .docs__logo {
