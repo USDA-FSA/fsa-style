@@ -220,6 +220,7 @@ html:hover body::before {
     margin-right: 0;
     padding: 0.8rem;
     color: #fff;
+    text-decoration: none;
   }
 }
 
