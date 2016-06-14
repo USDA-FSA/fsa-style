@@ -77,16 +77,12 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   &__nav {
 
-    // padding: 0;
-    // width: 100%;
-    // position: absolute;
-    // z-index: 100;
-
     @include breakpoint(ML) {
       @include position(fixed, 0px 0px 0 0px); // scss-lint:disable ZeroUnit
       margin: 0;
       background-color: $color-fsa-tertiary;
       color: $color-white;
+      z-index: 100;
     }
 
   }
