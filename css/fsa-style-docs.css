@@ -147,6 +147,10 @@ html:hover body::before {
   color: #205493;
 }
 
+.docs__disclaimer {
+  display: none;
+}
+
 @media (min-width: 48em) {
   .docs__nav {
     position: fixed;
