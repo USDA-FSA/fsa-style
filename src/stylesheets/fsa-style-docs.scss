@@ -28,7 +28,13 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   &__title {
     // @include font-size(9);
     // font-family: $font-sans;
-    // margin-top: 0;
+    margin-top: 1em;
+
+    @include breakpoint(ML) {
+      margin-top: 2em;
+    }
+
+
   }
 
   &__figure-group {
@@ -71,24 +77,16 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   &__nav {
 
-    padding: 0;
-    background-color: $color-fsa-tertiary;
-    color: $color-white;
-    width: 100%;
-    position: absolute;
-    z-index: 100;
-
-    // scss-lint:disable SelectorFormat TrailingSemicolon SpaceAfterPropertyColon
-    margin:
-      (-$size-default)
-      0
-      0
-      (-$size-default)
-    ;
+    // padding: 0;
+    // width: 100%;
+    // position: absolute;
+    // z-index: 100;
 
     @include breakpoint(ML) {
       @include position(fixed, 0px 0px 0 0px); // scss-lint:disable ZeroUnit
       margin: 0;
+      background-color: $color-fsa-tertiary;
+      color: $color-white;
     }
 
   }
@@ -99,11 +97,15 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     max-width: $site-max-width;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 1em;
+
+    @include breakpoint(ML) {
+      margin-bottom: 0;
+    }
 
     @include breakpoint(XL) {
       max-width: ($site-max-width + 24px);
     }
-
 
     &-item {
 
@@ -125,13 +127,15 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     }
 
     a {
-      @include font-size (0);
-      color: $color-white;
       display: inline-block;
-      padding: $size-small;
+      margin-right: $size-base;
+      text-decoration: underline;
 
       @include breakpoint(ML) {
         @include font-size (1);
+        margin-right: 0;
+        padding: $size-small;
+        color: $color-white;
       }
 
       @include breakpoint(L) {
@@ -139,8 +143,20 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       }
 
       // scss-lint:disable NestingDepth
+      &:visited {
+
+        color: $color-fsa-link;
+
+        @include breakpoint(ML) {
+          color: $color-white;
+        }
+
+      }
+
       &:hover {
-        background: rgba(0, 0, 0, .2);
+        @include breakpoint(ML) {
+          background: rgba(0, 0, 0, .2);
+        }
       }
 
     }
@@ -151,7 +167,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   // Structure
 
   &__page {
-    padding: $size-default;
+    // padding: $size-default;
   }
 
   &__section {
@@ -166,6 +182,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   &__main {
     padding-top: 5rem;
+    padding: 0 $size-default;
   }
 
   // -----------------------------------------------------------------------------
@@ -222,7 +239,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       @include font-size(3);
       color: $color-annotation;
       font-family: $font-serif;
-      // margin: $size-small $size-small;
     }
 
     &__attr {
