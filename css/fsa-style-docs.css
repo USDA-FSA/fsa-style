@@ -156,6 +156,7 @@ html:hover body::before {
     margin: 0;
     background-color: #494440;
     color: #fff;
+    z-index: 100;
   }
 }
 
