@@ -73,6 +73,14 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   }
 
   // -----------------------------------------------------------------------------
+  // Disclaimer
+
+  &__disclaimer {
+    // outline: 1px solid red;
+    display: none;
+  }
+
+  // -----------------------------------------------------------------------------
   // Nav
 
   &__nav {
