@@ -107,7 +107,8 @@ a:hover {
 /**
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
-abbr[title] {
+abbr[title], acronym[title],
+dfn[title] {
   border-bottom: 1px dotted;
 }
 
@@ -492,22 +493,23 @@ pre,
 code,
 kbd,
 samp,
+var,
 tt {
-  font-size: 14px;
-  font-size: 1.4rem;
-  color: #183f6e;
+  font-size: 13px;
+  font-size: 1.3rem;
+  color: #981b1e;
   font-family: Consolas, Menlo, Monaco, "Lucida Console", "Courier New", monospace;
   border-radius: 2px;
-  background-color: #fff;
-  padding: 2px 4px;
-  padding: 0.2rem 0.4rem;
-  border: 1px solid #c8c7c6;
+  background-color: #f8fafc;
+  padding: 2px;
+  padding: 0.2rem;
 }
 
 pre code,
 code code,
 kbd code,
 samp code,
+var code,
 tt code {
   border: 0;
   display: block;
@@ -517,6 +519,7 @@ pre p,
 code p,
 kbd p,
 samp p,
+var p,
 tt p {
   margin-top: 0;
 }
@@ -524,6 +527,25 @@ tt p {
 pre {
   padding: 4px;
   padding: 0.4rem;
+}
+
+abbr[title], acronym[title],
+dfn[title] {
+  cursor: default;
+}
+
+ins {
+  text-decoration: none;
+  border-bottom: 1px dashed;
+}
+
+u {
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+mark {
+  background-color: #fff1d2;
 }
 
 .fsa-grid {
@@ -550,6 +572,12 @@ pre {
   background-color: #edecec;
   padding: 4px;
   padding: 0.4rem;
+}
+
+.fsa-grid__demo code {
+  background-color: #edecec;
+  border: 0;
+  padding: 0;
 }
 
 .fsa-grid__auto {
