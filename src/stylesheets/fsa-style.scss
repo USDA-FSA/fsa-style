@@ -23,7 +23,8 @@
 
 // @import 'elements/buttons'; // USWDS
 @import 'elements/buttons--fsa';
-@import 'elements/figure'; // USWDS
+// @import 'elements/figure'; // USWDS
+@import 'elements/figure--fsa';
 // @import 'elements/inputs'; // USWDS
 @import 'elements/form-elements.textfields--fsa';
 @import 'elements/form-elements.checkbox-radio--fsa';
@@ -44,7 +45,7 @@
 @import 'components/disclaimer'; // USWDS
 // @import 'components/footer'; // USWDS
 // // @import 'components/forms'; // USWDS
-// @import 'components/forms--fsa';
+@import 'components/forms--fsa';
 // @import 'components/form-structure--fsa';
 // @import 'components/search'; // USWDS
 // @import 'components/sidenav'; // USWDS
