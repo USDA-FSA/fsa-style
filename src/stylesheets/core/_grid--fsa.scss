@@ -144,6 +144,15 @@ $fsa-grid-columns: 12;
     background-color: $color-fsa-tertiary-100;
     padding: $size-base;
 
+    code {
+
+      background-color: $color-fsa-tertiary-100;
+      border: 0;
+      padding: 0;
+
+    }
+
+
   }
 
 }
