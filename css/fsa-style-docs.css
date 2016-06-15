@@ -118,17 +118,29 @@ html:hover body::before {
 }
 
 .docs__disclaimer__bd {
-  text-align: center;
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
   color: #fff;
+  padding: 0 19.2px;
+  padding: 0 1.2rem;
 }
 
 .docs__notice {
+  font-size: 20.8px;
+  font-size: 1.3rem;
   padding: 6.4px;
   padding: 0.4rem;
-  background-color: #fff1d2;
+  background-color: #2f2c2a;
   text-align: center;
-  margin-bottom: 57.6px;
-  margin-bottom: 3.6rem;
+  color: #f9c642;
+  margin-bottom: 0;
+}
+
+.docs__section + .docs__notice {
+  margin-top: -57.6px;
+  margin-top: -3.6rem;
 }
 
 .docs__title {
@@ -144,6 +156,8 @@ html:hover body::before {
 }
 
 .docs__figure-group {
+  margin-top: 57.6px;
+  margin-top: 3.6rem;
   border-bottom: 2px solid #90aac9;
 }
 
@@ -155,6 +169,8 @@ html:hover body::before {
 }
 
 .docs__sub_style {
+  margin-top: 38.4px;
+  margin-top: 2.4rem;
   color: #205493;
 }
 
@@ -257,8 +273,8 @@ html:hover body::before {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 19.2px;
-  margin-bottom: 1.2rem;
+  margin-bottom: 38.4px;
+  margin-bottom: 2.4rem;
 }
 
 @media (min-width: 48em) {
@@ -363,6 +379,8 @@ html:hover body::before {
   display: flex;
   -ms-flex-align: center;
       align-items: center;
+  margin-bottom: 38.4px;
+  margin-bottom: 2.4rem;
 }
 
 .docs__font--source-sans-pro {

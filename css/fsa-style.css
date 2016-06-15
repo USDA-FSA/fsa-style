@@ -2450,6 +2450,11 @@ li {
   display: none;
 }
 
+ul,
+ol {
+  margin-top: 0;
+}
+
 .fsa-list--inline > li {
   display: inline-block;
   margin-right: 12px;
@@ -2483,7 +2488,7 @@ dd + dt {
 table {
   width: 100%;
   border-spacing: 0;
-  margin: 2em 0;
+  margin: 0 0 2em;
   min-width: 100%;
 }
 
@@ -2802,6 +2807,7 @@ p a,
 }
 
 p {
+  margin-top: 0;
   line-height: inherit;
 }
 
@@ -2888,6 +2894,7 @@ h6,
 .fsa-text--h6 {
   color: #205493;
   font-weight: 300;
+  margin-top: 0;
 }
 
 h5,
