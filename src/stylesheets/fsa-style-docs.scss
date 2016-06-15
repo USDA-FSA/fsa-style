@@ -16,8 +16,17 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
 .docs {
 
+  // -----------------------------------------------------------------------------
+  // Disclaimer
+
+  &__disclaimer {
+    &__bd {
+      text-align: center;
+    }
+  }
+
   &__notice {
-    padding: $size-default;
+    padding: $size-base;
     background-color: $color-gold-lightest;
     text-align: center;
   }
@@ -28,12 +37,13 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   &__title {
     // @include font-size(9);
     // font-family: $font-sans;
+
     margin-top: 1em;
 
-    @include breakpoint(ML) {
-      margin-top: 2em;
-    }
-
+    // TODO: Fixed Nav
+    // @include breakpoint(ML) {
+    //   margin-top: 2em;
+    // }
 
   }
 
@@ -73,24 +83,18 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   }
 
   // -----------------------------------------------------------------------------
-  // Disclaimer
-
-  &__disclaimer {
-    display: none;
-  }
-
-  // -----------------------------------------------------------------------------
   // Nav
 
   &__nav {
 
-    @include breakpoint(ML) {
-      @include position(fixed, 0px 0px 0 0px); // scss-lint:disable ZeroUnit
-      margin: 0;
-      background-color: $color-fsa-tertiary;
-      color: $color-white;
-      z-index: 100;
-    }
+    // TODO: Fixed Nav
+    // @include breakpoint(ML) {
+    //   @include position(fixed, 0px 0px 0 0px); // scss-lint:disable ZeroUnit
+    //   margin: 0;
+    //   background-color: $color-fsa-tertiary;
+    //   color: $color-white;
+    //   z-index: 100;
+    // }
 
   }
 
@@ -102,13 +106,15 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     margin-right: auto;
     margin-bottom: 1em;
 
-    @include breakpoint(ML) {
-      margin-bottom: 0;
-    }
+    // TODO: Fixed Nav
+    // @include breakpoint(ML) {
+    //   margin-bottom: 0;
+    // }
 
-    @include breakpoint(XL) {
-      max-width: ($site-max-width + 24px);
-    }
+    // TODO: Fixed Nav
+    // @include breakpoint(XL) {
+    //   max-width: ($site-max-width + 24px);
+    // }
 
     &-item {
 
@@ -120,10 +126,11 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
         display: none;
 
-        @include breakpoint(ML) {
-          display: block;
-          float: right;
-        }
+        // TODO: Fixed Nav
+        // @include breakpoint(ML) {
+        //   display: block;
+        //   float: right;
+        // }
 
       }
 
@@ -135,33 +142,38 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       text-decoration: underline;
 
       @include breakpoint(ML) {
-        @include font-size (1);
-        margin-right: 0;
-        padding: $size-small;
-        color: $color-white;
-        text-decoration: none;
+        margin-right: $size-small;
+        // TODO: Fixed Nav
+        // @include font-size (1);
+        // margin-right: 0;
+        // padding: $size-small;
+        // color: $color-white;
+        // text-decoration: none;
       }
 
-      @include breakpoint(L) {
-        padding: $size-default;
-      }
+      // TODO: Fixed Nav
+      // @include breakpoint(L) {
+      //   padding: $size-default;
+      // }
 
       // scss-lint:disable NestingDepth
       &:visited {
 
         color: $color-fsa-link;
 
-        @include breakpoint(ML) {
-          color: $color-white;
-        }
+        // TODO: Fixed Nav
+        // @include breakpoint(ML) {
+        //   color: $color-white;
+        // }
 
       }
 
-      &:hover {
-        @include breakpoint(ML) {
-          background: rgba(0, 0, 0, .2);
-        }
-      }
+      // TODO: Fixed Nav
+      // &:hover {
+      //   @include breakpoint(ML) {
+      //     background: rgba(0, 0, 0, .2);
+      //   }
+      // }
 
     }
 
