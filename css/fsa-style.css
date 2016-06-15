@@ -1675,13 +1675,13 @@ blockquote {
   padding: 0;
   margin: 0;
   border: 0;
-  text-decoration: none;
   cursor: pointer;
   text-align: center;
   line-height: 1;
   position: relative;
   top: 1px;
   top: .1rem;
+  text-decoration: none !important;
   font-size: 17px;
   font-size: 1.7rem;
   font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
@@ -1724,7 +1724,6 @@ blockquote {
 .fsa-btn:focus:not([disabled]), .fsa-btn:active:not([disabled]) {
   color: #fff;
   background-color: #211f1d;
-  text-decoration: none;
   box-shadow: none;
 }
 
@@ -1755,7 +1754,6 @@ blockquote {
 }
 
 .fsa-btn--primary:hover {
-  text-decoration: none;
   color: #fff;
 }
 
