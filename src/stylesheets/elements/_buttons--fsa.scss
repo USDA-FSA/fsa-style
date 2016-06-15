@@ -46,12 +46,13 @@ $button-alt-border-width : .2rem;
   padding: 0;
   margin: 0;
   border: 0;
-  text-decoration: none;
   cursor: pointer;
   text-align: center;
   line-height: $button-line-height;
   position: relative;
   top: .1rem;
+  // scss-lint:disable all ImportantRule
+  text-decoration: none !important; // yep, intentional
 
   @supports (-webkit-appearance:none) {
     // Webkit only.
@@ -94,7 +95,6 @@ $button-alt-border-width : .2rem;
   &:active:not([disabled]) {
     color: $button-text;
     background-color: $button-default-active;
-    text-decoration: none;
     box-shadow: none;
   }
 
@@ -138,7 +138,6 @@ $button-alt-border-width : .2rem;
     }
 
     &:hover {
-      text-decoration: none;
       color: $button-primary-text;
     }
 
