@@ -24,7 +24,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     background-color: $color-fsa-primary-900;
 
     &__bd {
-      max-width: $site-max-width;
+      max-width: ($site-max-width + 24px);
       margin-left: auto;
       margin-right: auto;
       text-align: left;
@@ -32,28 +32,46 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       padding: 0 $size-default;
     }
 
-  }
+    &__stage {
 
-  &__notice {
+      @include breakpoint(MML) {
+        display: block;
+      }
 
-    @include font-size(0);
-    padding: $size-base;
-    background-color: $color-fsa-tertiary-900;
-    text-align: center;
-    color: $color-gold-light;
-    margin-bottom: 0;
+      &--prototype {
+        @include font-size(0);
+        background-color: $color-gold-light;
+        color: black;
+        padding: 0 $size-base;
+        position: relative;
+        top: 1px;
+      }
 
-    .docs__section + & {
-      margin-top: (-$size-large);
     }
 
   }
+
+  // &__notice {
+  //
+  //   @include font-size(0);
+  //   padding: $size-base;
+  //   text-align: center;
+  //   background-color: $color-fsa-tertiary-900;
+  //   color: $color-gold-light;
+  //   margin-bottom: 0;
+  //
+  //   .docs__section + & {
+  //     margin-top: (-$size-large);
+  //   }
+  //
+  // }
 
   // -----------------------------------------------------------------------------
   // Doc Titles
 
   &__title {
-    margin-top: 1em;
+    margin-top: 2em;
+    margin-top: 20vh;
     color: $color-fsa-white;
 
     @include breakpoint(ML) {
@@ -139,21 +157,22 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       display: inline-block;
 
       // scss-lint:disable NestingDepth
-      &--top {
+      &--floater {
 
-        display: none;
+        display: block;
+        margin-top: 1em;
 
-        // TODO: Fixed Nav: Issue #66
-        // @include breakpoint(ML) {
-        //   display: block;
-        //   float: right;
-        // }
+        @include breakpoint(ML) {
+          float: right;
+          margin-top: 0;
+        }
 
       }
 
     }
 
-    a {
+    &-link {
+
       display: inline-block;
       margin-right: $size-base;
       text-decoration: underline;
