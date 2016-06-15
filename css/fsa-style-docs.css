@@ -204,6 +204,7 @@ html:hover body::before {
 .docs__primary-nav-item--floater {
   display: block;
   margin-top: 1em;
+  margin-right: 0;
 }
 
 @media (min-width: 48em) {
@@ -215,9 +216,8 @@ html:hover body::before {
 
 .docs__primary-nav-link {
   display: inline-block;
-  margin-right: 6.4px;
-  margin-right: 0.4rem;
-  text-decoration: underline;
+  margin-right: 12.8px;
+  margin-right: 0.8rem;
   color: #fff;
 }
 
@@ -229,6 +229,18 @@ html:hover body::before {
 
 .docs__primary-nav-link:visited {
   color: #fff;
+}
+
+.docs__primary-nav__icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12.8px;
+  margin-right: 0.8rem;
+  width: 38.4px;
+  width: 2.4rem;
+  height: 38.4px;
+  height: 2.4rem;
+  margin-top: -2px;
 }
 
 .docs__section {
