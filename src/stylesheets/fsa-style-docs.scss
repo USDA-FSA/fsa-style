@@ -20,18 +20,33 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   // Disclaimer
 
   &__disclaimer {
+
     background-color: $color-fsa-primary-900;
+
     &__bd {
-      text-align: center;
-      color: $color-fsa-white
+      max-width: $site-max-width;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      color: $color-fsa-white;
+      padding: 0 $size-default;
     }
+
   }
 
   &__notice {
+
+    @include font-size(0);
     padding: $size-base;
-    background-color: $color-gold-lightest;
+    background-color: $color-fsa-tertiary-900;
     text-align: center;
-    margin-bottom: $size-large;
+    color: $color-gold-light;
+    margin-bottom: 0;
+
+    .docs__section + & {
+      margin-top: (-$size-large);
+    }
+
   }
 
   // -----------------------------------------------------------------------------
@@ -53,6 +68,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     // text-transform: uppercase;
     // font-weight: $font-bold;
     // color: $color-annotation;
+    margin-top: $size-large;
     border-bottom: 2px solid $color-fsa-secondary-200;
   }
 
@@ -79,6 +95,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     // @include font-size(1);
     // font-family: $font-sans;
     // font-weight: $font-bold;
+    margin-top: $size-medium;
     color: $color-annotation;
   }
 
@@ -234,7 +251,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
     @include reset-ul();
 
-    margin-bottom: $size-default;
+    margin-bottom: $size-medium;
 
     @include breakpoint(ML) {
       display: flex;
@@ -303,9 +320,9 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
     display: flex;
     align-items: center;
+    margin-bottom: $size-medium;
 
     &--source-sans-pro {
-
 
       font-family: $font-sans;
       font-weight: $font-normal;
