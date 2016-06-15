@@ -161,6 +161,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
         display: block;
         margin-top: 1em;
+        margin-right: 0;
 
         @include breakpoint(ML) {
           float: right;
@@ -174,8 +175,8 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     &-link {
 
       display: inline-block;
-      margin-right: $size-base;
-      text-decoration: underline;
+      margin-right: $size-small;
+      // text-decoration: underline;
       color: $color-fsa-white;
 
       @include breakpoint(ML) {
@@ -212,6 +213,15 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       //   }
       // }
 
+    }
+
+    &__icon {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: $size-small;
+      width: $size-medium;
+      height: $size-medium;
+      margin-top: -2px;
     }
 
   }
