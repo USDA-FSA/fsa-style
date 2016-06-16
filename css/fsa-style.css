@@ -2327,42 +2327,6 @@ img {
   }
 }
 
-.usa-label, .usa-label-big {
-  background-color: #0071bc;
-  border-radius: 0.3rem;
-  color: #fff;
-  font-size: 15px;
-  font-size: 1.5rem;
-  margin-right: 5px;
-  margin-right: 0.5rem;
-  padding: 1px 7px;
-  padding: 0.1rem 0.7rem;
-  text-transform: uppercase;
-}
-
-.usa-label:only-of-type, .usa-label-big:only-of-type {
-  margin-right: 0;
-}
-
-.usa-label-big {
-  font-size: 17px;
-  font-size: 1.7rem;
-  padding-left: 9px;
-  padding-left: 0.9rem;
-  padding-right: 9px;
-  padding-right: 0.9rem;
-}
-
-a.usa-label, a.usa-label-big {
-  border-bottom: none;
-}
-
-a.usa-label:hover, a.usa-label-big:hover {
-  background-color: #205493;
-  border-bottom: none;
-  color: #fff;
-}
-
 ul,
 ol {
   margin-bottom: 2em;
@@ -2961,6 +2925,28 @@ fieldset {
 
 figure {
   margin: 0;
+}
+
+.skipnav {
+  background: transparent;
+  color: #2f2c2a;
+  left: 0;
+  padding: 10px 15px;
+  padding: 1rem 1.5rem;
+  position: absolute;
+  top: -42px;
+  top: -4.2rem;
+  transition: all 0.2s ease-in-out;
+  z-index: 100;
+}
+
+.skipnav:focus {
+  background: #fff;
+  left: 0;
+  outline: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.2s ease-in-out;
 }
 
 .fsa-m--none {
