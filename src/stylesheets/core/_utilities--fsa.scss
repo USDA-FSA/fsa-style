@@ -1,4 +1,133 @@
 // -----------------------------------------------------------------------------
+// Grid Functions
+
+// scss-lint:disable PropertySpelling
+
+@mixin fsa-grid-row() {
+  letter-spacing: -.31em;
+  *letter-spacing: normal;
+  *word-spacing: -.43em;
+  text-rendering: optimizespeed;
+  font-family: $font-base;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  margin-left: -$fsa-grid-gutter;
+}
+
+@mixin fsa-grid-column() {
+
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+  padding-left: $fsa-grid-gutter;
+
+  // scss-lint:disable SelectorFormat
+  .fsa-grid--no-gutter & {
+    padding-left: 0;
+  }
+
+}
+
+@mixin fsa-grid-column-width($numerator, $denominator: $fsa-grid-columns) {
+  width: ($numerator / $denominator) * 100%;
+}
+
+@mixin fsa-grid($namespace: '') {
+
+  .fsa-grid__auto#{$namespace} {
+    @include fsa-grid-column();
+    flex: 1;
+  }
+
+  .fsa-grid__1#{$namespace},
+  .fsa-grid__1\/1#{$namespace},
+  .fsa-grid__1\/12#{$namespace},
+  .fsa-grid__1\/2#{$namespace},
+  .fsa-grid__1\/3#{$namespace},
+  .fsa-grid__1\/4#{$namespace},
+  .fsa-grid__1\/6#{$namespace},
+  .fsa-grid__10\/12#{$namespace},
+  .fsa-grid__11\/12#{$namespace},
+  .fsa-grid__12\/12#{$namespace},
+  .fsa-grid__2\/12#{$namespace},
+  .fsa-grid__2\/3#{$namespace},
+  .fsa-grid__3\/12#{$namespace},
+  .fsa-grid__3\/4#{$namespace},
+  .fsa-grid__4\/12#{$namespace},
+  .fsa-grid__5\/12#{$namespace},
+  .fsa-grid__5\/6#{$namespace},
+  .fsa-grid__6\/12#{$namespace},
+  .fsa-grid__7\/12#{$namespace},
+  .fsa-grid__8\/12#{$namespace},
+  .fsa-grid__9\/12#{$namespace} {
+    @include fsa-grid-column();
+  }
+
+  .fsa-grid__1\/12#{$namespace} {
+    @include fsa-grid-column-width(1);
+  }
+
+  .fsa-grid__1\/6#{$namespace},
+  .fsa-grid__2\/12#{$namespace} {
+    @include fsa-grid-column-width(2);
+  }
+
+  .fsa-grid__1\/4#{$namespace},
+  .fsa-grid__3\/12#{$namespace} {
+    @include fsa-grid-column-width(3);
+  }
+
+  .fsa-grid__1\/3#{$namespace},
+  .fsa-grid__4\/12#{$namespace} {
+    @include fsa-grid-column-width(4);
+  }
+
+  .fsa-grid__5\/12#{$namespace} {
+    @include fsa-grid-column-width(5);
+  }
+
+  .fsa-grid__1\/2#{$namespace},
+  .fsa-grid__6\/12#{$namespace} {
+    @include fsa-grid-column-width(6);
+  }
+
+  .fsa-grid__7\/12#{$namespace} {
+    @include fsa-grid-column-width(7);
+  }
+
+  .fsa-grid__2\/3#{$namespace},
+  .fsa-grid__8\/12#{$namespace} {
+    @include fsa-grid-column-width(8);
+  }
+
+  .fsa-grid__3\/4#{$namespace},
+  .fsa-grid__9\/12#{$namespace} {
+    @include fsa-grid-column-width(9);
+  }
+
+  .fsa-grid__10\/12#{$namespace},
+  .fsa-grid__5\/6#{$namespace} {
+    @include fsa-grid-column-width(10);
+  }
+  .fsa-grid__11\/12#{$namespace} {
+    @include fsa-grid-column-width(11);
+  }
+
+  .fsa-grid__1#{$namespace},
+  .fsa-grid__1\/1#{$namespace},
+  .fsa-grid__12\/12#{$namespace} {
+    @include fsa-grid-column-width(12);
+  }
+
+}
+
+
+// -----------------------------------------------------------------------------
 // Breakpoints
 // scss-lint:disable SpaceAfterComma
 $breakpoints: (

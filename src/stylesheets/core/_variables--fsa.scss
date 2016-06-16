@@ -124,3 +124,9 @@ $form-radiocheckbox-size       : 1.8rem;
 $form-padding                  : $size-small;
 $form-select-bgc               : orangered;
 $form-between-space            : $size-base - .2rem;
+
+// ---------------------------------------------------------------------------
+// FSA Grid Settings
+
+$fsa-grid-gutter: $size-medium; // rem or px unit only
+$fsa-grid-columns: 12;
