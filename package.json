@@ -28,7 +28,7 @@
   "dependencies": {
     "jquery": "^2.2.2",
     "politespace": "^0.1.7",
-    "uswds": "^0.9.3"
+    "uswds": "^0.9.4"
   },
   "scripts": {
     "start": "grunt",
