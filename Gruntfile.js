@@ -59,6 +59,13 @@ module.exports = function (grunt) {
         dest: 'dist/img'
       },
 
+      js: {
+        expand: true,
+        src: '**',
+        cwd: 'src/js/vendor',
+        dest: 'dist/js/vendor'
+      },
+
     },
 
     // Watches files for changes and run relevant tasks
@@ -201,8 +208,6 @@ module.exports = function (grunt) {
       }
     }
 
-
-
   });
 
   // Register Tasks
@@ -213,6 +218,7 @@ module.exports = function (grunt) {
     'clean:uswds_main',
     'copy:fonts',
     'copy:img',
+    'copy:js',
     'sass',
     'postcss',
     'prettify',
