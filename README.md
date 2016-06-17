@@ -1,46 +1,55 @@
-# FSA Design System
+# FSA Style
 
-The **FSA Design System** is an Open Source starter **HTML/CSS Framework** and accompanying **Style Guide** for use on USDA-FSA web sites and apps.
+*(WIP, content TBD)*
+
+USDA Farm Service Agency's **Visual Language** and **HTML/CSS Framework**.
 
 It was created and maintained by the FSA Office of Architecture, and is heavily influenced by the [Draft U.S. Web Design Standards](https://playbook.cio.gov/designstandards/) created and maintained by the [U.S. Digital Service](https://www.whitehouse.gov/digital/united-states-digital-service) and [18F](https://18f.gsa.gov/).
 
-These tools follow industry-standard web accessibility guidelines and employ  best practices of existing style libraries and modern web design.
+These tools follow industry-standard web accessibility guidelines and employ best practices of existing style libraries and modern web design.
 
 ## Contents
 
-(Supporting text TBD)
+*(WIP, content TBD)*
+
+Grunt takes...
 
 ```
-dist/
-├── css/
-├── fonts/
-├── img/
-├── js/
 src/
 ├── fonts/
 ├── img/
 ├── js/
 └── stylesheets/
 ```
+...and builds to..
+
+```
+dist/
+├── css/
+├── fonts/
+├── img/
+└── js/
+```
 
 ## Getting Started
 
-(Download or Install via NPM)
+(WIP, content TBD. General options: Download or Install via NPM)
 
 ## Building and Running Locally
 
 ### tl;dr
 
 ```sh
+npm install
 npm start
 ```
 
 ### Build Assets
 
-First...
+First, you'll need to Command Line Interface for Grunt...
 
 ```sh
-npm install --global gulp-cli
+npm install --global grunt-cli
 ```
 
 ...then...
@@ -52,21 +61,8 @@ npm install
 ...and then...
 
 ```sh
-gulp build
+grunt
 ```
-
-### Build Design System Site
-
-``` sh
-gulp website:build
-```
-
-...and then...
-
-``` sh
-gulp website:serve
-```
-
 
 ## Contributing
 
