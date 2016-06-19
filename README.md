@@ -61,7 +61,7 @@ npm install
 ...and then...
 
 ```sh
-grunt
+npm start
 ```
 
 ## Contributing
