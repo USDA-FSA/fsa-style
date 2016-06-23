@@ -9,7 +9,8 @@ $table-padding:      $size-default;
 table {
   width: 100%;
   border-spacing: 0;
-  margin: 0 0 2em;
+  margin: 2em 0;
+  // margin: 0 0 2em;
   min-width: 100%;
 }
 

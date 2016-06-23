@@ -1,7 +1,7 @@
 // This overrides a lot of USWDS' _typography.scss, with other additions
 
 p {
-  margin-top: 0;
+  // margin-top: 0;
   line-height: inherit;
 }
 
@@ -62,7 +62,7 @@ h6,
 .h6 {
   color: $color-title;
   font-weight: $font-light;
-  margin-top: 0;
+  // margin-top: 0;
 }
 
 h5,
