@@ -515,15 +515,6 @@ tt code {
   display: block;
 }
 
-pre p,
-code p,
-kbd p,
-samp p,
-var p,
-tt p {
-  margin-top: 0;
-}
-
 pre {
   padding: 4px;
   padding: 0.4rem;
@@ -2412,11 +2403,6 @@ li {
   display: none;
 }
 
-ul,
-ol {
-  margin-top: 0;
-}
-
 .fsa-list--inline > li {
   display: inline-block;
   margin-right: 12px;
@@ -2450,7 +2436,7 @@ dd + dt {
 table {
   width: 100%;
   border-spacing: 0;
-  margin: 0 0 2em;
+  margin: 2em 0;
   min-width: 100%;
 }
 
@@ -2769,7 +2755,6 @@ p a,
 }
 
 p {
-  margin-top: 0;
   line-height: inherit;
 }
 
@@ -2856,7 +2841,6 @@ h6,
 .fsa-text--h6 {
   color: #205493;
   font-weight: 300;
-  margin-top: 0;
 }
 
 h5,
@@ -2983,6 +2967,10 @@ figure {
   margin: 4.8rem !important;
 }
 
+.fsa-m-t--none {
+  margin-top: 0 !important;
+}
+
 .fsa-m-t--xxs {
   margin-top: 4px !important;
   margin-top: 0.4rem !important;
@@ -3011,6 +2999,10 @@ figure {
 .fsa-m-t--xl {
   margin-top: 48px !important;
   margin-top: 4.8rem !important;
+}
+
+.fsa-m-r--none {
+  margin-right: 0 !important;
 }
 
 .fsa-m-r--xxs {
@@ -3043,6 +3035,10 @@ figure {
   margin-right: 4.8rem !important;
 }
 
+.fsa-m-b--none {
+  margin-bottom: 0 !important;
+}
+
 .fsa-m-b--xxs {
   margin-bottom: 4px !important;
   margin-bottom: 0.4rem !important;
@@ -3071,6 +3067,10 @@ figure {
 .fsa-m-b--xl {
   margin-bottom: 48px !important;
   margin-bottom: 4.8rem !important;
+}
+
+.fsa-m-l--none {
+  margin-left: 0 !important;
 }
 
 .fsa-m-l--xxs {
@@ -3137,6 +3137,10 @@ figure {
   padding: 4.8rem !important;
 }
 
+.fsa-p-t--none {
+  padding-top: 0 !important;
+}
+
 .fsa-p-t--xxs {
   padding-top: 4px !important;
   padding-top: 0.4rem !important;
@@ -3165,6 +3169,10 @@ figure {
 .fsa-p-t--xl {
   padding-top: 48px !important;
   padding-top: 4.8rem !important;
+}
+
+.fsa-p-r--xxs {
+  padding-right: 0 !important;
 }
 
 .fsa-p-r--xxs {
@@ -3197,6 +3205,10 @@ figure {
   padding-right: 4.8rem !important;
 }
 
+.fsa-p-b--none {
+  padding-bottom: 0 !important;
+}
+
 .fsa-p-b--xxs {
   padding-bottom: 4px !important;
   padding-bottom: 0.4rem !important;
@@ -3225,6 +3237,10 @@ figure {
 .fsa-p-b--xl {
   padding-bottom: 48px !important;
   padding-bottom: 4.8rem !important;
+}
+
+.fsa-p-l--none {
+  padding-left: 0 !important;
 }
 
 .fsa-p-l--xxs {
