@@ -14,6 +14,17 @@
 
 $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
+@keyframes peekInFromAbove {
+  from {
+    opacity: 0;
+    transform: translateY(-200%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
 .docs {
 
   // -----------------------------------------------------------------------------
@@ -50,21 +61,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     }
 
   }
-
-  // &__notice {
-  //
-  //   @include font-size(0);
-  //   padding: $size-base;
-  //   text-align: center;
-  //   background-color: $color-fsa-tertiary-900;
-  //   color: $color-gold-light;
-  //   margin-bottom: 0;
-  //
-  //   .docs__section + & {
-  //     margin-top: (-$size-large);
-  //   }
-  //
-  // }
 
   // -----------------------------------------------------------------------------
   // Doc Titles
@@ -122,14 +118,19 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   &__nav {
 
-    // TODO: Fixed Nav: Issue #66
-    // @include breakpoint(ML) {
-    //   @include position(fixed, 0px 0px 0 0px); // scss-lint:disable ZeroUnit
-    //   margin: 0;
-    //   background-color: $color-fsa-tertiary;
-    //   color: $color-white;
-    //   z-index: 100;
-    // }
+    &--fixed {
+
+      @include breakpoint(MML) {
+        @include position(fixed, 0px 0px 0 0px); // scss-lint:disable ZeroUnit
+        margin: 0;
+        background-color: $color-fsa-primary-900;
+        color: $color-white;
+        z-index: 100;
+        padding-top: 1em;
+        animation: peekInFromAbove 300ms ease-in-out;
+      }
+
+    }
 
   }
 
@@ -195,6 +196,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       // }
 
       // scss-lint:disable NestingDepth
+      &:hover,
       &:visited {
 
         color: $color-fsa-white;
@@ -232,14 +234,25 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   &__page {}
 
   &__section {
-    padding: 0 $size-default;
+
+    padding-right: $size-default;
+    padding-left: $size-default;
+
+    &:before {
+      $fudge-amount: $size-extra-large;
+      content: '';
+      display: block;
+      height: $fudge-amount;
+      margin: (-$fudge-amount) 0 0;
+    }
+
   }
 
   &__intro {
     padding-top: $size-medium;
     padding-bottom: $size-medium;
     background-color: $color-fsa-primary;
-    margin-bottom: $size-large;
+    margin-bottom: $size-medium;
   }
 
   &__bd {
