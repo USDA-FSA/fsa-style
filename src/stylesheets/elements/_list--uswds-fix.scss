@@ -1,3 +1,6 @@
+////////////////////////////////////////////////////////////////////////
+// Lists
+
 ul,
 ol {
   margin-bottom: 2em;
@@ -8,13 +11,13 @@ ol {
 
   li {
     line-height: $base-line-height;
-    margin-bottom: 0.75em;
-    margin-top: 0.75em;
+    margin-bottom: .75em;
+    margin-top: .75em;
 
     &::after {
       content: '';
       display: block;
-      margin-bottom: 0.5em;
+      margin-bottom: .5em;
     }
   }
 }
@@ -32,30 +35,31 @@ p {
   }
 }
 
-ul li {
+ul > li {
   display: table-row;
 
   &::before {
     content: '\2022';
     display: table-cell;
-    padding-right: 0.4em;
+    padding-right: .4em;
   }
+
 }
 
-ol li {
+ol > li {
   counter-increment: table-ol;
   display: table-row;
 
   &::before {
     content: counter(table-ol) '.';
     display: table-cell;
-    padding-right: 0.4em;
+    padding-right: .4em;
     text-align: right;
   }
 }
 
 li {
-  margin-bottom: 0.5em;
+  margin-bottom: .5em;
 }
 
 // Unstyled lists
