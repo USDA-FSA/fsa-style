@@ -32,7 +32,7 @@ p {
   }
 }
 
-ul li {
+ul > li {
   display: table-row;
 
   &::before {
@@ -40,9 +40,10 @@ ul li {
     display: table-cell;
     padding-right: 0.4em;
   }
+
 }
 
-ol li {
+ol > li {
   counter-increment: table-ol;
   display: table-row;
 
