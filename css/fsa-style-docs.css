@@ -113,6 +113,17 @@ html:hover body::before {
   display: block;
 }
 
+@keyframes peekInFromAbove {
+  from {
+    opacity: 0;
+    transform: translateY(-200%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
 .docs__disclaimer {
   background-color: #1a4b24;
 }
@@ -176,6 +187,21 @@ html:hover body::before {
   color: #205493;
 }
 
+@media (min-width: 42em) {
+  .docs__nav--fixed {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    margin: 0;
+    background-color: #1a4b24;
+    color: #fff;
+    z-index: 100;
+    padding-top: 1em;
+    animation: peekInFromAbove 300ms ease-in-out;
+  }
+}
+
 .docs__primary-nav {
   display: block;
   list-style-type: none;
@@ -227,7 +253,7 @@ html:hover body::before {
   }
 }
 
-.docs__primary-nav-link:visited {
+.docs__primary-nav-link:hover, .docs__primary-nav-link:visited {
   color: #fff;
 }
 
@@ -244,8 +270,19 @@ html:hover body::before {
 }
 
 .docs__section {
-  padding: 0 19.2px;
-  padding: 0 1.2rem;
+  padding-right: 19.2px;
+  padding-right: 1.2rem;
+  padding-left: 19.2px;
+  padding-left: 1.2rem;
+}
+
+.docs__section:before {
+  content: '';
+  display: block;
+  height: 76.8px;
+  height: 4.8rem;
+  margin: -76.8px 0 0;
+  margin: -4.8rem 0 0;
 }
 
 .docs__intro {
@@ -254,8 +291,8 @@ html:hover body::before {
   padding-bottom: 38.4px;
   padding-bottom: 2.4rem;
   background-color: #236430;
-  margin-bottom: 57.6px;
-  margin-bottom: 3.6rem;
+  margin-bottom: 38.4px;
+  margin-bottom: 2.4rem;
 }
 
 .docs__bd {
