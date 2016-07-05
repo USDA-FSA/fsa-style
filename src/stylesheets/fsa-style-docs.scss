@@ -231,7 +231,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   // -----------------------------------------------------------------------------
   // Structure
 
-  &__page {}
+  &__page {} // scss-lint:disable EmptyRule
 
   &__section {
 
@@ -261,7 +261,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     margin-right: auto;
   }
 
-  &__main {}
+  &__main {} // scss-lint:disable EmptyRule
 
   // -----------------------------------------------------------------------------
   // Logo
@@ -476,7 +476,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   }
 
-  &__code-sample {}
+  &__code-sample {} // scss-lint:disable EmptyRule
 
 }
 
