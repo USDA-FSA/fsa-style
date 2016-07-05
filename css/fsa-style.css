@@ -561,6 +561,14 @@ blockquote {
   }
 }
 
+hr {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: 0;
+  height: 1px;
+  background: #c8c7c6;
+}
+
 .fsa-grid {
   letter-spacing: -.31em;
   *letter-spacing: normal;
@@ -2330,15 +2338,15 @@ ol {
 ul li,
 ol li {
   line-height: 1.5;
-  margin-bottom: 0.75em;
-  margin-top: 0.75em;
+  margin-bottom: .75em;
+  margin-top: .75em;
 }
 
 ul li::after,
 ol li::after {
   content: '';
   display: block;
-  margin-bottom: 0.5em;
+  margin-bottom: .5em;
 }
 
 h1 + ul,
@@ -2358,30 +2366,30 @@ p + ol {
   margin-top: 0;
 }
 
-ul li {
+ul > li {
   display: table-row;
 }
 
-ul li::before {
+ul > li::before {
   content: '\2022';
   display: table-cell;
-  padding-right: 0.4em;
+  padding-right: .4em;
 }
 
-ol li {
+ol > li {
   counter-increment: table-ol;
   display: table-row;
 }
 
-ol li::before {
+ol > li::before {
   content: counter(table-ol) ".";
   display: table-cell;
-  padding-right: 0.4em;
+  padding-right: .4em;
   text-align: right;
 }
 
 li {
-  margin-bottom: 0.5em;
+  margin-bottom: .5em;
 }
 
 .usa-unstyled-list, .fsa-list--unstyled, .fsa-list--inline {
@@ -2401,6 +2409,19 @@ li {
 
 .usa-unstyled-list li::after, .fsa-list--unstyled li::after, .fsa-list--inline li::after {
   display: none;
+}
+
+ul ul,
+ol ul, ul
+ol,
+ol
+ol {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+ol ol {
+  counter-reset: table-ol;
 }
 
 .fsa-list--inline > li {
@@ -3171,7 +3192,7 @@ figure {
   padding-top: 4.8rem !important;
 }
 
-.fsa-p-r--xxs {
+.fsa-p-r--none {
   padding-right: 0 !important;
 }
 
