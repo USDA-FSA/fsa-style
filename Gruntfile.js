@@ -84,6 +84,12 @@ module.exports = function (grunt) {
         ],
         tasks: ['prettify'] // 'simple_include'
       },
+      js: {
+        files: [
+          'src/js/*.js',
+        ],
+        tasks: ['browserify']
+      },
       img: {
         files: [
           'src/img/**/*.jpeg',
@@ -174,8 +180,9 @@ module.exports = function (grunt) {
     browserify: {
       main: {
         files: {
-          'dist/js/<%= pkg.name %>.js': [
-            'src/js/test.js'
+          'dist/js/fsa-style-docs.js': [
+            'src/js/fsa-style-docs.js'
+            // ,'path/to/another/file.js',
           ],
           // 'dist/js/uswds.js': [
           //   'node_modules/uswds/src/js/start.js',
