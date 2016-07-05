@@ -195,6 +195,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       // }
 
       // scss-lint:disable NestingDepth
+      &:hover,
       &:visited {
 
         color: $color-fsa-white;
@@ -232,8 +233,20 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   &__page {}
 
   &__section {
-    padding: 0 $size-default;
+
+    padding-right: $size-default;
+    padding-left: $size-default;
+
+    &:before {
+      $fudge-amount: $size-default;
+      content: '';
+      display: block;
+      height: $fudge-amount;
+      margin: (-$fudge-amount) 0 0;
+    }
+
   }
+
 
   &__intro {
     padding-top: $size-medium;
