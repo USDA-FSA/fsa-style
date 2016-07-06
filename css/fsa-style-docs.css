@@ -468,6 +468,14 @@ html:hover body::before {
   font-weight: 700;
 }
 
+.docs__font--helvetica {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+}
+
+.docs__font--georgia {
+  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
+}
+
 .docs__font__preview {
   font-size: 83.2px;
   font-size: 5.2rem;
