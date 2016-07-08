@@ -490,6 +490,9 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
 }
 
+.fsa-checkerboard {
+  @include checkerboard();
+}
 
 .size-swatch {
 
