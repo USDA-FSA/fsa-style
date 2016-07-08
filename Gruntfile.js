@@ -232,7 +232,7 @@ module.exports = function (grunt) {
     'browserify',
     'lint'
   ]);
-  grunt.registerTask('deploy', ['buildcontrol:pages']);
+  grunt.registerTask('deploy', ['build', 'buildcontrol:pages']);
 
   grunt.registerTask('lint', 'scsslint');
   grunt.registerTask('test', 'default', function () { grunt.log.writeln('Test that the app runs');});
