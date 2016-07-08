@@ -465,8 +465,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
     &__demo {
       @include checkerboard();
-      border-top: 1px solid $color-fsa-site-bg;
-      border-bottom: 1px solid $color-fsa-site-bg;
       margin-bottom: $size-default;
     }
 
