@@ -366,6 +366,7 @@ $breakpoints: (
 @mixin checkerboard($color: rgba(0, 0, 0, .10)) {
 
   background-color: $color;
+  overflow: auto;
 
   // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
   background-image:
