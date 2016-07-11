@@ -1689,7 +1689,7 @@ hr {
   border-radius: 0.4rem;
   padding: 11px 24px 11px;
   padding: 1.1rem 2.4rem 1.1rem;
-  background-color: #494440;
+  background-color: #205493;
   color: #fff;
 }
 
@@ -1717,12 +1717,12 @@ hr {
 
 .fsa-btn:hover:not([disabled]) {
   color: #fff;
-  background-color: #373330;
+  background-color: #183f6e;
 }
 
 .fsa-btn:focus:not([disabled]), .fsa-btn:active:not([disabled]) {
   color: #fff;
-  background-color: #211f1d;
+  background-color: #0e2642;
   box-shadow: none;
 }
 
@@ -1767,17 +1767,32 @@ hr {
 
 .fsa-btn--secondary {
   color: #fff;
-  background-color: #cd2026;
+  background-color: #494440;
 }
 
 .fsa-btn--secondary:hover:not([disabled]) {
   color: #fff;
-  background-color: #9a181d;
+  background-color: #373330;
 }
 
 .fsa-btn--secondary:focus:not([disabled]), .fsa-btn--secondary:active:not([disabled]) {
   color: #fff;
-  background-color: #711215;
+  background-color: #282523;
+}
+
+.fsa-btn--tertiary {
+  color: #fff;
+  background-color: #cd2026;
+}
+
+.fsa-btn--tertiary:hover:not([disabled]) {
+  color: #fff;
+  background-color: #373330;
+}
+
+.fsa-btn--tertiary:focus:not([disabled]), .fsa-btn--tertiary:active:not([disabled]) {
+  color: #fff;
+  background-color: #282523;
 }
 
 .fsa-btn--alt {
