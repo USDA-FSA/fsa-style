@@ -12,7 +12,7 @@ $button-font-family       : $font-sans;
 $button-font-weight       : $font-normal;
 $button-font-size         : $font-size-3;
 
-$button-default           : $color-fsa-tertiary;
+$button-default           : $color-fsa-secondary;
 $button-default-text      : $button-text;
 $button-default-hover     : shade($button-default, 25%);
 $button-default-active    : shade($button-default, 55%);
@@ -22,10 +22,15 @@ $button-primary-text      : $button-text;
 $button-primary-hover     : shade($button-primary, 25%);
 $button-primary-active    : shade($button-primary, 45%);
 
-$button-secondary        : $color-fsa-red;
+$button-secondary        : $color-fsa-tertiary;
 $button-secondary-text   : $button-text;
 $button-secondary-hover  : shade($button-secondary, 25%);
 $button-secondary-active : shade($button-secondary, 45%);
+
+$button-tertiary        : $color-fsa-red;
+$button-tertiary-text   : $button-text;
+$button-tertiary-hover  : shade($button-secondary, 25%);
+$button-tertiary-active : shade($button-secondary, 45%);
 
 $button-alt              : $color-fsa-white;
 $button-alt-text         : $color-fsa-secondary;
@@ -167,6 +172,24 @@ $button-alt-border-width : .2rem;
     &:active:not([disabled]) {
       color: $button-secondary-text;
       background-color: $button-secondary-active;
+    }
+
+  }
+
+  &--tertiary {
+
+    color: $button-tertiary-text;
+    background-color: $button-tertiary;
+
+    &:hover:not([disabled]) {
+      color: $button-tertiary-text;
+      background-color: $button-tertiary-hover;
+    }
+
+    &:focus:not([disabled]),
+    &:active:not([disabled]) {
+      color: $button-tertiary-text;
+      background-color: $button-tertiary-active;
     }
 
   }
