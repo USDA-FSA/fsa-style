@@ -126,6 +126,11 @@ html:hover body::before {
 
 .docs__disclaimer {
   background-color: #1a4b24;
+  height: auto;
+  padding-top: 8px;
+  padding-top: .5rem;
+  padding-bottom: 8px;
+  padding-bottom: .5rem;
 }
 
 .docs__disclaimer__bd {
@@ -152,7 +157,7 @@ html:hover body::before {
   padding: 0 6.4px;
   padding: 0 0.4rem;
   position: relative;
-  top: 1px;
+  top: -2px;
 }
 
 .docs__title {
@@ -244,6 +249,7 @@ html:hover body::before {
   display: inline-block;
   margin-right: 12.8px;
   margin-right: 0.8rem;
+  text-decoration: none;
   color: #fff;
 }
 
@@ -251,6 +257,10 @@ html:hover body::before {
   .docs__primary-nav-link {
     margin-right: 0.8rem;
   }
+}
+
+.docs__primary-nav-link:hover {
+  text-decoration: underline;
 }
 
 .docs__primary-nav-link:hover, .docs__primary-nav-link:visited {

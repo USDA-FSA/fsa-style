@@ -2610,12 +2610,11 @@ p {
 
 a {
   color: #0071bc;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover, a:active {
   color: #205493;
-  text-decoration: underline;
 }
 
 a:visited {
@@ -2625,6 +2624,40 @@ a:visited {
 a:focus {
   box-shadow: 0 0 3px #3e94cf, 0 0 7px #3e94cf;
   outline: 0;
+}
+
+.usa-external_link::after {
+  background: url("../img/external-link.png") no-repeat 0 0;
+  background: url("../img/external-link.svg") no-repeat 0 0;
+  background-size: 100%;
+  content: '';
+  display: inline-block;
+  height: 0.65em;
+  margin-bottom: -1px;
+  margin-left: 4px;
+  width: 0.65em;
+}
+
+.usa-external_link:hover::after {
+  background-image: url("../img/external-link-hover.png");
+  background-image: url("../img/external-link-hover.svg");
+}
+
+.usa-external_link-alt::after {
+  background: url("../img/external-link-alt.png") no-repeat 0 0;
+  background: url("../img/external-link-alt.svg") no-repeat 0 0;
+  background-size: 100%;
+  content: '';
+  display: inline-block;
+  height: 0.65em;
+  margin-bottom: -1px;
+  margin-left: 4px;
+  width: 0.65em;
+}
+
+.usa-external_link-alt:hover::after {
+  background-image: url("../img/external-link-alt-hover.png");
+  background-image: url("../img/external-link-alt-hover.svg");
 }
 
 h1,
@@ -2685,7 +2718,7 @@ dfn {
   font-style: normal;
 }
 
-.usa-content p {
+.usa-content p:not(.usa-font-lead) {
   max-width: 530px;
   max-width: 53rem;
 }
@@ -2693,11 +2726,6 @@ dfn {
 .usa-content-list {
   max-width: 530px;
   max-width: 53rem;
-}
-
-p a,
-.usa-content-list a {
-  text-decoration: underline;
 }
 
 .usa-sans p,
@@ -2745,6 +2773,8 @@ p a,
   font-size: 20px;
   font-size: 2rem;
   line-height: 1.7;
+  max-width: 770px;
+  max-width: 77rem;
 }
 
 .usa-image-block {
@@ -2907,21 +2937,46 @@ h6,
 
 .usa-disclaimer {
   background-color: #f1f1f1;
-  font-size: 13px;
-  font-size: 1.3rem;
-  padding-bottom: 5px;
-  padding-bottom: .5rem;
-  padding-top: 5px;
-  padding-top: .5rem;
+  font-size: 12px;
+  font-size: 1.2rem;
+  height: 23px;
+  height: 2.3rem;
 }
 
 @media screen and (min-width: 481px) {
   .usa-disclaimer {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 
+.usa-disclaimer-official {
+  display: inline-block;
+}
+
+.usa-disclaimer-official p {
+  margin: 3px 0;
+  display: inline-block;
+}
+
+@media screen and (min-width: 481px) {
+  .usa-disclaimer-official p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+}
+
+.usa-disclaimer-official img {
+  float: left;
+  margin-right: 7px;
+  margin-right: 0.7rem;
+  margin-top: 1px;
+  width: 20px;
+  width: 2rem;
+}
+
 .usa-disclaimer-stage {
+  margin-top: 2px;
+  margin-bottom: 2px;
   display: none;
   float: right;
 }
@@ -2930,11 +2985,6 @@ h6,
   .usa-disclaimer-stage {
     display: block;
   }
-}
-
-.usa-flag_icon {
-  margin-right: 2px;
-  margin-right: .2rem;
 }
 
 fieldset {
