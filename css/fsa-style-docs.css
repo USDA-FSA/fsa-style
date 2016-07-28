@@ -374,6 +374,18 @@ html:hover body::before {
   display: none;
 }
 
+@media (min-width: 48em) {
+  .docs__attr-list__item {
+    margin-right: 2.4rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .docs__attr-list__item:last-child {
+    margin-right: 0;
+  }
+}
+
 .docs__attr-list__swatch {
   height: 120px;
   height: 7.5rem;
@@ -420,6 +432,28 @@ html:hover body::before {
   margin: 0;
   padding: 0;
   margin-bottom: 1em;
+  border: 19.2px solid;
+  border: 1.2rem solid;
+}
+
+.docs__swatch-list--primary {
+  border-color: #236430;
+}
+
+.docs__swatch-list--secondary {
+  border-color: #205493;
+}
+
+.docs__swatch-list--tertiary {
+  border-color: #494440;
+}
+
+.docs__swatch-list--aqua {
+  border-color: #00a6d2;
+}
+
+.docs__swatch-list--red {
+  border-color: #cd2026;
 }
 
 .docs__swatch-list__item {
@@ -442,6 +476,13 @@ html:hover body::before {
 .docs__swatch-list__item--main {
   padding-top: 153.6px;
   padding-top: 9.6rem;
+}
+
+.docs__swatch-list__item code {
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+  color: white;
 }
 
 .docs__font {
@@ -735,5 +776,10 @@ html:hover body::before {
 
 .color-fsa-link-visited {
   background-color: #4c2c92;
+}
+
+[class*="lighter"] code,
+[class*="lightest"] code {
+  color: #2f2c2a;
 }
 /*# sourceMappingURL=fsa-style-docs.css.map */
