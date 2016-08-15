@@ -38,7 +38,7 @@ module.exports = function (grunt) {
     // Copies templates and assets from dependencies and/or src
     copy: {
 
-      // Stylesheets, fonts, img, and js from USWDS
+      // Stylesheets, fonts, img, and js **FROM** /node_modules/uswds/
 
       uswds_stylesheets: {
         expand: true,
@@ -68,7 +68,7 @@ module.exports = function (grunt) {
         dest: 'src/js'
       },
 
-      // Copy fonts, img, and js to dist
+      // Copy fonts, img, and js **TO** /dist/
 
       fonts: {
         expand: true,
@@ -246,7 +246,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['build', 'browserSync', 'watch']);
   grunt.registerTask('build', [
     'clean:dist',
-    'copy:uswds',
+    'copy:uswds_stylesheets',
     // 'clean:uswds_main',
     'copy:uswds_fonts',
     'copy:uswds_img',

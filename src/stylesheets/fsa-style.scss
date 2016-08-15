@@ -1,57 +1,55 @@
-// Vendor -------------- //
+///////////////////////////////////////////////////////////////////////////
+// USWDS -------------- ///////////////////////////////////////////////////
 
-@import 'vendor/uswds/lib/bourbon'; // USWDS
-@import 'vendor/uswds/lib/neat'; // USWDS
-@import 'vendor/uswds/lib/normalize'; // USWDS
+@import 'src/stylesheets/lib/uswds/lib/bourbon';
+@import 'src/stylesheets/lib/uswds/lib/neat';
+@import 'src/stylesheets/lib/uswds/lib/normalize';
 
 // Core (non-rendering) -------------- //
-@import 'vendor/uswds/core/defaults'; // USWDS
-@import 'core/variables--fsa';
-@import 'vendor/uswds/core/fonts'; // USWDS
-// @import 'vendor/uswds/core/grid-settings'; // USWDS
+@import 'src/stylesheets/lib/uswds/core/defaults';
+@import 'src/stylesheets/lib/uswds/core/grid-settings';
 
 // Core (rendering) -------------- //
-@import 'vendor/uswds/core/utilities'; // USWDS
+@import 'src/stylesheets/lib/uswds/core/fonts';
+@import 'src/stylesheets/lib/uswds/core/utilities';
+@import 'src/stylesheets/lib/uswds/core/base';
+// @import 'src/stylesheets/lib/uswds/core/grid';
+
+// @import 'src/stylesheets/lib/uswds/elements/buttons';
+// @import 'src/stylesheets/lib/uswds/elements/figure';
+// @import 'src/stylesheets/lib/uswds/elements/inputs';
+// @import 'src/stylesheets/lib/uswds/elements/labels';
+// @import 'src/stylesheets/lib/uswds/elements/list';
+// @import 'src/stylesheets/lib/uswds/elements/table';
+@import 'src/stylesheets/lib/uswds/elements/typography';
+
+// @import 'src/stylesheets/lib/uswds/components/accordions';
+// @import 'src/stylesheets/lib/uswds/components/alerts';
+@import 'src/stylesheets/lib/uswds/components/disclaimer';
+// @import 'src/stylesheets/lib/uswds/components/footer';
+// // @import 'src/stylesheets/lib/uswds/components/forms';
+// @import 'src/stylesheets/lib/uswds/components/search';
+// @import 'src/stylesheets/lib/uswds/components/sidenav';
+@import 'src/stylesheets/lib/uswds/components/skipnav';
+
+///////////////////////////////////////////////////////////////////////////
+// FSA CUSTOM -------------- //////////////////////////////////////////////
+
+@import 'core/variables--fsa';
 @import 'core/utilities--fsa';
-@import 'vendor/uswds/core/base'; // USWDS
 @import 'core/base--fsa';
-// @import 'vendor/uswds/core/grid'; // USWDS
 @import 'core/grid--fsa';
 
-// Elements -------------- //
-// Styles basic HTML elements
-
-// @import 'vendor/uswds/elements/buttons'; // USWDS
 @import 'elements/buttons--fsa';
-// @import 'vendor/uswds/elements/figure'; // USWDS
 @import 'elements/figure--fsa';
-// @import 'vendor/uswds/elements/inputs'; // USWDS
 @import 'elements/form-elements.textfields--fsa';
 @import 'elements/form-elements.checkbox-radio--fsa';
 @import 'elements/form-elements.select--fsa';
-// @import 'vendor/uswds/elements/labels'; // USWDS
-// @import 'vendor/uswds/elements/list'; // USWDS
 @import 'elements/list--fsa';
 @import 'elements/list--uswds-fix';
-// @import 'vendor/uswds/elements/table'; // USWDS
 @import 'elements/table--fsa';
-@import 'vendor/uswds/elements/typography'; // USWDS
 @import 'elements/typography--fsa';
 
-
-// Components -------------- //
-
-// @import 'vendor/uswds/components/accordions'; // USWDS
-// @import 'vendor/uswds/components/alerts'; // USWDS
-@import 'vendor/uswds/components/disclaimer'; // USWDS
-// @import 'vendor/uswds/components/footer'; // USWDS
-// // @import 'vendor/uswds/components/forms'; // USWDS
 @import 'components/forms--fsa';
-// @import 'vendor/uswds/components/search'; // USWDS
-// @import 'vendor/uswds/components/sidenav'; // USWDS
-@import 'vendor/uswds/components/skipnav'; // USWDS
 
-// Styling Utilities -------------- //
 @import 'elements/css-utilities--fsa';
-
-// Shame -------------- //
