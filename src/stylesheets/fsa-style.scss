@@ -1,44 +1,18 @@
-///////////////////////////////////////////////////////////////////////////
-// USWDS -------------- ///////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+// USWDS - Start off with a select set of imports from USWDS ///////////////////
+@import 'uswds';
 
-@import 'src/stylesheets/lib/uswds/lib/bourbon';
-@import 'src/stylesheets/lib/uswds/lib/neat';
-@import 'src/stylesheets/lib/uswds/lib/normalize';
+////////////////////////////////////////////////////////////////////////////////
+// FSA - Custom ////////////////////////////////////////////////////////////////
 
-// Core (non-rendering) -------------- //
-@import 'src/stylesheets/lib/uswds/core/defaults';
-@import 'src/stylesheets/lib/uswds/core/grid-settings';
-
-// Core (rendering) -------------- //
-@import 'src/stylesheets/lib/uswds/core/fonts';
-@import 'src/stylesheets/lib/uswds/core/utilities';
-@import 'src/stylesheets/lib/uswds/core/base';
-// @import 'src/stylesheets/lib/uswds/core/grid';
-
-// @import 'src/stylesheets/lib/uswds/elements/buttons';
-// @import 'src/stylesheets/lib/uswds/elements/figure';
-// @import 'src/stylesheets/lib/uswds/elements/inputs';
-// @import 'src/stylesheets/lib/uswds/elements/labels';
-// @import 'src/stylesheets/lib/uswds/elements/list';
-// @import 'src/stylesheets/lib/uswds/elements/table';
-@import 'src/stylesheets/lib/uswds/elements/typography';
-
-// @import 'src/stylesheets/lib/uswds/components/accordions';
-// @import 'src/stylesheets/lib/uswds/components/alerts';
-@import 'src/stylesheets/lib/uswds/components/disclaimer';
-// @import 'src/stylesheets/lib/uswds/components/footer';
-// // @import 'src/stylesheets/lib/uswds/components/forms';
-// @import 'src/stylesheets/lib/uswds/components/search';
-// @import 'src/stylesheets/lib/uswds/components/sidenav';
-@import 'src/stylesheets/lib/uswds/components/skipnav';
-
-///////////////////////////////////////////////////////////////////////////
-// FSA CUSTOM -------------- //////////////////////////////////////////////
+// Core -------------- /////////////////////////////////////////////////////////
 
 @import 'core/variables--fsa';
 @import 'core/utilities--fsa';
 @import 'core/base--fsa';
 @import 'core/grid--fsa';
+
+// Elements -------------- /////////////////////////////////////////////////////
 
 @import 'elements/buttons--fsa';
 @import 'elements/figure--fsa';
@@ -50,6 +24,13 @@
 @import 'elements/table--fsa';
 @import 'elements/typography--fsa';
 
+// Components -------------- ///////////////////////////////////////////////////
+
 @import 'components/forms--fsa';
 
+// Other -------------- ////////////////////////////////////////////////////////
+
 @import 'elements/css-utilities--fsa';
+
+// fin /////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
