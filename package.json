@@ -1,7 +1,7 @@
 {
   "name": "fsa-style",
   "description": "Open Source CSS Framework for USDA Farm Service Agency web sites and apps",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "devDependencies": {
     "autoprefixer": "^6.3.6",
