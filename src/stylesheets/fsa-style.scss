@@ -7,30 +7,30 @@
 
 // Core -------------- /////////////////////////////////////////////////////////
 
-@import 'core/variables--fsa';
-@import 'core/utilities--fsa';
-@import 'core/base--fsa';
-@import 'core/grid--fsa';
+@import 'core/fsa.variables';
+@import 'core/fsa.utilities';
+@import 'core/fsa.base';
+@import 'core/fsa.grid';
 
 // Elements -------------- /////////////////////////////////////////////////////
 
-@import 'elements/buttons--fsa';
-@import 'elements/figure--fsa';
-@import 'elements/form-elements.textfields--fsa';
-@import 'elements/form-elements.checkbox-radio--fsa';
-@import 'elements/form-elements.select--fsa';
-@import 'elements/list--fsa';
-@import 'elements/list--uswds-fix';
-@import 'elements/table--fsa';
-@import 'elements/typography--fsa';
+@import 'elements/fsa.buttons';
+@import 'elements/fsa.figure';
+@import 'elements/fsa.form-elements.textfields';
+@import 'elements/fsa.form-elements.checkbox-radio';
+@import 'elements/fsa.form-elements.select';
+@import 'elements/fsa.list';
+
+@import 'elements/fsa.table';
+@import 'elements/fsa.typography';
 
 // Components -------------- ///////////////////////////////////////////////////
 
-@import 'components/forms--fsa';
+@import 'components/fsa.forms';
 
 // Other -------------- ////////////////////////////////////////////////////////
 
-@import 'elements/css-utilities--fsa';
+@import 'elements/fsa.css-utilities';
 
 // fin /////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
