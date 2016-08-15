@@ -498,7 +498,7 @@ tt {
   font-size: 13px;
   font-size: 1.3rem;
   color: #981b1e;
-  font-family: "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace;
+  font-family: "Bitstream Vera Sans Mono", "Consolas", "Menlo", "Monaco", "Courier New", "Courier", monospace;
   border-radius: 2px;
   background-color: #f8fafc;
   padding: 2px;
@@ -2824,64 +2824,16 @@ p {
   line-height: inherit;
 }
 
+a:visited {
+  color: #0071bc;
+}
+
 html,
 button,
 input,
 select,
 textarea {
   font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-}
-
-h1,
-.h1,
-.fsa-text--h1 {
-  font-size: 40px;
-  font-size: 4rem;
-  font-weight: 700;
-}
-
-h2,
-.h2,
-.fsa-text--h2 {
-  font-size: 30px;
-  font-size: 3rem;
-  font-weight: 700;
-}
-
-h3,
-.h3,
-.fsa-text--h3 {
-  font-size: 20px;
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-h4,
-.h4,
-.fsa-text--h4 {
-  font-size: 17px;
-  font-size: 1.7rem;
-  font-weight: 700;
-}
-
-h5,
-.h5,
-.fsa-text--h5 {
-  font-size: 15px;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-h6,
-.h6,
-.fsa-text--h6 {
-  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  font-size: 13px;
-  font-size: 1.3rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: 0;
 }
 
 h1,
@@ -2909,12 +2861,59 @@ h6,
   font-weight: 300;
 }
 
+h1,
+.h1,
+.fsa-text--h1 {
+  font-size: 40px;
+  font-size: 4rem;
+  font-weight: 700;
+  font-weight: 300;
+}
+
+h2,
+.h2,
+.fsa-text--h2 {
+  font-size: 30px;
+  font-size: 3rem;
+  font-weight: 700;
+  font-weight: 300;
+}
+
+h3,
+.h3,
+.fsa-text--h3 {
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+  font-weight: 300;
+}
+
+h4,
+.h4,
+.fsa-text--h4 {
+  font-size: 17px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  font-weight: 400;
+}
+
 h5,
-h6,
 .h5,
-.fsa-text--h5,
+.fsa-text--h5 {
+  font-size: 15px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-weight: 700;
+}
+
+h6,
 .h6,
 .fsa-text--h6 {
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 13px;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-transform: uppercase;
   font-weight: 700;
 }
 
@@ -2924,6 +2923,7 @@ h6,
   font-weight: 300;
   font-size: 20px;
   font-size: 2rem;
+  font-family: "Merriweather", "Georgia", "Cambria", "Times New Roman", "Times", serif;
 }
 
 .fsa-text--lead b,
