@@ -38,12 +38,37 @@ module.exports = function (grunt) {
     // Copies templates and assets from dependencies and/or src
     copy: {
 
-      uswds: {
+      // Stylesheets, fonts, img, and js **FROM** /node_modules/uswds/
+
+      uswds_stylesheets: {
         expand: true,
         src: '**',
-        cwd: 'node_modules/uswds/src',
-        dest: 'src'
+        cwd: 'node_modules/uswds/src/stylesheets',
+        dest: 'src/stylesheets/lib/uswds'
       },
+
+      uswds_fonts: {
+        expand: true,
+        src: '**',
+        cwd: 'node_modules/uswds/src/fonts',
+        dest: 'src/fonts'
+      },
+
+      uswds_img: {
+        expand: true,
+        src: '**',
+        cwd: 'node_modules/uswds/src/img',
+        dest: 'src/img'
+      },
+
+      uswds_js: {
+        expand: true,
+        src: '**',
+        cwd: 'node_modules/uswds/src/js',
+        dest: 'src/js'
+      },
+
+      // Copy fonts, img, and js **TO** /dist/
 
       fonts: {
         expand: true,
@@ -62,8 +87,8 @@ module.exports = function (grunt) {
       js: {
         expand: true,
         src: '**',
-        cwd: 'src/js/vendor',
-        dest: 'dist/js/vendor'
+        cwd: 'src/js',
+        dest: 'dist/js'
       },
 
     },
@@ -104,7 +129,7 @@ module.exports = function (grunt) {
     // Clear files and folders
 		clean: {
 			dist: [ 'dist' ],
-			uswds_main: [ 'src/stylesheets/all.scss' ],
+			// uswds_main: [ 'src/stylesheets/all.scss' ],
 		},
 
     // Make our HTML files perfectly formatted and humanly scannable
@@ -221,8 +246,11 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['build', 'browserSync', 'watch']);
   grunt.registerTask('build', [
     'clean:dist',
-    'copy:uswds',
-    'clean:uswds_main',
+    'copy:uswds_stylesheets',
+    // 'clean:uswds_main',
+    'copy:uswds_fonts',
+    'copy:uswds_img',
+    'copy:uswds_js',
     'copy:fonts',
     'copy:img',
     'copy:js',
