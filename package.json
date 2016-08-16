@@ -28,7 +28,7 @@
   "dependencies": {
     "jquery": "^2.2.2",
     "politespace": "^0.1.7",
-    "uswds": "^0.9.6"
+    "uswds": "^0.11.0"
   },
   "scripts": {
     "start": "npm i && grunt",
