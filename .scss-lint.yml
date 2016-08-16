@@ -7,6 +7,7 @@ exclude: [
   # Plug-ins, Bourbon, etc
   'src/stylesheets/lib/*.scss',
   'src/stylesheets/lib/**',
+  'src/stylesheets/lib/**/*.scss',
 
   # USWDS core
   'src/stylesheets/core/_base.scss',
