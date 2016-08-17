@@ -2,7 +2,11 @@
   "name": "fsa-style",
   "description": "Open Source CSS Framework for USDA Farm Service Agency web sites and apps",
   "version": "0.2.0",
-  "private": true,
+  "license": "SEE LICENSE in LICENSE.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usda-fsa/fsa-style.git"
+  },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "cssnano": "^3.5.2",
@@ -29,6 +33,14 @@
     "jquery": "^2.2.2",
     "politespace": "^0.1.7",
     "uswds": "^0.11.0"
+  },
+  "author": "USDA FSA Enterprise Architecture",
+  "contributors": [
+    "Francis Rupert <France.Rupert@gmail.com> (https://github.com/francisrupert)",
+    "Brian Mills (https://www.linkedin.com/in/brianmills)"
+  ],
+  "bugs": {
+    "url": "https://github.com/USDA-FSA/fsa-style/issues"
   },
   "scripts": {
     "start": "npm i && grunt",
