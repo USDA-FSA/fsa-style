@@ -20,7 +20,7 @@ samp,
 var,
 tt {
 
-  @include font-size(0);
+  font-size: 90%;
   color: $color-fsa-red-900;
   font-family: $font-mono;
   border-radius: 2px;

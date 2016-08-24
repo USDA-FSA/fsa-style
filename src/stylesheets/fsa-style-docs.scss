@@ -313,13 +313,11 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     &__attr {
 
       @include reset-ul;
-      @include font-size(1);
       margin: $size-small 0 1em;
 
       // scss-lint:disable NestingDepth
       &-item {
         @include reset-li;
-        margin-bottom: $size-base;
       }
 
     }
@@ -342,7 +340,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     &__item {
 
       @include reset-li;
-      @include font-size(1);
       padding: $size-extra-large $size-default $size-default;
 
       // scss-lint:disable NestingDepth
