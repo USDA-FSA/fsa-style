@@ -356,11 +356,35 @@
   &-font {
 
     &--sans {
+
       font-family: $font-sans;
+
+      &-light {
+        font-family: $font-sans;
+        font-weight: $font-light;
+      }
+
+      &-bold {
+        font-family: $font-sans;
+        font-weight: $font-bold;
+      }
+
     }
 
     &--serif {
+
       font-family: $font-serif;
+
+      &-light {
+        font-family: $font-serif;
+        font-weight: $font-light;
+      }
+
+      &-bold {
+        font-family: $font-serif;
+        font-weight: $font-bold;
+      }
+
     }
 
   }
