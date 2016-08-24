@@ -2432,9 +2432,8 @@
       <h2 class="docs__bd docs__figure-group">Grid</h2>
       <div class="docs__bd">
         <p>A 12-column, responsive grid provides structure for website content.</p>
-
         <h3 class="docs__bd docs__figure">Grid Column Sizes</h3>
-        <p>Available columns that can be appended to the <code>fsa-grid__*</code> selector, where <code>*</code> is one of the unit fractions listed below. For example the selector for 50% width can be <code>fsa-grid__1/2</code>.</p>
+        <p>Available columns that can be appended to the <code>fsa-grid__[size]</code> selector, where <code>size</code> is one of the unit fractions listed below. For example, the selector for 50% width can be <code>fsa-grid__1/2</code> or even <code>fsa-grid__6/12</code>.</p>
         <div class="docs__grid-inventory">
           <div class="fsa-grid docs__grid-inventory-item">
             <div class="fsa-grid__1/12">
@@ -2577,7 +2576,8 @@
           </div>
         </div>
         <h3 class="docs__bd docs__figure">Responsive Columns</h3>
-        <h4 class="docs__sub_style">Full-width mobile first, 1/2 @ sm, 1/4 @ m </h4>
+        <h4 class="docs__sub_style">Example</h4>
+        <p>Full-width by default (smallest screen), <code title="One-half at Small">1/2@sm</code>, <code title="One-fourth at Medium">1/4@m</code> </p>
         <div class="fsa-grid">
           <div class="fsa-grid__1/1 fsa-grid__1/2@sm fsa-grid__1/4@ml">
             <p class="fsa-grid__demo">
@@ -2911,7 +2911,7 @@
           </div>
 
           <h3 class="docs__bd docs__figure">Text Size</h3>
-          <p class="docs__code-sample"><code>class="fsa-text-size--[n]"</code></p>
+          <p class="docs__code-sample"><code>class="fsa-text-size--[size]"</code>, where <code>size</code> is one of <code>0</code> - <code>7</code></p>
           <p class="fsa-ellipsis fsa-text-size--0">Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
           <p class="fsa-ellipsis fsa-text-size--1">Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
           <p class="fsa-ellipsis fsa-text-size--2">Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
@@ -2921,6 +2921,12 @@
           <p class="fsa-ellipsis fsa-text-size--6">Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
           <p class="fsa-ellipsis fsa-text-size--7">Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
 
+          <h3 class="docs__bd docs__figure">Responsive Text Size</h3>
+          <p>As with <a href="#grid">Responsive Grids</a>, text size can customized per media query breakpoint.</p>
+          <p><code>class="fsa-text-size--[size]@[breakpoint]"</code>, where <code>size</code> is one of <code>0</code> - <code>7</code>, and <code>breakpoint</code> is one of <span class="OUTLINE">TBD</span></p>
+          <h4 class="docs__sub_style">Examples</h4>
+          <p class="fsa-text-size--1 fsa-text-size--4@m fsa-text-size--7@l">I am size <code>1</code> by default (smallest screen), <code title="Four at Medium">4@m</code> (wide phones), and <code title="Seven at Large">7@l</code> (desktop)</p>
+          <p class="fsa-text-size--3 fsa-text-size--5@l fsa-text-size--7@xl">I am size <code>3</code> by default (smallest screen), <code title="Five at Large">5@l</code> (desktop), and <code title="Seven at Extra-Large">7@xl</code> (really big desktop)</p>
           <h3 class="docs__bd docs__figure">Text Alignment</h3>
           <h4 class="docs__sub_style">Right</h4>
           <p class="docs__code-sample"><code>class="fsa-text-align--right"</code></p>
