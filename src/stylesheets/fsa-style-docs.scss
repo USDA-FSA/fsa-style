@@ -146,16 +146,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     margin-right: auto;
     margin-bottom: 1em;
 
-    // TODO: Fixed Nav: Issue #66
-    // @include breakpoint(ML) {
-    //   margin-bottom: 0;
-    // }
-
-    // TODO: Fixed Nav: Issue #66
-    // @include breakpoint(XL) {
-    //   max-width: ($site-max-width + 24px);
-    // }
-
     &-item {
 
       @include reset-li();
@@ -186,42 +176,21 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
       @include breakpoint(ML) {
         margin-right: $size-small;
-        // TODO: Fixed Nav: Issue #66
-        // @include font-size (1);
-        // margin-right: 0;
-        // padding: $size-small;
-        // color: $color-white;
-        // text-decoration: none;
       }
-
-      // TODO: Fixed Nav: Issue #66
-      // @include breakpoint(L) {
-      //   padding: $size-default;
-      // }
 
       // scss-lint:disable NestingDepth
       &:hover {
         text-decoration: underline;
       }
 
+      &:active,
       &:hover,
+      &:hover:visited,
       &:visited {
 
         color: $color-fsa-white;
 
-        // TODO: Fixed Nav: Issue #66
-        // @include breakpoint(ML) {
-        //   color: $color-fsa-white;
-        // }
-
       }
-
-      // TODO: Fixed Nav: Issue #66
-      // &:hover {
-      //   @include breakpoint(ML) {
-      //     background: rgba(0, 0, 0, .2);
-      //   }
-      // }
 
     }
 
