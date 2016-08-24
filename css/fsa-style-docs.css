@@ -263,7 +263,7 @@ html:hover body::before {
   text-decoration: underline;
 }
 
-.docs__primary-nav-link:hover, .docs__primary-nav-link:visited {
+.docs__primary-nav-link:active, .docs__primary-nav-link:hover, .docs__primary-nav-link:hover:visited, .docs__primary-nav-link:visited {
   color: #fff;
 }
 
