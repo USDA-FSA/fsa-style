@@ -405,8 +405,6 @@ html:hover body::before {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  font-size: 22.4px;
-  font-size: 1.4rem;
   margin: 12.8px 0 1em;
   margin: 0.8rem 0 1em;
 }
@@ -414,8 +412,6 @@ html:hover body::before {
 .docs__attr-list__attr-item {
   display: list-item;
   margin: 0;
-  margin-bottom: 6.4px;
-  margin-bottom: 0.4rem;
 }
 
 .docs__attr-list__attr-item:before {
@@ -459,8 +455,6 @@ html:hover body::before {
 .docs__swatch-list__item {
   display: list-item;
   margin: 0;
-  font-size: 22.4px;
-  font-size: 1.4rem;
   padding: 76.8px 19.2px 19.2px;
   padding: 4.8rem 1.2rem 1.2rem;
 }
@@ -497,27 +491,33 @@ html:hover body::before {
 .docs__font--source-sans-pro {
   font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-weight: 400;
+  outline: 1px solid blue;
 }
 
 .docs__font--source-sans-pro-light {
   font-weight: 300;
+  outline: 1px solid green;
 }
 
 .docs__font--source-sans-pro-bold {
   font-weight: 700;
+  outline: 1px solid red;
 }
 
 .docs__font--merriweather {
   font-family: "Merriweather", "Georgia", "Cambria", "Times New Roman", "Times", serif;
   font-weight: 400;
+  outline: 1px solid purple;
 }
 
 .docs__font--merriweather-light {
   font-weight: 300;
+  outline: 1px solid black;
 }
 
 .docs__font--merriweather-bold {
   font-weight: 700;
+  outline: 1px solid pink;
 }
 
 .docs__font--helvetica {
