@@ -313,13 +313,11 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     &__attr {
 
       @include reset-ul;
-      @include font-size(1);
       margin: $size-small 0 1em;
 
       // scss-lint:disable NestingDepth
       &-item {
         @include reset-li;
-        margin-bottom: $size-base;
       }
 
     }
@@ -342,7 +340,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     &__item {
 
       @include reset-li;
-      @include font-size(1);
       padding: $size-extra-large $size-default $size-default;
 
       // scss-lint:disable NestingDepth
@@ -375,14 +372,17 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
       font-family: $font-sans;
       font-weight: $font-normal;
+      outline: 1px solid blue;
 
       // scss-lint:disable NestingDepth
       &-light {
         font-weight: $font-light;
+        outline: 1px solid green;
       }
 
       &-bold {
         font-weight: $font-bold;
+        outline: 1px solid red;
       }
 
     }
@@ -391,14 +391,17 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
       font-family: $font-serif;
       font-weight: $font-normal;
+      outline: 1px solid purple;
 
       // scss-lint:disable NestingDepth
       &-light {
         font-weight: $font-light;
+        outline: 1px solid black;
       }
 
       &-bold {
         font-weight: $font-bold;
+        outline: 1px solid pink;
       }
 
     }
