@@ -1,5 +1,7 @@
 'use strict';
 
+require('./initializers/polyfills'); // defines key ECMAScript 5 methods that may be missing from older browsers, so must be loaded first.
+
 var $ = window.jQuery = require('jquery');
 
 var heightToHold = $('.docs__primary-nav').outerHeight(true);
