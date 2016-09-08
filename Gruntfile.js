@@ -205,8 +205,8 @@ module.exports = function (grunt) {
     browserify: {
       main: {
         files: {
-          'dist/js/fsa-style-docs.js': [
-            'src/js/fsa-style-docs.js'
+          'dist/js/<%= pkg.name %>-docs.js': [
+            'src/js/<%= pkg.name %>-docs.js'
             // ,'path/to/another/file.js',
           ],
           // 'dist/js/uswds.js': [
@@ -269,10 +269,10 @@ module.exports = function (grunt) {
     'copy:img',
     'copy:js',
     'sass',
+    'browserify',
     'usebanner',
     'postcss',
     'prettify',
-    'browserify',
     'lint'
   ]);
   grunt.registerTask('deploy', ['build', 'buildcontrol:pages']);
