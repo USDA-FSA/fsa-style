@@ -100,7 +100,7 @@ module.exports = function (grunt) {
           'src/stylesheets/*.scss',
           'src/stylesheets/**/*.scss'
         ],
-        tasks: ['sass', 'scsslint', 'postcss'],
+        tasks: ['sass', 'scsslint', 'postcss', 'usebanner'],
         options: { nospawn: true }
       },
       html: {
@@ -205,8 +205,8 @@ module.exports = function (grunt) {
     browserify: {
       main: {
         files: {
-          'dist/js/fsa-style-docs.js': [
-            'src/js/fsa-style-docs.js'
+          'dist/js/<%= pkg.name %>-docs.js': [
+            'src/js/<%= pkg.name %>-docs.js'
             // ,'path/to/another/file.js',
           ],
           // 'dist/js/uswds.js': [
@@ -238,7 +238,21 @@ module.exports = function (grunt) {
           branch: 'build'
         }
       }
-    }
+    },
+
+    // Add versioned comment banner at top of files
+    usebanner: {
+      taskName: {
+        options: {
+          position: 'top',
+          banner: '/*! FSA Style v<%= pkg.version %> | http://usda-fsa.github.io/fsa-design-system/ */\n\n',
+          linebreak: true
+        },
+        files: {
+          src: ['dist/css/*.css'],
+        }
+      }
+    },
 
   });
 
@@ -255,9 +269,10 @@ module.exports = function (grunt) {
     'copy:img',
     'copy:js',
     'sass',
+    'browserify',
+    'usebanner',
     'postcss',
     'prettify',
-    'browserify',
     'lint'
   ]);
   grunt.registerTask('deploy', ['build', 'buildcontrol:pages']);
