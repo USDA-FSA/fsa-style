@@ -100,7 +100,7 @@ module.exports = function (grunt) {
           'src/stylesheets/*.scss',
           'src/stylesheets/**/*.scss'
         ],
-        tasks: ['sass', 'scsslint', 'postcss'],
+        tasks: ['sass', 'scsslint', 'postcss', 'usebanner'],
         options: { nospawn: true }
       },
       html: {
@@ -238,7 +238,21 @@ module.exports = function (grunt) {
           branch: 'build'
         }
       }
-    }
+    },
+
+    // Add versioned comment banner at top of files
+    usebanner: {
+      taskName: {
+        options: {
+          position: 'top',
+          banner: '/*! FSA Style v<%= pkg.version %> | http://usda-fsa.github.io/fsa-design-system/ */\n\n',
+          linebreak: true
+        },
+        files: {
+          src: ['dist/css/*.css'],
+        }
+      }
+    },
 
   });
 
@@ -255,6 +269,7 @@ module.exports = function (grunt) {
     'copy:img',
     'copy:js',
     'sass',
+    'usebanner',
     'postcss',
     'prettify',
     'browserify',
