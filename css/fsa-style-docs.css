@@ -1,3 +1,6 @@
+/*! FSA Style v0.2.2 | http://usda-fsa.github.io/fsa-design-system/ */
+
+
 html {
   box-sizing: border-box;
 }
@@ -221,15 +224,8 @@ html:hover body::before {
 .docs__primary-nav-item {
   display: list-item;
   margin: 0;
+  padding: 0;
   display: inline-block;
-}
-
-.docs__primary-nav-item:before {
-  display: none;
-}
-
-.docs__primary-nav-item:after {
-  display: none;
 }
 
 .docs__primary-nav-item--floater {
@@ -362,16 +358,9 @@ html:hover body::before {
 .docs__attr-list__item {
   display: list-item;
   margin: 0;
+  padding: 0;
   -ms-flex: 1;
       flex: 1;
-}
-
-.docs__attr-list__item:before {
-  display: none;
-}
-
-.docs__attr-list__item:after {
-  display: none;
 }
 
 @media (min-width: 48em) {
@@ -412,14 +401,7 @@ html:hover body::before {
 .docs__attr-list__attr-item {
   display: list-item;
   margin: 0;
-}
-
-.docs__attr-list__attr-item:before {
-  display: none;
-}
-
-.docs__attr-list__attr-item:after {
-  display: none;
+  padding: 0;
 }
 
 .docs__swatch-list {
@@ -455,16 +437,9 @@ html:hover body::before {
 .docs__swatch-list__item {
   display: list-item;
   margin: 0;
+  padding: 0;
   padding: 76.8px 19.2px 19.2px;
   padding: 4.8rem 1.2rem 1.2rem;
-}
-
-.docs__swatch-list__item:before {
-  display: none;
-}
-
-.docs__swatch-list__item:after {
-  display: none;
 }
 
 .docs__swatch-list__item--main {

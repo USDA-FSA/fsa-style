@@ -1,3 +1,6 @@
+/*! FSA Style v0.2.2 | http://usda-fsa.github.io/fsa-design-system/ */
+
+
 html {
   box-sizing: border-box;
 }
@@ -470,6 +473,7 @@ html {
 
 body {
   background-color: #ffffff;
+  overflow-x: hidden;
 }
 
 .lt-ie9 * {
@@ -724,6 +728,30 @@ dfn {
   }
 }
 
+.usa-disclaimer-inner {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-right: 1.5rem;
+  padding-left: 15px;
+  padding-left: 1.5rem;
+  max-width: 1040px;
+}
+
+.usa-disclaimer-inner::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+@media screen and (min-width: 951px) {
+  .usa-disclaimer-inner {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+}
+
 .usa-disclaimer-official {
   display: inline-block;
 }
@@ -760,28 +788,6 @@ dfn {
   .usa-disclaimer-stage {
     display: block;
   }
-}
-
-.skipnav {
-  background: transparent;
-  color: #212121;
-  left: 0;
-  padding: 10px 15px;
-  padding: 1rem 1.5rem;
-  position: absolute;
-  top: -42px;
-  top: -4.2rem;
-  transition: all 0.2s ease-in-out;
-  z-index: 100;
-}
-
-.skipnav:focus {
-  background: #ffffff;
-  left: 0;
-  outline: 0;
-  position: absolute;
-  top: 0;
-  transition: all 0.2s ease-in-out;
 }
 
 /* FSA-specific overrides/additions */
@@ -1969,6 +1975,28 @@ hr {
   }
 }
 
+.skipnav {
+  background: transparent;
+  color: #2f2c2a;
+  left: 0;
+  padding: 10px 15px;
+  padding: 1rem 1.5rem;
+  position: absolute;
+  top: -42px;
+  top: -4.2rem;
+  transition: all 0.2s ease-in-out;
+  z-index: 100;
+}
+
+.skipnav:focus {
+  background: #fff;
+  left: 0;
+  outline: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.2s ease-in-out;
+}
+
 /* ---------------------------------------------------------------------------*/
 /* BASE: BUTTONS                                                              */
 .fsa-btn {
@@ -2655,37 +2683,28 @@ input[type="search"] {
   }
 }
 
-ul ul,
-ol ul, ul
-ol,
-ol
+ul,
 ol {
-  margin-top: 1em;
   margin-bottom: 1em;
+  margin-top: 1em;
+  padding-left: 1.4em;
 }
 
-ol ol {
-  counter-reset: table-ol;
+li {
+  margin-bottom: .5em;
 }
 
-.fsa-list--unstyled {
+.fsa-list--unstyled, .usa-unstyled-list {
   display: block;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.fsa-list--unstyled > li {
+.fsa-list--unstyled > li, .usa-unstyled-list > li {
   display: list-item;
   margin: 0;
-}
-
-.fsa-list--unstyled > li:before {
-  display: none;
-}
-
-.fsa-list--unstyled > li:after {
-  display: none;
+  padding: 0;
 }
 
 .fsa-list--inline {
@@ -2698,17 +2717,10 @@ ol ol {
 .fsa-list--inline > li {
   display: list-item;
   margin: 0;
+  padding: 0;
   display: inline-block;
   margin-right: 8px;
   margin-right: 0.8rem;
-}
-
-.fsa-list--inline > li:before {
-  display: none;
-}
-
-.fsa-list--inline > li:after {
-  display: none;
 }
 
 .fsa-list--inline > li:last-child {
@@ -2735,29 +2747,6 @@ dd + dt {
   margin-top: .75em;
 }
 
-ul,
-ol {
-  margin-bottom: 2em;
-  margin-top: 2em;
-  list-style: none;
-  padding-left: 0;
-  display: table;
-}
-
-ul li,
-ol li {
-  line-height: 1.5;
-  margin-bottom: .75em;
-  margin-top: .75em;
-}
-
-ul li::after,
-ol li::after {
-  content: '';
-  display: block;
-  margin-bottom: .5em;
-}
-
 h1 + ul,
 h1 + ol,
 h2 + ul,
@@ -2773,51 +2762,6 @@ h6 + ol,
 p + ul,
 p + ol {
   margin-top: 0;
-}
-
-ul > li {
-  display: table-row;
-}
-
-ul > li::before {
-  content: '\2022';
-  display: table-cell;
-  padding-right: .4em;
-}
-
-ol > li {
-  counter-increment: table-ol;
-  display: table-row;
-}
-
-ol > li::before {
-  content: counter(table-ol) ".";
-  display: table-cell;
-  padding-right: .4em;
-  text-align: right;
-}
-
-li {
-  margin-bottom: .5em;
-}
-
-.usa-unstyled-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.usa-unstyled-list li {
-  display: list-item;
-  margin: 0;
-}
-
-.usa-unstyled-list li::before {
-  display: none;
-}
-
-.usa-unstyled-list li::after {
-  display: none;
 }
 
 table {
@@ -3414,7 +3358,7 @@ figure {
 .fsa-clearfix::after {
   clear: both;
   content: "";
-  display: table;
+  display: block;
 }
 
 .fsa-float--left {
@@ -3423,6 +3367,10 @@ figure {
 
 .fsa-float--right {
   float: right;
+}
+
+.fsa-float--none {
+  float: none;
 }
 
 .fsa-font--sans {
