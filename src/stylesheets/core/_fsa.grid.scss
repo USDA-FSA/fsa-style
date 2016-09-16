@@ -30,17 +30,11 @@
 
 @include fsa-grid();
 
-@include breakpoint(SM) {
-  @include fsa-grid(\@sm);
+@include breakpoint(S) {
+  @include fsa-grid(\@s);
 }
 @include breakpoint(M) {
   @include fsa-grid(\@m);
-}
-@include breakpoint(MML) {
-  @include fsa-grid(\@mml);
-}
-@include breakpoint(ML) {
-  @include fsa-grid(\@ml);
 }
 @include breakpoint(L) {
   @include fsa-grid(\@l);
