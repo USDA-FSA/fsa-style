@@ -60,29 +60,9 @@ body::before {
     background: rgba(51, 102, 0, .8);
   }
 
-  @include breakpoint(MLL) {
-    content: 'MLL: 864px - 979px';
-    background: rgba(5, 204, 0, .8);
-  }
-
   @include breakpoint(L) {
-    content: 'L: 980px - 1023px';
+    content: 'L: 980px +';
     background: rgba(204, 102, 0, .8);
-  }
-
-  @include breakpoint(XL) {
-    content: 'XL: 1024px - 1259px';
-    background: rgba(153, 102, 51, .8);
-  }
-
-  @include breakpoint(XXL) {
-    content: 'XXL: 1260px +';
-    background: rgba(0, 153, 204, .8);
-  }
-
-  @include breakpoint(XXXL) {
-    content: 'XXXL: 1440px +';
-    background: #e76822;
   }
 
   html:hover & {
