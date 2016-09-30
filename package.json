@@ -44,6 +44,7 @@
     "url": "https://github.com/USDA-FSA/fsa-style/issues"
   },
   "scripts": {
+    "build": "grunt build",
     "start": "npm i && grunt",
     "deploy": "grunt deploy",
     "test": "grunt test"
