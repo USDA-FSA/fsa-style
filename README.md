@@ -4,7 +4,7 @@ USDA Farm Service Agency's **Visual Language** and **HTML/CSS Framework**, as do
 
 ## Background
 
-The components and style guide of the FSA Design System follow industry-standard web accessibility guidelines and use the best practices of existing style libraries and modern web design. They are designed for use by FSA product teams who want to create beautiful, easy-to-use online experiences.
+The components and style guide of the FSA Design System follow industry-standard web accessibility guidelines and use the best practices of existing style libraries and modern web design. They are designed for use by FSA product teams who want to create beautiful, easy-to-use,  online experiences that are consistent to the FSA Style.
 
 It was created and maintained by the USA-FSA Office of Architecture, and is heavily influenced by the [Draft U.S. Web Design Standards](https://standards.usa.gov/) created and maintained by the wonderful folks at [18F](https://18f.gsa.gov/).
 
@@ -55,7 +55,7 @@ The main Sass (SCSS) source file is here:
 node_modules/fsa-style/src/stylesheets/all.scss
 ```
 
-The precompiled CSS files' location':
+The precompiled CSS files' location:
 
 ```
 node_modules/fsa-style/dist/css/fsa-style.css
