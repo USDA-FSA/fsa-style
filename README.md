@@ -16,14 +16,53 @@ Information about the most recent release can always be found in the [release hi
 
 Two options are available for usage of fsa-style HTML, CSS, Images, and Web Fonts:
 
-* **[NPM Install](#npm-install)**
+* **[NPM Install](#install-using-npm)**
 * **[Download ZIP](#download-zip)**
 
-### NPM Install
+### Install using NPM
 
-(steps to `npm install` and incorporate)
+If you have `node` installed on your machine, you can use npm to install the Standards. Add `fsa-style`
+to your project’s `package.json` as a dependency:
 
-Second, refer to [Using the Boilerplate](using-the-boilerplate) for further steps.
+```shell
+npm install --save fsa-style
+```
+
+The package will be installed in `node_modules/fsa-style`. You can either use the un-compiled files
+found in the `src/` or the compiled files in the `dist/` directory. For example, if you're interested in using the SASS files (`.scss`) you would use the `src/` directory; otherwise, `dist/` is what you want.
+
+```
+node_modules/fsa-style/
+├── dist/
+│   ├── css/
+│   ├── fonts/
+│   ├── img/
+│   ├── js/
+│   ├── boilerplate.html
+│   └── index.html
+└── src/
+    ├── fonts/
+    ├── img/
+    ├── js/
+    ├── stylesheets/
+    ├── boilerplate.html
+    └── index.html
+```
+
+The main Sass (SCSS) source file is here:
+
+```
+node_modules/fsa-style/src/stylesheets/all.scss
+```
+
+The precompiled CSS files' location':
+
+```
+node_modules/fsa-style/dist/css/fsa-style.css
+node_modules/fsa-style/dist/css/fsa-style.min.css
+```
+
+Lastly, refer to [Using the Boilerplate](using-the-boilerplate) for basic guidance on HTML structure.
 
 ### Download ZIP
 
@@ -46,13 +85,13 @@ Add the downloaded ZIP's assets into a relevant place in your code base — like
 
 ```sh
 fsa-style-0.2.5/
-├── img/
-├── fonts/
 ├── css/
 │   ├── fsa-style.css
 │   ├── fsa-style.css.map
 │   ├── fsa-style.min.css
 │   └── fsa-style.min.css.map
+├── fonts/
+├── img/
 └── js/
     └── vendor/
 ```
@@ -61,7 +100,7 @@ Then refer to [Using the Boilerplate](using-the-boilerplate) for further steps.
 
 ## Using the Boilerplate
 
-Then use `boilerplate.html` as a reference for the key HTML structure required, generally summarized below:
+Reference this basic list for the general requirements for your typical HTML structure:
 
 1. HTML5 doctype: `<!DOCTYPE html>`.
 1. Wrap `<html>` start element in IE conditional comment.
