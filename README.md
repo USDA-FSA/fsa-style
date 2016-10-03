@@ -1,16 +1,16 @@
 # FSA Style
 
-*(WIP, content TBD)*
+USDA Farm Service Agency's **Visual Language** and **HTML/CSS Framework**, as documented by the [FSA Design System](http://usda-fsa.github.io/fsa-design-system/) which is maintained is a [separate repository](https://github.com/USDA-FSA/fsa-design-system).
 
-USDA Farm Service Agency's **Visual Language** and **HTML/CSS Framework**.
+## Background
 
-It was created and maintained by the FSA Office of Architecture, and is heavily influenced by the [Draft U.S. Web Design Standards](https://playbook.cio.gov/designstandards/) created and maintained by the [U.S. Digital Service](https://www.whitehouse.gov/digital/united-states-digital-service) and [18F](https://18f.gsa.gov/).
+The components and style guide of the FSA Design System follow industry-standard web accessibility guidelines and use the best practices of existing style libraries and modern web design.
 
-These tools follow industry-standard web accessibility guidelines and employ best practices of existing style libraries and modern web design.
+It was created and maintained by the USA-FSA Office of Architecture, and is heavily influenced by the [Draft U.S. Web Design Standards](https://standards.usa.gov/) created and maintained by the wonderful folks at [18F](https://18f.gsa.gov/).
+
+They are designed for use by FSA product teams who want to create beautiful, easy-to-use online experiences.
 
 ## Contents
-
-*(WIP, content TBD)*
 
 Grunt takes...
 
