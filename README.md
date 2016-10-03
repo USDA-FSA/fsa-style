@@ -12,13 +12,18 @@ It was created and maintained by the USA-FSA Office of Architecture, and is heav
 
 Information about the most recent release can always be found in the [release history](https://github.com/USDA-FSA/fsa-style/releases). We include details about significant updates and any backwards incompatible changes along with a list of all changes.
 
-## Using these assets
+## Using fsa-style assets
 
-Two options are available for usage of fsa-style HTML, CSS, Images, and Web Fonts: **[NPM Install](#npm-install)** or **[Download ZIP](download-zip)**.
+Two options are available for usage of fsa-style HTML, CSS, Images, and Web Fonts:
+
+* **[NPM Install](#npm-install)**
+* **[Download ZIP](#download-zip)**
 
 ### NPM Install
 
 (steps to `npm install` and incorporate)
+
+Second, refer to [Using the Boilerplate](using-the-boilerplate) for further steps.
 
 ### Download ZIP
 
@@ -26,18 +31,18 @@ If you don't have Node or the ability to incorporate source files into a build p
 
 Download the latest assets: **https://github.com/usda-fsa/fsa-style/releases/download/v0.2.5/fsa-style-0.2.5.zip**
 
-#### Visual Index
+#### 1. Visual Index
 
 The `index.html` included is a Visual Index of this CSS Framework's Visual Language, including basic HTML elements expressed in that style, also viewable at http://usda-fsa.github.io/fsa-style/index.html.
 
-#### Boilerplate
+#### 2. Boilerplate
 
-A basic `boilerplate.html` is available for immediate use and includes the HTML structure most typically required of an FSA digital product, also viewable at
+The included `boilerplate.html` provides guidance on the HTML structure most typically required of an FSA digital product, also viewable at
 http://usda-fsa.github.io/fsa-style/boilerplate.html.
 
-#### Manually using in your project
+#### 3. Manually adding to your project
 
-First, add the downloaded ZIP's assets into a relevant place in your code base — likely a directory where you keep third-party libraries:
+Add the downloaded ZIP's assets into a relevant place in your code base — likely a directory where you keep third-party libraries:
 
 ```sh
 fsa-style-0.2.5/
@@ -51,6 +56,10 @@ fsa-style-0.2.5/
 └── js/
     └── vendor/
 ```
+
+Then refer to [Using the Boilerplate](using-the-boilerplate) for further steps.
+
+## Using the Boilerplate
 
 Then use `boilerplate.html` as a reference for the key HTML structure required, generally summarized below:
 
