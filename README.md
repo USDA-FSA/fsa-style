@@ -4,11 +4,9 @@ USDA Farm Service Agency's **Visual Language** and **HTML/CSS Framework**, as do
 
 ## Background
 
-The components and style guide of the FSA Design System follow industry-standard web accessibility guidelines and use the best practices of existing style libraries and modern web design.
+The components and style guide of the FSA Design System follow industry-standard web accessibility guidelines and use the best practices of existing style libraries and modern web design. They are designed for use by FSA product teams who want to create beautiful, easy-to-use online experiences.
 
 It was created and maintained by the USA-FSA Office of Architecture, and is heavily influenced by the [Draft U.S. Web Design Standards](https://standards.usa.gov/) created and maintained by the wonderful folks at [18F](https://18f.gsa.gov/).
-
-They are designed for use by FSA product teams who want to create beautiful, easy-to-use online experiences.
 
 ## Recent updates
 
@@ -24,22 +22,22 @@ Two options are available for usage of fsa-style HTML, CSS, Images, and Web Font
 
 ### Download ZIP
 
-First, download the assets:
+If you don't have Node or the ability to incorporate source files into a build process (Grunt, Gulp, etc), follow these steps to manually use the FSA Style.
 
-https://github.com/usda-fsa/fsa-style/releases/download/v0.2.5/fsa-style-0.2.5.zip
+Download the latest assets: **https://github.com/usda-fsa/fsa-style/releases/download/v0.2.5/fsa-style-0.2.5.zip**
 
 #### Visual Index
 
-The `index.html` included is a Visual Index (think "Kitchen Sink") of available HTML/CSS, also viewable at http://usda-fsa.github.io/fsa-style/index.html.
+The `index.html` included is a Visual Index of this CSS Framework's Visual Language, including basic HTML elements expressed in that style, also viewable at http://usda-fsa.github.io/fsa-style/index.html.
 
 #### Boilerplate
 
-A basic `boilerplate.html` is available for immediate use and includes the HTML structure most typically required of an FSA digital product. It is also viewable at
+A basic `boilerplate.html` is available for immediate use and includes the HTML structure most typically required of an FSA digital product, also viewable at
 http://usda-fsa.github.io/fsa-style/boilerplate.html.
 
-### Using in your project
+#### Manually using in your project
 
-**First**, add the following folders into a relevant place in your code base — likely a directory where you keep third-party libraries:
+First, add the downloaded ZIP's assets into a relevant place in your code base — likely a directory where you keep third-party libraries:
 
 ```sh
 fsa-style-0.2.5/
@@ -54,7 +52,7 @@ fsa-style-0.2.5/
     └── vendor/
 ```
 
-**Second**, use `boilerplate.html` as a reference for the key HTML structure required, generally summarized below:
+Then use `boilerplate.html` as a reference for the key HTML structure required, generally summarized below:
 
 1. HTML5 doctype: `<!DOCTYPE html>`.
 1. Wrap `<html>` start element in IE conditional comment.
@@ -64,12 +62,13 @@ fsa-style-0.2.5/
 1. Include IE conditional commented Browser Upgrade message.
 1. Include "skipnav" anchor link, with `href` attribute pointing to `<main>` element.
 1. Wrap primary contents with `<main id="main-content">...</main>`.
+1. Build your thing!
 
 ## Contributing
 
 For complete instructions on how to contribute code, please read [CONTRIBUTING.md](CONTRIBUTING.md).
 
-If you have questions or concerns about our contributing workflow, please contact us by [filing a GitHub issue](#https://github.com/usda=fsa/fsa-style/issues).
+If you have questions or concerns about our contributing workflow, please contact us by [filing a GitHub issue](https://github.com/usda=fsa/fsa-style/issues).
 
 ## Reuse of open-source style guides
 
@@ -77,7 +76,7 @@ This Design System was initially based on the [Draft U.S. Web Design Standards](
 
 The Draft U.S. Web Design Standards are designed for use by government product teams who want to create beautiful, easy-to-use online experiences for the public. To learn more about the project, check out [their blog post](https://18f.gsa.gov/2015/09/28/web-design-standards/).
 
-### Other inspiration
+## Other inspiration
 
 Further Design System sources of inspiration - some government-oriented, some not.
 
