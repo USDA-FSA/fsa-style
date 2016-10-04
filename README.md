@@ -55,14 +55,14 @@ The main Sass (SCSS) source file is here:
 node_modules/fsa-style/src/stylesheets/all.scss
 ```
 
-The precompiled CSS files' location:
+The compiled and minified  CSS files' location:
 
 ```
 node_modules/fsa-style/dist/css/fsa-style.css
 node_modules/fsa-style/dist/css/fsa-style.min.css
 ```
 
-Lastly, refer to [Using the Boilerplate](using-the-boilerplate) for basic guidance on HTML structure.
+Lastly, refer to [Using the Boilerplate](#using-the-boilerplate) for basic guidance on HTML structure.
 
 ### Download ZIP
 
@@ -72,16 +72,16 @@ Download the latest assets: **https://github.com/usda-fsa/fsa-style/releases/dow
 
 #### 1. Visual Index
 
-The `index.html` included is a Visual Index of this CSS Framework's Visual Language, including basic HTML elements expressed in that style, also viewable at http://usda-fsa.github.io/fsa-style/index.html.
+`index.html` is a Visual Index of this CSS Framework's Visual Language, including basic HTML elements expressed in that style. Viewable at http://usda-fsa.github.io/fsa-style/index.html.
 
 #### 2. Boilerplate
 
-The included `boilerplate.html` provides guidance on the HTML structure most typically required of an FSA digital product, also viewable at
+`boilerplate.html` provides a non-designed starting point. It serves as general guidance for the HTML structure most typically required of an FSA digital product. Viewable at
 http://usda-fsa.github.io/fsa-style/boilerplate.html.
 
 #### 3. Manually adding to your project
 
-Add the downloaded ZIP's assets into a relevant place in your code base — likely a directory where you keep third-party libraries:
+Add the downloaded ZIP's assets to a relevant place in your code base — likely a directory where you keep third-party libraries:
 
 ```sh
 fsa-style-0.2.5/
@@ -96,7 +96,9 @@ fsa-style-0.2.5/
     └── vendor/
 ```
 
-Then refer to [Using the Boilerplate](using-the-boilerplate) for further steps.
+Note that `fonts` and `img` must be alongside `css` as the CSS files reference them at a specific relative path; e.g., `../img/file.png`
+
+Refer to [Using the Boilerplate](#using-the-boilerplate) for further steps.
 
 ## Using the Boilerplate
 
