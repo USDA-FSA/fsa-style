@@ -102,7 +102,9 @@ Refer to [Using the Boilerplate](#using-the-boilerplate) for further steps.
 
 ## Using the Boilerplate
 
-Reference this basic list for the general requirements for your typical HTML structure:
+http://usda-fsa.github.io/fsa-style/boilerplate.html
+
+Reference this basic list for the general requirements for your typical HTML structure. Reviewing this list is perhaps best done while viewing its [HTML source](https://github.com/USDA-FSA/fsa-style/blob/master/src/boilerplate.html).
 
 1. HTML5 doctype: `<!DOCTYPE html>`.
 1. Wrap `<html>` start element in IE conditional comment.
