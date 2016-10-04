@@ -8,4 +8,4 @@
 .editorconfig
 .eslintrc
 src/scratch.html
-dist/releases
+published
