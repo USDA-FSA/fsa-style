@@ -129,7 +129,7 @@ module.exports = function (grunt) {
     // Clear files and folders
 		clean: {
 			dist: [ 'dist' ],
-			// uswds_main: [ 'src/stylesheets/all.scss' ],
+			// lorem: [ 'path/to/someting-else.scss' ],
 		},
 
     // Make our HTML files perfectly formatted and humanly scannable
@@ -254,6 +254,23 @@ module.exports = function (grunt) {
       }
     },
 
+    // Create a versioned ZIP of dist directory
+    compress: {
+      main: {
+        options: {
+          archive: 'published/<%= pkg.name %>-<%= pkg.version %>.zip'
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'dist/',
+            src: ['**'],
+            dest: '.'
+          },
+        ]
+      }
+    }
+
   });
 
   // Register Tasks
@@ -261,7 +278,6 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'copy:uswds_stylesheets',
-    // 'clean:uswds_main',
     'copy:uswds_fonts',
     'copy:uswds_img',
     'copy:uswds_js',
