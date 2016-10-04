@@ -15,7 +15,7 @@ module.exports = function (grunt) {
     sass: {
       default: {
         files: {
-          'dist/css/<%= pkg.name %>.css': 'src/stylesheets/<%= pkg.name %>.scss',
+          'dist/css/<%= pkg.name %>.css': 'src/stylesheets/all.scss',
           'dist/css/<%= pkg.name %>-docs.css': 'src/stylesheets/<%= pkg.name %>-docs.scss'
         },
         options: {
@@ -25,7 +25,7 @@ module.exports = function (grunt) {
       },
       minify: {
         files: {
-          'dist/css/<%= pkg.name %>.min.css': 'src/stylesheets/<%= pkg.name %>.scss',
+          'dist/css/<%= pkg.name %>.min.css': 'src/stylesheets/all.scss',
           'dist/css/<%= pkg.name %>-docs.min.css': 'src/stylesheets/<%= pkg.name %>-docs.scss'
         },
         options: {

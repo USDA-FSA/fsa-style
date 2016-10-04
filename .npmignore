@@ -1,0 +1,10 @@
+# Guarantee these are added
+
+!dist/
+!src/
+
+# Ignore these
+.github/
+.editorconfig
+.eslintrc
+src/scratch.html
