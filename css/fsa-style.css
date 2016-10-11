@@ -1,4 +1,4 @@
-/*! FSA Style v0.2.6 | http://usda-fsa.github.io/fsa-design-system/ */
+/*! FSA Style v0.2.7 | http://usda-fsa.github.io/fsa-design-system/ */
 
 
 html {
@@ -2294,7 +2294,7 @@ thead th {
   }
   .fsa-table--responsive th:before,
   .fsa-table--responsive td:before {
-    content: attr(data-label);
+    content: attr(aria-label);
     display: block;
     font-weight: 700;
     margin-top: 1em;
@@ -2306,7 +2306,6 @@ thead th {
   }
 }
 
-/* --------------------------------------------------------------------------*/
 p {
   line-height: inherit;
 }
