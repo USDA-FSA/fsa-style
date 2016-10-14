@@ -2132,6 +2132,7 @@ li {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  margin-bottom: 1em;
 }
 
 .fsa-list--inline > li {

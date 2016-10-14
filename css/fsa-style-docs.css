@@ -133,6 +133,12 @@ html:hover body::before {
   }
 }
 
+.docs__title__version {
+  font-size: 66%;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  color: #c8d8cb;
+}
+
 .docs__figure-group {
   margin-top: 57.6px;
   margin-top: 3.6rem;
@@ -150,6 +156,14 @@ html:hover body::before {
   margin-top: 38.4px;
   margin-top: 2.4rem;
   color: #205493;
+}
+
+.docs__overview {
+  background-color: #edecec;
+  padding-bottom: 57.6px;
+  padding-bottom: 3.6rem;
+  margin-bottom: 38.4px;
+  margin-bottom: 2.4rem;
 }
 
 @media (min-width: 54em) {
