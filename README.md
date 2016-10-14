@@ -2,6 +2,11 @@
 
 USDA Farm Service Agency's **Visual Language** and **HTML/CSS Framework**, as documented by the [FSA Design System](http://usda-fsa.github.io/fsa-design-system/).
 
+The FSA Design System comprises of two core repositories:
+
+1. **[fsa-design-system](https://github.com/USDA-FSA/fsa-style/)**: Source code for the [FSA Design System web site](http://usda-fsa.github.io/fsa-design-system), documenting the FSA Style and accompanying guidelines.
+1. **[fsa-style](https://github.com/USDA-FSA/fsa-style/)**: Style assets (HTML, CSS, Images) available for download or install, as documented by the [FSA Design System web site](http://usda-fsa.github.io/fsa-design-system).
+
 ## Background
 
 The components and style guide of the FSA Design System follow industry-standard web accessibility guidelines and use the best practices of existing style libraries and modern web design. They are designed for use by FSA product teams who want to create beautiful, easy-to-use,  online experiences that are consistent to the FSA Style.
