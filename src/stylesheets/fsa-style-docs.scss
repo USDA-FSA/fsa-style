@@ -494,6 +494,22 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   &__code-sample {} // scss-lint:disable EmptyRule
 
+  &__footer {
+
+    @include font-size(2);
+    margin-top: $size-large;
+    background-color: $color-fsa-tertiary-100;
+
+    &:before {
+      display: none;
+    }
+
+    &__bd {
+      padding: $size-medium 0;
+    }
+
+  }
+
 }
 
 .fsa-checkerboard {
