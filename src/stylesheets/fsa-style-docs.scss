@@ -70,12 +70,19 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   // Doc Titles
 
   &__title {
+
     margin-top: 2em;
     margin-top: 20vh;
     color: $color-fsa-white;
 
     @include breakpoint(M) {
       @include font-size(7);
+    }
+
+    &__version {
+      font-size: 66%;
+      font-family: $font-sans;
+      color: $color-fsa-primary-100
     }
 
   }
@@ -115,6 +122,15 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     // font-weight: $font-bold;
     margin-top: $size-medium;
     color: $color-annotation;
+  }
+
+  // -----------------------------------------------------------------------------
+  // Overview
+
+  &__overview {
+    background-color: $color-fsa-tertiary-100;
+    padding-bottom: $size-large;
+    margin-bottom: $size-medium;
   }
 
   // -----------------------------------------------------------------------------
