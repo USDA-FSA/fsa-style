@@ -4,38 +4,10 @@ scss_files: "**/*.scss"
 plugin_directories: ['.scss-linters']
 exclude: [
 
-  # Plug-ins, Bourbon, etc
+  # Plug-ins, Bourbon, USWDS, etc
   'src/stylesheets/lib/*.scss',
   'src/stylesheets/lib/**',
   'src/stylesheets/lib/**/*.scss',
-
-  # USWDS core
-  'src/stylesheets/core/_base.scss',
-  'src/stylesheets/core/_defaults.scss',
-  'src/stylesheets/core/_fonts.scss',
-  'src/stylesheets/core/_grid.scss',
-  'src/stylesheets/core/_grid-settings.scss',
-  'src/stylesheets/core/_utilities.scss',
-  'src/stylesheets/core/_variables.scss',
-
-  # USWDS elements
-  'src/stylesheets/elements/_buttons.scss',
-  'src/stylesheets/elements/_figure.scss',
-  'src/stylesheets/elements/_inputs.scss',
-  'src/stylesheets/elements/_labels.scss',
-  'src/stylesheets/elements/_list.scss',
-  'src/stylesheets/elements/_table.scss',
-  'src/stylesheets/elements/_typography.scss',
-
-  # USWDS components
-  'src/stylesheets/components/_accordions.scss',
-  'src/stylesheets/components/_alerts.scss',
-  'src/stylesheets/components/_disclaimer.scss',
-  'src/stylesheets/components/_footer.scss',
-  'src/stylesheets/components/_forms.scss',
-  'src/stylesheets/components/_search.scss',
-  'src/stylesheets/components/_sidenav.scss',
-  'src/stylesheets/components/_skipnav.scss',
 
 ]
 

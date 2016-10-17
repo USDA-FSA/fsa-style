@@ -11,6 +11,12 @@ module.exports = function (grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
 
+    // Clear files and folders
+		clean: {
+			dist: [ 'dist' ],
+			// lorem: [ 'path/to/someting-else.scss' ],
+		},
+
     // Sass all the style things
     sass: {
       default: {
@@ -64,8 +70,8 @@ module.exports = function (grunt) {
       uswds_js: {
         expand: true,
         src: '**',
-        cwd: 'node_modules/uswds/src/js',
-        dest: 'src/js'
+        cwd: 'node_modules/uswds/src/js/vendor',
+        dest: 'src/js/vendor'
       },
 
       // Copy fonts, img, and js **TO** /dist/
@@ -87,8 +93,8 @@ module.exports = function (grunt) {
       js: {
         expand: true,
         src: '**',
-        cwd: 'src/js',
-        dest: 'dist/js'
+        cwd: 'src/js/vendor',
+        dest: 'dist/js/vendor'
       },
 
     },
@@ -113,7 +119,7 @@ module.exports = function (grunt) {
         files: [
           'src/js/*.js',
         ],
-        tasks: ['browserify']
+        tasks: ['browserify', 'uglify']
       },
       img: {
         files: [
@@ -125,12 +131,6 @@ module.exports = function (grunt) {
         tasks: ['copy:img']
       },
     },
-
-    // Clear files and folders
-		clean: {
-			dist: [ 'dist' ],
-			// lorem: [ 'path/to/someting-else.scss' ],
-		},
 
     // Make our HTML files perfectly formatted and humanly scannable
     prettify: {
@@ -201,13 +201,24 @@ module.exports = function (grunt) {
       }
     },
 
+    // Uglify (minimize) JS
+    uglify: {
+      options: {
+        banner: '/*! FSA Style v<%= pkg.version %> | http://usda-fsa.github.io/fsa-design-system/ */\n\n'
+      },
+      build: {
+        src: 'dist/js/<%= pkg.name %>-docs.js',
+        dest: 'dist/js/<%= pkg.name %>-docs.min.js'
+      }
+    },
+
     // Browserify them JSs
     browserify: {
       main: {
         files: {
           'dist/js/<%= pkg.name %>-docs.js': [
-            'src/js/<%= pkg.name %>-docs.js'
-            // ,'path/to/another/file.js',
+            'src/js/main.js'
+            // ,'path/to/something/to/concatenate.js', // e.g. when you can't require a module
           ],
           // 'dist/js/uswds.js': [
           //   'node_modules/uswds/src/js/start.js',
@@ -286,6 +297,7 @@ module.exports = function (grunt) {
     'copy:js',
     'sass',
     'browserify',
+    'uglify',
     'usebanner',
     'postcss',
     'prettify',
