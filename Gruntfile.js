@@ -11,6 +11,12 @@ module.exports = function (grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
 
+    // Clear files and folders
+		clean: {
+			dist: [ 'dist' ],
+			// lorem: [ 'path/to/someting-else.scss' ],
+		},
+
     // Sass all the style things
     sass: {
       default: {
@@ -64,8 +70,8 @@ module.exports = function (grunt) {
       uswds_js: {
         expand: true,
         src: '**',
-        cwd: 'node_modules/uswds/src/js',
-        dest: 'src/js'
+        cwd: 'node_modules/uswds/src/js/vendor',
+        dest: 'src/js/vendor'
       },
 
       // Copy fonts, img, and js **TO** /dist/
@@ -125,12 +131,6 @@ module.exports = function (grunt) {
         tasks: ['copy:img']
       },
     },
-
-    // Clear files and folders
-		clean: {
-			dist: [ 'dist' ],
-			// lorem: [ 'path/to/someting-else.scss' ],
-		},
 
     // Make our HTML files perfectly formatted and humanly scannable
     prettify: {
@@ -206,8 +206,8 @@ module.exports = function (grunt) {
       main: {
         files: {
           'dist/js/<%= pkg.name %>-docs.js': [
-            'src/js/<%= pkg.name %>-docs.js'
-            // ,'path/to/another/file.js',
+            'src/js/start.js'
+            // ,'path/to/something/to/concatenate.js',
           ],
           // 'dist/js/uswds.js': [
           //   'node_modules/uswds/src/js/start.js',
