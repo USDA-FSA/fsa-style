@@ -1,5 +1,3 @@
-'use strict';
-
 var $ = window.jQuery = require('jquery');
 
 var heightToHold = $('.docs__primary-nav').outerHeight(true);
@@ -21,3 +19,5 @@ $(window).on('scroll', function(){
 });
 
 console.log(heightToHold);
+
+module.exports = DocsNav;
