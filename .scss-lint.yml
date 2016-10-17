@@ -4,7 +4,7 @@ scss_files: "**/*.scss"
 plugin_directories: ['.scss-linters']
 exclude: [
 
-  # Plug-ins, Bourbon, etc
+  # Plug-ins, Bourbon, USWDS, etc
   'src/stylesheets/lib/*.scss',
   'src/stylesheets/lib/**',
   'src/stylesheets/lib/**/*.scss',
