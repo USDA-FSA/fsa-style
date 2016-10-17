@@ -1,4 +1,4 @@
-/*! FSA Style v0.2.7 | http://usda-fsa.github.io/fsa-design-system/ */
+/*! FSA Style v0.2.8 | http://usda-fsa.github.io/fsa-design-system/ */
 
 
 html {
@@ -82,42 +82,6 @@ html:hover body::before {
     opacity: 1;
     transform: translateY(0%);
   }
-}
-
-.docs__disclaimer {
-  background-color: #1a4b24;
-  height: auto;
-  padding-top: 8px;
-  padding-top: .5rem;
-  padding-bottom: 8px;
-  padding-bottom: .5rem;
-}
-
-.docs__disclaimer__bd {
-  max-width: 1064px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-  color: #fff;
-  padding: 0 19.2px;
-  padding: 0 1.2rem;
-}
-
-@media (min-width: 35em) {
-  .docs__disclaimer__stage {
-    display: block;
-  }
-}
-
-.docs__disclaimer__stage--prototype {
-  font-size: 20.8px;
-  font-size: 1.3rem;
-  background-color: #f9c642;
-  color: black;
-  padding: 0 6.4px;
-  padding: 0 0.4rem;
-  position: relative;
-  top: -2px;
 }
 
 .docs__title {
