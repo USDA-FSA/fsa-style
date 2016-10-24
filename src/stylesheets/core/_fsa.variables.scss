@@ -127,5 +127,5 @@ $form-between-space            : $size-base - .2rem;
 // ---------------------------------------------------------------------------
 // FSA Grid Settings
 
-$fsa-grid-gutter: $size-medium; // rem or px unit only
+$fsa-grid-gutter: ($base-font-size * 1.5);
 $fsa-grid-columns: 12;
