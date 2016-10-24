@@ -57,7 +57,7 @@ node_modules/fsa-style/
 The main Sass (SCSS) source file is here:
 
 ```
-node_modules/fsa-style/src/stylesheets/all.scss
+node_modules/fsa-style/src/stylesheets/fsa-style.scss
 ```
 
 The compiled and minified  CSS files' location:
@@ -73,7 +73,7 @@ Lastly, refer to [Using the Boilerplate](#using-the-boilerplate) for basic guida
 
 If you don't have Node or the ability to incorporate source files into a build process (Grunt, Gulp, etc), follow these steps to manually use the FSA Style.
 
-Download the latest assets: **https://github.com/usda-fsa/fsa-style/releases/download/0.2.8/fsa-style-0.2.8.zip**
+Download the latest assets: **https://github.com/usda-fsa/fsa-style/releases/download/0.2.9/fsa-style-0.2.9.zip**
 
 #### 1. Visual Index
 
@@ -89,7 +89,7 @@ http://usda-fsa.github.io/fsa-style/boilerplate.html.
 Add the downloaded ZIP's assets to a relevant place in your code base — likely a directory where you keep third-party libraries:
 
 ```sh
-fsa-style-0.2.8/
+fsa-style-x.x.x/
 ├── css/
 │   ├── fsa-style.css
 │   ├── fsa-style.css.map
