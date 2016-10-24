@@ -1,4 +1,4 @@
-/*! FSA Style v0.2.8 | http://usda-fsa.github.io/fsa-design-system/ */
+/*! FSA Style v0.2.9 | http://usda-fsa.github.io/fsa-design-system/ */
 
 
 html {
@@ -300,7 +300,7 @@ html:hover body::before {
 
 @media (min-width: 35em) {
   .docs__attr-list__item {
-    margin-right: 2.4rem;
+    margin-right: 2.55rem;
   }
 }
 

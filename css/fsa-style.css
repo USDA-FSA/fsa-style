@@ -1,4 +1,4 @@
-/*! FSA Style v0.2.8 | http://usda-fsa.github.io/fsa-design-system/ */
+/*! FSA Style v0.2.9 | http://usda-fsa.github.io/fsa-design-system/ */
 
 
 html {
@@ -882,8 +882,8 @@ hr {
       flex-flow: row wrap;
   -ms-flex-line-pack: start;
       align-content: flex-start;
-  margin-left: -24px;
-  margin-left: -2.4rem;
+  margin-left: -25.5px;
+  margin-left: -2.55rem;
 }
 
 .fsa-grid--no-gutter {
@@ -910,8 +910,8 @@ hr {
   word-spacing: normal;
   vertical-align: top;
   text-rendering: auto;
-  padding-left: 24px;
-  padding-left: 2.4rem;
+  padding-left: 25.5px;
+  padding-left: 2.55rem;
   -ms-flex: 1;
       flex: 1;
 }
@@ -948,8 +948,8 @@ hr {
   word-spacing: normal;
   vertical-align: top;
   text-rendering: auto;
-  padding-left: 24px;
-  padding-left: 2.4rem;
+  padding-left: 25.5px;
+  padding-left: 2.55rem;
 }
 
 .fsa-grid--no-gutter .fsa-grid__1, .fsa-grid--no-gutter
@@ -1042,7 +1042,7 @@ hr {
     word-spacing: normal;
     vertical-align: top;
     text-rendering: auto;
-    padding-left: 2.4rem;
+    padding-left: 2.55rem;
     -ms-flex: 1;
         flex: 1;
   }
@@ -1077,7 +1077,7 @@ hr {
     word-spacing: normal;
     vertical-align: top;
     text-rendering: auto;
-    padding-left: 2.4rem;
+    padding-left: 2.55rem;
   }
   .fsa-grid--no-gutter .fsa-grid__1\@s, .fsa-grid--no-gutter
   .fsa-grid__1\/1\@s, .fsa-grid--no-gutter
@@ -1158,7 +1158,7 @@ hr {
     word-spacing: normal;
     vertical-align: top;
     text-rendering: auto;
-    padding-left: 2.4rem;
+    padding-left: 2.55rem;
     -ms-flex: 1;
         flex: 1;
   }
@@ -1193,7 +1193,7 @@ hr {
     word-spacing: normal;
     vertical-align: top;
     text-rendering: auto;
-    padding-left: 2.4rem;
+    padding-left: 2.55rem;
   }
   .fsa-grid--no-gutter .fsa-grid__1\@m, .fsa-grid--no-gutter
   .fsa-grid__1\/1\@m, .fsa-grid--no-gutter
@@ -1274,7 +1274,7 @@ hr {
     word-spacing: normal;
     vertical-align: top;
     text-rendering: auto;
-    padding-left: 2.4rem;
+    padding-left: 2.55rem;
     -ms-flex: 1;
         flex: 1;
   }
@@ -1309,7 +1309,7 @@ hr {
     word-spacing: normal;
     vertical-align: top;
     text-rendering: auto;
-    padding-left: 2.4rem;
+    padding-left: 2.55rem;
   }
   .fsa-grid--no-gutter .fsa-grid__1\@l, .fsa-grid--no-gutter
   .fsa-grid__1\/1\@l, .fsa-grid--no-gutter
