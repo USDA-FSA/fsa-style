@@ -3,13 +3,9 @@
   display: inline-block;
   white-space: nowrap;
 
-  &--small {
+  &--small {}
 
-  }
-
-  &--large {
-
-  }
+  &--large {}
 
   &__item {
 
@@ -20,12 +16,12 @@
       margin-left: -5px;
     }
 
-    .fsa-btn-group--small & {
-      @include fsa-button(small);
-    }
+    .fsa-btn-group--small & { @include fsa-button(small); }
+    .fsa-btn-group--large & { @include fsa-button(large); }
 
-    .fsa-btn-group--large & {
-      @include fsa-button(large);
+    &:focus:not([disabled]),
+    &:active:not([disabled]) {
+      background-color: $color-fsa-tertiary;
     }
 
     &:not(:first-child):not(:last-child) {
@@ -40,6 +36,16 @@
     &:last-child {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0
+    }
+
+    &--active {
+
+      @include fsa-button(primary);
+
+      &:hover:not([disabled]) {
+        color: $button-primary-text;
+      }
+
     }
 
   }
