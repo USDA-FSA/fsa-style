@@ -13,8 +13,19 @@
 
   &__item {
 
+    @include fsa-button;
+    @include fsa-button(alt);
+
     & + & {
       margin-left: -5px;
+    }
+
+    .fsa-btn-group--small & {
+      @include fsa-button(small);
+    }
+
+    .fsa-btn-group--large & {
+      @include fsa-button(large);
     }
 
     &:not(:first-child):not(:last-child) {
