@@ -1,0 +1,38 @@
+$badge-spacing: ($size-base - .2rem);
+
+$badge-bgc: $color-fsa-white;
+$badge-border-color: $color-fsa-tertiary-200;
+$badge-text-color: $color-fsa-black;
+
+.fsa-badge {
+
+  @include font-size(0);
+  font-weight: $font-bold;
+  display: inline-block;
+  text-decoration: none;
+  background-color: $badge-bgc;
+  border: 1px solid $badge-border-color;
+  border-radius: $size-default;
+  text-align: center;
+  min-width: 25px;
+  color: $badge-text-color;
+  // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
+  padding:
+    $badge-spacing
+    ($badge-spacing * 3)
+  ;
+
+  &:not(:empty) + & {
+    margin-left: $badge-spacing;
+  }
+
+  // Empty badges collapse automatically (not available in IE8)
+  &:empty {
+    display: none;
+  }
+
+  &[href]:hover {
+    outline: 1px solid red;
+  }
+
+}
