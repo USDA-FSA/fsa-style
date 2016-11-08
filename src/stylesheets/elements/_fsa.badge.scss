@@ -69,18 +69,22 @@ $badge-text-color: $color-fsa-white;
 
   }
 
-  .fsa-btn & {
+  .fsa-btn &,
+  .fsa-btn-group__item & {
     float: right;
     margin-left: $size-small;
     position: relative;
     top: -3px;
   }
 
+  // scss-lint:disable SelectorFormat
+  .fsa-btn-group--small &,
   .fsa-btn--small & {
     top: -5px
   }
 
-  .fsa-btn--large & {
+  .fsa-btn--large &,
+  .fsa-btn-group--large & {
     top: -1px
   }
 
