@@ -48,6 +48,7 @@ li {
 }
 
 .usa-unstyled-list {
+  // scss-lint:disable PlaceholderInExtend
   @extend .fsa-list--unstyled;
 }
 
