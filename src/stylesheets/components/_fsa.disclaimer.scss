@@ -33,6 +33,12 @@
 
   &__stage {
 
+    // This hides the stage note (i.e. alpha, beta, etc) of the disclaimer for
+    // anything smaller than large screen sizes
+    @include margin(2px null);
+    display: none;
+    float: right;
+
     @include breakpoint(M) {
       display: block;
     }
@@ -44,16 +50,6 @@
       padding: 0 $size-base;
       position: relative;
       top: -2px;
-    }
-
-    // This hides the stage note (i.e. alpha, beta, etc) of the disclaimer for
-    // anything smaller than large screen sizes
-    @include margin(2px null);
-    display: none;
-    float: right;
-
-    @include media($large-screen) {
-      display: block;
     }
 
   }
