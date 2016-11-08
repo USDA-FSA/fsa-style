@@ -1,0 +1,58 @@
+// scss-lint:disable PlaceholderInExtend
+
+.fsa-alert {
+
+  @extend .usa-alert;
+  border-left: $size-base solid $color-fsa-tertiary-900;
+
+  // Variations ---------------------------------------------------------------
+
+  &--success {
+    @extend .usa-alert-success;
+    background-color: $color-fsa-primary-100;
+    border-left-color: $color-fsa-primary;
+  }
+
+  &--warning {
+    @extend .usa-alert-warning;
+    border-left-color: $color-gold;
+  }
+
+  &--error {
+    @extend .usa-alert-error;
+    background-color: $color-fsa-red-100;
+    border-left-color: $color-fsa-red;
+  }
+
+  &--info {
+    @extend .usa-alert-info;
+    background-color: $color-fsa-aqua-100;
+    border-left-color: $color-fsa-aqua;
+  }
+
+  &--no-icon {
+    @extend .usa-alert-no_icon;
+  }
+
+  // Elements
+
+  &__icon {
+    @extend .usa-alert-icon;
+  }
+
+  &__body {
+    @extend .usa-alert-body;
+  }
+
+  &__heading {
+    @extend .usa-alert-heading;
+    color: $color-base;
+    font-weight: $font-bold;
+    margin-bottom: .5em;
+  }
+
+  &__text {
+    @extend .usa-alert-text;
+  }
+
+}
