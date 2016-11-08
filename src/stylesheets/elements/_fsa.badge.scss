@@ -1,26 +1,27 @@
 $badge-spacing: ($size-base - .2rem);
 
-$badge-bgc: $color-fsa-white;
-$badge-border-color: $color-fsa-tertiary-200;
-$badge-text-color: $color-fsa-black;
+$badge-bgc: $color-fsa-tertiary-300;
+$badge-text-color: $color-fsa-white;
 
 .fsa-badge {
 
   @include font-size(0);
+  line-height: 1.5;
   font-weight: $font-bold;
   display: inline-block;
+  vertical-align: middle;
   text-decoration: none;
   background-color: $badge-bgc;
-  border: 1px solid $badge-border-color;
   border-radius: $size-default;
   text-align: center;
-  min-width: 25px;
+  min-width: 23px;
   color: $badge-text-color;
   // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
   padding:
     $badge-spacing
     ($badge-spacing * 3)
   ;
+  cursor: default;
 
   &:not(:empty) + & {
     margin-left: $badge-spacing;
@@ -31,8 +32,60 @@ $badge-text-color: $color-fsa-black;
     display: none;
   }
 
-  &[href]:hover {
-    outline: 1px solid red;
+  &[href] {
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $badge-text-color;
+      background-color: $color-fsa-link;
+    }
+
+  }
+
+  &--large {
+    @include font-size(3);
+    border-radius: $size-medium;
+    min-width: 29px;
+  }
+
+  &--inverse {
+
+    background-color: $badge-text-color;
+    color: $color-fsa-base;
+
+    &[href] {
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: inherit;
+        background-color: $color-fsa-secondary-100;
+      }
+
+    }
+
+  }
+
+  .fsa-btn & {
+    float: right;
+    margin-left: $size-small;
+    position: relative;
+    top: -3px;
+  }
+
+  .fsa-btn--small & {
+    top: -5px
+  }
+
+  .fsa-btn--large & {
+    top: -1px
+  }
+
+  .fsa-btn--large &.fsa-badge--large {
+    top: -3px;
   }
 
 }

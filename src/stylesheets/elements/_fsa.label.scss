@@ -21,6 +21,7 @@ $label-text-color-warning: $color-black;
     $label-spacing
     ($label-spacing * 3)
   ;
+  cursor: default;
 
   & + & {
     margin-left: $label-spacing;
@@ -41,6 +42,7 @@ $label-text-color-warning: $color-black;
 
   &--large {
     @include font-size(3);
+    padding-left: ($label-spacing * 4);
     padding-right: ($label-spacing * 4);
   }
 
