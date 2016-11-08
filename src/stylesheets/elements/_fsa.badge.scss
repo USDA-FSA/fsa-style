@@ -3,6 +3,12 @@ $badge-spacing: ($size-base - .2rem);
 $badge-bgc: $color-fsa-tertiary-300;
 $badge-text-color: $color-fsa-white;
 
+$badge-bgc-alert: $color-fsa-red;
+$badge-bgc-warning: $color-gold-lighter;
+$badge-bgc-success: $color-fsa-primary;
+
+$badge-text-color-warning: $color-black;
+
 .fsa-badge {
 
   @include font-size(0);
@@ -43,6 +49,19 @@ $badge-text-color: $color-fsa-white;
       background-color: $color-fsa-link;
     }
 
+  }
+
+  &--alert {
+    background-color: $badge-bgc-alert;
+  }
+
+  &--warning {
+    background-color: $badge-bgc-warning;
+    color: $badge-text-color-warning;
+  }
+
+  &--success {
+    background-color: $badge-bgc-success;
   }
 
   &--large {
