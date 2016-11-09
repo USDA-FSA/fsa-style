@@ -13,6 +13,10 @@ body {
   color: $color-fsa-base;
 }
 
+main:focus {
+  outline: 0;
+}
+
 pre,
 code,
 kbd,
