@@ -1,0 +1,114 @@
+$badge-spacing: ($size-base - .2rem);
+
+$badge-bgc: $color-fsa-tertiary-300;
+$badge-text-color: $color-fsa-white;
+
+$badge-bgc-alert: $color-fsa-red;
+$badge-bgc-warning: $color-gold-lighter;
+$badge-bgc-success: $color-fsa-primary;
+
+$badge-text-color-warning: $color-black;
+
+.fsa-badge {
+
+  @include font-size(0);
+  line-height: 1.5;
+  font-weight: $font-bold;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  background-color: $badge-bgc;
+  border-radius: $size-default;
+  text-align: center;
+  min-width: 23px;
+  color: $badge-text-color;
+  // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
+  padding:
+    $badge-spacing
+    ($badge-spacing * 3)
+  ;
+  cursor: default;
+
+  &:not(:empty) + & {
+    margin-left: $badge-spacing;
+  }
+
+  // Empty badges collapse automatically (not available in IE8)
+  &:empty {
+    display: none;
+  }
+
+  &[href] {
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $badge-text-color;
+      background-color: $color-fsa-link;
+    }
+
+  }
+
+  &--alert {
+    background-color: $badge-bgc-alert;
+  }
+
+  &--warning {
+    background-color: $badge-bgc-warning;
+    color: $badge-text-color-warning;
+  }
+
+  &--success {
+    background-color: $badge-bgc-success;
+  }
+
+  &--large {
+    @include font-size(3);
+    border-radius: $size-medium;
+    min-width: 29px;
+  }
+
+  &--inverse {
+
+    background-color: $badge-text-color;
+    color: $color-fsa-base;
+
+    &[href] {
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: inherit;
+        background-color: $color-fsa-secondary-100;
+      }
+
+    }
+
+  }
+
+  .fsa-btn &,
+  .fsa-btn-group__item & {
+    float: right;
+    margin-left: $size-small;
+    position: relative;
+    top: -3px;
+  }
+
+  // scss-lint:disable SelectorFormat
+  .fsa-btn-group--small &,
+  .fsa-btn--small & {
+    top: -5px
+  }
+
+  .fsa-btn--large &,
+  .fsa-btn-group--large & {
+    top: -1px
+  }
+
+  .fsa-btn--large &.fsa-badge--large {
+    top: -3px;
+  }
+
+}
