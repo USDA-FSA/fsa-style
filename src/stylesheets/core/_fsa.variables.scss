@@ -21,14 +21,14 @@ $size-extra-large   : $size-medium * 2; // 48px
 // Core Colors
 $color-fsa-primary: shade($color-green, 25%);
 $color-fsa-primary-300: tint($color-fsa-primary, 25%);
-$color-fsa-primary-200: tint($color-fsa-primary, 50%);
-$color-fsa-primary-100: tint($color-fsa-primary, 75%);
+$color-fsa-primary-200: tint($color-fsa-primary, 65%);
+$color-fsa-primary-100: tint($color-fsa-primary, 85%);
 $color-fsa-primary-900: shade($color-fsa-primary, 25%);
 
 $color-fsa-secondary: $color-primary-darker;
 $color-fsa-secondary-300: tint($color-fsa-secondary, 25%);
-$color-fsa-secondary-200: tint($color-fsa-secondary, 50%);
-$color-fsa-secondary-100: tint($color-fsa-secondary, 75%);
+$color-fsa-secondary-200: tint($color-fsa-secondary, 60%);
+$color-fsa-secondary-100: tint($color-fsa-secondary, 85%);
 $color-fsa-secondary-900: shade($color-fsa-secondary, 25%);
 
 $color-fsa-tertiary: $color-gray-warm-dark;
@@ -47,7 +47,7 @@ $color-fsa-aqua-900: $color-primary-alt-darkest;
 $color-fsa-red: $color-secondary-dark;
 $color-fsa-red-300: tint($color-secondary-dark, 35%);
 $color-fsa-red-200: tint($color-secondary-dark, 70%);
-$color-fsa-red-100: tint($color-secondary-dark, 90%);
+$color-fsa-red-100: tint($color-secondary-dark, 85%);
 $color-fsa-red-900: $color-secondary-darkest;
 
 // Base
