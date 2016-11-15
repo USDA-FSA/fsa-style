@@ -31,15 +31,27 @@
     padding-top: $form-padding - .1rem;
   }
 
+  // IE 10 +
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
     // IE doesn't like the extra padding on right.
     padding-right: $form-padding / 2;
+
+    // Equivalent of select { appearance: none; }
+    &::-ms-expand {
+      display: none;
+    }
+
+    // IE 10+ doesn't like the SVG for select arrows
+    background-image: url('#{$image-path}/arrow-down.png');
+
   }
 
   &:focus {
     border-color: $form-focus-color;
     box-shadow: 0 0 0 1px $form-focus-color inset;
   }
+
 
   &--block {
     display: block;
