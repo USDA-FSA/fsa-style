@@ -37,13 +37,13 @@
     // IE doesn't like the extra padding on right.
     padding-right: $form-padding / 2;
 
+    // IE 10+ doesn't like the SVG for select arrows
+    background-image: url('#{$image-path}/arrow-down.png');
+
     // Equivalent of select { appearance: none; }
     &::-ms-expand {
       display: none;
     }
-
-    // IE 10+ doesn't like the SVG for select arrows
-    background-image: url('#{$image-path}/arrow-down.png');
 
   }
 

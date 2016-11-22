@@ -1,3 +1,5 @@
+// scss-lint:disable EmptyRule
+
 .fsa-btn-group {
 
   display: inline-block;
@@ -20,6 +22,7 @@
       margin-left: -5px;
     }
 
+    // scss-lint:disable SelectorFormat
     .fsa-btn-group--small & { @include fsa-button(small); }
     .fsa-btn-group--large & { @include fsa-button(large); }
 
@@ -39,7 +42,7 @@
 
     &:last-child {
       border-top-left-radius: 0;
-      border-bottom-left-radius: 0
+      border-bottom-left-radius: 0;
     }
 
     &--active {
