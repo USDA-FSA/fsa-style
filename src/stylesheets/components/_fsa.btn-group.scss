@@ -9,6 +9,10 @@
     margin-left: $size-base;
   }
 
+  &--block {
+    display: flex;
+  }
+
   &--small {}
 
   &--large {}
@@ -19,7 +23,19 @@
     @include fsa-button(alt);
 
     & + & {
+
       margin-left: -5px;
+
+      // scss-lint:disable SelectorFormat
+      .fsa-btn-group--block & {
+        margin-left: -1px;
+      }
+
+    }
+
+    // scss-lint:disable SelectorFormat
+    .fsa-btn-group--block & {
+      flex: auto;
     }
 
     // scss-lint:disable SelectorFormat
@@ -29,6 +45,12 @@
     &:focus:not([disabled]),
     &:active:not([disabled]) {
       background-color: $color-fsa-tertiary;
+    }
+
+    &:active:not([disabled]),
+    &:focus:not([disabled]) {
+      background-color: $button-alt;
+      color: $button-alt-text;
     }
 
     &:not(:first-child):not(:last-child) {
