@@ -36,11 +36,8 @@
   </div>
 
   <main class="docs__main" id="main-content" tabindex="-1">
-
     <section class="docs__section docs__intro">
-
       <h1 class="docs__bd docs__title">FSA Style <span class="docs__title__version">2.0.0</span></h1>
-
       <div class="docs__nav-shell">
         <nav class="docs__nav">
           <ul class="docs__primary-nav">
@@ -54,10 +51,11 @@
             <li class="docs__primary-nav-item"><a class="docs__primary-nav-link" href="#tables">Tables</a></li>
             <li class="docs__primary-nav-item"><a class="docs__primary-nav-link" href="#grid">Grid</a></li>
             <li class="docs__primary-nav-item"><a class="docs__primary-nav-link" href="#utilities">Utilities</a></li>
+            <li class="docs__primary-nav-item"><a class="docs__primary-nav-link" href="#components">Components</a></li>
             <li class="docs__primary-nav-item docs__primary-nav-item--floater">
               <a class="docs__primary-nav-link docs__primary-nav-link--soft" href="https://github.com/USDA-FSA/fsa-style">
                 <img class="docs__primary-nav__icon" src="img/GitHub-Mark-Light-32px.png" alt="">
-                View on GitHub
+                GitHub
               </a>
             </li>
           </ul>
@@ -71,6 +69,91 @@
           <li>View the <strong><a href="http://usda-fsa.github.io/fsa-design-system/">FSA Design Sytem</a></strong> for documentation</li>
           <li><strong><a href="https://github.com/USDA-FSA/fsa-style/blob/master/README.md#using-fsa-style-assets">Install or Download</a></strong></li>
         </ul>
+      </div>
+    </section>
+    <section class="docs__section" id="components">
+      <h2 class="docs__bd docs__figure-group">Components</h2>
+      <h3 class="docs__bd docs__figure">Badges</h3>
+      <div class="docs__bd">
+        <p>
+          <span class="fsa-badge">1</span>
+          <span class="fsa-badge fsa-badge--alert">11</span>
+          <span class="fsa-badge fsa-badge--warning">22</span>
+          <span class="fsa-badge fsa-badge--success">197</span>
+        </p>
+        <p>
+          <span class="fsa-badge fsa-badge--large">1</span>
+          <span class="fsa-badge fsa-badge--large fsa-badge--alert">11</span>
+          <span class="fsa-badge fsa-badge--large fsa-badge--warning">22</span>
+          <span class="fsa-badge fsa-badge--large fsa-badge--success">197</span>
+        </p>
+        <p style="background-color: #666; padding: 12px">
+          <span class="fsa-badge fsa-badge--inverse">1</span>
+          <span class="fsa-badge fsa-badge--inverse">11</span>
+          <span class="fsa-badge fsa-badge--inverse">22</span>
+          <span class="fsa-badge fsa-badge--inverse">197</span>
+        </p>
+        <p style="background-color: #666; padding: 12px">
+          <a class="fsa-badge fsa-badge--large fsa-badge--inverse" href="link/to/asdfasdf.html">1</a>
+          <span class="fsa-badge fsa-badge--large fsa-badge--inverse">1</span>
+          <span class="fsa-badge fsa-badge--large fsa-badge--inverse">11</span>
+          <span class="fsa-badge fsa-badge--large fsa-badge--inverse">22</span>
+          <span class="fsa-badge fsa-badge--large fsa-badge--inverse">197</span>
+        </p>
+      </div>
+      <h3 class="docs__bd docs__figure">Alerts</h3>
+      <div class="docs__bd">
+
+        <p class="docs__code-sample"><code>class="fsa-alert fsa-alert--[type]"</code></p>
+
+        <div class="fsa-alert fsa-alert--success" role="alert">
+          <div class="fsa-alert__body">
+            <h3 class="fsa-alert__heading">Success Status</h3>
+            <p class="fsa-alert__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+          </div>
+        </div>
+
+        <div class="fsa-alert fsa-alert--warning" role="alert">
+          <div class="fsa-alert__body">
+            <h3 class="fsa-alert__heading">Warning Status</h3>
+            <p class="fsa-alert__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+          </div>
+        </div>
+
+        <div class="fsa-alert fsa-alert--error" role="alert">
+          <div class="fsa-alert__body">
+            <h3 class="fsa-alert__heading">Error Status</h3>
+            <p class="fsa-alert__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+          </div>
+        </div>
+
+        <div class="fsa-alert fsa-alert--info" role="alert">
+          <div class="fsa-alert__body">
+            <h3 class="fsa-alert__heading">Information Status</h3>
+            <p class="fsa-alert__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+          </div>
+        </div>
+
+      </div>
+      <h3 class="docs__bd docs__figure">Button Group</h3>
+      <div class="docs__bd">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+      </div>
+      <h3 class="docs__bd docs__figure">Labels</h3>
+      <div class="docs__bd">
+        <p class="docs__code-sample"><code>class="fsa-label fsa-label--[type] fsa-label--[size]"</code></p>
+        <p>
+          <span class="fsa-label">Label</span>
+          <span class="fsa-label fsa-label--alert">Lorem ipsum</span>
+          <span class="fsa-label fsa-label--warning">Label</span>
+          <span class="fsa-label fsa-label--success">Label</span>
+        </p>
+        <p>
+          <span class="fsa-label fsa-label--large">Label</span>
+          <span class="fsa-label fsa-label--large fsa-label--alert">Lorem ipsum</span>
+          <span class="fsa-label fsa-label--large fsa-label--warning">Label</span>
+          <span class="fsa-label fsa-label--large fsa-label--success">Label</span>
+        </p>
       </div>
     </section>
     <section class="docs__section" id="logo">
@@ -2985,6 +3068,7 @@
       </div>
     </section>
   </main>
+
   <footer>
     <div class="docs__section docs__footer">
       <div class="docs__bd docs__footer__bd">
