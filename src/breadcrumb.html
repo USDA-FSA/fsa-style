@@ -26,45 +26,26 @@
   <main class="docs__main" id="main-content" tabindex="-1">
 
     <section class="docs__section" id="btn-group">
-      <h2 class="docs__bd docs__figure-group">Button Group</h2>
+      <h2 class="docs__bd docs__figure-group">Breadcrumb</h2>
       <div class="docs__bd">
-
-        <h3>button element</h3>
-        <p><code>fsa-btn-group</code></p>
-        <p>
-          <span class="fsa-btn-group" role="group" aria-label="Label describing this group">
-            <button class="fsa-btn-group__item" type="button">Label</button>
-            <button class="fsa-btn-group__item fsa-btn-group__item--active" type="button">Label</button>
-            <button class="fsa-btn-group__item" type="button">Label</button>
-          </span>
-        </p>
-        <p><code>small</code></p>
-        <p>
-          <span class="fsa-btn-group fsa-btn-group--small" role="group" aria-label="Label describing this group">
-            <button class="fsa-btn-group__item fsa-btn-group__item--active" type="button">Label</button>
-            <button class="fsa-btn-group__item" type="button">Label</button>
-            <button class="fsa-btn-group__item" type="button">Label</button>
-          </span>
-        </p>
-        <p><code>large</code></p>
-        <p>
-          <span class="fsa-btn-group fsa-btn-group--large" role="group" aria-label="Label describing this group">
-            <button class="fsa-btn-group__item" type="button">Label</button>
-            <button class="fsa-btn-group__item" type="button">Label</button>
-            <button class="fsa-btn-group__item fsa-btn-group__item--active" type="button">Label</button>
-          </span>
-        </p>
-
-        <h3>anchor element</h3>
-        <p>
-          <span class="fsa-btn-group" role="group" aria-label="Label describing this group">
-            <a class="fsa-btn-group__item" href="link/to/somewhere.html">Label</a>
-            <a class="fsa-btn-group__item fsa-btn-group__item--active" href="link/to/somewhere.html">Label</a>
-            <a class="fsa-btn-group__item" href="link/to/somewhere.html">Label</a>
-            <a class="fsa-btn-group__item" href="link/to/somewhere.html">Label</a>
-          </span>
-        </p>
-
+        <div class="fsa-breadcrumb">
+          <nav class="fsa-breadcrumb__nav" aria-label="Breadcrumbs">
+            <ol class="fsa-breadcrumb__list">
+              <li class="fsa-breadcrumb__item">
+                <a href="link/to/level-0/" class="fsa-breadcrumb__link">Level 0</a>
+              </li>
+              <li class="fsa-breadcrumb__item">
+                <a href="link/to/level-0/level-1/" class="fsa-breadcrumb__link">Level 1</a>
+              </li>
+              <li class="fsa-breadcrumb__item">
+                <a href="link/to/level-0/level-1/level-2/" class="fsa-breadcrumb__link">Level 2</a>
+              </li>
+              <li class="fsa-breadcrumb__item">
+                <a href="link/to/level-0/level-1/level-2/level-3/" class="fsa-breadcrumb__link">Level 3</a>
+              </li>
+            </ol>
+          </nav>
+        </div>
       </div>
     </section>
 
