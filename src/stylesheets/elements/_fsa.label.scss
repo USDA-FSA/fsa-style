@@ -16,12 +16,16 @@ $label-text-color-warning: $color-black;
   border-radius: $border-radius;
   color: $label-text-color;
   text-transform: uppercase;
+  text-decoration: none;
   // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
   padding:
     $label-spacing
     ($label-spacing * 3)
   ;
-  cursor: default;
+
+  &[href]:hover {
+    color: $label-text-color;
+  }
 
   & + & {
     margin-left: $label-spacing;
@@ -29,11 +33,17 @@ $label-text-color-warning: $color-black;
 
   &--alert {
     background-color: $label-bgc-alert;
+    &[href]:hover {
+      color: $label-text-color;
+    }
   }
 
   &--warning {
     background-color: $label-bgc-warning;
     color: $label-text-color-warning;
+    &[href]:hover {
+      color: $label-text-color-warning;
+    }
   }
 
   &--success {
