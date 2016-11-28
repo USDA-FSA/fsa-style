@@ -1,4 +1,4 @@
-/*! FSA Style v0.2.9 | http://usda-fsa.github.io/fsa-design-system/ */
+/*! FSA Style v2.0.0 | http://usda-fsa.github.io/fsa-design-system/ */
 
 
 html {
@@ -100,17 +100,17 @@ html:hover body::before {
 .docs__title__version {
   font-size: 66%;
   font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  color: #c8d8cb;
+  color: #dee8e0;
 }
 
 .docs__figure-group {
   margin-top: 57.6px;
   margin-top: 3.6rem;
-  border-bottom: 2px solid #90aac9;
+  border-bottom: 2px solid #a6bbd4;
 }
 
 .docs__figure {
-  border-bottom: 1px solid #90aac9;
+  border-bottom: 1px solid #a6bbd4;
   margin-bottom: 1em;
   margin-top: 57.6px;
   margin-top: 3.6rem;
@@ -605,11 +605,11 @@ html:hover body::before {
 }
 
 .color-fsa-primary-lighter {
-  background-color: #91b298;
+  background-color: #b2c9b7;
 }
 
 .color-fsa-primary-lightest {
-  background-color: #c8d8cb;
+  background-color: #dee8e0;
 }
 
 .color-fsa-secondary-dark {
@@ -625,11 +625,11 @@ html:hover body::before {
 }
 
 .color-fsa-secondary-lighter {
-  background-color: #90aac9;
+  background-color: #a6bbd4;
 }
 
 .color-fsa-secondary-lightest {
-  background-color: #c7d4e4;
+  background-color: #dee5ef;
 }
 
 .color-fsa-tertiary-dark {
@@ -689,7 +689,7 @@ html:hover body::before {
 }
 
 .color-fsa-red-lightest {
-  background-color: #fae9e9;
+  background-color: #f8dede;
 }
 
 .color-fsa-link {
