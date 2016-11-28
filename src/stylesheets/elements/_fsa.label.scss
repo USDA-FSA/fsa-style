@@ -1,0 +1,59 @@
+$label-spacing: ($size-base - .2rem);
+
+$label-bgc: $color-fsa-secondary-900;
+$label-bgc-alert: $color-fsa-red;
+$label-bgc-warning: $color-gold-lighter;
+$label-bgc-success: $color-fsa-primary;
+
+$label-text-color: $color-fsa-white;
+$label-text-color-warning: $color-black;
+
+.fsa-label {
+
+  @include font-size(0);
+  display: inline-block;
+  background-color: $label-bgc;
+  border-radius: $border-radius;
+  color: $label-text-color;
+  text-transform: uppercase;
+  text-decoration: none;
+  // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
+  padding:
+    $label-spacing
+    ($label-spacing * 3)
+  ;
+
+  &[href]:hover {
+    color: $label-text-color;
+  }
+
+  & + & {
+    margin-left: $label-spacing;
+  }
+
+  &--alert {
+    background-color: $label-bgc-alert;
+    &[href]:hover {
+      color: $label-text-color;
+    }
+  }
+
+  &--warning {
+    background-color: $label-bgc-warning;
+    color: $label-text-color-warning;
+    &[href]:hover {
+      color: $label-text-color-warning;
+    }
+  }
+
+  &--success {
+    background-color: $label-bgc-success;
+  }
+
+  &--large {
+    @include font-size(3);
+    padding-left: ($label-spacing * 4);
+    padding-right: ($label-spacing * 4);
+  }
+
+}

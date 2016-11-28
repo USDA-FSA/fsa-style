@@ -37,103 +37,104 @@ $button-alt-text         : $color-fsa-secondary;
 $button-alt-hover        : shade($button-alt, 5%);
 $button-alt-active       : $color-fsa-secondary;
 $button-alt-border       : $color-fsa-secondary;
-$button-alt-border-width : .2rem;
+$button-alt-border-width : 1px;
 
-.fsa-btn {
+@mixin fsa-button($variation: default) {
 
-  @include fsa-space-between();
+  @if $variation == 'default' {
 
-  // -------------------------------------------------------------------------
-  // reset
-  @include font-smoothing(on);
-  height: $button-height;
-  user-select: none;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  cursor: pointer;
-  text-align: center;
-  line-height: $button-line-height;
-  position: relative;
-  top: .1rem;
-  // scss-lint:disable all ImportantRule
-  text-decoration: none !important; // yep, intentional
+    @include fsa-space-between();
 
-  @supports (-webkit-appearance:none) {
-    // Webkit only.
-    // yes, a single pixel. sorry, not sorry
-    top: 0;
-  }
+    // -------------------------------------------------------------------------
+    // reset
+    @include font-smoothing(on);
+    height: $button-height;
+    user-select: none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+    line-height: $button-line-height;
+    position: relative;
+    top: .1rem;
+    // scss-lint:disable all ImportantRule
+    text-decoration: none !important; // yep, intentional
 
-  // -------------------------------------------------------------------------
-  // normalize
-  font-size: $button-font-size;
-  font-family: $button-font-family;
-  font-weight: $button-font-weight;
-  display: inline-block;
-  border-radius: $button-border-radius;
-
-  // scss-lint:disable Shorthand
-  padding: ($button-padding - .1rem) ($button-padding * 2) ($button-padding - .1rem);
-
-  // -------------------------------------------------------------------------
-  // default
-
-  background-color: $button-default;
-  color: $button-default-text;
-
-  &:visited {
-    color: $button-default-text;
-  }
-
-  &:hover {
-    text-decoration: none;
-    color: $button-default-text;
-  }
-
-  &:hover:not([disabled]) {
-    color: $button-text;
-    background-color: $button-default-hover;
-  }
-
-  &:focus:not([disabled]),
-  &:active:not([disabled]) {
-    color: $button-text;
-    background-color: $button-default-active;
-    box-shadow: none;
-  }
-
-  // -------------------------------------------------------------------------
-  // variations, modifiers
-
-  &[disabled] {
-
-    $color-transparentized: transparentize($button-default-text, .35);
-
-    opacity: .4;
-    color: $color-transparentized;
-    cursor: not-allowed;
-    pointer-events: none;
-
-    color: $color-transparentized;
-
-    &:visited {
-      color: $color-transparentized;
+    @supports (-webkit-appearance:none) {
+      // Webkit only.
+      // yes, a single pixel. sorry, not sorry
+      top: 0;
     }
 
-    &:focus,
-    &:active {
-      // outline: 0;
+    // -------------------------------------------------------------------------
+    // normalize
+    font-size: $button-font-size;
+    font-family: $button-font-family;
+    font-weight: $button-font-weight;
+    display: inline-block;
+    border-radius: $button-border-radius;
+
+    // scss-lint:disable Shorthand
+    padding: ($button-padding - .1rem) ($button-padding * 2) ($button-padding - .1rem);
+
+    // -------------------------------------------------------------------------
+    // default
+
+    background-color: $button-default;
+    color: $button-default-text;
+
+    &:visited {
+      color: $button-default-text;
     }
 
     &:hover {
-      cursor: not-allowed;
+      text-decoration: none;
+      color: $button-default-text;
+    }
+
+    &:hover:not([disabled]) {
+      color: $button-text;
+      background-color: $button-default-hover;
+    }
+
+    &:focus:not([disabled]),
+    &:active:not([disabled]) {
+      color: $button-text;
+      background-color: $button-default-active;
+      box-shadow: none;
+    }
+
+    &[disabled] {
+
+      $color-transparentized: transparentize($button-default-text, .35);
+
+      opacity: .4;
       color: $color-transparentized;
+      cursor: not-allowed;
+      pointer-events: none;
+
+      color: $color-transparentized;
+
+      &:visited {
+        color: $color-transparentized;
+      }
+
+      &:focus,
+      &:active {
+        // outline: 0;
+      }
+
+      &:hover {
+        cursor: not-allowed;
+        color: $color-transparentized;
+      }
+
     }
 
   }
 
-  &--primary {
+  @elseif $variation == 'primary' {
 
     background-color: $button-primary;
     color: $button-primary-text;
@@ -158,7 +159,7 @@ $button-alt-border-width : .2rem;
 
   }
 
-  &--secondary {
+  @elseif $variation == 'secondary' {
 
     color: $button-secondary-text;
     background-color: $button-secondary;
@@ -176,7 +177,7 @@ $button-alt-border-width : .2rem;
 
   }
 
-  &--tertiary {
+  @elseif $variation == 'tertiary' {
 
     color: $button-tertiary-text;
     background-color: $button-tertiary;
@@ -194,7 +195,7 @@ $button-alt-border-width : .2rem;
 
   }
 
-  &--alt {
+  @elseif $variation == 'alt' {
 
     color: $button-alt-text;
     background-color: $button-alt;
@@ -230,12 +231,12 @@ $button-alt-border-width : .2rem;
 
   }
 
-  &--block {
+  @elseif $variation == 'block' {
     width: 100%;
     display: block;
   }
 
-  &--small {
+  @elseif $variation == 'small' {
 
     height: $button-height--sm;
     // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon Shorthand
@@ -249,11 +250,11 @@ $button-alt-border-width : .2rem;
 
   }
 
-  &--large {
+  @elseif $variation == 'large' {
 
     height: $button-height--lg;
 
-    // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon
+    // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon Shorthand
     padding:
       (($button-padding * 2) - .3rem)
       ($size-large)
@@ -263,5 +264,21 @@ $button-alt-border-width : .2rem;
     border-radius: ($button-border-radius * 2);
 
   }
+
+}
+
+.fsa-btn {
+
+  @include fsa-button(default);
+
+  // scss-lint:disable all
+
+  &--primary   { @include fsa-button(primary);   }
+  &--secondary { @include fsa-button(secondary); }
+  &--tertiary  { @include fsa-button(tertiary);  }
+  &--alt       { @include fsa-button(alt);       }
+  &--block     { @include fsa-button(block);     }
+  &--small     { @include fsa-button(small);     }
+  &--large     { @include fsa-button(large);     }
 
 }
