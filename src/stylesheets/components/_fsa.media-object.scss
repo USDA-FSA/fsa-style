@@ -16,6 +16,7 @@
 
       padding-right: $size-medium;
 
+      // scss-lint:disable SelectorFormat
       .fsa-media--right & {
         padding-right: 0;
         padding-left: $size-medium;
@@ -27,6 +28,7 @@
 
       padding-left: $size-medium;
 
+      // scss-lint:disable SelectorFormat
       .fsa-media--right & {
         padding-left: 0;
         padding-right: $size-medium;
