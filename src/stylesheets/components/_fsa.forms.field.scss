@@ -1,10 +1,14 @@
 .fsa-field {
 
   position: relative;
+  margin-bottom: 1em;
+  margin-top: 1em;
 
   @include breakpoint(M) {
     max-width: $fsa-form-width;
   }
+
+  // Pseudos ------------------------------------------------------------------
 
   &:before {
     @include breakpoint(M) {
@@ -19,17 +23,7 @@
     }
   }
 
-  &--error {
-    &:before {
-
-      @include breakpoint(M) {
-        top: -4px;
-        bottom: -6px;
-        background-color: $color-fsa-red;
-      }
-
-    }
-  }
+  // Children ------------------------------------------------------------------
 
   &__label {
     display: block;
@@ -43,7 +37,6 @@
   &__message {
 
     font-weight: $font-bold;
-    // color: $color-fsa-red;
     font-size: $font-size-2;
     padding-top: $size-small;
 
@@ -65,9 +58,57 @@
 
   }
 
+  &__column {
+
+    @include breakpoint(M, down) {
+      margin-top: 1em;
+    }
+
+  }
+
   &__item {
+
     display: block;
     width: 100%;
+
+    &--short {
+      max-width: 6rem;
+    }
+
+    &--medium {
+      @include breakpoint(M) {
+        max-width: ($fsa-form-width / 2);
+      }
+    }
+
+  }
+
+  // Variations ----------------------------------------------------------------
+
+  &--block {
+    @include breakpoint(M) {
+      max-width: none;
+    }
+  }
+
+  &--error {
+    &:before {
+
+      @include breakpoint(M) {
+        top: -4px;
+        bottom: -6px;
+        background-color: $color-fsa-red;
+      }
+
+    }
+  }
+
+  &--columns {
+
+    @include breakpoint(M, down) {
+      margin-top: -1em;
+    }
+
   }
 
 }
