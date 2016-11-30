@@ -1,0 +1,73 @@
+.fsa-field {
+
+  position: relative;
+
+  @include breakpoint(M) {
+    max-width: $fsa-form-width;
+  }
+
+  &:before {
+    @include breakpoint(M) {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: -12px;
+      bottom: 6px;
+      width: 4px;
+      background-color: transparent;
+      transition: all .1s ease-in-out;
+    }
+  }
+
+  &--error {
+    &:before {
+
+      @include breakpoint(M) {
+        top: -4px;
+        bottom: -6px;
+        background-color: $color-fsa-red;
+      }
+
+    }
+  }
+
+  &__label {
+    display: block;
+  }
+
+  &__label-desc {
+    font-style: italic;
+    float: right;
+  }
+
+  &__message {
+
+    font-weight: $font-bold;
+    // color: $color-fsa-red;
+    font-size: $font-size-2;
+    padding-top: $size-small;
+
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: all .8s ease-in;
+
+    &:empty {
+      max-height: 0;
+    }
+
+    // scss-lint:disable SelectorFormat
+    .fsa-field--error & {
+      max-height: 120px;
+      opacity: 1;
+    }
+
+  }
+
+  &__item {
+    display: block;
+    width: 100%;
+  }
+
+}
