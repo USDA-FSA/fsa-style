@@ -2581,7 +2581,7 @@
             <p class="fsa-grid__demo"><code>fsa-grid__<strong>auto</strong></code></p>
           </div>
         </div>
-        <h3 class="docs__bd docs__figure">Responsive Columns</h3>
+        <h3 class="docs__bd docs__figure" id="grid-responsive">Responsive Columns</h3>
         <h4 class="docs__sub_style">Example</h4>
         <p>Full-width by default (smallest screen), <code title="One-half at Small">1/2@s</code>, <code title="One-fourth at Medium">1/4@m</code> </p>
         <div class="fsa-grid">
@@ -3132,11 +3132,74 @@
                   <option value="Wisconsin">WI</option>
                   <option value="Wyoming">WY</option>
                 </select>
+                <span class="fsa-field__message" id="lorem-8996--message" role="alert">State is required</span>
               </div>
             </div>
           </div>
-          <span class="fsa-field__message" id="lorem-8996--message" role="alert">State is required</span>
         </div>
+        <h4>Columns</h4>
+        <p class="docs__code-sample"><code>fsa-field fsa-field--block <strong>fsa-field--columns</strong></code></p>
+        <p>Use <a href="#grid">Grids</a> to lay out form fields, including <a href="#grid-responsive">responsively</a>, for example:</p>
+        <div class="fsa-field fsa-field--block fsa-field--columns">
+          <div class="fsa-grid">
+            <div class="fsa-grid__1 fsa-grid__3/12@s">
+              <div class="fsa-field__column">
+                <label class="fsa-field__label" for="lorem-6459">Label</label>
+                <input class="fsa-input fsa-field__item" id="lorem-6459" name="lorem-6459" type="text" value="">
+              </div>
+            </div>
+            <div class="fsa-grid__1 fsa-grid__3/12@s">
+              <div class="fsa-field__column">
+                <label class="fsa-field__label" for="lorem-6543">Label</label>
+                <input class="fsa-input fsa-field__item" id="lorem-6543" name="lorem-6543" type="text" value="">
+              </div>
+            </div>
+            <div class="fsa-grid__1 fsa-grid__6/12@s">
+              <div class="fsa-field__column">
+                <label class="fsa-field__label" for="lorem-0892">Label</label>
+                <select class="fsa-select fsa-field__item" id="lorem-0892" name="lorem-0892">
+                  <option value="" selected>- Select a lorem -</option>
+                  <option value="Ipsum">Ipsum</option>
+                  <option value="Dolor">Dolor</option>
+                  <option value="Sit">Sit</option>
+                  <option value="Amet">Amet</option>
+                  <option value="Consecutar">Consecutar</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fsa-field fsa-field--error fsa-field--block fsa-field--columns">
+          <div class="fsa-grid">
+            <div class="fsa-grid__1 fsa-grid__3/12@s">
+              <div class="fsa-field__column">
+                <label class="fsa-field__label" for="lorem-6459">Label</label>
+                <input class="fsa-input fsa-field__item" id="lorem-6459" name="lorem-6459" type="text" value="">
+              </div>
+            </div>
+            <div class="fsa-grid__1 fsa-grid__3/12@s">
+              <div class="fsa-field__column">
+                <label class="fsa-field__label" for="lorem-6543">Label</label>
+                <input class="fsa-input fsa-field__item" id="lorem-6543" name="lorem-6543" type="text" value="">
+              </div>
+            </div>
+            <div class="fsa-grid__1 fsa-grid__6/12@s">
+              <div class="fsa-field__column">
+                <label class="fsa-field__label" for="lorem-0222">Label</label>
+                <select class="fsa-select fsa-select--error fsa-field__item" id="lorem-0222" name="lorem-0222" aria-describedby="lorem-0222--message">
+                  <option value="" selected>- Select a lorem -</option>
+                  <option value="Ipsum">Ipsum</option>
+                  <option value="Dolor">Dolor</option>
+                  <option value="Sit">Sit</option>
+                  <option value="Amet">Amet</option>
+                  <option value="Consecutar">Consecutar</option>
+                </select>
+                <span class="fsa-field__message" id="lorem-0222--message" role="alert">Helpful error message</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
       <h3 class="docs__bd docs__figure">Breadcrumb</h3>
       <div class="docs__bd">
