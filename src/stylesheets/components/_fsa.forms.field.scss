@@ -32,6 +32,14 @@
   &__label-desc {
     font-style: italic;
     float: right;
+    color: $color-fsa-tertiary-300;
+  }
+
+  &__help {
+    margin-top: $size-base;
+    display: block;
+    color: $color-fsa-tertiary-300;
+    font-size: $form-text-size--sm;
   }
 
   &__message {
