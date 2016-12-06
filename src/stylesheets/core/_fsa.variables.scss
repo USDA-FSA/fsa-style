@@ -32,7 +32,7 @@ $color-fsa-secondary-100: tint($color-fsa-secondary, 85%);
 $color-fsa-secondary-900: shade($color-fsa-secondary, 25%);
 
 $color-fsa-tertiary: $color-gray-warm-dark;
-$color-fsa-tertiary-300: tint($color-fsa-tertiary, 40%);
+$color-fsa-tertiary-300: tint($color-fsa-tertiary, 24%);
 $color-fsa-tertiary-200: tint($color-fsa-tertiary, 70%);
 $color-fsa-tertiary-100: tint($color-fsa-tertiary, 90%);
 $color-fsa-tertiary-900: shade($color-fsa-tertiary, 35%);
@@ -47,7 +47,7 @@ $color-fsa-aqua-900: $color-primary-alt-darkest;
 $color-fsa-red: $color-secondary-dark;
 $color-fsa-red-300: tint($color-secondary-dark, 35%);
 $color-fsa-red-200: tint($color-secondary-dark, 70%);
-$color-fsa-red-100: tint($color-secondary-dark, 85%);
+$color-fsa-red-100: tint($color-secondary-dark, 88%);
 $color-fsa-red-900: $color-secondary-darkest;
 
 // Base
@@ -95,6 +95,8 @@ $font-bold:   700;
 
 // ---------------------------------------------------------------------------
 // Forms
+
+$fsa-form-width: 40rem;
 
 $form-font                     : $font-sans;
 $form-text-size                : $font-size-3;
