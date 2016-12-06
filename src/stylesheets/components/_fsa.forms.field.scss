@@ -1,0 +1,123 @@
+.fsa-field {
+
+  position: relative;
+  margin-bottom: 1em;
+  margin-top: 1em;
+
+  @include breakpoint(M) {
+    max-width: $fsa-form-width;
+  }
+
+  // Pseudos ------------------------------------------------------------------
+
+  &:before {
+    @include breakpoint(M) {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: -12px;
+      bottom: 6px;
+      width: 4px;
+      background-color: transparent;
+      transition: all .1s ease-in-out;
+    }
+  }
+
+  // Children ------------------------------------------------------------------
+
+  &__label {
+    display: block;
+  }
+
+  &__label-desc {
+    font-style: italic;
+    font-weight: $font-normal;
+    float: right;
+    color: $color-fsa-tertiary-300;
+  }
+
+  &__help {
+    margin-top: $size-base;
+    display: block;
+    color: $color-fsa-tertiary-300;
+    font-size: $form-text-size--sm;
+  }
+
+  &__message {
+
+    font-weight: $font-bold;
+    font-size: $font-size-2;
+    padding-top: $size-small;
+
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: all .8s ease-in;
+
+    &:empty {
+      max-height: 0;
+    }
+
+    // scss-lint:disable SelectorFormat
+    .fsa-field--error & {
+      max-height: 120px;
+      opacity: 1;
+    }
+
+  }
+
+  &__column {
+
+    @include breakpoint(M, down) {
+      margin-top: 1em;
+    }
+
+  }
+
+  &__item {
+
+    display: block;
+    width: 100%;
+
+    &--short {
+      max-width: 6rem;
+    }
+
+    &--medium {
+      @include breakpoint(M) {
+        max-width: ($fsa-form-width / 2);
+      }
+    }
+
+  }
+
+  // Variations ----------------------------------------------------------------
+
+  &--block {
+    @include breakpoint(M) {
+      max-width: none;
+    }
+  }
+
+  &--error {
+    &:before {
+
+      @include breakpoint(M) {
+        top: -4px;
+        bottom: -6px;
+        background-color: $color-fsa-red;
+      }
+
+    }
+  }
+
+  &--columns {
+
+    @include breakpoint(M, down) {
+      margin-top: -1em;
+    }
+
+  }
+
+}

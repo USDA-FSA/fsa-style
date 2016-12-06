@@ -31,11 +31,11 @@ body::before {
 
   @include breakpoint(S) {
     background: rgba(0, 0, 0, 1);
-    content: 'S: 320px - 559px';
+    content: 'S: 481px+';
   }
 
   @include breakpoint(M) {
-    content: 'M: 560px - 863px';
+    content: 'M: 600px+';
     background: rgba(204, 102, 0, .8);
   }
 

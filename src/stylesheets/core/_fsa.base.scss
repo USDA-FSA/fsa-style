@@ -97,3 +97,10 @@ hr {
   height: 1px;
   background: $color-fsa-tertiary-200;
 }
+
+form,
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
