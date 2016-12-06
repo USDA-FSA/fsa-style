@@ -41,7 +41,7 @@
 
   <main class="docs__main" id="main-content" tabindex="-1">
     <section class="docs__section docs__intro">
-      <h1 class="docs__bd docs__title">FSA Style <span class="docs__title__version">2.0.0</span></h1>
+      <h1 class="docs__bd docs__title">FSA Style <span class="docs__title__version">2.0.1</span></h1>
       <div class="docs__nav-shell">
         <nav class="docs__nav">
           <ul class="docs__primary-nav">
@@ -98,7 +98,7 @@
             <h4 class="docs__sub_style">Primary</h4>
             <div class="docs__attr-list__swatch color-fsa-primary"></div>
             <ul class="docs__attr-list__attr">
-              <li class="docs__attr-list__attr-item"><code>#21602e</code></li>
+              <li class="docs__attr-list__attr-item"><code>#236430</code></li>
               <li class="docs__attr-list__attr-item"><code>$color-fsa-primary</code></li>
             </ul>
           </li>
@@ -903,40 +903,44 @@
         </p>
         <h3 class="docs__bd docs__figure">Checkbox</h3>
         <p class="docs__code-sample"><code>&lt;input class="fsa-checkbox" type="checkbox" id="foo"&gt; &lt;label for="foo"&gt;[label]&lt;/label&gt;</code></p>
-        <p>
-          <input class="fsa-checkbox" id="apple-pie" type="checkbox" name="pies" value="apple-pie" checked="">
-          <label for="apple-pie">Checkbox with a long label cepteur sint occaecat cupidatat non proident id est laborum</label>
-        </p>
-        <p>
-          <input class="fsa-checkbox" id="key-lime-pie" type="checkbox" name="pies" value="key-lime-pie">
-          <label for="key-lime-pie">Checkbox</label>
-        </p>
-        <p>
-          <input class="fsa-checkbox" id="disabled" type="checkbox" name="pies" disabled="">
-          <label for="disabled">Checkbox</label>
-        </p>
-        <p>
-          <input class="fsa-checkbox" id="moms-apple-pie" type="checkbox" name="pies" value="moms-apple-pie" checked="" disabled="">
-          <label for="moms-apple-pie">Checkbox</label>
-        </p>
+        <ul class="fsa-form-list">
+          <li>
+            <input class="fsa-checkbox" id="apple-pie" type="checkbox" name="pies" value="apple-pie" checked="">
+            <label for="apple-pie">Checkbox with a long label cepteur sint occaecat cupidatat non proident id est laborum</label>
+          </li>
+          <li>
+            <input class="fsa-checkbox" id="key-lime-pie" type="checkbox" name="pies" value="key-lime-pie">
+            <label for="key-lime-pie">Checkbox</label>
+          </li>
+          <li>
+            <input class="fsa-checkbox" id="disabled" type="checkbox" name="pies" disabled="">
+            <label for="disabled">Checkbox</label>
+          </li>
+          <li>
+            <input class="fsa-checkbox" id="moms-apple-pie" type="checkbox" name="pies" value="moms-apple-pie" checked="" disabled="">
+            <label for="moms-apple-pie">Checkbox</label>
+          </li>
+        </ul>
         <h3 class="docs__bd docs__figure">Radio</h3>
         <p class="docs__code-sample"><code>&lt;input class="fsa-radio" type="radio" id="bar"&gt; &lt;label for="bar"&gt;[label]&lt;/label&gt;</code></p>
-        <p>
-          <input class="fsa-radio" id="chicken-noodle" type="radio" name="soup" value="chicken-noodle" checked="">
-          <label for="chicken-noodle">Radio with a long label cepteur sint occaecat cupidatat non proident id est laborum</label>
-        </p>
-        <p>
-          <input class="fsa-radio" id="tomato" type="radio" name="soup" value="tomato">
-          <label for="tomato">Radio</label>
-        </p>
-        <p>
-          <input class="fsa-radio" id="cucumber" type="radio" name="soup" value="cucumber" disabled="">
-          <label for="cucumber">Radio</label>
-        </p>
-        <p>
-          <input class="fsa-radio" id="lettuce" type="radio" name="qweraewr" value="lettuce" disabled="" checked="">
-          <label for="lettuce">Radio</label>
-        </p>
+        <ul class="fsa-form-list">
+          <li>
+            <input class="fsa-radio" id="chicken-noodle" type="radio" name="soup" value="chicken-noodle" checked="">
+            <label for="chicken-noodle">Radio with a long label cepteur sint occaecat cupidatat non proident id est laborum</label>
+          </li>
+          <li>
+            <input class="fsa-radio" id="tomato" type="radio" name="soup" value="tomato">
+            <label for="tomato">Radio</label>
+          </li>
+          <li>
+            <input class="fsa-radio" id="cucumber" type="radio" name="soup" value="cucumber" disabled="">
+            <label for="cucumber">Radio</label>
+          </li>
+          <li>
+            <input class="fsa-radio" id="lettuce" type="radio" name="qweraewr" value="lettuce" disabled="" checked="">
+            <label for="lettuce">Radio</label>
+          </li>
+        </ul>
         <h3 class="docs__bd docs__figure">Select - Default</h3>
         <h4 class="docs__sub_style">Default</h4>
         <p class="docs__code-sample"><code>class="fsa-select"</code></p>
@@ -2584,7 +2588,7 @@
             <p class="fsa-grid__demo"><code>fsa-grid__<strong>auto</strong></code></p>
           </div>
         </div>
-        <h3 class="docs__bd docs__figure">Responsive Columns</h3>
+        <h3 class="docs__bd docs__figure" id="grid-responsive">Responsive Columns</h3>
         <h4 class="docs__sub_style">Example</h4>
         <p>Full-width by default (smallest screen), <code title="One-half at Small">1/2@s</code>, <code title="One-fourth at Medium">1/4@m</code> </p>
         <div class="fsa-grid">
@@ -2986,6 +2990,267 @@
     </section>
     <section class="docs__section" id="components">
       <h2 class="docs__bd docs__figure-group">Components</h2>
+      <h3 class="docs__bd docs__figure">Form Field</h3>
+      <div class="docs__bd">
+        <p class="docs__code-sample"><code>class="fsa-field"</code></p>
+        <div class="fsa-field">
+          <label class="fsa-field__label" for="lorem-1234">Email address <span class="fsa-field__label-desc">Required</span></label>
+          <input class="fsa-input fsa-field__item" id="lorem-1234" name="lorem-1234" type="email" value="">
+          <span class="fsa-field__help">This is how people can contact you</span>
+        </div>
+        <div class="fsa-field">
+          <label class="fsa-field__label" for="lorem-beisbol">Team <span class="fsa-field__label-desc">Optional</span></label>
+          <select class="fsa-select fsa-field__item" id="lorem-beisbol" name="lorem-beisbol">
+            <optgroup label="American League West">
+              <option value="Houston Astros">Houston Astros</option>
+              <option value="Los Angeles Angels of Anaheim">Los Angeles Angels of Anaheim</option>
+              <option value="Oakland Athletics">Oakland Athletics</option>
+              <option value="Seattle Mariners">Seattle Mariners</option>
+              <option value="Texas Rangers">Texas Rangers</option>
+            </optgroup>
+            <optgroup label="American League East" disabled="" title="Disabled group">
+              <option value="Baltimore Orioles">Baltimore Orioles</option>
+              <option value="Boston Red Sox">Boston Red Sox</option>
+              <option value="New York Yankees">New York Yankees</option>
+              <option value="Tampa Bay Rays">Tampa Bay Rays</option>
+              <option value="Toronto Blue Jays">Toronto Blue Jays</option>
+            </optgroup>
+            <optgroup label="American League Central">
+              <option value="Chicago White Sox">Chicago White Sox</option>
+              <option value="Cleveland Indians">Cleveland Indians</option>
+              <option value="Detroit Tigers">Detroit Tigers</option>
+              <option value="Kansas City Royals">Kansas City Royals</option>
+              <option value="Minnesota Twins">Minnesota Twins</option>
+            </optgroup>
+            <optgroup label="National League East">
+              <option value="Atlanta Braves">Atlanta Braves</option>
+              <option value="Miami Marlins">Miami Marlins</option>
+              <option value="New York Mets">New York Mets</option>
+              <option value="Philadelphia Phillies">Philadelphia Phillies</option>
+              <option value="Washington Nationals">Washington Nationals</option>
+            </optgroup>
+            <optgroup label="National League Central">
+              <option value="Chicago Cubs">Chicago Cubs</option>
+              <option value="Cincinnati Reds">Cincinnati Reds</option>
+              <option value="Milwaukee Brewers">Milwaukee Brewers</option>
+              <option value="Pittsburgh Pirates">Pittsburgh Pirates</option>
+              <option value="St. Louis Cardinals">St. Louis Cardinals</option>
+            </optgroup>
+            <optgroup label="National League West">
+              <option value="Arizona Diamondbacks">Arizona Diamondbacks</option>
+              <option value="Colorado Rockies">Colorado Rockies</option>
+              <option value="Los Angeles Dodgers">Los Angeles Dodgers</option>
+              <option value="San Diego Padres">San Diego Padres</option>
+              <option value="San Francisco Giants">San Francisco Giants</option>
+            </optgroup>
+          </select>
+          <span class="fsa-field__help">Where does your loyalty lie?</span>
+        </div>
+        <h4>Sizes</h4>
+        <div class="fsa-field">
+          <label class="fsa-field__label" for="lorem-00084">Default</label>
+          <input class="fsa-input fsa-field__item" id="lorem-00084" name="lorem-00084" type="text" value="">
+        </div>
+        <div class="fsa-field">
+          <label class="fsa-field__label" for="lorem-0128">Short</label>
+          <input class="fsa-input fsa-field__item fsa-field__item--short" id="lorem-0128" name="lorem-0128" type="text" value="">
+        </div>
+        <div class="fsa-field">
+          <label class="fsa-field__label" for="lorem-6719">Medium</label>
+          <input class="fsa-input fsa-field__item fsa-field__item--medium" id="lorem-6719" name="lorem-6719" type="text" value="">
+        </div>
+        <div class="fsa-field--block">
+          <label class="fsa-field__label" for="lorem-7789">Full width</label>
+          <input class="fsa-input fsa-field__item" id="lorem-7789" name="lorem-7789" type="text" value="">
+        </div>
+        <h4>States</h4>
+        <div class="fsa-field fsa-field--error">
+          <label class="fsa-field__label" for="lorem-7650">Error label <span class="fsa-field__label-desc">Required</span></label>
+          <input class="fsa-input fsa-field__item fsa-input--error" aria-describedby="lorem-7650--message" id="lorem-7650" name="lorem-7650" type="text" value="">
+          <span class="fsa-field__help">This is how people can contact you</span>
+          <span class="fsa-field__message" id="lorem-7650--message" role="alert">Helpful error message</span>
+        </div>
+        <div class="fsa-field">
+          <label class="fsa-field__label" for="lorem-4780">Positive label</label>
+          <input class="fsa-input fsa-input--positive fsa-field__item" id="lorem-4780" name="lorem-4780" type="text" value="">
+        </div>
+        <div class="fsa-field fsa-field--columns fsa-field--error">
+          <div class="fsa-grid">
+            <div class="fsa-grid__1 fsa-grid__2/3@m">
+              <div class="fsa-field__column">
+                <label class="fsa-field__label" for="lorem-0982">City</label>
+                <input class="fsa-input fsa-field__item" id="lorem-0982" name="lorem-0982" type="text" value="Carpinteria">
+              </div>
+            </div>
+            <div class="fsa-grid__1 fsa-grid__1/3@m">
+              <div class="fsa-field__column">
+                <label class="fsa-field__label" for="lorem-8996">State</label>
+                <select class="fsa-select fsa-select--error fsa-field__item" aria-describedby="lorem-8996--message" id="lorem-8996" name="lorem-8996">
+                  <option value="" selected></option>
+                  <option value="Alabama">AL</option>
+                  <option value="Alaska">AK</option>
+                  <option value="Arizona">AZ</option>
+                  <option value="Arkansas">AR</option>
+                  <option value="California">CA</option>
+                  <option value="Colorado">CO</option>
+                  <option value="Connecticut">CT</option>
+                  <option value="Delaware">DE</option>
+                  <option value="District Of Columbia">DC</option>
+                  <option value="Florida">FL</option>
+                  <option value="Georgia">GA</option>
+                  <option value="Hawaii">HI</option>
+                  <option value="Idaho">ID</option>
+                  <option value="Illinois">IL</option>
+                  <option value="Indiana">IN</option>
+                  <option value="Iowa">IA</option>
+                  <option value="Kansas">KS</option>
+                  <option value="Kentucky">KY</option>
+                  <option value="Louisiana">LA</option>
+                  <option value="Maine">ME</option>
+                  <option value="Maryland">MD</option>
+                  <option value="Massachusetts">MA</option>
+                  <option value="Michigan">MI</option>
+                  <option value="Minnesota">MN</option>
+                  <option value="Mississippi">MS</option>
+                  <option value="Missouri">MO</option>
+                  <option value="Montana">MT</option>
+                  <option value="Nebraska">NE</option>
+                  <option value="Nevada">NV</option>
+                  <option value="New Hampshire">NH</option>
+                  <option value="New Jersey">NJ</option>
+                  <option value="New Mexico">NM</option>
+                  <option value="New York">NY</option>
+                  <option value="North Carolina">NC</option>
+                  <option value="North Dakota">ND</option>
+                  <option value="Ohio">OH</option>
+                  <option value="Oklahoma">OK</option>
+                  <option value="Oregon">OR</option>
+                  <option value="Pennsylvania">PA</option>
+                  <option value="Rhode Island">RI</option>
+                  <option value="South Carolina">SC</option>
+                  <option value="South Dakota">SD</option>
+                  <option value="Tennessee">TN</option>
+                  <option value="Texas">TX</option>
+                  <option value="Utah">UT</option>
+                  <option value="Vermont">VT</option>
+                  <option value="Virginia">VA</option>
+                  <option value="Washington">WA</option>
+                  <option value="West Virginia">WV</option>
+                  <option value="Wisconsin">WI</option>
+                  <option value="Wyoming">WY</option>
+                </select>
+                <span class="fsa-field__message" id="lorem-8996--message" role="alert">State is required</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h4>Columns</h4>
+        <p class="docs__code-sample"><code>fsa-field fsa-field--block <strong>fsa-field--columns</strong></code></p>
+        <p>Use <a href="#grid">Grids</a> to lay out form fields, including <a href="#grid-responsive">responsively</a>, for example these are stacked until the Small breakpoint:</p>
+        <div class="fsa-field fsa-field--block fsa-field--columns">
+          <div class="fsa-grid">
+            <div class="fsa-grid__1 fsa-grid__3/12@s">
+              <div class="fsa-field__column">
+                <label class="fsa-field__label" for="lorem-6459">Label</label>
+                <input class="fsa-input fsa-field__item" id="lorem-6459" name="lorem-6459" type="text" value="">
+              </div>
+            </div>
+            <div class="fsa-grid__1 fsa-grid__3/12@s">
+              <div class="fsa-field__column">
+                <label class="fsa-field__label" for="lorem-6543">Label</label>
+                <input class="fsa-input fsa-field__item" id="lorem-6543" name="lorem-6543" type="text" value="">
+              </div>
+            </div>
+            <div class="fsa-grid__1 fsa-grid__6/12@s">
+              <div class="fsa-field__column">
+                <label class="fsa-field__label" for="lorem-0892">Label</label>
+                <select class="fsa-select fsa-field__item" id="lorem-0892" name="lorem-0892">
+                  <option value="" selected>- Select a lorem -</option>
+                  <option value="Ipsum">Ipsum</option>
+                  <option value="Dolor">Dolor</option>
+                  <option value="Sit">Sit</option>
+                  <option value="Amet">Amet</option>
+                  <option value="Consecutar">Consecutar</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fsa-field fsa-field--error fsa-field--block fsa-field--columns">
+          <div class="fsa-grid">
+            <div class="fsa-grid__1 fsa-grid__3/12@s">
+              <div class="fsa-field__column">
+                <label class="fsa-field__label" for="lorem-6459">Label</label>
+                <input class="fsa-input fsa-field__item" id="lorem-6459" name="lorem-6459" type="text" value="">
+              </div>
+            </div>
+            <div class="fsa-grid__1 fsa-grid__3/12@s">
+              <div class="fsa-field__column">
+                <label class="fsa-field__label" for="lorem-6543">Label</label>
+                <input class="fsa-input fsa-field__item" id="lorem-6543" name="lorem-6543" type="text" value="">
+              </div>
+            </div>
+            <div class="fsa-grid__1 fsa-grid__6/12@s">
+              <div class="fsa-field__column">
+                <label class="fsa-field__label" for="lorem-0222">Label</label>
+                <select class="fsa-select fsa-select--error fsa-field__item" id="lorem-0222" name="lorem-0222" aria-describedby="lorem-0222--message">
+                  <option value="" selected>- Select a lorem -</option>
+                  <option value="Ipsum">Ipsum</option>
+                  <option value="Dolor">Dolor</option>
+                  <option value="Sit">Sit</option>
+                  <option value="Amet">Amet</option>
+                  <option value="Consecutar">Consecutar</option>
+                </select>
+                <span class="fsa-field__message" id="lorem-0222--message" role="alert">Helpful error message</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h4>Radio and Checkbox</h4>
+        <div class="fsa-field">
+          <label class="fsa-field__label">Fruit Pie</label>
+          <ul class="fsa-form-list">
+            <li>
+              <input class="fsa-checkbox" id="apple-pie" type="checkbox" name="boat-pie" value="apple-pie" checked="">
+              <label for="apple-pie">Apple</label>
+            </li>
+            <li>
+              <input class="fsa-checkbox" id="key-lime-pie" type="checkbox" name="boat-pie" value="key-lime-pie">
+              <label for="key-lime-pie">Key Lime</label>
+            </li>
+            <li>
+              <input class="fsa-checkbox" id="pumpkin-pie" type="checkbox" name="boat-pie" disabled="">
+              <label for="pumpkin-pie">Pumpkin</label>
+            </li>
+            <li>
+              <input class="fsa-checkbox" id="banana-cream" type="checkbox" name="boat-pie" value="banana-cream" checked="" disabled="">
+              <label for="banana-cream">Banana Cream</label>
+            </li>
+          </ul>
+        </div>
+        <div class="fsa-field fsa-field--error">
+          <label class="fsa-field__label">Historical Figure</label>
+          <ul class="fsa-form-list">
+            <li>
+              <input class="fsa-checkbox" id="sojourner-truth" type="checkbox" name="historical-figures-5555" value="sojourner-truth">
+              <label for="sojourner-truth">Sojourner Truth</label>
+            </li>
+            <li>
+              <input class="fsa-checkbox" id="frederick-douglass" type="checkbox" name="historical-figures-5655" value="frederick-douglass">
+              <label for="frederick-douglass">Frederick Douglass</label>
+            </li>
+            <li>
+              <input class="fsa-checkbox" id="booker-t-washington" type="checkbox" name="historical-figures-5611" value="booker-t-washington">
+              <label for="booker-t-washington">Booker T. Washington</label>
+            </li>
+            <li>
+              <input class="fsa-checkbox" id="george-washington-carver" type="checkbox" name="historical-figures-5005" value="george-washington-carver">
+              <label for="george-washington-carver">George Washington Carver</label>
+            </li>
+          </ul>
+          <span class="fsa-field__message" id="lorem-0222--message" role="alert">At least one should be selected</span>
+        </div>
+      </div>
       <h3 class="docs__bd docs__figure">Breadcrumb</h3>
       <div class="docs__bd">
         <p class="docs__code-sample"><code>class="fsa-breadcrumb"</code></p>

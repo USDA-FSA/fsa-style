@@ -1,4 +1,4 @@
-/*! FSA Style v2.0.0 | http://usda-fsa.github.io/fsa-design-system/ */
+/*! FSA Style v2.0.1 | http://usda-fsa.github.io/fsa-design-system/ */
 
 
 html {
@@ -37,16 +37,16 @@ body::before {
   line-height: 1;
 }
 
-@media (min-width: 20em) {
+@media (min-width: 30.0625em) {
   body::before {
     background: black;
-    content: 'S: 320px - 559px';
+    content: 'S: 481px+';
   }
 }
 
-@media (min-width: 35em) {
+@media (min-width: 37.5em) {
   body::before {
-    content: 'M: 560px - 863px';
+    content: 'M: 600px+';
     background: rgba(204, 102, 0, 0.8);
   }
 }
@@ -90,7 +90,7 @@ html:hover body::before {
   color: #fff;
 }
 
-@media (min-width: 35em) {
+@media (min-width: 37.5em) {
   .docs__title {
     font-size: 5.2rem;
     line-height: 1.3;
@@ -184,7 +184,7 @@ html:hover body::before {
   color: #fff;
 }
 
-@media (min-width: 35em) {
+@media (min-width: 37.5em) {
   .docs__primary-nav-link {
     margin-right: 0.8rem;
   }
@@ -253,13 +253,13 @@ html:hover body::before {
   padding: 0.8rem;
 }
 
-@media (min-width: 20em) {
+@media (min-width: 30.0625em) {
   .docs__logo {
     padding: 2.4rem;
   }
 }
 
-@media (min-width: 35em) {
+@media (min-width: 37.5em) {
   .docs__logo {
     padding: 2.4rem 4.8rem;
   }
@@ -278,7 +278,7 @@ html:hover body::before {
   margin-bottom: 2.4rem;
 }
 
-@media (min-width: 35em) {
+@media (min-width: 37.5em) {
   .docs__attr-list {
     display: -ms-flexbox;
     display: flex;
@@ -298,13 +298,13 @@ html:hover body::before {
       flex: 1;
 }
 
-@media (min-width: 35em) {
+@media (min-width: 37.5em) {
   .docs__attr-list__item {
     margin-right: 2.55rem;
   }
 }
 
-@media (min-width: 35em) {
+@media (min-width: 37.5em) {
   .docs__attr-list__item:last-child {
     margin-right: 0;
   }
@@ -450,7 +450,7 @@ html:hover body::before {
   margin-right: 1.2rem;
 }
 
-@media (min-width: 20em) {
+@media (min-width: 30.0625em) {
   .docs__font__preview {
     font-size: 8.4rem;
     text-align: center;
@@ -498,7 +498,7 @@ html:hover body::before {
 
 .docs__utilities__demo-item {
   background-color: white;
-  border: 1px solid #928f8c;
+  border: 1px solid #75716e;
 }
 
 .docs__utilities__demo-item code {
@@ -641,7 +641,7 @@ html:hover body::before {
 }
 
 .color-fsa-tertiary-light {
-  background-color: #928f8c;
+  background-color: #75716e;
 }
 
 .color-fsa-tertiary-lighter {
@@ -689,7 +689,7 @@ html:hover body::before {
 }
 
 .color-fsa-red-lightest {
-  background-color: #f8dede;
+  background-color: #f9e4e5;
 }
 
 .color-fsa-link {
