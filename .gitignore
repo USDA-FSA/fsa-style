@@ -6,4 +6,5 @@ npm-debug.log
 .ugly
 .bundle/
 src/scratch.html
+src/working.html
 published
