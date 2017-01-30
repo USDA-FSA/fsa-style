@@ -45,6 +45,8 @@
   margin-right: $size-default;
   display: inline-block;
 
+  outline: 1px solid rgba(0, 0, 0, .1);
+
 }
 
 .fsa-checkbox + :not(label),
