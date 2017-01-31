@@ -34,14 +34,19 @@
 
 }
 
-.fsa-checkbox + label,
-.fsa-radio + label {
+.fsa-checkbox +  label,
+.fsa-radio + label,
+.fsa-checkbox + [type="hidden"] + label,
+.fsa-radio + [type="hidden"] + label {
+
   $indent-amount: 1.7em;
   cursor: pointer;
   font-weight: $font-normal;
   text-indent: -$indent-amount;
   margin-left: $indent-amount;
+  margin-right: $size-default;
   display: inline-block;
+
 }
 
 .fsa-checkbox + :not(label),
@@ -59,14 +64,18 @@
   }
 }
 
-.fsa-radio + label {
+.fsa-radio + label,
+.fsa-radio + [type="hidden"] + label {
   $indent-amount: 1.6em;
   text-indent: -$indent-amount;
   margin-left: $indent-amount + .1em;
 }
 
 .fsa-checkbox + label::before,
-.fsa-radio + label::before {
+.fsa-radio + label::before,
+.fsa-checkbox + [type="hidden"] + label::before,
+.fsa-radio + [type="hidden"] + label::before {
+
   background: white;
   border-radius: $border-radius;
   box-shadow: 0 0 0 1px $form-checkbox-radio-outline-color;
@@ -86,7 +95,8 @@
 
 }
 
-.fsa-radio + label::before {
+.fsa-radio + label::before,
+.fsa-radio + [type="hidden"] + label::before {
   box-shadow: 0 0 0 2px $color-white, 0 0 0 3px $form-checkbox-radio-outline-color;
   height: 1.6rem;
   width: 1.6rem;
@@ -95,12 +105,16 @@
 
 .fsa-checkbox:indeterminate + label::before,
 .fsa-checkbox:checked + label::before,
-.fsa-radio:checked + label::before {
+.fsa-radio:checked + label::before,
+.fsa-checkbox:indeterminate + [type="hidden"] + label::before,
+.fsa-checkbox:checked + [type="hidden"] + label::before,
+.fsa-radio:checked + [type="hidden"] + label::before {
   background-color: $form-checkbox-radio-fill;
   box-shadow: 0 0 0 1px $form-checkbox-radio-fill;
 }
 
-.fsa-radio:checked + label::before {
+.fsa-radio:checked + label::before,
+.fsa-radio:checked + [type="hidden"] + label::before {
   // scss-lint:disable all
   box-shadow:
     0 0 0 2px $color-white,
@@ -108,7 +122,8 @@
   ;
 }
 
-.fsa-radio:focus + label::before {
+.fsa-radio:focus + label::before,
+.fsa-radio:focus + [type="hidden"] +  label::before {
   // scss-lint:disable all
   box-shadow:
     0 0 0 .2rem $color-white,
@@ -118,39 +133,47 @@
   ;
 }
 
-.fsa-checkbox:checked + label::before {
+.fsa-checkbox:checked + label::before,
+.fsa-checkbox:checked + [type="hidden"] + label::before {
   background-image: url('#{$image-path}/correct8.png');
   background-image: url('#{$image-path}/correct8.svg');
   background-position: 50%;
   background-repeat: no-repeat;
 }
 
-.fsa-checkbox:indeterminate + label::before {
+.fsa-checkbox:indeterminate + label::before,
+.fsa-checkbox:indeterminate + [type="hidden"] + label::before {
   background-image: url('#{$image-path}/dash.png');
   background-image: url('#{$image-path}/dash.svg');
   background-position: 50%;
   background-repeat: no-repeat;
 }
 
-.fsa-checkbox:focus + label::before {
+.fsa-checkbox:focus + label::before,
+.fsa-checkbox:focus + [type="hidden"] + label::before {
   box-shadow: 0 0 0 1px $color-white, 0 0 0 3px $form-checkbox-radio-fill;
 }
 
 .fsa-checkbox:disabled + label,
-.fsa-radio:disabled + label {
+.fsa-radio:disabled + label,
+.fsa-checkbox:disabled + [type="hidden"] + label,
+.fsa-radio:disabled + [type="hidden"] + label {
   color: $color-fsa-tertiary-300;
   cursor: text;
 }
 
 .fsa-checkbox:disabled + label::before,
-.fsa-radio:disabled + label::before {
+.fsa-radio:disabled + label::before,
+.fsa-checkbox:disabled + [type="hidden"] + label::before,
+.fsa-radio:disabled + [type="hidden"] + label::before {
   background-color: $white;
   cursor: text;
   cursor: not-allowed;
   opacity: .3;
 }
 
-.fsa-radio:disabled + label::before {
+.fsa-radio:disabled + label::before,
+.fsa-radio:disabled + [type="hidden"] + label::before {
   // scss-lint:disable all
   box-shadow:
     0 0 0 2px $white,
@@ -158,7 +181,8 @@
   ;
 }
 
-.fsa-radio:disabled:checked + label::before {
+.fsa-radio:disabled:checked + label::before,
+.fsa-radio:disabled:checked + [type="hidden"] + label::before {
   background-color: $form-checkbox-radio-fill;
   // scss-lint:disable all
   box-shadow:
@@ -168,7 +192,8 @@
   opacity: .3;
 }
 
-.fsa-checkbox:disabled:checked + label::before {
+.fsa-checkbox:disabled:checked + label::before,
+.fsa-checkbox:disabled:checked + [type="hidden"] + label::before {
   background-color: $form-checkbox-radio-fill;
   box-shadow: 0 0 0 1px $form-checkbox-radio-fill;
   opacity: .3;
