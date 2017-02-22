@@ -35,7 +35,7 @@
   "dependencies": {
     "jquery": "^2.2.2",
     "politespace": "^0.1.7",
-    "uswds": "^0.13.1"
+    "uswds": "^0.13.3"
   },
   "author": "USDA FSA Enterprise Architecture",
   "contributors": [
