@@ -1,4 +1,4 @@
-/*! FSA Style v2.0.1 | http://usda-fsa.github.io/fsa-design-system/ */
+/*! FSA Style v2.0.2 | http://usda-fsa.github.io/fsa-design-system/ */
 
 
 html {
@@ -479,6 +479,10 @@ body {
 .lt-ie9 * {
   -webkit-filter: none !important;
           filter: none !important;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 .usa-sr-only {
@@ -2108,11 +2112,15 @@ img {
 }
 
 .fsa-checkbox + label,
-.fsa-radio + label {
+.fsa-radio + label,
+.fsa-checkbox + [type="hidden"] + label,
+.fsa-radio + [type="hidden"] + label {
   cursor: pointer;
   font-weight: 400;
   text-indent: -1.7em;
   margin-left: 1.7em;
+  margin-right: 12px;
+  margin-right: 1.2rem;
   display: inline-block;
 }
 
@@ -2132,13 +2140,16 @@ img {
   font-weight: bold;
 }
 
-.fsa-radio + label {
+.fsa-radio + label,
+.fsa-radio + [type="hidden"] + label {
   text-indent: -1.6em;
   margin-left: 1.7em;
 }
 
 .fsa-checkbox + label::before,
-.fsa-radio + label::before {
+.fsa-radio + label::before,
+.fsa-checkbox + [type="hidden"] + label::before,
+.fsa-radio + [type="hidden"] + label::before {
   background: white;
   border-radius: 0.3rem;
   box-shadow: 0 0 0 1px #8c8b8b;
@@ -2157,11 +2168,14 @@ img {
 }
 
 .lt-ie9 .fsa-checkbox + label::before, .lt-ie9
-.fsa-radio + label::before {
+.fsa-radio + label::before, .lt-ie9
+.fsa-checkbox + [type="hidden"] + label::before, .lt-ie9
+.fsa-radio + [type="hidden"] + label::before {
   display: none;
 }
 
-.fsa-radio + label::before {
+.fsa-radio + label::before,
+.fsa-radio + [type="hidden"] + label::before {
   box-shadow: 0 0 0 2px #fff, 0 0 0 3px #8c8b8b;
   height: 16px;
   height: 1.6rem;
@@ -2172,62 +2186,77 @@ img {
 
 .fsa-checkbox:indeterminate + label::before,
 .fsa-checkbox:checked + label::before,
-.fsa-radio:checked + label::before {
+.fsa-radio:checked + label::before,
+.fsa-checkbox:indeterminate + [type="hidden"] + label::before,
+.fsa-checkbox:checked + [type="hidden"] + label::before,
+.fsa-radio:checked + [type="hidden"] + label::before {
   background-color: #205493;
   box-shadow: 0 0 0 1px #205493;
 }
 
-.fsa-radio:checked + label::before {
+.fsa-radio:checked + label::before,
+.fsa-radio:checked + [type="hidden"] + label::before {
   box-shadow: 0 0 0 2px #fff, 0 0 0 4px #205493;
 }
 
-.fsa-radio:focus + label::before {
+.fsa-radio:focus + label::before,
+.fsa-radio:focus + [type="hidden"] + label::before {
   box-shadow: 0 0 0 0.2rem #fff, 0 0 0 0.4rem #205493, 0 0 0.3rem 0.4rem #3e94cf, 0 0 0.7rem 0.4rem #3e94cf;
 }
 
-.fsa-checkbox:checked + label::before {
+.fsa-checkbox:checked + label::before,
+.fsa-checkbox:checked + [type="hidden"] + label::before {
   background-image: url("../img/correct8.png");
   background-image: url("../img/correct8.svg");
   background-position: 50%;
   background-repeat: no-repeat;
 }
 
-.fsa-checkbox:indeterminate + label::before {
+.fsa-checkbox:indeterminate + label::before,
+.fsa-checkbox:indeterminate + [type="hidden"] + label::before {
   background-image: url("../img/dash.png");
   background-image: url("../img/dash.svg");
   background-position: 50%;
   background-repeat: no-repeat;
 }
 
-.fsa-checkbox:focus + label::before {
+.fsa-checkbox:focus + label::before,
+.fsa-checkbox:focus + [type="hidden"] + label::before {
   box-shadow: 0 0 0 1px #fff, 0 0 0 3px #205493;
 }
 
 .fsa-checkbox:disabled + label,
-.fsa-radio:disabled + label {
+.fsa-radio:disabled + label,
+.fsa-checkbox:disabled + [type="hidden"] + label,
+.fsa-radio:disabled + [type="hidden"] + label {
   color: #75716e;
   cursor: text;
 }
 
 .fsa-checkbox:disabled + label::before,
-.fsa-radio:disabled + label::before {
+.fsa-radio:disabled + label::before,
+.fsa-checkbox:disabled + [type="hidden"] + label::before,
+.fsa-radio:disabled + [type="hidden"] + label::before {
   background-color: #fff;
   cursor: text;
   cursor: not-allowed;
   opacity: .3;
 }
 
-.fsa-radio:disabled + label::before {
+.fsa-radio:disabled + label::before,
+.fsa-radio:disabled + [type="hidden"] + label::before {
   box-shadow: 0 0 0 2px #fff, 0 0 0 3px #8c8b8b;
 }
 
-.fsa-radio:disabled:checked + label::before {
+.fsa-radio:disabled:checked + label::before,
+.fsa-radio:disabled:checked + [type="hidden"] + label::before {
   background-color: #205493;
   box-shadow: 0 0 0 2px #fff, 0 0 0 4px #205493;
   opacity: .3;
 }
 
-.fsa-checkbox:disabled:checked + label::before {
+.fsa-checkbox:disabled:checked + label::before,
+.fsa-checkbox:disabled:checked + [type="hidden"] + label::before {
   background-color: #205493;
   box-shadow: 0 0 0 1px #205493;
   opacity: .3;
