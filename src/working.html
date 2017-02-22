@@ -26,223 +26,91 @@
   <main class="docs__main" id="main-content" tabindex="-1">
 
     <section class="docs__section" id="btn-group">
-      <h2 class="docs__bd docs__figure-group">Form Field</h2>
-      <h3 class="docs__bd docs__figure">Default</h3>
       <div class="docs__bd">
-        <form action="">
-          <fieldset>
-            <div class="fsa-field">
-              <label class="fsa-field__label" for="lorem-1234">Email address <span class="fsa-field__label-desc">Required</span></label>
-              <input class="fsa-input fsa-field__item" id="lorem-1234" name="lorem-1234" type="email" value="">
-              <span class="fsa-field__help">This is how people can contact you</span>
-            </div>
-            <div class="fsa-field">
-              <label class="fsa-field__label" for="lorem-0128">Short Label</label>
-              <input class="fsa-input fsa-field__item fsa-field__item--short" id="lorem-0128" name="lorem-0128" type="text" value="">
-            </div>
-            <div class="fsa-field">
-              <label class="fsa-field__label" for="lorem-6719">Medium Label</label>
-              <input class="fsa-input fsa-field__item fsa-field__item--medium" id="lorem-6719" name="lorem-6719" type="text" value="">
-            </div>
-            <div class="fsa-field--block">
-              <label class="fsa-field__label" for="lorem-7789">Label</label>
-              <input class="fsa-input fsa-field__item" id="lorem-7789" name="lorem-7789" type="text" value="">
-            </div>
-            <div class="fsa-field">
-              <label class="fsa-field__label" for="lorem-4780">Label</label>
-              <input class="fsa-input fsa-input--positive fsa-field__item" id="lorem-4780" name="lorem-4780" type="text" value="">
-            </div>
-            <div class="fsa-field fsa-field--error">
-              <label class="fsa-field__label" for="lorem-7650">Label <span class="fsa-field__label-desc">Required</span></label>
-              <input class="fsa-input fsa-field__item fsa-input--error" aria-describedby="lorem-7650--message" id="lorem-7650" name="lorem-7650" type="text" value="">
-              <span class="fsa-field__help">This is how people can contact you</span>
-              <span class="fsa-field__message" id="lorem-7650--message" role="alert">Helpful error message</span>
-            </div>
-            <div class="fsa-field">
-              <label class="fsa-field__label" for="lorem-6543">Label <span class="fsa-field__label-desc">Optional</span></label>
-              <select class="fsa-select fsa-field__item" id="lorem-6543" name="lorem-6543">
-                <option value="" selected>- Select a lorem -</option>
-                <option value="Ipsum">Ipsum</option>
-                <option value="Dolor">Dolor</option>
-                <option value="Sit">Sit</option>
-                <option value="Amet">Amet</option>
-                <option value="Consecutar">Consecutar</option>
-              </select>
-            </div>
-            <div class="fsa-field fsa-field--columns">
-              <div class="fsa-grid">
-                <div class="fsa-grid__1 fsa-grid__2/3@m">
-                  <div class="fsa-field__column">
-                    <label class="fsa-field__label" for="lorem-5555">City</label>
-                    <input class="fsa-input fsa-field__item" id="lorem-5555" name="lorem-5555" type="text" value="">
-                  </div>
-                </div>
-                <div class="fsa-grid__1 fsa-grid__1/3@m">
-                  <div class="fsa-field__column">
-                    <label class="fsa-field__label" for="lorem-8888">State</label>
-                    <select class="fsa-select fsa-field__item" id="lorem-8888" name="lorem-8888">
-                      <option value="" selected></option>
-                      <option value="Alabama">AL</option>
-                      <option value="Alaska">AK</option>
-                      <option value="Arizona">AZ</option>
-                      <option value="Arkansas">AR</option>
-                      <option value="California">CA</option>
-                      <option value="Colorado">CO</option>
-                      <option value="Connecticut">CT</option>
-                      <option value="Delaware">DE</option>
-                      <option value="District Of Columbia">DC</option>
-                      <option value="Florida">FL</option>
-                      <option value="Georgia">GA</option>
-                      <option value="Hawaii">HI</option>
-                      <option value="Idaho">ID</option>
-                      <option value="Illinois">IL</option>
-                      <option value="Indiana">IN</option>
-                      <option value="Iowa">IA</option>
-                      <option value="Kansas">KS</option>
-                      <option value="Kentucky">KY</option>
-                      <option value="Louisiana">LA</option>
-                      <option value="Maine">ME</option>
-                      <option value="Maryland">MD</option>
-                      <option value="Massachusetts">MA</option>
-                      <option value="Michigan">MI</option>
-                      <option value="Minnesota">MN</option>
-                      <option value="Mississippi">MS</option>
-                      <option value="Missouri">MO</option>
-                      <option value="Montana">MT</option>
-                      <option value="Nebraska">NE</option>
-                      <option value="Nevada">NV</option>
-                      <option value="New Hampshire">NH</option>
-                      <option value="New Jersey">NJ</option>
-                      <option value="New Mexico">NM</option>
-                      <option value="New York">NY</option>
-                      <option value="North Carolina">NC</option>
-                      <option value="North Dakota">ND</option>
-                      <option value="Ohio">OH</option>
-                      <option value="Oklahoma">OK</option>
-                      <option value="Oregon">OR</option>
-                      <option value="Pennsylvania">PA</option>
-                      <option value="Rhode Island">RI</option>
-                      <option value="South Carolina">SC</option>
-                      <option value="South Dakota">SD</option>
-                      <option value="Tennessee">TN</option>
-                      <option value="Texas">TX</option>
-                      <option value="Utah">UT</option>
-                      <option value="Vermont">VT</option>
-                      <option value="Virginia">VA</option>
-                      <option value="Washington">WA</option>
-                      <option value="West Virginia">WV</option>
-                      <option value="Wisconsin">WI</option>
-                      <option value="Wyoming">WY</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="fsa-field fsa-field--columns fsa-field--error">
-              <div class="fsa-grid">
-                <div class="fsa-grid__1 fsa-grid__2/3@m">
-                  <div class="fsa-field__column">
-                    <label class="fsa-field__label" for="lorem-0982">City</label>
-                    <input class="fsa-input fsa-field__item" id="lorem-0982" name="lorem-0982" type="text" value="Carpinteria">
-                  </div>
-                </div>
-                <div class="fsa-grid__1 fsa-grid__1/3@m">
-                  <div class="fsa-field__column">
-                    <label class="fsa-field__label" for="lorem-8996">State</label>
-                    <select class="fsa-select fsa-select--error fsa-field__item" aria-describedby="lorem-8996--message" id="lorem-8996" name="lorem-8996">
-                      <option value="" selected></option>
-                      <option value="Alabama">AL</option>
-                      <option value="Alaska">AK</option>
-                      <option value="Arizona">AZ</option>
-                      <option value="Arkansas">AR</option>
-                      <option value="California">CA</option>
-                      <option value="Colorado">CO</option>
-                      <option value="Connecticut">CT</option>
-                      <option value="Delaware">DE</option>
-                      <option value="District Of Columbia">DC</option>
-                      <option value="Florida">FL</option>
-                      <option value="Georgia">GA</option>
-                      <option value="Hawaii">HI</option>
-                      <option value="Idaho">ID</option>
-                      <option value="Illinois">IL</option>
-                      <option value="Indiana">IN</option>
-                      <option value="Iowa">IA</option>
-                      <option value="Kansas">KS</option>
-                      <option value="Kentucky">KY</option>
-                      <option value="Louisiana">LA</option>
-                      <option value="Maine">ME</option>
-                      <option value="Maryland">MD</option>
-                      <option value="Massachusetts">MA</option>
-                      <option value="Michigan">MI</option>
-                      <option value="Minnesota">MN</option>
-                      <option value="Mississippi">MS</option>
-                      <option value="Missouri">MO</option>
-                      <option value="Montana">MT</option>
-                      <option value="Nebraska">NE</option>
-                      <option value="Nevada">NV</option>
-                      <option value="New Hampshire">NH</option>
-                      <option value="New Jersey">NJ</option>
-                      <option value="New Mexico">NM</option>
-                      <option value="New York">NY</option>
-                      <option value="North Carolina">NC</option>
-                      <option value="North Dakota">ND</option>
-                      <option value="Ohio">OH</option>
-                      <option value="Oklahoma">OK</option>
-                      <option value="Oregon">OR</option>
-                      <option value="Pennsylvania">PA</option>
-                      <option value="Rhode Island">RI</option>
-                      <option value="South Carolina">SC</option>
-                      <option value="South Dakota">SD</option>
-                      <option value="Tennessee">TN</option>
-                      <option value="Texas">TX</option>
-                      <option value="Utah">UT</option>
-                      <option value="Vermont">VT</option>
-                      <option value="Virginia">VA</option>
-                      <option value="Washington">WA</option>
-                      <option value="West Virginia">WV</option>
-                      <option value="Wisconsin">WI</option>
-                      <option value="Wyoming">WY</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <span class="fsa-field__message" id="lorem-8996--message" role="alert">State is required</span>
-            </div>
-            <div class="fsa-field fsa-field--block fsa-field--columns">
-              <div class="fsa-grid">
-                <div class="fsa-grid__1 fsa-grid__3/12@s">
-                  <div class="fsa-field__column">
-                    <label class="fsa-field__label" for="lorem-6459">Label</label>
-                    <input class="fsa-input fsa-field__item" id="lorem-6459" name="lorem-6459" type="text" value="">
-                  </div>
-                </div>
-                <div class="fsa-grid__1 fsa-grid__3/12@s">
-                  <div class="fsa-field__column">
-                    <label class="fsa-field__label" for="lorem-6543">Label</label>
-                    <input class="fsa-input fsa-field__item" id="lorem-6543" name="lorem-6543" type="text" value="">
-                  </div>
-                </div>
-                <div class="fsa-grid__1 fsa-grid__6/12@s">
-                  <div class="fsa-field__column">
-                    <label class="fsa-field__label" for="lorem-0892">Label</label>
-                    <select class="fsa-select fsa-field__item" id="lorem-0892" name="lorem-0892">
-                      <option value="" selected>- Select a lorem -</option>
-                      <option value="Ipsum">Ipsum</option>
-                      <option value="Dolor">Dolor</option>
-                      <option value="Sit">Sit</option>
-                      <option value="Amet">Amet</option>
-                      <option value="Consecutar">Consecutar</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="fsa-field">
-              <label class="fsa-field__label" for="lorem-2525">Label <span class="fsa-field__label-desc">Required</span></label>
-              <textarea class="fsa-textarea fsa-field__item" id="lorem-2525" name="lorem-2525"></textarea>
-            </div>
-          </fieldset>
-        </form>
+
+        <h3 class="docs__bd docs__figure">Hidden inputs</h3>
+        <p>
+          <input class="fsa-checkbox" id="jhgigjh" type="checkbox" name="jhgigjh" value="jhgigjh" checked="">
+          <input type="hidden" id="sadfasdf" value="asdfasdfasdfasdf">
+          <label for="jhgigjh">Checky</label>
+          <input class="fsa-radio" id="jsjjsnnsjg" type="radio" name="jsjjsnnsjg" value="roode">
+          <input type="hidden" id="asdfasdf_asdfasdferyhrtuj67i7" value="___hhynsdsfa34tg">
+          <label for="jsjjsnnsjg">Raydeeoh</label>
+          <input type="hidden" id="hhs--hhh--h-h---__" value="___shh7s">
+          <input class="fsa-checkbox" id="jhti49d" type="checkbox" name="jhti49d" value="jhti49d">
+          <input type="hidden" id="__sasdfsfd--" value="__sius9gjs">
+          <label for="jhti49d">Check</label>
+          <input type="hidden" id="asdfasdferyhrtuj67i7" value="sfa34tg">
+          <input class="fsa-checkbox" id="jhgjjhjgjg8" type="checkbox" name="jhgjjhjgjg8" value="jhgjjhjgjg8">
+          <input type="hidden" id="asdfasdf2gdfhjjfdotfd" value="pojbcw">
+          <label for="jhgjjhjgjg8">Czechbocks</label>
+          <input class="fsa-radio" id="dd8o" type="radio" name="dd8o" value="roode">
+          <input type="hidden" id="asdfasdf_jhsdafhhsdf____-etjsadfjdsf" value="___hhynsdfsafdasdfsadf__sadfasdf">
+          <label for="dd8o">Reydio</label>
+          <input type="hidden" id="asdfasdf_sadfasdf" value="___hhynsdasdfasdfasdfasdf">
+          <input class="fsa-radio" id="jjdjd6566" type="radio" name="jjdjd6566" value="roode" checked="">
+          <input type="hidden" id="asdfasdf_hhs--hhh--h-h---__" value="___hhynsd___shh7s">
+          <label for="jjdjd6566">Radio</label>
+          <input type="hidden" id="jhsdafhhsdf____-etjsadfjdsf" value="fsafdasdfsadf__sadfasdf">
+        </p>
+
+        <h3 class="docs__bd docs__figure">Inlined</h3>
+        <p>
+          <input class="fsa-checkbox" id="imbw43df" type="checkbox" name="imbw43df" value="imbw43df" checked="">
+          <label for="imbw43df">Checky</label>
+          <input class="fsa-checkbox" id="loremip-sipm" type="checkbox" name="loremip-sipm" value="loremip-sipm" checked="">
+          <label for="loremip-sipm">Check</label>
+          <input class="fsa-checkbox" id="tyogdhrehy" type="checkbox" name="tyogdhrehy" value="tyogdhrehy" checked="">
+          <label for="tyogdhrehy">Czechbocks</label>
+        </p>
+        <p>
+          <input class="fsa-radio" id="asdfetyvbhisz" type="radio" name="asdfetyvbhisz" value="roode" checked="">
+          <label for="asdfetyvbhisz">Radio</label>
+          <input class="fsa-radio" id="thiur5thf5ujch" type="radio" name="thiur5thf5ujch" value="roode">
+          <label for="thiur5thf5ujch">Raydeeoh</label>
+          <input class="fsa-radio" id="yjenmgjsghs" type="radio" name="yjenmgjsghs" value="roode">
+          <label for="yjenmgjsghs">Reydio</label>
+        </p>
+        <h3 class="docs__bd docs__figure">Checkbox</h3>
+        <p class="docs__code-sample"><code>&lt;input class="fsa-checkbox" type="checkbox" id="foo"&gt; &lt;label for="foo"&gt;[label]&lt;/label&gt;</code></p>
+        <ul class="fsa-form-list">
+          <li>
+            <input class="fsa-checkbox" id="apple-pie" type="checkbox" name="pies" value="apple-pie" checked="">
+            <label for="apple-pie">Checkbox with a long label cepteur sint occaecat cupidatat non proident id est laborum</label>
+          </li>
+          <li>
+            <input class="fsa-checkbox" id="key-lime-pie" type="checkbox" name="pies" value="key-lime-pie">
+            <label for="key-lime-pie">Checkbox</label>
+          </li>
+          <li>
+            <input class="fsa-checkbox" id="disabled" type="checkbox" name="pies" disabled="">
+            <label for="disabled">Checkbox</label>
+          </li>
+          <li>
+            <input class="fsa-checkbox" id="moms-apple-pie" type="checkbox" name="pies" value="moms-apple-pie" checked="" disabled="">
+            <label for="moms-apple-pie">Checkbox</label>
+          </li>
+        </ul>
+        <h3 class="docs__bd docs__figure">Radio</h3>
+        <p class="docs__code-sample"><code>&lt;input class="fsa-radio" type="radio" id="bar"&gt; &lt;label for="bar"&gt;[label]&lt;/label&gt;</code></p>
+        <ul class="fsa-form-list">
+          <li>
+            <input class="fsa-radio" id="chicken-noodle" type="radio" name="soup" value="chicken-noodle" checked="">
+            <label for="chicken-noodle">Radio with a long label cepteur sint occaecat cupidatat non proident id est laborum</label>
+          </li>
+          <li>
+            <input class="fsa-radio" id="tomato" type="radio" name="soup" value="tomato">
+            <label for="tomato">Radio</label>
+          </li>
+          <li>
+            <input class="fsa-radio" id="cucumber" type="radio" name="soup" value="cucumber" disabled="">
+            <label for="cucumber">Radio</label>
+          </li>
+          <li>
+            <input class="fsa-radio" id="lettuce" type="radio" name="qweraewr" value="lettuce" disabled="" checked="">
+            <label for="lettuce">Radio</label>
+          </li>
+        </ul>
       </div>
     </section>
 
