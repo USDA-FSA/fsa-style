@@ -1,0 +1,25 @@
+.fsa-section {
+
+  padding-left: $size-default;
+  padding-right: $size-default;
+  padding-bottom: $size-default;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+
+  &--contrast {
+    background-color: $color-fsa-tertiary-100;
+  }
+
+  &--light {
+    background-color: $color-fsa-white;
+    border-top-color: $color-fsa-tertiary-100;
+    border-bottom-color: $color-fsa-tertiary-100;
+  }
+
+  &__bd {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $site-max-width;
+  }
+
+}
