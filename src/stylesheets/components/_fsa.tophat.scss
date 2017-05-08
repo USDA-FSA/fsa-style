@@ -1,0 +1,84 @@
+.fsa-tophat {
+
+  background-color: $color-fsa-primary-900;
+  height: auto;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  color: $color-fsa-white;
+
+  &__bd {
+
+    max-width: ($site-max-width + 24px);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    color: $color-fsa-white;
+    padding: 0 $size-default;
+
+    @include breakpoint(M) {
+      display: flex;
+    }
+
+  }
+
+  &__primary,
+  &__secondary {
+
+    display: inline;
+
+    @include breakpoint(M) {
+      flex: 1
+    }
+
+  }
+
+  &__primary {}
+
+  &__secondary {
+    text-align: right;
+    font-weight: $font-bold;
+  }
+
+  &__link {
+
+    color: $color-fsa-white;
+    text-decoration: none;
+
+    &:link,
+    &:hover,
+    &:active,
+    &:visited {
+      color: $color-fsa-white !important;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+  }
+
+  &__agency {}
+
+  &__agency-abbr[title] {
+
+    border-bottom: none;
+    margin-right: $size-base;
+    cursor: pointer;
+
+    @include breakpoint(M) {
+      display: none;
+    }
+
+  }
+
+  &__agency-fullname {
+
+    display: none;
+
+    @include breakpoint(M) {
+      display: inline;
+    }
+
+  }
+
+}
