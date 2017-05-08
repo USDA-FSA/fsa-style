@@ -7,11 +7,20 @@ $table-border-color: $color-fsa-tertiary-200;
 $table-padding:      $size-default;
 
 table {
+
   width: 100%;
   border-spacing: 0;
   margin: 2em 0;
-  // margin: 0 0 2em;
   min-width: 100%;
+
+
+}
+
+caption {
+  caption-side: bottom;
+  text-align: left;
+  margin-top: .5em;
+  color: $color-fsa-tertiary-300;
 }
 
 th,
