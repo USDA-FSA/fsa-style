@@ -16,8 +16,12 @@
     padding: 0 $size-default;
 
     @include breakpoint(M) {
-      @include font-size(3);
+      @include font-size(2);
       display: flex;
+    }
+
+    @include breakpoint(L) {
+      @include font-size(3);
     }
 
   }

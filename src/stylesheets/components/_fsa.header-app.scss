@@ -13,27 +13,50 @@
     margin-right: auto;
     text-align: left;
     color: $color-fsa-white;
-    padding: 0 $size-default;
+    padding: $size-small $size-default 0;
+
+    @include breakpoint(M) {
+      padding-top: $size-medium;
+      padding-bottom: $size-small;
+    }
 
   }
 
   &__primary,
-  &__secondary {
-    flex: 1
-	}
+  &__secondary {}
 
   &__primary {
-    flex: 1
+    @include breakpoint(M) {
+      flex: 1;
+    }
   }
 
   &__secondary {
+
     display: flex;
     align-items: flex-end;
     text-align: right;
+    flex: 1;
+    padding-left: $size-small;
+
+    @include breakpoint(M) {
+      flex: initial;
+    }
+
   }
 
   &__app-name {
+
     @include font-size(5);
+
+    @include breakpoint(M) {
+      font-size: $font-size-4;
+    }
+
+    @include breakpoint(L) {
+      @include font-size(5);
+    }
+
   }
 
 	&__app-abbr {
@@ -44,6 +67,14 @@
       border-bottom: none;
     }
 
+    &:after {
+
+      @include breakpoint(M) {
+        content: ' |';
+        font-weight: $font-light;
+      }
+
+    }
 	}
 
 	&__app-full {
