@@ -1,0 +1,60 @@
+.fsa-header-app {
+
+  background-color: $color-fsa-primary;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  color: $color-fsa-white;
+
+  &__bd {
+
+    display: flex;
+    max-width: ($site-max-width + 24px);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    color: $color-fsa-white;
+    padding: 0 $size-default;
+
+  }
+
+  &__primary,
+  &__secondary {
+    flex: 1
+	}
+
+  &__primary {
+    flex: 1
+  }
+
+  &__secondary {
+    display: flex;
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  &__app-name {
+    @include font-size(5);
+  }
+
+	&__app-abbr {
+
+    font-weight: $font-bold;
+
+    &[title] {
+      border-bottom: none;
+    }
+
+	}
+
+	&__app-full {
+
+    display: none;
+    font-weight: $font-light;
+
+    @include breakpoint(M) {
+      display: inline;
+    }
+
+	}
+
+}

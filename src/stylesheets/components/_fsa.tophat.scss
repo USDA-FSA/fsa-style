@@ -1,13 +1,13 @@
 .fsa-tophat {
 
   background-color: $color-fsa-primary-900;
-  height: auto;
   padding-top: .5rem;
   padding-bottom: .5rem;
   color: $color-fsa-white;
 
   &__bd {
 
+    @include font-size(1);
     max-width: ($site-max-width + 24px);
     margin-left: auto;
     margin-right: auto;
@@ -16,6 +16,7 @@
     padding: 0 $size-default;
 
     @include breakpoint(M) {
+      @include font-size(3);
       display: flex;
     }
 
@@ -59,17 +60,21 @@
 
   &__agency {}
 
-  &__agency-abbr[title] {
+  &__agency-abbr {
 
-    border-bottom: none;
     margin-right: $size-base;
     cursor: pointer;
+
+    &[title] {
+      border-bottom: none;
+    }
 
     @include breakpoint(M) {
       display: none;
     }
 
   }
+
 
   &__agency-fullname {
 
