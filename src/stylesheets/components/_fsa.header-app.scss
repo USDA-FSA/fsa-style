@@ -61,13 +61,12 @@
 
     text-decoration: none;
     display: inline-block;
+    color: $color-fsa-white;
 
-    &:link,
-    &:hover,
+    &:visited,
     &:active,
-    &:visited {
-      // scss-lint:disable ImportantRule
-      color: $color-fsa-white !important;
+    &:hover {
+      color: $color-fsa-white;
     }
 
     &:hover {

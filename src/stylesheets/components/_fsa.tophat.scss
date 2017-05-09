@@ -53,13 +53,12 @@
 
     color: $component-text-color;
     text-decoration: none;
+    color: $component-text-color;
 
-    &:link,
-    &:hover,
+    &:visited,
     &:active,
-    &:visited {
-      // scss-lint:disable ImportantRule
-      color: $component-text-color !important;
+    &:hover {
+      color: $component-text-color;
     }
 
     &:hover {
