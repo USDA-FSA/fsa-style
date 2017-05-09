@@ -67,7 +67,7 @@
     &:active,
     &:visited {
       // scss-lint:disable ImportantRule
-      color: $color-fsa-white !important;
+      color: $color-fsa-white;
     }
 
     &:hover {
