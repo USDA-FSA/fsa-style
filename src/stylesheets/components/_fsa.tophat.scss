@@ -1,22 +1,27 @@
 .fsa-tophat {
 
-  background-color: $color-fsa-primary-900;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-  color: $color-fsa-white;
+  $component-bgcolor: $color-fsa-primary-900;
+  $component-text-color: $color-fsa-white;
+  $component-spacing: $size-base; // .4rem / 4px
+
+  background-color: $component-bgcolor;
+  color: $component-text-color;
 
   &__bd {
 
-    @include font-size(1);
+    @include font-size(2);
     max-width: ($site-max-width + 24px);
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    color: $color-fsa-white;
-    padding: 0 $size-default;
+    color: $component-text-color;
+    // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
+    padding:
+      $component-spacing
+      ($component-spacing * 3)
+    ;
 
     @include breakpoint(M) {
-      @include font-size(2);
       display: flex;
     }
 
@@ -32,7 +37,7 @@
     display: inline;
 
     @include breakpoint(M) {
-      flex: 1
+      flex: 1;
     }
 
   }
@@ -46,14 +51,15 @@
 
   &__link {
 
-    color: $color-fsa-white;
+    color: $component-text-color;
     text-decoration: none;
 
     &:link,
     &:hover,
     &:active,
     &:visited {
-      color: $color-fsa-white !important;
+      // scss-lint:disable ImportantRule
+      color: $component-text-color !important;
     }
 
     &:hover {
@@ -62,23 +68,38 @@
 
   }
 
-  &__agency {}
+  &__agency {
+
+    &:after {
+
+      content: '|';
+      margin-right: $component-spacing;
+
+      @include breakpoint(M) {
+        display: none;
+      }
+
+    }
+
+  }
 
   &__agency-abbr {
 
-    margin-right: $size-base;
-    cursor: pointer;
+    margin-right: $component-spacing;
 
-    &[title] {
-      border-bottom: none;
+    .fsa-tophat__link & {
+      cursor: pointer;
     }
 
     @include breakpoint(M) {
       display: none;
     }
 
-  }
+    &[title] {
+      border-bottom: 0;
+    }
 
+  }
 
   &__agency-fullname {
 

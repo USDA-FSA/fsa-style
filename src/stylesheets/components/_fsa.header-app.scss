@@ -1,9 +1,13 @@
 .fsa-header-app {
 
-  background-color: $color-fsa-primary;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-  color: $color-fsa-white;
+  $component-bgcolor: $color-fsa-primary;
+  $component-text-color: $color-fsa-white;
+  $component-spacing: $size-small;
+
+  background-color: $component-bgcolor;
+  padding-top: $component-spacing;
+  padding-bottom: ($component-spacing / 2);
+  color: $component-text-color;
 
   &__bd {
 
@@ -12,18 +16,25 @@
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    color: $color-fsa-white;
-    padding: $size-small $size-default 0;
+    color: $component-text-color;
+    // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon
+    padding:
+      ($component-spacing * 2)
+      ($component-spacing + ($component-spacing / 2))
+      ($component-spacing / 2)
+    ;
 
     @include breakpoint(M) {
-      padding-top: $size-medium;
-      padding-bottom: $size-small;
+      padding-top: ($component-spacing * 3);
+      padding-bottom: ($component-spacing);
     }
 
   }
 
   &__primary,
-  &__secondary {}
+  &__secondary {
+    // outline: 1px solid rgba(255,255,255,.2);
+  }
 
   &__primary {
     @include breakpoint(M) {
@@ -37,10 +48,30 @@
     align-items: flex-end;
     text-align: right;
     flex: 1;
-    padding-left: $size-small;
+    padding-left: $component-spacing;
+    padding-bottom: ($component-spacing / 4);
 
     @include breakpoint(M) {
       flex: initial;
+    }
+
+  }
+
+  &__home-link {
+
+    text-decoration: none;
+    display: inline-block;
+
+    &:link,
+    &:hover,
+    &:active,
+    &:visited {
+      // scss-lint:disable ImportantRule
+      color: $color-fsa-white !important;
+    }
+
+    &:hover {
+      // text-decoration: underline;
     }
 
   }
@@ -59,12 +90,17 @@
 
   }
 
-	&__app-abbr {
+  &__app-abbr {
 
     font-weight: $font-bold;
 
+    .fsa-header-app__home-link:hover & {
+      border-bottom: 1px solid $component-text-color;
+      cursor: pointer;
+    }
+
     &[title] {
-      border-bottom: none;
+      border-bottom: 0;
     }
 
     &:after {
@@ -74,10 +110,15 @@
         font-weight: $font-light;
       }
 
-    }
-	}
+      .fsa-header-app__home-link:hover & {
+        border-bottom: 1px solid $component-bgcolor;
+      }
 
-	&__app-full {
+    }
+
+  }
+
+  &__app-full {
 
     display: none;
     font-weight: $font-light;
@@ -86,6 +127,10 @@
       display: inline;
     }
 
-	}
+    .fsa-header-app__home-link:hover & {
+      border-bottom: 1px solid $component-text-color;
+    }
+
+  }
 
 }
