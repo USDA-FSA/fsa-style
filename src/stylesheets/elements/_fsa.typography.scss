@@ -6,21 +6,23 @@ p {
 
 a {
 
-  &:hover,
-  &:active {
+  &:visited {
+    color: $color-fsa-link;
+  }
+
+  // &:hover,
+  // &:active {
+
+  &:hover {
 
     $text-color: $color-fsa-link-hover;
 
     color: $text-color;
 
-    &:visited {
-      color: $text-color;
-    }
+    // &:visited {
+    //   color: $text-color;
+    // }
 
-  }
-
-  &:visited {
-    color: $color-fsa-link;
   }
 
 }
