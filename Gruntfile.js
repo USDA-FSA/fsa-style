@@ -113,7 +113,7 @@ module.exports = function (grunt) {
         files: [
           'src/*.html',
         ],
-        tasks: ['prettify'] // 'simple_include'
+        tasks: ['newer:prettify'] // 'simple_include'
       },
       js: {
         files: [
@@ -125,6 +125,7 @@ module.exports = function (grunt) {
         files: [
           'src/img/**/*.jpeg',
           'src/img/**/*.jpg',
+          'src/img/**/*.png',
           'src/img/**/*.gif',
           'src/img/**/*.svg',
         ],
