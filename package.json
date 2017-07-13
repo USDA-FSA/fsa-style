@@ -36,7 +36,7 @@
   "dependencies": {
     "jquery": "^2.2.2",
     "politespace": "^0.1.7",
-    "uswds": "^0.13.3"
+    "uswds": "^1.2.1"
   },
   "author": "USDA FSA Enterprise Architecture",
   "contributors": [
@@ -47,7 +47,6 @@
     "url": "https://github.com/USDA-FSA/fsa-style/issues"
   },
   "scripts": {
-    "prepublish": "grunt build",
     "build": "grunt build",
     "start": "npm i && grunt",
     "deploy": "grunt deploy",
