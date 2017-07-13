@@ -50,6 +50,9 @@ h6,
 .h5,
 .h6 {
   color: $color-title;
+  & + p {
+    margin-top: .5em;
+  }
 }
 
 h1,
