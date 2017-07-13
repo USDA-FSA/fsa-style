@@ -25,7 +25,7 @@
     ;
 
     @include breakpoint(M) {
-      padding-top: ($component-spacing * 3);
+      padding-top: ($component-spacing * 4);
       padding-bottom: ($component-spacing);
     }
 

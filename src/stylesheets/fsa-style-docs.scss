@@ -51,12 +51,12 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   &__figure-group {
     margin-top: $size-large;
-    border-bottom: 2px solid $color-fsa-secondary-200;
+    border-bottom: 2px solid $color-fsa-tertiary-300;
   }
 
   &__figure {
 
-    border-bottom: 1px solid $color-fsa-secondary-200;
+    border-bottom: 1px solid $color-fsa-tertiary-300;
     margin-bottom: 1em;
     margin-top: $size-large;
 
@@ -73,7 +73,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     // font-family: $font-sans;
     // font-weight: $font-bold;
     margin-top: $size-medium;
-    color: $color-annotation;
+    // color: $color-annotation;
   }
 
   // -----------------------------------------------------------------------------
