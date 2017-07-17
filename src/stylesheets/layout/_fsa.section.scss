@@ -11,9 +11,10 @@
   }
 
   &--light {
+    $bc: shade($color-fsa-tertiary-100, 5%);
     background-color: $color-fsa-white;
-    border-top-color: $color-fsa-tertiary-100;
-    border-bottom-color: $color-fsa-tertiary-100;
+    border-top-color: $bc;
+    border-bottom-color: $bc;
   }
 
   &__bd {

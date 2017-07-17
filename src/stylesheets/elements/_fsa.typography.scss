@@ -6,21 +6,23 @@ p {
 
 a {
 
-  &:hover,
-  &:active {
+  &:visited {
+    color: $color-fsa-link;
+  }
+
+  // &:hover,
+  // &:active {
+
+  &:hover {
 
     $text-color: $color-fsa-link-hover;
 
     color: $text-color;
 
-    &:visited {
-      color: $text-color;
-    }
+    // &:visited {
+    //   color: $text-color;
+    // }
 
-  }
-
-  &:visited {
-    color: $color-fsa-link;
   }
 
 }
@@ -48,7 +50,9 @@ h6,
 .h5,
 .h6 {
   color: $color-title;
-  font-weight: $font-light;
+  & + p {
+    margin-top: .5em;
+  }
 }
 
 h1,
@@ -67,25 +71,22 @@ h1,
 h2,
 .h2 {
   @include h2();
-  font-weight: $font-light;
+  font-weight: $font-normal;
 }
 
 h3,
 .h3 {
   @include h3();
-  font-weight: $font-light;
 }
 
 h4,
 .h4 {
   @include h4();
-  font-weight: $font-normal;
 }
 
 h5,
 .h5 {
   @include h5();
-  font-weight: $font-bold;
 }
 
 h6,
