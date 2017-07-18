@@ -14,6 +14,7 @@ $size-medium        : $size-base * 6;   // 24px
 $size-large         : $size-base * 9;   // 36px
 $size-extra-large   : $size-medium * 2; // 48px
 
+$site-max-width: 1200px;
 
 // ---------------------------------------------------------------------------
 // Colors
@@ -64,7 +65,7 @@ $color-fsa-link-hover: $color-cool-blue;
 $color-fsa-link-visited: $color-visited;
 
 // Semantic
-$color-title: $color-fsa-secondary;
+$color-title: $color-fsa-tertiary;
 $color-fsa-site-bg: tint($color-fsa-secondary, 97%); // Super light gray bg, but with a slight tint of blue
 
 // ---------------------------------------------------------------------------
@@ -124,7 +125,7 @@ $form-checkbox-fill            : $color-fsa-secondary;
 $form-radiocheckbox-size       : 1.8rem;
 $form-padding                  : $size-small;
 $form-select-bgc               : orangered;
-$form-between-space            : $size-base - .2rem;
+$form-between-space            : $size-base;
 
 // ---------------------------------------------------------------------------
 // FSA Grid Settings

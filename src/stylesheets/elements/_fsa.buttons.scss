@@ -39,6 +39,14 @@ $button-alt-active       : $color-fsa-secondary;
 $button-alt-border       : $color-fsa-secondary;
 $button-alt-border-width : 1px;
 
+$button-flat-padding     : 0;
+$button-flat             : transparent;
+$button-flat-text        : $color-fsa-link;
+$button-flat-hover       : transparent;
+$button-flat-active      : transparent;
+$button-flat-border      : transparent;
+$button-flat-border-width: 1px;
+
 @mixin fsa-button($variation: default) {
 
   @if $variation == 'default' {
@@ -231,6 +239,50 @@ $button-alt-border-width : 1px;
 
   }
 
+  @elseif $variation == 'flat' {
+
+    color: $button-flat-text;
+    background-color: $button-flat;
+    box-shadow: 0 0 0 $button-flat-border-width $button-flat-border inset;
+    // scss-lint:disable ImportantRule
+    text-decoration: underline !important;
+
+    &:not(.fsa-btn-small),
+    &:not(.fsa-btn-large) {
+      padding-right: $button-flat-padding;
+      padding-left: $button-flat-padding;
+    }
+
+    &:visited {
+      color: $button-flat-text;
+    }
+
+    &:hover {
+      color: inherit;
+    }
+
+    &:hover:not([disabled]) {
+      color: $color-fsa-link-hover;
+      background-color: $button-flat-hover;
+    }
+
+    &:focus:not([disabled]),
+    &:active:not([disabled]) {
+      color: $button-flat-text;
+      background-color: $button-flat-active;
+      box-shadow: none;
+    }
+
+    // scss-lint:disable SelectorFormat
+    &[disabled] {
+      color: $button-flat-text;
+      &:hover {
+        color: $button-flat-text;
+      }
+    }
+
+  }
+
   @elseif $variation == 'block' {
     width: 100%;
     display: block;
@@ -277,6 +329,7 @@ $button-alt-border-width : 1px;
   &--secondary { @include fsa-button(secondary); }
   &--tertiary  { @include fsa-button(tertiary);  }
   &--alt       { @include fsa-button(alt);       }
+  &--flat      { @include fsa-button(flat);       }
   &--block     { @include fsa-button(block);     }
   &--small     { @include fsa-button(small);     }
   &--large     { @include fsa-button(large);     }

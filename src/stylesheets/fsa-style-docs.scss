@@ -50,23 +50,13 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   }
 
   &__figure-group {
-    // @include font-size(5);
-    // font-family: $font-sans;
-    // text-transform: uppercase;
-    // font-weight: $font-bold;
-    // color: $color-annotation;
     margin-top: $size-large;
-    border-bottom: 2px solid $color-fsa-secondary-200;
+    border-bottom: 2px solid $color-fsa-tertiary-300;
   }
 
   &__figure {
 
-    // @include font-size(3);
-    // font-family: $font-sans;
-    // text-transform: uppercase;
-    // font-weight: $font-bold;
-    border-bottom: 1px solid $color-fsa-secondary-200;
-    // color: $color-annotation;
+    border-bottom: 1px solid $color-fsa-tertiary-300;
     margin-bottom: 1em;
     margin-top: $size-large;
 
@@ -83,7 +73,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     // font-family: $font-sans;
     // font-weight: $font-bold;
     margin-top: $size-medium;
-    color: $color-annotation;
+    // color: $color-annotation;
   }
 
   // -----------------------------------------------------------------------------
@@ -306,14 +296,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
     @include reset-ul;
     margin-bottom: 1em;
-
-    // border: $size-default solid;
-    //
-    // &--primary { border-color: $color-fsa-primary; }
-    // &--secondary { border-color: $color-fsa-secondary; }
-    // &--tertiary { border-color: $color-fsa-tertiary; }
-    // &--aqua { border-color: $color-fsa-aqua; }
-    // &--red { border-color: $color-fsa-red; }
 
     &__item {
 
