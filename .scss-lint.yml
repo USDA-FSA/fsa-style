@@ -66,7 +66,7 @@ linters:
     ignore_single_line_blocks: true
 
   EmptyRule:
-    enabled: true
+    enabled: false
 
   ExtendDirective:
     enabled: false
@@ -230,7 +230,7 @@ linters:
     enabled: true
 
   TrailingWhitespace:
-    enabled: true
+    enabled: false
 
   TrailingZero:
     enabled: false

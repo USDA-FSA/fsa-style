@@ -30,12 +30,19 @@
 // Components -------------- ///////////////////////////////////////////////////
 
 @import 'components/fsa.disclaimer';
+@import 'components/fsa.tophat';
+@import 'components/fsa.header-app';
+@import 'components/fsa.nav-global';
 @import 'components/fsa.alerts';
 @import 'components/fsa.btn-group';
 @import 'components/fsa.breadcrumb';
 @import 'components/fsa.media-object';
 @import 'components/fsa.forms';
 @import 'components/fsa.forms.field';
+
+// Layout-------------- ////////////////////////////////////////////////////////
+
+@import 'layout/fsa.section';
 
 // Other -------------- ////////////////////////////////////////////////////////
 

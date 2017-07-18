@@ -1,0 +1,112 @@
+.fsa-tophat {
+
+  $component-bgcolor: $color-fsa-primary-900;
+  $component-text-color: $color-fsa-white;
+  $component-spacing: $size-base; // .4rem / 4px
+
+  background-color: $component-bgcolor;
+  color: $component-text-color;
+
+  &__bd {
+
+    @include font-size(2);
+    max-width: ($site-max-width + 24px);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    color: $component-text-color;
+    // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
+    padding:
+      $component-spacing
+      ($component-spacing * 3)
+    ;
+
+    @include breakpoint(M) {
+      display: flex;
+    }
+
+    @include breakpoint(L) {
+      @include font-size(3);
+    }
+
+  }
+
+  &__primary,
+  &__secondary {
+
+    display: inline;
+
+    @include breakpoint(M) {
+      flex: 1;
+    }
+
+  }
+
+  &__primary {}
+
+  &__secondary {
+    text-align: right;
+    font-weight: $font-bold;
+  }
+
+  &__link {
+
+    text-decoration: none;
+    color: $component-text-color;
+
+    &:visited,
+    &:active,
+    &:hover {
+      color: $component-text-color;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+  }
+
+  &__agency {
+
+    &:after {
+
+      content: '|';
+      margin-right: $component-spacing;
+
+      @include breakpoint(M) {
+        display: none;
+      }
+
+    }
+
+  }
+
+  &__agency-abbr {
+
+    margin-right: $component-spacing;
+
+    .fsa-tophat__link & {
+      cursor: pointer;
+    }
+
+    @include breakpoint(M) {
+      display: none;
+    }
+
+    &[title] {
+      border-bottom: 0;
+    }
+
+  }
+
+  &__agency-fullname {
+
+    display: none;
+
+    @include breakpoint(M) {
+      display: inline;
+    }
+
+  }
+
+}

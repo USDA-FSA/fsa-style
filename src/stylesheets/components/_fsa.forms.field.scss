@@ -2,7 +2,6 @@
 
   position: relative;
   margin-bottom: 1em;
-  margin-top: 1em;
 
   @include breakpoint(M) {
     max-width: $fsa-form-width;
