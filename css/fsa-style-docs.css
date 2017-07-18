@@ -1,4 +1,4 @@
-/*! FSA Style v2.0.2 | http://usda-fsa.github.io/fsa-design-system/ */
+/*! FSA Style v2.0.3 | http://usda-fsa.github.io/fsa-design-system/ */
 
 
 html {
@@ -106,11 +106,11 @@ html:hover body::before {
 .docs__figure-group {
   margin-top: 57.6px;
   margin-top: 3.6rem;
-  border-bottom: 2px solid #a6bbd4;
+  border-bottom: 2px solid #75716e;
 }
 
 .docs__figure {
-  border-bottom: 1px solid #a6bbd4;
+  border-bottom: 1px solid #75716e;
   margin-bottom: 1em;
   margin-top: 57.6px;
   margin-top: 3.6rem;
@@ -119,7 +119,6 @@ html:hover body::before {
 .docs__sub_style {
   margin-top: 38.4px;
   margin-top: 2.4rem;
-  color: #205493;
 }
 
 .docs__overview {
@@ -150,7 +149,7 @@ html:hover body::before {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  max-width: 1040px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1em;
@@ -237,7 +236,7 @@ html:hover body::before {
 }
 
 .docs__bd {
-  max-width: 1040px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -345,28 +344,6 @@ html:hover body::before {
   margin: 0;
   padding: 0;
   margin-bottom: 1em;
-  border: 19.2px solid;
-  border: 1.2rem solid;
-}
-
-.docs__swatch-list--primary {
-  border-color: #236430;
-}
-
-.docs__swatch-list--secondary {
-  border-color: #205493;
-}
-
-.docs__swatch-list--tertiary {
-  border-color: #494440;
-}
-
-.docs__swatch-list--aqua {
-  border-color: #00a6d2;
-}
-
-.docs__swatch-list--red {
-  border-color: #cd2026;
 }
 
 .docs__swatch-list__item {

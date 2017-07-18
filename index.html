@@ -34,14 +34,14 @@
         An official website of the United States Government
       </span>
       <span class="fsa-disclaimer__stage fsa-disclaimer__stage--prototype">
-        <strong>PROTOTYPE</strong> Not ready for Production
+        BETA
       </span>
     </div>
   </div>
 
   <main class="docs__main" id="main-content" tabindex="-1">
     <section class="docs__section docs__intro">
-      <h1 class="docs__bd docs__title">FSA Style <span class="docs__title__version">2.0.2</span></h1>
+      <h1 class="docs__bd docs__title">FSA Style <span class="docs__title__version">2.0.3</span></h1>
       <div class="docs__nav-shell">
         <nav class="docs__nav">
           <ul class="docs__primary-nav">
@@ -615,6 +615,25 @@
             </p>
           </div>
         </div>
+        <h3 class="docs__bd docs__figure">Flat</h3>
+        <div class="fsa-grid">
+          <div class="fsa-grid__1 fsa-grid__1/2@m">
+            <p>
+              <button class="fsa-btn fsa-btn--flat" type="button">Label</button>
+            </p>
+            <p>
+              <button class="fsa-btn fsa-btn--flat fsa-btn--block" type="button">Label</button>
+            </p>
+          </div>
+          <div class="fsa-grid__1 fsa-grid__1/2@m">
+            <p>
+              <button class="fsa-btn fsa-btn--flat" disabled="" type="button">Label</button>
+            </p>
+            <p>
+              <button class="fsa-btn fsa-btn--flat fsa-btn--block" disabled="" type="button">Label</button>
+            </p>
+          </div>
+        </div>
         <h3 class="docs__bd docs__figure">Small</h3>
         <div class="fsa-grid">
           <div class="fsa-grid__1 fsa-grid__1/2@m">
@@ -647,6 +666,14 @@
             </p>
             <p>
               <button class="fsa-btn fsa-btn--alt fsa-btn--small fsa-btn--block" type="button">Label</button>
+            </p>
+          </div>
+          <div class="fsa-grid__1 fsa-grid__1/2@m">
+            <p>
+              <button class="fsa-btn fsa-btn--flat fsa-btn--small" type="button">Label</button>
+            </p>
+            <p>
+              <button class="fsa-btn fsa-btn--flat fsa-btn--small fsa-btn--block" type="button">Label</button>
             </p>
           </div>
         </div>
@@ -682,6 +709,14 @@
             </p>
             <p>
               <button class="fsa-btn fsa-btn--alt fsa-btn--large fsa-btn--block" type="button">Label</button>
+            </p>
+          </div>
+          <div class="fsa-grid__1 fsa-grid__1/2@m">
+            <p>
+              <button class="fsa-btn fsa-btn--flat fsa-btn--large" type="button">Label</button>
+            </p>
+            <p>
+              <button class="fsa-btn fsa-btn--flat fsa-btn--large fsa-btn--block" type="button">Label</button>
             </p>
           </div>
         </div>
@@ -2109,6 +2144,9 @@
 
         <p class="docs__code-sample"><code>class="fsa-table"</code></p>
         <table class="fsa-table">
+          <caption>
+            [Table caption]
+          </caption>
           <thead>
             <tr>
               <th scope="col">Document title</th>
