@@ -320,6 +320,9 @@ $breakpoints: (
   & + .fsa-btn {
     margin-left: $form-between-space;
   }
+  & + .fsa-btn--flat {
+    margin-left: ($form-between-space * 2);
+  }
 }
 
 // -----------------------------------------------------------------------------
