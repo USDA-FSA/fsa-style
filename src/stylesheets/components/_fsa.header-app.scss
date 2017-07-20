@@ -37,9 +37,9 @@
   }
 
   &__primary {
-    @include breakpoint(M) {
-      flex: 1;
-    }
+    // @include breakpoint(M) {
+    //   flex: 1;
+    // }
   }
 
   &__secondary {
@@ -47,13 +47,14 @@
     display: flex;
     align-items: flex-end;
     text-align: right;
-    flex: 1;
+    margin-left: auto;
+    // flex: 1;
     padding-left: $component-spacing;
     padding-bottom: ($component-spacing / 4);
 
-    @include breakpoint(M) {
-      flex: initial;
-    }
+    // @include breakpoint(M) {
+    //   flex: initial;
+    // }
 
   }
 
