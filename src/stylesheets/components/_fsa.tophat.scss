@@ -15,11 +15,17 @@
     margin-right: auto;
     text-align: left;
     color: $component-text-color;
+
     // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
     padding:
       $component-spacing
       ($component-spacing * 3)
     ;
+
+    @include breakpoint(M) {
+      padding-top: ($component-spacing + ($component-spacing / 2));
+      padding-bottom: ($component-spacing + ($component-spacing / 2));
+    }
 
     @include breakpoint(M) {
       display: flex;
@@ -34,11 +40,11 @@
   &__primary,
   &__secondary {
 
-    display: inline;
+    display: inline-block;
 
-    @include breakpoint(M) {
-      flex: 1;
-    }
+    // @include breakpoint(M) {
+    //   flex: 1;
+    // }
 
   }
 
@@ -47,6 +53,7 @@
   &__secondary {
     text-align: right;
     font-weight: $font-bold;
+    margin-left: auto;
   }
 
   &__link {
@@ -81,16 +88,31 @@
 
   }
 
+  &__agency-logo {
+
+    display: none;
+
+    @include breakpoint(M) {
+      display: inline-block;
+      height: ($size-medium - .4rem);
+      margin-right: $size-base;
+      margin-top: -3px;
+      vertical-align: middle;
+    }
+
+  }
+
   &__agency-abbr {
 
     margin-right: $component-spacing;
-
-    .fsa-tophat__link & {
-      cursor: pointer;
-    }
+    text-decoration: none;
 
     @include breakpoint(M) {
       display: none;
+    }
+
+    .fsa-tophat__link & {
+      cursor: pointer;
     }
 
     &[title] {
