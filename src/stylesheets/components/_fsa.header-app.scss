@@ -33,27 +33,73 @@
 
   &__primary,
   &__secondary {
-    // outline: 1px solid rgba(255,255,255,.2);
+    // outline: 1px solid rgba(255, 255, 255, .2);
   }
 
-  &__primary {
-    @include breakpoint(M) {
-      flex: 1;
-    }
-  }
+  &__primary {}
 
   &__secondary {
 
+    position: relative;
     display: flex;
     align-items: flex-end;
     text-align: right;
-    flex: 1;
+    margin-left: auto;
     padding-left: $component-spacing;
     padding-bottom: ($component-spacing / 4);
 
-    @include breakpoint(M) {
-      flex: initial;
+  }
+
+  &__profile {
+    line-height: 1;
+  }
+
+  &__profile-link {
+
+    display: inline-block;
+    white-space: nowrap;
+
+    &:link,
+    &:visited,
+    &:active {
+      color: $component-text-color;
+      text-decoration: none;
     }
+
+  }
+
+  &__profile-name {
+
+    display: inline-block;
+    @include fsa-ellipsis();
+    max-width: ($size-base * 32);
+
+    @include breakpoint(M) {
+      max-width: ($size-base * 40);
+    }
+
+    @include breakpoint(L) {
+      max-width: ($size-base * 55);
+    }
+
+    .fsa-header-app__profile-link:hover & {
+      text-decoration: underline;
+    }
+
+  }
+
+  &__profile-expand {
+
+    $size: $size-default;
+
+    display: inline-block;
+    margin-left: ($size-base / 2);
+    width: $size;
+    height: ($size + .2rem);
+    background-image: url('#{$image-path}/angle-arrow-down-hover.png');
+    background-image: url('#{$image-path}/angle-arrow-down-hover.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
 
   }
 
