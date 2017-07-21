@@ -33,7 +33,7 @@
 
   &__primary,
   &__secondary {
-    outline: 1px solid rgba(255, 255, 255, .2);
+    // outline: 1px solid rgba(255, 255, 255, .2);
   }
 
   &__primary {}
@@ -93,7 +93,7 @@
     $size: $size-default;
 
     display: inline-block;
-    margin-left: $size-base;
+    margin-left: ($size-base / 2);
     width: $size;
     height: ($size + .2rem);
     background-image: url('#{$image-path}/angle-arrow-down-hover.png');
