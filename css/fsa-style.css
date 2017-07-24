@@ -1,4 +1,4 @@
-/*! FSA Style v2.0.3 | http://usda-fsa.github.io/fsa-design-system/ */
+/*! FSA Style v2.0.4 | http://usda-fsa.github.io/fsa-design-system/ */
 
 
 html {
@@ -2885,6 +2885,13 @@ thead th {
 
 @media (min-width: 37.5em) {
   .fsa-tophat__bd {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+  }
+}
+
+@media (min-width: 37.5em) {
+  .fsa-tophat__bd {
     display: -ms-flexbox;
     display: flex;
   }
@@ -2897,19 +2904,13 @@ thead th {
 }
 
 .fsa-tophat__primary, .fsa-tophat__secondary {
-  display: inline;
-}
-
-@media (min-width: 37.5em) {
-  .fsa-tophat__primary, .fsa-tophat__secondary {
-    -ms-flex: 1;
-        flex: 1;
-  }
+  display: inline-block;
 }
 
 .fsa-tophat__secondary {
   text-align: right;
   font-weight: 700;
+  margin-left: auto;
 }
 
 .fsa-tophat__link {
@@ -2937,19 +2938,34 @@ thead th {
   }
 }
 
+.fsa-tophat__agency-logo {
+  display: none;
+}
+
+@media (min-width: 37.5em) {
+  .fsa-tophat__agency-logo {
+    display: inline-block;
+    height: 2rem;
+    margin-right: 0.4rem;
+    margin-top: -3px;
+    vertical-align: middle;
+  }
+}
+
 .fsa-tophat__agency-abbr {
   margin-right: 4px;
   margin-right: 0.4rem;
-}
-
-.fsa-tophat__link .fsa-tophat__agency-abbr {
-  cursor: pointer;
+  text-decoration: none;
 }
 
 @media (min-width: 37.5em) {
   .fsa-tophat__agency-abbr {
     display: none;
   }
+}
+
+.fsa-tophat__link .fsa-tophat__agency-abbr {
+  cursor: pointer;
 }
 
 .fsa-tophat__agency-abbr[title] {
@@ -2994,32 +3010,73 @@ thead th {
   }
 }
 
-@media (min-width: 37.5em) {
-  .fsa-header-app__primary {
-    -ms-flex: 1;
-        flex: 1;
-  }
-}
-
 .fsa-header-app__secondary {
+  position: relative;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: end;
       align-items: flex-end;
   text-align: right;
-  -ms-flex: 1;
-      flex: 1;
+  margin-left: auto;
   padding-left: 8px;
   padding-left: 0.8rem;
   padding-bottom: 2px;
   padding-bottom: 0.2rem;
 }
 
+.fsa-header-app__profile {
+  line-height: 1;
+}
+
+.fsa-header-app__profile-link {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.fsa-header-app__profile-link:link, .fsa-header-app__profile-link:visited, .fsa-header-app__profile-link:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+.fsa-header-app__profile-name {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  max-width: 128px;
+  max-width: 12.8rem;
+}
+
 @media (min-width: 37.5em) {
-  .fsa-header-app__secondary {
-    -ms-flex: initial;
-        flex: initial;
+  .fsa-header-app__profile-name {
+    max-width: 16rem;
   }
+}
+
+@media (min-width: 54em) {
+  .fsa-header-app__profile-name {
+    max-width: 22rem;
+  }
+}
+
+.fsa-header-app__profile-link:hover .fsa-header-app__profile-name {
+  text-decoration: underline;
+}
+
+.fsa-header-app__profile-expand {
+  display: inline-block;
+  margin-left: 2px;
+  margin-left: 0.2rem;
+  width: 12px;
+  width: 1.2rem;
+  height: 14px;
+  height: 1.4rem;
+  background-image: url("../img/angle-arrow-down-hover.png");
+  background-image: url("../img/angle-arrow-down-hover.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .fsa-header-app__home-link {
