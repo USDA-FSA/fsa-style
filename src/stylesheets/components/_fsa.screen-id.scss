@@ -1,0 +1,36 @@
+.fsa-screen-id {
+
+  padding-left: $size-default;
+  padding-right: $size-default;
+  background-color: $color-fsa-tertiary;
+
+	&__bd {
+    @include font-size(2);
+    color: $color-fsa-tertiary-200;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $site-max-width;
+    text-align: left;
+    padding: $size-small 0;
+	}
+
+	&__dl {
+    margin: 0;
+	}
+
+	&__dt {
+
+    display: inline-block;
+
+    &:after {
+      content: ':';
+    }
+
+	}
+
+	&__dd {
+    display: inline-block;
+    margin-left: $size-small;
+	}
+
+}
