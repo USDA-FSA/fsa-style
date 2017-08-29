@@ -46,6 +46,8 @@
 
   &__heading {
     @extend .usa-alert-heading;
+    @include font-size(4);
+    font-family: $font-sans;
     color: $color-base;
     font-weight: $font-bold;
     margin-bottom: .5em;
