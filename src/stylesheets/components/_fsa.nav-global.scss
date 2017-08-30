@@ -1,20 +1,3 @@
 .fsa-nav-global {
-
-  background-color: $color-fsa-white;
-  border-bottom: 1px solid $color-fsa-tertiary-200;
-
-	&__bd {
-    max-width: ($site-max-width + 24px);
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
-  }
-
-  &__TEMP {
-    padding: $size-default;
-    text-align: center;
-    font-weight: $font-bold;
-    color: $color-fsa-tertiary-300;
-  }
-
+  outline: 1px solid red;
 }
