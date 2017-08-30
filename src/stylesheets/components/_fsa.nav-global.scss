@@ -16,13 +16,26 @@
   }
 
   &__list {
+
     @include reset-ul();
     display: flex;
+    position: relative;
+
+    @include breakpoint(L) {
+      position: static;
+    }
+
   }
 
   &__list-item {
+
     @include reset-li();
     display: inline-block;
+
+    @include breakpoint(L) {
+      position: relative;
+    }
+
   }
 
   &__link {
@@ -77,6 +90,38 @@
       padding: $size-default 0;
     }
 
+  }
+
+  &__sub-menu {
+
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: $size-default;
+    right: $size-default;
+    border: 1px solid $nav-border-color;
+    border-top: 0;
+
+    @include breakpoint(L) {
+      width: 24rem;
+      left: -$size-default;
+    }
+
+    &[aria-hidden="false"] {
+      display: block;
+    }
+
+  }
+
+  &__sub-menu-bd {
+    background-color: $white;
+    padding: $size-medium;
+  }
+
+  &__sub-menu-title {
+    @include font-size(3);
+    font-family: $font-sans;
+    margin: 0;
   }
 
 }
