@@ -4,7 +4,7 @@
   padding-right: $size-default;
   background-color: $color-fsa-tertiary;
 
-	&__bd {
+  &__bd {
     @include font-size(2);
     color: $color-fsa-tertiary-200;
     margin-left: auto;
@@ -12,13 +12,13 @@
     max-width: $site-max-width;
     text-align: left;
     padding: $size-small 0;
-	}
+  }
 
-	&__dl {
+  &__dl {
     margin: 0;
-	}
+  }
 
-	&__dt {
+  &__dt {
 
     display: inline-block;
 
@@ -26,11 +26,11 @@
       content: ':';
     }
 
-	}
+  }
 
-	&__dd {
+  &__dd {
     display: inline-block;
     margin-left: $size-small;
-	}
+  }
 
 }
