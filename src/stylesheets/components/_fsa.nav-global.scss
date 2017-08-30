@@ -1,3 +1,82 @@
 .fsa-nav-global {
-  outline: 1px solid red;
+
+  $nav-bgcolor: $color-fsa-white;
+  $nav-border-color: $color-fsa-tertiary-200;
+  $nav-text-color: $color-fsa-tertiary-300;
+  $nav-highlight-color: $color-fsa-secondary;
+
+  background-color: $nav-bgcolor;
+  border-bottom: 1px solid $nav-border-color;
+
+  &__bd {
+    max-width: ($site-max-width + 24px);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+
+  &__list {
+    @include reset-ul();
+    display: flex;
+  }
+
+  &__list-item {
+    @include reset-li();
+    display: inline-block;
+  }
+
+  &__link {
+
+    @include font-size(2);
+    background-color: transparent;
+    border: 0;
+    display: block;
+    font-weight: $font-bold;
+    text-decoration: none;
+    padding: 0 $size-default;
+    color: $nav-text-color;
+
+    @include breakpoint(M) {
+      @include font-size(3);
+    }
+
+    &:visited {
+      color: $nav-text-color;
+    }
+
+    &:hover,
+    &:focus {
+
+      span {
+        box-shadow: 0 (-$size-base / 2) 0 0 $nav-text-color inset;
+      }
+
+    }
+
+    &--active {
+
+      &:link,
+      &:visited {
+        color: $color-fsa-base;
+      }
+
+      span {
+        box-shadow: 0 (-$size-base) 0 0 $nav-highlight-color inset;
+      }
+
+    }
+
+  }
+
+  &__text {
+
+    display: block;
+    padding: $size-small 0;
+
+    @include breakpoint(M) {
+      padding: $size-default 0;
+    }
+
+  }
+
 }
