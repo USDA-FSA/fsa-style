@@ -2,7 +2,7 @@
 
   padding-left: $size-default;
   padding-right: $size-default;
-  background-color: $color-fsa-tertiary;
+  background-color: tint($color-fsa-tertiary, 15);
 
   &__bd {
 
