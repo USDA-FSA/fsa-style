@@ -210,6 +210,10 @@ module.exports = function (grunt) {
       build: {
         src: 'dist/js/<%= pkg.name %>-docs.js',
         dest: 'dist/js/<%= pkg.name %>-docs.min.js'
+      },
+      demo: {
+        src: 'dist/js/<%= pkg.name %>-demos.js',
+        dest: 'dist/js/<%= pkg.name %>-demos.min.js'
       }
     },
 
@@ -220,6 +224,9 @@ module.exports = function (grunt) {
           'dist/js/<%= pkg.name %>-docs.js': [
             'src/js/main.js'
             // ,'path/to/something/to/concatenate.js', // e.g. when you can't require a module
+          ],
+          'dist/js/<%= pkg.name %>-demos.js': [
+            'src/js/<%= pkg.name %>-demos.js'
           ],
           // 'dist/js/uswds.js': [
           //   'node_modules/uswds/src/js/start.js',
