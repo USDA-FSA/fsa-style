@@ -150,8 +150,9 @@
   }
 
   &__sub-menu-title {
-    @include font-size(3);
+    @include font-size(2);
     font-family: $font-sans;
+    text-transform: uppercase;
     margin: 0;
     color: $nav-highlight-text-color-strong;
     padding: ($nav-spacing-unit / 3) $nav-spacing-unit;
