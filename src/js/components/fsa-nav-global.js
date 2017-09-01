@@ -2,7 +2,6 @@ var menuItem = document.querySelectorAll('.fsa-nav-global__link--has-sub-menu');
 
 menuItem.forEach(function(item) {
 
-  item.classList.add('OUTLINE');
   item.onclick = function(e) {
 
     var $self = this;
@@ -10,7 +9,7 @@ menuItem.forEach(function(item) {
     var $listItem = $self.closest('.fsa-nav-global__list-item');
     var $target = $listItem.querySelector('.fsa-nav-global__sub-menu');
 
-    $target.classList.add('OUTLINE');
+    // $target.classList.add('OUTLINE');
 
     var menuState = $self.getAttribute('aria-expanded');
 

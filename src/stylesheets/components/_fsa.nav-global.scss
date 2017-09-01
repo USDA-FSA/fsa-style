@@ -7,7 +7,13 @@
   $nav-bgcolor: $color-fsa-white;
   $nav-border-color: $color-fsa-tertiary-200;
   $nav-text-color: $color-fsa-tertiary-300;
+
   $nav-highlight-color: $color-fsa-secondary;
+  $nav-highlight-bgcolor: $color-fsa-secondary-900;
+  $nav-highlight-text-color: $color-fsa-secondary-100;
+  $nav-highlight-text-color-strong: $white;
+
+  $nav-spacing-unit: $size-default;
 
   background-color: $nav-bgcolor;
   border-bottom: 1px solid $nav-border-color;
@@ -50,7 +56,7 @@
     display: block;
     font-weight: $font-bold;
     text-decoration: none;
-    padding: 0 $size-default;
+    padding: 0 $nav-spacing-unit;
     color: $nav-text-color;
 
     @include breakpoint(M) {
@@ -65,7 +71,7 @@
     &:focus {
 
       span {
-        box-shadow: 0 (-$size-base / 2) 0 0 $nav-text-color inset;
+        box-shadow: 0 (-($nav-spacing-unit / 3) / 2) 0 0 $nav-text-color inset;
       }
 
     }
@@ -78,7 +84,18 @@
       }
 
       span {
-        box-shadow: 0 (-$size-base) 0 0 $nav-highlight-color inset;
+        box-shadow: 0 (-($nav-spacing-unit / 3)) 0 0 $nav-highlight-color inset;
+      }
+
+    }
+
+    &[aria-expanded="true"] {
+
+      background-color: $nav-highlight-bgcolor;
+      color: $nav-highlight-text-color-strong;
+
+      span {
+        box-shadow: 0 (-($nav-spacing-unit / 3)) 0 0 $nav-highlight-text-color-strong inset;
       }
 
     }
@@ -88,18 +105,18 @@
   &__text {
 
     display: block;
-    padding: $size-small 0;
+    padding: ($nav-spacing-unit - $size-base) 0;
     white-space: nowrap;
 
     @include breakpoint(M) {
-      padding: $size-default 0;
+      padding: $nav-spacing-unit 0;
     }
 
     .fsa-nav-global__link--has-sub-menu & {
       &:after {
         content: '╲╱';
         font-size: ($h6-font-size / 2);
-        margin-left: $size-small;
+        margin-left: ($nav-spacing-unit - $size-base);
         line-height: 1;
         display: inline-block;
         vertical-align: middle;
@@ -111,16 +128,15 @@
   &__sub-menu {
 
     display: none;
+    background-color: $nav-highlight-bgcolor;
     position: absolute;
     top: 100%;
-    left: $size-default;
-    right: $size-default;
-    border: 1px solid $nav-border-color;
-    border-top: 0;
+    left: $nav-spacing-unit;
+    right: $nav-spacing-unit;
 
     @include breakpoint(L) {
       width: 24rem;
-      left: -$size-default;
+      left: 0;
     }
 
     &[aria-hidden="false"] {
@@ -130,14 +146,40 @@
   }
 
   &__sub-menu-bd {
-    background-color: $white;
-    padding: $size-medium;
+    padding: ($nav-spacing-unit) 0 ($nav-spacing-unit / 4);
   }
 
   &__sub-menu-title {
     @include font-size(3);
     font-family: $font-sans;
     margin: 0;
+    color: $nav-highlight-text-color-strong;
+    padding: ($nav-spacing-unit / 3) $nav-spacing-unit;
   }
+
+  &__sub-menu-list {
+    @include reset-ul();
+    margin-bottom: .5em;
+  }
+
+  &__sub-menu-item {
+    @include reset-li();
+  }
+
+  &__sub-menu-link {
+
+    display: block;
+    color: $nav-highlight-text-color;
+    text-decoration: none;
+    padding: ($nav-spacing-unit / 3) $nav-spacing-unit;
+
+    &:hover,
+    &:focus {
+      color: $nav-highlight-text-color-strong;
+      text-decoration: underline;
+    }
+
+  }
+
 
 }
