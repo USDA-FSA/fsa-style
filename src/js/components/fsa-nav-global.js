@@ -44,6 +44,14 @@ menuItem.forEach(function(item) {
 
     var menuState = $self.getAttribute('aria-expanded');
 
+    var $currentlyActiveTab = $component.querySelector('.fsa-nav-global__link[aria-expanded="true"]');
+    var $currentlyActiveFlyout = $component.querySelector('.fsa-nav-global__sub-menu[aria-hidden="false"]');
+
+    if ($currentlyActiveTab) {
+      $currentlyActiveTab.setAttribute('aria-expanded', 'false');
+      $currentlyActiveFlyout.setAttribute('aria-hidden', 'true');
+    }
+
     // TOGGLE MENU ITEM OPENED STATE
     if (menuState == 'true') {
       // $self.classList.remove('OUTLINE');
