@@ -141,6 +141,14 @@
       left: -$size-base;
     }
 
+    .fsa-nav-global__list-item:last-child & {
+      @include breakpoint(L) {
+        right: -$size-base;
+        left: auto;
+      }
+
+    }
+
     // scss-lint:disable SelectorFormat
     .fsa-nav-global__list-item--multi-column & {
 
