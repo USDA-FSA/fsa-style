@@ -116,12 +116,28 @@
     // scss-lint:disable SelectorFormat
     .fsa-nav-global__link--has-sub-menu & {
       &:after {
-        content: '╲╱';
-        font-size: ($h6-font-size / 2);
-        margin-left: ($nav-spacing-unit - $size-base);
-        line-height: 1;
+
+        $size: $size-default;
+
+        content: '';
         display: inline-block;
         vertical-align: middle;
+
+        margin-left: ($size-small);
+        width: $size;
+        height: ($size + .2rem);
+        background-image: url('#{$image-path}/angle-arrow-down.png');
+        background-image: url('#{$image-path}/angle-arrow-down.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+      }
+    }
+
+    [aria-expanded="true"] & {
+      &:after {
+        background-image: url('#{$image-path}/angle-arrow-down-hover.png');
+        background-image: url('#{$image-path}/angle-arrow-down-hover.svg');
       }
     }
 
