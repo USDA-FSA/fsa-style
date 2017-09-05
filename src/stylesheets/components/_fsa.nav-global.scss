@@ -12,7 +12,10 @@
   $nav-spacing-unit: $size-default;
 
   background-color: $nav-bgcolor;
-  border-bottom: 1px solid $nav-border-color;
+
+  @include breakpoint(L) {
+    border-bottom: 1px solid $nav-border-color;
+  }
 
   &__bd {
     max-width: ($site-max-width + 24px);
@@ -22,18 +25,28 @@
   }
 
   &__list {
+
     @include reset-ul();
     display: flex;
     position: relative;
+    flex-wrap: wrap;
+
+    @include breakpoint(L) {
+      flex-wrap: nowrap;
+    }
+
   }
 
   &__list-item {
 
     @include reset-li();
     display: inline-block;
+    flex: auto;
+    text-align: center;
 
     @include breakpoint(L) {
       position: relative;
+      flex: initial;
     }
 
     &--multi-column {
@@ -42,9 +55,35 @@
       }
     }
 
-    // &:exactly(6) {
-    //   outline: 1px solid red;
-    // }
+    // scss-lint:disable all
+    @include breakpoint(L, down) {
+
+      border: 1px solid $nav-border-color;
+      border-width: 0 1px 1px 0;
+
+      &:exactly(2),
+      &:exactly(4),
+      &:exactly(8),
+      &:exactly(10),
+      &:exactly(14) {
+        width: percentage(1/2);
+      }
+
+      &:exactly(3),
+      &:exactly(5),
+      &:exactly(6),
+      &:exactly(9),
+      &:exactly(11),
+      &:exactly(12),
+      &:exactly(15) {
+        width: percentage(1/3);
+      }
+
+      &:exactly(7) {
+        width: auto;
+      }
+
+    }
 
   }
 
@@ -95,10 +134,13 @@
       background-color: $nav-highlight-bgcolor;
       color: $nav-highlight-text-color-strong;
       // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
-      box-shadow:
-        $size-base 0 0 0 $nav-highlight-bgcolor,
-        -$size-base 0 0 0 $nav-highlight-bgcolor
-      ;
+
+      @include breakpoint(L) {
+        box-shadow:
+          $size-base 0 0 0 $nav-highlight-bgcolor,
+          -$size-base 0 0 0 $nav-highlight-bgcolor
+        ;
+      }
 
       .fsa-nav-global__text {
         box-shadow: 0 (-($nav-spacing-unit / 3)) 0 0 $nav-highlight-text-color-strong inset;
@@ -120,6 +162,10 @@
 
     @include breakpoint(M) {
       padding: $nav-spacing-unit 0;
+    }
+
+    @include breakpoint(L) {
+      white-space: nowrap;
     }
 
     // scss-lint:disable SelectorFormat
@@ -157,11 +203,11 @@
     display: none;
     background-color: $nav-highlight-bgcolor;
     position: absolute;
-    top: 100%;
     left: 0;
     right: 0;
 
     @include breakpoint(L) {
+      top: 100%;
       width: 24rem;
       left: -$size-base;
     }
@@ -194,6 +240,7 @@
   &__sub-menu-bd {
 
     padding: ($nav-spacing-unit) 0 ($nav-spacing-unit / 2);
+    text-align: left;
 
     // scss-lint:disable SelectorFormat
     .fsa-nav-global__list-item--multi-column & {
