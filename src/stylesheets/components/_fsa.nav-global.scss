@@ -99,6 +99,10 @@
         box-shadow: 0 (-($nav-spacing-unit / 3)) 0 0 $nav-highlight-text-color-strong inset;
       }
 
+      &:focus {
+        outline: 0;
+      }
+
     }
 
   }

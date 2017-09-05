@@ -29,9 +29,23 @@
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 
-var menuItem = document.querySelectorAll('.fsa-nav-global__link--has-sub-menu');
+var $menuItem = document.querySelectorAll('.fsa-nav-global__link--has-sub-menu');
+var $main = document.querySelectorAll('.fsa-tophat, .fsa-header-app, #main-content, .fsa-footer');
 
-menuItem.forEach(function(item) {
+$main.forEach(function(el) {
+
+  el.onclick = function(e) {
+
+    if (document.querySelector('.fsa-nav-global__link[aria-expanded="true"]')) {
+      document.querySelector('.fsa-nav-global__link[aria-expanded="true"]').setAttribute('aria-expanded', 'false');
+      document.querySelector('.fsa-nav-global__sub-menu[aria-hidden="false"]').setAttribute('aria-hidden', 'true');
+    }
+
+  }
+
+});
+
+$menuItem.forEach(function(item) {
 
   item.onclick = function(e) {
 
@@ -39,13 +53,11 @@ menuItem.forEach(function(item) {
     var $component = $self.closest('.fsa-nav-global');
     var $listItem = $self.closest('.fsa-nav-global__list-item');
     var $target = $listItem.querySelector('.fsa-nav-global__sub-menu');
-
-    // $target.classList.add('OUTLINE');
-
-    var menuState = $self.getAttribute('aria-expanded');
-
     var $currentlyActiveTab = $component.querySelector('.fsa-nav-global__link[aria-expanded="true"]');
     var $currentlyActiveFlyout = $component.querySelector('.fsa-nav-global__sub-menu[aria-hidden="false"]');
+    var menuState = $self.getAttribute('aria-expanded');
+
+    // $target.classList.add('OUTLINE');
 
     if ($currentlyActiveTab) {
       $currentlyActiveTab.setAttribute('aria-expanded', 'false');
@@ -71,6 +83,14 @@ menuItem.forEach(function(item) {
     //   $target.setAttribute('aria-hidden', 'false');
     // }
     //
+  }
+
+  item.onfocus = function(e) {
+    if (document.querySelector('.fsa-nav-global__link[aria-expanded="true"]')) {
+      document.querySelector('.fsa-nav-global__link[aria-expanded="true"]').setAttribute('aria-expanded', 'false');
+      document.querySelector('.fsa-nav-global__sub-menu[aria-hidden="false"]').setAttribute('aria-hidden', 'true');
+    }
+    console.log('you focused an item');
   }
 
 });
