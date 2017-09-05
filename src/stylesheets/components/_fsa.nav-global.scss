@@ -1,7 +1,3 @@
-.OUTLINE {
-  outline: 3px solid orangered;
-}
-
 .fsa-nav-global {
 
   $nav-bgcolor: $color-fsa-white;
@@ -93,6 +89,7 @@
 
       background-color: $nav-highlight-bgcolor;
       color: $nav-highlight-text-color-strong;
+      // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
       box-shadow:
         $size-base 0 0 0 $nav-highlight-bgcolor,
         -$size-base 0 0 0 $nav-highlight-bgcolor
@@ -136,8 +133,8 @@
     background-color: $nav-highlight-bgcolor;
     position: absolute;
     top: 100%;
-    left: $nav-spacing-unit;
-    right: $nav-spacing-unit;
+    left: 0;
+    right: 0;
 
     @include breakpoint(L) {
       width: 24rem;
@@ -167,8 +164,13 @@
 
     // scss-lint:disable SelectorFormat
     .fsa-nav-global__list-item--multi-column & {
-      columns: 4;
-      padding-bottom: ($nav-spacing-unit + $size-base);
+
+      @include breakpoint(L) {
+        columns: 4;
+        column-gap: $nav-spacing-unit / 2;
+        padding-bottom: ($nav-spacing-unit + $size-base);
+      }
+
     }
 
   }
@@ -184,8 +186,25 @@
 
     // scss-lint:disable SelectorFormat
     .fsa-nav-global__list-item--multi-column & {
-      break-before: column;
-      // outline: 1px solid blue;
+    }
+
+  }
+
+  &__sub-menu-group {
+
+    @include breakpoint(L) {
+
+      display: inline-block;
+      width: 100%;
+
+      @supports (-webkit-appearance:none) {
+        // Webkit only.
+        break-before: column;
+        display: block;
+        width: auto;
+      }
+
+
     }
 
   }
@@ -203,18 +222,24 @@
 
   &__sub-menu-link {
 
+    $text-color: $nav-highlight-text-color;
+    $text-color-highlight: $nav-highlight-text-color-strong;
+
     display: block;
-    color: $nav-highlight-text-color;
+    color: $text-color;
     text-decoration: none;
     padding: ($nav-spacing-unit / 3) ($nav-spacing-unit + $size-base);
 
+    &:visited {
+      color: $text-color;
+    }
+
     &:hover,
     &:focus {
-      color: $nav-highlight-text-color-strong;
+      color: $text-color-highlight;
       text-decoration: underline;
     }
 
   }
-
 
 }
