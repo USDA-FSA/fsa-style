@@ -26,15 +26,9 @@
   }
 
   &__list {
-
     @include reset-ul();
     display: flex;
     position: relative;
-
-    // @include breakpoint(L) {
-    //   position: static;
-    // }
-
   }
 
   &__list-item {
@@ -76,7 +70,7 @@
     &:hover,
     &:focus {
 
-      span {
+      .fsa-nav-global__text {
         box-shadow: 0 (-($nav-spacing-unit / 3) / 2) 0 0 $nav-text-color inset;
       }
 
@@ -89,7 +83,7 @@
         color: $color-fsa-base;
       }
 
-      span {
+      .fsa-nav-global__text {
         box-shadow: 0 (-($nav-spacing-unit / 3)) 0 0 $nav-highlight-color inset;
       }
 
@@ -99,8 +93,12 @@
 
       background-color: $nav-highlight-bgcolor;
       color: $nav-highlight-text-color-strong;
+      box-shadow:
+        $size-base 0 0 0 $nav-highlight-bgcolor,
+        -$size-base 0 0 0 $nav-highlight-bgcolor
+      ;
 
-      span {
+      .fsa-nav-global__text {
         box-shadow: 0 (-($nav-spacing-unit / 3)) 0 0 $nav-highlight-text-color-strong inset;
       }
 
@@ -118,6 +116,7 @@
       padding: $nav-spacing-unit 0;
     }
 
+    // scss-lint:disable SelectorFormat
     .fsa-nav-global__link--has-sub-menu & {
       &:after {
         content: '╲╱';
@@ -142,9 +141,10 @@
 
     @include breakpoint(L) {
       width: 24rem;
-      left: 0;
+      left: -$size-base;
     }
 
+    // scss-lint:disable SelectorFormat
     .fsa-nav-global__list-item--multi-column & {
 
       @include breakpoint(L) {
@@ -163,11 +163,12 @@
 
   &__sub-menu-bd {
 
-    padding: ($nav-spacing-unit) 0 ($nav-spacing-unit / 4);
+    padding: ($nav-spacing-unit) 0 ($nav-spacing-unit / 2);
 
+    // scss-lint:disable SelectorFormat
     .fsa-nav-global__list-item--multi-column & {
       columns: 4;
-      padding-bottom: $nav-spacing-unit;
+      padding-bottom: ($nav-spacing-unit + $size-base);
     }
 
   }
@@ -179,8 +180,9 @@
     text-transform: uppercase;
     margin: 0;
     color: $nav-highlight-text-color-strong;
-    padding: ($nav-spacing-unit / 3) $nav-spacing-unit;
+    padding: ($nav-spacing-unit / 3) ($nav-spacing-unit + $size-base);
 
+    // scss-lint:disable SelectorFormat
     .fsa-nav-global__list-item--multi-column & {
       break-before: column;
       // outline: 1px solid blue;
@@ -204,7 +206,7 @@
     display: block;
     color: $nav-highlight-text-color;
     text-decoration: none;
-    padding: ($nav-spacing-unit / 3) $nav-spacing-unit;
+    padding: ($nav-spacing-unit / 3) ($nav-spacing-unit + $size-base);
 
     &:hover,
     &:focus {
