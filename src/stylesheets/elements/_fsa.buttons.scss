@@ -84,7 +84,11 @@ $button-flat-border-width: 1px;
     border-radius: $button-border-radius;
 
     // scss-lint:disable Shorthand
-    padding: ($button-padding - .1rem) ($button-padding * 2) ($button-padding - .1rem);
+    padding:
+      ($button-padding - .1rem)
+      ($button-padding * 1.5)
+      ($button-padding - .1rem)
+    ;
 
     // -------------------------------------------------------------------------
     // default
@@ -312,7 +316,7 @@ $button-flat-border-width: 1px;
       ($size-medium - .2rem)
     ;
     font-size: $font-size-4; // no we're not using mixin cuz we don't want its line-height
-    border-radius: ($button-border-radius * 2);
+    border-radius: ($button-border-radius * 1.5);
 
   }
 

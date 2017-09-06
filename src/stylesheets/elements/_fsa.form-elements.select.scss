@@ -52,7 +52,6 @@
     box-shadow: 0 0 0 1px $form-focus-color inset;
   }
 
-
   &--block {
     display: block;
     width: 100%;
@@ -107,15 +106,6 @@
     box-shadow: 0 0 0 1px $form-positive-color inset;
     background-color: $form-positive-color-bg;
 
-    // @include placeholder {
-    //   color: shade($form-placeholder-color, 20%);
-    // }
-
-    // &:focus {
-    //   box-shadow: 0 0 0 .2rem $form-error-color-focus inset;
-    //   border-color: transparent;
-    // }
-
   }
 
   &--small {
@@ -138,17 +128,17 @@
   &--large {
 
     height: $button-height--lg;
-    padding-top: ($button-padding * 2) - .9rem;
-    padding-bottom: ($button-padding * 2) - .3rem;
+    // padding-top: ($button-padding * 2) - .9rem;
+    // padding-bottom: ($button-padding * 2) - .3rem;
     font-size: $form-text-size--lg; // no we're not using mixin cuz we don't want its line-height
     top: -.3rem;
 
     @supports (-webkit-appearance: none) {
-      padding-top: ($button-padding * 2) - .4rem;
+      // padding-top: ($button-padding * 2) - .4rem;
     }
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      padding-top: ($button-padding * 2) - .4rem;
+      // padding-top: ($button-padding * 2) - .4rem;
     }
 
   }
