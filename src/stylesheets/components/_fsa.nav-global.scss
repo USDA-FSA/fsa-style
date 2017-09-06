@@ -42,7 +42,6 @@
     @include reset-li();
     display: inline-block;
     flex: auto;
-    text-align: center;
 
     @include breakpoint(L) {
       position: relative;
@@ -56,6 +55,7 @@
     }
 
     // scss-lint:disable all
+
     @include breakpoint(L, down) {
 
       border: 1px solid $nav-border-color;
@@ -85,6 +85,25 @@
 
     }
 
+    @include breakpoint(M, down) {
+
+      &:exactly(3),
+      &:exactly(5),
+      &:exactly(6),
+      &:exactly(9),
+      &:exactly(11),
+      &:exactly(12),
+      &:exactly(15) {
+        width: percentage(1/2);
+      }
+
+      &:exactly(5),
+      &:exactly(7) {
+        width: percentage(1/3);
+      }
+
+    }
+
   }
 
   &__link {
@@ -94,13 +113,19 @@
     border: 0;
     display: block;
     width: 100%; // block-level <button> elements don't automatically full-width themselves
-    font-weight: $font-bold;
     text-decoration: none;
-    padding: 0 $nav-spacing-unit;
+    padding: 0;
     color: $nav-text-color;
+    text-align: left;
 
     @include breakpoint(M) {
       @include font-size(3);
+      font-weight: $font-bold;
+    }
+
+    @include breakpoint(L) {
+      padding-left: $nav-spacing-unit;
+      padding-right: $nav-spacing-unit;
     }
 
     &:visited {
@@ -143,7 +168,9 @@
       }
 
       .fsa-nav-global__text {
-        box-shadow: 0 (-($nav-spacing-unit / 3)) 0 0 $nav-highlight-text-color-strong inset;
+        @include breakpoint(L) {
+          box-shadow: 0 (-($nav-spacing-unit / 3)) 0 0 $nav-highlight-text-color-strong inset;
+        }
       }
 
       &:focus {
@@ -157,15 +184,17 @@
   &__text {
 
     display: block;
-    padding: ($nav-spacing-unit - $size-base) 0;
-    white-space: nowrap;
+    padding: ($nav-spacing-unit - $size-base) $nav-spacing-unit;
+    // white-space: nowrap;
 
     @include breakpoint(M) {
-      padding: $nav-spacing-unit 0;
+      padding: $nav-spacing-unit;
     }
 
     @include breakpoint(L) {
       white-space: nowrap;
+      padding-left: 0;
+      padding-right: 0;
     }
 
     // scss-lint:disable SelectorFormat
@@ -179,12 +208,22 @@
         vertical-align: middle;
 
         margin-left: ($size-small);
-        width: $size;
-        height: ($size + .2rem);
+        width: ($size * .66);
+        height: ($size * .66);
         background-image: url('#{$image-path}/angle-arrow-down.png');
         background-image: url('#{$image-path}/angle-arrow-down.svg');
         background-size: 100%;
         background-repeat: no-repeat;
+
+        @include breakpoint(M) {
+          width: $size;
+          height: $size;
+        }
+
+        @include breakpoint(L, down) {
+          float: right;
+          margin-top: $size-default / 2;
+        }
 
       }
     }
@@ -205,11 +244,13 @@
     position: absolute;
     left: 0;
     right: 0;
+    box-shadow: 0 $size-default $size-medium 0 rgba(0, 0, 0, 0 .2);
 
     @include breakpoint(L) {
       top: 100%;
       width: 24rem;
       left: -$size-base;
+      box-shadow: none;
     }
 
     .fsa-nav-global__list-item:last-child & {
@@ -240,7 +281,6 @@
   &__sub-menu-bd {
 
     padding: ($nav-spacing-unit) 0 ($nav-spacing-unit / 2);
-    text-align: left;
 
     // scss-lint:disable SelectorFormat
     .fsa-nav-global__list-item--multi-column & {
