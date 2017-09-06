@@ -20,4 +20,6 @@ $(window).on('scroll', function(){
 
 console.log(heightToHold);
 
-module.exports = DocsNav;
+console.log('DocsNav loaded');
+
+// module.exports = DocsNav;

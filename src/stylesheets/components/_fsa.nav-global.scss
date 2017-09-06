@@ -1,20 +1,365 @@
 .fsa-nav-global {
 
-  background-color: $color-fsa-white;
-  border-bottom: 1px solid $color-fsa-tertiary-200;
+  $nav-bgcolor: $color-fsa-white;
+  $nav-border-color: $color-fsa-tertiary-100;
+  $nav-text-color: $color-fsa-tertiary-300;
 
-	&__bd {
+  $nav-highlight-color: $color-fsa-secondary;
+  $nav-highlight-bgcolor: $color-fsa-secondary-900;
+  $nav-highlight-text-color: $color-fsa-secondary-100;
+  $nav-highlight-text-color-strong: $white;
+
+  $nav-spacing-unit: $size-default;
+
+  background-color: $nav-bgcolor;
+
+  @include breakpoint(L) {
+    border-bottom: 1px solid $nav-border-color;
+  }
+
+  &__bd {
     max-width: ($site-max-width + 24px);
     margin-left: auto;
     margin-right: auto;
     padding: 0;
   }
 
-  &__TEMP {
-    padding: $size-default;
-    text-align: center;
-    font-weight: $font-bold;
-    color: $color-fsa-tertiary-300;
+  &__list {
+
+    @include reset-ul();
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+
+    @include breakpoint(L) {
+      flex-wrap: nowrap;
+    }
+
+  }
+
+  &__list-item {
+
+    @include reset-li();
+    display: inline-block;
+    flex: auto;
+
+    @include breakpoint(L) {
+      position: relative;
+      flex: initial;
+    }
+
+    &--multi-column {
+      @include breakpoint(L) {
+        position: static;
+      }
+    }
+
+    // scss-lint:disable all
+
+    @include breakpoint(L, down) {
+
+      border: 1px solid $nav-border-color;
+      border-width: 0 1px 1px 0;
+
+      &:exactly(2),
+      &:exactly(4),
+      &:exactly(8),
+      &:exactly(10),
+      &:exactly(14) {
+        width: percentage(1/2);
+      }
+
+      &:exactly(3),
+      &:exactly(5),
+      &:exactly(6),
+      &:exactly(9),
+      &:exactly(11),
+      &:exactly(12),
+      &:exactly(15) {
+        width: percentage(1/3);
+      }
+
+      &:exactly(7) {
+        width: auto;
+      }
+
+    }
+
+    @include breakpoint(M, down) {
+
+      &:exactly(3),
+      &:exactly(5),
+      &:exactly(6),
+      &:exactly(9),
+      &:exactly(11),
+      &:exactly(12),
+      &:exactly(15) {
+        width: percentage(1/2);
+      }
+
+      &:exactly(5),
+      &:exactly(7) {
+        width: percentage(1/3);
+      }
+
+    }
+
+  }
+
+  &__link {
+
+    @include font-size(2);
+    background-color: transparent;
+    border: 0;
+    display: block;
+    width: 100%; // block-level <button> elements don't automatically full-width themselves
+    text-decoration: none;
+    padding: 0;
+    color: $nav-text-color;
+    text-align: left;
+
+    @include breakpoint(M) {
+      @include font-size(3);
+      font-weight: $font-bold;
+    }
+
+    @include breakpoint(L) {
+      padding-left: $nav-spacing-unit;
+      padding-right: $nav-spacing-unit;
+    }
+
+    &:visited {
+      color: $nav-text-color;
+    }
+
+    &:hover,
+    &:focus {
+
+      .fsa-nav-global__text {
+        box-shadow: 0 (-($nav-spacing-unit / 3) / 2) 0 0 $nav-text-color inset;
+      }
+
+    }
+
+    &--active {
+
+      &:link,
+      &:visited {
+        color: $color-fsa-base;
+      }
+
+      .fsa-nav-global__text {
+        box-shadow: 0 (-($nav-spacing-unit / 3)) 0 0 $nav-highlight-color inset;
+      }
+
+    }
+
+    &[aria-expanded="true"] {
+
+      background-color: $nav-highlight-bgcolor;
+      color: $nav-highlight-text-color-strong;
+      // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
+
+      @include breakpoint(L) {
+        box-shadow:
+          $size-base 0 0 0 $nav-highlight-bgcolor,
+          -$size-base 0 0 0 $nav-highlight-bgcolor
+        ;
+      }
+
+      .fsa-nav-global__text {
+        @include breakpoint(L) {
+          box-shadow: 0 (-($nav-spacing-unit / 3)) 0 0 $nav-highlight-text-color-strong inset;
+        }
+      }
+
+      &:focus {
+        outline: 0;
+      }
+
+    }
+
+  }
+
+  &__text {
+
+    display: block;
+    padding: ($nav-spacing-unit - $size-base) $nav-spacing-unit;
+    // white-space: nowrap;
+
+    @include breakpoint(M) {
+      padding: $nav-spacing-unit;
+    }
+
+    @include breakpoint(L) {
+      white-space: nowrap;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    // scss-lint:disable SelectorFormat
+    .fsa-nav-global__link--has-sub-menu & {
+      &:after {
+
+        $size: $size-default;
+
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+
+        margin-left: ($size-small);
+        width: ($size * .66);
+        height: ($size * .66);
+        background-image: url('#{$image-path}/angle-arrow-down.png');
+        background-image: url('#{$image-path}/angle-arrow-down.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+        @include breakpoint(M) {
+          width: $size;
+          height: $size;
+        }
+
+        @include breakpoint(L, down) {
+          float: right;
+          margin-top: $size-default / 2;
+        }
+
+      }
+    }
+
+    [aria-expanded="true"] & {
+      &:after {
+        background-image: url('#{$image-path}/angle-arrow-down-hover.png');
+        background-image: url('#{$image-path}/angle-arrow-down-hover.svg');
+      }
+    }
+
+  }
+
+  &__sub-menu {
+
+    display: none;
+    background-color: $nav-highlight-bgcolor;
+    position: absolute;
+    left: 0;
+    right: 0;
+    box-shadow: 0 $size-default $size-medium 0 rgba(0, 0, 0, .2);
+
+    @include breakpoint(L) {
+      top: 100%;
+      width: 24rem;
+      left: -$size-base;
+      box-shadow: none;
+    }
+
+    .fsa-nav-global__list-item:last-child & {
+      @include breakpoint(L) {
+        right: -$size-base;
+        left: auto;
+      }
+
+    }
+
+    // scss-lint:disable SelectorFormat
+    .fsa-nav-global__list-item--multi-column & {
+
+      @include breakpoint(L) {
+        left: 0;
+        right: 0;
+        width: auto;
+      }
+
+    }
+
+    &[aria-hidden="false"] {
+      display: block;
+    }
+
+  }
+
+  &__sub-menu-bd {
+
+    padding: ($nav-spacing-unit) 0 ($nav-spacing-unit / 2);
+
+    // scss-lint:disable SelectorFormat
+    .fsa-nav-global__list-item--multi-column & {
+
+      @include breakpoint(L) {
+        columns: 4;
+        column-gap: $nav-spacing-unit / 2;
+        padding-bottom: ($nav-spacing-unit + $size-base);
+      }
+
+    }
+
+  }
+
+  &__sub-menu-title {
+
+    @include font-size(2);
+    font-family: $font-sans;
+    text-transform: uppercase;
+    margin: 0;
+    color: $nav-highlight-text-color-strong;
+    padding: ($nav-spacing-unit / 3) ($nav-spacing-unit + $size-base);
+
+    // scss-lint:disable SelectorFormat
+    .fsa-nav-global__list-item--multi-column & {
+    }
+
+  }
+
+  &__sub-menu-group {
+
+    @include breakpoint(L) {
+
+      display: inline-block;
+      width: 100%;
+
+      @supports (-webkit-appearance:none) {
+        // Webkit only.
+        break-before: column;
+        display: block;
+        width: auto;
+      }
+
+
+    }
+
+  }
+
+  &__sub-menu-list {
+
+    @include reset-ul();
+    margin-bottom: .5em;
+
+  }
+
+  &__sub-menu-item {
+    @include reset-li();
+  }
+
+  &__sub-menu-link {
+
+    $text-color: $nav-highlight-text-color;
+    $text-color-highlight: $nav-highlight-text-color-strong;
+
+    display: block;
+    color: $text-color;
+    text-decoration: none;
+    padding: ($nav-spacing-unit / 3) ($nav-spacing-unit + $size-base);
+
+    &:visited {
+      color: $text-color;
+    }
+
+    &:hover,
+    &:focus {
+      color: $text-color-highlight;
+      text-decoration: underline;
+    }
+
   }
 
 }

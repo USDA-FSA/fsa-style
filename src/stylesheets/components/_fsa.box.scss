@@ -1,0 +1,30 @@
+.fsa-box {
+
+  $box-bgcolor-default: $white;
+  $box-border-color: $color-fsa-tertiary-100;
+  $box-padding: $size-medium;
+
+  border: 1px solid $box-border-color;
+  background-color: $box-bgcolor-default;
+  padding: $box-padding $box-padding;
+
+  &__hd {}
+
+  &__bd {
+    > :first-child {
+      margin-top: 0;
+    }
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__ft {}
+
+  &__title {
+    @include h3();
+    font-family: $font-sans;
+    margin-top: 0;
+  }
+
+}
