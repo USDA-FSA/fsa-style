@@ -1,8 +1,15 @@
 .fsa-screen-id {
 
+  $bgcolor: tint($color-fsa-tertiary-300, 15);
+
   padding-left: $size-default;
   padding-right: $size-default;
-  background-color: tint($color-fsa-tertiary-300, 15);
+  background-color: $bgcolor;
+  margin: 0;
+
+  .fsa-footer + & {
+    box-shadow: 0 100vh 0 100vh $bgcolor;
+  }
 
   &__bd {
     @include font-size(2);

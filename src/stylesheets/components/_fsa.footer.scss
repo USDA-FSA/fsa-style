@@ -1,8 +1,11 @@
 .fsa-footer {
 
+  $bgcolor: $color-fsa-tertiary-300;
+
   padding-left: $size-default;
   padding-right: $size-default;
-  background-color: $color-fsa-tertiary-300;
+  background-color: $bgcolor;
+  box-shadow: 0 100vh 0 100vh $bgcolor;
 
   &__bd {
     margin-left: auto;
