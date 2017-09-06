@@ -1,0 +1,101 @@
+.fsa-footer {
+
+  padding-left: $size-default;
+  padding-right: $size-default;
+  background-color: $color-fsa-tertiary-300;
+
+  &__bd {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $site-max-width;
+    text-align: left;
+    padding: $size-medium 0;
+    color: white;
+  }
+
+  a {
+
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:visited {
+      text-decoration: none;
+    }
+
+  }
+
+  &__primary {
+    padding-top: $size-default;
+    @include breakpoint(M) {
+    }
+  }
+
+  &__secondary {
+
+    padding-top: $size-default;
+    @include breakpoint(M) {
+    }
+
+    @include breakpoint(L) {
+      border-top: 0;
+      border-left: 1px solid tint($color-fsa-tertiary, 50%);
+      padding-left: $size-large;
+    }
+
+  }
+
+  &__cat-header {
+    @include h3();
+    margin-top: 0;
+    font-family: $font-sans;
+    color: $white;
+  }
+
+  &__list {
+
+    @include reset-ul();
+    margin-bottom: 2em;
+
+    @include breakpoint(L) {
+      margin-bottom: 1em;
+    }
+
+  }
+
+  &__list-item {
+    @include reset-li();
+    margin-bottom: .5em;
+  }
+
+  &__secondary-list {
+
+    border-top: 1px solid tint($color-fsa-tertiary, 50%);
+    padding-top: $size-large;
+
+    @include breakpoint(L) {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+  }
+
+  &__secondary-list-item {
+
+    @include breakpoint(M) {
+      display: inline-block;
+      margin-right: $size-medium;
+    }
+
+    @include breakpoint(L) {
+      display: block;
+      margin-right: initial;
+    }
+
+  }
+
+
+}
