@@ -61,6 +61,7 @@ h1,
   @include h1();
   font-weight: $font-light;
   margin-top: 0;
+  margin-bottom: 0;
 
   .fsa-section__bd > & {
     margin-top: $size-large;
