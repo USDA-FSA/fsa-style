@@ -1,4 +1,4 @@
-$badge-spacing: ($size-base - .2rem);
+$badge-spacing: $size-base;
 
 $badge-bgc: $color-fsa-tertiary-300;
 $badge-text-color: $color-fsa-white;
@@ -12,7 +12,8 @@ $badge-text-color-warning: $color-black;
 .fsa-badge {
 
   @include font-size(0);
-  line-height: 1.5;
+  @include reset-button();
+  line-height: 1;
   font-weight: $font-bold;
   display: inline-block;
   vertical-align: middle;
@@ -22,12 +23,7 @@ $badge-text-color-warning: $color-black;
   text-align: center;
   min-width: 23px;
   color: $badge-text-color;
-  // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
-  padding:
-    $badge-spacing
-    ($badge-spacing * 3)
-  ;
-  cursor: default;
+  padding: $badge-spacing;
 
   &:not(:empty) + & {
     margin-left: $badge-spacing;

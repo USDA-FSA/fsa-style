@@ -300,6 +300,15 @@ $breakpoints: (
 }
 
 // -----------------------------------------------------------------------------
+// Reset <button>
+@mixin reset-button() {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+// -----------------------------------------------------------------------------
 // Font Smoothing
 @mixin font-smoothing($value: on) {
   @if $value == on {
