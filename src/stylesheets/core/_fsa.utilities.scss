@@ -374,3 +374,23 @@ $breakpoints: (
   white-space: nowrap;
   word-wrap: normal;
 }
+
+// -----------------------------------------------------------------------------
+// button reset ?
+@mixin fsa-button-reset {
+  text-align: left;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  user-select: text;
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+}
