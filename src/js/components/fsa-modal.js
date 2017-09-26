@@ -10,7 +10,7 @@
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 
 var $triggers = document.querySelectorAll('[data-behavior~="open-modal"]');
-var $closeButtons = document.querySelectorAll('[data-behavior~="close-modal"]');
+var $closeButtons = document.querySelectorAll('[data-behavior~="close-modal"]')
 
 // iterate thru trigger elements and set click handler
 $triggers.forEach( function(el) {
