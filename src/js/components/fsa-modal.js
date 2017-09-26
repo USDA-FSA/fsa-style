@@ -49,12 +49,10 @@ function closeModal(b){
   // find modal parent of close button using fsa class
   $closeBtn = b.currentTarget;
   $modal = $closeBtn.closest('.fsa-modal');
-  $modal.setAttribute('aria-expanded', 'false');
-  $modal.setAttribute('aria-hidden', 'true');
 
   // hide the modal
   $modal.className = $modal.className.replace(' fsa-modal--active','');
-  $modal.setAttribute('aria-hidden', 'false');
+  $modal.setAttribute('aria-hidden', 'true');
 
   // set focus back to the originating element
   $origin = document.querySelector('[data-modal-origin]');
