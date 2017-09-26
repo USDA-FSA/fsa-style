@@ -1,98 +1,64 @@
-(function() {
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 
-    // CONSTRUCTOR
-    this.Modal = function(){
+var $triggers = document.querySelectorAll('[data-behavior="open-modal"]');
+var $closeButtons = document.querySelectorAll('.fsa-modal__close[data-behavior="close-modal"]');
 
-      this.modal = null;
-      this.openButton = null;
-      this.closeButton = null;
-      this.overlay = null;
+// iterate thru trigger elements and set click handler
+$triggers.forEach( function(el) {
+  el.addEventListener('click', showModal, false);
+});
 
-      var defaults = {
-        modalClassName: 'fsa-modal__close',
-        contentClassName: 'fsa-modal__content',
-        overlayID: 'FSA-OVERLAY-ID',
-        closeOutside: true,
-        triggerClassName: 'fsa-modal-trigger',
-        dataAttributeName: 'data-target',
-        contentID: 'CONTENT-ID',
-      };
-
-      // Extend defaults to supplied options object
-      if (arguments[0] && typeof arguments[0] == "object"){
-        this.options = extendsDefaults(defaults, arguments[0]);
-      }
-
-      // Find modal based on Unique ID
-      this.modal = document.getElementById( this.options.contentID );
-
-      // Assign close button within modal
-      this.closeButton = this.modal.getElementsByClassName(this.options.modalClassName)[0];
-
-      // Build selector String
-      var selectorString = createSelectorString(
-        this.options.triggerClassName,
-        this.options.dataAttributeName,
-        this.options.contentID
-      );
-
-      // Find button trigger based on Unique ID
-      this.openButton = document.querySelector( selectorString );
-
-      // Assign event listeners and bind to method
-      this.openButton.addEventListener('click', this.open.bind(this));
-      this.closeButton.addEventListener('click', this.close.bind(this));
-
-      if(this.options.closeOutside){
-        // prevent parent click propagation
-        this.modalContent = this.modal.getElementsByClassName(this.options.contentClassName)[0];
-        this.modalContent.addEventListener('click',function(e){
-          e.stopPropagation();
-        });
-        // enable outside modal closing
-        this.overlay = document.getElementById( this.options.overlayID );
-        this.overlay.addEventListener('click', this.close.bind(this));
-      }
+// iterate thru close buttons and set click handler
+$closeButtons.forEach( function(el) {
+  el.addEventListener('click', closeModal, false);
+});
 
 
-    }
+function showModal(t){
 
-    // PUBLIC METHODS
+  // set trigger and change attributes
+  $trigger = t.target;
+  $trigger.setAttribute('aria-expanded', 'true');
+  $trigger.setAttribute('data-modal-origin','');
 
-    Modal.prototype.open = function(e){
+  // set modal and change attributes
+  $id = $trigger.getAttribute('data-target');
+  $modal = document.getElementById($id);
+  $modal.setAttribute('aria-hidden', 'false');
+  // show the modal by setting active class
+  $modal.className = $modal.className + ' fsa-modal--active';
 
-      this.modal.className = this.modal.className + ' fsa-modal--active';
-      this.modal.setAttribute('aria-hidden', 'false');
-
-      e.preventDefault();
-      e.stopPropagation();
-    }
-
-    Modal.prototype.close = function(e){
-
-      this.modal.className = this.modal.className.replace(' fsa-modal--active','');
-      this.modal.setAttribute('aria-hidden', 'true');
-
-      e.preventDefault();
-      e.stopPropagation();
-    }
+  // gain focus --- needs rewrite
+  setTimeout(function() {
+    $modal.focus();
+  }, 200);
+}
 
 
-    // PRIVATE METHODS
-    function extendsDefaults(source, properties){
-      var property;
-      for(property in properties){
-        if(properties.hasOwnProperty(property)){
-          source[property] = properties[property];
-        }
-      }
-      return source;
-    }
+function closeModal(b){
 
-  function createSelectorString(c,d,i){
-    // Build selector String
-    // example: ".fsa-class-name[data-target='" $variable "']",
-    return "." + c +"[" + d +"='" +i + "']";
-  }
+  // find modal parent of close button using fsa class
+  $closeBtn = b.currentTarget;
+  $modal = $closeBtn.closest('.fsa-modal');
+  $modal.setAttribute('aria-expanded', 'false');
+  $modal.setAttribute('aria-hidden', 'true');
 
-})();
+  // hide the modal
+  $modal.className = $modal.className.replace(' fsa-modal--active','');
+  $modal.setAttribute('aria-hidden', 'false');
+
+  // set focus back to the originating element
+  $origin = document.querySelector('[data-modal-origin]');
+  $origin.removeAttribute('data-modal-origin');
+  $origin.setAttribute('aria-expanded', 'false');
+  $origin.focus();
+}
