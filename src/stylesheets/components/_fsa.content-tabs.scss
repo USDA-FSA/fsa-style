@@ -52,11 +52,12 @@
   &__label {
 
     @include font-size(4);
+    @include reset-button();
     display: block;
     text-decoration: none;
     // color: $color-fsa-base;
     text-align: center;
-    color: $color-fsa-tertiary-300;
+    color: $color-fsa-tertiary;
     padding-right: ($tab-padding * 2);
     padding-left: ($tab-padding * 2);
 
@@ -73,10 +74,6 @@
       color: $color-fsa-tertiary;
     }
 
-    &:hover {
-      color: inherit;
-    }
-
     &--small {
 
       @include font-size(3);
@@ -87,7 +84,7 @@
 
     &--large {
 
-      @include font-size(5);
+      font-size: ($font-size-4 + ($font-size-4 / 4));
 
     }
 
@@ -132,4 +129,10 @@
 
   }
 
+}
+
+.fsa-content-tabs__label:hover .fsa-content-tabs__label-text,
+.fsa-content-tabs__label:focus .fsa-content-tabs__label-text {
+  outline: none;
+  box-shadow: 0 (-$size-base / 2) 0 0 $color-fsa-tertiary-300 inset;
 }
