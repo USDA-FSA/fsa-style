@@ -11,6 +11,8 @@
 
 var $triggers = document.querySelectorAll('[data-behavior="open-modal"]');
 var $closeButtons = document.querySelectorAll('.fsa-modal__close[data-behavior="close-modal"]');
+var $triggers = document.querySelectorAll('[data-behavior~="open-modal"]');
+var $closeButtons = document.querySelectorAll('[data-behavior~="close-modal"]');
 
 // iterate thru trigger elements and set click handler
 $triggers.forEach( function(el) {
