@@ -9,8 +9,6 @@
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 
-var $triggers = document.querySelectorAll('[data-behavior="open-modal"]');
-var $closeButtons = document.querySelectorAll('.fsa-modal__close[data-behavior="close-modal"]');
 var $triggers = document.querySelectorAll('[data-behavior~="open-modal"]');
 var $closeButtons = document.querySelectorAll('[data-behavior~="close-modal"]');
 
