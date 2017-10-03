@@ -1,69 +1,3 @@
-@mixin overflow-gradient() {
-
-  // scss-lint:disable Indentation SpaceAfterPropertyColon SpaceAfterComma TrailingSemicolon
-  $bgTransparent: transparent;
-  $bgLight: $color-fsa-site-bg;
-  $bgMid: transparentize($color-fsa-tertiary, .75);
-  $size: $size-extra-large;
-
-  overflow: auto;
-  overflow-x: auto;
-  overflow-y: hidden;
-  background-image:
-    /* Shadows */
-    linear-gradient(to right, $bgLight, $bgLight),
-    linear-gradient(to right, $bgLight, $bgLight),
-    /* Shadow covers */
-    linear-gradient(to right, $bgMid, $bgTransparent),
-    linear-gradient(to left, $bgMid, $bgTransparent)
-  ;
-
-  background-position:
-    left center,
-    right center,
-    left center,
-    right center
-  ;
-  background-repeat: no-repeat;
-  background-color: $bgLight;
-  background-size:
-    $size 100%,
-    $size 100%,
-    ($size / 2) 100%,
-    ($size / 2) 100%
-  ;
-
-  /* Opera doesn't support this in the shorthand */
-  background-attachment: local, local, scroll, scroll;
-
-//   overflow: auto;
-// 	background:
-// 		/* Shadow covers */
-// 		linear-gradient(90deg, $bgLight 30%, $bgTransparent),
-// 		linear-gradient(90deg, $bgTransparent, $bgLight 70%) 100% 0,
-//
-// 		/* Shadows */
-// 		radial-gradient(0 50%, farthest-side, $bgMid, $bgTransparent),
-// 		radial-gradient(100% 50%,farthest-side, $bgMid, $bgTransparent) 100% 0
-//   ;
-// 	background:
-// 		/* Shadow covers */
-// 		linear-gradient(90deg, $bgLight 30%, $bgTransparent),
-// 		linear-gradient(90deg, $bgTransparent, $bgLight 70%) 100% 0,
-//
-// 		/* Shadows */
-// 		radial-gradient(farthest-side at 0 50%, $bgMid, $bgTransparent),
-// 		radial-gradient(farthest-side at 100% 50%, $bgMid, $bgTransparent) 100% 0
-//   ;
-// 	background-repeat: no-repeat;
-// 	background-color: transparent;
-// 	background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
-//
-// 	/* Opera doesn't support this in the shorthand */
-// 	background-attachment: local, local, scroll, scroll;
-
-}
-
 .fsa-content-tabs {
 
   $tab-padding: $size-small;
@@ -148,8 +82,8 @@
     text-decoration: none;
     text-align: center;
     color: $color-fsa-tertiary;
-    padding-right: ($tab-padding * 2);
-    padding-left: ($tab-padding * 2);
+    padding-right: $tab-padding;
+    padding-left: $tab-padding;
     white-space: nowrap;
 
     @include breakpoint(L) {
@@ -158,6 +92,8 @@
 
     @include breakpoint(XL) {
       white-space: normal;
+      padding-right: ($tab-padding * 2);
+      padding-left: ($tab-padding * 2);
     }
 
     .fsa-content-tabs__item:first-child & {
@@ -180,8 +116,6 @@
 
     &--small {
       @include font-size(3);
-      padding-left: ($tab-padding + $size-base);
-      padding-right: ($tab-padding + $size-base);
     }
 
     &--large {
