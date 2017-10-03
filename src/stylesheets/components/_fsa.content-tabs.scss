@@ -3,6 +3,14 @@
   $tab-padding: $size-small;
 
   display: flex;
+  overflow-x: auto;
+  margin-left: -$size-default;
+  margin-right: -$size-default;
+
+  @include breakpoint(L) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
   &--justified {}
 
@@ -14,36 +22,45 @@
     margin-top: 0;
     margin-bottom: 0;
     width: 100%;
+    margin-left: $size-default;
+    margin-right: $size-default;
 
     @include breakpoint(M) {
       width: auto;
     }
 
+    @include breakpoint(L) {
+      margin-left: 0;
+      margin-right: $size-default;
+    }
+
     // scss-lint:disable SelectorFormat
     .fsa-content-tabs--justified & {
-      width: 100%;
+      @include breakpoint(L) {
+        width: 100%;
+      }
     }
 
     .fsa-content-tabs--justified-equal & {
-      width: 100%;
-      table-layout: fixed;
+      @include breakpoint(L) {
+        width: 100%;
+        table-layout: fixed;
+      }
+
     }
 
   }
 
   &__aside {
 
-    display: none;
+    display: block;
+    flex: 1;
+    border-bottom: 1px solid $color-fsa-tertiary-200;
 
-    @include breakpoint(M) {
-      display: block;
-      flex: 1;
-      content: '';
-      border-bottom: 1px solid $color-fsa-tertiary-200;
-
-      // scss-lint:disable SelectorFormat
-      .fsa-content-tabs--justified &,
-      .fsa-content-tabs--justified-equal & {
+    // scss-lint:disable SelectorFormat
+    .fsa-content-tabs--justified &,
+    .fsa-content-tabs--justified-equal & {
+      @include breakpoint(L) {
         display: none;
       }
     }
@@ -53,12 +70,9 @@
   &__item {
 
     display: flex;
+    display: table-cell;
+    vertical-align: bottom;
     border-bottom: 1px solid $color-fsa-tertiary-200;
-
-    @include breakpoint(M) {
-      display: table-cell;
-      vertical-align: bottom;
-    }
 
   }
 
@@ -68,24 +82,31 @@
     @include reset-button();
     display: block;
     text-decoration: none;
-    // color: $color-fsa-base;
     text-align: center;
     color: $color-fsa-tertiary;
     padding-right: ($tab-padding * 2);
     padding-left: ($tab-padding * 2);
+    white-space: nowrap;
 
-    @include breakpoint(M) {
-      .fsa-content-tabs__item:first-child & {
+    @include breakpoint(L) {
+      @include font-size(4);
+    }
+
+    @include breakpoint(XL) {
+      white-space: normal;
+    }
+
+    .fsa-content-tabs__item:first-child & {
+      padding-left: 0;
+      @include breakpoint(L) {
         padding-left: 0;
-      }
-
-      .fsa-content-tabs__item:last-child & {
-        padding-right: 0;
       }
     }
 
-    @include breakpoint(M) {
-      @include font-size(4);
+    .fsa-content-tabs__item:last-child & {
+      @include breakpoint(L) {
+        padding-right: 0;
+      }
     }
 
     &:link,
@@ -97,20 +118,20 @@
       @include font-size(3);
       padding-left: ($tab-padding + $size-base);
       padding-right: ($tab-padding + $size-base);
-
     }
 
     &--large {
-
-      @include breakpoint(M) {
+      @include breakpoint(L) {
         font-size: ($font-size-4 + ($font-size-4 / 4));
       }
     }
 
     // scss-lint:disable SelectorFormat
     .fsa-content-tabs--justified & {
-      padding-left: ($tab-padding / 2);
-      padding-right: ($tab-padding / 2);
+      @include breakpoint(L) {
+        padding-left: ($tab-padding / 2);
+        padding-right: ($tab-padding / 2);
+      }
     }
 
   }
@@ -139,7 +160,7 @@
 
     .fsa-content-tabs__label--unsaved &:after {
       content: '\2022';
-      color: $color-fsa-red; //$color-fsa-tertiary-300
+      color: $color-fsa-red;
       font-size: 24px;
       line-height: 1;
       position: absolute;
