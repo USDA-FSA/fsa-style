@@ -1,0 +1,117 @@
+
+.fsa-modal {
+
+  will-change: visibility, opacity;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1002;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s cubic-bezier(.23, 1, .32, 1);
+  transition-delay: 0s;
+  background-color: transparentize($color-fsa-tertiary-900, .4);
+
+  &--active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &--top,
+  &--fullscreen {
+    align-items: flex-start;
+  }
+
+  &__dialog {
+
+    padding: $size-default;
+    position: relative;
+    width: 100%;
+    max-height: 100%;
+
+    @include breakpoint(M) {
+      padding: $size-medium;
+    }
+
+    @include breakpoint(L) {
+      padding: ($size-large * 2) $size-medium;
+      max-width: 800px;
+    }
+
+    // scss-lint:disable SelectorFormat
+    .fsa-modal--small & {
+
+      @include breakpoint(M) {
+        max-width: 400px;
+      }
+
+    }
+
+    .fsa-modal--large & {
+      max-width: $site-max-width;
+    }
+
+    .fsa-modal--fullscreen & {
+
+      padding-top: $size-medium;
+
+      @include breakpoint(L) {
+        max-width: 100%;
+      }
+
+    }
+
+  }
+
+  &__close {
+
+    @include fsa-button-reset;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: ($size-default * 1.5);
+    z-index: 2;
+
+    &:active {
+      opacity: .6;
+    }
+
+  }
+
+  &__close-icon {
+    width: ($size-base * 4);
+    display: block;
+  }
+
+  &__title {
+    @include h2();
+    margin-top: 0;
+    font-family: $font-sans;
+    font-weight: $font-normal;
+  }
+
+  &__content {
+    position: relative;
+    padding: $size-medium;
+    background-color: $color-fsa-site-bg;
+    background-clip: padding-box;
+    box-shadow: 0 $size-default $size-default 0 rgba(0, 0, 0, .25);
+  }
+
+  &__content-bleed {
+    margin-left: -$size-medium;
+    margin-right: -$size-medium;
+  }
+
+  &__content--active {
+    opacity: 1;
+  }
+
+}
