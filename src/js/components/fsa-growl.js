@@ -11,7 +11,6 @@
 
 var triggers = document.querySelectorAll('[data-behavior~="growl-show"]');
 var closeButtons = document.querySelectorAll('[data-behavior~="growl-dismiss"]');
-var closeButtonsDelay = document.querySelectorAll('[data-behavior~="growl-dismiss-delay"]');
 
 // iterate thru trigger elements and set click handler
 triggers.forEach( function(el) {
@@ -45,11 +44,8 @@ closeButtonsDelay.forEach( function(el) {
 function showGrowl(g){
 
   var _growl = g;
-  //_growl.setAttribute('aria-hidden', 'false');
   _growl.className = _growl.className.replace(' fsa-growl--hidden','');
-
-  var _growlContainer = _growl.parentNode;
-  _growlContainer.className = _growlContainer.className.replace(' fsa-growl-container--hidden','');
+  _growl.setAttribute('aria-hidden', 'false');
 }
 
 
@@ -57,22 +53,10 @@ function dismissGrowl(g){
 
   var _growl = g;
   _growl.className = _growl.className + ' fsa-growl--dismissing';
+  _growl.setAttribute('aria-hidden', 'true');
 
   setTimeout(function() {
-    _growl.className = _modal.className.replace(' fsa-growl--dismissing',' fsa-growl--hidden');
+    _growl.className = _growl.className.replace(' fsa-growl--dismissing',' fsa-growl--hidden');
   }, 250);
-}
 
-function dismissGrowlDelay(g){
-
-  var _growl = g;
-
-  setTimeout(function() {
-    _growl.className = _growl.className + ' fsa-growl--dismissing';
-
-    setTimeout(function() {
-      _growl.className = _modal.className.replace(' fsa-growl--dismissing',' fsa-growl--hidden');
-    }, 500);
-
-  }, 3500);
 }

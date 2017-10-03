@@ -21,9 +21,17 @@
   <![endif]-->
 </head>
 
+<!--
+<button data-behavior="growl-show" data-target="UNIQUE-ID-AC598060D7502E9E" aria-expanded="false" type="button">Default</button>
+          <button data-behavior="growl-show" data-target="UNIQUE-ID-8A386E512C033F57" aria-expanded="false" type="button">Top</button>
+          <button data-behavior="growl-show" data-target="UNIQUE-ID-BC33C95AA75A8E1C" aria-expanded="false" type="button">Small</button>
+          <button data-behavior="growl-show" data-target="UNIQUE-ID-832353AD65DB511B" aria-expanded="false" type="button">Large</button>
+          <button data-behavior="growl-show" data-target="UNIQUE-ID-A6C89861CB073C4D" aria-expanded="false" type="button">Fullscreen</button>
+-->
+
 <body class="docs__page">
   <div class="fsa-growl-container">
-    <div class="fsa-growl">
+    <div class="fsa-growl fsa-growl--hidden" id="UNIQUE-ID-AC598060D7502E9E" aria-hidden="true">
       <div class="fsa-growl__hd">
         <button class="fsa-growl__close" data-behavior="growl-dismiss" type="button"><img class="fsa-growl__close-icon" src="img/close.svg" alt="close"></button>
         <h2 class="fsa-growl__title">Something happened</h2>
@@ -32,6 +40,55 @@
         <p>You're probably just fine.</p>
         <p>
           <button data-behavior="growl-dismiss" class="fsa-btn fsa-btn--small fsa-btn--secondary" type="button">OK</button>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="fsa-growl-container">
+    <div class="fsa-growl fsa-growl--success fsa-growl--hidden" id="UNIQUE-ID-8A386E512C033F57" aria-hidden="true">
+      <div class="fsa-growl__hd">
+        <button class="fsa-growl__close" data-behavior="growl-dismiss" type="button"><img class="fsa-growl__close-icon" src="img/close.svg" alt="close"></button>
+        <h2 class="fsa-growl__title">Growl title</h2>
+      </div>
+      <div class="fsa-growl__bd">
+        <p>Message goes here if you like or something, <a href="link.html">with a link</a> if necessary.</p>
+        <p>And another line here for kicks.</p>
+        <p>
+          <button data-behavior="growl-dismiss" class="fsa-btn fsa-btn--small fsa-btn--secondary" type="button">Button</button>
+          <a class="fsa-btn fsa-btn--small fsa-btn--secondary" href="link.html">Button link</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="fsa-growl-container">
+
+    <div class="fsa-growl fsa-growl--warning fsa-growl--hidden" id="UNIQUE-ID-BC33C95AA75A8E1C" aria-hidden="true">
+      <div class="fsa-growl__hd">
+        <button class="fsa-growl__close" data-behavior="growl-dismiss" type="button"><img class="fsa-growl__close-icon" src="img/close.svg" alt="close"></button>
+        <h2 class="fsa-growl__title">Growl title</h2>
+      </div>
+      <div class="fsa-growl__bd">
+        <p>Message goes here if you like or something, <a href="link.html">with a link</a> if necessary.</p>
+        <p>And another line here for kicks.</p>
+        <p>
+          <button data-behavior="growl-dismiss" class="fsa-btn fsa-btn--small fsa-btn--secondary" type="button">Button</button>
+          <a class="fsa-btn fsa-btn--small fsa-btn--secondary" href="link.html">Button link</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="fsa-growl-container">
+    <div class="fsa-growl fsa-growl--error fsa-growl--hidden" id="UNIQUE-ID-832353AD65DB511B" aria-hidden="true">
+      <div class="fsa-growl__hd">
+        <button class="fsa-growl__close" data-behavior="growl-dismiss" type="button"><img class="fsa-growl__close-icon" src="img/close.svg" alt="close"></button>
+        <h2 class="fsa-growl__title">Growl title</h2>
+      </div>
+      <div class="fsa-growl__bd">
+        <p>Message goes here if you like or something, <a href="link.html">with a link</a> if necessary.</p>
+        <p>And another line here for kicks.</p>
+        <p>
+          <button data-behavior="growl-dismiss" class="fsa-btn fsa-btn--small fsa-btn--secondary" type="button">Button</button>
+          <a class="fsa-btn fsa-btn--small fsa-btn--secondary" href="link.html">Button link</a>
         </p>
       </div>
     </div>
@@ -2160,11 +2217,25 @@
         <h3 class="docs__bd docs__figure">Default</h3>
         <p class="docs__code-sample"><code>class="fsa-modal fsa-modal--[size]"</code></p>
         <p>
-          <button data-behavior="open-modal" data-target="UNIQUE-ID-GGFD36765SSSGH" aria-expanded="false" type="button">Default</button>
-          <button data-behavior="open-modal" data-target="UNIQUE-ID-2345SFGER99786" aria-expanded="false" type="button">Top</button>
-          <button data-behavior="open-modal" data-target="UNIQUE-ID-23458CF9J99DIS" aria-expanded="false" type="button">Small</button>
-          <button data-behavior="open-modal" data-target="UNIQUE-ID-23458CF77S77S7" aria-expanded="false" type="button">Large</button>
-          <button data-behavior="open-modal" data-target="UNIQUE-ID-23451CF80S77S9" aria-expanded="false" type="button">Fullscreen</button>
+          <button class="fsa-btn fsa-btn--secondary" data-behavior="open-modal" data-target="UNIQUE-ID-GGFD36765SSSGH" aria-expanded="false" type="button">Default</button>
+          <button class="fsa-btn fsa-btn--secondary" data-behavior="open-modal" data-target="UNIQUE-ID-2345SFGER99786" aria-expanded="false" type="button">Top</button>
+          <button class="fsa-btn fsa-btn--secondary" data-behavior="open-modal" data-target="UNIQUE-ID-23458CF9J99DIS" aria-expanded="false" type="button">Small</button>
+          <button class="fsa-btn fsa-btn--secondary" data-behavior="open-modal" data-target="UNIQUE-ID-23458CF77S77S7" aria-expanded="false" type="button">Large</button>
+          <button class="fsa-btn fsa-btn--secondary" data-behavior="open-modal" data-target="UNIQUE-ID-23451CF80S77S9" aria-expanded="false" type="button">Fullscreen</button>
+        </p>
+      </div>
+    </section>
+
+    <section class="docs__section" id="growl">
+      <h2 class="docs__bd docs__figure-group">Growl</h2>
+      <div class="docs__bd">
+        <h3 class="docs__bd docs__figure">Default</h3>
+        <p class="docs__code-sample"><code>class="fsa-growl fsa-modal--[size]"</code></p>
+        <p>
+          <button class="fsa-btn fsa-btn--secondary" data-behavior="growl-show" data-target="UNIQUE-ID-AC598060D7502E9E" aria-expanded="false" type="button">Default</button>
+          <button class="fsa-btn fsa-btn--secondary" data-behavior="growl-show" data-target="UNIQUE-ID-8A386E512C033F57" aria-expanded="false" type="button">Success</button>
+          <button class="fsa-btn fsa-btn--secondary" data-behavior="growl-show" data-target="UNIQUE-ID-BC33C95AA75A8E1C" aria-expanded="false" type="button">Warning</button>
+          <button class="fsa-btn fsa-btn--secondary" data-behavior="growl-show" data-target="UNIQUE-ID-832353AD65DB511B" aria-expanded="false" type="button">Error</button>
         </p>
       </div>
     </section>
