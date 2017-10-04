@@ -56,12 +56,9 @@ $button-flat-border-width: 1px;
     // -------------------------------------------------------------------------
     // reset
     @include font-smoothing(on);
+    @include reset-button();
     height: $button-height;
     user-select: none;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    cursor: pointer;
     text-align: center;
     line-height: $button-line-height;
     position: relative;
