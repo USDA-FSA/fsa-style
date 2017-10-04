@@ -86,6 +86,13 @@
     padding-left: $tab-padding;
     white-space: nowrap;
 
+    &[type] {
+      &:focus {
+        box-shadow: none;
+        outline: none;
+      }
+    }
+
     @include breakpoint(L) {
       @include font-size(4);
     }
@@ -112,6 +119,10 @@
     &:link,
     &:visited {
       color: $color-fsa-tertiary;
+    }
+
+    &:focus {
+      box-shadow: none;
     }
 
     &--small {
