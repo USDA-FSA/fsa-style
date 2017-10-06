@@ -22,7 +22,7 @@
   top: $size-default;
   right: $size-default;
   left: $size-default;
-  z-index: 1001;
+  z-index: 1003;
 
   @include breakpoint(L) {
     left: auto;
@@ -42,7 +42,7 @@
 
   }
 
-  &--hidden {
+  &[aria-hidden="true"] {
     display: none;
   }
 
@@ -60,6 +60,8 @@
 
   &--centered {
     animation: none;
+    visibility: visible;
+    opacity: 1;
   }
 
   &--dismissing {
@@ -81,7 +83,7 @@
     border-color: $color-fsa-primary;
   }
 
-  &--hidden {
+  &[aria-hidden="true"] {
     display: none;
   }
 

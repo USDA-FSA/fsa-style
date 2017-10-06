@@ -8,18 +8,19 @@
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
-var firstTabStop;
-var lastTabStop;
 
-var triggers = document.querySelectorAll('[data-behavior~="open-modal"]');
-var closeButtons = document.querySelectorAll('[data-behavior~="close-modal"]');
+var modalFirstTabStop;
+var modalLastTabStop;
+
+var modalTriggers = document.querySelectorAll('[data-behavior~="open-modal"]');
+var modalCloseButtons = document.querySelectorAll('[data-behavior~="close-modal"]');
 
 // iterate thru trigger elements and set click handler
-triggers.forEach( function(el) {
+modalTriggers.forEach( function(el) {
   el.addEventListener('click', function(e){
     // set private variables
     var _trigger = e.target;
-    var _id = _trigger.getAttribute('data-target');
+    var _id = _trigger.getAttribute('aria-controls');
     // assign classes and aria
     _trigger.setAttribute('aria-expanded', 'true');
     _trigger.setAttribute('data-modal-origin','');
@@ -29,7 +30,7 @@ triggers.forEach( function(el) {
 });
 
 // iterate thru close buttons and set click handler
-closeButtons.forEach( function(el) {
+modalCloseButtons.forEach( function(el) {
   el.addEventListener('click', function(e){
     // pass associated modal to method
     closeModal( e.currentTarget.closest('.fsa-modal') );
@@ -39,10 +40,12 @@ closeButtons.forEach( function(el) {
 function showModal(m){
 
   var _modal = m;
+  // show the modal by setting active class
+  _modal.className = _modal.className + ' fsa-modal--active';
   _modal.setAttribute('aria-hidden', 'false');
 
   // trap tabs inside of modal
-  _modal.addEventListener('keydown', trapTab);
+  _modal.addEventListener('keydown', modalTrapTab);
   // Find all focusable children
 
   var _focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
@@ -51,12 +54,9 @@ function showModal(m){
   // Convert NodeList to Array
   _focusableElements = Array.prototype.slice.call(_focusableElements);
 
-  firstTabStop = _focusableElements[0];
-  lastTabStop = _focusableElements[_focusableElements.length - 1];
-  firstTabStop.focus();
-
-  // show the modal by setting active class
-  _modal.className = _modal.className + ' fsa-modal--active';
+  modalFirstTabStop = _focusableElements[0];
+  modalLastTabStop = _focusableElements[_focusableElements.length - 1];
+  modalFirstTabStop.focus();
 
   // gain focus --- needs rewrite
   setTimeout(function() {
@@ -81,20 +81,20 @@ function closeModal(m){
 }
 
 //utility method to trap keys
-function trapTab(e){
+function modalTrapTab(e){
   // Check for TAB key press
   if (e.keyCode === 9) {
     // SHIFT + TAB
     if (e.shiftKey) {
-      if (document.activeElement === firstTabStop) {
+      if (document.activeElement === modalFirstTabStop) {
         e.preventDefault();
-        lastTabStop.focus();
+        modalLastTabStop.focus();
       }
     // TAB
     } else {
-      if (document.activeElement === lastTabStop) {
+      if (document.activeElement === modalLastTabStop) {
         e.preventDefault();
-        firstTabStop.focus();
+        modalFirstTabStop.focus();
       }
     }
   }

@@ -1,0 +1,15 @@
+.fsa-whiteout {
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparentize($color-fsa-tertiary-900, .4);
+
+  &[aria-hidden="true"] {
+    display: none;
+    z-index: 1002;
+  }
+
+}
