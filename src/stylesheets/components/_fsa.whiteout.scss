@@ -5,10 +5,13 @@
   top: 0;
   right: 0;
   bottom: 0;
+  visibility: hidden;
+  opacity: 0;
   background-color: transparentize($color-fsa-tertiary-900, .4);
 
-  &[aria-hidden="true"] {
-    display: none;
+  &[aria-hidden="false"] {
+    visibility: visible;
+    opacity: 1;
     z-index: 1002;
   }
 

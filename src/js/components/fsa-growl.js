@@ -41,16 +41,6 @@ growlCloseButtons.forEach( function(el) {
   }, false);
 });
 
-// iterate thru close buttons and set click handler
-/*
-growlCloseButtonsDelay.forEach( function(el) {
-  el.addEventListener('click', function(e){
-    // pass associated growl to method
-    dismissGrowl( e.currentTarget.closest('.fsa-growl') );
-  }, false);
-});
-*/
-
 function showGrowl(g){
 
   var _growl = g;
@@ -58,9 +48,6 @@ function showGrowl(g){
 
   // if growl uses modal style
   if( hasClass(_growl, 'fsa-growl--centered') ){
-     var _whiteout = document.getElementById('fsa-whiteout');
-    _whiteout.setAttribute('aria-hidden','false');
-
     // trap tabs inside of modal
     _growl.addEventListener('keydown', growlTrapTab);
     // Find all focusable children
@@ -94,15 +81,8 @@ function dismissGrowl(g){
     var _origin = document.querySelector('[data-growl-origin]');
     _origin.removeAttribute('data-growl-origin');
     _origin.setAttribute('aria-expanded', 'false');
-
-    // if growl uses modal style
-    if( hasClass(_growl, 'fsa-growl--centered') ){
-      // set focus back to the originating element
-      _origin.focus();
-
-       var _whiteout = document.getElementById('fsa-whiteout');
-      _whiteout.setAttribute('aria-hidden','true');
-    }
+    // set focus back to the originating element
+    _origin.focus();
 
   }, 250);
 
@@ -133,6 +113,5 @@ function growlTrapTab(e){
 }
 
 function hasClass(el, classname) {
-  console.log('~~~ '+ classname);
   return (' ' + el.className + ' ').indexOf(' ' + classname + ' ') > -1;
 }

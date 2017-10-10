@@ -13,15 +13,15 @@ var whiteoutDismiss = document.querySelectorAll('[data-behavior~="whiteout-dismi
 whiteoutShow.forEach( function(el) {
   el.addEventListener('click', function(e){
     var _whiteout = document.getElementById('fsa-whiteout');
-    //_whiteout.setAttribute('aria-hidden', 'false');
-    //_whiteout.className = _whiteout.className.replace(' fsa-whiteout--hidden','');
+    _whiteout.setAttribute('aria-hidden', 'false');
+    _whiteout.setAttribute('aria-expanded', 'false');
   }, false);
 });
 
 whiteoutDismiss.forEach( function(el) {
   el.addEventListener('click', function(e){
     var _whiteout = document.getElementById('fsa-whiteout');
-    //_whiteout.setAttribute('aria-hidden', 'true');
-    //_whiteout.className = _whiteout.className + ' fsa-whiteout--hidden';
+    _whiteout.setAttribute('aria-hidden', 'true');
+    _whiteout.setAttribute('aria-expanded', 'true');
   }, false);
 });
