@@ -1,0 +1,63 @@
+.fsa-select-multi {
+
+  &--disabled {
+    background-color: transparentize($form-disabled-bg-color, .5);
+  }
+
+  &__list {
+
+    @include reset-ul();
+    overflow: auto;
+    max-height: 190px;
+    padding: $size-base 0;
+    border: 1px solid $color-fsa-tertiary-200;
+    background-color: $color-fsa-white;
+
+    // scss-lint:disable SelectorFormat
+    .fsa-select-multi--disabled & {
+      background-color: transparent;
+      border-color: rgba(200, 199, 198, 0.5);
+    }
+
+  }
+
+  &__item {
+
+    @include reset-li();
+    position: relative;
+    padding: 0 $size-small;
+
+    &:hover {
+
+      background-color: $color-fsa-tertiary-100;
+
+      .fsa-select-multi--disabled & {
+        background-color: transparent;
+      }
+
+    }
+
+  }
+
+  &__check {}
+
+  &__label {
+
+    padding: $size-base 0;
+
+    .fsa-select-multi--disabled & {
+      opacity: .5;
+    }
+
+    &:hover {
+      color: $color-fsa-link-hover;
+    }
+
+    .fsa-select-multi__check + & {
+      display: block;
+    }
+
+  }
+
+
+}

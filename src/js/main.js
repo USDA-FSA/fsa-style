@@ -34,5 +34,6 @@
 var $ = window.jQuery = require('jquery');
 
 var DocsNav = require('./components/docs-nav');
-
 var ModalComponent = require('./components/fsa-modal');
+
+var SelectMultipleComponent = require('./components/fsa-select-multi');
