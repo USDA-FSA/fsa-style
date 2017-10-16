@@ -58,6 +58,10 @@ function showModal(m){
   // show the modal by setting active class
   _modal.className = _modal.className + ' fsa-modal--active';
 
+  //fix double scrollbar issue
+  var _body = document.getElementsByTagName('body')[0];
+  _body.className = _body.className + ' fsa-modal-scroll-fix';
+
   // gain focus --- needs rewrite
   setTimeout(function() {
     _modal.focus();
@@ -72,6 +76,10 @@ function closeModal(m){
   // hide the modal
   _modal.className = _modal.className.replace(' fsa-modal--active','');
   _modal.setAttribute('aria-hidden', 'true');
+
+  //fix double scrollbar issue
+  var _body = document.getElementsByTagName('body')[0];
+  _body.className = _body.className.replace(' fsa-modal-scroll-fix','');
 
   // set focus back to the originating element
   var _origin = document.querySelector('[data-modal-origin]');
