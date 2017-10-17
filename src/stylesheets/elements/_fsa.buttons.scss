@@ -116,12 +116,12 @@ $button-flat-border-width: 1px;
 
     &[disabled] {
 
-      $color-transparentized: transparentize($button-default-text, .35);
+      $color-transparentized: transparentize($button-default-text, .2);
 
-      opacity: .4;
+      opacity: .65;
       color: $color-transparentized;
+      filter: saturate(70%);
       cursor: not-allowed;
-      pointer-events: none;
 
       color: $color-transparentized;
 
@@ -129,14 +129,9 @@ $button-flat-border-width: 1px;
         color: $color-transparentized;
       }
 
-      &:focus,
-      &:active {
-        // outline: 0;
-      }
-
       &:hover {
-        cursor: not-allowed;
         color: $color-transparentized;
+        cursor: not-allowed;
       }
 
     }
