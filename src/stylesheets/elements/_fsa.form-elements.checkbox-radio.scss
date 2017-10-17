@@ -158,18 +158,18 @@
 .fsa-radio:disabled + label,
 .fsa-checkbox:disabled + [type="hidden"] + label,
 .fsa-radio:disabled + [type="hidden"] + label {
-  color: $color-fsa-tertiary-300;
-  cursor: text;
+  color: $form-text-color-disabled;
+  cursor: not-allowed;
 }
 
 .fsa-checkbox:disabled + label::before,
 .fsa-radio:disabled + label::before,
 .fsa-checkbox:disabled + [type="hidden"] + label::before,
 .fsa-radio:disabled + [type="hidden"] + label::before {
-  background-color: $white;
+  background-color: $form-disabled-bg-color;
   cursor: text;
   cursor: not-allowed;
-  opacity: .3;
+  opacity: .5;
 }
 
 .fsa-radio:disabled + label::before,
