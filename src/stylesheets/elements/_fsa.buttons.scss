@@ -235,8 +235,44 @@ $button-flat-border-width: 1px;
 
   }
 
+  @elseif $variation == 'block' {
+    width: 100%;
+    display: block;
+  }
+
+  @elseif $variation == 'small' {
+
+    height: $button-height--sm;
+    // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon Shorthand
+    padding:
+      ($size-small)
+      ($size-default)
+      ($size-small)
+    ;
+    font-size: $font-size-1; // no we're not using mixin cuz we don't want its line-height
+    border-radius: ($button-border-radius / 2);
+
+  }
+
+  @elseif $variation == 'large' {
+
+    height: $button-height--lg;
+
+    // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon Shorthand
+    padding:
+      (($button-padding) + .2rem)
+      ($size-medium - .2rem)
+    ;
+    font-size: $font-size-4; // no we're not using mixin cuz we don't want its line-height
+    border-radius: ($button-border-radius * 1.5);
+
+  }
+
   @elseif $variation == 'flat' {
 
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 0;
     color: $button-flat-text;
     background-color: $button-flat;
     box-shadow: 0 0 0 $button-flat-border-width $button-flat-border inset;
@@ -279,39 +315,6 @@ $button-flat-border-width: 1px;
 
   }
 
-  @elseif $variation == 'block' {
-    width: 100%;
-    display: block;
-  }
-
-  @elseif $variation == 'small' {
-
-    height: $button-height--sm;
-    // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon Shorthand
-    padding:
-      ($size-small)
-      ($size-default)
-      ($size-small)
-    ;
-    font-size: $font-size-1; // no we're not using mixin cuz we don't want its line-height
-    border-radius: ($button-border-radius / 2);
-
-  }
-
-  @elseif $variation == 'large' {
-
-    height: $button-height--lg;
-
-    // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon Shorthand
-    padding:
-      (($button-padding) + .2rem)
-      ($size-medium - .2rem)
-    ;
-    font-size: $font-size-4; // no we're not using mixin cuz we don't want its line-height
-    border-radius: ($button-border-radius * 1.5);
-
-  }
-
 }
 
 .fsa-btn {
@@ -324,9 +327,9 @@ $button-flat-border-width: 1px;
   &--secondary { @include fsa-button(secondary); }
   &--tertiary  { @include fsa-button(tertiary);  }
   &--alt       { @include fsa-button(alt);       }
-  &--flat      { @include fsa-button(flat);       }
   &--block     { @include fsa-button(block);     }
   &--small     { @include fsa-button(small);     }
   &--large     { @include fsa-button(large);     }
+  &--flat      { @include fsa-button(flat);      }
 
 }
