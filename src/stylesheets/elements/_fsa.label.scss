@@ -1,30 +1,45 @@
-$label-spacing: $size-base;
-
-$label-bgc: $color-fsa-secondary-900;
-$label-bgc-alert: $color-fsa-red;
-$label-bgc-warning: $color-gold-lighter;
-$label-bgc-success: $color-fsa-primary;
+$label-spacing: ($size-base - .1rem);
 
 $label-text-color: $color-fsa-white;
 $label-text-color-warning: $color-black;
+
+$label-bgc: $color-fsa-tertiary-300;
+$label-bgc-general: $color-fsa-secondary-900;
+$label-bgc-alert: $color-fsa-red;
+$label-bgc-warning: $color-gold-light;
+$label-bgc-success: $color-fsa-primary;
 
 .fsa-label {
 
   @include font-size(0);
   @include reset-button();
+  line-height: 1;
   display: inline-block;
   background-color: $label-bgc;
   color: $label-text-color;
   text-transform: uppercase;
   text-decoration: none;
   line-height: 1;
-  padding: $label-spacing;
+  padding: $label-spacing ($label-spacing + .1rem);
+  cursor: default;
+
+  &:visited {
+    color: $label-text-color;
+  }
+
   &[href]:hover {
     color: $label-text-color;
   }
 
   & + & {
     margin-left: $label-spacing;
+  }
+
+  &--general {
+    background-color: $label-bgc-general;
+    &[href]:hover {
+      color: $label-text-color;
+    }
   }
 
   &--alert {
@@ -35,11 +50,18 @@ $label-text-color-warning: $color-black;
   }
 
   &--warning {
+
     background-color: $label-bgc-warning;
     color: $label-text-color-warning;
+
     &[href]:hover {
       color: $label-text-color-warning;
     }
+
+    &:visited {
+      color: $label-text-color-warning;
+    }
+
   }
 
   &--success {
@@ -50,6 +72,21 @@ $label-text-color-warning: $color-black;
     @include font-size(3);
     padding-left: ($label-spacing * 1.5);
     padding-right: ($label-spacing * 1.5);
+  }
+
+}
+
+// scss-lint:disable QualifyingElement
+button.fsa-label,
+a.fsa-label {
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $label-text-color !important;
+    background-color: $color-fsa-aqua-900;
   }
 
 }
