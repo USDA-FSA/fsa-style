@@ -354,6 +354,25 @@ $breakpoints: (
   line-height: 1;
   background-color: $color-white;
 
+  &[disabled] {
+    background-color: $form-disabled-bg-color;
+    color: $form-text-color-disabled;
+  }
+
+  &[readonly] {
+
+    background-color: $color-fsa-site-bg;
+    cursor: default;
+
+    &:focus {
+      border-color: inherit;
+      box-shadow: none;
+      outline: 0;
+    }
+
+  }
+
+
 }
 
 // -----------------------------------------------------------------------------

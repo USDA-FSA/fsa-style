@@ -51,7 +51,6 @@
       @include breakpoint(M) {
         max-width: 400px;
       }
-
     }
 
     .fsa-modal--large & {
@@ -65,7 +64,6 @@
       @include breakpoint(L) {
         max-width: 100%;
       }
-
     }
 
   }
@@ -114,4 +112,8 @@
     opacity: 1;
   }
 
+}
+
+.fsa-modal-scroll-fix{
+  overflow: hidden;
 }
