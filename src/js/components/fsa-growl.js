@@ -9,15 +9,15 @@
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 
-var growlFirstTabStop;
-var growlLastTabStop;
+var growl__firstTabStop;
+var growl__lastTabStop;
 
-var growlTriggers = document.querySelectorAll('[data-behavior~="growl-show"]');
-var growlCloseButtons = document.querySelectorAll('[data-behavior~="growl-dismiss"]');
-var growlCloseButtonsDelay = document.querySelectorAll('[data-behavior~="growl-dismiss-delay"]');
+var growl__triggers = document.querySelectorAll('[data-behavior~="growl-show"]');
+var growl__closeButtons = document.querySelectorAll('[data-behavior~="growl-dismiss"]');
+var growl__closeButtonsDelay = document.querySelectorAll('[data-behavior~="growl-dismiss-delay"]');
 
 // iterate thru trigger elements and set click handler
-growlTriggers.forEach( function(el) {
+growl__triggers.forEach( function(el) {
   el.addEventListener('click', function(e){
 
     // set private variables
@@ -29,27 +29,28 @@ growlTriggers.forEach( function(el) {
     _trigger.setAttribute('data-growl-origin','');
 
     // pass associated growl to method
-    showGrowl( document.getElementById(_id) );
+    growl__show( document.getElementById(_id) );
   }, false);
 });
 
 // iterate thru close buttons and set click handler
-growlCloseButtons.forEach( function(el) {
+growl__closeButtons.forEach( function(el) {
   el.addEventListener('click', function(e){
     // pass associated growl to method
-    dismissGrowl( e.currentTarget.closest('.fsa-growl') );
+    growl__dismiss( e.currentTarget.closest('.fsa-growl') );
   }, false);
 });
 
-function showGrowl(g){
-
+function growl__show(g){
   var _growl = g;
   _growl.setAttribute('aria-hidden', 'false');
 
+  _growl.addEventListener( growl__getAnimationString(_growl), growl__showDelay, false);
+
   // if growl uses modal style
-  if( hasClass(_growl, 'fsa-growl--centered') ){
+  if( growl__hasClass(_growl, 'fsa-growl--centered') ){
     // trap tabs inside of modal
-    _growl.addEventListener('keydown', growlTrapTab);
+    _growl.addEventListener('keydown', growl__trapTab);
     // Find all focusable children
     var _focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
     var _focusableElements = _growl.querySelectorAll(_focusableElementsString);
@@ -57,61 +58,75 @@ function showGrowl(g){
     // Convert NodeList to Array
     _focusableElements = Array.prototype.slice.call(_focusableElements);
 
-    growlFirstTabStop = _focusableElements[0];
-    growlLastTabStop = _focusableElements[_focusableElements.length - 1];
-    growlFirstTabStop.focus();
-
-    // gain focus --- needs rewrite
-    setTimeout(function() {
-      _growl.focus();
-    }, 200);
-
+    growl__firstTabStop = _focusableElements[0];
+    growl__lastTabStop = _focusableElements[_focusableElements.length - 1];
+    growl__firstTabStop.focus();
   }
 }
 
+function growl__showDelay(e){
+  var _growl = e.target;
+  _growl.focus();
+}
 
-function dismissGrowl(g){
-
+function growl__dismiss(g){
   var _growl = g;
+  _growl.className = _growl.className + ' fsa-growl--dismissing';
+  _growl.addEventListener( growl__getAnimationString(_growl), growl__dismissDelay, false);
+}
+
+function growl__dismissDelay(e){
+  var _growl = e.target;
+
+  _growl.className = _growl.className.replace(' fsa-growl--dismissing','');
   _growl.setAttribute('aria-hidden', 'true');
 
-  setTimeout(function() {
-    _growl.className = _growl.className.replace(' fsa-growl--dismissing','');
-
-    var _origin = document.querySelector('[data-growl-origin]');
-    _origin.removeAttribute('data-growl-origin');
-    _origin.setAttribute('aria-expanded', 'false');
-    // set focus back to the originating element
-    _origin.focus();
-
-  }, 250);
-
+  var _origin = document.querySelector('[data-growl-origin]');
+  _origin.removeAttribute('data-growl-origin');
+  _origin.setAttribute('aria-expanded', 'false');
+  // set focus back to the originating element
+  _origin.focus();
 }
 
 //utility method to trap keys
-function growlTrapTab(e){
+function growl__trapTab(e){
   // Check for TAB key press
   if (e.keyCode === 9) {
     // SHIFT + TAB
     if (e.shiftKey) {
-      if (document.activeElement === growlFirstTabStop) {
+      if (document.activeElement === growl__firstTabStop) {
         e.preventDefault();
-        growlLastTabStop.focus();
+        growl__lastTabStop.focus();
       }
     // TAB
     } else {
-      if (document.activeElement === growlLastTabStop) {
+      if (document.activeElement === growl__lastTabStop) {
         e.preventDefault();
-        growlFirstTabStop.focus();
+        growl__firstTabStop.focus();
       }
     }
   }
   // ESCAPE
   if (e.keyCode === 27) {
-    dismissGrowl();
+    growl__dismiss();
   }
 }
 
-function hasClass(el, classname) {
+function growl__hasClass(el, classname) {
   return (' ' + el.className + ' ').indexOf(' ' + classname + ' ') > -1;
+}
+
+function growl__getAnimationString(el){
+  var str = "";
+  var t;
+  var animations = {
+    'animation':'animationend',
+    'OAnimation':'oAnimationEnd',
+    'MozAnimation':'animationend',
+    'WebkitAnimation':'webkitAnimationEnd'
+  };
+  for (t in animations) {
+    if ( typeof el.style[t] !== 'undefined' ) str = animations[t];
+  }
+  return str;
 }
