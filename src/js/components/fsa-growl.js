@@ -45,9 +45,7 @@ function growl__show(g){
   var _growl = g;
   _growl.setAttribute('aria-hidden', 'false');
 
-  _growl.addEventListener( growl__getAnimationString(_growl), growl__showDelay, false);
-
-  // if growl uses modal style
+  // for Center Modal style only
   if( growl__hasClass(_growl, 'fsa-growl--centered') ){
     // trap tabs inside of modal
     _growl.addEventListener('keydown', growl__trapTab);
@@ -61,18 +59,26 @@ function growl__show(g){
     growl__firstTabStop = _focusableElements[0];
     growl__lastTabStop = _focusableElements[_focusableElements.length - 1];
     growl__firstTabStop.focus();
+    _growl.focus();
+  }else{
+    _growl.addEventListener( growl__getAnimationString(_growl), growl__showDelay);
   }
 }
 
 function growl__showDelay(e){
   var _growl = e.target;
-  _growl.focus();
+
+  // clean up
+  _growl.removeEventListener(growl__getAnimationString(_growl), growl__showDelay);
 }
 
 function growl__dismiss(g){
   var _growl = g;
   _growl.className = _growl.className + ' fsa-growl--dismissing';
-  _growl.addEventListener( growl__getAnimationString(_growl), growl__dismissDelay, false);
+  _growl.addEventListener( growl__getAnimationString(_growl), growl__dismissDelay);
+  if( growl__hasClass(_growl, 'fsa-growl--centered') ){
+    _growl.focus();
+  }
 }
 
 function growl__dismissDelay(e){
@@ -86,6 +92,8 @@ function growl__dismissDelay(e){
   _origin.setAttribute('aria-expanded', 'false');
   // set focus back to the originating element
   _origin.focus();
+  // clean up
+  _growl.removeEventListener(growl__getAnimationString(_growl), growl__dismissDelay);
 }
 
 //utility method to trap keys
