@@ -1,10 +1,12 @@
-$badge-spacing: $size-base;
+$badge-spacing: ($size-base - .1rem);
 
-$badge-bgc: $color-fsa-tertiary-300;
 $badge-text-color: $color-fsa-white;
 
+
+$badge-bgc: $color-fsa-tertiary-300;
+$badge-bgc-general: $color-fsa-secondary-900;
 $badge-bgc-alert: $color-fsa-red;
-$badge-bgc-warning: $color-gold-lighter;
+$badge-bgc-warning: $color-gold-light;
 $badge-bgc-success: $color-fsa-primary;
 
 $badge-text-color-warning: $color-black;
@@ -21,12 +23,17 @@ $badge-text-color-warning: $color-black;
   background-color: $badge-bgc;
   border-radius: $size-default;
   text-align: center;
-  min-width: 23px;
+  min-width: 20px;
   color: $badge-text-color;
   padding: $badge-spacing;
+  cursor: default;
+
+  &:visited {
+    color: $badge-text-color;
+  }
 
   &:not(:empty) + & {
-    margin-left: $badge-spacing;
+    margin-left: ($badge-spacing / 2);
   }
 
   // Empty badges collapse automatically (not available in IE8)
@@ -34,17 +41,8 @@ $badge-text-color-warning: $color-black;
     display: none;
   }
 
-  &[href] {
-
-    cursor: pointer;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: $badge-text-color;
-      background-color: $color-fsa-link;
-    }
-
+  &--general {
+    background-color: $badge-bgc-general;
   }
 
   &--alert {
@@ -54,6 +52,9 @@ $badge-text-color-warning: $color-black;
   &--warning {
     background-color: $badge-bgc-warning;
     color: $badge-text-color-warning;
+    &:visited {
+      color: $badge-text-color-warning;
+    }
   }
 
   &--success {
@@ -63,7 +64,7 @@ $badge-text-color-warning: $color-black;
   &--large {
     @include font-size(3);
     border-radius: $size-medium;
-    min-width: 29px;
+    min-width: 24px;
   }
 
   &--inverse {
@@ -95,16 +96,31 @@ $badge-text-color-warning: $color-black;
   // scss-lint:disable SelectorFormat
   .fsa-btn-group--small &,
   .fsa-btn--small & {
-    top: -5px
+    top: -5px;
   }
 
   .fsa-btn--large &,
   .fsa-btn-group--large & {
-    top: -1px
+    top: -1px;
   }
 
   .fsa-btn--large &.fsa-badge--large {
     top: -3px;
+  }
+
+}
+
+// scss-lint:disable QualifyingElement
+button.fsa-badge,
+a.fsa-badge {
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $badge-text-color;
+    background-color: $color-fsa-aqua-900;
   }
 
 }
