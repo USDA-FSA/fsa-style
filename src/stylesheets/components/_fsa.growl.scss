@@ -1,0 +1,145 @@
+@keyframes growlDissmiss {
+  to {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes growlShow {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fsa-growl-container {
+
+  position: fixed;
+  top: $size-default;
+  right: $size-default;
+  left: $size-default;
+  z-index: 1003;
+
+  max-height: calc(100vh - #{$size-default});
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  @include breakpoint(L) {
+    left: auto;
+    width: 364px;
+  }
+
+  &--centered {
+
+    z-index: 1002;
+
+    @include breakpoint(L) {
+      position: fixed;
+      left: 50%;
+      top: $size-extra-large;
+      transform: translate(-50%, 0);
+    }
+
+  }
+
+  &[aria-hidden="true"] {
+    display: none;
+  }
+
+}
+
+.fsa-growl {
+
+  padding: $size-default;
+  box-shadow: 0 $size-base $size-small 0 rgba(0, 0, 0, .25);
+  margin-bottom: 1em;
+  background-color: $color-fsa-aqua-100;
+  border: 1px solid $color-fsa-aqua;
+  border-left-width: 4px;
+  animation: .43s growlShow ease-in-out both;
+
+  &--centered {
+    animation: none;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &--dismissing {
+    animation: .23s growlDissmiss both;
+  }
+
+  &--error {
+    background-color: $color-fsa-red-100;
+    border-color: $color-fsa-red;
+  }
+
+  &--warning {
+    background-color: $color-gold-lightest;
+    border-color: $color-gold;
+  }
+
+  &--success {
+    background-color: $color-fsa-primary-100;
+    border-color: $color-fsa-primary;
+  }
+
+  &[aria-hidden="true"] {
+    display: none;
+  }
+
+  &__hd {
+    position: relative;
+  }
+
+  &__close {
+
+    @include fsa-button-reset;
+    position: absolute;
+    top: -$size-default;
+    right: -$size-default;
+    padding: ($size-default * 1.5);
+
+    &:active {
+      opacity: .6;
+    }
+
+  }
+
+  &__close-icon {
+    width: $size-default;
+    display: block;
+  }
+
+  &__title {
+    @include h3();
+    margin-top: 0;
+    margin-bottom: .5em;
+    font-family: $font-sans;
+    padding-right: $size-medium;
+    color: $color-base;
+  }
+
+  &__bd {
+
+    padding-right: $size-medium;
+    font-size: $font-size-2;
+
+    :first-child {
+      margin-top: 0;
+    }
+
+    p {
+      margin-bottom: .5em;
+    }
+
+  }
+
+  &:focus{
+    outline: 0;
+  }
+
+}
