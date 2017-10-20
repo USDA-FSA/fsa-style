@@ -24,6 +24,10 @@
   left: $size-default;
   z-index: 1003;
 
+  max-height: calc(100vh - #{$size-default});
+  overflow-x: hidden;
+  overflow-y: auto;
+
   @include breakpoint(L) {
     left: auto;
     width: 364px;
