@@ -103,15 +103,6 @@
     box-shadow: 0 $size-default $size-default 0 rgba(0, 0, 0, .25);
   }
 
-  &__content-bleed {
-    margin-left: -$size-medium;
-    margin-right: -$size-medium;
-  }
-
-  &__content--active {
-    opacity: 1;
-  }
-
 }
 
 .fsa-modal-scroll-fix{
