@@ -57,6 +57,12 @@ $growlDistance: 110%;
   }
 }
 
+@keyframes growlCenterDismiss {
+  100% {
+    opacity: 0;
+  }
+}
+
 .fsa-growl-container {
 
   position: fixed;
@@ -78,6 +84,7 @@ $growlDistance: 110%;
   &--centered {
 
     z-index: 1002;
+    animation: none;
 
     @include breakpoint(L) {
       position: fixed;
@@ -109,9 +116,16 @@ $growlDistance: 110%;
   }
 
   &--centered {
+
     animation: none;
     visibility: visible;
     opacity: 1;
+
+    // scss-lint:disable SelectorFormat
+    &.fsa-growl--dismissing {
+      animation: .23s growlCenterDismiss both;
+    }
+
   }
 
   &--dismissing {
