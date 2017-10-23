@@ -12,38 +12,35 @@ $growlDistance: 110%;
     padding-bottom: 0;
     margin-bottom: 0;
   }
-  50% {
+  66% {
     overflow: hidden;
     opacity: 1;
     transform: translate3d($growlDistance, 0, 0);
     max-height: 500px;
     padding-top: 0;
-    padding-bottom: 0;
-    margin-bottom: 0;
+    padding-top: $growlPadding;
+    padding-bottom: $growlPadding;
+    margin-bottom: $growlMargin;
   }
   100% {
     overflow: hidden;
     transform: translate3d(0, 0, 0);
     max-height: none;
-    padding-top: $growlPadding;
-    padding-bottom: $growlPadding;
   }
 }
 
 @keyframes growlDismiss {
   0% {
     transform: translate3d(0, 0, 0);
-    padding-top: $growlPadding;
-    padding-bottom: $growlPadding;
     margin-bottom: $growlMargin;
   }
-  50% {
+  44% {
     overflow: hidden;
     transform: translate3d($growlDistance, 0, 0);
     max-height: 500px;
     opacity: 1;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: $growlPadding;
+    padding-bottom: $growlPadding;
     margin-bottom: $growlMargin;
   }
   100% {
