@@ -38,9 +38,9 @@ modal__closeButtons.forEach( function(el) {
 });
 
 function modal__show(m){
+
   var _modal = m;
-  // show the modal by setting active class
-  _modal.className = _modal.className + ' fsa-modal--active';
+  // show the modal by toggling aria attribute
   _modal.setAttribute('aria-hidden', 'false');
 
   // trap tabs inside of modal
@@ -57,10 +57,7 @@ function modal__show(m){
   modal__lastTabStop = _focusableElements[_focusableElements.length - 1];
   modal__firstTabStop.focus();
 
-  // show the modal by setting active class
-  _modal.className = _modal.className + ' fsa-modal--active';
-
-  //fix double scrollbar issue
+  // Fix double scrollbar issue
   var _body = document.getElementsByTagName('body')[0];
   _body.className = _body.className + ' fsa-modal-scroll-fix';
 
@@ -68,16 +65,17 @@ function modal__show(m){
   setTimeout(function() {
     _modal.focus();
   },200);
+
 }
 
 function modal__close(m){
+
   var _modal = m;
 
-  // hide the modal
-  _modal.className = _modal.className.replace(' fsa-modal--active','');
+  // hide the modal by toggling aria attribute
   _modal.setAttribute('aria-hidden', 'true');
 
-  //fix double scrollbar issue
+  // Fix double scrollbar issue
   var _body = document.getElementsByTagName('body')[0];
   _body.className = _body.className.replace(' fsa-modal-scroll-fix','');
 
@@ -86,9 +84,10 @@ function modal__close(m){
   _origin.removeAttribute('data-modal-origin');
   _origin.setAttribute('aria-expanded', 'false');
   _origin.focus();
+
 }
 
-//utility method to trap keys
+// Utility method to trap keys
 function modal__trapTab(e){
   // Check for TAB key press
   if (e.keyCode === 9) {

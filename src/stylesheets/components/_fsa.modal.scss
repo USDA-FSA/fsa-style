@@ -19,7 +19,7 @@
   transition-delay: 0s;
   background-color: transparentize($color-fsa-tertiary-900, .4);
 
-  &--active {
+  &[aria-hidden="false"] {
     visibility: visible;
     opacity: 1;
   }
