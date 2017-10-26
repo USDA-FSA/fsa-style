@@ -12,10 +12,10 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     // Clear files and folders
-		clean: {
-			dist: [ 'dist' ],
-			// lorem: [ 'path/to/someting-else.scss' ],
-		},
+    clean: {
+      dist: [ 'dist' ],
+      // lorem: [ 'path/to/someting-else.scss' ],
+    },
 
     // Sass all the style things
     sass: {
@@ -117,7 +117,7 @@ module.exports = function (grunt) {
       },
       js: {
         files: [
-          'src/js/*.js',
+          'src/js/**/*.js',
         ],
         tasks: ['browserify', 'uglify']
       },

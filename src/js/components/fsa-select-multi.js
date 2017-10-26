@@ -12,17 +12,6 @@ var selectMultiTriggers = document.querySelectorAll('[data-behavior~="select-mul
 var selectMultiAllTriggers = document.querySelectorAll('[data-behavior~="select-multi-all"]');
 
 /*
-// iterate thru individual checkboxes and set click handler
-selectMultiTriggers.forEach(function (el) {
-  el.addEventListener('change', function (e) {
-    var _check = e.currentTarget;
-    var _parent = _check.closest('.fsa-select-multi');
-    var _selectAll = _parent.querySelector('[data-behavior~="select-multi-all"]');
-    _selectAll.checked = false;
-  }, false);
-});
-*/
-
 // iterate thru select all checkboxes and set click handler
 selectMultiAllTriggers.forEach(function (el) {
   el.addEventListener('change', function (e) {
@@ -46,99 +35,153 @@ selectMultiAllTriggers.forEach(function (el) {
 
       }
     }
-
-
   }, false);
 });
+*/
 
 // find all checkboxes and set event handler to onchange
 selectMultiTriggers.forEach(function (el) {
   el.addEventListener('change', function (e) {
 
-    var _check = e.currentTarget;
+    var _check = e.target;
     // set new property checked to true if checked is a property
-    _check.checked = "checked";
-    //////var _parent = _check.closest('.fsa-select-multi');
+    var _checked = _check.checked;
 
     // set new property container to checkboxes parent element
-    var _container = _check.parentElement;
-
-    // set new object of all siblings of container
-    //////var _sibs = getElementSiblings( _container );
+    var _container = _check.parentNode; // should be li element
 
     // loop thru all checkboxes in container and set properties - indeterminate:false and checked: checked
-
     var _checkBoxes = _container.querySelectorAll('input[type="checkbox"]');
-    for (var i = 0; i < _checkBoxes.length; ++i) {
-      _checkBoxes[i].indeterminate = false;
-      _checkBoxes[i].checked = "checked";
-    }
+    Object.keys(_checkBoxes).forEach(function(key){
+      _checkBoxes[key].indeterminate = false;
+      _checkBoxes[key].checked = _checked;
+    });
 
-    // function to checkSiblings that has element passed to it
-    function checkSiblings(el)
-    {
-      // create new object parent from elements parent's parent
-      var _parent = el.parentElement.parentElement;
+    // function to checkSiblings that has element passed to it - usually li
+    function checkSiblings(el){
+      // create new object from elements parent
+      //var _parent = el.parentElement.parentElement;
+      var _parent = el.parentElement;
 
-      // set new property of all to true
+      // set new property of _all to true
       var _all = true;
 
       // loop thru elements siblings
-      var _sibs = getElementSiblings(el);
-      for (var j = 0; j < _sibs.length; ++j) {
-        // set the ALL property to the value of true if checkbox's identity is checked
-        if(!_sibs.querySelector('input[type="checkbox"]').checked){
-          console.log('it was NOT checked');
-          _all = false;
-        } else {
-          console.log('it was checked');
+      var _siblings = getElementSiblings(el);
+      // filter elements that are not like el
+      var _sibs = Array.prototype.filter.call(_siblings, function(child){
+        return child !== _siblings;
+      });
+
+      var _len = _sibs.length;
+      // check for sibling checkboxes to be equal to clicked checkbox
+      // if all not checked, then set _all to false
+      for (var j = 0; j < _len; j++) {
+        try {
+          // set to false if not all children checkboxes checked
+          //if( !(_sibs[j].querySelectorAll('input[type="checkbox"]').checked == _checked) ) _all = false;
+          if( !(_sibs[j].querySelectorAll('input:checked').length > 0) ) _all = false;
+        } catch(err) {
+          console.log("catch error" + err);
         }
       }
 
-      //// MORE CODE GOES HERE
+      console.log("all checked? "+_all);
 
+      // IF ALL is true && checked is true
+      if(_all && _checked ){
+
+        console.log("if(_all && _checked )");
+
+        // find all children checkboxes of the parent element and set their properties - indeterminate:false & checked: checked
+        _parent.querySelectorAll('input[type="checkbox"]').indeterminate = false;
+        _parent.querySelectorAll('input[type="checkbox"]').checked = _checked
+
+        // call checkSiblings and pass in parent element
+        checkSiblings(_parent);
+
+      // ELSE IF ALl is true and checked is not true
+      } else if(_all && !_checked){
+
+        console.log("else if(_all && !_checked)");
+
+        // find all children checkboxes of the parent element and set their properties - checked: checked
+        _parent.querySelectorAll('input[type="checkbox"]').checked = _checked
+        _parent.querySelectorAll('input[type="checkbox"]').indeterminate = (_parent.querySelectorAll('input:checked').length > 0);
+
+        checkSiblings(_parent);
+      } else {
+
+        console.log("else");
+
+        // check all elements parents and see if they have checkboxes... if so, set properies to - indeterminate:true and checked: false
+
+        var _ancestors = getElementParents(el.parentElement, 'li');
+
+        console.log("# of _ancestors? "+_ancestors.length);
+
+        for (var n = 0; n < _ancestors.length; n++) {
+          try {
+            _ancestors[n].querySelector('input[type="checkbox"]').indeterminate = true;
+            _ancestors[n].querySelector('input[type="checkbox"]').checked = false;
+          } catch(err){
+            console.log(" ELSE catch error" + err);
+          }
+        }
+      }
     }
 
-    checkSiblings( _parent );
+    checkSiblings( _container );
 
   }, false);
 });
-
-
-
-    // IF ALL is true && checked is true
-
-      // find all children checkboxes of the parent element and set their properties - indeterminate:false and checked: checked
-
-      // call checkSiblings and pass in parent element
-
-    // ELSE IF ALl is true and checked is not true
-
-      // find all children checkboxes of the parent element and set their properties - checked: checked
-      // find all children checkboxes of the parent element and set their properties - indeterminate: findIfParentHasOneOrMoreCheckboxesChecked()
-
-      //// call checkSiblings and pass in parent element
-
-
-    // ELSE
-
-      // check all elements parents and see if they have checkboxes... if so, set properies to - indeterminate:true and checked: false
-
-    // }
-
-
-  // call checkSiblings and pass in container
-
-
 
 
 function getElementSiblings(elem){
   var sibs = [];
   var sib = elem.parentNode.firstChild;
   for (; sib; sib = sib.nextSibling){
-    if(sib.nodeType !== 1 || sib === elem){
+    if(sib.nodeType == 1 && sib !== elem){
       sibs.push(sib);
     }
   }
   return sibs;
 }
+
+/**
+ * Get all of an element's parent elements up the DOM tree
+ * @param  {Node}   elem     The element
+ * @param  {String} selector Selector to match against [optional]
+ * @return {Array}           The parent elements
+ */
+function getElementParents( elem, selector ) {
+    // Element.matches() polyfill
+    if (!Element.prototype.matches) {
+        Element.prototype.matches =
+            Element.prototype.matchesSelector ||
+            Element.prototype.mozMatchesSelector ||
+            Element.prototype.msMatchesSelector ||
+            Element.prototype.oMatchesSelector ||
+            Element.prototype.webkitMatchesSelector ||
+            function(s) {
+                var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+                    i = matches.length;
+                while (--i >= 0 && matches.item(i) !== this) {}
+                return i > -1;
+            };
+    }
+    // Setup parents array
+    var parents = [];
+    // Get matching parent elements
+    for ( ; elem && elem !== document; elem = elem.parentNode ) {
+        // Add matching parents to array
+        if ( selector ) {
+            if ( elem.matches( selector ) ) {
+                parents.push( elem );
+            }
+        } else {
+            parents.push( elem );
+        }
+    }
+    return parents;
+};

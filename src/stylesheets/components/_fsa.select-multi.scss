@@ -16,6 +16,9 @@
       color: $form-text-color-disabled;
     }
 
+    .fsa-select-multi--tiered & {
+      max-height: 300px;
+    }
   }
 
   &__list-sub {
@@ -24,6 +27,12 @@
     max-height: 190px;
     padding: $size-base 0 0 $size-base*2;
     background-color: $color-fsa-white;
+
+    .fsa-select-multi--tiered & {
+      border: none;
+      overflow: visible;
+      max-height: 300px;
+    }
   }
 
   &__item {
