@@ -46,9 +46,8 @@ selectMultiTriggers.forEach(function (el) {
     var _check = e.target;
     // set new property checked to true if checked is a property
     var _checked = _check.checked;
-
     // set new property container to checkboxes parent element
-    var _container = _check.parentNode; // should be li element
+    var _container = _check.parentElement; // should be li element
 
     // loop thru all checkboxes in container and set properties - indeterminate:false and checked: checked
     var _checkBoxes = _container.querySelectorAll('input[type="checkbox"]');
@@ -57,10 +56,11 @@ selectMultiTriggers.forEach(function (el) {
       _checkBoxes[key].checked = _checked;
     });
 
+
     // function to checkSiblings that has element passed to it - usually li
     function checkSiblings(el){
       // create new object from elements parent
-      //var _parent = el.parentElement.parentElement;
+      //var _parent = el.parentElement;
       var _parent = el.parentElement;
 
       // set new property of _all to true
@@ -86,7 +86,7 @@ selectMultiTriggers.forEach(function (el) {
         }
       }
 
-      console.log("all checked? "+_all);
+      //console.log("all checked? "+_all);
 
       // IF ALL is true && checked is true
       if(_all && _checked ){
@@ -94,8 +94,8 @@ selectMultiTriggers.forEach(function (el) {
         console.log("if(_all && _checked )");
 
         // find all children checkboxes of the parent element and set their properties - indeterminate:false & checked: checked
-        _parent.querySelectorAll('input[type="checkbox"]').indeterminate = false;
-        _parent.querySelectorAll('input[type="checkbox"]').checked = _checked
+        _parent.parentElement.querySelectorAll('input[type="checkbox"]').checked = _checked
+        _parent.querySelectorAll('input[type="checkbox"]').indeterminate = true;
 
         // call checkSiblings and pass in parent element
         checkSiblings(_parent);
@@ -118,16 +118,17 @@ selectMultiTriggers.forEach(function (el) {
 
         var _ancestors = getElementParents(el.parentElement, 'li');
 
-        console.log("# of _ancestors? "+_ancestors.length);
+        //console.log("# of _ancestors? "+_ancestors.length);
 
         for (var n = 0; n < _ancestors.length; n++) {
           try {
-            _ancestors[n].querySelector('input[type="checkbox"]').indeterminate = true;
             _ancestors[n].querySelector('input[type="checkbox"]').checked = false;
+            _ancestors[n].querySelector('input[type="checkbox"]').indeterminate = true;
           } catch(err){
             console.log(" ELSE catch error" + err);
           }
         }
+
       }
     }
 
