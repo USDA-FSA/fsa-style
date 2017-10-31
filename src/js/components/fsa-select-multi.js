@@ -8,6 +8,7 @@
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+
 var selectMultiTriggers = document.querySelectorAll('[data-behavior~="select-multi"]');
 
 // find all checkboxes and set event handler to onchange
