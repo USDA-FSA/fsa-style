@@ -1,0 +1,61 @@
+.fsa-select-multi {
+
+  &__list {
+
+    @include reset-ul();
+    overflow: auto;
+    max-height: 190px;
+    padding: $size-base 0;
+    border: 1px solid $form-outline-color;
+    border-radius: $form-border-radius;
+    background-color: $color-fsa-white;
+
+    // scss-lint:disable SelectorFormat
+    .fsa-select-multi--disabled & {
+      background-color: $form-disabled-bg-color;
+      color: $form-text-color-disabled;
+    }
+
+  }
+
+  &__list-sub {
+    @include reset-ul();
+    overflow: auto;
+    max-height: 190px;
+    padding: $size-base 0 0 $size-base*2;
+    background-color: $color-fsa-white;
+
+  }
+
+  &__item {
+
+    @include reset-li();
+    position: relative;
+    padding: 0 $size-small;
+
+    &:hover {
+
+      background-color: tint($color-fsa-tertiary, 94%);
+
+      // scss-lint:disable SelectorFormat
+      .fsa-select-multi--disabled & {
+        background-color: $form-disabled-bg-color;
+      }
+
+    }
+
+  }
+
+  &__check {}
+
+  &__label {
+
+    padding: $size-base 0;
+
+    .fsa-select-multi__check + & {
+      display: block;
+    }
+
+  }
+
+}
