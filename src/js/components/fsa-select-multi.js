@@ -21,8 +21,8 @@ selectMultiTriggers.forEach(function (el) {
 
     if(_check != _selectAll){
 
-      var _len = _parent.querySelectorAll('input[data-behavior~="select-multi"]').length;
-      var _lenChecked = _parent.querySelectorAll('input[data-behavior~="select-multi"]:checked').length
+      var _len = _parent.querySelectorAll('[data-behavior~="select-multi"]').length;
+      var _lenChecked = _parent.querySelectorAll('[data-behavior~="select-multi"]:checked').length
       var _count = _len - _lenChecked;
 
       if( _check.checked){
@@ -54,3 +54,26 @@ selectMultiTriggers.forEach(function (el) {
 
   }, false);
 });
+
+function setSelectMultiState(){
+
+  document.querySelectorAll('[data-behavior~="select-multi-all"]').forEach(function (el) {
+
+    var _parent = el.closest('.fsa-select-multi');
+    var _selectAll = el;
+
+    var _len = _parent.querySelectorAll('[data-behavior~="select-multi"]').length;
+    var _lenChecked = _parent.querySelectorAll('[data-behavior~="select-multi"]:checked').length
+    var _count = _len - _lenChecked;
+
+    if( _count <= 1 ){
+      _selectAll.indeterminate = false;
+      _selectAll.checked = true;
+    } else {
+      _selectAll.indeterminate = true;
+      _selectAll.checked = false;
+    }
+  });
+}
+
+setSelectMultiState();
