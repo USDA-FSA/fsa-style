@@ -32,26 +32,60 @@
 var $menuItem = document.querySelectorAll('.fsa-nav-global__link--has-sub-menu');
 var $main = document.querySelectorAll('.fsa-tophat, .fsa-header-app, #main-content, .fsa-footer');
 
-$main.forEach(function(el) {
+// Utility method to loop thru NodeList correctly
+var forEach = function (array, callback, scope) {
+  for (var i = 0; i < array.length; i++) {
+    callback.call(scope, i, array[i]); // passes back stuff we need
+  }
+};
 
-  el.onclick = function(e) {
+// Utilitity method
+var getClosest = function(elem, selector){
+
+    // Element.matches() polyfill
+    if (!Element.prototype.matches) {
+        Element.prototype.matches =
+            Element.prototype.matchesSelector ||
+            Element.prototype.mozMatchesSelector ||
+            Element.prototype.msMatchesSelector ||
+            Element.prototype.oMatchesSelector ||
+            Element.prototype.webkitMatchesSelector ||
+            function(s) {
+                var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+                    i = matches.length;
+                while (--i >= 0 && matches.item(i) !== this) {}
+                return i > -1;
+            };
+    }
+
+    // Get the closest matching element
+    for ( ; elem && elem !== document; elem = elem.parentNode ) {
+        if ( elem.matches( selector ) ) return elem;
+    }
+    return null;
+
+};
+
+forEach($main, function (index, value) {
+  var _el = value;
+  _el.addEventListener('click', function(e){
 
     if (document.querySelector('.fsa-nav-global__link[aria-expanded="true"]')) {
       document.querySelector('.fsa-nav-global__link[aria-expanded="true"]').setAttribute('aria-expanded', 'false');
       document.querySelector('.fsa-nav-global__sub-menu[aria-hidden="false"]').setAttribute('aria-hidden', 'true');
     }
 
-  }
+  });
 
 });
 
-$menuItem.forEach(function(item) {
-
-  item.onclick = function(e) {
+forEach($menuItem, function (index, value) {
+  var _el = value;
+  _el.addEventListener('click', function(e){
 
     var $self = this;
-    var $component = $self.closest('.fsa-nav-global');
-    var $listItem = $self.closest('.fsa-nav-global__list-item');
+    var $component = getClosest($self, '.fsa-nav-global');
+    var $listItem = getClosest($self, '.fsa-nav-global__list-item');
     var $target = $listItem.querySelector('.fsa-nav-global__sub-menu');
     var $currentlyActiveTab = $component.querySelector('.fsa-nav-global__link[aria-expanded="true"]');
     var $currentlyActiveFlyout = $component.querySelector('.fsa-nav-global__sub-menu[aria-hidden="false"]');
@@ -83,15 +117,15 @@ $menuItem.forEach(function(item) {
     //   $target.setAttribute('aria-hidden', 'false');
     // }
     //
-  }
+  });
 
-  item.onfocus = function(e) {
+  _el.addEventListener('click', function(e){
     if (document.querySelector('.fsa-nav-global__link[aria-expanded="true"]')) {
       document.querySelector('.fsa-nav-global__link[aria-expanded="true"]').setAttribute('aria-expanded', 'false');
       document.querySelector('.fsa-nav-global__sub-menu[aria-hidden="false"]').setAttribute('aria-hidden', 'true');
     }
     console.log('you focused an item');
-  }
+  });
 
 });
 

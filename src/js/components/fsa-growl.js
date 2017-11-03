@@ -16,10 +16,43 @@ var growl__triggers = document.querySelectorAll('[data-behavior~="growl-show"]')
 var growl__closeButtons = document.querySelectorAll('[data-behavior~="growl-dismiss"]');
 var growl__closeButtonsDelay = document.querySelectorAll('[data-behavior~="growl-dismiss-delay"]');
 
-// iterate thru trigger elements and set click handler
-growl__triggers.forEach( function(el) {
-  el.addEventListener('click', function(e){
+// Utility method to loop thru NodeList correctly
+var forEach = function(array, callback, scope) {
+  for (var i = 0; i < array.length; i++) {
+    callback.call(scope, i, array[i]); // passes back stuff we need
+  }
+};
 
+// Utilitity method
+var getClosest = function(elem, selector){
+
+    // Element.matches() polyfill
+    if (!Element.prototype.matches) {
+        Element.prototype.matches =
+            Element.prototype.matchesSelector ||
+            Element.prototype.mozMatchesSelector ||
+            Element.prototype.msMatchesSelector ||
+            Element.prototype.oMatchesSelector ||
+            Element.prototype.webkitMatchesSelector ||
+            function(s) {
+                var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+                    i = matches.length;
+                while (--i >= 0 && matches.item(i) !== this) {}
+                return i > -1;
+            };
+    }
+
+    // Get the closest matching element
+    for ( ; elem && elem !== document; elem = elem.parentNode ) {
+        if ( elem.matches( selector ) ) return elem;
+    }
+    return null;
+
+};
+// iterate thru trigger elements and set click handler
+forEach(growl__triggers, function(index, value) {
+  var _el = value;
+  _el.addEventListener('click', function(e){
     // set private variables
     var _trigger = e.target;
     var _id = _trigger.getAttribute('aria-controls');
@@ -34,10 +67,12 @@ growl__triggers.forEach( function(el) {
 });
 
 // iterate thru close buttons and set click handler
-growl__closeButtons.forEach( function(el) {
-  el.addEventListener('click', function(e){
+forEach(growl__closeButtons, function(index, value) {
+  var _el = value;
+  _el.addEventListener('click', function(e){
     // pass associated growl to method
-    growl__dismiss( e.currentTarget.closest('.fsa-growl') );
+    var _g = getClosest(e.currentTarget, '.fsa-growl');
+    growl__dismiss( _g );
   }, false);
 });
 
