@@ -12,8 +12,8 @@
 'use strict';
 
 var $ = window.jQuery = require('jquery');
-var FSA_NAV_GLOBAL = require('./components/fsa-nav-global');
 var DocsNav = require('./components/docs-nav');
+var FSA_NAV_GLOBAL = require('./components/fsa-nav-global');
 var ModalComponent = require('./components/fsa-modal');
 var GrowlComponent = require('./components/fsa-growl');
 var WhiteoutComponent = require('./components/fsa-whiteout');
