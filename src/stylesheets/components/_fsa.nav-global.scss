@@ -30,6 +30,7 @@
     display: flex;
     position: relative;
     flex-wrap: wrap;
+    z-index: 1;
 
     @include breakpoint(L) {
       flex-wrap: nowrap;
