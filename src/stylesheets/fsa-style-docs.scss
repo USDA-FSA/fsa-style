@@ -460,6 +460,10 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     margin-top: $size-large;
     background-color: $color-fsa-tertiary-100;
 
+    a {
+      text-decoration: underline;
+    }
+
     &:before {
       display: none;
     }
