@@ -70,6 +70,8 @@ forEach($main, function (index, value) {
   var _el = value;
   _el.addEventListener('click', function(e){
 
+    console.log("1A "+document.querySelector('.fsa-nav-global__link[aria-expanded="true"]'));
+
     if (document.querySelector('.fsa-nav-global__link[aria-expanded="true"]')) {
       document.querySelector('.fsa-nav-global__link[aria-expanded="true"]').setAttribute('aria-expanded', 'false');
       document.querySelector('.fsa-nav-global__sub-menu[aria-hidden="false"]').setAttribute('aria-hidden', 'true');
@@ -83,14 +85,13 @@ forEach($menuItem, function (index, value) {
   var _el = value;
   _el.addEventListener('click', function(e){
 
-    var $self = this;
+    var $self = e.target;
     var $component = getClosest($self, '.fsa-nav-global');
     var $listItem = getClosest($self, '.fsa-nav-global__list-item');
     var $target = $listItem.querySelector('.fsa-nav-global__sub-menu');
     var $currentlyActiveTab = $component.querySelector('.fsa-nav-global__link[aria-expanded="true"]');
     var $currentlyActiveFlyout = $component.querySelector('.fsa-nav-global__sub-menu[aria-hidden="false"]');
     var menuState = $self.getAttribute('aria-expanded');
-
     // $target.classList.add('OUTLINE');
 
     if ($currentlyActiveTab) {
@@ -119,7 +120,7 @@ forEach($menuItem, function (index, value) {
     //
   });
 
-  _el.addEventListener('click', function(e){
+  _el.addEventListener('focus', function(e){
     if (document.querySelector('.fsa-nav-global__link[aria-expanded="true"]')) {
       document.querySelector('.fsa-nav-global__link[aria-expanded="true"]').setAttribute('aria-expanded', 'false');
       document.querySelector('.fsa-nav-global__sub-menu[aria-hidden="false"]').setAttribute('aria-hidden', 'true');
