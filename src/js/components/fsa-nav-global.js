@@ -80,7 +80,7 @@ forEach($menuItem, function (index, value) {
   var _el = value;
   _el.addEventListener('click', function(e){
 
-    var $self = e.target;
+    var $self = this;
     var $component = getClosest($self, '.fsa-nav-global');
     var $listItem = getClosest($self, '.fsa-nav-global__list-item');
     var $target = $listItem.querySelector('.fsa-nav-global__sub-menu');
