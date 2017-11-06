@@ -69,16 +69,11 @@ var getClosest = function(elem, selector){
 forEach($main, function (index, value) {
   var _el = value;
   _el.addEventListener('click', function(e){
-
-    console.log("1A "+document.querySelector('.fsa-nav-global__link[aria-expanded="true"]'));
-
     if (document.querySelector('.fsa-nav-global__link[aria-expanded="true"]')) {
       document.querySelector('.fsa-nav-global__link[aria-expanded="true"]').setAttribute('aria-expanded', 'false');
       document.querySelector('.fsa-nav-global__sub-menu[aria-hidden="false"]').setAttribute('aria-hidden', 'true');
     }
-
   });
-
 });
 
 forEach($menuItem, function (index, value) {
