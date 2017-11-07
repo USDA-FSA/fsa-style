@@ -1,4 +1,4 @@
-/*! FSA Style v2.0.5 | http://usda-fsa.github.io/fsa-design-system/ */
+/*! FSA Style v2.1.0 | http://usda-fsa.github.io/fsa-design-system/ */
 
 
 html {
@@ -491,6 +491,10 @@ html:hover body::before {
   margin-top: 57.6px;
   margin-top: 3.6rem;
   background-color: #edecec;
+}
+
+.docs__footer a {
+  text-decoration: underline;
 }
 
 .docs__footer:before {
