@@ -49,6 +49,8 @@ $button-flat-border-width: 1px;
 
 @mixin fsa-button($variation: default) {
 
+  white-space: nowrap;
+
   @if $variation == 'default' {
 
     @include fsa-space-between();
