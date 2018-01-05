@@ -80,6 +80,12 @@ $label-bgc-success: $color-fsa-primary;
     padding-right: ($label-spacing * 1.5);
   }
 
+  h1 & {
+    position: relative;
+    top: -$size-base;
+    margin-left: $size-base;
+  }
+
 }
 
 // scss-lint:disable QualifyingElement
