@@ -31,6 +31,12 @@ $label-bgc-success: $color-fsa-primary;
     color: $label-text-color;
   }
 
+  &[disabled] {
+    opacity: .65;
+    filter: saturate(70%);
+    cursor: not-allowed;
+  }
+
   & + & {
     margin-left: $label-spacing;
   }
