@@ -79,6 +79,7 @@
     @include font-size(3);
     @include reset-button();
     display: block;
+    width: 100%;
     text-decoration: none;
     text-align: center;
     color: $color-fsa-tertiary;
