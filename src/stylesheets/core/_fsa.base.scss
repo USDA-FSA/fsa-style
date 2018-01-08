@@ -1,10 +1,11 @@
 /* FSA-specific overrides/additions */
 
 .fsa-browser-upgrade {
-  background-color: $color-fsa-red-100;
+  background-color: $color-gold-lighter;
   margin: 0;
   padding: $size-small $size-default;
-  border-bottom: 1px solid $color-fsa-red-300;
+  border-bottom: 2px solid $color-gold;
+  text-align: center;
 }
 
 body {

@@ -22,7 +22,7 @@
     @include reset-ul();
     overflow: auto;
     max-height: 190px;
-    padding: $size-base 0 0 $size-base*2;
+    padding: $size-base 0 0 ($size-base * 2);
     background-color: $color-fsa-white;
 
   }
