@@ -5,7 +5,7 @@
 
 .fsa-sr-only,
 .sr-only {
-  @include sr-only();
+  @include sr-only(); // mixin from USWDS
 }
 
 .fsa-email-string {
