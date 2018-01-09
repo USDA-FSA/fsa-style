@@ -1,4 +1,4 @@
-/*! FSA Style v2.1.0 | http://usda-fsa.github.io/fsa-design-system/ */
+/*! FSA Style v2.1.1 | http://usda-fsa.github.io/fsa-design-system/ */
 
 
 html {
@@ -479,7 +479,8 @@ body {
 }
 
 .lt-ie9 * {
-  filter: none !important;
+  -webkit-filter: none !important;
+          filter: none !important;
   /* stylelint-disable-line declaration-no-important */
 }
 
@@ -892,11 +893,12 @@ dfn {
 
 /* FSA-specific overrides/additions */
 .fsa-browser-upgrade {
-  background-color: #f9e4e5;
+  background-color: #fad980;
   margin: 0;
   padding: 8px 12px;
   padding: 0.8rem 1.2rem;
-  border-bottom: 1px solid #df6e72;
+  border-bottom: 2px solid #fdb81e;
+  text-align: center;
 }
 
 body {
@@ -993,6 +995,10 @@ fieldset {
   border: 0;
   margin: 0;
   padding: 0;
+}
+
+fieldset[disabled] {
+  opacity: .5;
 }
 
 .fsa-grid {
@@ -1507,25 +1513,24 @@ fieldset {
 }
 
 .skipnav {
-  background: transparent;
-  color: #2f2c2a;
-  left: 0;
+  background: white;
+  font-weight: 700;
   padding: 10px 15px;
   padding: 1rem 1.5rem;
   position: absolute;
-  top: -42px;
-  top: -4.2rem;
-  transition: all .2s ease-in-out;
-  z-index: 100;
+  left: 50%;
+  top: -110%;
+  z-index: 9999999;
+  transition: none;
 }
 
 .skipnav:focus {
-  background: #fff;
-  left: 0;
+  transition: all .2s ease-in-out;
+  transform: translateX(-50%);
   outline: 0;
   position: absolute;
-  top: 0;
-  transition: all .2s ease-in-out;
+  top: 12px;
+  top: 1.2rem;
 }
 
 p {
@@ -1747,6 +1752,7 @@ p + ol {
 /* ---------------------------------------------------------------------------*/
 /* BASE: BUTTONS                                                              */
 .fsa-btn {
+  white-space: nowrap;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: transparent;
@@ -1818,7 +1824,8 @@ p + ol {
 .fsa-btn[disabled] {
   opacity: .65;
   color: rgba(255, 255, 255, 0.8);
-  filter: saturate(70%);
+  -webkit-filter: saturate(70%);
+          filter: saturate(70%);
   cursor: not-allowed;
   color: rgba(255, 255, 255, 0.8);
 }
@@ -1833,6 +1840,7 @@ p + ol {
 }
 
 .fsa-btn--primary {
+  white-space: nowrap;
   background-color: #205493;
   color: #fff;
 }
@@ -1855,6 +1863,7 @@ p + ol {
 }
 
 .fsa-btn--secondary {
+  white-space: nowrap;
   color: #fff;
   background-color: #494440;
 }
@@ -1870,6 +1879,7 @@ p + ol {
 }
 
 .fsa-btn--tertiary {
+  white-space: nowrap;
   color: #fff;
   background-color: #cd2026;
 }
@@ -1885,6 +1895,7 @@ p + ol {
 }
 
 .fsa-btn--alt {
+  white-space: nowrap;
   color: #205493;
   background-color: #fff;
   box-shadow: 0 0 0 1px #205493 inset;
@@ -1918,11 +1929,13 @@ p + ol {
 }
 
 .fsa-btn--block {
+  white-space: nowrap;
   width: 100%;
   display: block;
 }
 
 .fsa-btn--small {
+  white-space: nowrap;
   height: 30px;
   height: 3rem;
   padding: 8px 12px 8px;
@@ -1933,6 +1946,7 @@ p + ol {
 }
 
 .fsa-btn--large {
+  white-space: nowrap;
   height: 48px;
   height: 4.8rem;
   padding: 14px 22px;
@@ -1943,6 +1957,8 @@ p + ol {
 }
 
 .fsa-btn--flat {
+  white-space: nowrap;
+  text-align: left;
   height: auto;
   padding-top: 0;
   padding-bottom: 0;
@@ -2176,6 +2192,12 @@ img {
   padding: 8px;
   padding: 0.8rem;
   resize: vertical;
+}
+
+.fsa-textarea[rows] {
+  height: auto;
+  min-height: 60px;
+  min-height: 6rem;
 }
 
 [type="search"] {
@@ -2545,6 +2567,7 @@ caption {
   text-align: left;
   margin-top: .5em;
   color: #75716e;
+  font-weight: 700;
 }
 
 th,
@@ -2689,6 +2712,13 @@ thead th {
   color: #fff;
 }
 
+.fsa-label[disabled] {
+  opacity: .65;
+  -webkit-filter: saturate(70%);
+          filter: saturate(70%);
+  cursor: not-allowed;
+}
+
 .fsa-label + .fsa-label {
   margin-left: 3px;
   margin-left: 0.3rem;
@@ -2736,6 +2766,14 @@ thead th {
   padding-right: 0.45rem;
 }
 
+h1 .fsa-label {
+  position: relative;
+  top: -4px;
+  top: -0.4rem;
+  margin-left: 4px;
+  margin-left: 0.4rem;
+}
+
 button.fsa-label,
 a.fsa-label {
   cursor: pointer;
@@ -2778,6 +2816,13 @@ a.fsa-label:active {
 .fsa-badge:not(:empty) + .fsa-badge {
   margin-left: 1.5px;
   margin-left: 0.15rem;
+}
+
+.fsa-badge[disabled] {
+  opacity: .65;
+  -webkit-filter: saturate(70%);
+          filter: saturate(70%);
+  cursor: not-allowed;
 }
 
 .fsa-badge:empty {
@@ -2861,8 +2906,8 @@ a.fsa-badge:active {
 .fsa-box {
   border: 1px solid #edecec;
   background-color: #fff;
-  padding: 24px 24px;
-  padding: 2.4rem 2.4rem;
+  padding: 24px;
+  padding: 2.4rem;
 }
 
 .fsa-box__bd > :first-child {
@@ -3118,12 +3163,12 @@ a.fsa-badge:active {
 }
 
 .fsa-header-app__profile-name {
-  display: inline-block;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   word-wrap: normal;
+  display: inline-block;
   max-width: 128px;
   max-width: 12.8rem;
 }
@@ -3631,6 +3676,7 @@ a.fsa-badge:active {
   margin: 0;
   border: 0;
   display: block;
+  width: 100%;
   text-decoration: none;
   text-align: center;
   color: #494440;
@@ -3862,6 +3908,7 @@ a.fsa-badge:active {
   font-size: 3rem;
   font-weight: 700;
   margin-top: 0;
+  margin-bottom: .5em;
   font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-weight: 400;
 }
@@ -3873,6 +3920,12 @@ a.fsa-badge:active {
   background-color: #f8fafc;
   background-clip: padding-box;
   box-shadow: 0 1.2rem 1.2rem 0 rgba(0, 0, 0, 0.25);
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
+}
+
+.fsa-modal--fullscreen .fsa-modal__content {
+  min-height: calc(100vh - 5rem);
 }
 
 .fsa-modal-scroll-fix {
@@ -3929,6 +3982,7 @@ a.fsa-badge:active {
 }
 
 .fsa-btn-group__item {
+  white-space: nowrap;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: transparent;
@@ -3957,6 +4011,7 @@ a.fsa-badge:active {
   padding: 1.1rem 1.8rem 1.1rem;
   background-color: #205493;
   color: #fff;
+  white-space: nowrap;
   color: #205493;
   background-color: #fff;
   box-shadow: 0 0 0 1px #205493 inset;
@@ -4003,7 +4058,8 @@ a.fsa-badge:active {
 .fsa-btn-group__item[disabled] {
   opacity: .65;
   color: rgba(255, 255, 255, 0.8);
-  filter: saturate(70%);
+  -webkit-filter: saturate(70%);
+          filter: saturate(70%);
   cursor: not-allowed;
   color: rgba(255, 255, 255, 0.8);
 }
@@ -4058,6 +4114,7 @@ a.fsa-badge:active {
 }
 
 .fsa-btn-group--small .fsa-btn-group__item {
+  white-space: nowrap;
   height: 30px;
   height: 3rem;
   padding: 8px 12px 8px;
@@ -4068,6 +4125,7 @@ a.fsa-badge:active {
 }
 
 .fsa-btn-group--large .fsa-btn-group__item {
+  white-space: nowrap;
   height: 48px;
   height: 4.8rem;
   padding: 14px 22px;
@@ -4101,6 +4159,7 @@ a.fsa-badge:active {
 }
 
 .fsa-btn-group__item--active {
+  white-space: nowrap;
   background-color: #205493;
   color: #fff;
 }
@@ -4899,6 +4958,17 @@ a.fsa-badge:active {
   margin-left: auto;
   margin-right: auto;
   max-width: 1200px;
+}
+
+.fsa-sr-only,
+.sr-only {
+  position: absolute;
+  left: -999em;
+}
+
+.fsa-email-string {
+  word-break: break-all;
+  overflow-wrap: break-word;
 }
 
 .fsa-m--none {
