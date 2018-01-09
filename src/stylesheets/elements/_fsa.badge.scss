@@ -36,6 +36,12 @@ $badge-text-color-warning: $color-black;
     margin-left: ($badge-spacing / 2);
   }
 
+  &[disabled] {
+    opacity: .65;
+    filter: saturate(70%);
+    cursor: not-allowed;
+  }
+
   // Empty badges collapse automatically (not available in IE8)
   &:empty {
     display: none;

@@ -70,8 +70,8 @@
 
   &__profile-name {
 
-    display: inline-block;
     @include fsa-ellipsis();
+    display: inline-block;
     max-width: ($size-base * 32);
 
     @include breakpoint(M) {

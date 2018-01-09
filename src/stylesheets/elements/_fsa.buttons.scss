@@ -49,6 +49,8 @@ $button-flat-border-width: 1px;
 
 @mixin fsa-button($variation: default) {
 
+  white-space: nowrap;
+
   @if $variation == 'default' {
 
     @include fsa-space-between();
@@ -270,6 +272,7 @@ $button-flat-border-width: 1px;
 
   @elseif $variation == 'flat' {
 
+    text-align: left;
     height: auto;
     padding-top: 0;
     padding-bottom: 0;
