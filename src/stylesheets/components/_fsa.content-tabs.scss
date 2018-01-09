@@ -3,6 +3,19 @@
   $tab-padding: $size-small;
 
   @include overflow-gradient();
+
+  &--white-bg {
+    @include overflow-gradient( $bgAll: #ffffff, $bgShadow: $color-fsa-tertiary-100 );
+  }
+
+  &--tert-100-bg {
+    @include overflow-gradient( $bgAll: $color-fsa-tertiary-100 );
+  }
+
+  &--tert-200-bg {
+    @include overflow-gradient( $bgAll: $color-fsa-tertiary-200);
+  }
+
   display: flex;
   margin-left: -$size-default;
   margin-right: -$size-default;
@@ -177,6 +190,7 @@
     }
 
   }
+
 
 }
 
