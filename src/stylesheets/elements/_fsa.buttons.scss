@@ -272,6 +272,7 @@ $button-flat-border-width: 1px;
 
   @elseif $variation == 'flat' {
 
+    text-align: left;
     height: auto;
     padding-top: 0;
     padding-bottom: 0;

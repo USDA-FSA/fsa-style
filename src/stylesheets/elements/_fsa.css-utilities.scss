@@ -3,6 +3,16 @@
 
 // TODO: so much of this is repeatable, convert to mixin sometime!
 
+.fsa-sr-only,
+.sr-only {
+  @include sr-only(); // mixin from USWDS
+}
+
+.fsa-email-string {
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
 .fsa {
 
   // scss-lint:disable ImportantRule SpaceBeforeBrace DeclarationOrder

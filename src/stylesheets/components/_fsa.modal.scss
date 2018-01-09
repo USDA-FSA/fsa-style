@@ -91,16 +91,25 @@
   &__title {
     @include h2();
     margin-top: 0;
+    margin-bottom: .5em;
     font-family: $font-sans;
     font-weight: $font-normal;
   }
 
   &__content {
+
     position: relative;
     padding: $size-medium;
     background-color: $color-fsa-site-bg;
     background-clip: padding-box;
     box-shadow: 0 $size-default $size-default 0 rgba(0, 0, 0, .25);
+    margin-bottom: $size-medium;
+
+    // scss-lint:disable SelectorFormat
+    .fsa-modal--fullscreen & {
+      min-height: calc(100vh - 5rem); // magic number
+    }
+
   }
 
 }

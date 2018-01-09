@@ -75,6 +75,7 @@
 }
 
 .fsa-textarea {
+
   min-height: 15rem;
   display: block;
   max-width: none;
@@ -82,6 +83,12 @@
   line-height: $base-line-height;
   padding: $form-padding;
   resize: vertical;
+
+  &[rows] {
+    height: auto;
+    min-height: 6rem;
+  }
+
 }
 
 [type="search"] {

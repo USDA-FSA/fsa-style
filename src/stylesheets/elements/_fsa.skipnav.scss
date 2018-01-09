@@ -1,19 +1,18 @@
 .skipnav {
-  background: transparent;
-  color: $color-base;
-  left: 0;
+  background: white;
+  font-weight: $font-bold;
   padding: 1rem 1.5rem;
   position: absolute;
-  top: -4.2rem;
-  transition: all .2s ease-in-out;
-  z-index: 100;
+  left: 50%;
+  top: -110%;
+  z-index: 9999999;
+  transition: none;
 
   &:focus {
-    background: $color-white;
-    left: 0;
+    transition: all .2s ease-in-out;
+    transform: translateX(-50%);
     outline: 0;
     position: absolute;
-    top: 0;
-    transition: all .2s ease-in-out;
+    top: $size-default;
   }
 }

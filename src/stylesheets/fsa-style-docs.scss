@@ -193,6 +193,21 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   }
 
+  &__section-title {
+    position: relative;
+  }
+
+  &__section-link {
+
+    position: absolute;
+    right: 0;
+
+    .docs__figure + & {
+      top: -($size-default);
+    }
+
+  }
+
   &__intro {
     padding-top: $size-medium;
     padding-bottom: $size-medium;
