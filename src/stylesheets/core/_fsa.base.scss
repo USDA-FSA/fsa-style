@@ -8,10 +8,18 @@
   text-align: center;
 }
 
+html {}
+
 body {
   background-color: $color-fsa-site-bg;
   line-height: $base-line-height;
   color: $color-fsa-base;
+}
+
+@media print {
+  @page {
+    size: (8.5in * 1.75) (11in * 1.75);
+  }
 }
 
 main:focus {
