@@ -125,7 +125,9 @@ $button-flat-border-width: 1px;
       filter: saturate(70%);
       cursor: not-allowed;
 
-      color: $color-transparentized;
+      @media print {
+        filter: none;
+      }
 
       &:visited {
         color: $color-transparentized;
@@ -263,7 +265,7 @@ $button-flat-border-width: 1px;
     // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon Shorthand
     padding:
       (($button-padding) + .2rem)
-      ($size-medium - .2rem)
+      ($size-medium - .6rem)
     ;
     font-size: $font-size-4; // no we're not using mixin cuz we don't want its line-height
     border-radius: ($button-border-radius * 1.5);

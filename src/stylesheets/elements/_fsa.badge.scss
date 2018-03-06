@@ -52,7 +52,13 @@ $badge-text-color-warning: $color-black;
   }
 
   &--alert {
+
     background-color: $badge-bgc-alert;
+
+    @media print {
+      background-color: shade($badge-bgc-alert, 60%);
+    }
+
   }
 
   &--warning {

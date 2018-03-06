@@ -8,10 +8,25 @@
   text-align: center;
 }
 
+html {}
+
 body {
+
+  overflow-x: auto;
   background-color: $color-fsa-site-bg;
   line-height: $base-line-height;
   color: $color-fsa-base;
+
+  @media print {
+    background-color: transparent;
+  }
+
+}
+
+@media print {
+  @page {
+    size: (8.5in * 1.75) (11in * 1.75);
+  }
 }
 
 main:focus {
@@ -107,5 +122,5 @@ fieldset {
 }
 
 fieldset[disabled] {
-  opacity: .5;
+  opacity: .6;
 }

@@ -50,11 +50,21 @@ body::before {
   }
 
   html:hover & {
+
     display: block;
+
+    @media print {
+      display: none;
+    }
+
   }
 
   .is-showing-breakpoints & {
     display: block;
+  }
+
+  @media print {
+    display: none;
   }
 
 }
