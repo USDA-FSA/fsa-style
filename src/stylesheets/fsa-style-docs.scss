@@ -227,12 +227,11 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       border: 0;
       outline: 0;
       text-transform: uppercase;
+      font-weight: $font-bold;
 
       &:after {
-        margin-left: $size-base;
-        content: ':' attr(href);
+        content: ': ' attr(href);
         text-transform: initial;
-        font-weight: $font-bold;
         font-family: $font-mono;
       }
     }
