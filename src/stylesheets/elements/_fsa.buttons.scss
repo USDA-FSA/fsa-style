@@ -125,7 +125,9 @@ $button-flat-border-width: 1px;
       filter: saturate(70%);
       cursor: not-allowed;
 
-      color: $color-transparentized;
+      @media print {
+        filter: none;
+      }
 
       &:visited {
         color: $color-transparentized;

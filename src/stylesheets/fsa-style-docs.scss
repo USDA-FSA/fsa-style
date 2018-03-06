@@ -216,6 +216,27 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       top: -($size-default);
     }
 
+    @media print {
+
+      font-size: $font-size-3;
+      color: black !important;
+      position: static;
+      margin-top: 1em;
+      background-color: transparent;
+      padding: 0;
+      border: 0;
+      outline: 0;
+      text-transform: uppercase;
+
+      &:after {
+        margin-left: $size-base;
+        content: ':' attr(href);
+        text-transform: initial;
+        font-weight: $font-bold;
+        font-family: $font-mono;
+      }
+    }
+
   }
 
   &__intro {
