@@ -12,12 +12,18 @@
   }
 
   &__bd {
+
     max-width: ($site-max-width + 24px);
     margin-left: auto;
     margin-right: auto;
     text-align: left;
     color: $color-fsa-white;
     padding: 0 $size-default;
+
+    @media print {
+      max-width: none;
+    }
+
   }
 
   &__official {

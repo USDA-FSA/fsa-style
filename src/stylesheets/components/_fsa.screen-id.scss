@@ -7,11 +7,21 @@
   background-color: $bgcolor;
   margin: 0;
 
+  @media print {
+    box-shadow: none !important;
+    border-top: 1px solid $color-fsa-tertiary-100;
+    background-color: transparent;
+    padding: initial;
+    padding-top: .5em;
+    margin: 2em 0 0;
+  }
+
   .fsa-footer + & {
     box-shadow: 0 100vh 0 100vh $bgcolor;
   }
 
   &__bd {
+
     @include font-size(2);
     color: $white;
     margin-left: auto;
@@ -19,6 +29,12 @@
     max-width: $site-max-width;
     text-align: left;
     padding: $size-small 0;
+
+    @media print {
+      color: initial;
+      max-width: none;
+    }
+
   }
 
   &__dl {

@@ -13,15 +13,25 @@
 
   background-color: $nav-bgcolor;
 
+  @media print {
+    border-bottom-color: $color-fsa-tertiary-200;
+  }
+
   @include breakpoint(L) {
     border-bottom: 1px solid $nav-border-color;
   }
 
   &__bd {
+
     max-width: ($site-max-width + 24px);
     margin-left: auto;
     margin-right: auto;
     padding: 0;
+
+    @media print {
+      max-width: none;
+    }
+
   }
 
   &__list {
@@ -150,7 +160,13 @@
       }
 
       .fsa-nav-global__text {
+
         box-shadow: 0 (-($nav-spacing-unit / 3)) 0 0 $nav-highlight-color inset;
+
+        @media print {
+          box-shadow: none;
+        }
+
       }
 
     }
@@ -159,8 +175,8 @@
 
       background-color: $nav-highlight-bgcolor;
       color: $nav-highlight-text-color-strong;
-      // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
 
+      // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
       @include breakpoint(L) {
         box-shadow:
           $size-base 0 0 0 $nav-highlight-bgcolor,
@@ -186,7 +202,6 @@
 
     display: block;
     padding: ($nav-spacing-unit - $size-base) $nav-spacing-unit;
-    // white-space: nowrap;
 
     @include breakpoint(M) {
       padding: $nav-spacing-unit;

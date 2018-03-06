@@ -11,9 +11,15 @@
 html {}
 
 body {
+
   background-color: $color-fsa-site-bg;
   line-height: $base-line-height;
   color: $color-fsa-base;
+
+  @media print {
+    background-color: transparent;
+  }
+
 }
 
 @media print {

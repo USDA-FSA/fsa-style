@@ -1,19 +1,26 @@
 ////////////////////////////////////////////////////////////////////////
 // Text Fields
 
-// Mostly a straight copy of USWDS checkbox and radio elements,
-// with a few adjustments
-
 .fsa-form-list {
 
   @include reset-ul();
 
   > li {
+
     @include reset-li();
     margin-top: .5em;
+
+    > .fsa-form-list {
+      margin-left: $size-medium;
+    }
+
   }
 
+
 }
+
+// Mostly a straight copy of USWDS checkbox and radio elements,
+// with a few adjustments
 
 .fsa-checkbox,
 .fsa-radio {
