@@ -144,6 +144,7 @@ th {
 
         &:before {
           content: attr(aria-label);
+          text-transform: uppercase;
           display: block;
           font-weight: $font-bold;
           margin-top: 1em;
@@ -162,12 +163,45 @@ th {
 
   }
 
+  &--responsive-horizontal {
+
+    @include breakpoint(M, down) {
+
+      th,
+      td {
+
+        display: flex;
+        justify-content: space-between;
+        text-align: right;
+        vertical-align: top;
+        margin-bottom: $size-small;
+
+        &:last-child {
+          margin-bottom: initial;
+        }
+
+        &:before {
+          @include font-size(2);
+          display: initial;
+          margin-right: $size-small;
+          margin-top: initial;
+        }
+
+      }
+
+    }
+
+  }
+
   &__sort {
 
     @include reset-button;
     display: block;
     width: 100%;
-    white-space: nowrap;
+
+    @include breakpoint(M) {
+      white-space: nowrap;
+    }
 
     &:focus,
     &:hover {
