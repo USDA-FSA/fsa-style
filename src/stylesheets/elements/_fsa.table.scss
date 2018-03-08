@@ -141,6 +141,7 @@ th {
         border: 0;
         padding: 0;
         width: 100%;
+        text-align: left;
 
         &:before {
           content: attr(aria-label);
@@ -185,6 +186,7 @@ th {
           display: initial;
           margin-right: $size-small;
           margin-top: initial;
+          text-align: left;
         }
 
       }
@@ -198,6 +200,10 @@ th {
     @include reset-button;
     display: block;
     width: 100%;
+
+    .fsa-text-align--right & {
+      text-align: right;
+    }
 
     @include breakpoint(M) {
       white-space: nowrap;

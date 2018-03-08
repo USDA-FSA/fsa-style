@@ -49,8 +49,14 @@ tt {
   // border: 1px solid $color-fsa-tertiary-200;
 
   code {
+
     border: 0;
     display: block;
+
+    strong {
+      color: black;
+    }
+
   }
 
   p {
