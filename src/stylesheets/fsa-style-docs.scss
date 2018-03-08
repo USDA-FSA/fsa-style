@@ -487,12 +487,11 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
     &__demo-item {
 
-      background-color: white;
       border: 1px solid $color-fsa-tertiary-300;
 
       code {
 
-        background-color: $color-fsa-tertiary-100;
+        background-color: white;
         border: 0;
         padding: 0;
         display: block;

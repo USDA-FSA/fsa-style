@@ -141,9 +141,11 @@ th {
         border: 0;
         padding: 0;
         width: 100%;
+        text-align: left;
 
         &:before {
           content: attr(aria-label);
+          text-transform: uppercase;
           display: block;
           font-weight: $font-bold;
           margin-top: 1em;
@@ -158,6 +160,88 @@ th {
 
       }
 
+    }
+
+  }
+
+  &--responsive-horizontal {
+
+    @include breakpoint(M, down) {
+
+      th,
+      td {
+
+        display: flex;
+        justify-content: space-between;
+        text-align: right;
+        vertical-align: top;
+        margin-bottom: $size-small;
+
+        &:last-child {
+          margin-bottom: initial;
+        }
+
+        &:before {
+          @include font-size(2);
+          display: initial;
+          margin-right: $size-small;
+          margin-top: initial;
+          text-align: left;
+        }
+
+      }
+
+    }
+
+  }
+
+  &__sort {
+
+    @include reset-button;
+    display: block;
+    width: 100%;
+
+    .fsa-text-align--right & {
+      text-align: right;
+    }
+
+    @include breakpoint(M) {
+      white-space: nowrap;
+    }
+
+    &:focus,
+    &:hover {
+      color: $color-fsa-link-hover;
+    }
+
+    &:after {
+      content: '';
+      background-size: 100%;
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      top: -2px;
+      margin-left: 4px;
+    }
+
+    &--descending:after {
+      background-image: url('#{$image-path}/chevron-up.png');
+      background-image: url('#{$image-path}/chevron-up.svg');
+    }
+
+    &--ascending:after {
+      background-image: url('#{$image-path}/chevron-down.png');
+      background-image: url('#{$image-path}/chevron-down.svg');
+    }
+
+    &:hover:not(.fsa-table__sort--descending, .fsa-table__sort--ascending) {
+      &:after {
+        background-image: url('#{$image-path}/chevron-up.png');
+        background-image: url('#{$image-path}/chevron-up.svg');
+        opacity: .4;
+      }
     }
 
   }
