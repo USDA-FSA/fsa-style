@@ -53,16 +53,16 @@ tt {
     border: 0;
     display: block;
 
-    strong {
-      color: black;
-    }
-
   }
 
   p {
     // margin-top: 0;
   }
 
+}
+
+code strong {
+  color: black;
 }
 
 pre {
