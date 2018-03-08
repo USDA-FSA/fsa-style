@@ -2,14 +2,28 @@
 
   $tab-padding: $size-small;
 
-  @include overflow-gradient();
-  display: flex;
-  margin-left: -$size-default;
-  margin-right: -$size-default;
+  @media print {
+    background-color: transparent;
+    background-image: none;
+  }
 
   @include breakpoint(L) {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  @include overflow-gradient();
+
+  display: flex;
+  margin-left: -$size-default;
+  margin-right: -$size-default;
+
+  &--light {
+    @include overflow-gradient( $bgAll: #ffffff, $bgShadow: $color-fsa-tertiary-100 );
+  }
+
+  &--contrast {
+    @include overflow-gradient( $bgAll: $color-fsa-tertiary-100 );
   }
 
   &--justified {}
@@ -153,6 +167,10 @@
     padding-bottom: ($tab-padding + $size-base);
     position: relative;
 
+    @media print {
+      color: $color-fsa-tertiary-300;
+    }
+
     &:hover,
     &:focus {
       box-shadow: 0 (-$size-base / 2) 0 0 $color-fsa-tertiary-300 inset;
@@ -160,7 +178,15 @@
 
     // scss-lint:disable SelectorFormat
     .fsa-content-tabs__label--active & {
+
       box-shadow: 0 (-$size-base) 0 0 $color-fsa-secondary inset;
+
+      @media print {
+        font-weight: $font-bold;
+        color: black;
+        box-shadow: none;
+      }
+
     }
 
     .fsa-content-tabs__label--small & {

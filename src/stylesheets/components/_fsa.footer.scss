@@ -7,13 +7,9 @@
   background-color: $bgcolor;
   box-shadow: 0 100vh 0 100vh $bgcolor;
 
-  &__bd {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: $site-max-width;
-    text-align: left;
-    padding: $size-medium 0;
-    color: white;
+  @media print {
+    display: none;
+    box-shadow: none !important;
   }
 
   a {
@@ -27,6 +23,21 @@
 
     &:visited {
       text-decoration: none;
+    }
+
+  }
+
+  &__bd {
+
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $site-max-width;
+    text-align: left;
+    padding: $size-medium 0;
+    color: white;
+
+    @media print {
+      max-width: none;
     }
 
   }
@@ -99,6 +110,5 @@
     }
 
   }
-
 
 }

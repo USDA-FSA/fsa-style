@@ -35,6 +35,10 @@
       @include font-size(3);
     }
 
+    @media print {
+      max-width: none;
+    }
+
   }
 
   &__primary,

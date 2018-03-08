@@ -29,6 +29,10 @@
       padding-bottom: ($component-spacing);
     }
 
+    @media print {
+      max-width: none;
+    }
+
   }
 
   &__primary,

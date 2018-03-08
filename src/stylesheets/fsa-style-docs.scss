@@ -93,6 +93,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     &--fixed {
 
       @include breakpoint(L) {
+
         @include position(fixed, 0px 0px 0 0px); // scss-lint:disable ZeroUnit
         margin: 0;
         background-color: $color-fsa-primary-900;
@@ -100,6 +101,11 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
         z-index: 100;
         padding-top: 1em;
         animation: peekInFromAbove 300ms ease-in-out;
+
+        @media print {
+          position: static;
+        }
+
       }
 
     }
@@ -113,6 +119,10 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1em;
+
+    @media print {
+      max-width: none;
+    }
 
     &-item {
 
@@ -206,6 +216,26 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       top: -($size-default);
     }
 
+    @media print {
+
+      font-size: $font-size-3;
+      color: black !important;
+      position: static;
+      margin-top: 1em;
+      background-color: transparent;
+      padding: 0;
+      border: 0;
+      outline: 0;
+      text-transform: uppercase;
+      font-weight: $font-bold;
+
+      &:after {
+        content: ': ' attr(href);
+        text-transform: initial;
+        font-family: $font-mono;
+      }
+    }
+
   }
 
   &__intro {
@@ -216,9 +246,15 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   }
 
   &__bd {
+
     max-width: $site-max-width;
     margin-left: auto;
     margin-right: auto;
+
+    @media print {
+      max-width: none;
+    }
+
   }
 
   &__main {} // scss-lint:disable EmptyRule
@@ -451,12 +487,11 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
     &__demo-item {
 
-      background-color: white;
       border: 1px solid $color-fsa-tertiary-300;
 
       code {
 
-        background-color: $color-fsa-tertiary-100;
+        background-color: white;
         border: 0;
         padding: 0;
         display: block;
