@@ -11,8 +11,8 @@ $label-bgc-success: $color-fsa-primary;
 
 .fsa-label {
 
-  @include font-size(0);
   @include reset-button();
+  @include font-size(0);
   font-family: $font-sans; // brute-force to override any inheritance (e.g. within an <h1>)
   font-weight: $font-normal; // brute-force to override any inheritance (e.g. within an <h1>)
   line-height: 1;

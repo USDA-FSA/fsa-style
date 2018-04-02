@@ -13,7 +13,6 @@ table {
   margin: 2em 0;
   min-width: 100%;
 
-
 }
 
 caption {
@@ -26,7 +25,9 @@ caption {
 
 th,
 td {
+
   $table-padding-unstyled: $table-padding;
+
   text-align: left;
 
   // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
@@ -203,10 +204,6 @@ th {
 
     .fsa-text-align--right & {
       text-align: right;
-    }
-
-    @include breakpoint(M) {
-      white-space: nowrap;
     }
 
     &:focus,

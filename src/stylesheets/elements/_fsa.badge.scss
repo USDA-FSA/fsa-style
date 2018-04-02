@@ -13,8 +13,8 @@ $badge-text-color-warning: $color-black;
 
 .fsa-badge {
 
-  @include font-size(0);
   @include reset-button();
+  @include font-size(0);
   line-height: 1;
   font-weight: $font-bold;
   display: inline-block;
