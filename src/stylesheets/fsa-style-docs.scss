@@ -36,6 +36,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     margin-top: 2em;
     margin-top: 20vh;
     color: $color-fsa-white;
+    font-weight: $font-light;
 
     @include breakpoint(M) {
       @include font-size(7);
@@ -43,8 +44,8 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
     &__version {
       font-size: 66%;
-      font-family: $font-sans;
-      color: $color-fsa-primary-100;
+      color: $color-fsa-primary-200;
+      font-weight: $font-normal;
     }
 
   }
@@ -326,7 +327,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     &__title {
       @include font-size(3);
       color: $color-annotation;
-      font-family: $font-serif;
     }
 
     &__attr {
@@ -400,20 +400,8 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
     &--merriweather {
 
-      font-family: $font-serif;
-      font-weight: $font-normal;
-      outline: 1px solid purple;
-
-      // scss-lint:disable NestingDepth
-      &-light {
-        font-weight: $font-light;
-        outline: 1px solid black;
-      }
-
-      &-bold {
-        font-weight: $font-bold;
-        outline: 1px solid pink;
-      }
+      outline: 3px solid red;
+      background-color: yellow ;
 
     }
 
@@ -426,6 +414,8 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     &--georgia {
 
       font-family: $georgia;
+      outline: 3px solid red;
+      background-color: yellow;
 
     }
 

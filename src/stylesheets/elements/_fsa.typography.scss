@@ -25,6 +25,10 @@ a {
 
   }
 
+  &[disabled] {
+    pointer-events: none;
+  }
+
 }
 
 html,
@@ -50,6 +54,8 @@ h6,
 .h5,
 .h6 {
   color: $color-title;
+  font-family: $font-sans;
+  font-weight: $font-bold;
   & + p {
     margin-top: .5em;
   }
@@ -59,7 +65,7 @@ h1,
 .h1 {
 
   @include h1();
-  font-weight: $font-light;
+  font-weight: $font-normal;
   margin-top: 0;
   margin-bottom: 0;
 
@@ -72,7 +78,6 @@ h1,
 h2,
 .h2 {
   @include h2();
-  font-weight: $font-normal;
 }
 
 h3,
@@ -100,8 +105,14 @@ h6,
 .fsa-text--lead,
 .fsa-font-lead,
 .usa-font-lead {
+
   font-weight: $font-light;
   font-size: $lead-font-size;
-  font-family: $font-serif;
-  max-width: 68ch;
+  line-height: $lead-line-height;
+  max-width: 70ch;
+
+  strong {
+    font-weight: bolder;
+  }
+
 }
