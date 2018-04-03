@@ -115,4 +115,20 @@
 
   }
 
+  &__btn {
+
+    background-color: $color-fsa-tertiary;
+
+    &:visited {
+      background-color: $color-fsa-tertiary;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $color-fsa-tertiary-900 !important;
+    }
+
+  }
+
 }
