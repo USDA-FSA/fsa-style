@@ -2,14 +2,18 @@
 
   $bgcolor: $color-fsa-tertiary-300;
 
-  padding-left: $size-default;
-  padding-right: $size-default;
-  background-color: $bgcolor;
-  box-shadow: 0 100vh 0 100vh $bgcolor;
+  & {
 
-  @media print {
-    display: none;
-    box-shadow: none !important;
+    padding-left: $size-default;
+    padding-right: $size-default;
+    background-color: $bgcolor;
+    box-shadow: 0 100vh 0 100vh $bgcolor;
+
+    @media print {
+      display: none;
+      box-shadow: none !important;
+    }
+
   }
 
   a {

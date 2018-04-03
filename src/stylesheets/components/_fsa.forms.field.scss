@@ -1,10 +1,14 @@
 .fsa-field {
 
-  position: relative;
-  margin-bottom: 1em;
+  & {
 
-  @include breakpoint(M) {
-    max-width: $fsa-form-width;
+    position: relative;
+    margin-bottom: 1em;
+
+    @include breakpoint(M) {
+      max-width: $fsa-form-width;
+    }
+
   }
 
   // Pseudos ------------------------------------------------------------------

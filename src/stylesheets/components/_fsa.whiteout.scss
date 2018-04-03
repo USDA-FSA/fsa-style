@@ -1,13 +1,15 @@
 .fsa-whiteout {
 
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  visibility: hidden;
-  opacity: 0;
-  background-color: transparentize($color-fsa-tertiary-900, .4);
+  & {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+    background-color: transparentize($color-fsa-tertiary-900, .4);
+  }
 
   &[aria-hidden="false"] {
     visibility: visible;

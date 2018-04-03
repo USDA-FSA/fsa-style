@@ -2,18 +2,22 @@
 
   $bgcolor: tint($color-fsa-tertiary-300, 15);
 
-  padding-left: $size-default;
-  padding-right: $size-default;
-  background-color: $bgcolor;
-  margin: 0;
+  & {
 
-  @media print {
-    box-shadow: none !important;
-    border-top: 1px solid $color-fsa-tertiary-100;
-    background-color: transparent;
-    padding: initial;
-    padding-top: .5em;
-    margin: 2em 0 0;
+    padding-left: $size-default;
+    padding-right: $size-default;
+    background-color: $bgcolor;
+    margin: 0;
+
+    @media print {
+      box-shadow: none !important;
+      border-top: 1px solid $color-fsa-tertiary-100;
+      background-color: transparent;
+      padding: initial;
+      padding-top: .5em;
+      margin: 2em 0 0;
+    }
+
   }
 
   .fsa-footer + & {
