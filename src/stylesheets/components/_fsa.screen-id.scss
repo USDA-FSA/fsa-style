@@ -1,6 +1,6 @@
 .fsa-screen-id {
 
-  $bgcolor: tint($color-fsa-tertiary-300, 15);
+  $bgcolor: shade($color-fsa-tertiary-300, 15%);
 
   & {
 
