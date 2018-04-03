@@ -1,0 +1,212 @@
+.fsa-stepped-control {
+
+  $component-bgcolor-default: $white;
+  $component-border-color: $color-fsa-tertiary-200;
+  $component-padding: $size-default;
+  $component-icon-size: $size-medium;
+
+  & {
+
+    margin: $size-large (-$size-default);
+    background-color: $component-bgcolor-default;
+    border: 1px solid $component-border-color;
+    border-left-width: 0;
+    border-right-width: 0;
+    padding: $component-padding;
+    transition: all .23s ease-in-out;
+
+    @include breakpoint(L) {
+      border-left-width: 1px;
+      border-right-width: 1px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+  }
+
+  &--sticky {
+
+    position: sticky;
+    z-index: 1001;
+    box-shadow: 0 0 $size-medium rgba(0, 0, 0, .3);
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-color: shade($component-border-color, 20%);
+    bottom: 0;
+    margin-left: -$size-default;
+    margin-right: -$size-default;
+
+    @include breakpoint(XL) {
+
+      bottom: $size-default;
+      border-right-width: 1px;
+      border-bottom-width: 1px;
+      border-left-width: 1px;
+
+      &.fsa-stepped-control--modal {
+        bottom: 0;
+      }
+
+    }
+
+  }
+
+  &--unstuck {
+    box-shadow: none;
+    margin-left: 0;
+    margin-right: 0;
+    border: 1px solid $component-border-color;
+  }
+
+  &--modal {
+
+    margin-bottom: -$size-medium;
+    margin-left: -$size-medium;
+    margin-right: -$size-medium;
+    border-bottom-width: 0;
+
+    @include breakpoint(L) {
+      border-right-width: 0;
+      border-bottom-width: 0;
+      border-left-width: 0;
+    }
+
+  }
+
+  &__bd {
+
+    align-items: center;
+
+    @include breakpoint(L) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+  }
+
+  &__message {
+
+    @include font-size(3);
+    margin-bottom: $size-default;
+    text-align: center;
+
+    @include breakpoint(L) {
+      @include font-size(4);
+      text-align: left;
+      margin-bottom: 0;
+      margin-right: $size-default;
+      padding-left: $size-small;
+    }
+
+    &--block {
+      flex-basis: 100%;
+      @include breakpoint(L) {
+        margin-bottom: $size-default;
+      }
+    }
+
+  }
+
+  &__list {
+
+    flex: 1;
+
+    @include breakpoint(M) {
+      display: flex;
+    }
+
+    @include breakpoint(L) {
+      margin-left: auto;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+  }
+
+  &__item {
+
+    & {
+
+      margin-bottom: $size-default;
+
+      @include breakpoint(M) {
+        margin-right: $size-default;
+        margin-bottom: 0;
+        flex: 1;
+      }
+
+      @include breakpoint(L) {
+        flex: initial;
+      }
+
+    }
+
+    &:last-child {
+
+      margin-bottom: 0;
+
+      @include breakpoint(M) {
+        margin-right: 0;
+      }
+
+    }
+
+    &--push {
+      @include breakpoint(L) {
+        margin-left: auto;
+        border-left: $size-default solid transparent;
+      }
+    }
+
+    &--pull {
+      @include breakpoint(L) {
+        margin-right: auto;
+        border-right: $size-default solid transparent;
+      }
+    }
+
+  }
+
+  &__btn {
+
+    display: block;
+    width: 100%;
+
+    @include breakpoint(L, down) {
+      height: $button-height;
+      font-size: $button-font-size;
+      padding:
+        ($button-padding - .1rem)
+        ($button-padding * 1.5)
+        ($button-padding - .1rem)
+      ;
+    }
+
+  }
+
+  &__btn-label {
+    .fsa-stepped-control__icon + & {
+      margin-left: $size-small;
+    }
+  }
+
+  &__icon {
+
+    width: ($component-icon-size * .8);
+    height: ($component-icon-size * .8);
+    transform: translateY(-1px);
+
+    @include breakpoint(L) {
+      width: ($component-icon-size);
+      height: ($component-icon-size);
+    }
+
+  }
+
+}
+
+.DEMO-STICKY-STEPPED-CONTROL {
+  outline: 3px dashed transparentize($color-fsa-red, .9);
+  outline-offset: -3px;
+}
