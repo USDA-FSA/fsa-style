@@ -9,7 +9,7 @@ $button-text              : $color-fsa-white;
 $button-line-height       : 1;
 $button-border-radius     : .4rem;
 $button-font-family       : $font-sans;
-$button-font-weight       : $font-normal;
+$button-font-weight       : $font-bold;
 $button-font-size         : $font-size-3;
 
 $button-default           : $color-fsa-secondary;
@@ -22,15 +22,10 @@ $button-primary-text      : $button-text;
 $button-primary-hover     : shade($button-primary, 25%);
 $button-primary-active    : shade($button-primary, 45%);
 
-$button-secondary        : $color-fsa-tertiary;
-$button-secondary-text   : $button-text;
-$button-secondary-hover  : shade($button-secondary, 25%);
-$button-secondary-active : shade($button-secondary, 45%);
-
 $button-tertiary        : $color-fsa-red;
 $button-tertiary-text   : $button-text;
-$button-tertiary-hover  : shade($button-secondary, 25%);
-$button-tertiary-active : shade($button-secondary, 45%);
+$button-tertiary-hover  : shade($color-fsa-red, 30%);
+$button-tertiary-active : shade($color-fsa-red, 70%);
 
 $button-alt              : $color-fsa-white;
 $button-alt-text         : $color-fsa-secondary;
@@ -38,6 +33,13 @@ $button-alt-hover        : shade($button-alt, 5%);
 $button-alt-active       : $color-fsa-secondary;
 $button-alt-border       : $color-fsa-secondary;
 $button-alt-border-width : 1px;
+
+$button-secondary        : $button-alt;
+$button-secondary-text   : $button-alt-text;
+$button-secondary-hover  : $button-alt-hover;
+$button-secondary-active : $button-alt-active;
+$button-secondary-border       : $button-alt-border;
+$button-secondary-border-width : $button-alt-border-width;
 
 $button-flat-padding     : 0;
 $button-flat             : transparent;
@@ -167,24 +169,6 @@ $button-flat-border-width: 1px;
 
   }
 
-  @elseif $variation == 'secondary' {
-
-    color: $button-secondary-text;
-    background-color: $button-secondary;
-
-    &:hover:not([disabled]) {
-      color: $button-secondary-text;
-      background-color: $button-secondary-hover;
-    }
-
-    &:focus:not([disabled]),
-    &:active:not([disabled]) {
-      color: $button-secondary-text;
-      background-color: $button-secondary-active;
-    }
-
-  }
-
   @elseif $variation == 'tertiary' {
 
     color: $button-tertiary-text;
@@ -203,7 +187,7 @@ $button-flat-border-width: 1px;
 
   }
 
-  @elseif $variation == 'alt' {
+  @elseif $variation == 'secondary' {
 
     color: $button-alt-text;
     background-color: $button-alt;
@@ -279,6 +263,7 @@ $button-flat-border-width: 1px;
     padding-top: 0;
     padding-bottom: 0;
     color: $button-flat-text;
+    font-weight: inherit;
     background-color: $button-flat;
     box-shadow: 0 0 0 $button-flat-border-width $button-flat-border inset;
     // scss-lint:disable ImportantRule
@@ -329,9 +314,9 @@ $button-flat-border-width: 1px;
   // scss-lint:disable all
 
   &--primary   { @include fsa-button(primary);   }
-  &--secondary { @include fsa-button(secondary); }
+  &--secondary,
+  &--alt       { @include fsa-button(secondary); }
   &--tertiary  { @include fsa-button(tertiary);  }
-  &--alt       { @include fsa-button(alt);       }
   &--block     { @include fsa-button(block);     }
   &--small     { @include fsa-button(small);     }
   &--large     { @include fsa-button(large);     }
