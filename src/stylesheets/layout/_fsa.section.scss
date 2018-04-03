@@ -1,10 +1,12 @@
 .fsa-section {
 
-  padding-left: $size-default;
-  padding-right: $size-default;
-  padding-bottom: $size-default;
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
+  & {
+    padding-left: $size-default;
+    padding-right: $size-default;
+    padding-bottom: $size-default;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+  }
 
   &--contrast {
     background-color: $color-fsa-tertiary-100;

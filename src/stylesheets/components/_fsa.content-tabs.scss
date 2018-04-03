@@ -2,21 +2,25 @@
 
   $tab-padding: $size-small;
 
-  @media print {
-    background-color: transparent;
-    background-image: none;
+  & {
+
+    @include overflow-gradient();
+
+    display: flex;
+    margin-left: -$size-default;
+    margin-right: -$size-default;
+
+    @include breakpoint(L) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    @media print {
+      background-color: transparent;
+      background-image: none;
+    }
+
   }
-
-  @include breakpoint(L) {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  @include overflow-gradient();
-
-  display: flex;
-  margin-left: -$size-default;
-  margin-right: -$size-default;
 
   &--light {
     @include overflow-gradient( $bgAll: #ffffff, $bgShadow: $color-fsa-tertiary-100 );

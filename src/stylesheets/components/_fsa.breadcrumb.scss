@@ -1,6 +1,8 @@
 .fsa-breadcrumb {
 
-  margin: 0 0 1em;
+  & {
+    margin: 0 0 1em;
+  }
 
   &__list {
     margin: 0;

@@ -2,9 +2,11 @@
 
 .fsa-alert {
 
-  @extend .usa-alert;
-  margin-bottom: 1.5em;
-  border-left: $size-base solid $color-fsa-tertiary-900;
+  & {
+    @extend .usa-alert;
+    margin-bottom: 1.5em;
+    border-left: $size-base solid $color-fsa-tertiary-900;
+  }
 
   // Variations ---------------------------------------------------------------
 
