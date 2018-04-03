@@ -18,3 +18,4 @@ var ModalComponent = require('./components/fsa-modal');
 var GrowlComponent = require('./components/fsa-growl');
 var WhiteoutComponent = require('./components/fsa-whiteout');
 var SelectMultipleComponent = require('./components/fsa-select-multi');
+var SteppedControl = require('./components/fsa-stepped-control');

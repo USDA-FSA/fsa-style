@@ -99,7 +99,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
         margin: 0;
         background-color: $color-fsa-primary-900;
         color: $color-white;
-        z-index: 100;
+        z-index: 1002;
         padding-top: 1em;
         animation: peekInFromAbove 300ms ease-in-out;
 
