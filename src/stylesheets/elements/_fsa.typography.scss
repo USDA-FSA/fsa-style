@@ -6,28 +6,13 @@ p {
 
 a {
 
-  &:visited {
-    color: $color-fsa-link;
-  }
+  &           { color: $color-fsa-link; }
 
-  // &:hover,
-  // &:active {
+  &:visited   { color: $color-fsa-link-visited; }
 
-  &:hover {
+  &:hover     { color: $color-fsa-link-hover;; }
 
-    $text-color: $color-fsa-link-hover;
-
-    color: $text-color;
-
-    // &:visited {
-    //   color: $text-color;
-    // }
-
-  }
-
-  &[disabled] {
-    pointer-events: none;
-  }
+  &[disabled] { pointer-events: none; } // hacky, and technically invalid HTML but does the intended job.
 
 }
 
@@ -36,7 +21,7 @@ button,
 input,
 select,
 textarea {
-  font-family: $font-sans;
+  font-family: $font-sans; // redundant, but some browsers required this to be explicit
 }
 
 h1,

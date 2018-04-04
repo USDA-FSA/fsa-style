@@ -50,6 +50,11 @@ th {
 
   thead & {
     font-weight: $font-bold;
+    color: tint($color-fsa-tertiary, 15%);
+  }
+
+  &[aria-sort] {
+    color: $color-base;
   }
 
 }

@@ -34,8 +34,8 @@ $color-fsa-secondary-900: shade($color-fsa-secondary, 25%);
 
 $color-fsa-tertiary: $color-gray-warm-dark;
 $color-fsa-tertiary-300: tint($color-fsa-tertiary, 24%);
-$color-fsa-tertiary-200: tint($color-fsa-tertiary, 70%);
-$color-fsa-tertiary-100: tint($color-fsa-tertiary, 90%);
+$color-fsa-tertiary-200: tint($color-fsa-tertiary, 80%);
+$color-fsa-tertiary-100: tint($color-fsa-tertiary, 92%);
 $color-fsa-tertiary-900: shade($color-fsa-tertiary, 35%);
 
 // Accent Colors
@@ -60,9 +60,9 @@ $color-fsa-white: $color-white; // Just in case
 $color-fsa-black: $color-black; // Just in case
 $color-fsa-base: $color-base;
 
-$color-fsa-link: $color-primary;
-$color-fsa-link-hover: $color-cool-blue;
-$color-fsa-link-visited: $color-visited;
+$color-fsa-link: darken($color-primary, 3%); // 006bb3
+$color-fsa-link-hover: $color-fsa-secondary-900;
+$color-fsa-link-visited: $color-fsa-link;
 
 // Semantic
 $color-title: $color-fsa-tertiary;
