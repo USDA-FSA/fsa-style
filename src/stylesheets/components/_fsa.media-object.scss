@@ -1,7 +1,9 @@
 .fsa-media {
 
-  margin-bottom: 1em;
-  display: block;
+  & {
+    margin-bottom: 1em;
+    display: block;
+  }
 
   &__img {
     max-width: none;
@@ -67,6 +69,5 @@
   &--right {
     direction: rtl;
   }
-
 
 }

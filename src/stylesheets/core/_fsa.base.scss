@@ -99,16 +99,14 @@ blockquote {
   @include font-size(2);
   font-style: italic;
   margin: 0;
-  font-family: $font-serif;
   padding-left: $size-default;
   border-left: $size-base solid $color-fsa-tertiary-200;
   max-width: $text-max-width;
 
   @include breakpoint(L) {
-    @include font-size(5);
+    @include font-size(4);
     padding-left: $size-medium;
   }
-
 
 }
 

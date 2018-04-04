@@ -6,12 +6,14 @@
 
   @include fsa-shared-form-properties();
 
-  // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
-  padding:
+  & {
+    // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
+    padding:
     ($form-padding - .1rem) // to achieve vertical alignment
     ($form-padding)
     ($form-padding)
-  ;
+    ;
+  }
 
   @include placeholder {
     color: $form-placeholder-color;
@@ -76,13 +78,15 @@
 
 .fsa-textarea {
 
-  min-height: 15rem;
-  display: block;
-  max-width: none;
-  width: 100%;
-  line-height: $base-line-height;
-  padding: $form-padding;
-  resize: vertical;
+  & {
+    min-height: 15rem;
+    display: block;
+    max-width: none;
+    width: 100%;
+    line-height: $base-line-height;
+    padding: $form-padding;
+    resize: vertical;
+  }
 
   &[rows] {
     height: auto;

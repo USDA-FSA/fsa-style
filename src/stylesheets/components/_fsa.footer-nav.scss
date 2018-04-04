@@ -1,8 +1,10 @@
 .fsa-footer-nav {
 
-  padding-left: $size-default;
-  padding-right: $size-default;
-  background-color: tint($color-fsa-tertiary, 15);
+  & {
+    padding-left: $size-default;
+    padding-right: $size-default;
+    background-color: tint($color-fsa-tertiary, 15);
+  }
 
   &__bd {
 

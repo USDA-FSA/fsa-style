@@ -4,10 +4,12 @@
   $component-text-color: $color-fsa-white;
   $component-spacing: $size-small;
 
-  background-color: $component-bgcolor;
-  padding-top: $component-spacing;
-  padding-bottom: ($component-spacing / 2);
-  color: $component-text-color;
+  & {
+    background-color: $component-bgcolor;
+    padding-top: $component-spacing;
+    padding-bottom: ($component-spacing / 2);
+    color: $component-text-color;
+  }
 
   &__bd {
 

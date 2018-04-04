@@ -2,8 +2,10 @@
 
 .fsa-btn-group {
 
-  display: inline-block;
-  white-space: nowrap;
+  & {
+    display: inline-block;
+    white-space: nowrap;
+  }
 
   & + & {
     margin-left: $size-base;
@@ -19,8 +21,10 @@
 
   &__item {
 
-    @include fsa-button;
-    @include fsa-button(alt);
+    & {
+      @include fsa-button;
+      @include fsa-button(secondary);
+    }
 
     & + & {
 
@@ -49,8 +53,8 @@
 
     &:active:not([disabled]),
     &:focus:not([disabled]) {
-      background-color: $button-alt;
-      color: $button-alt-text;
+      background-color: $button-primary-hover;
+      color: $button-primary-text;
     }
 
     &:not(:first-child):not(:last-child) {

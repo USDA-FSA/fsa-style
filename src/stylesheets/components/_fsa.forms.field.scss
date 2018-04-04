@@ -1,10 +1,14 @@
 .fsa-field {
 
-  position: relative;
-  margin-bottom: 1em;
+  & {
 
-  @include breakpoint(M) {
-    max-width: $fsa-form-width;
+    position: relative;
+    margin-bottom: 1em;
+
+    @include breakpoint(M) {
+      max-width: $fsa-form-width;
+    }
+
   }
 
   // Pseudos ------------------------------------------------------------------
@@ -33,6 +37,8 @@
     font-weight: $font-normal;
     float: right;
     color: $color-fsa-tertiary-300;
+    font-size: $form-text-size--sm;
+    margin-top: 3px; // magic number
   }
 
   &__help {

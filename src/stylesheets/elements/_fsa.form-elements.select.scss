@@ -3,27 +3,28 @@
 
 .fsa-select {
 
-  @include fsa-shared-form-properties();
+  & {
+    @include fsa-shared-form-properties();
 
-  background-image: url('#{$image-path}/arrow-down.png');
-  background-image: url('#{$image-path}/arrow-down.svg');
-  background-position: right 1.3rem center;
-  background-repeat: no-repeat;
-  background-size: 1.3rem;
+    background-image: url('#{$image-path}/arrow-down.png');
+    background-image: url('#{$image-path}/arrow-down.svg');
+    background-position: right 1.3rem center;
+    background-repeat: no-repeat;
+    background-size: 1.3rem;
 
-  // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
-  padding:
-    ($form-padding - .2rem) // to achieve vertical alignment
-    ($form-padding * 4) // to prevent text beneath arrow
-    ($form-padding - .1rem) // to achieve vertical alignment
-    ($form-padding)
-  ;
+    // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
+    padding:
+      ($form-padding - .2rem) // to achieve vertical alignment
+      ($form-padding * 4) // to prevent text beneath arrow
+      ($form-padding - .1rem) // to achieve vertical alignment
+      ($form-padding)
+    ;
 
-  text-overflow: ellipsis;
-
-  vertical-align: middle;
-  position: relative;
-  top: -.1rem;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    position: relative;
+    top: -.1rem;
+  }
 
   @supports (-webkit-appearance: none) {
     /* Webkit only */

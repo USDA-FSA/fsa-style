@@ -1,12 +1,14 @@
 .fsa-box {
 
   $box-bgcolor-default: $white;
-  $box-border-color: $color-fsa-tertiary-100;
+  $box-border-color: $color-fsa-tertiary-200;
   $box-padding: $size-medium;
 
-  border: 1px solid $box-border-color;
-  background-color: $box-bgcolor-default;
-  padding: $box-padding;
+  & {
+    border: 1px solid $box-border-color;
+    background-color: $box-bgcolor-default;
+    padding: $box-padding;
+  }
 
   &__hd {}
 

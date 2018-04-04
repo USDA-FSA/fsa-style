@@ -21,21 +21,21 @@ $site-max-width: 1200px;
 
 // Core Colors
 $color-fsa-primary: shade($color-green, 25%);
-$color-fsa-primary-300: tint($color-fsa-primary, 25%);
+$color-fsa-primary-300: tint($color-fsa-primary, 19%);
 $color-fsa-primary-200: tint($color-fsa-primary, 65%);
 $color-fsa-primary-100: tint($color-fsa-primary, 85%);
 $color-fsa-primary-900: shade($color-fsa-primary, 25%);
 
 $color-fsa-secondary: $color-primary-darker;
-$color-fsa-secondary-300: tint($color-fsa-secondary, 25%);
+$color-fsa-secondary-300: tint($color-fsa-secondary, 21%);
 $color-fsa-secondary-200: tint($color-fsa-secondary, 60%);
 $color-fsa-secondary-100: tint($color-fsa-secondary, 85%);
 $color-fsa-secondary-900: shade($color-fsa-secondary, 25%);
 
 $color-fsa-tertiary: $color-gray-warm-dark;
 $color-fsa-tertiary-300: tint($color-fsa-tertiary, 24%);
-$color-fsa-tertiary-200: tint($color-fsa-tertiary, 70%);
-$color-fsa-tertiary-100: tint($color-fsa-tertiary, 90%);
+$color-fsa-tertiary-200: tint($color-fsa-tertiary, 80%);
+$color-fsa-tertiary-100: tint($color-fsa-tertiary, 92%);
 $color-fsa-tertiary-900: shade($color-fsa-tertiary, 35%);
 
 // Accent Colors
@@ -46,7 +46,7 @@ $color-fsa-aqua-100: $color-primary-alt-lightest;
 $color-fsa-aqua-900: $color-primary-alt-darkest;
 
 $color-fsa-red: $color-secondary-dark;
-$color-fsa-red-300: tint($color-secondary-dark, 35%);
+$color-fsa-red-300: tint($color-secondary-dark, 40%);
 $color-fsa-red-200: tint($color-secondary-dark, 70%);
 $color-fsa-red-100: tint($color-secondary-dark, 88%);
 $color-fsa-red-900: $color-secondary-darkest;
@@ -60,9 +60,9 @@ $color-fsa-white: $color-white; // Just in case
 $color-fsa-black: $color-black; // Just in case
 $color-fsa-base: $color-base;
 
-$color-fsa-link: $color-primary;
-$color-fsa-link-hover: $color-cool-blue;
-$color-fsa-link-visited: $color-visited;
+$color-fsa-link: darken($color-primary, 3%); // 006bb3
+$color-fsa-link-hover: $color-fsa-secondary-900;
+$color-fsa-link-visited: $color-fsa-link;
 
 // Semantic
 $color-title: $color-fsa-tertiary;
@@ -71,21 +71,23 @@ $color-fsa-site-bg: tint($color-fsa-secondary, 97%); // Super light gray bg, but
 // ---------------------------------------------------------------------------
 // Typography
 
-// Font Size Scale
-$font-size-0 : $h6-font-size;    // 13
-$font-size-1 : $small-font-size; // 14
-$font-size-2 : $h5-font-size;    // 15
-$font-size-3 : $base-font-size;  // 17
-$font-size-4 : $h3-font-size;    // 20
-$font-size-5 : $h2-font-size;    // 30
-$font-size-6 : $h1-font-size;    // 40
-$font-size-7 : $title-font-size; // 52
+$h1-font-size: rem(42px);
 
-$lead-font-size: $font-size-4;
-$lead-line-height: 1.7;
+// Font Size Scale
+$font-size-0 : $h6-font-size;    // 13px
+$font-size-1 : $small-font-size; // 14px
+$font-size-2 : $h5-font-size;    // 15px
+$font-size-3 : $base-font-size;  // 17px
+$font-size-4 : $h3-font-size;    // 20px
+$font-size-5 : $h2-font-size;    // 30px
+$font-size-6 : $h1-font-size;    // 42px
+$font-size-7 : $title-font-size; // 52px
+
+$lead-font-size: $font-size-5;
+$lead-line-height: 1.3;
 
 $font-sans:  'Source Sans Pro', $helvetica;
-$font-serif: 'Merriweather', $georgia;
+$font-serif: $font-sans;
 $font-mono:  "Bitstream Vera Sans Mono", "Consolas", "Menlo", "Monaco", "Courier New", "Courier", monospace;
 
 $font-base:  $font-sans;
@@ -105,8 +107,8 @@ $form-text-size--sm            : $font-size-2;
 $form-text-size--lg            : $font-size-4;
 $form-text-color               : $color-fsa-base;
 $form-text-color-disabled      : tint($form-text-color, 40%);
-$form-placeholder-color        : $color-fsa-tertiary-200;
-$form-outline-color            : $color-fsa-tertiary-200;
+$form-placeholder-color        : tint($form-text-color, 63%);
+$form-outline-color            : tint($color-fsa-tertiary, 70%);
 $form-focus-color              : $color-fsa-secondary-300;
 
 $form-error-color              : $color-fsa-red;

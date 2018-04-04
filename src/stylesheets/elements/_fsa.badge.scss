@@ -13,20 +13,22 @@ $badge-text-color-warning: $color-black;
 
 .fsa-badge {
 
-  @include font-size(0);
-  @include reset-button();
-  line-height: 1;
-  font-weight: $font-bold;
-  display: inline-block;
-  vertical-align: middle;
-  text-decoration: none;
-  background-color: $badge-bgc;
-  border-radius: $size-default;
-  text-align: center;
-  min-width: 20px;
-  color: $badge-text-color;
-  padding: $badge-spacing;
-  cursor: default;
+  & {
+    @include reset-button();
+    @include font-size(0);
+    line-height: 1;
+    font-weight: $font-bold;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    background-color: $badge-bgc;
+    border-radius: $size-default;
+    text-align: center;
+    min-width: 20px;
+    color: $badge-text-color;
+    padding: $badge-spacing;
+    cursor: default;
+  }
 
   &:visited {
     color: $badge-text-color;
