@@ -21,19 +21,19 @@ $site-max-width: 1200px;
 
 // Core Colors
 $color-fsa-primary: shade($color-green, 25%);
-$color-fsa-primary-300: tint($color-fsa-primary, 25%);
+$color-fsa-primary-300: tint($color-fsa-primary, 20%);
 $color-fsa-primary-200: tint($color-fsa-primary, 65%);
 $color-fsa-primary-100: tint($color-fsa-primary, 85%);
 $color-fsa-primary-900: shade($color-fsa-primary, 25%);
 
 $color-fsa-secondary: $color-primary-darker;
-$color-fsa-secondary-300: tint($color-fsa-secondary, 25%);
+$color-fsa-secondary-300: tint($color-fsa-secondary, 21%);
 $color-fsa-secondary-200: tint($color-fsa-secondary, 60%);
 $color-fsa-secondary-100: tint($color-fsa-secondary, 85%);
 $color-fsa-secondary-900: shade($color-fsa-secondary, 25%);
 
 $color-fsa-tertiary: $color-gray-warm-dark;
-$color-fsa-tertiary-300: tint($color-fsa-tertiary, 24%);
+$color-fsa-tertiary-300: tint($color-fsa-tertiary, 27%);
 $color-fsa-tertiary-200: tint($color-fsa-tertiary, 80%);
 $color-fsa-tertiary-100: tint($color-fsa-tertiary, 92%);
 $color-fsa-tertiary-900: shade($color-fsa-tertiary, 35%);

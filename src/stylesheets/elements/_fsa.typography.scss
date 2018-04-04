@@ -10,7 +10,7 @@ a {
 
   &:visited   { color: $color-fsa-link-visited; }
 
-  &:hover     { color: $color-fsa-link-hover;; }
+  &:hover     { color: $color-fsa-link-hover; }
 
   &[disabled] { pointer-events: none; } // hacky, and technically invalid HTML but does the intended job.
 
