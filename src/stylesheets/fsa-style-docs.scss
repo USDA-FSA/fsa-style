@@ -212,6 +212,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
     position: absolute;
     right: 0;
+    text-transform: uppercase;
 
     .docs__figure + & {
       top: -($size-default);
@@ -227,7 +228,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       padding: 0;
       border: 0;
       outline: 0;
-      text-transform: uppercase;
       font-weight: $font-bold;
 
       &:after {
