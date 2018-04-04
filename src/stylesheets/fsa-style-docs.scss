@@ -656,7 +656,12 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   background-color: $color-fsa-link-visited;
 }
 
-[class*="lighter"] code,
-[class*="lightest"] code {
-  color: $color-base;
+.color-fsa-aqua,
+.color-fsa-aqua-light,
+.color-fsa-red-light,
+[class*="lighter"],
+[class*="lightest"] {
+  code {
+    color: $color-base;
+  }
 }
