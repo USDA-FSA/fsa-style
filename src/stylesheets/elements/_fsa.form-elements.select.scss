@@ -14,10 +14,10 @@
 
     // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
     padding:
-    ($form-padding - .2rem) // to achieve vertical alignment
-    ($form-padding * 4) // to prevent text beneath arrow
-    ($form-padding - .1rem) // to achieve vertical alignment
-    ($form-padding)
+      ($form-padding - .2rem) // to achieve vertical alignment
+      ($form-padding * 4) // to prevent text beneath arrow
+      ($form-padding - .1rem) // to achieve vertical alignment
+      ($form-padding)
     ;
 
     text-overflow: ellipsis;
