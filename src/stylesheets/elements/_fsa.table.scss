@@ -213,7 +213,7 @@ th {
 
     &:focus,
     &:hover {
-      color: $color-fsa-link-hover;
+      color: $color-fsa-tertiary-900;
     }
 
     &:after {
@@ -226,6 +226,14 @@ th {
       position: relative;
       top: -2px;
       margin-left: 4px;
+      opacity: .2;
+      background-image: url('#{$image-path}/chevron-up.png');
+      background-image: url('#{$image-path}/chevron-up.svg');
+    }
+
+    &--descending:after,
+    &--ascending:after {
+      opacity: 1;
     }
 
     &--descending:after {
@@ -240,9 +248,7 @@ th {
 
     &:hover:not(.fsa-table__sort--descending, .fsa-table__sort--ascending) {
       &:after {
-        background-image: url('#{$image-path}/chevron-up.png');
-        background-image: url('#{$image-path}/chevron-up.svg');
-        opacity: .4;
+        opacity: 1;
       }
     }
 
