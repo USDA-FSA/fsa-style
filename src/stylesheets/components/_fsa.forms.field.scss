@@ -37,6 +37,8 @@
     font-weight: $font-normal;
     float: right;
     color: $color-fsa-tertiary-300;
+    font-size: $form-text-size--sm;
+    margin-top: 3px; // magic number
   }
 
   &__help {
