@@ -91,10 +91,14 @@ h6,
 .fsa-font-lead,
 .usa-font-lead {
 
-  font-weight: $font-light;
-  font-size: $lead-font-size;
+  font-size: $font-size-4;
   line-height: $lead-line-height;
   max-width: 70ch;
+
+  @include breakpoint(M) {
+    font-weight: $font-light;
+    font-size: $lead-font-size;
+  }
 
   strong {
     font-weight: bolder;
