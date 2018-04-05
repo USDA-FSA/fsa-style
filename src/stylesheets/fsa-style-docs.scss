@@ -368,6 +368,11 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
     }
 
+    &__value {
+      @include font-size(0)
+      display: block;
+    }
+
   }
 
   // -----------------------------------------------------------------------------
