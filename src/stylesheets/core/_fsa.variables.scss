@@ -119,7 +119,8 @@ $form-positive-color           : $color-green; // Note this isn't $color-fsa-pri
 $form-positive-color-focus     : $form-focus-color;
 $form-positive-color-bg        : $color-white;
 
-$form-disabled-bg-color        : transparent;
+$form-disabled-bg-color        : $color-fsa-tertiary-100;
+$form-disabled-bg-color--check-radio : $color-fsa-tertiary-200;
 $form-border-radius            : 0; // currently zero, but play with this if you want
 
 $form-checkbox-radio-outline-color : shade($form-outline-color, 30%);
