@@ -30,7 +30,7 @@ $button-tertiary-active : shade($color-fsa-red, 70%);
 $button-alt              : $color-fsa-white;
 $button-alt-text         : $color-fsa-secondary;
 $button-alt-hover        : shade($button-alt, 5%);
-$button-alt-active       : $color-fsa-secondary;
+$button-alt-active       : $button-default-active;
 $button-alt-border       : $color-fsa-secondary;
 $button-alt-border-width : 1px;
 

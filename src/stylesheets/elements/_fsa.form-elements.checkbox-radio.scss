@@ -172,7 +172,7 @@
 .fsa-radio:disabled + label::before,
 .fsa-checkbox:disabled + [type="hidden"] + label::before,
 .fsa-radio:disabled + [type="hidden"] + label::before {
-  background-color: $form-disabled-bg-color;
+  background-color: $form-disabled-bg-color--check-radio;
   cursor: text;
   cursor: not-allowed;
   opacity: .5;
@@ -182,7 +182,7 @@
 .fsa-radio:disabled + [type="hidden"] + label::before {
   // scss-lint:disable all
   box-shadow:
-    0 0 0 2px $white,
+    0 0 0 2px $form-disabled-bg-color--check-radio,
     0 0 0 3px $form-checkbox-radio-outline-color
   ;
 }
