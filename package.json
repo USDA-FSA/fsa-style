@@ -7,6 +7,21 @@
     "type": "git",
     "url": "git+https://github.com/usda-fsa/fsa-style.git"
   },
+  "author": "USDA FSA Enterprise Architecture",
+  "contributors": [
+    "Francis Rupert <France.Rupert@gmail.com> (https://github.com/francisrupert)",
+    "Casey Hill <bignamehere@gmail.com> (https://github.com/bignamehere)",
+    "Brian Mills (https://www.linkedin.com/in/brianmills)"
+  ],
+  "bugs": {
+    "url": "https://github.com/USDA-FSA/fsa-style/issues"
+  },
+  "scripts": {
+    "build": "grunt build",
+    "start": "npm i && grunt",
+    "deploy": "grunt deploy",
+    "test": "grunt test"
+  },
   "devDependencies": {
     "autoprefixer": "^6.5.1",
     "cssnano": "^3.7.7",
@@ -37,19 +52,5 @@
     "jquery": "^3.3.1",
     "politespace": "^0.1.7",
     "uswds": "~1.2.1"
-  },
-  "author": "USDA FSA Enterprise Architecture",
-  "contributors": [
-    "Francis Rupert <France.Rupert@gmail.com> (https://github.com/francisrupert)",
-    "Brian Mills (https://www.linkedin.com/in/brianmills)"
-  ],
-  "bugs": {
-    "url": "https://github.com/USDA-FSA/fsa-style/issues"
-  },
-  "scripts": {
-    "build": "grunt build",
-    "start": "npm i && grunt",
-    "deploy": "grunt deploy",
-    "test": "grunt test"
   }
 }
