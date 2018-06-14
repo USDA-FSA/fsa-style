@@ -36,7 +36,7 @@
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 
     // IE doesn't like the extra padding on right.
-    padding-right: $form-padding / 2;
+    // padding-right: $form-padding / 2;
 
     // IE 10+ doesn't like the SVG for select arrows
     background-image: url('#{$image-path}/arrow-down.png');
@@ -126,14 +126,6 @@
     // padding-bottom: ($button-padding * 2) - .3rem;
     font-size: $form-text-size--lg; // no we're not using mixin cuz we don't want its line-height
     top: -.3rem;
-
-    @supports (-webkit-appearance: none) {
-      // padding-top: ($button-padding * 2) - .4rem;
-    }
-
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      // padding-top: ($button-padding * 2) - .4rem;
-    }
 
   }
 
