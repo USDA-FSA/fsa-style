@@ -1,0 +1,42 @@
+.fsa-pagination {
+
+  $padding: $size-small;
+
+  & {
+    text-align: center;
+    margin: $size-large auto;
+  }
+
+  &__list {
+    @include reset-ul();
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  &__item {
+    @include reset-li();
+    display: inline-block;
+  }
+
+  &__link {
+
+    & {
+      padding: ($padding) ($padding + ($padding / 2));
+      font-weight: $font-bold;
+      text-decoration: none;
+    }
+
+    &--current {
+      background-color: $button-primary;
+      color: white;
+    }
+
+    &--previous {}
+
+    &--next {}
+
+    &--collapsed {}
+
+  }
+
+}
