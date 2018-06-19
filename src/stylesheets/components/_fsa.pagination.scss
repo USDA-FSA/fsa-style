@@ -1,11 +1,13 @@
 .fsa-pagination {
 
+
   $padding: $size-small;
 
   & {
 
     @include font-size(2);
     margin: $size-large auto;
+    position: relative;
 
     @include breakpoint(S) {
       text-align: center;
@@ -13,6 +15,21 @@
 
     @include breakpoint(M) {
       @include font-size(3);
+    }
+
+  }
+
+  &:before {
+
+    content: attr(data-current) ' / ' attr(data-total);
+    display: block;
+    position: absolute;
+    padding: $padding;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include breakpoint(S) {
+      display: none;
     }
 
   }
@@ -52,11 +69,17 @@
     }
 
     &--previous {
-      padding-right: $size-small;
+      padding-right: $padding * 5;
+      @include breakpoint(S) {
+        padding-right: $padding;
+      }
     }
 
     &--next {
-      padding-left: $size-small;
+      padding-left: $padding * 5;
+      @include breakpoint(S) {
+        padding-left: $padding;
+      }
     }
 
   }
@@ -66,7 +89,7 @@
     & {
 
       background-color: white;
-      box-shadow: 0 0 0 1px $color-fsa-tertiary-200; // maybe try $button-secondary-border
+      box-shadow: 0 0 0 1px $color-fsa-tertiary-200 inset; // maybe try $button-secondary-border
       display: block;
       padding: ($padding) ($padding + ($padding / 2));
       text-decoration: none;
@@ -87,6 +110,14 @@
     &:not(span):hover {
       background-color: white;
       box-shadow: 0 0 0 1px $color-fsa-tertiary-200; // maybe try $button-secondary-border
+    }
+
+    &--previous,
+    &--next {
+      display: block;
+      @include breakpoint(M) {
+        display: inline-block;
+      }
     }
 
     &--current {
