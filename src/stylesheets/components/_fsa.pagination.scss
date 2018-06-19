@@ -21,12 +21,14 @@
 
   &:before {
 
-    content: attr(data-current) ' / ' attr(data-total);
-    display: block;
-    position: absolute;
-    padding: $padding;
-    left: 50%;
-    transform: translateX(-50%);
+    @media (min-width: 20em) {
+      content: attr(data-current) ' / ' attr(data-total);
+      display: block;
+      position: absolute;
+      padding: $padding;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
     @include breakpoint(S) {
       display: none;
@@ -69,14 +71,20 @@
     }
 
     &--previous {
-      padding-right: $padding * 5;
+      padding-right: $padding;
+      @media (min-width: 20em) {
+        padding-right: $padding * 5;
+      }
       @include breakpoint(S) {
         padding-right: $padding;
       }
     }
 
     &--next {
-      padding-left: $padding * 5;
+      padding-left: $padding;
+      @media (min-width: 20em) {
+        padding-left: $padding * 5;
+      }
       @include breakpoint(S) {
         padding-left: $padding;
       }
