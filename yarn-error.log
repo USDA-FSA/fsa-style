@@ -1,0 +1,92 @@
+Arguments: 
+  c:\softwaredistribution\node-v9.3.0-win-x64\node.exe c:\softwaredistribution\node-v9.3.0-win-x64\node_modules\yarn\bin\yarn.js add node_sass
+
+PATH: 
+  C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Riverbed\Steelhead Mobile\;C:\Program Files (x86)\Brackets\command;C:\Program Files (x86)\HID Global\ActivClient\;C:\Program Files\HID Global\ActivClient\;C:\Program Files (x86)\Google\Chrome\Application;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Riverbed\Steelhead Mobile\;C:\Program Files (x86)\HID Global\ActivClient\;C:\Program Files\HID Global\ActivClient\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Users\Casey.Hill\AppData\Local\Programs\Git\cmd;C:\Users\Casey.Hill\AppData\Local\atom\bin;C:\Ruby23-x64\bin;C:\Python27;c:\softwaredistribution\node-v9.3.0-win-x64\;C:\softwaredistribution\Sun\jdk1.7.0_151\bin
+
+Yarn version: 
+  1.3.2
+
+Node version: 
+  9.3.0
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  {
+    "name": "fsa-style",
+    "description": "Open Source CSS Framework for USDA Farm Service Agency web sites and apps",
+    "version": "2.1.4",
+    "license": "SEE LICENSE in LICENSE.md",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/usda-fsa/fsa-style.git"
+    },
+    "author": "USDA FSA Enterprise Architecture",
+    "contributors": [
+      "Francis Rupert <France.Rupert@gmail.com> (https://github.com/francisrupert)",
+      "Casey Hill <bignamehere@gmail.com> (https://github.com/bignamehere)",
+      "Brian Mills (https://www.linkedin.com/in/brianmills)"
+    ],
+    "bugs": {
+      "url": "https://github.com/USDA-FSA/fsa-style/issues"
+    },
+    "scripts": {
+      "build": "grunt build",
+      "start": "npm i && grunt",
+      "deploy": "grunt deploy",
+      "test": "grunt test"
+    },
+    "devDependencies": {
+      "autoprefixer": "^6.5.1",
+      "cssnano": "^3.7.7",
+      "grunt": "^1.0.1",
+      "grunt-banner": "^0.6.0",
+      "grunt-browser-sync": "^2.0.0",
+      "grunt-browserify": "^5.0.0",
+      "grunt-build-control": "^0.7.1",
+      "grunt-cli": "^1.2.0",
+      "grunt-concurrent": "^2.3.1",
+      "grunt-contrib-clean": "^1.0.0",
+      "grunt-contrib-compress": "^1.3.0",
+      "grunt-contrib-copy": "^1.0.0",
+      "grunt-contrib-uglify": "^2.0.0",
+      "grunt-contrib-watch": "^1.0.0",
+      "grunt-newer": "^1.3.0",
+      "grunt-postcss": "^0.8.0",
+      "grunt-prettify": "^0.4.0",
+      "grunt-sass": "^1.2.1",
+      "grunt-scss-lint": "^0.5.0",
+      "load-grunt-tasks": "^3.5.2",
+      "node-sass": "^4.7.2",
+      "pixrem": "^3.0.2",
+      "postcss-quantity-queries": "^0.4.0",
+      "time-grunt": "^1.4.0"
+    },
+    "dependencies": {
+      "jquery": "^3.3.1",
+      "npm": "^6.1.0",
+      "politespace": "^0.1.7",
+      "uswds": "~1.2.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: https://registry.npmjs.org/node_sass: Not found
+      at Request.params.callback [as _callback] (c:\softwaredistribution\node-v9.3.0-win-x64\node_modules\yarn\lib\cli.js:62098:18)
+      at Request.self.callback (c:\softwaredistribution\node-v9.3.0-win-x64\node_modules\yarn\lib\cli.js:123085:22)
+      at Request.emit (events.js:159:13)
+      at Request.<anonymous> (c:\softwaredistribution\node-v9.3.0-win-x64\node_modules\yarn\lib\cli.js:124068:10)
+      at Request.emit (events.js:159:13)
+      at IncomingMessage.<anonymous> (c:\softwaredistribution\node-v9.3.0-win-x64\node_modules\yarn\lib\cli.js:123988:12)
+      at Object.onceWrapper (events.js:254:19)
+      at IncomingMessage.emit (events.js:164:20)
+      at endReadableNT (_stream_readable.js:1062:12)
+      at process._tickCallback (internal/process/next_tick.js:152:19)
