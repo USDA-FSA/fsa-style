@@ -18,12 +18,20 @@
   }
 
   &__list {
+
     @include reset-ul();
     white-space: nowrap;
     display: flex;
+
     @include breakpoint(S) {
+      margin-left: -$size-default;
+      margin-right: -$size-default;
+    }
+
+    @include breakpoint(M) {
       display: inline-flex;
     }
+
   }
 
   &__item {
@@ -45,16 +53,10 @@
 
     &--previous {
       padding-right: $size-small;
-      @include breakpoint(S) {
-        padding-right: 0;
-      }
     }
 
     &--next {
       padding-left: $size-small;
-      @include breakpoint(S) {
-        padding-left: 0;
-      }
     }
 
   }
@@ -67,7 +69,6 @@
       box-shadow: 0 0 0 1px $color-fsa-tertiary-200; // maybe try $button-secondary-border
       display: block;
       padding: ($padding) ($padding + ($padding / 2));
-      font-weight: $font-bold;
       text-decoration: none;
       border-radius: ($button-border-radius / 2);
       text-align: center;
@@ -81,15 +82,18 @@
 
     }
 
+    &:not(span):focus,
+    &:not(span):active,
+    &:not(span):hover {
+      background-color: white;
+      box-shadow: 0 0 0 1px $color-fsa-tertiary-200; // maybe try $button-secondary-border
+    }
+
     &--current {
       background-color: $color-fsa-secondary-900;
       color: white;
       margin: 0 $size-small;
-    }
-
-    &--next,
-    &--previous {
-
+      font-weight: $font-bold;
     }
 
     &--previous:before,
@@ -106,13 +110,13 @@
 
     &--previous:before {
       background-image: url('#{$image-path}/chevron-left.png');
-      background-image: url('#{$image-path}/chevron-left.svg');
+      background-image: url('#{$image-path}/chevron-left--link.svg');
       margin-right: $size-small;
     }
 
     &--next:after {
       background-image: url('#{$image-path}/chevron-right.png');
-      background-image: url('#{$image-path}/chevron-right.svg');
+      background-image: url('#{$image-path}/chevron-right--link.svg');
       margin-left: $size-small;
     }
 
