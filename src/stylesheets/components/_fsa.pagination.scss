@@ -159,6 +159,12 @@
       margin-left: $size-small;
     }
 
+    &--disabled {
+      filter: grayscale(100%);
+      opacity: .75;
+      cursor: text;
+    }
+
   }
 
 }
