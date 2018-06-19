@@ -4,26 +4,13 @@
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 
 
-// UTILITY METHODS
-var getOffsetTop = function (elem) {
-
-	// Set our distance placeholder
-	var distance = 0;
-
-	// Loop up the DOM
-	if (elem.offsetParent) {
-		do {
-			distance += elem.offsetTop;
-			elem = elem.offsetParent;
-		} while (elem);
-	}
-
-	// Return our distance
-	return distance < 0 ? 0 : distance;
+// Utility method to loop thru NodeList correctly
+var forEach = function (array, callback, scope) {
+  for (var i = 0; i < array.length; i++) {
+    callback.call(scope, i, array[i]); // passes back stuff we need
+  }
 };
 
-//
-//
 var stickySteps = document.querySelectorAll('.fsa-stepped-control--sticky');
 
 function setComponentStyle() {
@@ -31,17 +18,23 @@ function setComponentStyle() {
   // iterate thru each stepped control on page
   forEach(stickySteps, function(index, value) {
     var _el = value;
-
-    var scBottomPosition = window.innerHeight - (_el.getOffsetTop() + _el.offsetHeight)
-
+  
+    var viewportOffset = _el.getBoundingClientRect();   
+    var scHeight = _el.offsetHeight;
+    var scBottomPosition = window.innerHeight - (viewportOffset.top + scHeight);
+    
     if (scBottomPosition > 12) {
-      _el.addClass("fsa-stepped-control--unstuck");
+      
+      if(!_el.classList.contains('fsa-stepped-control--unstuck')){
+        _el.classList.add('fsa-stepped-control--unstuck');
+      }
     } else {
-      _el.removeClass("fsa-stepped-control--unstuck");
+
+      if(_el.classList.contains('fsa-stepped-control--unstuck')){
+        _el.classList.remove('fsa-stepped-control--unstuck');
+      }
     }
-
   });
-
 }
 
 
