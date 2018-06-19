@@ -3,39 +3,118 @@
   $padding: $size-small;
 
   & {
-    text-align: center;
+
+    @include font-size(2);
     margin: $size-large auto;
+
+    @include breakpoint(S) {
+      text-align: center;
+    }
+
+    @include breakpoint(M) {
+      @include font-size(3);
+    }
+
   }
 
   &__list {
     @include reset-ul();
-    display: inline-block;
     white-space: nowrap;
+    display: flex;
+    @include breakpoint(S) {
+      display: inline-flex;
+    }
   }
 
   &__item {
-    @include reset-li();
-    display: inline-block;
-  }
-
-  &__link {
 
     & {
+      @include reset-li();
+      display: none;
+      flex: 1;
+      @include breakpoint(S) {
+        display: inline-block;
+        width: auto;
+      }
+    }
+
+    &--previous,
+    &--next {
+      display: inline-block;
+    }
+
+    &--previous {
+      padding-right: $size-small;
+      @include breakpoint(S) {
+        padding-right: 0;
+      }
+    }
+
+    &--next {
+      padding-left: $size-small;
+      @include breakpoint(S) {
+        padding-left: 0;
+      }
+    }
+
+  }
+
+  &__label {
+
+    & {
+
+      background-color: white;
+      box-shadow: 0 0 0 1px $color-fsa-tertiary-200; // maybe try $button-secondary-border
+      display: block;
       padding: ($padding) ($padding + ($padding / 2));
       font-weight: $font-bold;
       text-decoration: none;
+      border-radius: ($button-border-radius / 2);
+      text-align: center;
+      text-transform: uppercase;
+
+      @include breakpoint(S) {
+        background-color: transparent;
+        box-shadow: none;
+        text-transform: none;
+      }
+
     }
 
     &--current {
-      background-color: $button-primary;
+      background-color: $color-fsa-secondary-900;
       color: white;
+      margin: 0 $size-small;
     }
 
-    &--previous {}
+    &--next,
+    &--previous {
 
-    &--next {}
+    }
 
-    &--collapsed {}
+    &--previous:before,
+    &--next:after {
+      content: '';
+      background-size: 100%;
+      background-repeat: no-repeat;
+      display: inline-block;
+      width: ($size-default + $size-base);
+      height: ($size-default + $size-base);
+      position: relative;
+      top: 3px;
+    }
+
+    &--previous:before {
+      background-image: url('#{$image-path}/chevron-left.png');
+      background-image: url('#{$image-path}/chevron-left.svg');
+      margin-right: $size-small;
+    }
+
+    &--next:after {
+      background-image: url('#{$image-path}/chevron-right.png');
+      background-image: url('#{$image-path}/chevron-right.svg');
+      margin-left: $size-small;
+    }
 
   }
 
