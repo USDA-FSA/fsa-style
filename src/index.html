@@ -2338,6 +2338,155 @@
           </p>
         </div>
       </div>
+      <div id="component__pagination">
+        <div class="docs__bd docs__section-title">
+          <h3 class="docs__figure">Pagination</h3>
+          <a class="fsa-btn fsa-btn--secondary fsa-btn--small docs__section-link" href="http://usda-fsa.github.io/fsa-design-system/components/pagination">Docs</a>
+        </div>
+        <div class="docs__bd">
+          <p class="docs__code-sample"><code>class="fsa-pagination"</code></p>
+          <h4 class="docs__sub_style">First</h4>
+          <nav aria-label="Pagination">
+            <div class="fsa-pagination" data-current="1" data-total="120">
+              <ul class="fsa-pagination__list">
+                <li class="fsa-pagination__item fsa-pagination__item--previous" aria-hidden="true">
+                  <span class="fsa-pagination__label fsa-pagination__label--previous fsa-pagination__label--disabled">Previous</span>
+                </li>
+                <li class="fsa-pagination__item">
+                  <span class="fsa-pagination__label fsa-pagination__label--current" aria-current="true">1</span>
+                </li>
+                <li class="fsa-pagination__item">
+                  <a class="fsa-pagination__label" href="link.html">2</a>
+                </li>
+                <li class="fsa-pagination__item" aria-hidden="true">
+                  <span class="fsa-pagination__label">…</span>
+                </li>
+                <li class="fsa-pagination__item">
+                  <a class="fsa-pagination__label" href="link.html">120</a>
+                </li>
+                <li class="fsa-pagination__item fsa-pagination__item--next">
+                  <a class="fsa-pagination__label fsa-pagination__label--next" href="link.html">Next</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <h4 class="docs__sub_style">Internal</h4>
+          <nav aria-label="Pagination">
+            <div class="fsa-pagination" data-current="56" data-total="120">
+              <ul class="fsa-pagination__list">
+                <li class="fsa-pagination__item fsa-pagination__item--previous">
+                  <a class="fsa-pagination__label fsa-pagination__label--previous" href="link.html">Previous</a>
+                </li>
+                <li class="fsa-pagination__item">
+                  <a class="fsa-pagination__label" href="link.html">1</a>
+                </li>
+                <li class="fsa-pagination__item" aria-hidden="true">
+                  <span class="fsa-pagination__label">…</span>
+                </li>
+                <li class="fsa-pagination__item">
+                  <a class="fsa-pagination__label" href="link.html">55</a>
+                </li>
+                <li class="fsa-pagination__item">
+                  <span class="fsa-pagination__label fsa-pagination__label--current" aria-current="true">56</span>
+                </li>
+                <li class="fsa-pagination__item">
+                  <a class="fsa-pagination__label" href="link.html">57</a>
+                </li>
+                <li class="fsa-pagination__item" aria-hidden="true">
+                  <span class="fsa-pagination__label">…</span>
+                </li>
+                <li class="fsa-pagination__item">
+                  <a class="fsa-pagination__label" href="link.html">120</a>
+                </li>
+                <li class="fsa-pagination__item fsa-pagination__item--next">
+                  <a class="fsa-pagination__label fsa-pagination__label--next" href="link.html">Next</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <h4 class="docs__sub_style">Last</h4>
+          <nav aria-label="Pagination">
+            <div class="fsa-pagination" data-current="120" data-total="120">
+              <ul class="fsa-pagination__list">
+                <li class="fsa-pagination__item fsa-pagination__item--previous">
+                  <a class="fsa-pagination__label fsa-pagination__label--previous" href="link.html">Previous</a>
+                </li>
+                <li class="fsa-pagination__item">
+                  <a class="fsa-pagination__label" href="link.html">1</a>
+                </li>
+                <li class="fsa-pagination__item" aria-hidden="true">
+                  <span class="fsa-pagination__label">…</span>
+                </li>
+                <li class="fsa-pagination__item">
+                  <a class="fsa-pagination__label" href="link.html">119</a>
+                </li>
+                <li class="fsa-pagination__item">
+                  <span class="fsa-pagination__label fsa-pagination__label--current" aria-current="true">120</span>
+                </li>
+                <li class="fsa-pagination__item fsa-pagination__item--next" aria-hidden="true">
+                  <span class="fsa-pagination__label fsa-pagination__label--next fsa-pagination__label--disabled">Next</span>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <h4 class="docs__sub_style">Fewer than 6 pages</h4>
+          <nav aria-label="Pagination">
+            <div class="fsa-pagination" data-current="2" data-total="5">
+              <ul class="fsa-pagination__list">
+                <li class="fsa-pagination__item fsa-pagination__item--previous">
+                  <a class="fsa-pagination__label fsa-pagination__label--previous" href="link.html">Previous</a>
+                </li>
+                <li class="fsa-pagination__item">
+                  <a class="fsa-pagination__label" href="link.html">1</a>
+                </li>
+                <li class="fsa-pagination__item">
+                  <span class="fsa-pagination__label fsa-pagination__label--current" aria-current="true">2</span>
+                </li>
+                <li class="fsa-pagination__item">
+                  <a class="fsa-pagination__label" href="link.html">3</a>
+                </li>
+                <li class="fsa-pagination__item">
+                  <a class="fsa-pagination__label" href="link.html">4</a>
+                </li>
+                <li class="fsa-pagination__item">
+                  <a class="fsa-pagination__label" href="link.html">5</a>
+                </li>
+                <li class="fsa-pagination__item fsa-pagination__item--next">
+                  <a class="fsa-pagination__label fsa-pagination__label--next" href="link.html">Next</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <h4 class="docs__sub_style">6 or more pages</h4>
+          <nav aria-label="Pagination">
+            <div class="fsa-pagination" data-current="2" data-total="6">
+              <ul class="fsa-pagination__list">
+                <li class="fsa-pagination__item fsa-pagination__item--previous">
+                  <a class="fsa-pagination__label fsa-pagination__label--previous" href="link.html">Previous</a>
+                </li>
+                <li class="fsa-pagination__item">
+                  <a class="fsa-pagination__label" href="link.html">1</a>
+                </li>
+                <li class="fsa-pagination__item">
+                  <span class="fsa-pagination__label fsa-pagination__label--current" aria-current="true">2</span>
+                </li>
+                <li class="fsa-pagination__item">
+                  <a class="fsa-pagination__label" href="link.html">3</a>
+                </li>
+                <li class="fsa-pagination__item" aria-hidden="true">
+                  <span class="fsa-pagination__label">…</span>
+                </li>
+                <li class="fsa-pagination__item">
+                  <a class="fsa-pagination__label" href="link.html">6</a>
+                </li>
+                <li class="fsa-pagination__item fsa-pagination__item--next">
+                  <a class="fsa-pagination__label fsa-pagination__label--next" href="link.html">Next</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
       <div id="component__stepped-control">
         <div class="docs__bd docs__section-title">
           <h3 class="docs__figure">Stepped Control</h3>
