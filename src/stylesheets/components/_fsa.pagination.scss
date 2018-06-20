@@ -1,7 +1,7 @@
 .fsa-pagination {
 
-
   $padding: $size-small;
+  $arrow-size: $size-default; // $size-default + $size-base
 
   & {
 
@@ -141,10 +141,10 @@
       background-size: 100%;
       background-repeat: no-repeat;
       display: inline-block;
-      width: ($size-default + $size-base);
-      height: ($size-default + $size-base);
+      width: $arrow-size;
+      height: $arrow-size;
       position: relative;
-      top: 3px;
+      top: 1px;
     }
 
     &--previous:before {
