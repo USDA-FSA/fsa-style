@@ -37,17 +37,19 @@ function setComponentStyle() {
   });
 }
 
-
 // check if SC component exists on page
 if(stickySteps.length){
 
   window.addEventListener('scroll', function() {
     setComponentStyle();
   });
-
-  var modal = document.querySelector('.fsa-modal');
-  modal.addEventListener("scroll", function(){
-    setComponentStyle();
+  
+  var modals = document.querySelectorAll('.fsa-modal');
+  forEach(modals, function(index, value) {
+    var _el = value;
+    _el.addEventListener("scroll", function(){
+      setComponentStyle();
+    });
   });
 
   document.addEventListener("DOMContentLoaded", function(){
@@ -58,7 +60,8 @@ if(stickySteps.length){
     setComponentStyle();
   });
 
-}
+  
 
+}
 
 console.log('SteppedControl loaded, its JS is NOT to be used for Production, demo purposes only');
