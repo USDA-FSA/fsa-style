@@ -96,9 +96,13 @@
 
     & {
 
+      @include reset-button();
+      cursor: initial;
+      color: $color-fsa-link;
       background-color: white;
       box-shadow: 0 0 0 1px $color-fsa-tertiary-200 inset; // maybe try $button-secondary-border
       display: block;
+      width: 100%;
       padding: ($padding) ($padding + ($padding / 2));
       text-decoration: none;
       border-radius: ($button-border-radius / 2);
@@ -106,6 +110,7 @@
       text-transform: uppercase;
 
       @include breakpoint(S) {
+        width: auto;
         background-color: transparent;
         box-shadow: none;
         text-transform: none;
@@ -116,6 +121,7 @@
     &:not(span):focus,
     &:not(span):active,
     &:not(span):hover {
+      cursor: pointer;
       background-color: white;
       box-shadow: 0 0 0 1px $color-fsa-tertiary-200; // maybe try $button-secondary-border
     }
@@ -163,6 +169,7 @@
       filter: grayscale(100%);
       opacity: .75;
       cursor: text;
+      background-color: transparent;
     }
 
   }
