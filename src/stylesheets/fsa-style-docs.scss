@@ -129,6 +129,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
       @include reset-li();
       display: inline-block;
+      position: relative;
 
       // scss-lint:disable NestingDepth
       &--floater {
@@ -157,6 +158,17 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
         margin-right: $size-small;
       }
 
+      &--sub {
+        @include breakpoint(L) {
+          &:after {
+            content : '∨';
+            margin-left: $size-base;
+            color: red;
+            outline: 50px solid red;
+          }
+        }
+      }
+
       // scss-lint:disable NestingDepth
       &:hover {
         text-decoration: underline;
@@ -166,9 +178,69 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       &:hover,
       &:hover:visited,
       &:visited {
-
         color: $color-fsa-white;
+      }
 
+    }
+
+    &-sub {
+
+      display: none;
+
+      @include breakpoint(L) {
+
+        @include reset-ul();
+        display: none;
+        margin: 0;
+        position: absolute;
+        left: -$size-default;
+        top: 100%;
+        background-color: $color-fsa-primary-900;
+        max-height: 50vh;
+        width: 164px;
+        border-top: 1em solid $color-fsa-primary;
+        padding-top: $size-base;
+        padding-bottom: $size-small;
+        overflow: auto;
+
+        .docs__nav--fixed & {
+          max-height: calc(100vh - 42px);
+          border-top-color: $color-fsa-primary-900;
+        }
+
+        .docs__primary-nav-item--sub:hover & {
+          display: block;
+        }
+
+      }
+
+    }
+
+    &-sub-item {
+      @include breakpoint(L) {
+        @include reset-li();
+      }
+      // &:first-child {
+      //   margin-top: -($size-small);
+      // }
+    }
+
+    &-sub-link {
+
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: $size-base $size-default;
+
+      &:active,
+      &:hover,
+      &:hover:visited,
+      &:visited {
+        color: $color-fsa-white;
+      }
+
+      &:hover {
+        text-decoration: underline;
       }
 
     }
