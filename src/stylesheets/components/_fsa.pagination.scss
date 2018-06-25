@@ -39,8 +39,11 @@
   &__list {
 
     @include reset-ul();
-    white-space: nowrap;
-    display: flex;
+
+    @media (min-width: 20em) {
+      white-space: nowrap;
+      display: flex;
+    }
 
     @include breakpoint(S) {
       margin-left: -$size-default;
@@ -70,12 +73,16 @@
 
     &--previous,
     &--next {
-      display: inline-block;
+      display: block;
+      @media (min-width: 20em) {
+        display: inline-block;
+      }
     }
 
     &--previous {
-      padding-right: $padding;
+      margin-bottom: $padding;
       @media (min-width: 20em) {
+        margin-bottom: 0;
         padding-right: $padding * 5;
       }
       @include breakpoint(S) {
@@ -84,7 +91,6 @@
     }
 
     &--next {
-      padding-left: $padding;
       @media (min-width: 20em) {
         padding-left: $padding * 5;
       }
