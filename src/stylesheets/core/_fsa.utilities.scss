@@ -478,3 +478,14 @@ $breakpoints: (
     border: 0;
   }
 }
+
+@mixin fudgeMargin($fudge-amount: $size-extra-large) {
+  // add space above a jump target, e.g. href="#target-id". Helpful when you
+  // don't want the top of your target flush with the viewport top
+  &:before {
+    content: '';
+    display: block;
+    height: $fudge-amount;
+    margin: (-$fudge-amount) 0 0;
+  }
+}
