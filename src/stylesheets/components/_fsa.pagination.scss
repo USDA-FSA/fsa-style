@@ -169,8 +169,9 @@
     }
 
     &--disabled {
+      color: $color-base;
       filter: grayscale(100%);
-      opacity: .75;
+      opacity: .4;
       cursor: text;
       background-color: transparent;
     }
