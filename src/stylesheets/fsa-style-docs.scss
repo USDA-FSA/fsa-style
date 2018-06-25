@@ -221,6 +221,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
           border-top-color: $color-fsa-primary-900;
         }
 
+        .docs__primary-nav-item--sub:focus-within &,
         .docs__primary-nav-item--sub:hover & {
           display: block;
         }
