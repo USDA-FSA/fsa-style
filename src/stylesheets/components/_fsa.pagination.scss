@@ -49,11 +49,8 @@
 
     @include breakpoint(M) {
       display: inline-block;
-      outline: 1px solid red;
       @supports (display: inline-flex) {
         display: inline-flex;
-        top: 0;
-        outline: 1px solid green;
       }
     }
 
