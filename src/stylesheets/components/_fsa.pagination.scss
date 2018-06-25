@@ -100,7 +100,7 @@
     & {
 
       @include reset-button();
-      cursor: initial;
+      cursor: text;
       color: $color-fsa-link;
       background-color: white;
       box-shadow: 0 0 0 1px $color-fsa-tertiary-200 inset; // maybe try $button-secondary-border
