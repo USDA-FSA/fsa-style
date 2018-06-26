@@ -27,7 +27,7 @@ whiteout__forEach(whiteout__show, function (index, value) {
   }, false);
 });
 
-whiteout__forEach(whiteout_dismiss, function (index, value) {
+whiteout__forEach(whiteout__dismiss, function (index, value) {
   var _el = value;
   _el.addEventListener('click', function(e){
     var _whiteout = document.getElementById('fsa-whiteout');
