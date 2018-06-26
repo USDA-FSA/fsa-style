@@ -50,6 +50,43 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   }
 
+  &__anchor {
+
+    display: none;
+
+    @include breakpoint(L) {
+
+      display: block;
+      float: left;
+      text-align: right;
+      width: $size-large;
+      margin-left: -$size-large;
+      padding-left: $size-small;
+      padding-right: $size-small;
+      opacity: 0;
+
+      &:link,
+      &:visited {
+        text-decoration: none;
+        color: $color-fsa-link;
+      }
+
+      &:focus,
+      &:active,
+      &:hover {
+        opacity: 1;
+        color: $color-fsa-link-hover;
+      }
+
+      .docs__figure:hover &,
+      .docs__figure-group:hover & {
+        opacity: 1;
+      }
+
+    }
+
+  }
+
   &__figure-group {
     margin-top: $size-large;
     border-bottom: 2px solid $color-fsa-tertiary-300;
