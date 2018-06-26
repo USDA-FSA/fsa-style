@@ -12,14 +12,14 @@
 var selectMulti__triggers = document.querySelectorAll('[data-behavior~="select-multi"]');
 
 // Utility method to loop thru NodeList correctly
-var forEach = function (array, callback, scope) {
+var selectMulti__forEach = function (array, callback, scope) {
   for (var i = 0; i < array.length; i++) {
     callback.call(scope, i, array[i]); // passes back stuff we need
   }
 };
 
 // Utilitity method
-var getClosest = function(elem, selector){
+var selectMulti__getClosest = function(elem, selector){
 
     // Element.matches() polyfill
     if (!Element.prototype.matches) {
@@ -46,13 +46,13 @@ var getClosest = function(elem, selector){
 };
 
 // iterate thru trigger elements and set click handler
-forEach(selectMulti__triggers, function(index, value) {
+selectMulti__forEach(selectMulti__triggers, function(index, value) {
   var _el = value;
   _el.addEventListener('click', function(e){
 
     var _check = e.target;
     //var _parent = el.closest('.fsa-select-multi');
-    var _parent = getClosest(_el, '.fsa-select-multi');
+    var _parent = selectMulti__getClosest(_el, '.fsa-select-multi');
     var _selectAll = _parent.querySelector('[data-behavior~="select-multi-all"]');
 
     if(_el != _selectAll){
@@ -83,7 +83,7 @@ forEach(selectMulti__triggers, function(index, value) {
 
     } else {
       var _cbs = _parent.querySelectorAll('[data-behavior~="select-multi"]');
-      forEach(_cbs, function (index, value) {
+      selectMulti__forEach(_cbs, function (index, value) {
         value.checked = _selectAll.checked;
       });
       _selectAll.indeterminate = false;
@@ -95,11 +95,11 @@ forEach(selectMulti__triggers, function(index, value) {
 function selectMulti__setState(){
 
   var _selectAll = document.querySelectorAll('[data-behavior~="select-multi-all"]');
-  forEach(_selectAll, function (index, value) {
+  selectMulti__forEach(_selectAll, function (index, value) {
 
     //console.log(typeof value);
     //var _parent = value.closest('.fsa-select-multi');
-    var _parent = getClosest(value, '.fsa-select-multi');
+    var _parent = selectMulti__getClosest(value, '.fsa-select-multi');
     var _selectAll = value;
 
     var _len = _parent.querySelectorAll('[data-behavior~="select-multi"]').length;

@@ -5,25 +5,25 @@
 
 
 // Utility method to loop thru NodeList correctly
-var forEach = function (array, callback, scope) {
+var steppedControl__forEach = function (array, callback, scope) {
   for (var i = 0; i < array.length; i++) {
     callback.call(scope, i, array[i]); // passes back stuff we need
   }
 };
 
-var stickySteps = document.querySelectorAll('.fsa-stepped-control--sticky');
+var steppedControl__elements = document.querySelectorAll('.fsa-stepped-control--sticky');
 
-function setComponentStyle() {
+function steppedControl__setStyle() {
 
   // iterate thru each stepped control on page
-  forEach(stickySteps, function(index, value) {
+  steppedControl__forEach(steppedControl__elements, function(index, value) {
     var _el = value;
   
-    var viewportOffset = _el.getBoundingClientRect();   
-    var scHeight = _el.offsetHeight;
-    var scBottomPosition = window.innerHeight - (viewportOffset.top + scHeight);
+    var _viewportOffset = _el.getBoundingClientRect();   
+    var _scHeight = _el.offsetHeight;
+    var _scBottomPosition = window.innerHeight - (_viewportOffset.top + _scHeight);
     
-    if (scBottomPosition > 12) {
+    if (_scBottomPosition > 12) {
       
       if(!_el.classList.contains('fsa-stepped-control--unstuck')){
         _el.classList.add('fsa-stepped-control--unstuck');
@@ -38,29 +38,27 @@ function setComponentStyle() {
 }
 
 // check if SC component exists on page
-if(stickySteps.length){
+if(steppedControl__elements.length){
 
   window.addEventListener('scroll', function() {
-    setComponentStyle();
+    steppedControl__setStyle();
   });
   
-  var modals = document.querySelectorAll('.fsa-modal');
-  forEach(modals, function(index, value) {
+  var steppedControl__modals = document.querySelectorAll('.fsa-modal');
+  steppedControl__forEach(steppedControl__modals, function(index, value) {
     var _el = value;
     _el.addEventListener("scroll", function(){
-      setComponentStyle();
+      steppedControl__setStyle();
     });
   });
 
   document.addEventListener("DOMContentLoaded", function(){
-    setComponentStyle();
+    steppedControl__setStyle();
   });
 
   window.addEventListener('resize', function() {
-    setComponentStyle();
+    steppedControl__setStyle();
   });
-
-  
 
 }
 

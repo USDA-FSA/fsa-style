@@ -17,14 +17,14 @@ var modal__closeButtons = document.querySelectorAll('[data-behavior~="close-moda
 
 
 // Utility method to loop thru NodeList correctly
-var forEach = function (array, callback, scope) {
+var modal__forEach = function (array, callback, scope) {
   for (var i = 0; i < array.length; i++) {
     callback.call(scope, i, array[i]); // passes back stuff we need
   }
 };
 
 // Utilitity method
-var getClosest = function(elem, selector){
+var modal__getClosest = function(elem, selector){
 
     // Element.matches() polyfill
     if (!Element.prototype.matches) {
@@ -51,7 +51,7 @@ var getClosest = function(elem, selector){
 };
 
 // iterate thru trigger elements and set click handler
-forEach(modal__triggers, function(index, value) {
+modal__forEach(modal__triggers, function(index, value) {
   var _el = value;
   _el.addEventListener('click', function(e){
     // set private variables
@@ -67,11 +67,11 @@ forEach(modal__triggers, function(index, value) {
 
 
 // iterate thru trigger elements and set click handler
-forEach(modal__closeButtons, function (index, value) {
+modal__forEach(modal__closeButtons, function (index, value) {
   var _el = value;
   _el.addEventListener('click', function(e){
     // pass associated modal to method
-    var _m = getClosest(e.currentTarget, '.fsa-modal');
+    var _m = modal__getClosest(e.currentTarget, '.fsa-modal');
     modal__close( _m );
   }, false);
 });
