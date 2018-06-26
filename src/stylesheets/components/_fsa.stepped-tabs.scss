@@ -1,0 +1,240 @@
+.fsa-stepped-tabs {
+
+  $colorComplete: $color-fsa-secondary-300;
+  $colorActive: $color-fsa-secondary;
+  $colorFuture: $color-fsa-secondary-100;
+  $colorFutureText: transparentize($color-fsa-base, .5); // $color-fsa-secondary-900
+  $colorDark: $color-fsa-secondary-900;
+  $labelPadding: $size-small;
+
+  $arrowMagicNumber: 2.1rem;
+
+  & {
+    display: none;
+    margin: $size-medium 0;
+    @media (min-width: 20em) {
+      display: block;
+    }
+  }
+
+  &__bd {}
+
+  &__list {
+
+    margin: 0;
+    padding: 0;
+    display: table;
+    width: 100%;
+    list-style: none;
+
+    // scss-lint:disable SelectorFormat
+    .fsa-stepped-tabs--justified & {
+      @include breakpoint(L) {
+        table-layout: fixed;
+      }
+    }
+
+  }
+
+  &__item {
+    display: table-cell;
+    vertical-align: bottom;
+  }
+
+  &__label {
+
+    & {
+      @include reset-button();
+      cursor: initial;
+      display: block;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      padding: ($labelPadding - .1rem) $labelPadding ($labelPadding);
+      background-color: $color-fsa-tertiary-100;
+      color: $color-fsa-base;
+      position: relative;
+      font-size: $font-size-0;
+    }
+
+    @include breakpoint(M) {
+      font-size: $font-size-2;
+    }
+
+    @include breakpoint(M, down) {
+      padding-left: $labelPadding + ($size-base / 2);
+    }
+
+    @include breakpoint(L) {
+      font-weight: $font-bold;
+      font-size: $font-size-3;
+    }
+
+    &:before,
+    &:after {
+
+      pointer-events: none;
+      position: absolute;
+      content: '';
+      top: -3px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: $arrowMagicNumber 0 $arrowMagicNumber ($arrowMagicNumber - .9rem); // super magical number
+      z-index: 1;
+
+      @include breakpoint(M) {
+        top: -1px;
+      }
+
+      @include breakpoint(L) {
+        top: 0;
+      }
+
+
+    }
+
+    &:before {
+
+      left: -12px;
+      border-color: $color-fsa-site-bg $color-fsa-site-bg $color-fsa-site-bg transparent;
+
+      .fsa-stepped-tabs__item:first-child & {
+        display: none;
+      }
+
+    }
+
+    &:after {
+
+      right: -12px;
+      border-color: transparent transparent transparent $color-fsa-site-bg;
+
+      .fsa-stepped-tabs__item:last-child & {
+        display: none;
+      }
+
+    }
+
+    &--complete {
+
+      background-color: $colorComplete;
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, .6);
+      // scss-lint:disable ImportantRule
+      color: $color-fsa-white !important;
+
+      &:focus,
+      &:visited,
+      &:active,
+      &:hover {
+        // scss-lint:disable ImportantRule
+        &:not(span,div) {
+          color: $color-fsa-white;
+        }
+      }
+
+      &:focus,
+      &:hover {
+        &:not(span,div) {
+          outline: 0;
+          background-color: $colorDark;
+        }
+      }
+
+    }
+
+    &--active {
+
+      background-color: $colorActive;
+      text-shadow: 1px 1px 0 $color-black;
+      color: $color-fsa-white;
+
+      &:focus,
+      &:visited,
+      &:active,
+      &:hover {
+        // scss-lint:disable ImportantRule
+        &:not(span,div) {
+          color: $color-fsa-white !important;
+        }
+      }
+
+      &:hover {
+        &:not(span,div) {
+          background-color: $colorDark;
+        }
+      }
+
+    }
+
+    &--incomplete {
+      background-color: $colorFuture;
+      color: $colorFutureText;
+    }
+
+    .fsa-stepped-tabs__item:first-child & {
+
+      padding-right: ( ($labelPadding * 2) + ($labelPadding / 3) );
+
+      @include breakpoint(M, down) {
+        padding-left: ($labelPadding / 2);
+      }
+
+    }
+
+    &:not(span, div) {
+      cursor: pointer;
+    }
+
+  }
+
+  &__icon {
+
+    display: none;
+
+    @include breakpoint(L) {
+      display: inline-block;
+      width: ($size-medium - $size-base);
+      margin-right: $size-base;
+      vertical-align: bottom;
+      filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, .6));
+
+      // scss-lint:disable SelectorFormat
+      .fsa-stepped-tabs__label--incomplete & {
+        filter: none;
+      }
+
+    }
+
+    // scss-lint:disable SelectorFormat
+    &.fsa-icon--contrast {
+      transform: scaleX(-1);
+    }
+
+  }
+
+  &__text {
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%;
+    display: inline-block;
+    vertical-align: middle;
+
+    @include breakpoint(L) {
+      max-width: 75%;
+    }
+
+  }
+
+}
+
+.fsa-stepped-tabs-note {
+  border: 1px solid $color-fsa-red;
+  background-color: $color-fsa-red-100;
+  padding: $size-small;
+  @media (min-width: 20em) {
+    display: none;
+  }
+}

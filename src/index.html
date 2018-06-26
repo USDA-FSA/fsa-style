@@ -130,6 +130,7 @@
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__form-fields">Form Fields</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__button-group">Button Group</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__pagination">Pagination</a></li>
+                <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__stepped-tabs">Stepped Tabs</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__stepped-control">Stepped Control</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__tables">Tables</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__content-tabs">Content Tabs</a></li>
@@ -2522,6 +2523,273 @@
                   <a class="fsa-pagination__label fsa-pagination__label--next" href="link.html">Next</a>
                 </li>
               </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="docs__jump-target" id="component__stepped-tabs">
+        <div class="docs__bd docs__section-title">
+          <h3 class="docs__figure"><a class="docs__anchor" aria-hidden="true" href="#component__stepped-tabs">#</a>Stepped Tabs</h3>
+          <a class="fsa-btn fsa-btn--secondary fsa-btn--small docs__section-link" href="http://usda-fsa.github.io/fsa-design-system/components/stepped-tabs">Docs</a>
+        </div>
+        <div class="docs__bd">
+          <p class="docs__code-sample"><code>class="fsa-stepped-tabs fsa-stepped-tabs--[variation]"</code></p>
+          <p class="fsa-stepped-tabs-note"><strong>NOTE:</strong> This component is suppressed on extremely narrow devices, i.e. <abbr title="less than">&lt;</abbr>320px</p>
+          <h4 class="docs__sub_style">Default</h4>
+          <nav aria-label="Breadcrumbs">
+            <div class="fsa-stepped-tabs">
+              <div class="fsa-stepped-tabs__bd">
+                <ol class="fsa-stepped-tabs__list">
+                  <li class="fsa-stepped-tabs__item">
+                    <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--complete" href="link.html">
+                      <span class="fsa-stepped-tabs__text">Lor</span>
+                    </a>
+                  </li>
+                  <li class="fsa-stepped-tabs__item">
+                    <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" href="link.html" aria-current="true">
+                      <span class="fsa-stepped-tabs__text">Em ipsum</span>
+                    </a>
+                  </li>
+                  <li class="fsa-stepped-tabs__item">
+                    <span class="fsa-stepped-tabs__label fsa-stepped-tabs__label--incomplete">
+                      <span class="fsa-stepped-tabs__text">Dol</span>
+                    </span>
+                  </li>
+                  <li class="fsa-stepped-tabs__item">
+                    <span class="fsa-stepped-tabs__label fsa-stepped-tabs__label--incomplete">
+                      <span class="fsa-stepped-tabs__text">Or Sit Amet</span>
+                    </span>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </nav>
+          <h4 class="docs__sub_style">Buttons</h4>
+          <p>Actionable steps can be <code title="anchor element">&lt;a&gt;</code> or <code title="button element">&lt;button&gt;</code>, depending on how your system is set up.</p>
+          <nav aria-label="Breadcrumbs">
+            <div class="fsa-stepped-tabs">
+              <div class="fsa-stepped-tabs__bd">
+                <ol class="fsa-stepped-tabs__list">
+                  <li class="fsa-stepped-tabs__item">
+                    <button class="fsa-stepped-tabs__label fsa-stepped-tabs__label--complete" type="button">
+                      <span class="fsa-stepped-tabs__text">Lor</span>
+                    </button>
+                  </li>
+                  <li class="fsa-stepped-tabs__item">
+                    <button class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" type="button" aria-current="true">
+                      <span class="fsa-stepped-tabs__text">Em ipsum</span>
+                    </button>
+                  </li>
+                  <li class="fsa-stepped-tabs__item">
+                    <span class="fsa-stepped-tabs__label fsa-stepped-tabs__label--incomplete">
+                      <span class="fsa-stepped-tabs__text">Dol</span>
+                    </span>
+                  </li>
+                  <li class="fsa-stepped-tabs__item">
+                    <span class="fsa-stepped-tabs__label fsa-stepped-tabs__label--incomplete">
+                      <span class="fsa-stepped-tabs__text">Or Sit Amet</span>
+                    </span>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </nav>
+          <h4 class="docs__sub_style">Justified</h4>
+          <nav aria-label="Breadcrumbs">
+            <div class="fsa-stepped-tabs fsa-stepped-tabs--justified">
+              <div class="fsa-stepped-tabs__bd">
+                <ol class="fsa-stepped-tabs__list">
+                  <li class="fsa-stepped-tabs__item">
+                    <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--complete" href="link.html">
+                      <span class="fsa-stepped-tabs__text">Lor</span>
+                    </a>
+                  </li>
+                  <li class="fsa-stepped-tabs__item">
+                    <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" href="link.html" aria-current="true">
+                      <span class="fsa-stepped-tabs__text">Em ipsum</span>
+                    </a>
+                  </li>
+                  <li class="fsa-stepped-tabs__item">
+                    <span class="fsa-stepped-tabs__label fsa-stepped-tabs__label--incomplete">
+                      <span class="fsa-stepped-tabs__text">Dol</span>
+                    </span>
+                  </li>
+                  <li class="fsa-stepped-tabs__item">
+                    <span class="fsa-stepped-tabs__label fsa-stepped-tabs__label--incomplete">
+                      <span class="fsa-stepped-tabs__text">Or Sit Amet</span>
+                    </span>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </nav>
+          <h4 class="docs__sub_style">Actionable: none</h4>
+          <div class="fsa-stepped-tabs">
+            <div class="fsa-stepped-tabs__bd">
+              <ol class="fsa-stepped-tabs__list">
+                <li class="fsa-stepped-tabs__item">
+                  <span class="fsa-stepped-tabs__label fsa-stepped-tabs__label--complete">
+                    <span class="fsa-stepped-tabs__text">Lor</span>
+                  </span>
+                </li>
+                <li class="fsa-stepped-tabs__item">
+                  <span class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" aria-current="true">
+                    <span class="fsa-stepped-tabs__text">Em ipsum</span>
+                  </span>
+                </li>
+                <li class="fsa-stepped-tabs__item">
+                  <span class="fsa-stepped-tabs__label fsa-stepped-tabs__label--incomplete">
+                    <span class="fsa-stepped-tabs__text">Dol</span>
+                  </span>
+                </li>
+                <li class="fsa-stepped-tabs__item">
+                  <span class="fsa-stepped-tabs__label fsa-stepped-tabs__label--incomplete">
+                    <span class="fsa-stepped-tabs__text">Or Sit Amet</span>
+                  </span>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <h4 class="docs__sub_style">Actionable: all</h4>
+          <nav aria-label="Breadcrumbs">
+            <div class="fsa-stepped-tabs fsa-stepped-tabs--justified">
+              <div class="fsa-stepped-tabs__bd">
+                <ol class="fsa-stepped-tabs__list">
+                  <li class="fsa-stepped-tabs__item">
+                    <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--complete" href="link.html">
+                      <span class="fsa-stepped-tabs__text">Lor</span>
+                    </a>
+                  </li>
+                  <li class="fsa-stepped-tabs__item">
+                    <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" href="link.html" aria-current="true">
+                      <span class="fsa-stepped-tabs__text">Em ipsum</span>
+                    </a>
+                  </li>
+                  <li class="fsa-stepped-tabs__item">
+                    <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--incomplete" href="link.html">
+                      <span class="fsa-stepped-tabs__text">Dol</span>
+                    </a>
+                  </li>
+                  <li class="fsa-stepped-tabs__item">
+                    <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--incomplete" href="link.html">
+                      <span class="fsa-stepped-tabs__text">Or Sit Amet</span>
+                    </a>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </nav>
+          <h4 class="docs__sub_style">Samples</h4>
+          <nav aria-label="Breadcrumbs">
+            <div class="fsa-stepped-tabs fsa-stepped-tabs--justified">
+              <div class="fsa-stepped-tabs__bd">
+                <ol class="fsa-stepped-tabs__list">
+                  <li class="fsa-stepped-tabs__item">
+                    <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" href="link.html">
+                      <span class="fsa-stepped-tabs__text">Discovery</span>
+                    </a>
+                  </li>
+                  <li class="fsa-stepped-tabs__item">
+                    <span class="fsa-stepped-tabs__label fsa-stepped-tabs__label--incomplete">
+                      <span class="fsa-stepped-tabs__text">Adjustments</span>
+                    </span>
+                  </li>
+                  <li class="fsa-stepped-tabs__item">
+                    <span class="fsa-stepped-tabs__label fsa-stepped-tabs__label--incomplete">
+                      <span class="fsa-stepped-tabs__text">Review</span>
+                    </span>
+                  </li>
+                  <li class="fsa-stepped-tabs__item">
+                    <span class="fsa-stepped-tabs__label fsa-stepped-tabs__label--incomplete">
+                      <span class="fsa-stepped-tabs__text">Publish</span>
+                    </span>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </nav>
+          <nav aria-label="Breadcrumbs">
+            <div class="fsa-stepped-tabs fsa-stepped-tabs--justified">
+              <div class="fsa-stepped-tabs__bd">
+                <ol class="fsa-stepped-tabs__list">
+                  <li class="fsa-stepped-tabs__item">
+                    <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--complete" href="link.html">
+                      <span class="fsa-stepped-tabs__text">Discovery</span>
+                    </a>
+                  </li>
+                  <li class="fsa-stepped-tabs__item">
+                    <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" href="link.html">
+                      <span class="fsa-stepped-tabs__text">Adjustments</span>
+                    </a>
+                  </li>
+                  <li class="fsa-stepped-tabs__item">
+                    <span class="fsa-stepped-tabs__label fsa-stepped-tabs__label--incomplete">
+                      <span class="fsa-stepped-tabs__text">Review</span>
+                    </span>
+                  </li>
+                  <li class="fsa-stepped-tabs__item">
+                    <span class="fsa-stepped-tabs__label fsa-stepped-tabs__label--incomplete">
+                      <span class="fsa-stepped-tabs__text">Publish</span>
+                    </span>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </nav>
+          <nav aria-label="Breadcrumbs">
+            <div class="fsa-stepped-tabs fsa-stepped-tabs--justified">
+              <div class="fsa-stepped-tabs__bd">
+                <ol class="fsa-stepped-tabs__list">
+                  <li class="fsa-stepped-tabs__item">
+                    <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--complete" href="link.html">
+                      <span class="fsa-stepped-tabs__text">Discovery</span>
+                    </a>
+                  </li>
+                  <li class="fsa-stepped-tabs__item">
+                    <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--complete" href="link.html">
+                      <span class="fsa-stepped-tabs__text">Adjustments</span>
+                    </a>
+                  </li>
+                  <li class="fsa-stepped-tabs__item">
+                    <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" href="link.html">
+                      <span class="fsa-stepped-tabs__text">Review</span>
+                    </a>
+                  </li>
+                  <li class="fsa-stepped-tabs__item">
+                    <span class="fsa-stepped-tabs__label fsa-stepped-tabs__label--incomplete">
+                      <span class="fsa-stepped-tabs__text">Publish</span>
+                    </span>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </nav>
+          <nav aria-label="Breadcrumbs">
+            <div class="fsa-stepped-tabs fsa-stepped-tabs--justified">
+              <div class="fsa-stepped-tabs__bd">
+                <ol class="fsa-stepped-tabs__list">
+                  <li class="fsa-stepped-tabs__item">
+                    <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--complete" href="link.html">
+                      <span class="fsa-stepped-tabs__text">Discovery</span>
+                    </a>
+                  </li>
+                  <li class="fsa-stepped-tabs__item">
+                    <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--complete" href="link.html">
+                      <span class="fsa-stepped-tabs__text">Adjustments</span>
+                    </a>
+                  </li>
+                  <li class="fsa-stepped-tabs__item">
+                    <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--complete" href="link.html">
+                      <span class="fsa-stepped-tabs__text">Review</span>
+                    </a>
+                  </li>
+                  <li class="fsa-stepped-tabs__item">
+                    <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" href="link.html">
+                      <span class="fsa-stepped-tabs__text">Publish</span>
+                    </a>
+                  </li>
+                </ol>
+              </div>
             </div>
           </nav>
         </div>
