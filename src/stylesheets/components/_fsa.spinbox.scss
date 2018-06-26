@@ -1,0 +1,242 @@
+.pcp-spinbox {
+
+  $button-width: $size-medium + .1rem;
+  $button-width-large: $size-large + .1rem;
+  $button-width-small: ($size-large / 2) + .1rem;
+  $button-bgc: $color-fsa-white;
+  $button-bgc-focus: $color-fsa-tertiary-100;
+  $button-border-color: $form-outline-color;
+  $button-border-color-hover: $form-focus-color;
+  $button-arrow-color: $form-focus-color;
+  $button-arrow-size: 5px;
+  $button-arrow-size-large: 7px;
+  $button-arrow-size-small: 4px;
+
+  position: relative;
+  min-width: 8.2rem;
+  min-width: 10ch; // for browsers that support ch unit
+  font-size: $font-size-3;
+
+  &--small {
+    font-size: $font-size-2;
+    min-width: 7.2rem;
+    min-width: 9.5ch;
+  }
+
+  &--large {
+    font-size: $font-size-4;
+    min-width: 10rem;
+    min-width: 11.5ch;
+  }
+
+  &__number {
+
+    width: 90%;
+    width: calc(100% - #{$button-width});
+
+    // scss-lint:disable SelectorFormat
+    .pcp-spinbox--small & {
+      width: calc(100% - #{$button-width-small});
+    }
+
+    .pcp-spinbox--large & {
+      width: calc(100% - #{$button-width-large});
+    }
+
+  }
+
+  &__input {
+
+    display: block;
+    width: 100%;
+    appearance: initial;
+    -moz-appearance: textfield;
+
+    &[disabled] {}
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      display: none;
+    }
+
+    &::-webkit-inner-spin-button {
+      margin-top: -1px;
+      margin-right: $size-base;
+    }
+
+    &::-ms-clear {
+      display: none;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    // scss-lint:disable SelectorFormat
+    .pcp-spinbox--right & {
+      text-align: right;
+    }
+
+    .pcp-adjust__spinbox & {
+
+      // background-color: transparent;
+      // border-color: transparentize($form-outline-color, .5);
+
+      &:hover,
+      &:focus {
+        // background-color: $color-white;
+        &:not([disabled]) {
+          border-color: $button-border-color-hover;
+        }
+      }
+
+    }
+
+    .pcp-adjust__spinbox--focused & {
+      border-color: $color-fsa-tertiary-200;
+      background-color: $color-white;
+    }
+
+  }
+
+  &__actions {
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    // .pcp-adjust__spinbox & {
+    //   opacity: .4;
+    //   pointer-events: none;
+    // }
+
+    // scss-lint:disable SelectorFormat
+    // .pcp-adjust__spinbox--focused & {
+    //   opacity: 1;
+    //   pointer-events: initial;
+    // }
+
+  }
+
+  &__btn {
+
+    display: block;
+    appearance: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    height: 50%;
+    background-color: $button-bgc;
+    border: 1px solid $button-border-color;
+    border-left: 0;
+    line-height: 1;
+    width: $button-width;
+
+    // scss-lint:disable SelectorFormat
+    .pcp-spinbox--small & {
+      width: $button-width-small;
+    }
+
+    // scss-lint:disable SelectorFormat
+    .pcp-spinbox--large & {
+      width: $button-width-large;
+    }
+
+    &[disabled] {
+      opacity: .5;
+      background-color: $form-disabled-bg-color;
+      cursor: not-allowed;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $button-bgc-focus;
+      outline: 0;
+    }
+
+    &:active {
+      color: black;
+      background-color: $color-fsa-secondary-200;
+    }
+
+    &:focus {
+      border-color: $form-focus-color;
+      box-shadow: 0 0 0 1px $form-focus-color inset, 1px 0 0 1px $form-focus-color inset;
+      outline: 0;
+    }
+
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 0;
+      height: 0;
+      border-left: $button-arrow-size solid transparent;
+      border-right: $button-arrow-size solid transparent;
+      line-height: 1;
+      margin-top: -($size-base / 2);
+
+      // scss-lint:disable SelectorFormat
+      .pcp-spinbox--small & {
+        border-left: $button-arrow-size-small solid transparent;
+        border-right: $button-arrow-size-small solid transparent;
+        margin-top: -($size-base + .2rem);
+      }
+
+      // scss-lint:disable SelectorFormat
+      .pcp-spinbox--large & {
+        border-left: $button-arrow-size-large solid transparent;
+        border-right: $button-arrow-size-large solid transparent;
+      }
+
+    }
+
+    &--decrement {
+
+      border-top: 0;
+
+      &:focus {
+        box-shadow: 0 0 0 1px $form-focus-color inset, 0 1px 0 1px $form-focus-color inset, 1px 0 0 1px $form-focus-color inset;
+      }
+
+    }
+
+    &--increment:before {
+
+      border-bottom: $button-arrow-size solid $button-arrow-color;
+
+      .pcp-spinbox--small & {
+        border-bottom-width: $button-arrow-size-small;
+      }
+
+      .pcp-spinbox--large & {
+        border-bottom-width: $button-arrow-size-large;
+        // BOO
+        margin-top: -($size-base + .1rem);
+      }
+
+    }
+
+    &--decrement:before {
+
+      border-top: $button-arrow-size solid $button-arrow-color;
+
+      .pcp-spinbox--small & {
+        border-top-width: $button-arrow-size-small;
+        margin-top: -($size-base + .1rem);
+      }
+
+      .pcp-spinbox--large & {
+        border-top-width: $button-arrow-size-large;
+        // BOO
+        margin-top: -($size-base + .1rem);
+      }
+
+    }
+
+  }
+
+}

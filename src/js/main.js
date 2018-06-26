@@ -19,3 +19,4 @@ var WhiteoutComponent = require('./components/fsa-whiteout');
 var SelectMultipleComponent = require('./components/fsa-select-multi');
 var SteppedControl = require('./components/fsa-stepped-control');
 var ColorDocs = require('./components/docs-color');
+var Spinbox = require('./components/fsa-spinbox');
