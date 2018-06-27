@@ -216,6 +216,10 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
             position: relative;
             top: 3px;
           }
+          _:-ms-fullscreen, :root &:after {
+            // IE 11 doesn't support :focus-within, so let's just suppress it
+            display: none;
+          }
         }
       }
 
