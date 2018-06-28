@@ -275,9 +275,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       @include breakpoint(L) {
         @include reset-li();
       }
-      // &:first-child {
-      //   margin-top: -($size-small);
-      // }
     }
 
     &-sub-link {
