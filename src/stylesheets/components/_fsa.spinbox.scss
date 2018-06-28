@@ -33,8 +33,10 @@
 
   &__number {
 
-    width: 90%;
-    width: calc(100% - #{$button-width});
+    & {
+      width: 90%;
+      width: calc(100% - #{$button-width});
+    }
 
     // scss-lint:disable SelectorFormat
     .fsa-spinbox--small & {
@@ -49,10 +51,12 @@
 
   &__input {
 
-    display: block;
-    width: 100%;
-    appearance: initial;
-    -moz-appearance: textfield;
+    & {
+      display: block;
+      width: 100%;
+      appearance: initial;
+      -moz-appearance: textfield;
+    }
 
     &[disabled] {}
 
@@ -103,39 +107,28 @@
   }
 
   &__actions {
-
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
-
-    // .fsa-adjust__spinbox & {
-    //   opacity: .4;
-    //   pointer-events: none;
-    // }
-
-    // scss-lint:disable SelectorFormat
-    // .fsa-adjust__spinbox--focused & {
-    //   opacity: 1;
-    //   pointer-events: initial;
-    // }
-
   }
 
   &__btn {
 
-    display: block;
-    appearance: none;
-    border: 0;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    height: 50%;
-    background-color: $button-bgc;
-    border: 1px solid $button-border-color;
-    border-left: 0;
-    line-height: 1;
-    width: $button-width;
+    & {
+      display: block;
+      appearance: none;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      height: 50%;
+      background-color: $button-bgc;
+      border: 1px solid $button-border-color;
+      border-left: 0;
+      line-height: 1;
+      width: $button-width;
+    }
 
     // scss-lint:disable SelectorFormat
     .fsa-spinbox--small & {
@@ -148,7 +141,6 @@
     }
 
     &[disabled] {
-      opacity: .5;
       background-color: $form-disabled-bg-color;
       cursor: not-allowed;
     }
@@ -170,7 +162,13 @@
       outline: 0;
     }
 
+    &[disabled]:before {
+      opacity: .5;
+      filter: grayscale(100);
+    }
+
     &:before {
+
       content: '';
       display: inline-block;
       vertical-align: middle;
