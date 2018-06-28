@@ -158,7 +158,6 @@
     }
 
     &:active {
-      color: black;
       background-color: $color-fsa-secondary-200;
     }
 
@@ -176,19 +175,12 @@
     &--decrement {
       background-image: url('#{$image-path}/angle-arrow-down-primary.png');
       background-image: url('#{$image-path}/angle-arrow-down-primary.svg');
-    }
-
-    &--increment {}
-
-    &--decrement {
-
       border-top: 0;
-
       &:focus {
         box-shadow: 0 0 0 1px $form-focus-color inset, 0 1px 0 1px $form-focus-color inset, 1px 0 0 1px $form-focus-color inset;
       }
-
     }
+
 
   }
 
