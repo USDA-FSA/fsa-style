@@ -2469,11 +2469,11 @@
           <a class="fsa-btn fsa-btn--secondary fsa-btn--small docs__section-link" href="http://usda-fsa.github.io/fsa-design-system/components/button-group">Docs</a>
         </div>
         <div class="docs__bd">
-          <p class="docs__code-sample"><code>&lt;span class="<strong>fsa-btn-group</strong>" role="group" aria-label="Label describing this group"&gt;<br>&nbsp;&nbsp;&lt;button class="<strong>fsa-btn-group__item</strong>" type="button"&gt;Label&lt;/button&gt;<br>&nbsp;&nbsp;&lt;button class="<strong>fsa-btn-group__item</strong> fsa-btn-group__item<strong>--active</strong>" type="button"&gt;Active label&lt;/button&gt; <em style="color:#75716e">&lt;!--optional--&gt;</em><br>&nbsp;&nbsp;&lt;button class="<strong>fsa-btn-group__item</strong>" type="button"&gt;Label&lt;/button&gt;<br>&lt;/span&gt;</code></p>
+          <p class="docs__code-sample"><code>&lt;span class="<strong>fsa-btn-group</strong>" role="group" aria-label="Label describing this group"&gt;<br>&nbsp;&nbsp;&lt;button class="<strong>fsa-btn-group__item</strong>" type="button"&gt;Label&lt;/button&gt;<br>&nbsp;&nbsp;&lt;button class="<strong>fsa-btn-group__item</strong> fsa-btn-group__item<strong>--active</strong>" <strong>aria-selected="true"</strong> type="button"&gt;Active label&lt;/button&gt; <em style="color:#75716e">&lt;!--optional--&gt;</em><br>&nbsp;&nbsp;&lt;button class="<strong>fsa-btn-group__item</strong>" type="button"&gt;Label&lt;/button&gt;<br>&lt;/span&gt;</code></p>
           <p>
             <span class="fsa-btn-group" role="group" aria-label="Label describing this group">
               <button class="fsa-btn-group__item" type="button">Label</button>
-              <button class="fsa-btn-group__item fsa-btn-group__item--active" type="button">Active label</button>
+              <button class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button">Active label</button>
               <button class="fsa-btn-group__item" type="button">Label</button>
             </span>
           </p>
@@ -3334,7 +3334,7 @@
           <div class="fsa-content-tabs">
             <ul class="fsa-content-tabs__list">
               <li class="fsa-content-tabs__item">
-                <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="#link">
+                <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="#link" aria-current="true">
                   <span class="fsa-content-tabs__label-text">Lorem</span>
                 </a>
               </li>
@@ -3366,7 +3366,7 @@
           <div class="fsa-content-tabs fsa-content-tabs--light">
             <ul class="fsa-content-tabs__list">
               <li class="fsa-content-tabs__item">
-                <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="#link">
+                <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="#link" aria-current="true">
                   <span class="fsa-content-tabs__label-text">Lorem</span>
                 </a>
               </li>
@@ -3398,7 +3398,7 @@
           <div class="fsa-content-tabs fsa-content-tabs--contrast">
             <ul class="fsa-content-tabs__list">
               <li class="fsa-content-tabs__item">
-                <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="#link">
+                <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="#link" aria-current="true">
                   <span class="fsa-content-tabs__label-text">Lorem</span>
                 </a>
               </li>
@@ -3435,7 +3435,7 @@
                 </a>
               </li>
               <li class="fsa-content-tabs__item">
-                <a class="fsa-content-tabs__label fsa-content-tabs__label--small fsa-content-tabs__label--active" href="#link">
+                <a class="fsa-content-tabs__label fsa-content-tabs__label--small fsa-content-tabs__label--active" href="#link" aria-current="true">
                   <span class="fsa-content-tabs__label-text">Ipsum dolor sit amet</span>
                 </a>
               </li>
@@ -3467,7 +3467,7 @@
                 </a>
               </li>
               <li class="fsa-content-tabs__item">
-                <a class="fsa-content-tabs__label fsa-content-tabs__label--large fsa-content-tabs__label--active" href="#link">
+                <a class="fsa-content-tabs__label fsa-content-tabs__label--large fsa-content-tabs__label--active" href="#link" aria-current="true">
                   <span class="fsa-content-tabs__label-text">Ipsum dolor sit amet</span>
                 </a>
               </li>
@@ -3494,7 +3494,7 @@
           <div class="fsa-content-tabs fsa-content-tabs--justified">
             <ul class="fsa-content-tabs__list">
               <li class="fsa-content-tabs__item">
-                <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="#link">
+                <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="#link" aria-current="true">
                   <span class="fsa-content-tabs__label-text">Lorem</span>
                 </a>
               </li>
@@ -3521,7 +3521,7 @@
           <div class="fsa-content-tabs fsa-content-tabs--justified-equal">
             <ul class="fsa-content-tabs__list">
               <li class="fsa-content-tabs__item">
-                <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="#link">
+                <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="#link" aria-current="true">
                   <span class="fsa-content-tabs__label-text">Lorem</span>
                 </a>
               </li>
@@ -3549,7 +3549,7 @@
           <div class="fsa-content-tabs">
             <ul class="fsa-content-tabs__list">
               <li class="fsa-content-tabs__item">
-                <button class="fsa-content-tabs__label fsa-content-tabs__label--active" type="button">
+                <button class="fsa-content-tabs__label fsa-content-tabs__label--active" type="button" aria-current="true">
                   <span class="fsa-content-tabs__label-text">tab 1</span>
                 </button>
               </li>
