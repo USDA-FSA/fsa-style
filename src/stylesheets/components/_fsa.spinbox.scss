@@ -1,8 +1,8 @@
 .fsa-spinbox {
 
   $button-width: $size-medium + .1rem;
-  $button-width-large: $size-large + .1rem;
-  $button-width-small: ($size-large / 2) + .1rem;
+  $button-width-large: $size-large;
+  $button-width-small: ($size-large / 2);
   $button-bgc: $color-fsa-white;
   $button-bgc-focus: $color-fsa-tertiary-100;
   $button-border-color: $form-outline-color;
@@ -129,6 +129,9 @@
       line-height: 1;
       width: $button-width;
       text-align: center;
+      background-size: 45%;
+      background-repeat: no-repeat;
+      background-position: 50%;
     }
 
     // scss-lint:disable SelectorFormat
@@ -139,11 +142,13 @@
     // scss-lint:disable SelectorFormat
     .fsa-spinbox--large & {
       width: $button-width-large;
+      background-size: 37%;
     }
 
     &[disabled] {
       background-color: $form-disabled-bg-color;
       cursor: not-allowed;
+      filter: grayscale(100);
     }
 
     &:hover,
@@ -163,43 +168,12 @@
       outline: 0;
     }
 
-    &[disabled]:before {
-      opacity: .5;
-      filter: grayscale(100);
-    }
-
-    &:before {
-
-      & {
-        content: '';
-        display: inline-block;
-        vertical-align: middle;
-        width: $button-arrow-size;
-        height: $button-arrow-size;
-        background-size: 100%;
-        background-repeat: no-repeat;
-      }
-
-      // scss-lint:disable SelectorFormat
-      .fsa-spinbox--small & {
-        width: $button-arrow-size-small;
-        height: $button-arrow-size-small;
-      }
-
-      // scss-lint:disable SelectorFormat
-      .fsa-spinbox--large & {
-        width: $button-arrow-size-large;
-        height: $button-arrow-size-large;
-      }
-
-    }
-
-    &--increment:before {
+    &--increment {
       background-image: url('#{$image-path}/angle-arrow-up-primary.png');
       background-image: url('#{$image-path}/angle-arrow-up-primary.svg');
     }
 
-    &--decrement:before {
+    &--decrement {
       background-image: url('#{$image-path}/angle-arrow-down-primary.png');
       background-image: url('#{$image-path}/angle-arrow-down-primary.svg');
     }
