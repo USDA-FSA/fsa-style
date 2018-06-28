@@ -4,6 +4,7 @@
 
     @include reset-ul();
     overflow: auto;
+    scroll-behavior: smooth;
     max-height: 190px;
     padding: $size-base 0;
     border: 1px solid $form-outline-color;

@@ -128,6 +128,7 @@
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__select">Select</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__select-multi">Select Multi</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__form-fields">Form Fields</a></li>
+                <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__spinbox">Spinbox</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__button-group">Button Group</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__pagination">Pagination</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__stepped-control">Stepped Control</a></li>
@@ -2326,17 +2327,153 @@
           </div>
         </div>
       </div>
+      <div class="docs__jump-target" id="component__spinbox">
+        <div class="docs__bd docs__section-title">
+          <h3 class="docs__figure"><a class="docs__anchor" aria-hidden="true" href="#component__spinbox">#</a>Spinbox</h3>
+          <a class="fsa-btn fsa-btn--secondary fsa-btn--small docs__section-link" href="http://usda-fsa.github.io/fsa-design-system/components/spinbox">Docs</a>
+        </div>
+        <div class="docs__bd">
+          <div class="fsa-grid">
+            <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+              <h4 class="docs__sub_style">Default</h4>
+              <div class="fsa-spinbox">
+                <div class="fsa-spinbox__number">
+                  <input class="fsa-input fsa-spinbox__input" id="lorem-ipsum-amount__hsus" name="lorem-ipsum-amount" type="number" value="10">
+                </div>
+                <div class="fsa-spinbox__actions" aria-hidden="true">
+                  <button tabindex="-1" class="fsa-spinbox__btn fsa-spinbox__btn--increment" type="button" data-behavior="spinbox-spin" title="Increase"></button>
+                  <button tabindex="-1" class="fsa-spinbox__btn fsa-spinbox__btn--decrement" type="button" data-behavior="spinbox-spin" title="Decrease"></button>
+                </div>
+              </div>
+            </div>
+            <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+              <h4 class="docs__sub_style">Align Right</h4>
+              <div class="fsa-spinbox fsa-spinbox--right">
+                <div class="fsa-spinbox__number">
+                  <input class="fsa-input fsa-spinbox__input" id="lorem-ipsum-amount__9ssd" name="lorem-ipsum-amount" type="number" value="10">
+                </div>
+                <div class="fsa-spinbox__actions" aria-hidden="true">
+                  <button tabindex="-1" class="fsa-spinbox__btn fsa-spinbox__btn--increment" type="button" data-behavior="spinbox-spin" title="Increase"></button>
+                  <button tabindex="-1" class="fsa-spinbox__btn fsa-spinbox__btn--decrement" type="button" data-behavior="spinbox-spin" title="Decrease"></button>
+                </div>
+              </div>
+            </div>
+            <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+              <h4 class="docs__sub_style">Small</h4>
+              <div class="fsa-spinbox fsa-spinbox--small">
+                <div class="fsa-spinbox__number">
+                  <input class="fsa-input fsa-input--small fsa-spinbox__input" id="lorem-ipsum-amount__445648" name="lorem-ipsum-amount__445648" type="number" value="10">
+                </div>
+                <div class="fsa-spinbox__actions" aria-hidden="true">
+                  <button tabindex="-1" class="fsa-spinbox__btn fsa-spinbox__btn--increment" type="button" data-behavior="spinbox-spin" title="Increase"></button>
+                  <button tabindex="-1" class="fsa-spinbox__btn fsa-spinbox__btn--decrement" type="button" data-behavior="spinbox-spin" title="Decrease"></button>
+                </div>
+              </div>
+            </div>
+            <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+              <h4 class="docs__sub_style">Large</h4>
+              <div class="fsa-spinbox fsa-spinbox--large">
+                <div class="fsa-spinbox__number">
+                  <input class="fsa-input fsa-input--large fsa-spinbox__input" id="lorem-ipsum-amount__64539781354" name="lorem-ipsum-amount__64539781354" type="number" value="10">
+                </div>
+                <div class="fsa-spinbox__actions" aria-hidden="true">
+                  <button tabindex="-1" class="fsa-spinbox__btn fsa-spinbox__btn--increment" type="button" data-behavior="spinbox-spin" title="Increase"></button>
+                  <button tabindex="-1" class="fsa-spinbox__btn fsa-spinbox__btn--decrement" type="button" data-behavior="spinbox-spin" title="Decrease"></button>
+                </div>
+              </div>
+            </div>
+            <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+              <h4 class="docs__sub_style">step="5"</h4>
+              <div class="fsa-spinbox">
+                <div class="fsa-spinbox__number">
+                  <input class="fsa-input fsa-spinbox__input" id="lorem-ipsum-amount__5s5s5ga4s4g" name="lorem-ipsum-amount__5s5s5ga4s4g" type="number" value="10" step="5">
+                </div>
+                <div class="fsa-spinbox__actions" aria-hidden="true">
+                  <button tabindex="-1" class="fsa-spinbox__btn fsa-spinbox__btn--increment" type="button" data-behavior="spinbox-spin" title="Increase"></button>
+                  <button tabindex="-1" class="fsa-spinbox__btn fsa-spinbox__btn--decrement" type="button" data-behavior="spinbox-spin" title="Decrease"></button>
+                </div>
+              </div>
+            </div>
+            <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+              <h4 class="docs__sub_style">step="100" min="-400" max="500"</h4>
+              <div class="fsa-spinbox">
+                <div class="fsa-spinbox__number">
+                  <input class="fsa-input fsa-spinbox__input" id="lorem-ipsum-amount__jdj8r8cjd7777" name="lorem-ipsum-amount__jdj8r8cjd7777" type="number" value="-300" step="100" min="-400" max="500">
+                </div>
+                <div class="fsa-spinbox__actions" aria-hidden="true">
+                  <button tabindex="-1" class="fsa-spinbox__btn fsa-spinbox__btn--increment" type="button" data-behavior="spinbox-spin" title="Increase"></button>
+                  <button tabindex="-1" class="fsa-spinbox__btn fsa-spinbox__btn--decrement" type="button" data-behavior="spinbox-spin" title="Decrease"></button>
+                </div>
+              </div>
+            </div>
+            <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+              <h4 class="docs__sub_style">step=".01"</h4>
+              <div class="fsa-spinbox">
+                <div class="fsa-spinbox__number">
+                  <input class="fsa-input fsa-spinbox__input" id="lorem-ipsum-amount__5yhsgret" name="lorem-ipsum-amount__5yhsgret" type="number" value="1.23" step=".01">
+                </div>
+                <div class="fsa-spinbox__actions" aria-hidden="true">
+                  <button tabindex="-1" class="fsa-spinbox__btn fsa-spinbox__btn--increment" type="button" data-behavior="spinbox-spin" title="Increase"></button>
+                  <button tabindex="-1" class="fsa-spinbox__btn fsa-spinbox__btn--decrement" type="button" data-behavior="spinbox-spin" title="Decrease"></button>
+                </div>
+              </div>
+            </div>
+            <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+              <h4 class="docs__sub_style">step="5000"</h4>
+              <div class="fsa-spinbox">
+                <div class="fsa-spinbox__number">
+                  <input class="fsa-input fsa-spinbox__input" id="lorem-ipsum-amount__ujsjj77" name="lorem-ipsum-amount__ujsjj77" type="number" value="30000" step="5000">
+                </div>
+                <div class="fsa-spinbox__actions" aria-hidden="true">
+                  <button tabindex="-1" class="fsa-spinbox__btn fsa-spinbox__btn--increment" type="button" data-behavior="spinbox-spin" title="Increase"></button>
+                  <button tabindex="-1" class="fsa-spinbox__btn fsa-spinbox__btn--decrement" type="button" data-behavior="spinbox-spin" title="Decrease"></button>
+                </div>
+              </div>
+            </div>
+            <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+              <h4 class="docs__sub_style">Within a <a href="http://usda-fsa.github.io/fsa-design-system/components/form-fields/">Field</a> Component</h4>
+              <div class="fsa-field">
+                <label class="fsa-field__label" for="spinbox-example">Label</label>
+                <div class="fsa-field__item">
+                  <div class="fsa-spinbox">
+                    <div class="fsa-spinbox__number">
+                      <input class="fsa-input fsa-spinbox__input" id="spinbox-example" aria-describedby="lorem-1234-help-2" name="spinbox-example" type="number" value="2.05" step=".01">
+                    </div>
+                    <div class="fsa-spinbox__actions" aria-hidden="true">
+                      <button tabindex="-1" class="fsa-spinbox__btn fsa-spinbox__btn--increment" type="button" data-behavior="spinbox-spin" title="Increase"></button>
+                      <button tabindex="-1" class="fsa-spinbox__btn fsa-spinbox__btn--decrement" type="button" data-behavior="spinbox-spin" title="Decrease"></button>
+                    </div>
+                  </div>
+                </div>
+                <span class="fsa-field__help" id="lorem-1234-help-2">Instructional message here</span>
+              </div>
+            </div>
+            <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+              <h4 class="docs__sub_style">Disabled</h4>
+              <div class="fsa-spinbox">
+                <div class="fsa-spinbox__number">
+                  <input disabled="disabled" class="fsa-input fsa-spinbox__input" id="lorem-ipsum-amount-654asdf" name="lorem-ipsum-amount-654asdf" type="number" value="10">
+                </div>
+                <div class="fsa-spinbox__actions" aria-hidden="true">
+                  <button disabled="disabled" tabindex="-1" class="fsa-spinbox__btn fsa-spinbox__btn--increment" type="button" data-behavior="spinbox-spin" title="Increase"></button>
+                  <button disabled="disabled" tabindex="-1" class="fsa-spinbox__btn fsa-spinbox__btn--decrement" type="button" data-behavior="spinbox-spin" title="Decrease"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="docs__jump-target" id="component__button-group">
         <div class="docs__bd docs__section-title">
           <h3 class="docs__figure"><a class="docs__anchor" aria-hidden="true" href="#component__button-group">#</a>Button Group</h3>
           <a class="fsa-btn fsa-btn--secondary fsa-btn--small docs__section-link" href="http://usda-fsa.github.io/fsa-design-system/components/button-group">Docs</a>
         </div>
         <div class="docs__bd">
-          <p class="docs__code-sample"><code>&lt;span class="<strong>fsa-btn-group</strong>" role="group" aria-label="Label describing this group"&gt;<br>&nbsp;&nbsp;&lt;button class="<strong>fsa-btn-group__item</strong>" type="button"&gt;Label&lt;/button&gt;<br>&nbsp;&nbsp;&lt;button class="<strong>fsa-btn-group__item</strong> fsa-btn-group__item<strong>--active</strong>" type="button"&gt;Active label&lt;/button&gt; <em style="color:#75716e">&lt;!--optional--&gt;</em><br>&nbsp;&nbsp;&lt;button class="<strong>fsa-btn-group__item</strong>" type="button"&gt;Label&lt;/button&gt;<br>&lt;/span&gt;</code></p>
+          <p class="docs__code-sample"><code>&lt;span class="<strong>fsa-btn-group</strong>" role="group" aria-label="Label describing this group"&gt;<br>&nbsp;&nbsp;&lt;button class="<strong>fsa-btn-group__item</strong>" type="button"&gt;Label&lt;/button&gt;<br>&nbsp;&nbsp;&lt;button class="<strong>fsa-btn-group__item</strong> fsa-btn-group__item<strong>--active</strong>" <strong>aria-selected="true"</strong> type="button"&gt;Active label&lt;/button&gt; <em style="color:#75716e">&lt;!--optional--&gt;</em><br>&nbsp;&nbsp;&lt;button class="<strong>fsa-btn-group__item</strong>" type="button"&gt;Label&lt;/button&gt;<br>&lt;/span&gt;</code></p>
           <p>
             <span class="fsa-btn-group" role="group" aria-label="Label describing this group">
               <button class="fsa-btn-group__item" type="button">Label</button>
-              <button class="fsa-btn-group__item fsa-btn-group__item--active" type="button">Active label</button>
+              <button class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button">Active label</button>
               <button class="fsa-btn-group__item" type="button">Label</button>
             </span>
           </p>
@@ -3197,7 +3334,7 @@
           <div class="fsa-content-tabs">
             <ul class="fsa-content-tabs__list">
               <li class="fsa-content-tabs__item">
-                <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="#link">
+                <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="#link" aria-current="true">
                   <span class="fsa-content-tabs__label-text">Lorem</span>
                 </a>
               </li>
@@ -3229,7 +3366,7 @@
           <div class="fsa-content-tabs fsa-content-tabs--light">
             <ul class="fsa-content-tabs__list">
               <li class="fsa-content-tabs__item">
-                <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="#link">
+                <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="#link" aria-current="true">
                   <span class="fsa-content-tabs__label-text">Lorem</span>
                 </a>
               </li>
@@ -3261,7 +3398,7 @@
           <div class="fsa-content-tabs fsa-content-tabs--contrast">
             <ul class="fsa-content-tabs__list">
               <li class="fsa-content-tabs__item">
-                <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="#link">
+                <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="#link" aria-current="true">
                   <span class="fsa-content-tabs__label-text">Lorem</span>
                 </a>
               </li>
@@ -3298,7 +3435,7 @@
                 </a>
               </li>
               <li class="fsa-content-tabs__item">
-                <a class="fsa-content-tabs__label fsa-content-tabs__label--small fsa-content-tabs__label--active" href="#link">
+                <a class="fsa-content-tabs__label fsa-content-tabs__label--small fsa-content-tabs__label--active" href="#link" aria-current="true">
                   <span class="fsa-content-tabs__label-text">Ipsum dolor sit amet</span>
                 </a>
               </li>
@@ -3330,7 +3467,7 @@
                 </a>
               </li>
               <li class="fsa-content-tabs__item">
-                <a class="fsa-content-tabs__label fsa-content-tabs__label--large fsa-content-tabs__label--active" href="#link">
+                <a class="fsa-content-tabs__label fsa-content-tabs__label--large fsa-content-tabs__label--active" href="#link" aria-current="true">
                   <span class="fsa-content-tabs__label-text">Ipsum dolor sit amet</span>
                 </a>
               </li>
@@ -3357,7 +3494,7 @@
           <div class="fsa-content-tabs fsa-content-tabs--justified">
             <ul class="fsa-content-tabs__list">
               <li class="fsa-content-tabs__item">
-                <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="#link">
+                <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="#link" aria-current="true">
                   <span class="fsa-content-tabs__label-text">Lorem</span>
                 </a>
               </li>
@@ -3384,7 +3521,7 @@
           <div class="fsa-content-tabs fsa-content-tabs--justified-equal">
             <ul class="fsa-content-tabs__list">
               <li class="fsa-content-tabs__item">
-                <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="#link">
+                <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="#link" aria-current="true">
                   <span class="fsa-content-tabs__label-text">Lorem</span>
                 </a>
               </li>
@@ -3412,7 +3549,7 @@
           <div class="fsa-content-tabs">
             <ul class="fsa-content-tabs__list">
               <li class="fsa-content-tabs__item">
-                <button class="fsa-content-tabs__label fsa-content-tabs__label--active" type="button">
+                <button class="fsa-content-tabs__label fsa-content-tabs__label--active" type="button" aria-current="true">
                   <span class="fsa-content-tabs__label-text">tab 1</span>
                 </button>
               </li>
