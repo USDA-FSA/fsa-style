@@ -8,9 +8,9 @@
   $button-border-color: $form-outline-color;
   $button-border-color-hover: $form-focus-color;
   $button-arrow-color: $form-focus-color;
-  $button-arrow-size: 5px;
-  $button-arrow-size-large: 7px;
-  $button-arrow-size-small: 4px;
+  $button-arrow-size: 10px;
+  $button-arrow-size-large: 12px;
+  $button-arrow-size-small: 8px;
 
   & {
     position: relative;
@@ -128,6 +128,7 @@
       border-left: 0;
       line-height: 1;
       width: $button-width;
+      text-align: center;
     }
 
     // scss-lint:disable SelectorFormat
@@ -169,30 +170,41 @@
 
     &:before {
 
-      content: '';
-      display: inline-block;
-      vertical-align: middle;
-      width: 0;
-      height: 0;
-      border-left: $button-arrow-size solid transparent;
-      border-right: $button-arrow-size solid transparent;
-      line-height: 1;
-      margin-top: -($size-base / 2);
+      & {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: $button-arrow-size;
+        height: $button-arrow-size;
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
 
       // scss-lint:disable SelectorFormat
       .fsa-spinbox--small & {
-        border-left: $button-arrow-size-small solid transparent;
-        border-right: $button-arrow-size-small solid transparent;
-        margin-top: -($size-base + .2rem);
+        width: $button-arrow-size-small;
+        height: $button-arrow-size-small;
       }
 
       // scss-lint:disable SelectorFormat
       .fsa-spinbox--large & {
-        border-left: $button-arrow-size-large solid transparent;
-        border-right: $button-arrow-size-large solid transparent;
+        width: $button-arrow-size-large;
+        height: $button-arrow-size-large;
       }
 
     }
+
+    &--increment:before {
+      background-image: url('#{$image-path}/angle-arrow-up-primary.png');
+      background-image: url('#{$image-path}/angle-arrow-up-primary.svg');
+    }
+
+    &--decrement:before {
+      background-image: url('#{$image-path}/angle-arrow-down-primary.png');
+      background-image: url('#{$image-path}/angle-arrow-down-primary.svg');
+    }
+
+    &--increment {}
 
     &--decrement {
 
@@ -200,39 +212,6 @@
 
       &:focus {
         box-shadow: 0 0 0 1px $form-focus-color inset, 0 1px 0 1px $form-focus-color inset, 1px 0 0 1px $form-focus-color inset;
-      }
-
-    }
-
-    &--increment:before {
-
-      border-bottom: $button-arrow-size solid $button-arrow-color;
-
-      .fsa-spinbox--small & {
-        border-bottom-width: $button-arrow-size-small;
-      }
-
-      .fsa-spinbox--large & {
-        border-bottom-width: $button-arrow-size-large;
-        // BOO
-        margin-top: -($size-base + .1rem);
-      }
-
-    }
-
-    &--decrement:before {
-
-      border-top: $button-arrow-size solid $button-arrow-color;
-
-      .fsa-spinbox--small & {
-        border-top-width: $button-arrow-size-small;
-        margin-top: -($size-base + .1rem);
-      }
-
-      .fsa-spinbox--large & {
-        border-top-width: $button-arrow-size-large;
-        // BOO
-        margin-top: -($size-base + .1rem);
       }
 
     }
