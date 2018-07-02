@@ -1,4 +1,4 @@
-/*! FSA Style v2.1.4 | http://usda-fsa.github.io/fsa-design-system/ */
+/*! FSA Style v2.1.5-rc1 | http://usda-fsa.github.io/fsa-design-system/ */
 
 
 html {
@@ -116,6 +116,35 @@ html:hover body::before {
   font-weight: 400;
 }
 
+.docs__anchor {
+  display: none;
+}
+
+@media (min-width: 54em) {
+  .docs__anchor {
+    display: block;
+    float: left;
+    text-align: right;
+    width: 3.6rem;
+    margin-left: -3.6rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    opacity: 0;
+  }
+  .docs__anchor:link, .docs__anchor:visited {
+    text-decoration: none;
+    color: #0068ad;
+  }
+  .docs__anchor:focus, .docs__anchor:active, .docs__anchor:hover {
+    opacity: 1;
+    color: #183f6e;
+  }
+  .docs__figure:hover .docs__anchor,
+  .docs__figure-group:hover .docs__anchor {
+    opacity: 1;
+  }
+}
+
 .docs__figure-group {
   margin-top: 57.6px;
   margin-top: 3.6rem;
@@ -185,6 +214,13 @@ html:hover body::before {
   margin: 0;
   padding: 0;
   display: inline-block;
+  position: relative;
+}
+
+@media (min-width: 54em) {
+  .docs__primary-nav-item {
+    margin-right: 0.4rem;
+  }
 }
 
 .docs__primary-nav-item--floater {
@@ -214,12 +250,88 @@ html:hover body::before {
   }
 }
 
+@media (min-width: 54em) {
+  .docs__primary-nav-link--sub:after {
+    content: '';
+    display: inline-block;
+    margin-left: 0.6rem;
+    width: 1.2rem;
+    height: 1.4rem;
+    background-image: url("../img/angle-arrow-down-hover.png");
+    background-image: url("../img/angle-arrow-down-hover.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 3px;
+  }
+  .docs__primary-nav-link--sub _:-ms-fullscreen, :root .docs__primary-nav-link--sub:after {
+    display: none;
+  }
+}
+
 .docs__primary-nav-link:hover {
   text-decoration: underline;
 }
 
 .docs__primary-nav-link:active, .docs__primary-nav-link:hover, .docs__primary-nav-link:hover:visited, .docs__primary-nav-link:visited {
   color: #fff;
+}
+
+.docs__primary-nav-sub {
+  display: none;
+}
+
+@media (min-width: 54em) {
+  .docs__primary-nav-sub {
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    margin: 0;
+    position: absolute;
+    left: -1.2rem;
+    top: 100%;
+    background-color: #1a4b24;
+    max-height: 50vh;
+    width: 184px;
+    border-top: 1em solid #236430;
+    padding-top: 0.4rem;
+    padding-bottom: 0.8rem;
+    overflow: auto;
+  }
+  .docs__nav--fixed .docs__primary-nav-sub {
+    max-height: calc(100vh - 42px);
+    border-top-color: #1a4b24;
+  }
+  .docs__primary-nav-item--sub:focus-within .docs__primary-nav-sub,
+  .docs__primary-nav-item--sub:hover .docs__primary-nav-sub {
+    display: block;
+  }
+}
+
+@media (min-width: 54em) {
+  .docs__primary-nav-sub-item {
+    display: list-item;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.docs__primary-nav-sub-link {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 6.4px 19.2px;
+  padding: 0.4rem 1.2rem;
+}
+
+.docs__primary-nav-sub-link:active, .docs__primary-nav-sub-link:hover, .docs__primary-nav-sub-link:hover:visited, .docs__primary-nav-sub-link:visited {
+  color: #fff;
+}
+
+.docs__primary-nav-sub-link:hover {
+  text-decoration: underline;
 }
 
 .docs__primary-nav__icon {
@@ -304,6 +416,15 @@ html:hover body::before {
   .docs__bd {
     max-width: none;
   }
+}
+
+.docs__jump-target:before {
+  content: '';
+  display: block;
+  height: 76.8px;
+  height: 4.8rem;
+  margin: -76.8px 0 0;
+  margin: -4.8rem 0 0;
 }
 
 .docs__logo {
