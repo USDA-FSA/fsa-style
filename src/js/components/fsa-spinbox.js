@@ -11,9 +11,6 @@
 
 var Helper = require('../utilities/helper');
 
-var ieIE_10_down = (function() { if (new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})").exec(navigator.userAgent) != null) { return parseFloat( RegExp.$1 ); } else { return false; } })();
-var isIE_11 = '-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style;
-
 // What gets clicked?
 var spinbox__triggers = document.querySelectorAll('[data-behavior~="spinbox-spin"]');
 
@@ -35,7 +32,7 @@ Helper.forEach(spinbox__triggers, function (index, value) {
     }
 
     // For Demo purposes, we're only demo'ing in browsers that *natively* support stepUp() and stepDown()
-    if (ieIE_10_down || isIE_11) { // lazily targeting IE 11 and below. For all I know it works above IE 11
+    if (Helper.isIE10Down || Helper.isIE11) { // lazily targeting IE 11 and below. For all I know it works above IE 11
       // Just alert() some basic helpfup info
       alert('Step up/down by ' + _targetStepAmount);
     }
