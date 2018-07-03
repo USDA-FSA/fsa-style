@@ -72,8 +72,8 @@ var Helper = (function () {
     return _getAnimationString(elem);
   }
 
-  var hasClass = function(elem){
-    return _hasClass(elem);
+  var hasClass = function(elem, classname){
+    return _hasClass(elem, classname);
   }
 
   var isIE10Down = function() {
@@ -94,7 +94,7 @@ var Helper = (function () {
     forEach: forEach, //( array, callback, scope )
     getClosest: getClosest, //( elem, selector )
     getAnimationString: getAnimationString, //( elem ),
-    hasClass: hasClass, //( elem )
+    hasClass: hasClass, //( elem, classname )
     isIE10Ddown: isIE10Down,
     isIE11: isIE11
   };
