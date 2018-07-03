@@ -76,18 +76,16 @@ var Helper = (function () {
     return _hasClass(elem, classname);
   }
 
-  var isIE10Down = function() {
+  var isIE10Down = (function() {
     if (new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})").exec(navigator.userAgent) != null) {
       return parseFloat( RegExp.$1 );
-    } else {
+    }
+    else {
       return false;
     }
-  };
+  })();
 
-  var isIE11 = function(){
-    return '-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style;
-  };
-
+  var isIE11 = '-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style;
 
   //Object Literal Return
   return {
@@ -95,7 +93,7 @@ var Helper = (function () {
     getClosest: getClosest, //( elem, selector )
     getAnimationString: getAnimationString, //( elem ),
     hasClass: hasClass, //( elem, classname )
-    isIE10Ddown: isIE10Down,
+    isIE10Down: isIE10Down,
     isIE11: isIE11
   };
 
