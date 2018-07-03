@@ -12,13 +12,13 @@ function steppedControl__setStyle() {
   // iterate thru each stepped control on page
   Helper.forEach(steppedControl__elements, function(index, value) {
     var _el = value;
-  
-    var _viewportOffset = _el.getBoundingClientRect();   
+
+    var _viewportOffset = _el.getBoundingClientRect();
     var _scHeight = _el.offsetHeight;
     var _scBottomPosition = window.innerHeight - (_viewportOffset.top + _scHeight);
-    
+
     if (_scBottomPosition > 12) {
-      
+
       if(!_el.classList.contains('fsa-stepped-control--unstuck')){
         _el.classList.add('fsa-stepped-control--unstuck');
       }
@@ -37,7 +37,7 @@ if(steppedControl__elements.length){
   window.addEventListener('scroll', function() {
     steppedControl__setStyle();
   });
-  
+
   var steppedControl__modals = document.querySelectorAll('.fsa-modal');
   Helper.forEach(steppedControl__modals, function(index, value) {
     var _el = value;
