@@ -3,20 +3,14 @@
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 
-
-// Utility method to loop thru NodeList correctly
-var steppedControl__forEach = function (array, callback, scope) {
-  for (var i = 0; i < array.length; i++) {
-    callback.call(scope, i, array[i]); // passes back stuff we need
-  }
-};
+var Helper = require('../utilities/helper');
 
 var steppedControl__elements = document.querySelectorAll('.fsa-stepped-control--sticky');
 
 function steppedControl__setStyle() {
 
   // iterate thru each stepped control on page
-  steppedControl__forEach(steppedControl__elements, function(index, value) {
+  Helper.forEach(steppedControl__elements, function(index, value) {
     var _el = value;
   
     var _viewportOffset = _el.getBoundingClientRect();   
@@ -45,7 +39,7 @@ if(steppedControl__elements.length){
   });
   
   var steppedControl__modals = document.querySelectorAll('.fsa-modal');
-  steppedControl__forEach(steppedControl__modals, function(index, value) {
+  Helper.forEach(steppedControl__modals, function(index, value) {
     var _el = value;
     _el.addEventListener("scroll", function(){
       steppedControl__setStyle();
