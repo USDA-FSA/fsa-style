@@ -1,11 +1,26 @@
 {
   "name": "fsa-style",
   "description": "Open Source CSS Framework for USDA Farm Service Agency web sites and apps",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "license": "SEE LICENSE in LICENSE.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/usda-fsa/fsa-style.git"
+  },
+  "author": "USDA FSA Enterprise Architecture",
+  "contributors": [
+    "Francis Rupert <France.Rupert@gmail.com> (https://github.com/francisrupert)",
+    "Casey Hill <bignamehere@gmail.com> (https://github.com/bignamehere)",
+    "Brian Mills (https://www.linkedin.com/in/brianmills)"
+  ],
+  "bugs": {
+    "url": "https://github.com/USDA-FSA/fsa-style/issues"
+  },
+  "scripts": {
+    "build": "grunt build",
+    "start": "npm i && grunt",
+    "deploy": "grunt deploy",
+    "test": "grunt test"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.1",
@@ -35,21 +50,8 @@
   },
   "dependencies": {
     "jquery": "^3.3.1",
+    "npm": "^6.1.0",
     "politespace": "^0.1.7",
     "uswds": "~1.2.1"
-  },
-  "author": "USDA FSA Enterprise Architecture",
-  "contributors": [
-    "Francis Rupert <France.Rupert@gmail.com> (https://github.com/francisrupert)",
-    "Brian Mills (https://www.linkedin.com/in/brianmills)"
-  ],
-  "bugs": {
-    "url": "https://github.com/USDA-FSA/fsa-style/issues"
-  },
-  "scripts": {
-    "build": "grunt build",
-    "start": "npm i && grunt",
-    "deploy": "grunt deploy",
-    "test": "grunt test"
   }
 }

@@ -1,0 +1,187 @@
+.fsa-spinbox {
+
+  $button-width: $size-medium + .1rem;
+  $button-width-large: $size-large;
+  $button-width-small: ($size-large / 2);
+  $button-bgc: $color-fsa-white;
+  $button-bgc-focus: $color-fsa-tertiary-100;
+  $button-border-color: $form-outline-color;
+  $button-border-color-hover: $form-focus-color;
+  $button-arrow-color: $form-focus-color;
+  $button-arrow-size: 10px;
+  $button-arrow-size-large: 12px;
+  $button-arrow-size-small: 8px;
+
+  & {
+    position: relative;
+    min-width: 8.2rem;
+    min-width: 10ch; // for browsers that support ch unit
+    font-size: $font-size-3;
+  }
+
+  &--small {
+    font-size: $font-size-2;
+    min-width: 7.2rem;
+    min-width: 9.5ch;
+  }
+
+  &--large {
+    font-size: $font-size-4;
+    min-width: 10rem;
+    min-width: 11.5ch;
+  }
+
+  &__number {
+
+    & {
+      width: 90%;
+      width: calc(100% - #{$button-width});
+    }
+
+    // scss-lint:disable SelectorFormat
+    .fsa-spinbox--small & {
+      width: calc(100% - #{$button-width-small});
+    }
+
+    .fsa-spinbox--large & {
+      width: calc(100% - #{$button-width-large});
+    }
+
+  }
+
+  &__input {
+
+    & {
+      display: block;
+      width: 100%;
+      appearance: initial;
+      -moz-appearance: textfield;
+    }
+
+    &[disabled] {}
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      display: none;
+    }
+
+    &::-webkit-inner-spin-button {
+      margin-top: -1px;
+      margin-right: $size-base;
+    }
+
+    &::-ms-clear {
+      display: none;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    // scss-lint:disable SelectorFormat
+    .fsa-spinbox--right & {
+      text-align: right;
+    }
+
+    .fsa-adjust__spinbox & {
+
+      // background-color: transparent;
+      // border-color: transparentize($form-outline-color, .5);
+
+      &:hover,
+      &:focus {
+        // background-color: $color-white;
+        &:not([disabled]) {
+          border-color: $button-border-color-hover;
+        }
+      }
+
+    }
+
+    .fsa-adjust__spinbox--focused & {
+      border-color: $color-fsa-tertiary-200;
+      background-color: $color-white;
+    }
+
+  }
+
+  &__actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__btn {
+
+    & {
+      display: block;
+      appearance: none;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      height: 50%;
+      background-color: $button-bgc;
+      border: 1px solid $button-border-color;
+      border-left: 0;
+      line-height: 1;
+      width: $button-width;
+      text-align: center;
+      background-size: 45%;
+      background-repeat: no-repeat;
+      background-position: 50%;
+    }
+
+    // scss-lint:disable SelectorFormat
+    .fsa-spinbox--small & {
+      width: $button-width-small;
+    }
+
+    // scss-lint:disable SelectorFormat
+    .fsa-spinbox--large & {
+      width: $button-width-large;
+      background-size: 37%;
+    }
+
+    &[disabled] {
+      background-color: $form-disabled-bg-color;
+      cursor: not-allowed;
+      filter: grayscale(100);
+    }
+
+    &:hover,
+    &:active {
+      background-color: $button-bgc-focus;
+      outline: 0;
+    }
+
+    &:active {
+      background-color: $color-fsa-secondary-200;
+    }
+
+    &:focus {
+      border-color: $form-focus-color;
+      box-shadow: 0 0 0 1px $form-focus-color inset, 1px 0 0 1px $form-focus-color inset;
+      outline: 0;
+    }
+
+    &--increment {
+      background-image: url('#{$image-path}/angle-arrow-up-primary.png');
+      background-image: url('#{$image-path}/angle-arrow-up-primary.svg');
+    }
+
+    &--decrement {
+      background-image: url('#{$image-path}/angle-arrow-down-primary.png');
+      background-image: url('#{$image-path}/angle-arrow-down-primary.svg');
+      border-top: 0;
+      &:focus {
+        box-shadow: 0 0 0 1px $form-focus-color inset, 0 1px 0 1px $form-focus-color inset, 1px 0 0 1px $form-focus-color inset;
+      }
+    }
+
+
+  }
+
+}

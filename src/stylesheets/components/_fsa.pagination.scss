@@ -1,0 +1,187 @@
+.fsa-pagination {
+
+  $padding: $size-small;
+  $arrow-size: $size-default; // $size-default + $size-base
+
+  & {
+
+    @include font-size(2);
+    margin: $size-large auto;
+    position: relative;
+
+    @include breakpoint(S) {
+      text-align: center;
+    }
+
+    @include breakpoint(M) {
+      @include font-size(3);
+    }
+
+  }
+
+  &:before {
+
+    @media (min-width: 20em) {
+      content: attr(data-current) ' / ' attr(data-total);
+      display: block;
+      position: absolute;
+      padding: $padding;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include breakpoint(S) {
+      display: none;
+    }
+
+  }
+
+  &__list {
+
+    @include reset-ul();
+
+    @media (min-width: 20em) {
+      white-space: nowrap;
+      display: flex;
+    }
+
+    @include breakpoint(S) {
+      margin-left: -$size-default;
+      margin-right: -$size-default;
+    }
+
+    @include breakpoint(M) {
+      display: inline-block;
+      @supports (display: inline-flex) {
+        display: inline-flex;
+      }
+    }
+
+  }
+
+  &__item {
+
+    & {
+      @include reset-li();
+      display: none;
+      flex: 1;
+      @include breakpoint(S) {
+        display: inline-block;
+        width: auto;
+      }
+    }
+
+    &--previous,
+    &--next {
+      display: block;
+      @media (min-width: 20em) {
+        display: inline-block;
+      }
+    }
+
+    &--previous {
+      margin-bottom: $padding;
+      @media (min-width: 20em) {
+        margin-bottom: 0;
+        padding-right: $padding * 5;
+      }
+      @include breakpoint(S) {
+        padding-right: $padding;
+      }
+    }
+
+    &--next {
+      @media (min-width: 20em) {
+        padding-left: $padding * 5;
+      }
+      @include breakpoint(S) {
+        padding-left: $padding;
+      }
+    }
+
+  }
+
+  &__label {
+
+    & {
+
+      @include reset-button();
+      cursor: text;
+      color: $color-fsa-link;
+      background-color: white;
+      box-shadow: 0 0 0 1px $color-fsa-tertiary-200 inset; // maybe try $button-secondary-border
+      display: block;
+      width: 100%;
+      padding: ($padding) ($padding + ($padding / 2));
+      text-decoration: none;
+      border-radius: ($button-border-radius / 2);
+      text-align: center;
+      text-transform: uppercase;
+
+      @include breakpoint(S) {
+        width: auto;
+        background-color: transparent;
+        box-shadow: none;
+        text-transform: none;
+      }
+
+    }
+
+    &:not(span):focus,
+    &:not(span):active,
+    &:not(span):hover {
+      cursor: pointer;
+      background-color: white;
+      box-shadow: 0 0 0 1px $color-fsa-tertiary-200; // maybe try $button-secondary-border
+    }
+
+    &--previous,
+    &--next {
+      display: block;
+      @include breakpoint(M) {
+        display: inline-block;
+      }
+    }
+
+    &--current {
+      background-color: $color-fsa-secondary;
+      color: white;
+      margin: 0 $size-small;
+      font-weight: $font-bold;
+    }
+
+    &--previous:before,
+    &--next:after {
+      content: '';
+      background-size: 100%;
+      background-repeat: no-repeat;
+      display: inline-block;
+      width: $arrow-size;
+      height: $arrow-size;
+      position: relative;
+      top: 1px;
+    }
+
+    &--previous:before {
+      background-image: url('#{$image-path}/chevron-left.png');
+      background-image: url('#{$image-path}/chevron-left--link.svg');
+      margin-right: $size-small;
+    }
+
+    &--next:after {
+      background-image: url('#{$image-path}/chevron-right.png');
+      background-image: url('#{$image-path}/chevron-right--link.svg');
+      margin-left: $size-small;
+    }
+
+    &--disabled {
+      color: $color-base;
+      filter: grayscale(100%);
+      opacity: .5;
+      cursor: text;
+      background-color: transparent;
+    }
+
+  }
+
+}
