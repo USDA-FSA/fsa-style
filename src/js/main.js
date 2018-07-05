@@ -12,11 +12,10 @@
 'use strict';
 
 var DocsNav = require('./components/docs-nav');
-var FSA_NAV_GLOBAL = require('./components/fsa-nav-global');
+var DocsColor = require('./components/docs-color');
+var NavGlobalComponent = require('./components/fsa-nav-global');
 var ModalComponent = require('./components/fsa-modal');
 var GrowlComponent = require('./components/fsa-growl');
-var WhiteoutComponent = require('./components/fsa-whiteout');
 var SelectMultipleComponent = require('./components/fsa-select-multi');
-var SteppedControl = require('./components/fsa-stepped-control');
-var ColorDocs = require('./components/docs-color');
-var Spinbox = require('./components/fsa-spinbox');
+var SteppedControlComponent = require('./components/fsa-stepped-control');
+var SpinboxComponent = require('./components/fsa-spinbox');
