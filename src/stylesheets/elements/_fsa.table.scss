@@ -82,12 +82,22 @@ th {
   }
 
   &__th--sticky {
-    // position: -webkit-sticky;
+
     position: sticky;
     top: -1px;
     background-color: $color-fsa-site-bg;
     z-index: 2;
     box-shadow: 0 1px 0 0 $color-fsa-tertiary-200;
+
+    .fsa-table:not(.fsa-table--borderless) & {
+      background-color: $table-header-bgc;
+    }
+
+    table:not(.fsa-table) & {
+      box-shadow: none;
+      padding-top: $size-small;
+    }
+
   }
 
   thead {
