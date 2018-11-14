@@ -60,10 +60,12 @@ th {
 
 .fsa-table {
 
-  background-color: $table-bgc;
+  & {
+    background-color: $table-bgc;
 
-  @include breakpoint(M, down) {
-    @include font-size(2);
+    @include breakpoint(M, down) {
+      @include font-size(2);
+    }
   }
 
   th,
@@ -200,6 +202,12 @@ th {
 
   }
 
+  &--valign-top {}
+
+  &--valign-middle {}
+
+  &--valign-bottom {}
+
   &__sort {
 
     @include reset-button;
@@ -253,4 +261,19 @@ th {
 
   }
 
+}
+
+.fsa-table--valign-top th,
+.fsa-table--valign-top td {
+  vertical-align: top;
+}
+
+.fsa-table--valign-middle th,
+.fsa-table--valign-middle td {
+  vertical-align: middle;
+}
+
+.fsa-table--valign-bottom th,
+.fsa-table--valign-bottom td {
+  vertical-align: bottom;
 }
