@@ -1,0 +1,49 @@
+@import '../lib/uswds/components/search';
+
+.usa-search .fsa-btn {
+  margin: 0;
+}
+
+[role="search"] {
+  margin: 1em 0;
+}
+
+.fsa-search {
+
+  & {
+    display: flex;
+    width: 100%;
+  }
+
+  &__label {
+    display: block;
+    &--sr-only {
+      @include sr-only();
+    }
+  }
+
+  &__entry {
+    flex: 1;
+  }
+
+  &__submit {
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    appearance: none !important; // yeah yeah.... sue me
+    box-sizing: inherit !important; // yeah yeah.... sue me
+  }
+
+  &__btn {
+
+    display: block;
+    width: 100%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  &__text {}
+
+}
