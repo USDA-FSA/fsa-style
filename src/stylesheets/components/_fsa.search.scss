@@ -1,18 +1,9 @@
-@import '../lib/uswds/components/search';
-
-.usa-search .fsa-btn {
-  margin: 0;
-}
-
-[role="search"] {
-  margin: 1em 0;
-}
-
 .fsa-search {
 
-  & {
+  & {}
+
+  &__bd {
     display: flex;
-    width: 100%;
   }
 
   &__label {
@@ -34,6 +25,7 @@
     width: 100%;
     appearance: none !important; // yeah yeah.... sue me
     box-sizing: inherit !important; // yeah yeah.... sue me
+    border-right-width: 0;
   }
 
   &__btn {
@@ -42,8 +34,35 @@
     width: 100%;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+
+    &--icon {
+
+      $search-icon-width-default: ($size-base * 10);
+      $search-icon-width-small: ($size-base * 8);
+      $search-icon-width-large: ($size-base * 13);
+
+      background-image: url('#{$image-path}/search.png');
+      background-image: url('#{$image-path}/search.svg');
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: 66%;
+      width: $search-icon-width-default;
+
+      &.fsa-btn--small {
+        width: $search-icon-width-small;
+      }
+      &.fsa-btn--large {
+        width: $search-icon-width-large;
+      }
+
+    }
+
   }
 
-  &__text {}
+  &__text {
+    .fsa-search__btn--icon & {
+      @include sr-only();
+    }
+  }
 
 }
