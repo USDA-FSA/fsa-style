@@ -1,9 +1,15 @@
+
 .fsa-search {
 
   & {}
 
+  &:focus-within {
+    box-shadow: 0 0 0 2px $form-focus-color;
+  }
+
   &__bd {
     display: flex;
+    align-items: stretch;
   }
 
   &__label {
@@ -14,7 +20,21 @@
   }
 
   &__entry {
-    flex: 1;
+
+    flex: 2;
+
+    &--by {
+      flex: 1;
+      display: flex;
+      flex-grow: unset;
+      background-color: #fff;
+      border: 1px solid $form-outline-color;
+      align-items: center;
+      justify-content: flex-end;
+      border-left-width: 0;
+      padding-top: $size-base;
+    }
+
   }
 
   &__submit {
@@ -26,6 +46,11 @@
     appearance: none !important; // yeah yeah.... sue me
     box-sizing: inherit !important; // yeah yeah.... sue me
     border-right-width: 0;
+    &:focus {
+      box-shadow: none;
+      outline: 0;
+      border-color: $form-outline-color;
+    }
   }
 
   &__btn {
