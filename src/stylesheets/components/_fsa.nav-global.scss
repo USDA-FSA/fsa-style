@@ -28,6 +28,11 @@
     margin-right: auto;
     padding: 0;
 
+    @include breakpoint(L) {
+      display: flex;
+      align-items: center;
+    }
+
     @media print {
       max-width: none;
     }
@@ -376,6 +381,14 @@
       text-decoration: underline;
     }
 
+  }
+
+  &__search {
+    margin: $size-default $size-default 0;
+    @include breakpoint(L) {
+      padding-left: $size-default;
+      margin: 0 $size-default 0 auto;
+    }
   }
 
 }

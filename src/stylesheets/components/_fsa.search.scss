@@ -3,13 +3,9 @@
 
   & {}
 
-  &:focus-within {
-    box-shadow: 0 0 0 2px $form-focus-color;
-  }
-
   &__bd {
     display: flex;
-    align-items: stretch;
+    align-items: flex-end;
   }
 
   &__label {
@@ -21,18 +17,10 @@
 
   &__entry {
 
-    flex: 2;
+    flex: 1;
 
-    &--by {
-      flex: 1;
-      display: flex;
+    &--collapse {
       flex-grow: unset;
-      background-color: #fff;
-      border: 1px solid $form-outline-color;
-      align-items: center;
-      justify-content: flex-end;
-      border-left-width: 0;
-      padding-top: $size-base;
     }
 
   }
@@ -46,11 +34,11 @@
     appearance: none !important; // yeah yeah.... sue me
     box-sizing: inherit !important; // yeah yeah.... sue me
     border-right-width: 0;
-    &:focus {
-      box-shadow: none;
-      outline: 0;
-      border-color: $form-outline-color;
-    }
+  }
+
+  &__select {
+    margin-bottom: -1px;
+    border-right-width: 0;
   }
 
   &__btn {
