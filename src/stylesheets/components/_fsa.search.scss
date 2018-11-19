@@ -1,11 +1,15 @@
 
 .fsa-search {
 
-  & {}
+  & {
+    width: 100%;
+    display: block;
+  }
 
   &__bd {
     display: flex;
     align-items: flex-end;
+    width: 100%;
   }
 
   &__label {
@@ -17,16 +21,13 @@
 
   &__entry {
 
-    flex: 1;
-
-    &--collapse {
-      flex-grow: unset;
+    &--grow {
+      flex-grow: 1;
     }
 
   }
 
-  &__submit {
-  }
+  &__submit {}
 
   &__input {
     display: block;

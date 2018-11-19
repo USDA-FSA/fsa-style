@@ -48,7 +48,11 @@
     z-index: 3;
 
     @include breakpoint(L) {
+      flex: 3;
       flex-wrap: nowrap;
+    }
+    @include breakpoint(XL) {
+      flex: 2;
     }
 
   }
@@ -386,8 +390,12 @@
   &__search {
     margin: $size-default $size-default 0;
     @include breakpoint(L) {
+      flex: 1;
+      // outline: 2px solid orangered;
+      padding-right: $size-default;
       padding-left: $size-default;
-      margin: 0 $size-default 0 auto;
+      margin: 0;
+      // margin: 0 $size-default 0 auto;
     }
   }
 
