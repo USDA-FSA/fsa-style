@@ -86,9 +86,12 @@
   }
 
   &__shim {
-    @include breakpoint(L) {
-      outline: 1px solid black;
-      flex-grow: 1;
+    display: none;
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      display: block;
+      @include breakpoint(L) {
+        flex-grow: 1;
+      }
     }
   }
 
@@ -144,7 +147,9 @@
       }
 
       @include breakpoint(L) {
+        flex: none;
         flex: initial;
+        flex-shrink: 1;
       }
 
     }
