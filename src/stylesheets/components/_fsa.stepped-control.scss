@@ -85,6 +85,13 @@
 
   }
 
+  &__shim {
+    @include breakpoint(L) {
+      outline: 1px solid black;
+      flex-grow: 1;
+    }
+  }
+
   &__message {
 
     @include font-size(3);
@@ -152,17 +159,17 @@
 
     }
 
-    &--push {
-      @include breakpoint(L) {
-        margin-left: auto;
-        border-left: $size-default solid transparent;
-      }
-    }
-
     &--pull {
       @include breakpoint(L) {
         margin-right: auto;
         border-right: $size-default solid transparent;
+      }
+    }
+
+    &--push {
+      @include breakpoint(L) {
+        margin-left: auto;
+        border-left: $size-default solid transparent;
       }
     }
 
