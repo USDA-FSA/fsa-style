@@ -32,6 +32,10 @@
     padding-top: $form-padding - .1rem;
   }
 
+  @supports (-moz-appearance: none) {
+    padding-top: $form-padding - .2rem;
+  }
+
   // IE 10 +
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 
@@ -105,12 +109,16 @@
   &--small {
 
     height: $button-height--sm;
-    padding-top: $size-small - .4rem;
-    padding-bottom: $size-small + .1rem;
-    font-size: $font-size-1; // no we're not using mixin cuz we don't want its line-height
+    padding-top: $size-base;
+    // padding-bottom: $size-small + .1rem;
+    font-size: $form-text-size--sm; // no we're not using mixin cuz we don't want its line-height
 
     @supports (-webkit-appearance: none) {
-      padding-top: $form-padding - .1rem;
+      padding-top: $form-padding - .2rem;
+    }
+
+    @supports (-moz-appearance: none) {
+      padding-top: $form-padding - .5rem;
     }
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
