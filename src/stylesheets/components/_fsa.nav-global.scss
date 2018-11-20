@@ -47,13 +47,17 @@
     z-index: 3;
 
     @include breakpoint(L) {
-      flex: 3;
+      flex: 1;
       flex-wrap: nowrap;
     }
-    @include breakpoint(XL) {
-      flex: 2;
-    }
 
+  }
+
+  &__search {
+    margin: $size-default $size-default 0;
+    @include breakpoint(L) {
+      margin: 0 $size-default 1px;
+    }
   }
 
   &__list-item {
@@ -385,14 +389,6 @@
       text-decoration: underline;
     }
 
-  }
-
-  &__search {
-    margin: $size-default $size-default 0;
-    @include breakpoint(L) {
-      flex: 1;
-      margin: 0 $size-default;
-    }
   }
 
 }
