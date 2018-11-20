@@ -1,4 +1,3 @@
-
 .fsa-search {
 
   & {
@@ -27,7 +26,13 @@
 
   }
 
-  &__submit {}
+  &__submit {
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      padding-bottom: 1px;
+    }
+
+  }
 
   &__input {
     display: block;
@@ -38,8 +43,14 @@
   }
 
   &__select {
+
     margin-bottom: -1px;
     border-right-width: 0;
+
+    &.fsa-select--large {
+      margin-bottom: -3px;
+    }
+
   }
 
   &__btn {
