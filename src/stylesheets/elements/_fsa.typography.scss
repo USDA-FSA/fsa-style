@@ -55,7 +55,7 @@ h1,
   margin-bottom: 0;
 
   .fsa-section__bd > & {
-    margin-top: $size-large;
+    margin-top: ($size-base * 8);
   }
 
 }
