@@ -52,6 +52,7 @@
   margin-left: $indent-amount;
   margin-right: $size-default;
   display: inline-block;
+  position: relative;
 
 }
 
@@ -99,6 +100,18 @@
     display: none;
   }
 
+}
+
+.fsa-checkbox + label::after,
+.fsa-radio + label::after,
+.fsa-checkbox + [type="hidden"] + label::after,
+.fsa-radio + [type="hidden"] + label::after {
+  content: '';
+  position: absolute;
+  left: -36px;
+  top: -5px;
+  bottom: -2px;
+  width: 36px;
 }
 
 .fsa-radio + label::before,

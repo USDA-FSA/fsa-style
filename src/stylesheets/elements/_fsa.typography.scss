@@ -51,11 +51,14 @@ h1,
 
   @include h1();
   font-weight: $font-normal;
-  margin-top: 0;
+  margin-top: $size-default;
   margin-bottom: 0;
 
   .fsa-section__bd > & {
-    margin-top: $size-large;
+    margin-top: $size-medium;
+    @include breakpoint(L) {
+      margin-top: ($size-base * 8);
+    }
   }
 
 }

@@ -238,7 +238,6 @@ $button-flat-border-width: 1px;
       ($size-small)
     ;
     font-size: $font-size-1; // no we're not using mixin cuz we don't want its line-height
-    border-radius: ($button-border-radius / 2);
 
   }
 
