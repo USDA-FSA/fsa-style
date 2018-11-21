@@ -533,7 +533,24 @@
 
   // Floats --------------------------------------------------------------------
 
-  &-clear { clear: both; }
+  &-clear {
+
+    clear: both;
+
+    @include breakpoint(S) {
+      &\@s  { clear: both;  }
+    }
+    @include breakpoint(M) {
+      &\@m  { clear: both;  }
+    }
+    @include breakpoint(L) {
+      &\@l  { clear: both;  }
+    }
+    @include breakpoint(XL) {
+      &\@xl  { clear: both;  }
+    }
+
+  }
 
   &-clearfix { @include clearfix; }
 
