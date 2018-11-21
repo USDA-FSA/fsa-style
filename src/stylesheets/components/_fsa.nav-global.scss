@@ -11,14 +11,13 @@
 
   $nav-spacing-unit: $size-default;
 
-  background-color: $nav-bgcolor;
-
   @media print {
     border-bottom-color: $color-fsa-tertiary-200;
   }
 
   @include breakpoint(L) {
     border-bottom: 1px solid $nav-border-color;
+    background-color: $nav-bgcolor;
   }
 
   &__bd {
@@ -27,6 +26,11 @@
     margin-left: auto;
     margin-right: auto;
     padding: 0;
+
+    @include breakpoint(L) {
+      display: flex;
+      align-items: center;
+    }
 
     @media print {
       max-width: none;
@@ -43,9 +47,17 @@
     z-index: 3;
 
     @include breakpoint(L) {
+      flex: 1;
       flex-wrap: nowrap;
     }
 
+  }
+
+  &__search {
+    margin: $size-default $size-default 0;
+    @include breakpoint(L) {
+      margin: 0 $size-default 1px;
+    }
   }
 
   &__list-item {
@@ -120,7 +132,7 @@
   &__link {
 
     @include font-size(2);
-    background-color: transparent;
+    background-color: $nav-bgcolor;
     border: 0;
     display: block;
     width: 100%; // block-level <button> elements don't automatically full-width themselves
@@ -137,6 +149,7 @@
     @include breakpoint(L) {
       padding-left: $nav-spacing-unit;
       padding-right: $nav-spacing-unit;
+      background-color: transparent;
     }
 
     &:visited {
