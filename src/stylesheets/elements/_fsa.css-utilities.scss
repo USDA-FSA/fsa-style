@@ -671,9 +671,35 @@
     }
 
     &-align {
+
       &--right  { text-align: right; }
       &--center { text-align: center; }
       &--left   { text-align: left; }
+
+      @include breakpoint(S) {
+        &--right\@s  { text-align: right; }
+        &--center\@s { text-align: center; }
+        &--left\@s   { text-align: left; }
+      }
+
+      @include breakpoint(M) {
+        &--right\@m  { text-align: right; }
+        &--center\@m { text-align: center; }
+        &--left\@m   { text-align: left; }
+      }
+
+      @include breakpoint(L) {
+        &--right\@l  { text-align: right; }
+        &--center\@l { text-align: center; }
+        &--left\@l   { text-align: left; }
+      }
+
+      @include breakpoint(XL) {
+        &--right\@xl  { text-align: right; }
+        &--center\@xl { text-align: center; }
+        &--left\@xl   { text-align: left; }
+      }
+
     }
 
   }
