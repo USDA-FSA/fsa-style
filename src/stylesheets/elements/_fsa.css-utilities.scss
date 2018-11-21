@@ -543,6 +543,30 @@
     &--right { float: right; }
     &--none  { float: none; }
 
+    @include breakpoint(S) {
+      &--left\@s  { float: left; }
+      &--right\@s { float: right; }
+      &--none\@s  { float: none; }
+    }
+
+    @include breakpoint(M) {
+      &--left\@m  { float: left; }
+      &--right\@m { float: right; }
+      &--none\@m  { float: none; }
+    }
+
+    @include breakpoint(L) {
+      &--left\@l  { float: left; }
+      &--right\@l { float: right; }
+      &--none\@l  { float: none; }
+    }
+
+    @include breakpoint(XL) {
+      &--left\@xl  { float: left; }
+      &--right\@xl { float: right; }
+      &--none\@xl  { float: none; }
+    }
+
   }
 
   // Font ----------------------------------------------------------------------
