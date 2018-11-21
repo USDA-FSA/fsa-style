@@ -159,7 +159,6 @@
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#utilities__padding">Padding</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#utilities__floats">Floats</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#utilities__text-size">Text size</a></li>
-                <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#utilities__responsive-text-size">Responsive Text Size</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#utilities__text-alignment">Text Alignment</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#utilities__text-headers">Text Headers</a></li>
               </ul>
@@ -5992,14 +5991,32 @@
           <p class="fsa-ellipsis fsa-text-size--5">Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
           <p class="fsa-ellipsis fsa-text-size--6">Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
           <p class="fsa-ellipsis fsa-text-size--7">Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
-        </div>
-        <div class="docs__jump-target" id="utilities__responsive-text-size">
-          <h3 class="docs__bd docs__figure"><a class="docs__anchor" aria-hidden="true" href="#utilities__responsive-text-size">#</a>Responsive Text Size</h3>
-          <p>As with <a href="#grid">Responsive Grids</a>, text size can customized per media query breakpoint.</p>
+          <h4 class="docs__bd docs__figure">Responsive</h4>
+          <p>Text size can be adjusted per media query breakpoint.</p>
           <p><code>class="fsa-text-size<strong>--[size]@[breakpoint]</strong>"</code>, where <code>size</code> is one of <code>0</code> - <code>7</code>, and <code>breakpoint</code> is one of <code title="small">s</code>, <code title="medium">m</code>, <code title="large">l</code>, or <code title="extra large">xl</code></p>
-          <h4 class="docs__sub_style">Examples</h4>
-          <p class="fsa-text-size--1 fsa-text-size--4@m fsa-text-size--7@l">I am size <code>1</code> by default, <code>4@m</code> (Four at Medium), and <code>7@l</code> (Seven at Large)</p>
-          <p class="fsa-text-size--3 fsa-text-size--5@l fsa-text-size--7@xl">I am size <code>3</code> by default, <code>5@l</code> (Five at Large), and <code>7@xl</code> (Seven at Extra-Large)</p>
+          <h5 class="docs__sub_style">Demo</h5>
+          <p>
+            <span class="fsa-btn-group fsa-btn-group--small" role="group" aria-label="Label describing this group" data-component>
+              <button data-behavior="toggle-codepen-size" data-target="codepen-demo_text-size" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button">Phone</button>
+              <button data-behavior="toggle-codepen-size" data-target="codepen-demo_text-size" data-size="phone-big" class="fsa-btn-group__item" type="button">Big Phone</button>
+              <button data-behavior="toggle-codepen-size" data-target="codepen-demo_text-size" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+              <button data-behavior="toggle-codepen-size" data-target="codepen-demo_text-size" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+            </span>
+          </p>
+          <div class="docs__codepen-embed docs__codepen-embed--mobile" id="codepen-demo_text-size">
+            <p
+              data-height="240"
+              data-theme-id="light"
+              data-slug-hash="xQYZJd"
+              data-default-tab="result"
+              data-user="francisrupert"
+              data-pen-title="fsa-style demo: Responsive Text Size"
+              class="codepen"
+            >
+              See the Pen <a href="https://codepen.io/francisrupert/pen/xQYZJd/"> fsa-style demo: Responsive Text Size </a> by Francis Rupert (<a href="https://codepen.io/francisrupert">@francisrupert</a>) on <a href="https://codepen.io">CodePen</a>.
+            </p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+          </div>
         </div>
         <div class="docs__jump-target" id="utilities__text-alignment">
           <h3 class="docs__bd docs__figure"><a class="docs__anchor" aria-hidden="true" href="#utilities__text-alignment">#</a>Text Alignment</h3>

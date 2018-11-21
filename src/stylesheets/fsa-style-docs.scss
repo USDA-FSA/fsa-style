@@ -793,6 +793,46 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   }
 }
 
+.docs__codepen-embed {
+  transition: width .66s ease-in-out;
+  border: $size-small solid $color-fsa-tertiary-100;
+  &--phone {
+    width: 320px;
+  }
+  &--phone-big {
+    width: 500px;
+  }
+  &--tablet {
+    width: 800px;
+  }
+  &--desktop {
+    width: 100%;
+  }
+}
+
+// .cp_embed_wrapper {
+//   /* required for resize to work */
+//   overflow: hidden;
+
+//   /* make resizeble! */
+//   resize: both;
+//   min-width: 240px;
+//   max-width: 100%;
+
+//   /* default height */
+//   height: 400px;
+
+//   @include breakpoint(L) {
+//     border: $size-small solid $color-fsa-tertiary-100;
+//     background: white;
+//     padding: $size-default;
+//   }
+
+// }
+// .cp_embed_wrapper iframe {
+//   height: 100% !important;
+// }
+
 /* COLOR VALUE DUMP ********************************************************* */
 
 // .color-fsa-primary       { color: $color-fsa-primary }
