@@ -489,3 +489,55 @@ $breakpoints: (
     margin: (-$fudge-amount) 0 0;
   }
 }
+
+// ----------------------------------------------------------------------------
+// h1 - h6 header elements
+
+@mixin fsa-header($variation: '1') {
+
+  color: $color-title;
+  font-family: $font-sans;
+  font-weight: $font-bold;
+
+  & + p {
+    margin-top: .5em;
+  }
+
+  @if $variation == '1' {
+
+    @include h1(); // from USWDS mixins
+
+    font-weight: $font-normal;
+    margin-top: $size-default;
+    margin-bottom: 0;
+
+    .fsa-section__bd > & {
+      margin-top: $size-medium;
+      @include breakpoint(L) {
+        margin-top: ($size-base * 8);
+      }
+    }
+
+  }
+
+  @elseif $variation == '2' {
+    @include h2(); // from USWDS mixins
+  }
+
+  @elseif $variation == '3' {
+    @include h3(); // from USWDS mixins
+  }
+
+  @elseif $variation == '4' {
+    @include h4(); // from USWDS mixins
+  }
+
+  @elseif $variation == '5' {
+    @include h5(); // from USWDS mixins
+  }
+
+  @elseif $variation == '6' {
+    @include h6(); // from USWDS mixins
+  }
+
+}

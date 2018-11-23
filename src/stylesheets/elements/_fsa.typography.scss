@@ -24,70 +24,12 @@ textarea {
   font-family: $font-sans; // redundant, but some browsers required this to be explicit
 }
 
-h1,
-h2,
-h3,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h3,
-.h4,
-.h5,
-.h6 {
-  color: $color-title;
-  font-family: $font-sans;
-  font-weight: $font-bold;
-  & + p {
-    margin-top: .5em;
-  }
-}
-
-h1,
-.h1 {
-
-  @include h1();
-  font-weight: $font-normal;
-  margin-top: $size-default;
-  margin-bottom: 0;
-
-  .fsa-section__bd > & {
-    margin-top: $size-medium;
-    @include breakpoint(L) {
-      margin-top: ($size-base * 8);
-    }
-  }
-
-}
-
-h2,
-.h2 {
-  @include h2();
-}
-
-h3,
-.h3 {
-  @include h3();
-}
-
-h4,
-.h4 {
-  @include h4();
-}
-
-h5,
-.h5 {
-  @include h5();
-}
-
-h6,
-.h6 {
-  @include h6();
-  font-weight: $font-bold;
-}
+h1, .h1 { @include fsa-header('1'); }
+h2, .h2 { @include fsa-header('2'); }
+h3, .h3 { @include fsa-header('3'); }
+h4, .h4 { @include fsa-header('4'); }
+h5, .h5 { @include fsa-header('5'); }
+h6, .h6 { @include fsa-header('6'); }
 
 // scss-lint:disable SelectorFormat
 .fsa-text--lead,

@@ -609,12 +609,45 @@
 
     // scss-lint:disable PlaceholderInExtend
 
-    &--h1 { @extend .h1; }
-    &--h2 { @extend .h2; }
-    &--h3 { @extend .h3; }
-    &--h4 { @extend .h4; }
-    &--h5 { @extend .h5; }
-    &--h6 { @extend .h6; }
+    &--h1 { @include fsa-header('1'); }
+    &--h2 { @include fsa-header('2'); }
+    &--h3 { @include fsa-header('3'); }
+    &--h4 { @include fsa-header('4'); }
+    &--h5 { @include fsa-header('5'); }
+    &--h6 { @include fsa-header('6'); }
+
+    @include breakpoint(S) {
+      &--h1\@s { @include fsa-header('1'); }
+      &--h2\@s { @include fsa-header('2'); }
+      &--h3\@s { @include fsa-header('3'); }
+      &--h4\@s { @include fsa-header('4'); }
+      &--h5\@s { @include fsa-header('5'); }
+      &--h6\@s { @include fsa-header('6'); }
+    }
+    @include breakpoint(M) {
+      &--h1\@m { @include fsa-header('1'); }
+      &--h2\@m { @include fsa-header('2'); }
+      &--h3\@m { @include fsa-header('3'); }
+      &--h4\@m { @include fsa-header('4'); }
+      &--h5\@m { @include fsa-header('5'); }
+      &--h6\@m { @include fsa-header('6'); }
+    }
+    @include breakpoint(L) {
+      &--h1\@l { @include fsa-header('1'); }
+      &--h2\@l { @include fsa-header('2'); }
+      &--h3\@l { @include fsa-header('3'); }
+      &--h4\@l { @include fsa-header('4'); }
+      &--h5\@l { @include fsa-header('5'); }
+      &--h6\@l { @include fsa-header('6'); }
+    }
+    @include breakpoint(XL) {
+      &--h1\@xl { @include fsa-header('1'); }
+      &--h2\@xl { @include fsa-header('2'); }
+      &--h3\@xl { @include fsa-header('3'); }
+      &--h4\@xl { @include fsa-header('4'); }
+      &--h5\@xl { @include fsa-header('5'); }
+      &--h6\@xl { @include fsa-header('6'); }
+    }
 
     &-size {
 
