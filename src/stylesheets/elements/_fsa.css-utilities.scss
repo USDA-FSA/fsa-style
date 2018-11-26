@@ -770,17 +770,36 @@
 
   &-hide {
     display: none !important;
+    &\@xs {
+      &-only {
+        @media screen and (max-width: $screen-s) {
+          display: none !important;
+        }
+      }
+    }
     &\@s {
       @include breakpoint(S)   { display: none !important; }
+      &-only {
+        @media screen and (max-width: $screen-m) and (min-width: $screen-s) { display: none !important; }
+      }
     }
     &\@m {
       @include breakpoint(M)   { display: none !important; }
+      &-only {
+        @media screen and (max-width: $screen-l) and (min-width: $screen-m) { display: none !important; }
+      }
     }
     &\@l {
       @include breakpoint(L)   { display: none !important; }
+      &-only {
+        @media screen and (max-width: $screen-xl) and (min-width: $screen-l) { display: none !important; }
+      }
     }
     &\@xl {
       @include breakpoint(XL)   { display: none !important; }
+      &-only {
+        @media screen and (min-width: $screen-xl) { display: none !important; }
+      }
     }
   }
 
