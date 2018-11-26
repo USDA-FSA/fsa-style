@@ -136,3 +136,11 @@ $form-between-space            : $size-base + ($size-base / 2);
 
 $fsa-grid-gutter: ($base-font-size * 1.5);
 $fsa-grid-columns: 12;
+
+// ---------------------------------------------------------------------------
+// Breakpoint Settings (screen width)
+
+$screen-s  : 30.0625em; //  481px at 16px base font
+$screen-m  : 37.5em;    //  600px at 16px base font
+$screen-l  : 54em;      //  864px at 16px base font
+$screen-xl : 78.75em;   // 1260px at 16px base font
