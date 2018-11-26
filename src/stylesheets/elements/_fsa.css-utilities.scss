@@ -738,54 +738,49 @@
   // Visibility ---------------------------------------------------------------
 
   &-show {
+    display: initial !important;
     &\@s {
-      @include breakpoint(S, down) {
-        display: none !important;
-      }
+      @include breakpoint(S, down)   { display: none !important; }
       &-only {
-        @include breakpoint(S, down) {
-          display: none !important;
-        }
-        @include breakpoint(M) {
-          display: none !important;
-        }
+        @include breakpoint(S, down) { display: none !important; }
+        @include breakpoint(M)       { display: none !important; }
       }
     }
     &\@m {
-      @include breakpoint(M, down) {
-        display: none !important;
-      }
+      @include breakpoint(M, down) { display: none !important; }
       &-only {
-        @include breakpoint(M, down) {
-          display: none !important;
-        }
-        @include breakpoint(L) {
-          display: none !important;
-        }
+        @include breakpoint(M, down) { display: none !important; }
+        @include breakpoint(L)       { display: none !important; }
       }
     }
     &\@l {
-      @include breakpoint(L, down) {
-        display: none !important;
-      }
+      @include breakpoint(L, down)   { display: none !important; }
       &-only {
-        @include breakpoint(L, down) {
-          display: none !important;
-        }
-        @include breakpoint(XL) {
-          display: none !important;
-        }
+        @include breakpoint(L, down) { display: none !important; }
+        @include breakpoint(XL)      { display: none !important; }
       }
     }
     &\@xl {
-      @include breakpoint(XL, down) {
-        display: none !important;
-      }
+      @include breakpoint(XL, down)  { display: none !important; }
       &-only {
-        @include breakpoint(XL, down) {
-          display: none !important;
-        }
+        @include breakpoint(XL, down){ display: none !important; }
       }
+    }
+  }
+
+  &-hide {
+    display: none !important;
+    &\@s {
+      @include breakpoint(S)   { display: none !important; }
+    }
+    &\@m {
+      @include breakpoint(M)   { display: none !important; }
+    }
+    &\@l {
+      @include breakpoint(L)   { display: none !important; }
+    }
+    &\@xl {
+      @include breakpoint(XL)   { display: none !important; }
     }
   }
 
