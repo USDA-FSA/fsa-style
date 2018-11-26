@@ -599,8 +599,6 @@
 
   }
 
-  // Text ----------------------------------------------------------------------
-
   &-ellipsis {
     @include fsa-ellipsis();
   }
@@ -735,6 +733,60 @@
 
     }
 
+  }
+
+  // Visibility ---------------------------------------------------------------
+
+  &-show {
+    &\@s {
+      @include breakpoint(S, down) {
+        display: none !important;
+      }
+      &-only {
+        @include breakpoint(S, down) {
+          display: none !important;
+        }
+        @include breakpoint(M) {
+          display: none !important;
+        }
+      }
+    }
+    &\@m {
+      @include breakpoint(M, down) {
+        display: none !important;
+      }
+      &-only {
+        @include breakpoint(M, down) {
+          display: none !important;
+        }
+        @include breakpoint(L) {
+          display: none !important;
+        }
+      }
+    }
+    &\@l {
+      @include breakpoint(L, down) {
+        display: none !important;
+      }
+      &-only {
+        @include breakpoint(L, down) {
+          display: none !important;
+        }
+        @include breakpoint(XL) {
+          display: none !important;
+        }
+      }
+    }
+    &\@xl {
+      @include breakpoint(XL, down) {
+        display: none !important;
+      }
+      &-only {
+        @include breakpoint(XL, down) {
+          display: none !important;
+        }
+      }
+    }
   }
 
 }
