@@ -794,7 +794,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 }
 
 .docs__codepen-embed {
-  transition: width .66s ease-in-out;
+  transition: width .23s ease-in-out;
   border: $size-small solid $color-fsa-tertiary-100;
   &--phone {
     width: 320px;

@@ -161,6 +161,7 @@
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#utilities__text-size">Text size</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#utilities__text-alignment">Text Alignment</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#utilities__text-headers">Text Headers</a></li>
+                <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#utilities__visibility">Visibility</a></li>
               </ul>
             </li>
             <li class="docs__primary-nav-item docs__primary-nav-item--floater">
@@ -6057,6 +6058,45 @@
 
           <p class="docs__code-sample"><code> class="fsa-text<strong>--h6</strong>"</code></p>
           <h2 class="fsa-text--h6">h2 that looks like an h6</h2>
+        </div>
+        <div class="docs__jump-target" id="utilities__visibility">
+
+          <h3 class="docs__bd docs__figure"><a class="docs__anchor" aria-hidden="true" href="#utilities__text-visibility">#</a>Visibility</h3>
+          <p>Selectively show or hide elements or blocks at a variety of screen sizes (i.e. Media Query breakpoints).</p>
+          <h4 class="docs__bd docs__figure">Show at minimum screen size</h4>
+          <p class="docs__code-sample"><code>class="fsa-show@<strong>[size]</strong>"</code>. Show when <em>at least</em> [size], where [size] is one of <code>s</code>, <code>m</code>, <code>l</code>, or <code>xl</code>. </p>
+          <h5>Demo</h5>
+          <p>You are on a screen <strong>at least 1px wide</strong> (default).</p>
+          <p class="fsa-show@s"><code>fsa-show@<strong>s</strong></code>. You are on a <strong>small</strong> screen or larger.</p>
+          <p class="fsa-show@m"><code>fsa-show@<strong>m</strong></code>. You are on a <strong>medium</strong> screen or larger.</p>
+          <p class="fsa-show@l"><code>fsa-show@<strong>l</strong></code>. You are on a <strong>large</strong> screen or larger.</p>
+          <p class="fsa-show@xl"><code>fsa-show@x<strong>l</strong></code>. You are on a <strong>extra-large</strong> screen or larger.</p>
+
+          <h4 class="docs__bd docs__figure">Show at specific screen size</h4>
+          <p><code>class="fsa-show@<strong>[size]-only</strong>"</code>. Show <em>only</em> at [size], where [size] is one of <code>s</code>, <code>m</code>, <code>l</code>, or <code>xl</code>. </p>
+          <h5>Demo</h5>
+          <p class="fsa-show@s-only"><code>fsa-show@<strong>s-only</strong></code>. You are <em>specifically</em> on a <strong>small</strong> screen.</p>
+          <p class="fsa-show@m-only"><code>fsa-show@<strong>m-only</strong></code>. You are <em>specifically</em> on a <strong>medium</strong> screen.</p>
+          <p class="fsa-show@l-only"><code>fsa-show@<strong>l-only</strong></code>. You are <em>specifically</em> on a <strong>large</strong> screen.</p>
+          <p class="fsa-show@xl-only"><code>fsa-show@<strong>xl-only</strong></code>. You are <em>specifically</em> on a <strong>extra-large</strong> screen.</p>
+
+          <h4 class="docs__bd docs__figure">Hide at minimum screen size</h4>
+          <p><code>class="fsa-hide@<strong>[size]</strong>"</code>. Hide when <em>at least</em> [size], where [size] is one of <code>s</code>, <code>m</code>, or <code>l</code>. </p>
+          <h5>Demo</h5>
+          <p class="fsa-hide@s"><code>fsa-hide@<strong>s</strong></code>.   Your screen is narrower than a <strong>small</strong> screen</p>
+          <p class="fsa-hide@m"><code>fsa-hide@<strong>m</strong></code>.   Your screen is narrower than a <strong>medium</strong> screen</p>
+          <p class="fsa-hide@l"><code>fsa-hide@<strong>l</strong></code>.   Your screen is narrower than a <strong>large</strong> screen</p>
+          <p class="fsa-hide@xl"><code>fsa-hide@<strong>xl</strong></code>. Your screen is narrower than a <strong>extra-large</strong> screen</p>
+          <p class="fsa-show@xl">If you're seeing this, there are 4 <code>class="fsa-hide@<strong>[size]</strong>"</code> items above being hidden.</p>
+
+          <h4 class="docs__bd docs__figure">Hide at specific screen size</h4>
+          <p><code>class="fsa-hide@<strong>[size]-only</strong>"</code></p>. Hide <em>only</em> at [size], where [size] is one of <code>xs</code>, <code>s</code>, <code>m</code>, <code>l</code>, or <code>xl</code>.</p>
+          <h5>Demo</h5>
+          <p class="fsa-hide@xs-only"><code>fsa-hide@<strong>xs-only</strong></code>. You are specifically <em>not</em> on a <strong>extra-small</strong> screen.</p>
+          <p class="fsa-hide@s-only"><code>fsa-hide@<strong>s-only</strong></code>. You are specifically <em>not</em> on a <strong>small</strong> screen.</p>
+          <p class="fsa-hide@m-only"><code>fsa-hide@<strong>m-only</strong></code>. You are specifically <em>not</em> on a <strong>medium</strong> screen.</p>
+          <p class="fsa-hide@l-only"><code>fsa-hide@<strong>l-only</strong></code>. You are specifically <em>not</em> on a <strong>large</strong> screen.</p>
+          <p class="fsa-hide@xl-only"><code>fsa-hide@<strong>xl-only</strong></code>. You are specifically <em>not</em> on a <strong>extra-large</strong> screen.</p>
         </div>
       </div>
     </section>
