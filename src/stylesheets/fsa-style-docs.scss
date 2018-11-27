@@ -794,20 +794,38 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 }
 
 .docs__codepen-embed {
-  transition: width .23s ease-in-out;
-  border: $size-small solid $color-fsa-tertiary-100;
+  transition: all .23s ease-in-out;
+  border: $size-base solid $color-fsa-tertiary-100;
+  margin: auto;
   &--phone {
-    width: 320px;
+    width: 335px;
+    height: 580px;
+    border-radius: $size-medium;
+    border-width: $size-large $size-small;
   }
   &--phone-big {
-    width: 500px;
+    height: 335px;
+    width: 580px;
+    border-radius: $size-medium;
+    border-width: $size-small $size-large;
   }
   &--tablet {
-    width: 800px;
+    width: 820px;
+    height: 1000px;
+    border-radius: $size-medium;
+    border-width: $size-large;
   }
   &--desktop {
     width: 100%;
+    height: 480px;
+    border-top-width: $size-extra-large;
   }
+}
+
+.docs__codepen-iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 // .cp_embed_wrapper {
