@@ -739,6 +739,12 @@
 
   &-show {
     display: initial !important;
+    &\@xs {
+      @include breakpoint(S, down)   { display: none !important; }
+      &-only {
+        @include breakpoint(S)       { display: none !important; }
+      }
+    }
     &\@s {
       @include breakpoint(S, down)   { display: none !important; }
       &-only {
