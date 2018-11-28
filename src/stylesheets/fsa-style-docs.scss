@@ -641,6 +641,16 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   }
 
+  &__vis-demo-hidden {
+    filter: grayscale(100);
+    opacity: .5;
+    outline: 3px dotted rgba(0,0,0,.1);
+    outline-offset: 2px;
+    // * {
+    //   background-color: transparent;
+    // }
+  }
+
 }
 
 .fsa-checkerboard {
@@ -854,36 +864,74 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
 .docs-highlight {
 
+  $thisBGC: transparentize($color-gold, .7);
+
+  background-color: $thisBGC;
+
   &\@xs {
     &,
     &-only {
-      @include breakpoint(S, down)   { background-color: transparentize($color-gold, .6); }
+      @include breakpoint(S, down)   { background-color: $thisBGC; }
     }
   }
   &\@s {
-    @include breakpoint(S)   { background-color: transparentize($color-gold, .6); }
+    @include breakpoint(S)   { background-color: $thisBGC; }
     &-only {
-      @media screen and (max-width: $screen-m) and (min-width: $screen-s) { background-color: transparentize($color-gold, .6); }
+      @media screen and (max-width: $screen-m) and (min-width: $screen-s) { background-color: $thisBGC; }
     }
   }
   &\@m {
-    @include breakpoint(M)   { background-color: transparentize($color-gold, .6); }
+    @include breakpoint(M)   { background-color: $thisBGC; }
     &-only {
-      @media screen and (max-width: $screen-l) and (min-width: $screen-m) { background-color: transparentize($color-gold, .6); }
+      @media screen and (max-width: $screen-l) and (min-width: $screen-m) { background-color: $thisBGC; }
     }
   }
   &\@l {
-    @include breakpoint(L)   { background-color: transparentize($color-gold, .6); }
+    @include breakpoint(L)   { background-color: $thisBGC; }
     &-only {
-      @media screen and (max-width: $screen-xl) and (min-width: $screen-l) { background-color: transparentize($color-gold, .6); }
+      @media screen and (max-width: $screen-xl) and (min-width: $screen-l) { background-color: $thisBGC; }
     }
   }
   &\@xl {
     &,
     &-only {
-      @include breakpoint(XL)   { background-color: transparentize($color-gold, .6); }
+      @include breakpoint(XL)   { background-color: $thisBGC; }
     }
   }
+}
+
+.docs__rwd-demo-icon {
+
+  $thisWIDTH: 11px;
+  $thisHEIGHT: 18px;
+
+  border: solid $color-fsa-secondary;
+  border-width: 3px 1px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 2px;
+  width: $thisWIDTH;
+  height: $thisHEIGHT;
+  // background-color: transparent;
+  margin-left: $size-base;
+  margin-top: -2px;
+
+  .fsa-btn-group__item--active & {
+    border-color: white;
+  }
+
+  &--portrait {
+    width: $thisWIDTH;
+    height: $thisHEIGHT;
+  }
+
+  &--landscape {
+    border-width: 1px 3px;
+    width: ($thisHEIGHT + 1px);
+    height: ($thisWIDTH + 1px);
+  }
+
 }
 
 // .cp_embed_wrapper {
