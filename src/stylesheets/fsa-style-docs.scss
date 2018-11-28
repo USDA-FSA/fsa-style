@@ -853,7 +853,37 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 }
 
 .docs-highlight {
-  background-color: transparentize($color-gold, .6);
+
+  &\@xs {
+    &,
+    &-only {
+      @include breakpoint(S, down)   { background-color: transparentize($color-gold, .6); }
+    }
+  }
+  &\@s {
+    @include breakpoint(S)   { background-color: transparentize($color-gold, .6); }
+    &-only {
+      @media screen and (max-width: $screen-m) and (min-width: $screen-s) { background-color: transparentize($color-gold, .6); }
+    }
+  }
+  &\@m {
+    @include breakpoint(M)   { background-color: transparentize($color-gold, .6); }
+    &-only {
+      @media screen and (max-width: $screen-l) and (min-width: $screen-m) { background-color: transparentize($color-gold, .6); }
+    }
+  }
+  &\@l {
+    @include breakpoint(L)   { background-color: transparentize($color-gold, .6); }
+    &-only {
+      @media screen and (max-width: $screen-xl) and (min-width: $screen-l) { background-color: transparentize($color-gold, .6); }
+    }
+  }
+  &\@xl {
+    &,
+    &-only {
+      @include breakpoint(XL)   { background-color: transparentize($color-gold, .6); }
+    }
+  }
 }
 
 // .cp_embed_wrapper {
