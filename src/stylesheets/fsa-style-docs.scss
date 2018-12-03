@@ -646,9 +646,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     opacity: .5;
     outline: 3px dotted rgba(0,0,0,.1);
     outline-offset: 2px;
-    // * {
-    //   background-color: transparent;
-    // }
   }
 
 }
@@ -800,6 +797,13 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 [class*="lightest"] {
   code {
     color: $color-base;
+  }
+}
+
+.docs__rwd-demo-block {
+  display: none;
+  @include breakpoint(L)   {
+    display: block;
   }
 }
 
