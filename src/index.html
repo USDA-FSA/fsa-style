@@ -733,47 +733,29 @@
           </div>
         </div>
         <h3 class="docs__bd docs__figure" id="grid-responsive">Responsive Columns</h3>
-        <h4 class="docs__sub_style">Example</h4>
-        <p>Full-width by default (smallest screen), <code title="One-half at Small">1/2<strong>@s</strong></code>, <code title="One-fourth at Medium">1/4<strong>@m</strong></code> </p>
-        <div class="fsa-grid">
-          <div class="fsa-grid__1/1 fsa-grid__1/2@s fsa-grid__1/4@m">
-            <p class="fsa-grid__demo">
-              <code>fsa-grid__1/1</code>
-              <br>
-              <code>fsa-grid__1/2<strong>@s</strong></code>
-              <br>
-              <code>fsa-grid__1/4<strong>@m</strong></code>
-            </p>
-          </div>
-          <div class="fsa-grid__1/1 fsa-grid__1/2@s fsa-grid__1/4@m">
-            <p class="fsa-grid__demo">
-              <code>fsa-grid__1/1</code>
-              <br>
-              <code>fsa-grid__1/2<strong>@s</strong></code>
-              <br>
-              <code>fsa-grid__1/4<strong>@m</strong></code>
-            </p>
-          </div>
-          <div class="fsa-grid__1/1 fsa-grid__1/2@s fsa-grid__1/4@m">
-            <p class="fsa-grid__demo">
-              <code>fsa-grid__1/1</code>
-              <br>
-              <code>fsa-grid__1/2<strong>@s</strong></code>
-              <br>
-              <code>fsa-grid__1/4<strong>@m</strong></code>
-            </p>
-          </div>
-          <div class="fsa-grid__1/1 fsa-grid__1/2@s fsa-grid__1/4@m">
-            <p class="fsa-grid__demo">
-              <code>fsa-grid__1/1</code>
-              <br>
-              <code>fsa-grid__1/2<strong>@s</strong></code>
-              <br>
-              <code>fsa-grid__1/4<strong>@m</strong></code>
-            </p>
+        <p class="fsa-show@l">Grid columns can be adjusted per media query breakpoint.</p>
+        <div class="fsa-hide@l">
+          <div class="fsa-alert fsa-alert--info fsa-alert--no-icon" role="alert">
+            <div class="fsa-alert__body">
+              <p class="fsa-alert__text">View this page on a large screen to view complete Responsive Web Design options.</p>
+            </div>
           </div>
         </div>
-
+        <div class="docs__rwd-demo-block">
+          <h4 class="docs__sub_style">Demo</h4>
+          <p>
+            <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+              <button data-behavior="toggle-rwd-size" data-target="rwd-demo_grid" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+              <button data-behavior="toggle-rwd-size" data-target="rwd-demo_grid" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+              <button data-behavior="toggle-rwd-size" data-target="rwd-demo_grid" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+              <button data-behavior="toggle-rwd-size" data-target="rwd-demo_grid" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+            </span>
+            <a class="fsa-m-l--xs fsa-text-size--1" href="demo-rwd__grid.html" target="_blank">View in new window</a>
+          </p>
+          <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_grid">
+            <iframe src="demo-rwd__grid.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+          </div>
+        </div>
       </div>
     </section>
     <section class="docs__section" id="components">
