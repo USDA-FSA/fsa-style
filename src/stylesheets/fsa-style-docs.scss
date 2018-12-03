@@ -813,13 +813,13 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   margin: auto;
   position: relative;
   &--phone {
-    width: 335px;
+    width: 340px;
     height: 580px;
     border-radius: $size-medium;
     border-width: $size-large $size-small;
   }
   &--phone-big {
-    height: 335px;
+    height: 330px;
     width: 580px;
     border-radius: $size-medium;
     border-width: $size-small $size-large;

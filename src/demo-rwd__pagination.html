@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 9]><html class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>fsa-style Demo</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/fsa-style.min.css" media="all">
+  <link rel="stylesheet" href="css/fsa-style-docs.min.css" media="all">
+  <!--[if lt IE 9]>
+    <script src="js/vendor/html5shiv.js"></script>
+    <script src="js/vendor/respond.js"></script>
+    <script src="js/vendor/selectivizr-min.js"></script>
+    <script src="js/vendor/rem.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="fsa-p--s">
+    <nav aria-label="Pagination">
+      <div class="fsa-pagination" data-current="1" data-total="120">
+        <ul class="fsa-pagination__list">
+          <li class="fsa-pagination__item fsa-pagination__item--previous" aria-hidden="true">
+            <span class="fsa-pagination__label fsa-pagination__label--previous fsa-pagination__label--disabled">Previous</span>
+          </li>
+          <li class="fsa-pagination__item">
+            <span class="fsa-pagination__label fsa-pagination__label--current" aria-current="true">1</span>
+          </li>
+          <li class="fsa-pagination__item">
+            <a class="fsa-pagination__label" href="link.html">2</a>
+          </li>
+          <li class="fsa-pagination__item" aria-hidden="true">
+            <span class="fsa-pagination__label">…</span>
+          </li>
+          <li class="fsa-pagination__item">
+            <a class="fsa-pagination__label" href="link.html">120</a>
+          </li>
+          <li class="fsa-pagination__item fsa-pagination__item--next">
+            <a class="fsa-pagination__label fsa-pagination__label--next" href="link.html">Next</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <script src="js/fsa-style-docs.min.js"></script>
+</body>
+</html>
