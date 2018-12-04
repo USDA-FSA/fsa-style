@@ -25,14 +25,11 @@ $('body').on('click', '[data-behavior~="toggle-rwd-size"]', function(event) {
 $('body').on('change', '[data-behavior~="toggle-rwd-table"]', function(event) {
 
   var $self = $(this);
-  var $target = $('#' + $self.attr('data-target'));
+  var $target = $('#' + $self.data('target'));
   var $newClass = $self.val();
 
-  $target
-    .toggleClass('fsa-table--responsive-horizontal')
-  ;
+  $target.toggleClass('fsa-table--responsive-horizontal');
 
 })
-
 
 console.log('DocsRWD loaded, its JS is NOT to be used for Production, demo purposes only');1
