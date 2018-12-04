@@ -807,6 +807,12 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   }
 }
 
+.docs__rwd-embed-container {
+  padding: $size-default;
+  background-color: white;
+  border: 1px solid $color-fsa-tertiary-200;
+}
+
 .docs__rwd-embed {
   transition: all .23s ease-in-out;
   border: $size-base solid shade($color-fsa-tertiary-100,2%);
