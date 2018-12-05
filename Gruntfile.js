@@ -111,6 +111,7 @@ module.exports = function (grunt) {
       },
       html: {
         files: [
+          'src/**/*.html',
           'src/*.html',
         ],
         tasks: ['newer:prettify'] // 'simple_include'
@@ -142,7 +143,7 @@ module.exports = function (grunt) {
         expand: true,
         cwd: 'src/',
         ext: '.html',
-        src: ['*.html'],
+        src: ['*.html','**/*.html'],
         dest: 'dist/'
       },
     },
@@ -190,6 +191,7 @@ module.exports = function (grunt) {
             'dist/**/*.svg',
             'dist/**/*.jpg',
             'dist/**/*.jpeg',
+            'dist/**/*.html',
             'dist/*.html',
             'dist/css/*.css',
             'dist/js/*.js'
