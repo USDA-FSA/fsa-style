@@ -148,10 +148,10 @@
 // scss-lint:disable SpaceAfterComma
 
 $breakpoints: (
-  '(min-width: $screen-s)' 'S',
-  '(min-width: $screen-m)' 'M',
-  '(min-width: $screen-l)' 'L',
-  '(min-width: $screen-xl)' 'XL'
+  '(min-width: #{$screen-s})' 'S',
+  '(min-width: #{$screen-m})' 'M',
+  '(min-width: #{$screen-l})' 'L',
+  '(min-width: #{$screen-xl})' 'XL'
 );
 
 // -----------------------------------------------------------------------------
