@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 9]><html class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>fsa-style Demo</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/fsa-style.min.css" media="all">
+  <link rel="stylesheet" href="../css/fsa-style-docs.min.css" media="all">
+  <!--[if lt IE 9]>
+    <script src="../js/vendor/html5shiv.js"></script>
+    <script src="../js/vendor/respond.js"></script>
+    <script src="../js/vendor/selectivizr-min.js"></script>
+    <script src="../js/vendor/rem.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="fsa-section">
+    <div class="fsa-section__bd">
+      <ul class="fsa-form-list fsa-text-size--2">
+        <li>
+          <input data-behavior="toggle-rwd-table" data-target="rwd-table-demo" class="fsa-radio" id="rwd-table-01" type="radio" name="rwd-table" value="fsa-table--responsive-horizontal" checked="">
+          <label for="rwd-table-01"><code>fsa-table<strong>--responsive-horizontal</strong></code></label>
+        </li>
+        <li>
+          <input data-behavior="toggle-rwd-table" data-target="rwd-table-demo" class="fsa-radio" id="rwd-table-02" type="radio" name="rwd-table" value="fsa-table--responsive">
+          <label for="rwd-table-02"><code>fsa-table<strong>--responsive</strong></code></label>
+        </li>
+      </ul>
+      <table class="fsa-table fsa-table--borderless fsa-table--responsive fsa-table--responsive-horizontal" id="rwd-table-demo">
+        <thead>
+          <tr>
+            <th scope="col" aria-sort="descending"><button class="fsa-table__sort fsa-table__sort--descending" type="button">Document title</button></th>
+            <th scope="col"><button class="fsa-table__sort" type="button">Description</button></th>
+            <th scope="col" class="fsa-text-align--right"><button class="fsa-table__sort" type="button">Year</button></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th aria-label="Document title" scope="row">Declaration of Independence</th>
+            <td aria-label="Description">Statement</td>
+            <td aria-label="Year" class="fsa-text-align--right">1776</td>
+          </tr>
+          <tr>
+            <th aria-label="Document title" scope="row">Bill of Rights</th>
+            <td aria-label="Description">The first ten amendments</td>
+            <td aria-label="Year" class="fsa-text-align--right">1791</td>
+          </tr>
+          <tr>
+            <th aria-label="Document title" scope="row">Declaration of Sentiments</th>
+            <td aria-label="Description">A document</td>
+            <td aria-label="Year" class="fsa-text-align--right">1848</td>
+          </tr>
+          <tr>
+            <th aria-label="Document title" scope="row">Emancipation Proclamation</th>
+            <td aria-label="Description">Executive order granting freedom to slaves in designated southern states.</td>
+            <td aria-label="Year" class="fsa-text-align--right">1863</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="../js/fsa-style-docs.min.js"></script>
+</body>
+</html>

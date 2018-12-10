@@ -19,6 +19,46 @@
     &--l    { margin: $size-large !important; }
     &--xl   { margin: $size-extra-large !important; }
 
+    @include breakpoint(S) {
+      &--none\@s { margin: 0 !important; }
+      &--xxs\@s  { margin: $size-base !important; }
+      &--xs\@s   { margin: $size-small !important; }
+      &--s\@s    { margin: $size-default !important; }
+      &--m\@s    { margin: $size-medium !important; }
+      &--l\@s    { margin: $size-large !important; }
+      &--xl\@s   { margin: $size-extra-large !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m { margin: 0 !important; }
+      &--xxs\@m  { margin: $size-base !important; }
+      &--xs\@m   { margin: $size-small !important; }
+      &--s\@m    { margin: $size-default !important; }
+      &--m\@m    { margin: $size-medium !important; }
+      &--l\@m    { margin: $size-large !important; }
+      &--xl\@m   { margin: $size-extra-large !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l { margin: 0 !important; }
+      &--xxs\@l  { margin: $size-base !important; }
+      &--xs\@l   { margin: $size-small !important; }
+      &--s\@l    { margin: $size-default !important; }
+      &--m\@l    { margin: $size-medium !important; }
+      &--l\@l    { margin: $size-large !important; }
+      &--xl\@l   { margin: $size-extra-large !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl { margin: 0 !important; }
+      &--xxs\@xl  { margin: $size-base !important; }
+      &--xs\@xl   { margin: $size-small !important; }
+      &--s\@xl    { margin: $size-default !important; }
+      &--m\@xl    { margin: $size-medium !important; }
+      &--l\@xl    { margin: $size-large !important; }
+      &--xl\@xl   { margin: $size-extra-large !important; }
+    }
+
     &-t {
 
       &--none { margin-top: 0 !important; }
@@ -28,6 +68,46 @@
       &--m    { margin-top: $size-medium !important; }
       &--l    { margin-top: $size-large !important; }
       &--xl   { margin-top: $size-extra-large !important; }
+
+      @include breakpoint(S) {
+        &--none\@s { margin-top: 0 !important; }
+        &--xxs\@s  { margin-top: $size-base !important; }
+        &--xs\@s   { margin-top: $size-small !important; }
+        &--s\@s    { margin-top: $size-default !important; }
+        &--m\@s    { margin-top: $size-medium !important; }
+        &--l\@s    { margin-top: $size-large !important; }
+        &--xl\@s   { margin-top: $size-extra-large !important; }
+      }
+
+      @include breakpoint(M) {
+        &--none\@m { margin-top: 0 !important; }
+        &--xxs\@m  { margin-top: $size-base !important; }
+        &--xs\@m   { margin-top: $size-small !important; }
+        &--s\@m    { margin-top: $size-default !important; }
+        &--m\@m    { margin-top: $size-medium !important; }
+        &--l\@m    { margin-top: $size-large !important; }
+        &--xl\@m   { margin-top: $size-extra-large !important; }
+      }
+
+      @include breakpoint(L) {
+        &--none\@l { margin-top: 0 !important; }
+        &--xxs\@l  { margin-top: $size-base !important; }
+        &--xs\@l   { margin-top: $size-small !important; }
+        &--s\@l    { margin-top: $size-default !important; }
+        &--m\@l    { margin-top: $size-medium !important; }
+        &--l\@l    { margin-top: $size-large !important; }
+        &--xl\@l   { margin-top: $size-extra-large !important; }
+      }
+
+      @include breakpoint(XL) {
+        &--none\@xl { margin-top: 0 !important; }
+        &--xxs\@xl  { margin-top: $size-base !important; }
+        &--xs\@xl   { margin-top: $size-small !important; }
+        &--s\@xl    { margin-top: $size-default !important; }
+        &--m\@xl    { margin-top: $size-medium !important; }
+        &--l\@xl    { margin-top: $size-large !important; }
+        &--xl\@xl   { margin-top: $size-extra-large !important; }
+      }
 
     }
 
@@ -41,6 +121,46 @@
       &--l    { margin-right: $size-large !important; }
       &--xl   { margin-right: $size-extra-large !important; }
 
+      @include breakpoint(S) {
+        &--none\@s { margin-right: 0 !important; }
+        &--xxs\@s  { margin-right: $size-base !important; }
+        &--xs\@s   { margin-right: $size-small !important; }
+        &--s\@s    { margin-right: $size-default !important; }
+        &--m\@s    { margin-right: $size-medium !important; }
+        &--l\@s    { margin-right: $size-large !important; }
+        &--xl\@s   { margin-right: $size-extra-large !important; }
+      }
+
+      @include breakpoint(M) {
+        &--none\@m { margin-right: 0 !important; }
+        &--xxs\@m  { margin-right: $size-base !important; }
+        &--xs\@m   { margin-right: $size-small !important; }
+        &--s\@m    { margin-right: $size-default !important; }
+        &--m\@m    { margin-right: $size-medium !important; }
+        &--l\@m    { margin-right: $size-large !important; }
+        &--xl\@m   { margin-right: $size-extra-large !important; }
+      }
+
+      @include breakpoint(L) {
+        &--none\@l { margin-right: 0 !important; }
+        &--xxs\@l  { margin-right: $size-base !important; }
+        &--xs\@l   { margin-right: $size-small !important; }
+        &--s\@l    { margin-right: $size-default !important; }
+        &--m\@l    { margin-right: $size-medium !important; }
+        &--l\@l    { margin-right: $size-large !important; }
+        &--xl\@l   { margin-right: $size-extra-large !important; }
+      }
+
+      @include breakpoint(XL) {
+        &--none\@xl { margin-right: 0 !important; }
+        &--xxs\@xl  { margin-right: $size-base !important; }
+        &--xs\@xl   { margin-right: $size-small !important; }
+        &--s\@xl    { margin-right: $size-default !important; }
+        &--m\@xl    { margin-right: $size-medium !important; }
+        &--l\@xl    { margin-right: $size-large !important; }
+        &--xl\@xl   { margin-right: $size-extra-large !important; }
+      }
+
     }
 
     &-b {
@@ -53,6 +173,46 @@
       &--l    { margin-bottom: $size-large !important; }
       &--xl   { margin-bottom: $size-extra-large !important; }
 
+      @include breakpoint(S) {
+        &--none\@s { margin-bottom: 0 !important; }
+        &--xxs\@s  { margin-bottom: $size-base !important; }
+        &--xs\@s   { margin-bottom: $size-small !important; }
+        &--s\@s    { margin-bottom: $size-default !important; }
+        &--m\@s    { margin-bottom: $size-medium !important; }
+        &--l\@s    { margin-bottom: $size-large !important; }
+        &--xl\@s   { margin-bottom: $size-extra-large !important; }
+      }
+
+      @include breakpoint(M) {
+        &--none\@m { margin-bottom: 0 !important; }
+        &--xxs\@m  { margin-bottom: $size-base !important; }
+        &--xs\@m   { margin-bottom: $size-small !important; }
+        &--s\@m    { margin-bottom: $size-default !important; }
+        &--m\@m    { margin-bottom: $size-medium !important; }
+        &--l\@m    { margin-bottom: $size-large !important; }
+        &--xl\@m   { margin-bottom: $size-extra-large !important; }
+      }
+
+      @include breakpoint(L) {
+        &--none\@l { margin-bottom: 0 !important; }
+        &--xxs\@l  { margin-bottom: $size-base !important; }
+        &--xs\@l   { margin-bottom: $size-small !important; }
+        &--s\@l    { margin-bottom: $size-default !important; }
+        &--m\@l    { margin-bottom: $size-medium !important; }
+        &--l\@l    { margin-bottom: $size-large !important; }
+        &--xl\@l   { margin-bottom: $size-extra-large !important; }
+      }
+
+      @include breakpoint(XL) {
+        &--none\@xl { margin-bottom: 0 !important; }
+        &--xxs\@xl  { margin-bottom: $size-base !important; }
+        &--xs\@xl   { margin-bottom: $size-small !important; }
+        &--s\@xl    { margin-bottom: $size-default !important; }
+        &--m\@xl    { margin-bottom: $size-medium !important; }
+        &--l\@xl    { margin-bottom: $size-large !important; }
+        &--xl\@xl   { margin-bottom: $size-extra-large !important; }
+      }
+
     }
 
     &-l {
@@ -64,6 +224,46 @@
       &--m    { margin-left: $size-medium !important; }
       &--l    { margin-left: $size-large !important; }
       &--xl   { margin-left: $size-extra-large !important; }
+
+      @include breakpoint(S) {
+        &--none\@s { margin-left: 0 !important; }
+        &--xxs\@s  { margin-left: $size-base !important; }
+        &--xs\@s   { margin-left: $size-small !important; }
+        &--s\@s    { margin-left: $size-default !important; }
+        &--m\@s    { margin-left: $size-medium !important; }
+        &--l\@s    { margin-left: $size-large !important; }
+        &--xl\@s   { margin-left: $size-extra-large !important; }
+      }
+
+      @include breakpoint(M) {
+        &--none\@m { margin-left: 0 !important; }
+        &--xxs\@m  { margin-left: $size-base !important; }
+        &--xs\@m   { margin-left: $size-small !important; }
+        &--s\@m    { margin-left: $size-default !important; }
+        &--m\@m    { margin-left: $size-medium !important; }
+        &--l\@m    { margin-left: $size-large !important; }
+        &--xl\@m   { margin-left: $size-extra-large !important; }
+      }
+
+      @include breakpoint(L) {
+        &--none\@l { margin-left: 0 !important; }
+        &--xxs\@l  { margin-left: $size-base !important; }
+        &--xs\@l   { margin-left: $size-small !important; }
+        &--s\@l    { margin-left: $size-default !important; }
+        &--m\@l    { margin-left: $size-medium !important; }
+        &--l\@l    { margin-left: $size-large !important; }
+        &--xl\@l   { margin-left: $size-extra-large !important; }
+      }
+
+      @include breakpoint(XL) {
+        &--none\@xl { margin-left: 0 !important; }
+        &--xxs\@xl  { margin-left: $size-base !important; }
+        &--xs\@xl   { margin-left: $size-small !important; }
+        &--s\@xl    { margin-left: $size-default !important; }
+        &--m\@xl    { margin-left: $size-medium !important; }
+        &--l\@xl    { margin-left: $size-large !important; }
+        &--xl\@xl   { margin-left: $size-extra-large !important; }
+      }
 
     }
 
@@ -81,6 +281,46 @@
     &--l    { padding: $size-large !important; }
     &--xl   { padding: $size-extra-large !important; }
 
+    @include breakpoint(S) {
+      &--none\@s { padding: 0 !important; }
+      &--xxs\@s  { padding: $size-base !important; }
+      &--xs\@s   { padding: $size-small !important; }
+      &--s\@s    { padding: $size-default !important; }
+      &--m\@s    { padding: $size-medium !important; }
+      &--l\@s    { padding: $size-large !important; }
+      &--xl\@s   { padding: $size-extra-large !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m { padding: 0 !important; }
+      &--xxs\@m  { padding: $size-base !important; }
+      &--xs\@m   { padding: $size-small !important; }
+      &--s\@m    { padding: $size-default !important; }
+      &--m\@m    { padding: $size-medium !important; }
+      &--l\@m    { padding: $size-large !important; }
+      &--xl\@m   { padding: $size-extra-large !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l { padding: 0 !important; }
+      &--xxs\@l  { padding: $size-base !important; }
+      &--xs\@l   { padding: $size-small !important; }
+      &--s\@l    { padding: $size-default !important; }
+      &--m\@l    { padding: $size-medium !important; }
+      &--l\@l    { padding: $size-large !important; }
+      &--xl\@l   { padding: $size-extra-large !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl { padding: 0 !important; }
+      &--xxs\@xl  { padding: $size-base !important; }
+      &--xs\@xl   { padding: $size-small !important; }
+      &--s\@xl    { padding: $size-default !important; }
+      &--m\@xl    { padding: $size-medium !important; }
+      &--l\@xl    { padding: $size-large !important; }
+      &--xl\@xl   { padding: $size-extra-large !important; }
+    }
+
     &-t {
 
       &--none { padding-top: 0 !important; }
@@ -90,6 +330,46 @@
       &--m    { padding-top: $size-medium !important; }
       &--l    { padding-top: $size-large !important; }
       &--xl   { padding-top: $size-extra-large !important; }
+
+      @include breakpoint(S) {
+        &--none\@s { padding-top: 0 !important; }
+        &--xxs\@s  { padding-top: $size-base !important; }
+        &--xs\@s   { padding-top: $size-small !important; }
+        &--s\@s    { padding-top: $size-default !important; }
+        &--m\@s    { padding-top: $size-medium !important; }
+        &--l\@s    { padding-top: $size-large !important; }
+        &--xl\@s   { padding-top: $size-extra-large !important; }
+      }
+
+      @include breakpoint(M) {
+        &--none\@m { padding-top: 0 !important; }
+        &--xxs\@m  { padding-top: $size-base !important; }
+        &--xs\@m   { padding-top: $size-small !important; }
+        &--s\@m    { padding-top: $size-default !important; }
+        &--m\@m    { padding-top: $size-medium !important; }
+        &--l\@m    { padding-top: $size-large !important; }
+        &--xl\@m   { padding-top: $size-extra-large !important; }
+      }
+
+      @include breakpoint(L) {
+        &--none\@l { padding-top: 0 !important; }
+        &--xxs\@l  { padding-top: $size-base !important; }
+        &--xs\@l   { padding-top: $size-small !important; }
+        &--s\@l    { padding-top: $size-default !important; }
+        &--m\@l    { padding-top: $size-medium !important; }
+        &--l\@l    { padding-top: $size-large !important; }
+        &--xl\@l   { padding-top: $size-extra-large !important; }
+      }
+
+      @include breakpoint(XL) {
+        &--none\@xl { padding-top: 0 !important; }
+        &--xxs\@xl  { padding-top: $size-base !important; }
+        &--xs\@xl   { padding-top: $size-small !important; }
+        &--s\@xl    { padding-top: $size-default !important; }
+        &--m\@xl    { padding-top: $size-medium !important; }
+        &--l\@xl    { padding-top: $size-large !important; }
+        &--xl\@xl   { padding-top: $size-extra-large !important; }
+      }
 
     }
 
@@ -103,6 +383,46 @@
       &--l    { padding-right: $size-large !important; }
       &--xl   { padding-right: $size-extra-large !important; }
 
+      @include breakpoint(S) {
+        &--none\@s { padding-right: 0 !important; }
+        &--xxs\@s  { padding-right: $size-base !important; }
+        &--xs\@s   { padding-right: $size-small !important; }
+        &--s\@s    { padding-right: $size-default !important; }
+        &--m\@s    { padding-right: $size-medium !important; }
+        &--l\@s    { padding-right: $size-large !important; }
+        &--xl\@s   { padding-right: $size-extra-large !important; }
+      }
+
+      @include breakpoint(M) {
+        &--none\@m { padding-right: 0 !important; }
+        &--xxs\@m  { padding-right: $size-base !important; }
+        &--xs\@m   { padding-right: $size-small !important; }
+        &--s\@m    { padding-right: $size-default !important; }
+        &--m\@m    { padding-right: $size-medium !important; }
+        &--l\@m    { padding-right: $size-large !important; }
+        &--xl\@m   { padding-right: $size-extra-large !important; }
+      }
+
+      @include breakpoint(L) {
+        &--none\@l { padding-right: 0 !important; }
+        &--xxs\@l  { padding-right: $size-base !important; }
+        &--xs\@l   { padding-right: $size-small !important; }
+        &--s\@l    { padding-right: $size-default !important; }
+        &--m\@l    { padding-right: $size-medium !important; }
+        &--l\@l    { padding-right: $size-large !important; }
+        &--xl\@l   { padding-right: $size-extra-large !important; }
+      }
+
+      @include breakpoint(XL) {
+        &--none\@xl { padding-right: 0 !important; }
+        &--xxs\@xl  { padding-right: $size-base !important; }
+        &--xs\@xl   { padding-right: $size-small !important; }
+        &--s\@xl    { padding-right: $size-default !important; }
+        &--m\@xl    { padding-right: $size-medium !important; }
+        &--l\@xl    { padding-right: $size-large !important; }
+        &--xl\@xl   { padding-right: $size-extra-large !important; }
+      }
+
     }
 
     &-b {
@@ -115,17 +435,97 @@
       &--l    { padding-bottom: $size-large !important; }
       &--xl   { padding-bottom: $size-extra-large !important; }
 
+      @include breakpoint(S) {
+        &--none\@s { padding-bottom: 0 !important; }
+        &--xxs\@s  { padding-bottom: $size-base !important; }
+        &--xs\@s   { padding-bottom: $size-small !important; }
+        &--s\@s    { padding-bottom: $size-default !important; }
+        &--m\@s    { padding-bottom: $size-medium !important; }
+        &--l\@s    { padding-bottom: $size-large !important; }
+        &--xl\@s   { padding-bottom: $size-extra-large !important; }
+      }
+
+      @include breakpoint(M) {
+        &--none\@m { padding-bottom: 0 !important; }
+        &--xxs\@m  { padding-bottom: $size-base !important; }
+        &--xs\@m   { padding-bottom: $size-small !important; }
+        &--s\@m    { padding-bottom: $size-default !important; }
+        &--m\@m    { padding-bottom: $size-medium !important; }
+        &--l\@m    { padding-bottom: $size-large !important; }
+        &--xl\@m   { padding-bottom: $size-extra-large !important; }
+      }
+
+      @include breakpoint(L) {
+        &--none\@l { padding-bottom: 0 !important; }
+        &--xxs\@l  { padding-bottom: $size-base !important; }
+        &--xs\@l   { padding-bottom: $size-small !important; }
+        &--s\@l    { padding-bottom: $size-default !important; }
+        &--m\@l    { padding-bottom: $size-medium !important; }
+        &--l\@l    { padding-bottom: $size-large !important; }
+        &--xl\@l   { padding-bottom: $size-extra-large !important; }
+      }
+
+      @include breakpoint(XL) {
+        &--none\@xl { padding-bottom: 0 !important; }
+        &--xxs\@xl  { padding-bottom: $size-base !important; }
+        &--xs\@xl   { padding-bottom: $size-small !important; }
+        &--s\@xl    { padding-bottom: $size-default !important; }
+        &--m\@xl    { padding-bottom: $size-medium !important; }
+        &--l\@xl    { padding-bottom: $size-large !important; }
+        &--xl\@xl   { padding-bottom: $size-extra-large !important; }
+      }
+
     }
 
     &-l {
 
       &--none { padding-left: 0 !important; }
-      &--xxs { padding-left: $size-base !important; }
-      &--xs { padding-left: $size-small !important; }
-      &--s { padding-left: $size-default !important; }
-      &--m { padding-left: $size-medium !important; }
-      &--l { padding-left: $size-large !important; }
-      &--xl { padding-left: $size-extra-large !important; }
+      &--xxs  { padding-left: $size-base !important; }
+      &--xs   { padding-left: $size-small !important; }
+      &--s    { padding-left: $size-default !important; }
+      &--m    { padding-left: $size-medium !important; }
+      &--l    { padding-left: $size-large !important; }
+      &--xl   { padding-left: $size-extra-large !important; }
+
+      @include breakpoint(S) {
+        &--none\@s { padding-left: 0 !important; }
+        &--xxs\@s  { padding-left: $size-base !important; }
+        &--xs\@s   { padding-left: $size-small !important; }
+        &--s\@s    { padding-left: $size-default !important; }
+        &--m\@s    { padding-left: $size-medium !important; }
+        &--l\@s    { padding-left: $size-large !important; }
+        &--xl\@s   { padding-left: $size-extra-large !important; }
+      }
+
+      @include breakpoint(M) {
+        &--none\@m { padding-left: 0 !important; }
+        &--xxs\@m  { padding-left: $size-base !important; }
+        &--xs\@m   { padding-left: $size-small !important; }
+        &--s\@m    { padding-left: $size-default !important; }
+        &--m\@m    { padding-left: $size-medium !important; }
+        &--l\@m    { padding-left: $size-large !important; }
+        &--xl\@m   { padding-left: $size-extra-large !important; }
+      }
+
+      @include breakpoint(L) {
+        &--none\@l { padding-left: 0 !important; }
+        &--xxs\@l  { padding-left: $size-base !important; }
+        &--xs\@l   { padding-left: $size-small !important; }
+        &--s\@l    { padding-left: $size-default !important; }
+        &--m\@l    { padding-left: $size-medium !important; }
+        &--l\@l    { padding-left: $size-large !important; }
+        &--xl\@l   { padding-left: $size-extra-large !important; }
+      }
+
+      @include breakpoint(XL) {
+        &--none\@xl { padding-left: 0 !important; }
+        &--xxs\@xl  { padding-left: $size-base !important; }
+        &--xs\@xl   { padding-left: $size-small !important; }
+        &--s\@xl    { padding-left: $size-default !important; }
+        &--m\@xl    { padding-left: $size-medium !important; }
+        &--l\@xl    { padding-left: $size-large !important; }
+        &--xl\@xl   { padding-left: $size-extra-large !important; }
+      }
 
     }
 
@@ -133,7 +533,24 @@
 
   // Floats --------------------------------------------------------------------
 
-  &-clear { clear: both; }
+  &-clear {
+
+    clear: both;
+
+    @include breakpoint(S) {
+      &\@s  { clear: both;  }
+    }
+    @include breakpoint(M) {
+      &\@m  { clear: both;  }
+    }
+    @include breakpoint(L) {
+      &\@l  { clear: both;  }
+    }
+    @include breakpoint(XL) {
+      &\@xl  { clear: both;  }
+    }
+
+  }
 
   &-clearfix { @include clearfix; }
 
@@ -142,6 +559,30 @@
     &--left  { float: left; }
     &--right { float: right; }
     &--none  { float: none; }
+
+    @include breakpoint(S) {
+      &--left\@s  { float: left; }
+      &--right\@s { float: right; }
+      &--none\@s  { float: none; }
+    }
+
+    @include breakpoint(M) {
+      &--left\@m  { float: left; }
+      &--right\@m { float: right; }
+      &--none\@m  { float: none; }
+    }
+
+    @include breakpoint(L) {
+      &--left\@l  { float: left; }
+      &--right\@l { float: right; }
+      &--none\@l  { float: none; }
+    }
+
+    @include breakpoint(XL) {
+      &--left\@xl  { float: left; }
+      &--right\@xl { float: right; }
+      &--none\@xl  { float: none; }
+    }
 
   }
 
@@ -158,8 +599,6 @@
 
   }
 
-  // Text ----------------------------------------------------------------------
-
   &-ellipsis {
     @include fsa-ellipsis();
   }
@@ -168,12 +607,45 @@
 
     // scss-lint:disable PlaceholderInExtend
 
-    &--h1 { @extend .h1; }
-    &--h2 { @extend .h2; }
-    &--h3 { @extend .h3; }
-    &--h4 { @extend .h4; }
-    &--h5 { @extend .h5; }
-    &--h6 { @extend .h6; }
+    &--h1 { @include fsa-header('1'); }
+    &--h2 { @include fsa-header('2'); }
+    &--h3 { @include fsa-header('3'); }
+    &--h4 { @include fsa-header('4'); }
+    &--h5 { @include fsa-header('5'); }
+    &--h6 { @include fsa-header('6'); }
+
+    @include breakpoint(S) {
+      &--h1\@s { @include fsa-header('1'); }
+      &--h2\@s { @include fsa-header('2'); }
+      &--h3\@s { @include fsa-header('3'); }
+      &--h4\@s { @include fsa-header('4'); }
+      &--h5\@s { @include fsa-header('5'); }
+      &--h6\@s { @include fsa-header('6'); }
+    }
+    @include breakpoint(M) {
+      &--h1\@m { @include fsa-header('1'); }
+      &--h2\@m { @include fsa-header('2'); }
+      &--h3\@m { @include fsa-header('3'); }
+      &--h4\@m { @include fsa-header('4'); }
+      &--h5\@m { @include fsa-header('5'); }
+      &--h6\@m { @include fsa-header('6'); }
+    }
+    @include breakpoint(L) {
+      &--h1\@l { @include fsa-header('1'); }
+      &--h2\@l { @include fsa-header('2'); }
+      &--h3\@l { @include fsa-header('3'); }
+      &--h4\@l { @include fsa-header('4'); }
+      &--h5\@l { @include fsa-header('5'); }
+      &--h6\@l { @include fsa-header('6'); }
+    }
+    @include breakpoint(XL) {
+      &--h1\@xl { @include fsa-header('1'); }
+      &--h2\@xl { @include fsa-header('2'); }
+      &--h3\@xl { @include fsa-header('3'); }
+      &--h4\@xl { @include fsa-header('4'); }
+      &--h5\@xl { @include fsa-header('5'); }
+      &--h6\@xl { @include fsa-header('6'); }
+    }
 
     &-size {
 
@@ -230,11 +702,111 @@
     }
 
     &-align {
+
       &--right  { text-align: right; }
       &--center { text-align: center; }
       &--left   { text-align: left; }
+
+      @include breakpoint(S) {
+        &--right\@s  { text-align: right; }
+        &--center\@s { text-align: center; }
+        &--left\@s   { text-align: left; }
+      }
+
+      @include breakpoint(M) {
+        &--right\@m  { text-align: right; }
+        &--center\@m { text-align: center; }
+        &--left\@m   { text-align: left; }
+      }
+
+      @include breakpoint(L) {
+        &--right\@l  { text-align: right; }
+        &--center\@l { text-align: center; }
+        &--left\@l   { text-align: left; }
+      }
+
+      @include breakpoint(XL) {
+        &--right\@xl  { text-align: right; }
+        &--center\@xl { text-align: center; }
+        &--left\@xl   { text-align: left; }
+      }
+
     }
 
+  }
+
+  // Visibility ---------------------------------------------------------------
+
+  &-show {
+    display: initial !important;
+    &\@xs {
+      @include breakpoint(S, down)   { display: none !important; }
+      &-only {
+        @include breakpoint(S)       { display: none !important; }
+      }
+    }
+    &\@s {
+      @include breakpoint(S, down)   { display: none !important; }
+      &-only {
+        @include breakpoint(S, down) { display: none !important; }
+        @include breakpoint(M)       { display: none !important; }
+      }
+    }
+    &\@m {
+      @include breakpoint(M, down) { display: none !important; }
+      &-only {
+        @include breakpoint(M, down) { display: none !important; }
+        @include breakpoint(L)       { display: none !important; }
+      }
+    }
+    &\@l {
+      @include breakpoint(L, down)   { display: none !important; }
+      &-only {
+        @include breakpoint(L, down) { display: none !important; }
+        @include breakpoint(XL)      { display: none !important; }
+      }
+    }
+    &\@xl {
+      @include breakpoint(XL, down)  { display: none !important; }
+      &-only {
+        @include breakpoint(XL, down){ display: none !important; }
+      }
+    }
+  }
+
+  &-hide {
+    display: none !important;
+    &\@xs {
+      &-only {
+        @media screen and (max-width: $screen-s) {
+          display: none !important;
+        }
+      }
+    }
+    &\@s {
+      @include breakpoint(S)   { display: none !important; }
+      &-only {
+        @media screen and (max-width: $screen-m) and (min-width: $screen-s) { display: none !important; }
+      }
+    }
+    &\@m {
+      @include breakpoint(M)   { display: none !important; }
+      &-only {
+        @media screen and (max-width: $screen-l) and (min-width: $screen-m) { display: none !important; }
+      }
+    }
+    &\@l {
+      @include breakpoint(L)   { display: none !important; }
+      &-only {
+        @media screen and (max-width: $screen-xl) and (min-width: $screen-l) { display: none !important; }
+      }
+    }
+    &\@xl {
+      @include breakpoint(XL)   { display: none !important; }
+      &-only {
+        @media screen and (min-width: $screen-xl) { display: none !important; }
+      }
+    }
   }
 
 }
