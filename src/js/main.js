@@ -13,6 +13,7 @@
 
 var DocsNav = require('./components/docs-nav');
 var DocsColor = require('./components/docs-color');
+var DocsRWD = require('./components/docs-rwd');
 var NavGlobalComponent = require('./components/fsa-nav-global');
 var ModalComponent = require('./components/fsa-modal');
 var GrowlComponent = require('./components/fsa-growl');

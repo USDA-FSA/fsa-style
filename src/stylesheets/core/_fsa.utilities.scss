@@ -146,11 +146,12 @@
 // -----------------------------------------------------------------------------
 // Breakpoints
 // scss-lint:disable SpaceAfterComma
+
 $breakpoints: (
-  '(min-width: 30.0625em)' 'S',   //  481px at 16px base font
-  '(min-width: 37.5em)' 'M',      //  600px at 16px base font
-  '(min-width: 54em)' 'L',        //  864px at 16px base font
-  '(min-width: 78.75em)' 'XL'     // 1260px at 16px base font
+  '(min-width: $screen-s)' 'S',
+  '(min-width: $screen-m)' 'M',
+  '(min-width: $screen-l)' 'L',
+  '(min-width: $screen-xl)' 'XL'
 );
 
 // -----------------------------------------------------------------------------
@@ -488,4 +489,56 @@ $breakpoints: (
     height: $fudge-amount;
     margin: (-$fudge-amount) 0 0;
   }
+}
+
+// ----------------------------------------------------------------------------
+// h1 - h6 header elements
+
+@mixin fsa-header($variation: '1') {
+
+  color: $color-title;
+  font-family: $font-sans;
+  font-weight: $font-bold;
+
+  & + p {
+    margin-top: .5em;
+  }
+
+  @if $variation == '1' {
+
+    @include h1(); // from USWDS mixins
+
+    font-weight: $font-normal;
+    margin-top: $size-default;
+    margin-bottom: 0;
+
+    .fsa-section__bd > & {
+      margin-top: $size-medium;
+      @include breakpoint(L) {
+        margin-top: ($size-base * 8);
+      }
+    }
+
+  }
+
+  @elseif $variation == '2' {
+    @include h2(); // from USWDS mixins
+  }
+
+  @elseif $variation == '3' {
+    @include h3(); // from USWDS mixins
+  }
+
+  @elseif $variation == '4' {
+    @include h4(); // from USWDS mixins
+  }
+
+  @elseif $variation == '5' {
+    @include h5(); // from USWDS mixins
+  }
+
+  @elseif $variation == '6' {
+    @include h6(); // from USWDS mixins
+  }
+
 }
