@@ -108,8 +108,8 @@
       </div>
     </div>
     <section class="docs__section docs__intro">
-      <h1 class="docs__bd docs__title">FSA Style <span class="docs__title__version">2.1.5</span></h1>
-      <div class="docs__nav-shell">
+      <h1 class="docs__bd docs__title">FSA Style <span class="docs__title__version">2.1.6</span></h1>
+      <div class="docs__nav-shell" id="global-nav">
         <nav class="docs__nav">
           <ul class="docs__primary-nav" id="primary-navigation" aria-label="Primary Navigation">
             <li class="docs__primary-nav-item"><a class="docs__primary-nav-link" href="#logo">Logo</a></li>
@@ -129,6 +129,7 @@
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__select-multi">Select Multi</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__form-fields">Form Fields</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__spinbox">Spinbox</a></li>
+                <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__search">Search</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__button-group">Button Group</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__pagination">Pagination</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__stepped-tabs">Stepped Tabs</a></li>
@@ -158,9 +159,9 @@
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#utilities__padding">Padding</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#utilities__floats">Floats</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#utilities__text-size">Text size</a></li>
-                <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#utilities__responsive-text-size">Responsive Text Size</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#utilities__text-alignment">Text Alignment</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#utilities__text-headers">Text Headers</a></li>
+                <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#utilities__visibility">Visibility</a></li>
               </ul>
             </li>
             <li class="docs__primary-nav-item docs__primary-nav-item--floater">
@@ -732,47 +733,30 @@
           </div>
         </div>
         <h3 class="docs__bd docs__figure" id="grid-responsive">Responsive Columns</h3>
-        <h4 class="docs__sub_style">Example</h4>
-        <p>Full-width by default (smallest screen), <code title="One-half at Small">1/2<strong>@s</strong></code>, <code title="One-fourth at Medium">1/4<strong>@m</strong></code> </p>
-        <div class="fsa-grid">
-          <div class="fsa-grid__1/1 fsa-grid__1/2@s fsa-grid__1/4@m">
-            <p class="fsa-grid__demo">
-              <code>fsa-grid__1/1</code>
-              <br>
-              <code>fsa-grid__1/2<strong>@s</strong></code>
-              <br>
-              <code>fsa-grid__1/4<strong>@m</strong></code>
-            </p>
-          </div>
-          <div class="fsa-grid__1/1 fsa-grid__1/2@s fsa-grid__1/4@m">
-            <p class="fsa-grid__demo">
-              <code>fsa-grid__1/1</code>
-              <br>
-              <code>fsa-grid__1/2<strong>@s</strong></code>
-              <br>
-              <code>fsa-grid__1/4<strong>@m</strong></code>
-            </p>
-          </div>
-          <div class="fsa-grid__1/1 fsa-grid__1/2@s fsa-grid__1/4@m">
-            <p class="fsa-grid__demo">
-              <code>fsa-grid__1/1</code>
-              <br>
-              <code>fsa-grid__1/2<strong>@s</strong></code>
-              <br>
-              <code>fsa-grid__1/4<strong>@m</strong></code>
-            </p>
-          </div>
-          <div class="fsa-grid__1/1 fsa-grid__1/2@s fsa-grid__1/4@m">
-            <p class="fsa-grid__demo">
-              <code>fsa-grid__1/1</code>
-              <br>
-              <code>fsa-grid__1/2<strong>@s</strong></code>
-              <br>
-              <code>fsa-grid__1/4<strong>@m</strong></code>
-            </p>
+        <p class="fsa-show@l">Grid columns can be adjusted per media query breakpoint.</p>
+        <div class="fsa-hide@l">
+          <div class="fsa-alert fsa-alert--info fsa-alert--no-icon" role="alert">
+            <div class="fsa-alert__body">
+              <p class="fsa-alert__text">View this page on a large screen to view complete Responsive Web Design options.</p>
+            </div>
           </div>
         </div>
-
+        <div class="docs__rwd-demo-block">
+          <p>
+            <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+              <button data-behavior="toggle-rwd-size" data-target="rwd-demo_grid" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+              <button data-behavior="toggle-rwd-size" data-target="rwd-demo_grid" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+              <button data-behavior="toggle-rwd-size" data-target="rwd-demo_grid" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+              <button data-behavior="toggle-rwd-size" data-target="rwd-demo_grid" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+            </span>
+            <a class="fsa-m-l--xs fsa-text-size--1" href="demo/rwd__grid.html" target="_blank">View in new window</a>
+          </p>
+          <div class="docs__rwd-embed-container">
+            <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_grid">
+              <iframe src="demo/rwd__grid.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section class="docs__section" id="components">
@@ -2328,6 +2312,206 @@
           </div>
         </div>
       </div>
+      <div class="docs__jump-target" id="component__search">
+        <div class="docs__bd docs__section-title">
+          <h3 class="docs__figure"><a class="docs__anchor" aria-hidden="true" href="#component__search">#</a>Search</h3>
+          <a class="fsa-btn fsa-btn--secondary fsa-btn--small docs__section-link" href="http://usda-fsa.github.io/fsa-design-system/components/search">Docs</a>
+        </div>
+        <div class="docs__bd">
+          <div class="fsa-grid">
+            <div class="fsa-grid__1 fsa-grid__1/3@l">
+              <h4 class="docs__sub_style">Default</h4>
+              <form action="dest.html">
+                <div class="fsa-search" role="search">
+                  <div class="fsa-search__bd">
+                    <div class="fsa-search__entry fsa-search__entry--grow">
+                      <label class="fsa-search__label fsa-search__label--sr-only" for="UNIQUE-ID-yughsjj6j">Label</label>
+                      <input class="fsa-input fsa-search__input" id="UNIQUE-ID-yughsjj6j" type="search" name="search">
+                    </div>
+                    <div class="fsa-search__submit">
+                      <button class="fsa-btn fsa-search__btn" type="submit">
+                        <span class="fsa-search__text">Search</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="fsa-grid__1 fsa-grid__1/3@l">
+              <h4 class="docs__sub_style">with Icon</h4>
+              <form action="dest.html">
+                <div class="fsa-search" role="search">
+                  <div class="fsa-search__bd">
+                    <div class="fsa-search__entry fsa-search__entry--grow">
+                      <label class="fsa-search__label fsa-search__label--sr-only" for="UNIQUE-ID-hghhwshd3">Label</label>
+                      <input class="fsa-input fsa-search__input" id="UNIQUE-ID-hghhwshd3" type="search" name="search">
+                    </div>
+                    <div class="fsa-search__submit">
+                      <button class="fsa-btn fsa-search__btn fsa-search__btn--icon" type="submit">
+                        <span class="fsa-search__text">Search</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="fsa-grid__1 fsa-grid__1/3@l">
+              <h4 class="docs__sub_style">with Select</h4>
+              <form action="dest.html">
+                <div class="fsa-search" role="search">
+                  <div class="fsa-search__bd">
+                    <div class="fsa-search__entry fsa-search__entry--grow">
+                      <label class="fsa-search__label fsa-search__label--sr-only" for="UNIQUE-ID-hghhwdd7803">Label</label>
+                      <input class="fsa-input fsa-search__input" id="UNIQUE-ID-hghhwdd7803" type="search" name="search">
+                    </div>
+                    <div class="fsa-search__entry">
+                      <label class="fsa-search__label fsa-search__label--sr-only" for="UNIQUE-ID-dfyu65ppj">Label</label>
+                      <select class="fsa-select fsa-search__select" name="UNIQUE-NAME-dfyu65ppj" id="UNIQUE-ID-dfyu65ppj">
+                        <option value="none" selected="selected">All</option>
+                        <option value="asdf">Farms</option>
+                        <option value="qwer">States</option>
+                        <option value="qwer">Markets</option>
+                      </select>
+                    </div>
+                    <div class="fsa-search__submit">
+                      <button class="fsa-btn fsa-search__btn fsa-search__btn--icon" type="submit">
+                        <span class="fsa-search__text">Search</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="fsa-grid__1 fsa-grid__1/3@l">
+              <h4 class="docs__sub_style">Small</h4>
+              <form action="dest.html">
+                <div class="fsa-search fsa-search--small" role="search">
+                  <div class="fsa-search__bd">
+                    <div class="fsa-search__entry fsa-search__entry--grow">
+                      <label class="fsa-search__label fsa-search__label--sr-only" for="UNIQUE-ID-uusuHSUGJS7">Label</label>
+                      <input class="fsa-input fsa-input--small fsa-search__input" id="UNIQUE-ID-uusuHSUGJS7" type="search" name="search">
+                    </div>
+                    <div class="fsa-search__submit">
+                      <button class="fsa-btn fsa-btn--small fsa-search__btn" type="submit">
+                        <span class="fsa-search__text">Search</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="fsa-grid__1 fsa-grid__1/3@l">
+              <h4 class="docs__sub_style">with Icon</h4>
+              <form action="dest.html">
+                <div class="fsa-search fsa-search--small" role="search">
+                  <div class="fsa-search__bd">
+                    <div class="fsa-search__entry fsa-search__entry--grow">
+                      <label class="fsa-search__label fsa-search__label--sr-only" for="UNIQUE-ID-5555F555F5t">Label</label>
+                      <input class="fsa-input fsa-input--small fsa-search__input" id="UNIQUE-ID-5555F555F5t" type="search" name="search">
+                    </div>
+                    <div class="fsa-search__submit">
+                      <button class="fsa-btn fsa-btn--small fsa-search__btn fsa-search__btn--icon" type="submit">
+                        <span class="fsa-search__text">Search</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="fsa-grid__1 fsa-grid__1/3@l">
+              <h4 class="docs__sub_style">with Select</h4>
+              <form action="dest.html">
+                <div class="fsa-search fsa-search--small" role="search">
+                  <div class="fsa-search__bd">
+                    <div class="fsa-search__entry fsa-search__entry--grow">
+                      <label class="fsa-search__label fsa-search__label--sr-only" for="UNIQUE-ID-5555F35ggq5t">Label</label>
+                      <input class="fsa-input fsa-input--small fsa-search__input" id="UNIQUE-ID-5555F35ggq5t" type="search" name="search">
+                    </div>
+                    <div class="fsa-search__entry">
+                      <label class="fsa-search__label fsa-search__label--sr-only" for="UNIQUE-ID-aug1234asdfj">Label</label>
+                      <select class="fsa-select fsa-select--small fsa-search__select" name="UNIQUE-NAME-aug1234asdfj" id="UNIQUE-ID-aug1234asdfj">
+                        <option value="none" selected="selected">All</option>
+                        <option value="asdf">Farms</option>
+                        <option value="qwer">States</option>
+                        <option value="qwer">Markets</option>
+                      </select>
+                    </div>
+                    <div class="fsa-search__submit">
+                      <button class="fsa-btn fsa-btn--small fsa-search__btn fsa-search__btn--icon" type="submit">
+                        <span class="fsa-search__text">Search</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="fsa-grid__1 fsa-grid__1/3@l">
+              <h4 class="docs__sub_style">Large</h4>
+              <form action="dest.html">
+                <div class="fsa-search fsa-search--large" role="search">
+                  <div class="fsa-search__bd">
+                    <div class="fsa-search__entry fsa-search__entry--grow">
+                      <label class="fsa-search__label fsa-search__label--sr-only" for="UNIQUE-ID-3338hIISH8">Label</label>
+                      <input class="fsa-input fsa-input--large fsa-search__input" id="UNIQUE-ID-3338hIISH8" type="search" name="search">
+                    </div>
+                    <div class="fsa-search__submit">
+                      <button class="fsa-btn fsa-btn--large fsa-search__btn" type="submit">
+                        <span class="fsa-search__text">Search</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="fsa-grid__1 fsa-grid__1/3@l">
+              <h4 class="docs__sub_style">with Icon</h4>
+              <form action="dest.html">
+                <div class="fsa-search fsa-search--large" role="search">
+                  <div class="fsa-search__bd">
+                    <div class="fsa-search__entry fsa-search__entry--grow">
+                      <label class="fsa-search__label fsa-search__label--sr-only" for="UNIQUE-ID-ttg5555jjJ">Label</label>
+                      <input class="fsa-input fsa-input--large fsa-search__input" id="UNIQUE-ID-ttg5555jjJ" type="search" name="search">
+                    </div>
+                    <div class="fsa-search__submit">
+                      <button class="fsa-btn fsa-btn--large fsa-search__btn fsa-search__btn--icon" type="submit">
+                        <span class="fsa-search__text">Search</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="fsa-grid__1 fsa-grid__1/3@l">
+              <h4 class="docs__sub_style">with Select</h4>
+              <form action="dest.html">
+                <div class="fsa-search fsa-search--large" role="search">
+                  <div class="fsa-search__bd">
+                    <div class="fsa-search__entry fsa-search__entry--grow">
+                      <label class="fsa-search__label fsa-search__label--sr-only" for="UNIQUE-ID-tabczzpJ">Label</label>
+                      <input class="fsa-input fsa-input--large fsa-search__input" id="UNIQUE-ID-tabczzpJ" type="search" name="search">
+                    </div>
+                    <div class="fsa-search__entry">
+                      <label class="fsa-search__label fsa-search__label--sr-only" for="UNIQUE-ID-a78q8jt">Label</label>
+                      <select class="fsa-select fsa-select--large fsa-search__select" name="UNIQUE-NAME-a78q8jt" id="UNIQUE-ID-a78q8jt">
+                        <option value="none" selected="selected">All</option>
+                        <option value="asdf">Farms</option>
+                        <option value="qwer">States</option>
+                        <option value="qwer">Markets</option>
+                      </select>
+                    </div>
+                    <div class="fsa-search__submit">
+                      <button class="fsa-btn fsa-btn--large fsa-search__btn fsa-search__btn--icon" type="submit">
+                        <span class="fsa-search__text">Search</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <p>View in context of <a href="#component__top-nav">Header: Nav Global</a> component.</p>
+        </div>
+      </div>
       <div class="docs__jump-target" id="component__spinbox">
         <div class="docs__bd docs__section-title">
           <h3 class="docs__figure"><a class="docs__anchor" aria-hidden="true" href="#component__spinbox">#</a>Spinbox</h3>
@@ -2662,6 +2846,25 @@
               </ul>
             </div>
           </nav>
+          <h4 class="docs__bd fsa-show@l">Responsive</h4>
+          <div class="docs__rwd-demo-block">
+            <div class="docs__bd">
+              <p>
+                <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_pagination" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_pagination" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_pagination" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_pagination" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+                </span>
+                <a class="fsa-m-l--xs fsa-text-size--1" href="demo/rwd__pagination.html" target="_blank">View in new window</a>
+              </p>
+            </div>
+            <div class="docs__rwd-embed-container">
+              <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_pagination">
+                <iframe src="demo/rwd__pagination.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="docs__jump-target" id="component__stepped-tabs">
@@ -2945,7 +3148,8 @@
           <div class="fsa-stepped-control">
             <div class="fsa-stepped-control__bd">
               <div class="fsa-stepped-control__list">
-                <div class="fsa-stepped-control__item">
+                <div class="fsa-stepped-control__shim"></div>
+                <div class="fsa-stepped-control__item fsa-stepped-control__item--push">
                   <button class="fsa-btn fsa-btn--alt fsa-btn--large fsa-stepped-control__btn" type="button">{{ secondary }}</button>
                 </div>
                 <div class="fsa-stepped-control__item">
@@ -2964,7 +3168,8 @@
                 <strong>5</strong> of <strong>10</strong> Commodities are complete
               </div>
               <div class="fsa-stepped-control__list">
-                <div class="fsa-stepped-control__item">
+                <div class="fsa-stepped-control__shim"></div>
+                <div class="fsa-stepped-control__item fsa-stepped-control__item--push">
                   <button class="fsa-btn fsa-btn--alt fsa-btn--large fsa-stepped-control__btn" type="button">{{ secondary }}</button>
                 </div>
                 <div class="fsa-stepped-control__item">
@@ -2981,7 +3186,8 @@
           <div class="fsa-stepped-control">
             <div class="fsa-stepped-control__bd">
               <div class="fsa-stepped-control__list">
-                <div class="fsa-stepped-control__item">
+                <div class="fsa-stepped-control__shim"></div>
+                <div class="fsa-stepped-control__item fsa-stepped-control__item--push">
                   <button class="fsa-btn fsa-btn--alt fsa-btn--large fsa-stepped-control__btn" type="button">{{ secondary_1 }}</button>
                 </div>
                 <div class="fsa-stepped-control__item">
@@ -3004,7 +3210,8 @@
                 <div class="fsa-stepped-control__item fsa-stepped-control__item--pull">
                   <button class="fsa-btn fsa-btn--alt fsa-btn--large fsa-stepped-control__btn" type="button">{{ regressive }}</button>
                 </div>
-                <div class="fsa-stepped-control__item">
+                <div class="fsa-stepped-control__shim"></div>
+                <div class="fsa-stepped-control__item fsa-stepped-control__item--push">
                   <button class="fsa-btn fsa-btn--primary fsa-btn--large fsa-stepped-control__btn" type="submit">
                     <span class="fsa-stepped-control__btn-label">{{ progressive }}</span>
                   </button>
@@ -3021,8 +3228,9 @@
                 <div class="fsa-stepped-control__item fsa-stepped-control__item--pull">
                   <button class="fsa-btn fsa-btn--alt fsa-btn--large fsa-stepped-control__btn" type="button">{{ regressive }}</button>
                 </div>
-                <div class="fsa-stepped-control__item">
-                  <button class="fsa-btn fsa-btn--alt fsa-btn--large fsa-stepped-control__btn" type="button">{{ progessive_secondary }}</button>
+                <div class="fsa-stepped-control__shim"></div>
+                <div class="fsa-stepped-control__item fsa-stepped-control__item--push">
+                  <button class="fsa-btn fsa-btn--alt fsa-btn--large fsa-stepped-control__btn" type="button">{{ prog_secondary }}</button>
                 </div>
                 <div class="fsa-stepped-control__item">
                   <button class="fsa-btn fsa-btn--primary fsa-btn--large fsa-stepped-control__btn" type="submit">
@@ -3044,7 +3252,8 @@
                 <div class="fsa-stepped-control__item fsa-stepped-control__item--pull">
                   <button class="fsa-btn fsa-btn--alt fsa-btn--large fsa-stepped-control__btn" type="button">{{ regressive }}</button>
                 </div>
-                <div class="fsa-stepped-control__item">
+                <div class="fsa-stepped-control__shim"></div>
+                <div class="fsa-stepped-control__item fsa-stepped-control__item--push">
                   <button class="fsa-btn fsa-btn--primary fsa-btn--large fsa-stepped-control__btn" type="submit">
                     <span class="fsa-stepped-control__btn-label">{{ progressive }}</span>
                   </button>
@@ -3067,7 +3276,8 @@
                 <div class="fsa-stepped-control__item fsa-stepped-control__item--pull">
                   <button class="fsa-btn fsa-btn--alt fsa-btn--large fsa-stepped-control__btn" type="button">{{ regressive_2 }}</button>
                 </div>
-                <div class="fsa-stepped-control__item">
+                <div class="fsa-stepped-control__shim"></div>
+                <div class="fsa-stepped-control__item fsa-stepped-control__item--push">
                   <button class="fsa-btn fsa-btn--primary fsa-btn--large fsa-stepped-control__btn" type="submit">
                     <span class="fsa-stepped-control__btn-label">{{ progressive }}</span>
                   </button>
@@ -3086,7 +3296,8 @@
             <div class="fsa-stepped-control fsa-stepped-control--sticky">
               <div class="fsa-stepped-control__bd">
                 <div class="fsa-stepped-control__list">
-                  <div class="fsa-stepped-control__item">
+                  <div class="fsa-stepped-control__shim"></div>
+                  <div class="fsa-stepped-control__item fsa-stepped-control__item--push">
                     <button class="fsa-btn fsa-btn--alt fsa-btn--large fsa-stepped-control__btn" type="button">{{ secondary }}</button>
                   </div>
                   <div class="fsa-stepped-control__item">
@@ -3112,7 +3323,8 @@
                   <strong>5</strong> of <strong>10</strong> Commodities are complete
                 </div>
                 <div class="fsa-stepped-control__list">
-                  <div class="fsa-stepped-control__item">
+                  <div class="fsa-stepped-control__shim"></div>
+                  <div class="fsa-stepped-control__item fsa-stepped-control__item--push">
                     <button class="fsa-btn fsa-btn--alt fsa-btn--large fsa-stepped-control__btn" type="button">{{ secondary }}</button>
                   </div>
                   <div class="fsa-stepped-control__item">
@@ -3138,7 +3350,8 @@
                   <div class="fsa-stepped-control__item fsa-stepped-control__item--pull">
                     <button class="fsa-btn fsa-btn--alt fsa-btn--large fsa-stepped-control__btn" type="button">{{ regressive }}</button>
                   </div>
-                  <div class="fsa-stepped-control__item">
+                  <div class="fsa-stepped-control__shim"></div>
+                  <div class="fsa-stepped-control__item fsa-stepped-control__item--push">
                     <button class="fsa-btn fsa-btn--primary fsa-btn--large fsa-stepped-control__btn" type="submit">
                       <span class="fsa-stepped-control__btn-label">{{ progressive }}</span>
                     </button>
@@ -3162,7 +3375,8 @@
                   <div class="fsa-stepped-control__item fsa-stepped-control__item--pull">
                     <button class="fsa-btn fsa-btn--alt fsa-btn--large fsa-stepped-control__btn" type="button">{{ regressive }}</button>
                   </div>
-                  <div class="fsa-stepped-control__item">
+                  <div class="fsa-stepped-control__shim"></div>
+                  <div class="fsa-stepped-control__item fsa-stepped-control__item--push">
                     <button class="fsa-btn fsa-btn--primary fsa-btn--large fsa-stepped-control__btn" type="submit">
                       <span class="fsa-stepped-control__btn-label">{{ progressive }}</span>
                     </button>
@@ -3180,6 +3394,26 @@
             <button class="fsa-btn fsa-btn--secondary" data-behavior="open-modal" aria-controls="UNIQUE-ID-stepped-control-demo-2" aria-expanded="false" type="button">Directional</button>
           </p>
 
+          <h4 class="docs__bd fsa-show@l">Responsive</h4>
+          <div class="docs__rwd-demo-block">
+            <div class="docs__bd">
+              <p>
+                <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_stepped-control" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_stepped-control" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_stepped-control" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_stepped-control" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+                </span>
+                <a class="fsa-m-l--xs fsa-text-size--1" href="demo/rwd__stepped-control.html" target="_blank">View in new window</a>
+              </p>
+            </div>
+            <div class="docs__rwd-embed-container">
+              <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_stepped-control">
+                <iframe src="demo/rwd__stepped-control.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
       <div class="docs__jump-target" id="component__tables">
@@ -3188,407 +3422,763 @@
           <a class="fsa-btn fsa-btn--secondary fsa-btn--small docs__section-link" href="http://usda-fsa.github.io/fsa-design-system/components/tables">Docs</a>
         </div>
         <div class="docs__bd">
-          <h4 class="docs__sub_style">Default</h4>
 
-          <p class="docs__code-sample"><code>class="<strong>fsa-table</strong>"</code></p>
+          <div>
+            <h4 class="docs__sub_style">Default</h4>
 
-          <table class="fsa-table">
-            <caption>
-              [Table caption]
-            </caption>
-            <thead>
-              <tr>
-                <th scope="col" aria-sort="descending"><button class="fsa-table__sort fsa-table__sort--descending" type="button">Document title</button></th>
-                <th scope="col"><button class="fsa-table__sort" type="button">Description</button></th>
-                <th scope="col" class="fsa-text-align--right"><button class="fsa-table__sort" type="button">Year</button></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Declaration of Independence</th>
-                <td>Statement adopted by the Continental Congress declaring independence from the British Empire.</td>
-                <td class="fsa-text-align--right">1776</td>
-              </tr>
-              <tr>
-                <th scope="row">Bill of Rights</th>
-                <td>The first ten amendments of the U.S. Constitution guaranteeing rights and freedoms.</td>
-                <td class="fsa-text-align--right">1791</td>
-              </tr>
-              <tr>
-                <th scope="row">Declaration of Sentiments</th>
-                <td>Written during the Seneca Falls Convention outlining the rights that American women should be entitled to as citizens.</td>
-                <td class="fsa-text-align--right">1848</td>
-              </tr>
-              <tr>
-                <th scope="row">Emancipation Proclamation</th>
-                <td>An executive order granting freedom to slaves in designated southern states.</td>
-                <td class="fsa-text-align--right">1863</td>
-              </tr>
-            </tbody>
-          </table>
+            <p class="docs__code-sample"><code>class="<strong>fsa-table</strong>"</code></p>
 
-          <table class="fsa-table">
-            <caption class="fsa-text--h2">
-              [Table caption that looks like an &lt;h2&gt;]
-            </caption>
-            <thead>
-              <tr>
-                <th scope="col" aria-sort="descending"><button class="fsa-table__sort fsa-table__sort--descending" type="button">Document title</button></th>
-                <th scope="col"><button class="fsa-table__sort" type="button">Description</button></th>
-                <th scope="col" class="fsa-text-align--right"><button class="fsa-table__sort" type="button">Year</button></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Declaration of Independence</th>
-                <td>Statement adopted by the Continental Congress declaring independence from the British Empire.</td>
-                <td class="fsa-text-align--right">1776</td>
-              </tr>
-              <tr>
-                <th scope="row">Bill of Rights</th>
-                <td>The first ten amendments of the U.S. Constitution guaranteeing rights and freedoms.</td>
-                <td class="fsa-text-align--right">1791</td>
-              </tr>
-            </tbody>
-          </table>
+            <table class="fsa-table">
+              <caption>
+                [Table caption]
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col" aria-sort="descending"><button class="fsa-table__sort fsa-table__sort--descending" type="button">Document title</button></th>
+                  <th scope="col"><button class="fsa-table__sort" type="button">Description</button></th>
+                  <th scope="col" class="fsa-text-align--right"><button class="fsa-table__sort" type="button">Year</button></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Declaration of Independence</th>
+                  <td>Statement adopted by the Continental Congress declaring independence from the British Empire.</td>
+                  <td class="fsa-text-align--right">1776</td>
+                </tr>
+                <tr>
+                  <th scope="row">Bill of Rights</th>
+                  <td>The first ten amendments of the U.S. Constitution guaranteeing rights and freedoms.</td>
+                  <td class="fsa-text-align--right">1791</td>
+                </tr>
+                <tr>
+                  <th scope="row">Declaration of Sentiments</th>
+                  <td>Written during the Seneca Falls Convention outlining the rights that American women should be entitled to as citizens.</td>
+                  <td class="fsa-text-align--right">1848</td>
+                </tr>
+                <tr>
+                  <th scope="row">Emancipation Proclamation</th>
+                  <td>An executive order granting freedom to slaves in designated southern states.</td>
+                  <td class="fsa-text-align--right">1863</td>
+                </tr>
+              </tbody>
+            </table>
 
-          <table class="fsa-table">
-            <caption class="sr-only">Caption that is hidden visually, but read by screenreader</caption>
-            <thead>
-              <tr>
-                <th scope="col">Commodity</th>
-                <th scope="col" class="fsa-text-align--right">Loan Rate</th>
-                <th scope="col" class="fsa-text-align--right">30-Day Period PCP</th>
-                <th scope="col" class="fsa-text-align--right">Alternative PCP</th>
-                <th scope="col" class="fsa-text-align--right">Effective LDP Rate</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Barley $/Bushel</td>
-                <td class="fsa-text-align--right">1.75</td>
-                <td class="fsa-text-align--right">3.30</td>
-                <td class="fsa-text-align--right">2.60</td>
-                <td class="fsa-text-align--right">0.00</td>
-              </tr>
-              <tr>
-                <td>Canola $/Cwt.</td>
-                <td class="fsa-text-align--right">8.94</td>
-                <td class="fsa-text-align--right">15.99</td>
-                <td class="fsa-text-align--right">15.89</td>
-                <td class="fsa-text-align--right">0.00</td>
-              </tr>
-              <tr>
-                <td>Flaxseed $/Cwt.</td>
-                <td class="fsa-text-align--right">10.13</td>
-                <td class="fsa-text-align--right">15.90</td>
-                <td class="fsa-text-align--right">14.62</td>
-                <td class="fsa-text-align--right">0.00</td>
-              </tr>
-              <tr>
-                <td>Oats $/Bushel</td>
-                <td class="fsa-text-align--right">1.43</td>
-                <td class="fsa-text-align--right">2.97</td>
-                <td class="fsa-text-align--right">1.92</td>
-                <td class="fsa-text-align--right">0.00</td>
-              </tr>
-              <tr>
-                <td>Wheat - Soft Red Winter $/Bushel</td>
-                <td class="fsa-text-align--right">2.42</td>
-                <td class="fsa-text-align--right">4.49</td>
-                <td class="fsa-text-align--right">4.19</td>
-                <td class="fsa-text-align--right">0.00</td>
-              </tr>
-            </tbody>
-          </table>
+            <table class="fsa-table">
+              <caption class="fsa-text--h2">
+                [Table caption that looks like an &lt;h2&gt;]
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col" aria-sort="descending"><button class="fsa-table__sort fsa-table__sort--descending" type="button">Document title</button></th>
+                  <th scope="col"><button class="fsa-table__sort" type="button">Description</button></th>
+                  <th scope="col" class="fsa-text-align--right"><button class="fsa-table__sort" type="button">Year</button></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Declaration of Independence</th>
+                  <td>Statement adopted by the Continental Congress declaring independence from the British Empire.</td>
+                  <td class="fsa-text-align--right">1776</td>
+                </tr>
+                <tr>
+                  <th scope="row">Bill of Rights</th>
+                  <td>The first ten amendments of the U.S. Constitution guaranteeing rights and freedoms.</td>
+                  <td class="fsa-text-align--right">1791</td>
+                </tr>
+              </tbody>
+            </table>
 
-          <h4 class="docs__sub_style">Borderless</h4>
-          <p class="docs__code-sample"><code>class="fsa-table <strong>fsa-table--borderless</strong>"</code></p>
-          <table class="fsa-table fsa-table--borderless">
-            <thead>
-              <tr>
-                <th scope="col">Document Title</th>
-                <th scope="col">Description</th>
-                <th scope="col" class="fsa-text-align--right">Year</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Declaration of Independence</th>
-                <td>Statement adopted by the Continental Congress declaring independence from the British Empire.</td>
-                <td class="fsa-text-align--right">1776</td>
-              </tr>
-              <tr>
-                <th scope="row">Bill of Rights</th>
-                <td>The first ten amendments of the U.S. Constitution guaranteeing rights and freedoms.</td>
-                <td class="fsa-text-align--right">1791</td>
-              </tr>
-              <tr>
-                <th scope="row">Declaration of Sentiments</th>
-                <td>MadeWritten during the Seneca Falls Convention outlining the rights that American women should be entitled to as citizens.</td>
-                <td class="fsa-text-align--right">1848</td>
-              </tr>
-              <tr>
-                <th scope="row">Emancipation Proclamation</th>
-                <td>An executive order granting freedom to slaves in designated southern states.</td>
-                <td class="fsa-text-align--right">1863</td>
-              </tr>
-            </tbody>
-          </table>
+            <table class="fsa-table">
+              <caption class="sr-only">Caption that is hidden visually, but read by screenreader</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Commodity</th>
+                  <th scope="col" class="fsa-text-align--right">Loan Rate</th>
+                  <th scope="col" class="fsa-text-align--right">30-Day Period PCP</th>
+                  <th scope="col" class="fsa-text-align--right">Alternative PCP</th>
+                  <th scope="col" class="fsa-text-align--right">Effective LDP Rate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Barley $/Bushel</td>
+                  <td class="fsa-text-align--right">1.75</td>
+                  <td class="fsa-text-align--right">3.30</td>
+                  <td class="fsa-text-align--right">2.60</td>
+                  <td class="fsa-text-align--right">0.00</td>
+                </tr>
+                <tr>
+                  <td>Canola $/Cwt.</td>
+                  <td class="fsa-text-align--right">8.94</td>
+                  <td class="fsa-text-align--right">15.99</td>
+                  <td class="fsa-text-align--right">15.89</td>
+                  <td class="fsa-text-align--right">0.00</td>
+                </tr>
+                <tr>
+                  <td>Flaxseed $/Cwt.</td>
+                  <td class="fsa-text-align--right">10.13</td>
+                  <td class="fsa-text-align--right">15.90</td>
+                  <td class="fsa-text-align--right">14.62</td>
+                  <td class="fsa-text-align--right">0.00</td>
+                </tr>
+                <tr>
+                  <td>Oats $/Bushel</td>
+                  <td class="fsa-text-align--right">1.43</td>
+                  <td class="fsa-text-align--right">2.97</td>
+                  <td class="fsa-text-align--right">1.92</td>
+                  <td class="fsa-text-align--right">0.00</td>
+                </tr>
+                <tr>
+                  <td>Wheat - Soft Red Winter $/Bushel</td>
+                  <td class="fsa-text-align--right">2.42</td>
+                  <td class="fsa-text-align--right">4.49</td>
+                  <td class="fsa-text-align--right">4.19</td>
+                  <td class="fsa-text-align--right">0.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-          <table class="fsa-table fsa-table--borderless">
-            <thead>
-              <tr>
-                <th scope="col"><button class="fsa-table__sort" type="button">Commodity</button></th>
-                <th scope="col" class="fsa-text-align--right" aria-sort="ascending"><button class="fsa-table__sort fsa-table__sort--ascending" type="button">Loan Rate</button></th>
-                <th scope="col" class="fsa-text-align--right"><button class="fsa-table__sort" type="button">30-Day Period PCP</button></th>
-                <th scope="col" class="fsa-text-align--right"><button class="fsa-table__sort" type="button">Alternative PCP</button></th>
-                <th scope="col" class="fsa-text-align--right"><button class="fsa-table__sort" type="button">Effective LDP Rate</button></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Barley $/Bushel</td>
-                <td class="fsa-text-align--right">1.75</td>
-                <td class="fsa-text-align--right">3.30</td>
-                <td class="fsa-text-align--right">2.60</td>
-                <td class="fsa-text-align--right">0.00</td>
-              </tr>
-              <tr>
-                <td>Canola $/Cwt.</td>
-                <td class="fsa-text-align--right">8.94</td>
-                <td class="fsa-text-align--right">15.99</td>
-                <td class="fsa-text-align--right">15.89</td>
-                <td class="fsa-text-align--right">0.00</td>
-              </tr>
-              <tr>
-                <td>Flaxseed $/Cwt.</td>
-                <td class="fsa-text-align--right">10.13</td>
-                <td class="fsa-text-align--right">15.90</td>
-                <td class="fsa-text-align--right">14.62</td>
-                <td class="fsa-text-align--right">0.00</td>
-              </tr>
-              <tr>
-                <td>Oats $/Bushel</td>
-                <td class="fsa-text-align--right">1.43</td>
-                <td class="fsa-text-align--right">2.97</td>
-                <td class="fsa-text-align--right">1.92</td>
-                <td class="fsa-text-align--right">0.00</td>
-              </tr>
-              <tr>
-                <td>Wheat - Soft Red Winter $/Bushel</td>
-                <td class="fsa-text-align--right">2.42</td>
-                <td class="fsa-text-align--right">4.49</td>
-                <td class="fsa-text-align--right">4.19</td>
-                <td class="fsa-text-align--right">0.00</td>
-              </tr>
-            </tbody>
-          </table>
+          <div>
+            <h4 class="docs__sub_style">Borderless</h4>
+            <p class="docs__code-sample"><code>class="fsa-table <strong>fsa-table--borderless</strong>"</code></p>
+            <table class="fsa-table fsa-table--borderless">
+              <thead>
+                <tr>
+                  <th scope="col">Document Title</th>
+                  <th scope="col">Description</th>
+                  <th scope="col" class="fsa-text-align--right">Year</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Declaration of Independence</th>
+                  <td>Statement adopted by the Continental Congress declaring independence from the British Empire.</td>
+                  <td class="fsa-text-align--right">1776</td>
+                </tr>
+                <tr>
+                  <th scope="row">Bill of Rights</th>
+                  <td>The first ten amendments of the U.S. Constitution guaranteeing rights and freedoms.</td>
+                  <td class="fsa-text-align--right">1791</td>
+                </tr>
+                <tr>
+                  <th scope="row">Declaration of Sentiments</th>
+                  <td>MadeWritten during the Seneca Falls Convention outlining the rights that American women should be entitled to as citizens.</td>
+                  <td class="fsa-text-align--right">1848</td>
+                </tr>
+                <tr>
+                  <th scope="row">Emancipation Proclamation</th>
+                  <td>An executive order granting freedom to slaves in designated southern states.</td>
+                  <td class="fsa-text-align--right">1863</td>
+                </tr>
+              </tbody>
+            </table>
 
-          <h4 class="docs__sub_style">Responsive, Default</h4>
+            <table class="fsa-table fsa-table--borderless">
+              <thead>
+                <tr>
+                  <th scope="col"><button class="fsa-table__sort" type="button">Commodity</button></th>
+                  <th scope="col" class="fsa-text-align--right" aria-sort="ascending"><button class="fsa-table__sort fsa-table__sort--ascending" type="button">Loan Rate</button></th>
+                  <th scope="col" class="fsa-text-align--right"><button class="fsa-table__sort" type="button">30-Day Period PCP</button></th>
+                  <th scope="col" class="fsa-text-align--right"><button class="fsa-table__sort" type="button">Alternative PCP</button></th>
+                  <th scope="col" class="fsa-text-align--right"><button class="fsa-table__sort" type="button">Effective LDP Rate</button></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Barley $/Bushel</td>
+                  <td class="fsa-text-align--right">1.75</td>
+                  <td class="fsa-text-align--right">3.30</td>
+                  <td class="fsa-text-align--right">2.60</td>
+                  <td class="fsa-text-align--right">0.00</td>
+                </tr>
+                <tr>
+                  <td>Canola $/Cwt.</td>
+                  <td class="fsa-text-align--right">8.94</td>
+                  <td class="fsa-text-align--right">15.99</td>
+                  <td class="fsa-text-align--right">15.89</td>
+                  <td class="fsa-text-align--right">0.00</td>
+                </tr>
+                <tr>
+                  <td>Flaxseed $/Cwt.</td>
+                  <td class="fsa-text-align--right">10.13</td>
+                  <td class="fsa-text-align--right">15.90</td>
+                  <td class="fsa-text-align--right">14.62</td>
+                  <td class="fsa-text-align--right">0.00</td>
+                </tr>
+                <tr>
+                  <td>Oats $/Bushel</td>
+                  <td class="fsa-text-align--right">1.43</td>
+                  <td class="fsa-text-align--right">2.97</td>
+                  <td class="fsa-text-align--right">1.92</td>
+                  <td class="fsa-text-align--right">0.00</td>
+                </tr>
+                <tr>
+                  <td>Wheat - Soft Red Winter $/Bushel</td>
+                  <td class="fsa-text-align--right">2.42</td>
+                  <td class="fsa-text-align--right">4.49</td>
+                  <td class="fsa-text-align--right">4.19</td>
+                  <td class="fsa-text-align--right">0.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-          <p class="docs__code-sample"><code>class="fsa-table <strong>fsa-table--responsive</strong>"</code></p>
+          <div>
+            <h4 class="docs__sub_style">Vertical Align: Middle</h4>
+            <p class="docs__code-sample"><code>class="fsa-table <strong>fsa-table--valign-middle</strong>"</code></p>
+            <table class="fsa-table fsa-table--borderless fsa-table--valign-middle">
+              <thead>
+                <tr>
+                  <th>Lorem ipsum dolor sit amet consec tetur</th>
+                  <th>Lorem</th>
+                  <th>Ipsum</th>
+                  <th>Dolor</th>
+                  <th>Sitaw</th>
+                  <th>Ametg</th>
+                  <th>Conse</th>
+                  <th>Adipi</th>
+                  <th>Accus</th>
+                  <th>Omnisi</th>
+                  <th>Aliqum</th>
+                  <th>Rerum odio volupt atibus eligendi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Lorem ipsum dolor sit amet consec tetur</td>
+                  <th>1</th>
+                  <th>2</th>
+                  <th>3</th>
+                  <th>4</th>
+                  <th>5</th>
+                  <th>6</th>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>Rerum odio volupt atibus eligendi</th>
+                </tr>
+                <tr>
+                  <td>Lorem ipsum dolor sit amet consec tetur</td>
+                  <th>1</th>
+                  <th>2</th>
+                  <th>3</th>
+                  <th>4</th>
+                  <th>5</th>
+                  <th>6</th>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>Rerum odio voluptatibus eligendi</th>
+                </tr>
+                <tr>
+                  <td>Lorem ipsum dolor sit amet consec tetur</td>
+                  <th>1</th>
+                  <th>2</th>
+                  <th>3</th>
+                  <th>4</th>
+                  <th>5</th>
+                  <th>6</th>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>Rerum odio voluptatibus eligendi</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-          <table class="fsa-table fsa-table--responsive">
-            <thead>
-              <tr>
-                <th scope="col" aria-sort="descending"><button class="fsa-table__sort fsa-table__sort--descending" type="button">Document title</button></th>
-                <th scope="col"><button class="fsa-table__sort" type="button">Description</button></th>
-                <th scope="col" class="fsa-text-align--right"><button class="fsa-table__sort" type="button">Year</button></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th aria-label="Document title" scope="row">Declaration of Independence</th>
-                <td aria-label="Description">Statement adopted by the Continental Congress declaring independence from the British Empire.</td>
-                <td aria-label="Year" class="fsa-text-align--right">1776</td>
-              </tr>
-              <tr>
-                <th aria-label="Document title" scope="row">Bill of Rights</th>
-                <td aria-label="Description">The first ten amendments of the U.S. Constitution guaranteeing rights and freedoms.</td>
-                <td aria-label="Year" class="fsa-text-align--right">1791</td>
-              </tr>
-              <tr>
-                <th aria-label="Document title" scope="row">Declaration of Sentiments</th>
-                <td aria-label="Description">Written during the Seneca Falls Convention outlining the rights that American women should be entitled to as citizens.</td>
-                <td aria-label="Year" class="fsa-text-align--right">1848</td>
-              </tr>
-              <tr>
-                <th aria-label="Document title" scope="row">Emancipation Proclamation</th>
-                <td aria-label="Description">An executive order granting freedom to slaves in designated southern states.</td>
-                <td aria-label="Year" class="fsa-text-align--right">1863</td>
-              </tr>
-            </tbody>
-          </table>
+          <div>
+            <h4 class="docs__sub_style">Vertical Align: Bottom</h4>
+            <p class="docs__code-sample"><code>class="fsa-table <strong>fsa-table--valign-middle</strong>"</code></p>
+            <table class="fsa-table fsa-table--borderless fsa-table--valign-bottom">
+              <thead>
+                <tr>
+                  <th>Lorem ipsum dolor sit amet consec tetur</th>
+                  <th>Lorem</th>
+                  <th>Ipsum</th>
+                  <th>Dolor</th>
+                  <th>Sitaw</th>
+                  <th>Ametg</th>
+                  <th>Conse</th>
+                  <th>Adipi</th>
+                  <th>Accus</th>
+                  <th>Omnisi</th>
+                  <th>Aliqum</th>
+                  <th>Rerum odio volupt atibus eligendi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Lorem ipsum dolor sit amet consec tetur</td>
+                  <th>1</th>
+                  <th>2</th>
+                  <th>3</th>
+                  <th>4</th>
+                  <th>5</th>
+                  <th>6</th>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>Rerum odio volupt atibus eligendi</th>
+                </tr>
+                <tr>
+                  <td>Lorem ipsum dolor sit amet consec tetur</td>
+                  <th>1</th>
+                  <th>2</th>
+                  <th>3</th>
+                  <th>4</th>
+                  <th>5</th>
+                  <th>6</th>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>Rerum odio voluptatibus eligendi</th>
+                </tr>
+                <tr>
+                  <td>Lorem ipsum dolor sit amet consec tetur</td>
+                  <th>1</th>
+                  <th>2</th>
+                  <th>3</th>
+                  <th>4</th>
+                  <th>5</th>
+                  <th>6</th>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>Rerum odio voluptatibus eligendi</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-          <table class="fsa-table fsa-table--responsive">
-            <thead>
-              <tr>
-                <th scope="col">Commodity</th>
-                <th scope="col" class="fsa-text-align--right">Loan Rate</th>
-                <th scope="col" class="fsa-text-align--right">30-Day Period PCP</th>
-                <th scope="col" class="fsa-text-align--right">Alternative PCP</th>
-                <th scope="col" class="fsa-text-align--right">Effective LDP Rate</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td aria-label="Commodity">Barley $/Bushel</td>
-                <td class="fsa-text-align--right" aria-label="Loan Rate">1.75</td>
-                <td class="fsa-text-align--right" aria-label="30-Day Period PCP">3.30</td>
-                <td class="fsa-text-align--right" aria-label="Alternative PCP">2.60</td>
-                <td class="fsa-text-align--right" aria-label="Effective LDP Rate">0.00</td>
-              </tr>
-              <tr>
-                <td aria-label="Commodity">Canola $/Cwt.</td>
-                <td class="fsa-text-align--right" aria-label="Loan Rate">8.94</td>
-                <td class="fsa-text-align--right" aria-label="30-Day Period PCP">15.99</td>
-                <td class="fsa-text-align--right" aria-label="Alternative PCP">15.89</td>
-                <td class="fsa-text-align--right" aria-label="Effective LDP Rate">0.00</td>
-              </tr>
-              <tr>
-                <td aria-label="Commodity">Flaxseed $/Cwt.</td>
-                <td class="fsa-text-align--right" aria-label="Loan Rate">10.13</td>
-                <td class="fsa-text-align--right" aria-label="30-Day Period PCP">15.90</td>
-                <td class="fsa-text-align--right" aria-label="Alternative PCP">14.62</td>
-                <td class="fsa-text-align--right" aria-label="Effective LDP Rate">0.00</td>
-              </tr>
-              <tr>
-                <td aria-label="Commodity">Oats $/Bushel</td>
-                <td class="fsa-text-align--right" aria-label="Loan Rate">1.43</td>
-                <td class="fsa-text-align--right" aria-label="30-Day Period PCP">2.97</td>
-                <td class="fsa-text-align--right" aria-label="Alternative PCP">1.92</td>
-                <td class="fsa-text-align--right" aria-label="Effective LDP Rate">0.00</td>
-              </tr>
-              <tr>
-                <td aria-label="Commodity">Wheat - Soft Red Winter $/Bushel</td>
-                <td class="fsa-text-align--right" aria-label="Loan Rate">2.42</td>
-                <td class="fsa-text-align--right" aria-label="30-Day Period PCP">4.49</td>
-                <td class="fsa-text-align--right" aria-label="Alternative PCP">4.19</td>
-                <td class="fsa-text-align--right" aria-label="Effective LDP Rate">0.00</td>
-              </tr>
-            </tbody>
-          </table>
+          <div>
+            <h4 class="docs__sub_style">Plain</h4>
+            <p class="docs__code-sample"><code>&lt;table&gt;</code></p>
 
-          <h4 class="docs__sub_style">Responsive, horizontal</h4>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Document title</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Year</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Declaration of Independence</th>
+                  <td>Statement adopted by the Continental Congress declaring independence from the British Empire.</td>
+                  <td>1776</td>
+                </tr>
+                <tr>
+                  <th scope="row">Bill of Rights</th>
+                  <td>The first ten amendments of the U.S. Constitution guaranteeing rights and freedoms.</td>
+                  <td>1791</td>
+                </tr>
+                <tr>
+                  <th scope="row">Declaration of Sentiments</th>
+                  <td>Written during the Seneca Falls Convention outlining the rights that American women should be entitled to as citizens.</td>
+                  <td>1848</td>
+                </tr>
+                <tr>
+                  <th scope="row">Emancipation Proclamation</th>
+                  <td>An executive order granting freedom to slaves in designated southern states.</td>
+                  <td>1863</td>
+                </tr>
+              </tbody>
+            </table>
 
-          <p class="docs__code-sample"><code>class="fsa-table fsa-table--responsive <strong>fsa-table--responsive-horizontal</strong>"</code></p>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col" aria-sort="descending"><button class="fsa-table__sort fsa-table__sort--descending" type="button">Commodity</button></th>
+                  <th scope="col" class="fsa-text-align--right"><button class="fsa-table__sort" type="button">Loan Rate</button></th>
+                  <th scope="col" class="fsa-text-align--right"><button class="fsa-table__sort" type="button">30-Day Period PCP</button></th>
+                  <th scope="col" class="fsa-text-align--right"><button class="fsa-table__sort" type="button">Alternative PCP</button></th>
+                  <th scope="col" class="fsa-text-align--right"><button class="fsa-table__sort" type="button">Effective LDP Rate</button></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Barley $/Bushel</td>
+                  <td class="fsa-text-align--right">1.75</td>
+                  <td class="fsa-text-align--right">3.30</td>
+                  <td class="fsa-text-align--right">2.60</td>
+                  <td class="fsa-text-align--right">0.00</td>
+                </tr>
+                <tr>
+                  <td>Canola $/Cwt.</td>
+                  <td class="fsa-text-align--right">8.94</td>
+                  <td class="fsa-text-align--right">15.99</td>
+                  <td class="fsa-text-align--right">15.89</td>
+                  <td class="fsa-text-align--right">0.00</td>
+                </tr>
+                <tr>
+                  <td>Flaxseed $/Cwt.</td>
+                  <td class="fsa-text-align--right">10.13</td>
+                  <td class="fsa-text-align--right">15.90</td>
+                  <td class="fsa-text-align--right">14.62</td>
+                  <td class="fsa-text-align--right">0.00</td>
+                </tr>
+                <tr>
+                  <td>Oats $/Bushel</td>
+                  <td class="fsa-text-align--right">1.43</td>
+                  <td class="fsa-text-align--right">2.97</td>
+                  <td class="fsa-text-align--right">1.92</td>
+                  <td class="fsa-text-align--right">0.00</td>
+                </tr>
+                <tr>
+                  <td>Wheat - Soft Red Winter $/Bushel</td>
+                  <td class="fsa-text-align--right">2.42</td>
+                  <td class="fsa-text-align--right">4.49</td>
+                  <td class="fsa-text-align--right">4.19</td>
+                  <td class="fsa-text-align--right">0.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-          <table class="fsa-table fsa-table--responsive fsa-table--responsive-horizontal">
-            <thead>
-              <tr>
-                <th scope="col" aria-sort="descending"><button class="fsa-table__sort fsa-table__sort--descending" type="button">Document title</button></th>
-                <th scope="col"><button class="fsa-table__sort" type="button">Description</button></th>
-                <th scope="col" class="fsa-text-align--right"><button class="fsa-table__sort" type="button">Year</button></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th aria-label="Document title" scope="row">Declaration of Independence</th>
-                <td aria-label="Description">Statement</td>
-                <td aria-label="Year" class="fsa-text-align--right">1776</td>
-              </tr>
-              <tr>
-                <th aria-label="Document title" scope="row">Bill of Rights</th>
-                <td aria-label="Description">The first ten amendments</td>
-                <td aria-label="Year" class="fsa-text-align--right">1791</td>
-              </tr>
-              <tr>
-                <th aria-label="Document title" scope="row">Declaration of Sentiments</th>
-                <td aria-label="Description">A document</td>
-                <td aria-label="Year" class="fsa-text-align--right">1848</td>
-              </tr>
-              <tr>
-                <th aria-label="Document title" scope="row">Emancipation Proclamation</th>
-                <td aria-label="Description">Executive order granting freedom to slaves in designated southern states.</td>
-                <td aria-label="Year" class="fsa-text-align--right">1863</td>
-              </tr>
-            </tbody>
-          </table>
+          <div>
+          	<h4 class="docs__sub_style">Sticky Header</h4>
+          	<p class="docs__code-sample"><code>&lt;th class="<strong>fsa-table__th--sticky</strong>"&gt;...&lt;/th&gt;</code></p>
+          	<p><button class="fsa-btn fsa-btn--secondary" type="button" onclick="document.getElementById('global-nav').style.opacity='0'" title="So you can see the table headers stick">Hide Nav Bar</button></p>
 
-          <h4 class="docs__sub_style">Plain</h4>
-          <p class="docs__code-sample"><code>&lt;table&gt;</code></p>
+          	<table class="fsa-table fsa-table--borderless">
+          	  <thead>
+          	    <tr>
+          	      <th class="fsa-table__th--sticky">top header cell</th>
+          	      <th class="fsa-table__th--sticky">top header cell</th>
+          	      <th class="fsa-table__th--sticky">top header cell</th>
+          	      <th class="fsa-table__th--sticky">top header cell</th>
+          	      <th class="fsa-table__th--sticky">top header cell</th>
+          	    </tr>
+          	  </thead>
+          	  <tbody>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	    <tr>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	      <td>Cell</td>
+          	    </tr>
+          	  </tbody>
+          	</table>
+          </div>
 
-          <table>
-            <thead>
-              <tr>
-                <th scope="col">Document title</th>
-                <th scope="col">Description</th>
-                <th scope="col">Year</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Declaration of Independence</th>
-                <td>Statement adopted by the Continental Congress declaring independence from the British Empire.</td>
-                <td>1776</td>
-              </tr>
-              <tr>
-                <th scope="row">Bill of Rights</th>
-                <td>The first ten amendments of the U.S. Constitution guaranteeing rights and freedoms.</td>
-                <td>1791</td>
-              </tr>
-              <tr>
-                <th scope="row">Declaration of Sentiments</th>
-                <td>Written during the Seneca Falls Convention outlining the rights that American women should be entitled to as citizens.</td>
-                <td>1848</td>
-              </tr>
-              <tr>
-                <th scope="row">Emancipation Proclamation</th>
-                <td>An executive order granting freedom to slaves in designated southern states.</td>
-                <td>1863</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <table>
-            <thead>
-              <tr>
-                <th scope="col" aria-sort="descending"><button class="fsa-table__sort fsa-table__sort--descending" type="button">Commodity</button></th>
-                <th scope="col" class="fsa-text-align--right"><button class="fsa-table__sort" type="button">Loan Rate</button></th>
-                <th scope="col" class="fsa-text-align--right"><button class="fsa-table__sort" type="button">30-Day Period PCP</button></th>
-                <th scope="col" class="fsa-text-align--right"><button class="fsa-table__sort" type="button">Alternative PCP</button></th>
-                <th scope="col" class="fsa-text-align--right"><button class="fsa-table__sort" type="button">Effective LDP Rate</button></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Barley $/Bushel</td>
-                <td class="fsa-text-align--right">1.75</td>
-                <td class="fsa-text-align--right">3.30</td>
-                <td class="fsa-text-align--right">2.60</td>
-                <td class="fsa-text-align--right">0.00</td>
-              </tr>
-              <tr>
-                <td>Canola $/Cwt.</td>
-                <td class="fsa-text-align--right">8.94</td>
-                <td class="fsa-text-align--right">15.99</td>
-                <td class="fsa-text-align--right">15.89</td>
-                <td class="fsa-text-align--right">0.00</td>
-              </tr>
-              <tr>
-                <td>Flaxseed $/Cwt.</td>
-                <td class="fsa-text-align--right">10.13</td>
-                <td class="fsa-text-align--right">15.90</td>
-                <td class="fsa-text-align--right">14.62</td>
-                <td class="fsa-text-align--right">0.00</td>
-              </tr>
-              <tr>
-                <td>Oats $/Bushel</td>
-                <td class="fsa-text-align--right">1.43</td>
-                <td class="fsa-text-align--right">2.97</td>
-                <td class="fsa-text-align--right">1.92</td>
-                <td class="fsa-text-align--right">0.00</td>
-              </tr>
-              <tr>
-                <td>Wheat - Soft Red Winter $/Bushel</td>
-                <td class="fsa-text-align--right">2.42</td>
-                <td class="fsa-text-align--right">4.49</td>
-                <td class="fsa-text-align--right">4.19</td>
-                <td class="fsa-text-align--right">0.00</td>
-              </tr>
-            </tbody>
-          </table>
+          <div>
+              <h4 class="docs__bd fsa-show@l">Responsive</h4>
+              <div class="docs__rwd-demo-block">
+                <div class="docs__bd">
+                  <p>
+                    <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+                      <button data-behavior="toggle-rwd-size" data-target="rwd-demo_table" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                      <button data-behavior="toggle-rwd-size" data-target="rwd-demo_table" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                      <button data-behavior="toggle-rwd-size" data-target="rwd-demo_table" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                      <button data-behavior="toggle-rwd-size" data-target="rwd-demo_table" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+                    </span>
+                    <a class="fsa-m-l--xs fsa-text-size--1" href="demo/rwd__table.html" target="_blank">View in new window</a>
+                  </p>
+                </div>
+                <div class="docs__rwd-embed-container">
+                  <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_table">
+                    <iframe src="demo/rwd__table.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+                  </div>
+                </div>
+              </div>
+          </div>
 
         </div>
       </div>
@@ -3598,6 +4188,7 @@
           <a class="fsa-btn fsa-btn--secondary fsa-btn--small docs__section-link" href="http://usda-fsa.github.io/fsa-design-system/components/content-tabs">Docs</a>
         </div>
         <div class="docs__bd">
+
           <h4 class="docs__sub_style">Default</h4>
           <div class="fsa-content-tabs">
             <ul class="fsa-content-tabs__list">
@@ -3840,6 +4431,26 @@
             <div class="fsa-content-tabs__aside"></div>
           </div>
 
+          <h4 class="docs__bd fsa-show@l">Responsive</h4>
+          <div class="docs__rwd-demo-block">
+            <div class="docs__bd">
+              <p>
+                <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_content-tabs" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_content-tabs" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_content-tabs" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_content-tabs" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+                </span>
+                <a class="fsa-m-l--xs fsa-text-size--1" href="demo/rwd__content-tabs.html" target="_blank">View in new window</a>
+              </p>
+            </div>
+            <div class="docs__rwd-embed-container">
+              <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_content-tabs">
+                <iframe src="demo/rwd__content-tabs.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
       <div class="docs__jump-target" id="component__modal">
@@ -3856,6 +4467,25 @@
             <button class="fsa-btn fsa-btn--secondary" data-behavior="open-modal" aria-controls="UNIQUE-ID-23458CF77S77S7" aria-expanded="false" type="button">Large</button>
             <button class="fsa-btn fsa-btn--secondary" data-behavior="open-modal" aria-controls="UNIQUE-ID-23451CF80S77S9" aria-expanded="false" type="button">Fullscreen</button>
           </p>
+          <h4 class="docs__bd fsa-show@l">Responsive</h4>
+          <div class="docs__rwd-demo-block">
+            <div class="docs__bd">
+              <p>
+                <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_modal" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_modal" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_modal" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_modal" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+                </span>
+                <a class="fsa-m-l--xs fsa-text-size--1" href="demo/rwd__modal.html" target="_blank">View in new window</a>
+              </p>
+            </div>
+            <div class="docs__rwd-embed-container">
+              <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_modal">
+                <iframe src="demo/rwd__modal.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="docs__jump-target" id="component__growl">
@@ -4052,26 +4682,43 @@
           <h3 class="docs__figure"><a class="docs__anchor" aria-hidden="true" href="#component__tophat">#</a>Header: Top Hat</h3>
           <a class="fsa-btn fsa-btn--secondary fsa-btn--small docs__section-link" href="http://usda-fsa.github.io/fsa-design-system/components/tophat">Docs</a>
         </div>
-        <div>
-          <p class="docs__bd docs__code-sample"><code>class="<strong>fsa-tophat</strong>"</code></p>
-          <div style="margin: 0 -12px;">
-            <div class="fsa-tophat">
-              <div class="fsa-tophat__bd">
-                <div class="fsa-tophat__primary">
-                  <span class="fsa-tophat__agency">
-                    <a class="fsa-tophat__link" href="//usda.gov" title="Link to USDA homepage">
-                      <img role="presentation" class="fsa-tophat__agency-logo" src="img/usda-logo--white.svg" alt="">
-                      <abbr class="fsa-tophat__agency-abbr" title="United States Department of Agriculture">USDA</abbr>
-                      <span class="fsa-tophat__agency-fullname">United States Department of Agriculture</span>
-                    </a>
-                  </span>
-                </div>
-                <div class="fsa-tophat__secondary">
-                  <span class="fsa-tophat__subagency">
-                    <a class="fsa-tophat__link" href="//fsa.usda.gov" title="Link to FSA homepage">Farm Service Agency</a>
-                  </span>
-                </div>
+        <p class="docs__bd docs__code-sample"><code>class="<strong>fsa-tophat</strong>"</code></p>
+        <div style="margin: 0 -12px;">
+          <div class="fsa-tophat">
+            <div class="fsa-tophat__bd">
+              <div class="fsa-tophat__primary">
+                <span class="fsa-tophat__agency">
+                  <a class="fsa-tophat__link" href="//usda.gov" title="Link to USDA homepage">
+                    <img role="presentation" class="fsa-tophat__agency-logo" src="img/usda-logo--white.svg" alt="">
+                    <abbr class="fsa-tophat__agency-abbr" title="United States Department of Agriculture">USDA</abbr>
+                    <span class="fsa-tophat__agency-fullname">United States Department of Agriculture</span>
+                  </a>
+                </span>
               </div>
+              <div class="fsa-tophat__secondary">
+                <span class="fsa-tophat__subagency">
+                  <a class="fsa-tophat__link" href="//fsa.usda.gov" title="Link to FSA homepage">Farm Service Agency</a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h4 class="docs__bd fsa-show@l">Responsive</h4>
+        <div class="docs__rwd-demo-block">
+          <div class="docs__bd">
+            <p>
+              <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_top-hat" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_top-hat" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_top-hat" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_top-hat" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+              </span>
+              <a class="fsa-m-l--xs fsa-text-size--1" href="demo/rwd__top-hat.html" target="_blank">View in new window</a>
+            </p>
+          </div>
+          <div class="docs__rwd-embed-container">
+            <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_top-hat">
+              <iframe src="demo/rwd__top-hat.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
             </div>
           </div>
         </div>
@@ -4149,6 +4796,27 @@
               </div>
             </div>
           </div>
+
+          <h4 class="docs__bd fsa-show@l">Responsive</h4>
+          <div class="docs__rwd-demo-block">
+            <div class="docs__bd">
+              <p>
+                <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_header-app" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_header-app" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_header-app" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_header-app" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+                </span>
+                <a class="fsa-m-l--xs fsa-text-size--1" href="demo/rwd__header-app.html" target="_blank">View in new window</a>
+              </p>
+            </div>
+            <div class="docs__rwd-embed-container">
+              <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_header-app">
+                <iframe src="demo/rwd__header-app.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
       <div class="docs__jump-target" id="component__top-nav">
@@ -4162,7 +4830,7 @@
           <div style="margin: 0 -12px;">
             <div class="fsa-nav-global">
               <div class="fsa-nav-global__bd">
-                <ul class="fsa-nav-global__list" aria-label="Primary Navigation" id="primary-navigation">
+                <ul class="fsa-nav-global__list" aria-label="Primary Navigation" id="primary-navigation-07">
                   <li class="fsa-nav-global__list-item">
                     <a class="fsa-nav-global__link fsa-nav-global__link--active" href="link.html">
                       <span class="fsa-nav-global__text">Home</span>
@@ -4197,11 +4865,67 @@
               </div>
             </div>
           </div>
+          <h4 class="docs__bd">Example: With Search</h4>
+          <div style="margin: 0 -12px;">
+            <div class="fsa-nav-global">
+              <div class="fsa-nav-global__bd">
+                <ul class="fsa-nav-global__list" aria-label="Primary Navigation" id="primary-navigation-02">
+                  <li class="fsa-nav-global__list-item">
+                    <a class="fsa-nav-global__link fsa-nav-global__link--active" href="link.html">
+                      <span class="fsa-nav-global__text">Home</span>
+                    </a>
+                  </li>
+                  <li class="fsa-nav-global__list-item">
+                    <a class="fsa-nav-global__link" href="link.html">
+                      <span class="fsa-nav-global__text">[item]</span>
+                    </a>
+                  </li>
+                  <li class="fsa-nav-global__list-item">
+                    <a class="fsa-nav-global__link" href="link.html">
+                      <span class="fsa-nav-global__text">[item]</span>
+                    </a>
+                  </li>
+                  <li class="fsa-nav-global__list-item">
+                    <a class="fsa-nav-global__link" href="link.html">
+                      <span class="fsa-nav-global__text">[item]</span>
+                    </a>
+                  </li>
+                  <li class="fsa-nav-global__list-item">
+                    <a class="fsa-nav-global__link" href="link.html">
+                      <span class="fsa-nav-global__text">[item]</span>
+                    </a>
+                  </li>
+                  <li class="fsa-nav-global__list-item">
+                    <a class="fsa-nav-global__link" href="link.html">
+                      <span class="fsa-nav-global__text">[item]</span>
+                    </a>
+                  </li>
+                </ul>
+                <div class="fsa-nav-global__search">
+                  <form action="dest.html">
+                    <div class="fsa-search fsa-search--small" role="search">
+                      <div class="fsa-search__bd">
+                        <div class="fsa-search__entry fsa-search__entry--grow">
+                          <label class="fsa-search__label fsa-search__label--sr-only" for="UNIQUE-ID-66dhhHyHH">Search [app-name]</label>
+                          <input placeholder="Search" class="fsa-input fsa-input--small fsa-search__input" id="UNIQUE-ID-66dhhHyHH" type="search" name="search">
+                        </div>
+                        <div class="fsa-search__submit">
+                          <button class="fsa-btn fsa-btn--small fsa-search__btn fsa-search__btn--icon" type="submit">
+                            <span class="fsa-search__text">Search</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
           <h4 class="docs__bd">Example: sub-menus</h4>
           <div style="margin: 0 -12px;">
             <div class="fsa-nav-global">
               <div class="fsa-nav-global__bd">
-                <ul class="fsa-nav-global__list" aria-label="Primary Navigation" id="primary-navigation">
+                <ul class="fsa-nav-global__list" aria-label="Primary Navigation" id="primary-navigation-03">
                   <li class="fsa-nav-global__list-item">
                     <a class="fsa-nav-global__link fsa-nav-global__link--active" href="link.html">
                       <span class="fsa-nav-global__text">Home</span>
@@ -4337,6 +5061,32 @@
                     </a>
                   </li>
                 </ul>
+                <div class="fsa-nav-global__search">
+                  <form action="dest.html">
+                    <div class="fsa-search fsa-search--small" role="search">
+                      <div class="fsa-search__bd">
+                        <div class="fsa-search__entry fsa-search__entry--grow">
+                          <label class="fsa-search__label fsa-search__label--sr-only" for="UNIQUE-ID-hsjdhh">Search [app-name]</label>
+                          <input placeholder="Search" class="fsa-input fsa-input--small fsa-search__input" id="UNIQUE-ID-hsjdhh" type="search" name="search">
+                        </div>
+                        <div class="fsa-search__entry">
+                          <label class="fsa-search__label fsa-search__label--sr-only" for="UNIQUE-ID-PPooIkkH66">Search Category</label>
+                          <select class="fsa-select fsa-select--small fsa-search__select" name="Statez" id="UNIQUE-ID-PPooIkkH66">
+                            <option value="none" selected="selected">All</option>
+                            <option value="asdf">Cat 1</option>
+                            <option value="asdf">Cat 2</option>
+                            <option value="asdf">Cat 3</option>
+                          </select>
+                        </div>
+                        <div class="fsa-search__submit">
+                          <button class="fsa-btn fsa-btn--small fsa-search__btn fsa-search__btn--icon" type="submit">
+                            <span class="fsa-search__text">Search</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
@@ -4344,7 +5094,7 @@
           <div style="margin: 0 -12px; padding-bottom: 380px">
             <div class="fsa-nav-global">
               <div class="fsa-nav-global__bd">
-                <ul class="fsa-nav-global__list" aria-label="Primary Navigation" id="primary-navigation">
+                <ul class="fsa-nav-global__list" aria-label="Primary Navigation" id="primary-navigation-04">
                   <li class="fsa-nav-global__list-item">
                     <a class="fsa-nav-global__link fsa-nav-global__link--active" href="link.html">
                       <span class="fsa-nav-global__text">Home</span>
@@ -4487,7 +5237,7 @@
           <div style="padding-bottom: 240px; margin: 0 -12px;">
             <div class="fsa-nav-global">
               <div class="fsa-nav-global__bd">
-                <ul class="fsa-nav-global__list" aria-label="Primary Navigation" id="primary-navigation">
+                <ul class="fsa-nav-global__list" aria-label="Primary Navigation" id="primary-navigation-05">
                   <li class="fsa-nav-global__list-item">
                     <a class="fsa-nav-global__link fsa-nav-global__link--active" href="link.html">
                       <span class="fsa-nav-global__text">Home</span>
@@ -4630,7 +5380,7 @@
           <div style="padding-bottom: 290px; margin: 0 -12px;">
             <div class="fsa-nav-global">
               <div class="fsa-nav-global__bd">
-                <ul class="fsa-nav-global__list" aria-label="Primary Navigation" id="primary-navigation">
+                <ul class="fsa-nav-global__list" aria-label="Primary Navigation" id="primary-navigation-06">
                   <li class="fsa-nav-global__list-item">
                     <a class="fsa-nav-global__link fsa-nav-global__link--active" href="link.html">
                       <span class="fsa-nav-global__text">Home</span>
@@ -4769,6 +5519,27 @@
               </div>
             </div>
           </div>
+
+          <h4 class="docs__bd fsa-show@l">Responsive</h4>
+          <div class="docs__rwd-demo-block">
+            <div class="docs__bd">
+              <p>
+                <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_header-nav-global" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_header-nav-global" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_header-nav-global" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_header-nav-global" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+                </span>
+                <a class="fsa-m-l--xs fsa-text-size--1" href="demo/rwd__header-nav-global.html" target="_blank">View in new window</a>
+              </p>
+            </div>
+            <div class="docs__rwd-embed-container">
+              <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_header-nav-global">
+                <iframe src="demo/rwd__header-nav-global.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
       <div class="docs__jump-target" id="component__topper">
@@ -4838,6 +5609,27 @@
                     </ul>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h4 class="docs__bd fsa-show@l">Responsive</h4>
+          <div class="docs__rwd-demo-block">
+            <div class="docs__bd">
+              <p>
+                <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_footer" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_footer" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_footer" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_footer" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+                </span>
+                <a class="fsa-m-l--xs fsa-text-size--1" href="demo/rwd__footer.html" target="_blank">View in new window</a>
+              </p>
+            </div>
+            <div class="docs__rwd-embed-container">
+              <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_footer">
+                <iframe src="demo/rwd__footer.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
               </div>
             </div>
           </div>
@@ -5089,6 +5881,31 @@
           <div class="docs__utilities__demo">
             <div class="docs__utilities__demo-item fsa-m--xl"><code>fsa-m<strong>--xl</strong></code></div>
           </div>
+          <h4 class="docs__bd">Responsive</h4>
+          <p class="fsa-show@l">Margins can be adjusted per media query breakpoint.</p>
+          <div class="fsa-hide@l">
+            <div class="fsa-alert fsa-alert--info fsa-alert--no-icon" role="alert">
+              <div class="fsa-alert__body">
+                <p class="fsa-alert__text">View this page on a large screen to view complete Responsive Web Design options.</p>
+              </div>
+            </div>
+          </div>
+          <div class="docs__rwd-demo-block">
+            <p>
+              <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_margin" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_margin" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_margin" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_margin" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+              </span>
+              <a class="fsa-m-l--xs fsa-text-size--1" href="demo/rwd__margins.html" target="_blank">View in new window</a>
+            </p>
+            <div class="docs__rwd-embed-container">
+              <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_margin">
+                <iframe src="demo/rwd__margins.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="docs__jump-target" id="utilities__padding">
           <h3 class="docs__bd docs__figure"><a class="docs__anchor" aria-hidden="true" href="#utilities__padding">#</a>Padding</h3>
@@ -5212,6 +6029,31 @@
           <div class="docs__utilities__demo">
             <div class="docs__utilities__demo-item fsa-p--xl"><code>fsa-p<strong>--xl</strong></code></div>
           </div>
+          <h4 class="docs__bd">Responsive</h4>
+          <p class="fsa-show@l">Padding can be adjusted per media query breakpoint.</p>
+          <div class="fsa-hide@l">
+            <div class="fsa-alert fsa-alert--info fsa-alert--no-icon" role="alert">
+              <div class="fsa-alert__body">
+                <p class="fsa-alert__text">View this page on a large screen to view complete Responsive Web Design options.</p>
+              </div>
+            </div>
+          </div>
+          <div class="docs__rwd-demo-block">
+            <p>
+              <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_padding" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_padding" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_padding" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_padding" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+              </span>
+              <a class="fsa-m-l--xs fsa-text-size--1" href="demo/rwd__padding.html" target="_blank">View in new window</a>
+            </p>
+            <div class="docs__rwd-embed-container">
+              <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_padding">
+                <iframe src="demo/rwd__padding.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="docs__jump-target" id="utilities__floats">
           <h3 class="docs__bd docs__figure"><a class="docs__anchor" aria-hidden="true" href="#utilities__floats">#</a>Floats</h3>
@@ -5244,6 +6086,31 @@
             <p class="docs__utilities__demo-item fsa-float--left">I'm floating to left</p>
             <p class="docs__utilities__demo-item fsa-clear">I've been cleared</p>
           </div>
+          <h4 class="docs__bd">Responsive</h4>
+          <p class="fsa-show@l">Adjust floating presentation per media query breakpoint.</p>
+          <div class="fsa-hide@l">
+            <div class="fsa-alert fsa-alert--info fsa-alert--no-icon" role="alert">
+              <div class="fsa-alert__body">
+                <p class="fsa-alert__text">View this page on a large screen to view complete Responsive Web Design options.</p>
+              </div>
+            </div>
+          </div>
+          <div class="docs__rwd-demo-block">
+            <p>
+              <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_float" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_float" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_float" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_float" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+              </span>
+              <a class="fsa-m-l--xs fsa-text-size--1" href="demo/rwd__float.html" target="_blank">View in new window</a>
+            </p>
+            <div class="docs__rwd-embed-container">
+              <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_float">
+                <iframe src="demo/rwd__float.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="docs__jump-target" id="utilities__text-size">
           <h3 class="docs__bd docs__figure"><a class="docs__anchor" aria-hidden="true" href="#utilities__text-size">#</a>Text Size</h3>
@@ -5256,14 +6123,32 @@
           <p class="fsa-ellipsis fsa-text-size--5">Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
           <p class="fsa-ellipsis fsa-text-size--6">Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
           <p class="fsa-ellipsis fsa-text-size--7">Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
-        </div>
-        <div class="docs__jump-target" id="utilities__responsive-text-size">
-          <h3 class="docs__bd docs__figure"><a class="docs__anchor" aria-hidden="true" href="#utilities__responsive-text-size">#</a>Responsive Text Size</h3>
-          <p>As with <a href="#grid">Responsive Grids</a>, text size can customized per media query breakpoint.</p>
-          <p><code>class="fsa-text-size<strong>--[size]@[breakpoint]</strong>"</code>, where <code>size</code> is one of <code>0</code> - <code>7</code>, and <code>breakpoint</code> is one of <code title="small">s</code>, <code title="medium">m</code>, <code title="large">l</code>, or <code title="extra large">xl</code></p>
-          <h4 class="docs__sub_style">Examples</h4>
-          <p class="fsa-text-size--1 fsa-text-size--4@m fsa-text-size--7@l">I am size <code>1</code> by default, <code>4@m</code> (Four at Medium), and <code>7@l</code> (Seven at Large)</p>
-          <p class="fsa-text-size--3 fsa-text-size--5@l fsa-text-size--7@xl">I am size <code>3</code> by default, <code>5@l</code> (Five at Large), and <code>7@xl</code> (Seven at Extra-Large)</p>
+          <h4 class="docs__bd">Responsive</h4>
+          <p class="fsa-show@l">Text size can be adjusted per media query breakpoint.</p>
+          <div class="fsa-hide@l">
+            <div class="fsa-alert fsa-alert--info fsa-alert--no-icon" role="alert">
+              <div class="fsa-alert__body">
+                <p class="fsa-alert__text">View this page on a large screen to view complete Responsive Web Design options.</p>
+              </div>
+            </div>
+          </div>
+          <div class="docs__rwd-demo-block">
+            <p><code>class="fsa-text-size<strong>--[size]@[breakpoint]</strong>"</code>, where <code>size</code> is one of <code>0</code> - <code>7</code>, and <code>breakpoint</code> is one of <code title="small">s</code>, <code title="medium">m</code>, <code title="large">l</code>, or <code title="extra large">xl</code></p>
+            <p>
+              <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_text-size" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_text-size" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_text-size" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_text-size" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+              </span>
+              <a class="fsa-m-l--xs fsa-text-size--1" href="demo/rwd__text-size.html" target="_blank">View in new window</a>
+            </p>
+            <div class="docs__rwd-embed-container">
+              <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_text-size">
+                <iframe src="demo/rwd__text-size.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="docs__jump-target" id="utilities__text-alignment">
           <h3 class="docs__bd docs__figure"><a class="docs__anchor" aria-hidden="true" href="#utilities__text-alignment">#</a>Text Alignment</h3>
@@ -5281,6 +6166,31 @@
           <p class="docs__code-sample"><code>class="fsa-text-align<strong>--left</strong>"</code></p>
           <div class="docs__utilities__demo">
             <p class="fsa-text-align--left">Yosemite National Park is set within California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoias, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
+          </div>
+          <h4 class="docs__bd">Responsive</h4>
+          <p class="fsa-show@l">Adjust text alignment per media query breakpoint.</p>
+          <div class="fsa-hide@l">
+            <div class="fsa-alert fsa-alert--info fsa-alert--no-icon" role="alert">
+              <div class="fsa-alert__body">
+                <p class="fsa-alert__text">View this page on a large screen to view complete Responsive Web Design options.</p>
+              </div>
+            </div>
+          </div>
+          <div class="docs__rwd-demo-block">
+            <p>
+              <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_text-align" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_text-align" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_text-align" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_text-align" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+              </span>
+              <a class="fsa-m-l--xs fsa-text-size--1" href="demo/rwd__text-align.html" target="_blank">View in new window</a>
+            </p>
+            <div class="docs__rwd-embed-container">
+              <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_text-align">
+                <iframe src="demo/rwd__text-align.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+              </div>
+            </div>
           </div>
         </div>
         <div class="docs__jump-target" id="utilities__text-headers">
@@ -5304,7 +6214,111 @@
 
           <p class="docs__code-sample"><code> class="fsa-text<strong>--h6</strong>"</code></p>
           <h2 class="fsa-text--h6">h2 that looks like an h6</h2>
+
+          <h4 class="docs__bd">Responsive</h4>
+          <p class="fsa-show@l">Adjust <code>h<em>n</em></code> element text size per media query breakpoint.</p>
+          <div class="fsa-hide@l">
+            <div class="fsa-alert fsa-alert--info fsa-alert--no-icon" role="alert">
+              <div class="fsa-alert__body">
+                <p class="fsa-alert__text">View this page on a large screen to view complete Responsive Web Design options.</p>
+              </div>
+            </div>
+          </div>
+          <div class="docs__rwd-demo-block">
+            <p>
+              <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_text-headers" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_text-headers" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_text-headers" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_text-headers" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+              </span>
+              <a class="fsa-m-l--xs fsa-text-size--1" href="demo/rwd__text-headers.html" target="_blank">View in new window</a>
+            </p>
+            <div class="docs__rwd-embed-container">
+              <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_text-headers">
+                <iframe src="demo/rwd__text-headers.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="docs__jump-target" id="utilities__visibility">
+          <h3 class="docs__bd docs__figure"><a class="docs__anchor" aria-hidden="true" href="#utilities__text-visibility">#</a>Visibility</h3>
+          <p>Selectively show or hide elements or blocks at a variety of screen sizes (i.e. Media Query breakpoints).</p>
+          <div class="fsa-hide@l">
+            <div class="fsa-alert fsa-alert--info fsa-alert--no-icon" role="alert">
+              <div class="fsa-alert__body">
+                <p class="fsa-alert__text">View this page on a large screen to view complete Responsive Web Design options.</p>
+              </div>
+            </div>
+          </div>
+          <div class="docs__rwd-demo-block">
+            <h4 class="docs__bd docs__figure">Show at minimum screen size</h4>
+            <p class="docs__code-sample"><code>class="fsa-show@<strong>[size]</strong>"</code>. Show when <em>at least</em> [size], where [size] is one of <code>s</code>, <code>m</code>, <code>l</code>, or <code>xl</code>. </p>
+            <p>
+              <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_vis--show-min-screen-size" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_vis--show-min-screen-size" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_vis--show-min-screen-size" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_vis--show-min-screen-size" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+              </span>
+              <a class="fsa-m-l--xs fsa-text-size--1" href="demo/rwd__visibility--show-min-screen-size.html" target="_blank">View in new window</a>
+            </p>
+            <div class="docs__rwd-embed-container">
+              <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_vis--show-min-screen-size">
+                <iframe src="demo/rwd__visibility--show-min-screen-size.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+              </div>
+            </div>
+            <h4 class="docs__bd docs__figure">Show at only specific screen size</h4>
+            <p><code>class="fsa-show@<strong>[size]-only</strong>"</code>. Show <em>only</em> at [size], where [size] is one of <code>s</code>, <code>m</code>, <code>l</code>, or <code>xl</code>. </p>
+            <p>
+              <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_vis--show-at-screen-size" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_vis--show-at-screen-size" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_vis--show-at-screen-size" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_vis--show-at-screen-size" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+              </span>
+              <a class="fsa-m-l--xs fsa-text-size--1" href="demo/rwd__visibility--min-screen-size.html" target="_blank">View in new window</a>
+            </p>
+            <div class="docs__rwd-embed-container">
+              <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_vis--show-at-screen-size">
+                <iframe src="demo/rwd__visibility--min-screen-size.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+              </div>
+            </div>
+            <h4 class="docs__bd docs__figure">Hide at minimum screen size</h4>
+            <p><code>class="fsa-hide@<strong>[size]</strong>"</code>. Hide when <em>at least</em> [size], where [size] is one of <code>s</code>, <code>m</code>, or <code>l</code>. </p>
+            <p>
+              <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_vis--hide-min-screen-size" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_vis--hide-min-screen-size" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_vis--hide-min-screen-size" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_vis--hide-min-screen-size" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+              </span>
+              <a class="fsa-m-l--xs fsa-text-size--1" href="demo/rwd__visibility--hide-min-screen-size.html" target="_blank">View in new window</a>
+            </p>
+            <div class="docs__rwd-embed-container">
+              <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_vis--hide-min-screen-size">
+                <iframe src="demo/rwd__visibility--hide-min-screen-size.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+              </div>
+            </div>
+            <h4 class="docs__bd docs__figure">Hide at specific screen size</h4>
+            <p><code>class="fsa-hide@<strong>[size]-only</strong>"</code>. Hide <em>only</em> at [size], where [size] is one of <code>xs</code>, <code>s</code>, <code>m</code>, <code>l</code>, or <code>xl</code>.</p>
+            <p>
+              <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_vis--hide-at-screen-size" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_vis--hide-at-screen-size" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape">Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_vis--hide-at-screen-size" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_vis--hide-at-screen-size" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+              </span>
+              <a class="fsa-m-l--xs fsa-text-size--1" href="demo/rwd__visibility--hide-at-screen-size.html" target="_blank">View in new window</a>
+            </p>
+            <div class="docs__rwd-embed-container">
+              <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_vis--hide-at-screen-size">
+                <iframe src="demo/rwd__visibility--hide-at-screen-size.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   </main>
@@ -5437,6 +6451,7 @@
               {{ status message }}
             </div>
             <div class="fsa-stepped-control__list">
+              <div class="fsa-stepped-control__shim"></div>
               <div class="fsa-stepped-control__item">
                 <button class="fsa-btn fsa-btn--alt fsa-stepped-control__btn" type="button">{{ secondary }}</button>
               </div>
@@ -5468,6 +6483,7 @@
               <div class="fsa-stepped-control__item fsa-stepped-control__item--pull">
                 <button class="fsa-btn fsa-btn--alt fsa-stepped-control__btn" type="button">{{ regressive }}</button>
               </div>
+              <div class="fsa-stepped-control__shim"></div>
               <div class="fsa-stepped-control__item">
                 <button class="fsa-btn fsa-btn--primary fsa-stepped-control__btn" type="submit">
                   <span class="fsa-stepped-control__btn-label">{{ progressive }}</span>
@@ -5481,6 +6497,7 @@
   </div>
 
   <script src="js/fsa-style-docs.min.js"></script>
+  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 </body>
 

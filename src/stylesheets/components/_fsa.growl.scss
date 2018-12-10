@@ -62,6 +62,7 @@ $growlDistance: 110%;
 
 .fsa-growl-container {
 
+  pointer-events: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -101,6 +102,7 @@ $growlDistance: 110%;
 .fsa-growl {
 
   & {
+    pointer-events: all;
     box-shadow: 0 $size-base $size-small 0 rgba(0, 0, 0, .25);
     margin: 0 0 $growlMargin;
     padding: $growlPadding;

@@ -85,6 +85,16 @@
 
   }
 
+  &__shim {
+    display: none;
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      display: block;
+      @include breakpoint(L) {
+        flex-grow: 1;
+      }
+    }
+  }
+
   &__message {
 
     @include font-size(3);
@@ -137,7 +147,9 @@
       }
 
       @include breakpoint(L) {
+        flex: none;
         flex: initial;
+        flex-shrink: 1;
       }
 
     }
@@ -152,17 +164,17 @@
 
     }
 
-    &--push {
-      @include breakpoint(L) {
-        margin-left: auto;
-        border-left: $size-default solid transparent;
-      }
-    }
-
     &--pull {
       @include breakpoint(L) {
         margin-right: auto;
         border-right: $size-default solid transparent;
+      }
+    }
+
+    &--push {
+      @include breakpoint(L) {
+        margin-left: auto;
+        border-left: $size-default solid transparent;
       }
     }
 

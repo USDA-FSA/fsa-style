@@ -60,10 +60,12 @@ th {
 
 .fsa-table {
 
-  background-color: $table-bgc;
+  & {
+    background-color: $table-bgc;
 
-  @include breakpoint(M, down) {
-    @include font-size(2);
+    @include breakpoint(M, down) {
+      @include font-size(2);
+    }
   }
 
   th,
@@ -75,6 +77,25 @@ th {
 
     @include breakpoint(M, down) {
       padding: $table-padding - $size-base;
+    }
+
+  }
+
+  &__th--sticky {
+
+    position: sticky;
+    top: -1px;
+    background-color: $color-fsa-site-bg;
+    z-index: 2;
+    box-shadow: 0 1px 0 0 $color-fsa-tertiary-200;
+
+    .fsa-table:not(.fsa-table--borderless) & {
+      background-color: $table-header-bgc;
+    }
+
+    table:not(.fsa-table) & {
+      box-shadow: none;
+      padding-top: $size-small;
     }
 
   }
@@ -200,6 +221,12 @@ th {
 
   }
 
+  &--valign-top {}
+
+  &--valign-middle {}
+
+  &--valign-bottom {}
+
   &__sort {
 
     @include reset-button;
@@ -253,4 +280,19 @@ th {
 
   }
 
+}
+
+.fsa-table--valign-top th,
+.fsa-table--valign-top td {
+  vertical-align: top;
+}
+
+.fsa-table--valign-middle th,
+.fsa-table--valign-middle td {
+  vertical-align: middle;
+}
+
+.fsa-table--valign-bottom th,
+.fsa-table--valign-bottom td {
+  vertical-align: bottom;
 }
