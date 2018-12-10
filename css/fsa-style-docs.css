@@ -1,6 +1,7 @@
-/*! FSA Style v2.1.5 | http://usda-fsa.github.io/fsa-design-system/ */
+/*! FSA Style v2.1.6 | http://usda-fsa.github.io/fsa-design-system/ */
 
 
+@charset "UTF-8";
 html {
   box-sizing: border-box;
 }
@@ -687,6 +688,14 @@ html:hover body::before {
   padding: 2.4rem 0;
 }
 
+.docs__vis-demo-hidden {
+  -webkit-filter: grayscale(100);
+          filter: grayscale(100);
+  opacity: .5;
+  outline: 3px dotted rgba(0, 0, 0, 0.1);
+  outline-offset: 2px;
+}
+
 .fsa-checkerboard {
   background-color: rgba(0, 0, 0, 0.1);
   overflow: auto;
@@ -872,6 +881,178 @@ html:hover body::before {
 [class*="lighter"] code,
 [class*="lightest"] code {
   color: #2f2c2a;
+}
+
+.docs__rwd-demo-block {
+  display: none;
+}
+
+@media (min-width: 54em) {
+  .docs__rwd-demo-block {
+    display: block;
+  }
+}
+
+.docs__rwd-embed-container {
+  padding: 19.2px;
+  padding: 1.2rem;
+  background-color: white;
+  border: 1px solid #dbdad9;
+}
+
+.docs__rwd-embed {
+  transition: all .23s ease-in-out;
+  border: 6.4px solid #ebebeb;
+  border: 0.4rem solid #ebebeb;
+  margin: auto;
+  position: relative;
+}
+
+.docs__rwd-embed--phone {
+  width: 340px;
+  height: 580px;
+  border-radius: 2.4rem;
+  border-width: 57.6px 12.8px;
+  border-width: 3.6rem 0.8rem;
+}
+
+.docs__rwd-embed--phone-big {
+  height: 330px;
+  width: 580px;
+  border-radius: 2.4rem;
+  border-width: 12.8px 57.6px;
+  border-width: 0.8rem 3.6rem;
+}
+
+.docs__rwd-embed--tablet {
+  width: 820px;
+  height: 1000px;
+  border-radius: 2.4rem;
+  border-width: 57.6px;
+  border-width: 3.6rem;
+}
+
+.docs__rwd-embed--desktop {
+  width: 100%;
+  height: 480px;
+  border-top-width: 76.8px;
+  border-top-width: 4.8rem;
+}
+
+.docs__rwd-embed--desktop:before {
+  content: '← →';
+  width: 86px;
+  top: -53px;
+  left: 19.2px;
+  left: 1.2rem;
+  position: absolute;
+  font-family: Consolas, "Bitstream Vera Sans Mono", "Consolas", "Menlo", "Monaco", "Courier New", "Courier", monospace;
+  font-size: 83.2px;
+  font-size: 5.2rem;
+  font-weight: 700;
+  color: #f8fafc;
+  line-height: 1;
+  transform: scaleX(0.8);
+  transform-origin: left;
+}
+
+.docs__rwd-embed--desktop:after {
+  content: '';
+  position: absolute;
+  top: -35px;
+  right: 12.8px;
+  right: 0.8rem;
+  height: 38.4px;
+  height: 2.4rem;
+  width: calc(100% - 110px);
+  background-color: #f8fafc;
+}
+
+.docs__rwd-iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.docs-highlight {
+  background-color: rgba(253, 184, 30, 0.3);
+}
+
+@media (max-width: 30.0625em) {
+  .docs-highlight\@xs, .docs-highlight\@xs-only {
+    background-color: rgba(253, 184, 30, 0.3);
+  }
+}
+
+@media (min-width: 30.0625em) {
+  .docs-highlight\@s {
+    background-color: rgba(253, 184, 30, 0.3);
+  }
+}
+
+@media screen and (max-width: 37.5em) and (min-width: 30.0625em) {
+  .docs-highlight\@s-only {
+    background-color: rgba(253, 184, 30, 0.3);
+  }
+}
+
+@media (min-width: 37.5em) {
+  .docs-highlight\@m {
+    background-color: rgba(253, 184, 30, 0.3);
+  }
+}
+
+@media screen and (max-width: 54em) and (min-width: 37.5em) {
+  .docs-highlight\@m-only {
+    background-color: rgba(253, 184, 30, 0.3);
+  }
+}
+
+@media (min-width: 54em) {
+  .docs-highlight\@l {
+    background-color: rgba(253, 184, 30, 0.3);
+  }
+}
+
+@media screen and (max-width: 78.75em) and (min-width: 54em) {
+  .docs-highlight\@l-only {
+    background-color: rgba(253, 184, 30, 0.3);
+  }
+}
+
+@media (min-width: 78.75em) {
+  .docs-highlight\@xl, .docs-highlight\@xl-only {
+    background-color: rgba(253, 184, 30, 0.3);
+  }
+}
+
+.docs__rwd-demo-icon {
+  border: solid #205493;
+  border-width: 3px 1px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 2px;
+  width: 11px;
+  height: 18px;
+  margin-left: 6.4px;
+  margin-left: 0.4rem;
+  margin-top: -2px;
+}
+
+.fsa-btn-group__item--active .docs__rwd-demo-icon {
+  border-color: white;
+}
+
+.docs__rwd-demo-icon--portrait {
+  width: 11px;
+  height: 18px;
+}
+
+.docs__rwd-demo-icon--landscape {
+  border-width: 1px 3px;
+  width: 19px;
+  height: 12px;
 }
 
 /* COLOR VALUE DUMP ********************************************************* */

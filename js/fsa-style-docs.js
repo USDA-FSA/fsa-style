@@ -10445,6 +10445,43 @@ console.log('DocsNav loaded, its JS is NOT to be used for Production, demo purpo
 // module.exports = DocsNav;
 
 },{"jquery":1}],4:[function(require,module,exports){
+var $ = window.jQuery = require('jquery');
+
+$('body').on('click', '[data-behavior~="toggle-rwd-size"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-target'));
+  var $newClass = $self.data('size');
+  var $component = $self.closest('[data-component]');
+
+  $target
+    .removeClass('docs__rwd-embed--phone docs__rwd-embed--phone-big docs__rwd-embed--tablet docs__rwd-embed--desktop')
+    .addClass('docs__rwd-embed--' + $newClass)
+  ;
+
+  $self
+    .addClass('fsa-btn-group__item--active')
+    .attr('aria-selected', true)
+    .siblings()
+    .removeClass('fsa-btn-group__item--active')
+    .removeAttr('aria-selected')
+  ;
+
+})
+
+$('body').on('change', '[data-behavior~="toggle-rwd-table"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.data('target'));
+  var $newClass = $self.val();
+
+  $target.toggleClass('fsa-table--responsive-horizontal');
+
+})
+
+console.log('DocsRWD loaded, its JS is NOT to be used for Production, demo purposes only');1
+
+},{"jquery":1}],5:[function(require,module,exports){
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
@@ -10574,7 +10611,7 @@ function growl__trapTab(e){
 
 console.log('GrowlComponent loaded, its JS is NOT to be used for Production, demo purposes only');
 
-},{"../utilities/helper":12,"./fsa-whiteout":10}],5:[function(require,module,exports){
+},{"../utilities/helper":13,"./fsa-whiteout":11}],6:[function(require,module,exports){
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
@@ -10697,7 +10734,7 @@ function modal__trapTab(e){
 
 console.log('ModalComponent loaded, its JS is NOT to be used for Production, demo purposes only');
 
-},{"../utilities/helper":12,"./fsa-whiteout":10}],6:[function(require,module,exports){
+},{"../utilities/helper":13,"./fsa-whiteout":11}],7:[function(require,module,exports){
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
@@ -10780,7 +10817,7 @@ if (document.querySelectorAll('.docs__page').length == 0) {
 
 }
 
-},{"../utilities/helper":12}],7:[function(require,module,exports){
+},{"../utilities/helper":13}],8:[function(require,module,exports){
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
@@ -10872,7 +10909,7 @@ selectMulti__setState();
 
 console.log('SelectMultipleComponent loaded, its JS is NOT to be used for Production, demo purposes only');
 
-},{"../utilities/helper":12}],8:[function(require,module,exports){
+},{"../utilities/helper":13}],9:[function(require,module,exports){
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
@@ -10930,7 +10967,7 @@ Helper.forEach(spinbox__triggers, function (index, value) {
 
 console.log('Spinbox loaded, its JS is NOT to be used for Production, demo purposes only');
 
-},{"../utilities/helper":12}],9:[function(require,module,exports){
+},{"../utilities/helper":13}],10:[function(require,module,exports){
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
@@ -10991,7 +11028,7 @@ if(steppedControl__elements.length){
 
 console.log('SteppedControl loaded, its JS is NOT to be used for Production, demo purposes only');
 
-},{"../utilities/helper":12}],10:[function(require,module,exports){
+},{"../utilities/helper":13}],11:[function(require,module,exports){
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
@@ -11026,7 +11063,7 @@ Helper.forEach(whiteout__dismiss, function (index, value) {
 
 console.log('WhiteoutComponent loaded, its JS is NOT to be used for Production, demo purposes only');
 
-},{"../utilities/helper":12}],11:[function(require,module,exports){
+},{"../utilities/helper":13}],12:[function(require,module,exports){
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
@@ -11042,6 +11079,7 @@ console.log('WhiteoutComponent loaded, its JS is NOT to be used for Production, 
 
 var DocsNav = require('./components/docs-nav');
 var DocsColor = require('./components/docs-color');
+var DocsRWD = require('./components/docs-rwd');
 var NavGlobalComponent = require('./components/fsa-nav-global');
 var ModalComponent = require('./components/fsa-modal');
 var GrowlComponent = require('./components/fsa-growl');
@@ -11049,7 +11087,7 @@ var SelectMultipleComponent = require('./components/fsa-select-multi');
 var SteppedControlComponent = require('./components/fsa-stepped-control');
 var SpinboxComponent = require('./components/fsa-spinbox');
 
-},{"./components/docs-color":2,"./components/docs-nav":3,"./components/fsa-growl":4,"./components/fsa-modal":5,"./components/fsa-nav-global":6,"./components/fsa-select-multi":7,"./components/fsa-spinbox":8,"./components/fsa-stepped-control":9}],12:[function(require,module,exports){
+},{"./components/docs-color":2,"./components/docs-nav":3,"./components/docs-rwd":4,"./components/fsa-growl":5,"./components/fsa-modal":6,"./components/fsa-nav-global":7,"./components/fsa-select-multi":8,"./components/fsa-spinbox":9,"./components/fsa-stepped-control":10}],13:[function(require,module,exports){
 
 var Helper = (function () {
 
@@ -11153,4 +11191,4 @@ var Helper = (function () {
 
 module.exports = Helper;
 
-},{}]},{},[11]);
+},{}]},{},[12]);
