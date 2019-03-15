@@ -262,12 +262,12 @@ th {
       opacity: 1;
     }
 
-    &--descending:after {
+    &--ascending:after {
       background-image: url('#{$image-path}/chevron-up.png');
       background-image: url('#{$image-path}/chevron-up.svg');
     }
 
-    &--ascending:after {
+    &--descending:after {
       background-image: url('#{$image-path}/chevron-down.png');
       background-image: url('#{$image-path}/chevron-down.svg');
     }
