@@ -2106,6 +2106,30 @@
             </select>
             <span class="fsa-field__help">Where does your loyalty lie?</span>
           </div>
+          <div class="fsa-field fsa-field--columns">
+            <span class="fsa-field__label">Date</span>
+            <div class="fsa-grid">
+              <div class="fsa-grid__auto">
+                <div class="fsa-field__column">
+                  <label class="fsa-field__help" for="date__month_98">Month</label>
+                  <input class="fsa-input fsa-input--block" id="date__month_98" name="date__month_98" type="number" pattern="0?[1-9]|1[012]" min="1" max="12" value="" aria-describedby="lorem-1234-help-88">
+                </div>
+              </div>
+              <div class="fsa-grid__auto">
+                <div class="fsa-field__column">
+                  <label class="fsa-field__help" for="date__day_98">Day</label>
+                  <input class="fsa-input fsa-input--block" id="date__day_98" name="day" type="number" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" min="1" max="31" value="" aria-describedby="lorem-1234-help-88">
+                </div>
+              </div>
+              <div class="fsa-grid__auto">
+                <div class="fsa-field__column">
+                  <label class="fsa-field__help" for="date__year_98">Year</label>
+                  <input class="fsa-input fsa-input--block" id="date__year_98" name="year" type="number" pattern="[0-9]{4}" min="1900" max="2050" value="" aria-describedby="lorem-1234-help-88">
+                </div>
+              </div>
+            </div>
+            <span class="fsa-field__help" id="lorem-1234-help-88">For example: 04 28 2017</span>
+          </div>
           <h4 class="docs__sub_style">Sizes</h4>
           <div class="fsa-field">
             <label class="fsa-field__label" for="lorem-00084">Default</label>
@@ -2123,16 +2147,12 @@
             <label class="fsa-field__label" for="lorem-7789">Full width</label>
             <input class="fsa-input fsa-field__item" id="lorem-7789" name="lorem-7789" type="text" value="">
           </div>
-          <h4 class="docs__sub_style">States</h4>
+          <h4 class="docs__sub_style">Error States</h4>
           <div class="fsa-field fsa-field--error">
             <label class="fsa-field__label" for="lorem-7650">Error label <span class="fsa-field__label-desc">Required</span></label>
             <input class="fsa-input fsa-field__item fsa-input--error" aria-describedby="lorem-7650--message" id="lorem-7650" name="lorem-7650" type="text" value="" aria-required="true">
             <span class="fsa-field__help">This is how people can contact you</span>
             <span class="fsa-field__message" id="lorem-7650--message" role="alert">Helpful error message</span>
-          </div>
-          <div class="fsa-field">
-            <label class="fsa-field__label" for="lorem-4780">Positive label</label>
-            <input class="fsa-input fsa-input--positive fsa-field__item" id="lorem-4780" name="lorem-4780" type="text" value="">
           </div>
           <div class="fsa-field fsa-field--columns fsa-field--error">
             <div class="fsa-grid">
@@ -2203,6 +2223,31 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="fsa-field fsa-field--error fsa-field--columns">
+            <span class="fsa-field__label">Date</span>
+            <div class="fsa-grid">
+              <div class="fsa-grid__auto">
+                <div class="fsa-field__column">
+                  <label class="fsa-field__help" for="date__month_9zz8">Month</label>
+                  <input class="fsa-input fsa-input--error fsa-input--block" id="date__month_9zz8" name="date__month_9zz8" type="number" pattern="0?[1-9]|1[012]" min="1" max="12" value="13" aria-describedby="lorem-1234-help-8zz8 lorem-1234-message-8zz8">
+                </div>
+              </div>
+              <div class="fsa-grid__auto">
+                <div class="fsa-field__column">
+                  <label class="fsa-field__help" for="date__day_98zz">Day</label>
+                  <input class="fsa-input fsa-input--block" id="date__day_9zz8" name="day" type="number" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" min="1" max="31" value="14" aria-describedby="lorem-1234-help-8zz8">
+                </div>
+              </div>
+              <div class="fsa-grid__auto">
+                <div class="fsa-field__column">
+                  <label class="fsa-field__help" for="date__year_9zz8">Year</label>
+                  <input class="fsa-input fsa-input--block" id="date__year_9zz8" name="year" type="number" pattern="[0-9]{4}" min="1900" max="2050" value="1975" aria-describedby="lorem-1234-help-8zz8">
+                </div>
+              </div>
+            </div>
+            <span class="fsa-field__help" id="lorem-1234-help-8zz8">For example: 04 28 2017</span>
+            <span class="fsa-field__message" id="lorem-1234-message-8zz8" role="alert">Please enter a valid Month number</span>
           </div>
           <h4 class="docs__sub_style">Columns</h4>
           <p class="docs__code-sample"><code>fsa-field fsa-field--block <strong>fsa-field--columns</strong></code></p>
@@ -3793,7 +3838,6 @@
                 </tr>
               </tbody>
             </table>
-
             <table>
               <thead>
                 <tr>
