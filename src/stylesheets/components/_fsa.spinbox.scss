@@ -51,7 +51,8 @@
 
   &__input {
 
-    & {
+    &,
+    &[size] {
       display: block;
       width: 100%;
       appearance: initial;
