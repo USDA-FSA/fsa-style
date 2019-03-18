@@ -66,7 +66,7 @@
 
     // we actually don't want this to be used, but this style supports
     // it just in case. designers and developers should be
-    // encouraged to use alternate solution, e.g. multiple checkboxes
+    // encouraged to use alternate solution, e.g. multiple checkboxes ala .fsa-select-multi
     height: auto;
     background-image: none;
     padding: 0;
@@ -142,6 +142,5 @@
     border: 0;
     background-color: transparent;
   }
-
 
 }

@@ -9,9 +9,9 @@
   & {
     // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
     padding:
-    ($form-padding - .1rem) // to achieve vertical alignment
-    ($form-padding)
-    ($form-padding)
+      ($form-padding - .1rem) // to achieve vertical alignment
+      ($form-padding)
+      ($form-padding)
     ;
   }
 
@@ -74,6 +74,12 @@
     padding-left: $form-padding + $size-base;
   }
 
+}
+
+.fsa-input {
+  &[size] {
+    width: auto;
+  }
 }
 
 .fsa-textarea {
