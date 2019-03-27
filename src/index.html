@@ -2130,24 +2130,24 @@
             <span class="fsa-field__help">Where does your loyalty lie?</span>
           </div>
           <div class="fsa-field fsa-field--columns">
-            <span class="fsa-field__label" aria-describedby="lorem-1234-help-88">Date</span>
+            <span class="fsa-field__label">Date</span>
             <div class="fsa-grid">
               <div class="fsa-grid__auto">
                 <div class="fsa-field__column">
                   <label class="fsa-field__help" for="date__month_98">Month</label>
-                  <input class="fsa-input fsa-input--block" id="date__month_98" name="date__month_98" type="number" pattern="0?[1-9]|1[012]" min="1" max="12" value="" aria-describedby="lorem-1234-help-88">
+                  <input placeholder="mm" class="fsa-input fsa-input--block" id="date__month_98" name="date__month_98" type="number" pattern="0?[1-9]|1[012]" min="1" max="12" value="" aria-describedby="lorem-1234-help-88">
                 </div>
               </div>
               <div class="fsa-grid__auto">
                 <div class="fsa-field__column">
                   <label class="fsa-field__help" for="date__day_98">Day</label>
-                  <input class="fsa-input fsa-input--block" id="date__day_98" name="day" type="number" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" min="1" max="31" value="" aria-describedby="lorem-1234-help-88">
+                  <input placeholder="dd" class="fsa-input fsa-input--block" id="date__day_98" name="day" type="number" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" min="1" max="31" value="" aria-describedby="lorem-1234-help-88">
                 </div>
               </div>
               <div class="fsa-grid__auto">
                 <div class="fsa-field__column">
                   <label class="fsa-field__help" for="date__year_98">Year</label>
-                  <input class="fsa-input fsa-input--block" id="date__year_98" name="year" type="number" pattern="[0-9]{4}" min="1900" max="2050" value="" aria-describedby="lorem-1234-help-88">
+                  <input placeholder="yyyy" class="fsa-input fsa-input--block" id="date__year_98" name="year" type="number" pattern="[0-9]{4}" min="1900" max="2050" value="" aria-describedby="lorem-1234-help-88">
                 </div>
               </div>
             </div>
@@ -2158,16 +2158,19 @@
             <input class="fsa-input fsa-field__item" id="lorem-7789" name="lorem-7789" type="text" value="">
           </div>
           <h4 class="docs__sub_style">Custom text input width</h4>
-          <p>The width of this component's <code>input</code> element is 100% of the parent container ( in this case, <code>.fsa-field</code> ). Though it should rarely be necessary, it can be overridden by using the <code>size</code> attribute.</p>
+          <p>The width of this component's <code>&lt;input type="text"&gt;</code> element spans the full width of its parent container (e.g., <code>.fsa-field</code>). Though it should <strong>rarely</strong> be necessary, it can be overridden by using the <code>size</code> attribute.</p>
           <p><code>size</code> specifies the width of the input in characters. From a display perspective, one character is equivalent to <code>1em</code> (approximately <code>17px</code> in with <code>fsa-style</code>'s typography system).</p>
+          <p class="docs__code-sample"><code>&lt;input .... size=<strong>"4"</strong>&gt;</code></p>
           <div class="fsa-field">
             <label class="fsa-field__label" for="lorem-0128">Label</label>
             <input class="fsa-input fsa-field__item" id="lorem-0128" name="lorem-0128" type="text" value="" size="4">
           </div>
+          <p class="docs__code-sample"><code>&lt;input .... size=<strong>"7"</strong>&gt;</code></p>
           <div class="fsa-field">
             <label class="fsa-field__label" for="lorem-0128">Label</label>
             <input class="fsa-input fsa-field__item" id="lorem-0128" name="lorem-0128" type="text" value="" size="7">
           </div>
+          <p class="docs__code-sample"><code>&lt;input .... size=<strong>"20"</strong>&gt;</code></p>
           <div class="fsa-field">
             <label class="fsa-field__label" for="lorem-6719">Label</label>
             <input class="fsa-input fsa-input--block fsa-field__item" id="lorem-6719" name="lorem-6719" type="text" value="" size="20">
