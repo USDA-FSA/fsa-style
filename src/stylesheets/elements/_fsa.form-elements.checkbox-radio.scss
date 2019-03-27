@@ -29,6 +29,23 @@
   opacity: 0;
   cursor: pointer;
 
+  &__other {
+    // margin-left: 1.7em;
+    margin-top: .5em;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .46s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+
+    .fsa-radio:checked ~ &,
+    .fsa-checkbox:checked ~ & {
+      visibility: visible;
+      max-height: ($size-base * 38);
+      opacity: 1;
+    }
+  }
+
   .lt-ie9 & {
     border: 0;
     float: left;
@@ -170,7 +187,7 @@
 
 .fsa-checkbox:focus + label::before,
 .fsa-checkbox:focus + [type="hidden"] + label::before {
-  box-shadow: 0 0 0 1px $color-white, 0 0 0 3px $form-checkbox-radio-fill;
+  box-shadow: 0 0 0 1px $color-white, 0 0 1px 3px $form-focus-color;
 }
 
 .fsa-checkbox:disabled + label,
