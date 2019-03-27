@@ -74,6 +74,10 @@ pre {
 // scss-lint:disable QualifyingElement
 abbr[title] {
   cursor: default;
+  text-decoration: none;
+  a & {
+    cursor: pointer;
+  }
 }
 
 // scss-lint:disable QualifyingElement PlaceholderInExtend
