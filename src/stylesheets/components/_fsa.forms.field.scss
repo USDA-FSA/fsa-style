@@ -22,7 +22,7 @@
       content: '';
       position: absolute;
       top: 4px;
-      left: -12px;
+      left: -1em;
       bottom: 6px;
       width: 4px;
       background-color: transparent;
@@ -33,7 +33,13 @@
   // Children ------------------------------------------------------------------
 
   &__label {
+
     display: block;
+
+    .fsa-field--error & {
+      font-weight: $font-bold;
+    }
+
   }
 
   &__label-desc {
