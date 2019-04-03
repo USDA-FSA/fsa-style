@@ -4,8 +4,6 @@
 //************************************************************************//
 
 @mixin background-image($images...) {
-  @include _bourbon-deprecate-for-prefixing("background-image");
-
   $webkit-images: ();
   $spec-images: ();
 

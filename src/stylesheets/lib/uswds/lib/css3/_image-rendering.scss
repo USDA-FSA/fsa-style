@@ -1,5 +1,4 @@
 @mixin image-rendering ($mode:auto) {
-  @include _bourbon-deprecate-for-prefixing("image-rendering");
 
   @if ($mode == crisp-edges) {
     -ms-interpolation-mode: nearest-neighbor; // IE8+
