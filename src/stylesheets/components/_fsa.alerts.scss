@@ -4,8 +4,14 @@
 
   & {
     @extend .usa-alert;
+    padding: 1em;
     margin-bottom: 1.5em;
     border-left: $size-base solid $color-fsa-tertiary-900;
+    background-position: 1rem 2rem;
+  }
+
+  &::before {
+    display: none;
   }
 
   // Variations ---------------------------------------------------------------
@@ -35,7 +41,7 @@
 
   &--no-icon {
     @extend .usa-alert-no_icon;
-    padding: 0 $size-small;
+    padding: $size-small;
   }
 
   // Elements
@@ -65,7 +71,7 @@
 
     .fsa-alert--no-icon & {
       @include font-size(3);
-      margin-top: $size-small;
+      margin-top: $size-base;
       margin-bottom: 0;
     }
 
@@ -73,8 +79,14 @@
 
   &__text {
     @extend .usa-alert-text;
+    &:only-child {
+      margin-top: .5em;
+    }
     .fsa-alert--no-icon & {
       margin: 0;
+    }
+    .fsa-alert--no-icon &:only-child {
+      padding-top: 0;
     }
   }
 
