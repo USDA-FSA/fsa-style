@@ -71,17 +71,18 @@ $color-fsa-site-bg: tint($color-fsa-secondary, 97%); // Super light gray bg, but
 // ---------------------------------------------------------------------------
 // Typography
 
-$h1-font-size: rem(42px);
 
 // Font Size Scale
-$font-size-0 : $h6-font-size;    // 13px
-$font-size-1 : $small-font-size; // 14px
-$font-size-2 : $h5-font-size;    // 15px
-$font-size-3 : $base-font-size;  // 17px
-$font-size-4 : $h3-font-size;    // 20px
-$font-size-5 : $h2-font-size;    // 30px
-$font-size-6 : $h1-font-size;    // 42px
-$font-size-7 : $title-font-size; // 52px
+$font-size-0 : $h6-font-size;           // 13px
+$font-size-1 : $small-font-size;        // 14px
+$font-size-2 : $h5-font-size;           // 15px
+$font-size-3 : $base-font-size;         // 17px
+$font-size-4 : $h3-font-size;           // 20px
+$font-size-5 : $h2-font-size;           // 30px
+$font-size-6 : ($h1-font-size + .2rem); // 42px
+$font-size-7 : $title-font-size;        // 52px
+
+$h1-font-size: $font-size-6;
 
 $lead-font-size: ($font-size-5 - .3rem);
 $lead-line-height: 1.3;
