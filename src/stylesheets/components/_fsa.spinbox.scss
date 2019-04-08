@@ -133,6 +133,11 @@
       background-size: 45%;
       background-repeat: no-repeat;
       background-position: 50%;
+
+      &:focus {
+        outline: 0 !important;
+      }
+
     }
 
     // scss-lint:disable SelectorFormat
