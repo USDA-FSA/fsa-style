@@ -78,6 +78,10 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
         color: $color-fsa-link-hover;
       }
 
+      &:focus {
+        outline-offset: -4px;
+      }
+
       .docs__figure:hover &,
       .docs__figure-group:hover & {
         opacity: 1;
@@ -235,6 +239,10 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
         color: $color-fsa-white;
       }
 
+      &::focus {
+        z-index: 1;
+      }
+
     }
 
     &-sub {
@@ -293,6 +301,10 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
       &:hover {
         text-decoration: underline;
+      }
+
+      &:focus {
+        outline-offset: -3px;
       }
 
     }
