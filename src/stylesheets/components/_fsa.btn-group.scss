@@ -49,6 +49,8 @@
     &:focus:not([disabled]),
     &:active:not([disabled]) {
       background-color: $color-fsa-tertiary;
+      z-index: 1;
+      // outline-offset: -4px;
     }
 
     &:active:not([disabled]),

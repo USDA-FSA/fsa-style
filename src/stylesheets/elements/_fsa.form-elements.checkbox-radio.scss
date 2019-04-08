@@ -160,12 +160,9 @@
 
 .fsa-radio:focus + label::before,
 .fsa-radio:focus + [type="hidden"] +  label::before {
-  // scss-lint:disable all
   box-shadow:
-    0 0 0 .2rem $color-white,
-    0 0 0 .4rem $form-checkbox-radio-fill,
-    0 0 .3rem .4rem $color-focus,
-    0 0 .7rem .4rem $color-focus
+    0 0 0 3px $color-white,
+    0 0 0 6px $color-focus
   ;
 }
 
@@ -187,7 +184,8 @@
 
 .fsa-checkbox:focus + label::before,
 .fsa-checkbox:focus + [type="hidden"] + label::before {
-  box-shadow: 0 0 0 1px $color-white, 0 0 1px 3px $form-focus-color;
+  @include fsa-focus;
+  outline-offset: 4px;
 }
 
 .fsa-checkbox:disabled + label,

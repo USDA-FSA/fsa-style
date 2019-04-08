@@ -379,7 +379,7 @@ $breakpoints: (
     &:focus {
       border-color: inherit;
       box-shadow: none;
-      outline: 0;
+      // outline: 0;
     }
 
   }
@@ -413,6 +413,12 @@ $breakpoints: (
   text-overflow: ellipsis;
   white-space: nowrap;
   word-wrap: normal;
+}
+
+// -----------------------------------------------------------------------------
+// :focus'ing
+@mixin fsa-focus {
+  outline: 3px solid $color-focus;
 }
 
 // -----------------------------------------------------------------------------

@@ -1,6 +1,4 @@
 @mixin border-image($borders...) {
-  @include _bourbon-deprecate-for-prefixing("border-image");
-
   $webkit-borders: ();
   $spec-borders: ();
 
