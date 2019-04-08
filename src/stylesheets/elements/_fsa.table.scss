@@ -240,6 +240,7 @@ th {
     &:focus,
     &:hover {
       color: $color-fsa-tertiary-900;
+      outline-offset: 4px;
     }
 
     &:after {
