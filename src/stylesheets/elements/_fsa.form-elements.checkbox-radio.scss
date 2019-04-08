@@ -160,9 +160,6 @@
 
 .fsa-radio:focus + label::before,
 .fsa-radio:focus + [type="hidden"] +  label::before {
-  // outline: 3px solid $color-focus;
-  // outline-offset: 5px;
-  // scss-lint:disable all
   box-shadow:
     0 0 0 3px $color-white,
     0 0 0 6px $color-focus
@@ -187,7 +184,7 @@
 
 .fsa-checkbox:focus + label::before,
 .fsa-checkbox:focus + [type="hidden"] + label::before {
-  outline: 3px solid $color-focus;
+  @include fsa-focus;
   outline-offset: 4px;
 }
 

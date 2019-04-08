@@ -144,5 +144,5 @@ iframe:focus,
 input:not([disabled]):focus,
 select:not([disabled]):focus,
 textarea:not([disabled]):focus {
-  outline: 3px solid $color-focus;
+  @include fsa-focus;
 }

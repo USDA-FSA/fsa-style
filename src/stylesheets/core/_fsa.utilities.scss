@@ -416,6 +416,12 @@ $breakpoints: (
 }
 
 // -----------------------------------------------------------------------------
+// :focus'ing
+@mixin fsa-focus {
+  outline: 3px solid $color-focus;
+}
+
+// -----------------------------------------------------------------------------
 // Overflow Gradient: show edge gradient on left or right depending on scroll position
 
 @mixin overflow-gradient(

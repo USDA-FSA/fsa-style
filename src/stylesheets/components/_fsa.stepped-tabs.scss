@@ -227,7 +227,7 @@
     vertical-align: middle;
 
     .fsa-stepped-tabs__label:focus & {
-      outline: 3px solid $color-focus;
+      @include fsa-focus;
     }
 
     @include breakpoint(L) {
