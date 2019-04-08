@@ -110,7 +110,7 @@ $form-text-color               : $color-fsa-base;
 $form-text-color-disabled      : tint($form-text-color, 40%);
 $form-placeholder-color        : tint($form-text-color, 63%);
 $form-outline-color            : tint($color-fsa-tertiary, 70%);
-$form-focus-color              : $color-fsa-aqua;
+$form-focus-color              : #009afa;
 $color-focus                   : $form-focus-color;
 
 $form-error-color              : $color-fsa-red;

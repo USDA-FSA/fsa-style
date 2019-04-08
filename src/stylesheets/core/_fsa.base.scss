@@ -31,7 +31,8 @@ body {
   }
 }
 
-main:focus {
+main:focus,
+main[tabindex]:focus {
   outline: 0;
 }
 
@@ -133,4 +134,15 @@ fieldset {
 
 fieldset[disabled] {
   opacity: .6;
+}
+
+[contentEditable=true]:focus,
+[href]:focus,
+[tabindex]:focus,
+button:not([disabled]):focus,
+iframe:focus,
+input:not([disabled]):focus,
+select:not([disabled]):focus,
+textarea:not([disabled]):focus {
+  outline: 3px solid $color-focus;
 }
