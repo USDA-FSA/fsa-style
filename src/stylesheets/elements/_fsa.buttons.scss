@@ -116,6 +116,7 @@ $button-flat-border-width: 1px;
       color: $button-text;
       background-color: $button-default-active;
       box-shadow: none;
+      outline-offset: 3px;
     }
 
     &[disabled] {
