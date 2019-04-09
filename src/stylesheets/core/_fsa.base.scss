@@ -12,6 +12,18 @@ html {
   scroll-behavior: smooth;
 }
 
+html { // http://bit.ly/1qk2tVR
+  box-sizing: border-box;
+}
+
+* {
+  &,
+  &::after,
+  &::before {
+    box-sizing: inherit;
+  }
+}
+
 body {
 
   overflow-x: initial;
