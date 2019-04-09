@@ -3,6 +3,14 @@
 
 // scss-lint:disable PropertySpelling
 
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
 @mixin fsa-grid-row() {
   letter-spacing: -.31em;
   *letter-spacing: normal;
