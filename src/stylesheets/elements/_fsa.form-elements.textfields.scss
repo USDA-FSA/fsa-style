@@ -133,6 +133,14 @@
   border-radius: 2rem;
 }
 
+// ::-ms-fill-lower:   The track portion underneath / before the handle.
+// ::-ms-fill-upper:   The track portion above / after the handle.
+// ::-ms-ticks-before: An area above / before the range track with tick marks.
+// ::-ms-ticks-after:  An area below / after the range track with tick marks.
+// ::-ms-thumb:        The handle.
+// ::-ms-track:        The range track itself.
+// ::ms-tooltip:       The tooltip that appears when the user is selecting a value with the range selector. Note that this element cannot be styled, only hidden using
+
 .fsa-input[type=range],
 [type=range] {
   background-color: transparent;
@@ -206,6 +214,47 @@
 ////////////////////////////////////////////////////////////////////////
 // File (Upload)
 
+@mixin file-upload-button() {
+  appearance: none;
+  font-size: $font-size-0;
+  background-color: #fff;
+  border: 0;
+  box-shadow: 0 0 0 1px $button-default inset;
+  padding: ($size-base + .1rem) $size-small $size-base;
+  color: $button-default;
+  border-radius: $button-border-radius;
+  margin-right: $size-small;
+}
+
 // File input type
 [type='file'] {
+
+  height: auto;
+  font-size: $font-size-1;
+  display: flex;
+  flex-direction: row-reverse;
+  padding-top: 8px;
+
+  &:not(.fsa-input) {
+    background-color: transparent;
+  }
+
+  &::-ms-value {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+  }
+
+  &::-ms-browse {
+    @include file-upload-button;
+    border-radius: 0;
+  }
+
+  &::-webkit-file-upload-button {
+    @include file-upload-button;
+  }
+
 }
+
+
