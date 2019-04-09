@@ -158,6 +158,8 @@
 
     &::-ms-thumb {
       @include range-focus;
+      background-color: $color-focus;
+      border: 0;
     }
   }
 
@@ -185,6 +187,11 @@
 
   &::-ms-thumb {
     @include range-thumb;
+    box-shadow: none;
+    width: $size-default;
+    border: 0;
+    border-radius: 0;
+    background-color: $color-fsa-tertiary;
   }
 
   &::-ms-fill-lower {
@@ -201,6 +208,4 @@
 
 // File input type
 [type='file'] {
-  border: none;
-  padding-left: 0;
 }
