@@ -4,6 +4,7 @@
 .fsa-select {
 
   & {
+
     @include fsa-shared-form-properties();
 
     background-image: url('#{$image-path}/arrow-down.png');
@@ -24,32 +25,37 @@
     vertical-align: middle;
     position: relative;
     top: -.1rem;
-  }
 
-  @supports (-webkit-appearance: none) {
-    /* Webkit only */
-    // yep, a SINGLE pixel bugged me enough to do this
-    padding-top: $form-padding - .1rem;
-  }
-
-  @supports (-moz-appearance: none) {
-    padding-top: $form-padding - .2rem;
-  }
-
-  // IE 10 +
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-
-    // IE doesn't like the extra padding on right.
-    // padding-right: $form-padding / 2;
-
-    // IE 10+ doesn't like the SVG for select arrows
-    background-image: url('#{$image-path}/arrow-down.png');
-
-    // Equivalent of select { appearance: none; }
-    &::-ms-expand {
-      display: none;
+    @supports (-webkit-appearance: none) {
+      /* Webkit only */
+      // yep, a SINGLE pixel bugged me enough to do this
+      padding-top: $form-padding - .1rem;
     }
 
+    @supports (-moz-appearance: none) {
+      padding-top: $form-padding - .2rem;
+    }
+
+    // IE 10 +
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+      // IE doesn't like the extra padding on right.
+      // padding-right: $form-padding / 2;
+
+      // IE 10+ doesn't like the SVG for select arrows
+      background-image: url('#{$image-path}/arrow-down.png');
+
+      // Equivalent of select { appearance: none; }
+      &::-ms-expand {
+        display: none;
+      }
+
+    }
+
+  }
+
+  &__other {
+    margin-top: $size-base;
   }
 
   &:focus {
@@ -66,7 +72,7 @@
 
     // we actually don't want this to be used, but this style supports
     // it just in case. designers and developers should be
-    // encouraged to use alternate solution, e.g. multiple checkboxes
+    // encouraged to use alternate solution, e.g. multiple checkboxes ala .fsa-select-multi
     height: auto;
     background-image: none;
     padding: 0;
@@ -142,6 +148,5 @@
     border: 0;
     background-color: transparent;
   }
-
 
 }

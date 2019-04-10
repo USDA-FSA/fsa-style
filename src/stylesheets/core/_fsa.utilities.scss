@@ -3,6 +3,14 @@
 
 // scss-lint:disable PropertySpelling
 
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
 @mixin fsa-grid-row() {
   letter-spacing: -.31em;
   *letter-spacing: normal;
@@ -337,7 +345,9 @@ $breakpoints: (
 @mixin fsa-space-between() {
   // scss-lint:disable UnnecessaryParentReference
   & + .fsa-select,
-  & + .form-text,
+  & + .fsa-input,
+  & + .fsa-btn-group,
+  & + span.fsa-spinbox,
   & + .fsa-btn {
     margin-left: $form-between-space;
   }
@@ -379,7 +389,7 @@ $breakpoints: (
     &:focus {
       border-color: inherit;
       box-shadow: none;
-      outline: 0;
+      // outline: 0;
     }
 
   }
@@ -413,6 +423,12 @@ $breakpoints: (
   text-overflow: ellipsis;
   white-space: nowrap;
   word-wrap: normal;
+}
+
+// -----------------------------------------------------------------------------
+// :focus'ing
+@mixin fsa-focus {
+  outline: 3px solid $color-focus;
 }
 
 // -----------------------------------------------------------------------------
@@ -523,6 +539,10 @@ $breakpoints: (
 
   @elseif $variation == '2' {
     @include h2(); // from USWDS mixins
+    .fsa-text--h1 + &,
+    h1 + & {
+      margin-top: .5em;
+    }
   }
 
   @elseif $variation == '3' {

@@ -3,7 +3,7 @@
   $colorComplete: $color-fsa-secondary-300;
   $colorActive: $color-fsa-secondary;
   $colorFuture: $color-fsa-secondary-100;
-  $colorFutureText: transparentize($color-fsa-base, .5); // $color-fsa-secondary-900
+  $colorFutureText: transparentize($color-fsa-base, .3); // $color-fsa-secondary-900
   $colorDark: $color-fsa-secondary-900;
   $labelPadding: $size-small;
 
@@ -55,6 +55,10 @@
       color: $color-fsa-base;
       position: relative;
       font-size: $font-size-0;
+    }
+
+    &:focus {
+      outline: 0 !important;
     }
 
     @include breakpoint(M) {
@@ -136,7 +140,7 @@
       &:focus,
       &:hover {
         &:not(span,div) {
-          outline: 0;
+          // outline: 0;
           background-color: $colorDark;
         }
       }
@@ -182,7 +186,7 @@
 
     }
 
-    &:not(span, div) {
+    &:not(span) {
       cursor: pointer;
     }
 
@@ -221,6 +225,10 @@
     max-width: 90%;
     display: inline-block;
     vertical-align: middle;
+
+    .fsa-stepped-tabs__label:focus & {
+      @include fsa-focus;
+    }
 
     @include breakpoint(L) {
       max-width: 75%;

@@ -12,6 +12,18 @@ html {
   scroll-behavior: smooth;
 }
 
+html { // http://bit.ly/1qk2tVR
+  box-sizing: border-box;
+}
+
+* {
+  &,
+  &::after,
+  &::before {
+    box-sizing: inherit;
+  }
+}
+
 body {
 
   overflow-x: initial;
@@ -31,7 +43,8 @@ body {
   }
 }
 
-main:focus {
+main:focus,
+main[tabindex]:focus {
   outline: 0;
 }
 
@@ -74,6 +87,10 @@ pre {
 // scss-lint:disable QualifyingElement
 abbr[title] {
   cursor: default;
+  text-decoration: none;
+  a & {
+    cursor: pointer;
+  }
 }
 
 // scss-lint:disable QualifyingElement PlaceholderInExtend
@@ -129,4 +146,15 @@ fieldset {
 
 fieldset[disabled] {
   opacity: .6;
+}
+
+[contentEditable=true]:focus,
+[href]:focus,
+[tabindex]:focus,
+button:not([disabled]):focus,
+iframe:focus,
+input:not([disabled]):focus,
+select:not([disabled]):focus,
+textarea:not([disabled]):focus {
+  @include fsa-focus;
 }

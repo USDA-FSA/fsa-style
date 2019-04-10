@@ -22,6 +22,10 @@
 
   }
 
+  & + & {
+    margin: 1em 0;
+  }
+
   &--light {
     @include overflow-gradient( $bgAll: #ffffff, $bgShadow: $color-fsa-tertiary-100 );
   }
@@ -108,7 +112,7 @@
     &[type] {
       &:focus {
         box-shadow: none;
-        outline: none;
+        // outline: none;
       }
     }
 
@@ -142,6 +146,7 @@
 
     &:focus {
       box-shadow: none;
+      outline-offset: -3px;
     }
 
     &--small {
@@ -211,8 +216,10 @@
 
 }
 
-.fsa-content-tabs__label:hover .fsa-content-tabs__label-text,
-.fsa-content-tabs__label:focus .fsa-content-tabs__label-text {
-  outline: none;
+.fsa-content-tabs__label:hover .fsa-content-tabs__label-text {
   box-shadow: 0 (-$size-base) 0 0 $color-fsa-tertiary-300 inset;
+}
+
+.fsa-content-tabs__label:focus .fsa-content-tabs__label-text {
+  box-shadow: 0 (-($size-base - .1rem)) 0 0 $color-focus inset;
 }

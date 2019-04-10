@@ -135,6 +135,7 @@ a.fsa-badge {
   &:active {
     color: $badge-text-color;
     background-color: $color-fsa-aqua-900;
+    outline-offset: 3px;
   }
 
 }

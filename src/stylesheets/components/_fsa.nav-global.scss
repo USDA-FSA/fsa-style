@@ -159,6 +159,8 @@
     &:hover,
     &:focus {
 
+      outline-offset: -2px;
+
       .fsa-nav-global__text {
         box-shadow: 0 (-($nav-spacing-unit / 3) / 2) 0 0 $nav-text-color inset;
       }
@@ -201,10 +203,6 @@
         @include breakpoint(L) {
           box-shadow: 0 (-($nav-spacing-unit / 3)) 0 0 $nav-highlight-text-color-strong inset;
         }
-      }
-
-      &:focus {
-        outline: 0;
       }
 
     }
@@ -387,6 +385,7 @@
     &:focus {
       color: $text-color-highlight;
       text-decoration: underline;
+      outline-offset: -3px;
     }
 
   }

@@ -22,8 +22,6 @@
 ///   }
 
 @mixin selection($current-selector: false) {
-  @include _bourbon-deprecate-for-prefixing("selection");
-
   @if $current-selector {
     &::-moz-selection {
       @content;

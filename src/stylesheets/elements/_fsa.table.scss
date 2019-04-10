@@ -17,9 +17,12 @@ table {
 
 caption {
   text-align: left;
-  margin-bottom: .5em;
+  margin-bottom: $size-default;
   color: $color-fsa-tertiary-300;
   font-weight: $font-bold;
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
 }
 
 th,
@@ -240,6 +243,7 @@ th {
     &:focus,
     &:hover {
       color: $color-fsa-tertiary-900;
+      outline-offset: 4px;
     }
 
     &:after {
@@ -262,12 +266,12 @@ th {
       opacity: 1;
     }
 
-    &--descending:after {
+    &--ascending:after {
       background-image: url('#{$image-path}/chevron-up.png');
       background-image: url('#{$image-path}/chevron-up.svg');
     }
 
-    &--ascending:after {
+    &--descending:after {
       background-image: url('#{$image-path}/chevron-down.png');
       background-image: url('#{$image-path}/chevron-down.svg');
     }

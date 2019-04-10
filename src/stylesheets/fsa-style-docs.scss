@@ -1,11 +1,9 @@
 // Vendor USWDS -------------- //
 
 @import 'lib/uswds/lib/bourbon';
-@import 'lib/uswds/lib/neat';
 
 // Core USWDS -------------- //
 @import 'lib/uswds/core/defaults';
-@import 'lib/uswds/core/grid-settings';
 @import 'lib/uswds/core/utilities';
 
 // Core FSA -------------- //
@@ -76,6 +74,10 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       &:hover {
         opacity: 1;
         color: $color-fsa-link-hover;
+      }
+
+      &:focus {
+        outline-offset: -4px;
       }
 
       .docs__figure:hover &,
@@ -235,6 +237,10 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
         color: $color-fsa-white;
       }
 
+      &::focus {
+        z-index: 1;
+      }
+
     }
 
     &-sub {
@@ -293,6 +299,10 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
       &:hover {
         text-decoration: underline;
+      }
+
+      &:focus {
+        outline-offset: -3px;
       }
 
     }
@@ -927,7 +937,9 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   margin-left: $size-base;
   margin-top: -2px;
 
-  .fsa-btn-group__item--active & {
+  // .fsa-btn-group__item:focus &,
+  .fsa-btn-group__item--active &,
+  .fsa-btn-group__item:active & {
     border-color: white;
   }
 
