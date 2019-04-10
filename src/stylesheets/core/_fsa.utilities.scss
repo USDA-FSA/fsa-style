@@ -345,7 +345,9 @@ $breakpoints: (
 @mixin fsa-space-between() {
   // scss-lint:disable UnnecessaryParentReference
   & + .fsa-select,
-  & + .form-text,
+  & + .fsa-input,
+  & + .fsa-btn-group,
+  & + span.fsa-spinbox,
   & + .fsa-btn {
     margin-left: $form-between-space;
   }

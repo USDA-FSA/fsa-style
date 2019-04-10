@@ -13,6 +13,7 @@
   $button-arrow-size-small: 8px;
 
   & {
+    display: block;
     position: relative;
     min-width: 8.2rem;
     min-width: 10ch; // for browsers that support ch unit
@@ -34,6 +35,7 @@
   &__number {
 
     & {
+      display: block;
       width: 90%;
       width: calc(100% - #{$button-width});
     }
@@ -190,4 +192,9 @@
 
   }
 
+}
+
+span.fsa-spinbox {
+  @include fsa-space-between();
+  display: inline-block;
 }
