@@ -3,12 +3,9 @@
 .fsa-btn-group {
 
   & {
+    @include fsa-space-between();
     display: inline-block;
     white-space: nowrap;
-  }
-
-  & + & {
-    margin-left: $size-base;
   }
 
   &--block {
@@ -46,15 +43,19 @@
     .fsa-btn-group--small & { @include fsa-button(small); }
     .fsa-btn-group--large & { @include fsa-button(large); }
 
-    &:focus:not([disabled]),
+    &:focus:not([disabled]) {
+      z-index: 1;
+    }
     &:active:not([disabled]) {
       background-color: $color-fsa-tertiary;
       z-index: 1;
-      // outline-offset: -4px;
     }
 
-    &:active:not([disabled]),
     &:focus:not([disabled]) {
+
+    }
+
+    &:active:not([disabled]) {
       background-color: $button-primary-hover;
       color: $button-primary-text;
     }
