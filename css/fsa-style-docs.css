@@ -1,15 +1,7 @@
-/*! FSA Style v2.1.7 | http://usda-fsa.github.io/fsa-design-system/ */
+/*! FSA Style v2.2.0 | http://usda-fsa.github.io/fsa-design-system/ */
 
 
 @charset "UTF-8";
-html {
-  box-sizing: border-box;
-}
-
-*, *::after, *::before {
-  box-sizing: inherit;
-}
-
 .usa-sr-only {
   position: absolute;
   left: -999em;
@@ -139,6 +131,9 @@ html:hover body::before {
   .docs__anchor:focus, .docs__anchor:active, .docs__anchor:hover {
     opacity: 1;
     color: #183f6e;
+  }
+  .docs__anchor:focus {
+    outline-offset: -4px;
   }
   .docs__figure:hover .docs__anchor,
   .docs__figure-group:hover .docs__anchor {
@@ -278,6 +273,10 @@ html:hover body::before {
   color: #fff;
 }
 
+.docs__primary-nav-link::focus {
+  z-index: 1;
+}
+
 .docs__primary-nav-sub {
   display: none;
 }
@@ -333,6 +332,10 @@ html:hover body::before {
 
 .docs__primary-nav-sub-link:hover {
   text-decoration: underline;
+}
+
+.docs__primary-nav-sub-link:focus {
+  outline-offset: -3px;
 }
 
 .docs__primary-nav__icon {
@@ -689,8 +692,7 @@ html:hover body::before {
 }
 
 .docs__vis-demo-hidden {
-  -webkit-filter: grayscale(100);
-          filter: grayscale(100);
+  filter: grayscale(100);
   opacity: .5;
   outline: 3px dotted rgba(0, 0, 0, 0.1);
   outline-offset: 2px;
@@ -1040,7 +1042,8 @@ html:hover body::before {
   margin-top: -2px;
 }
 
-.fsa-btn-group__item--active .docs__rwd-demo-icon {
+.fsa-btn-group__item--active .docs__rwd-demo-icon,
+.fsa-btn-group__item:active .docs__rwd-demo-icon {
   border-color: white;
 }
 
