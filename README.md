@@ -143,6 +143,6 @@ Further Design System sources of inspiration - some government-oriented, some no
 * Healthcare.gov [Style Guide](http://styleguide.healthcare.gov/)
 * Vets.gov [Playbook: Design](https://www.vets.gov/playbook/design/)
 * SalesForce - [Lightning Design System](https://www.lightningdesignsystem.com/)
-* MailChimp - [Patterns](http://ux.mailchimp.com/patterns)
 * Code for America - [Website Style Guide](https://style.codeforamerica.org/)
 * Google - [Material Design](https://material.google.com/)
+* MailChimp - [Patterns](http://ux.mailchimp.com/patterns)
