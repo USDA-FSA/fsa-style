@@ -29,8 +29,6 @@
     $position: relative;
   }
 
-  $user-deprecation-warnings-setting: $output-bourbon-deprecation-warnings;
-  $output-bourbon-deprecation-warnings: false !global;
   $coordinates: unpack($coordinates);
 
   $offsets: (
@@ -47,5 +45,4 @@
       #{$offset}: $value;
     }
   }
-  $output-bourbon-deprecation-warnings: $user-deprecation-warnings-setting !global;
 }

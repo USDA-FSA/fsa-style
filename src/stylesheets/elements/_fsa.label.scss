@@ -110,6 +110,7 @@ a.fsa-label {
   &:active {
     color: $label-text-color !important;
     background-color: $color-fsa-aqua-900;
+    outline-offset: 3px;
   }
 
 }

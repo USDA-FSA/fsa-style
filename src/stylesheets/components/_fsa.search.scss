@@ -35,11 +35,14 @@
   }
 
   &__input {
-    display: block;
-    width: 100%;
-    appearance: none !important; // yeah yeah.... sue me
-    box-sizing: inherit !important; // yeah yeah.... sue me
-    border-right-width: 0;
+    &,
+    &[size] {
+      display: block;
+      width: 100%;
+      appearance: none !important; // yeah yeah.... sue me
+      box-sizing: inherit !important; // yeah yeah.... sue me
+      border-right-width: 0;
+    }
   }
 
   &__select {

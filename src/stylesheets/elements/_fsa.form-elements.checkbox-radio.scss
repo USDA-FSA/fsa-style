@@ -29,6 +29,23 @@
   opacity: 0;
   cursor: pointer;
 
+  &__other {
+    // margin-left: 1.7em;
+    margin-top: .5em;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .46s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+
+    .fsa-radio:checked ~ &,
+    .fsa-checkbox:checked ~ & {
+      visibility: visible;
+      max-height: ($size-base * 38);
+      opacity: 1;
+    }
+  }
+
   .lt-ie9 & {
     border: 0;
     float: left;
@@ -143,12 +160,9 @@
 
 .fsa-radio:focus + label::before,
 .fsa-radio:focus + [type="hidden"] +  label::before {
-  // scss-lint:disable all
   box-shadow:
-    0 0 0 .2rem $color-white,
-    0 0 0 .4rem $form-checkbox-radio-fill,
-    0 0 .3rem .4rem $color-focus,
-    0 0 .7rem .4rem $color-focus
+    0 0 0 3px $color-white,
+    0 0 0 6px $color-focus
   ;
 }
 
@@ -170,7 +184,8 @@
 
 .fsa-checkbox:focus + label::before,
 .fsa-checkbox:focus + [type="hidden"] + label::before {
-  box-shadow: 0 0 0 1px $color-white, 0 0 0 3px $form-checkbox-radio-fill;
+  @include fsa-focus;
+  outline-offset: 4px;
 }
 
 .fsa-checkbox:disabled + label,
