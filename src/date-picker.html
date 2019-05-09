@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 9]><html class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Page Title</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/fsa-style.min.css" media="all">
+  <!--[if lt IE 9]>
+    <script src="js/vendor/html5shiv.js"></script>
+    <script src="js/vendor/respond.js"></script>
+    <script src="js/vendor/selectivizr-min.js"></script>
+    <script src="js/vendor/rem.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <!--[if lt IE 10]><p class="fsa-browser-upgrade">You are using an <strong>outdated</strong> browser. Please <strong><a href="http://browsehappy.com/">upgrade your browser</a></strong> to obtain a secure and improved experience.</p><![endif]-->
+
+  <a class="skipnav" href="#primary-navigation">Skip to primary navigation</a>
+  <a class="skipnav" href="#main-content">Skip to main content</a>
+
+  <main id="main-content" tabindex="-1">
+
+    <div class="fsa-section">
+
+      <div class="fsa-section__bd">
+
+        <h1>Hello Date Picker</h1>
+
+        <p>Pulled from <a href="https://assets.cms.gov/resources/framework/3.4.1/Pages/#datepicker">assets.cms.gov</a></p>
+
+        <div class="fsa-field fsa-field--date">
+          <label class="fsa-field__label" for="datey">Date of birth <span class="fsa-field__label-desc">Required</span></label>
+          <div class="fsa-field__date"><input class="fsa-input fsa-field__item" id="datey" aria-describedby="datey__help" aria-required="true" name="datey" type="text" value=""></div>
+          <span class="fsa-field__help" id="datey__help">e.g. 05/14/1975</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="js/vendor/datepicker.js"></script>
+
+  <script>
+    datePickerController.createDatePicker({
+      formElements: { "datey": "%m/%d/%Y" },
+      noFadeEffect: true,
+      labelText: "Date of birth"
+    });
+  </script>
+
+</body>
+</html>
