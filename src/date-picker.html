@@ -50,7 +50,13 @@
   <script>
     datePickerController.createDatePicker({
       formElements: { "datey": "%m/%d/%Y" },
+      // showWeeks: true,
+      statusFormat:"%l, %d%S %F %Y",
+      fillGrid: true,
       noFadeEffect: true,
+      staticPos: true,
+      highlightDays:[0,0,0,1,0,0,0],
+      disabledDays:[1,0,0,0,0,0,1],
       labelText: "Date of birth"
     });
   </script>

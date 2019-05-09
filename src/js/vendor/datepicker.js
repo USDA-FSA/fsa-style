@@ -1149,7 +1149,7 @@ var datePickerController = (function datePickerController() {
                     return;
                 };
 
-                this.div.className += " static-datepicker";
+                this.div.className += " date-picker--static";
 
                 if (this.positioned) {
                     elem.appendChild(this.div);

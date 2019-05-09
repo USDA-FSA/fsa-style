@@ -8,66 +8,6 @@
     Screen reader class - used to hide spans inside each cell from the visual
     display. See: http://webaim.org/techniques/css/invisiblecontent/
 */
-.fd-screen-reader  {
-    clip: rect(1px, 1px, 1px, 1px);
-    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	height: 0;
-	overflow: hidden;
-	position: absolute;
-	width: 0;
-}
-/*
-    The wrapper div
-*/
-.date-picker   {
-    position:absolute;
-    z-index:9999;
-    text-align:center;
-	width: 350px;
-	/*height: 525px;*/
-    /*
-    Change the font-size to suit your needs. The following line is for the demo
-    that has a 14px font-size defined on the body tag.
-
-    All other rules are "em" based and inherit from the font-size set here.
-    */
-    font:900 0.8em/1em 'Open Sans', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    background:transparent;
-    -webkit-user-select:none;
-       -moz-user-select:none;
-        -ms-user-select:none;
-         -o-user-select:none;
-            user-select:none;
-}
-input.select_date {
-	width: 80%;
-	float: left;
-    /*min-height: 2.625em;*/
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    height: 2.625em;
-}
-/*
-    Styles for the static datePickers
-*/
-.static-datepicker  {
-    position:relative;
-    top:5px;
-    left:0;
-    margin-bottom:1.5em;
-}
-/*
-    The iframe hack to cover selectlists in IE6
-*/
-.iehack   {
-    position:absolute;
-    background:#fff;
-    z-index:9998;
-    padding:0;
-    margin:0;
-    border:0;
-    display:none;
-}
 /*
     The activation "button" created beside each input for popup datePickers
 */
@@ -124,6 +64,36 @@ input.select_date {
 }
 
 /*
+    The wrapper div
+*/
+.date-picker   {
+    position:absolute;
+    z-index:9999;
+    text-align:center;
+	width: 350px;
+	/*height: 525px;*/
+    /*
+    Change the font-size to suit your needs. The following line is for the demo
+    that has a 14px font-size defined on the body tag.
+
+    All other rules are "em" based and inherit from the font-size set here.
+    */
+    font:900 0.8em/1em 'Open Sans', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    background:transparent;
+    user-select:none;
+}
+
+/*
+    Styles for the static datePickers
+*/
+.date-picker--static {
+    position:relative;
+    top:5px;
+    left:0;
+    margin-bottom:1.5em;
+}
+
+/*
     Default datepicker "button" styles
 */
 .date-picker th span  {
@@ -159,11 +129,7 @@ input.select_date {
 .date-picker .prev-but,
 .date-picker .next-but,
 .date-picker .today-but   {
-    -webkit-transition:all .2s ease-in-out;
-       -moz-transition:all .2s ease-in-out;
-        -ms-transition:all .2s ease-in-out;
-         -o-transition:all .2s ease-in-out;
-            transition:all .2s ease-in-out;
+    transition:all .2s ease-in-out;
 }
 /*
     Hover effect for Next & Previous (month, year) buttons
@@ -340,7 +306,9 @@ input.select_date {
 .date-picker .date-picker-today  {
     background: rgba(0,0,0,.15) url(data:image/gif;base64,R0lGODlhKwEoAJEAAKnT6v////X6+gAAACH5BAAAAAAALAAAAAArASgAAALXjI+py+0Po5y02ouz3lz4D4biSJbmiabqyrbuC8fyLAcCgOf0zvf+DwwKhyJbDkdMKpfMpnNo1D2n1Kr1GowCsNyu99uNgsfksnlnPKvX7LbA5o7L51Q4/Y7P8+z6vv9fwgc4SJgnWIiYuHao2OgY9hgpecU4aXkJVIm5yQmj2QkaavIpWmpKapraiaraasnqGusIK1tbSGub64er23vH6xvsBixcfEZsnAyGrNyMxewcPQUtXb1EbZ0thK3d3cPtHV4jTl5Xft4Ejr4eyO6e9R7/LU8/UwAAOw==) no-repeat 0 0;
  }
-.date-picker .month-out.date-picker-highlight   {     }
+.date-picker .month-out.date-picker-highlight   {
+    outline: 1px solid orangered;
+}
 /*
     The "highlight days" style
 */
@@ -387,10 +355,7 @@ input.select_date {
     The "disabled days" style
 */
 .date-picker .day-disabled  {
-    color:#888;
-    cursor:default;
     text-decoration:line-through;
-    background-position:0 -15px;
 }
 .date-picker .month-out   {
  /*   border-color:#ddd;
@@ -469,22 +434,6 @@ input.select_date {
          outline:0 none;
 	-o-highlight:0 none;
 	*/
-}
-/*
-    The "pulse" animation on focused button and datepicker cursor
-*/
-.date-picker-focus .date-picker-hover,
-.fsa-field__calendar-btn:focus span  { // FORMERLY .date-picker-control:focus span
-	/* HH: The pulsating animations caused a big amount of sluggishness when running a screen reader,
-	so sommented it out for now.
-	*/
-
-	/*
-    -webkit-animation:fd-dp-pulse 2s infinite;
-       -moz-animation:fd-dp-pulse 2s infinite;
-        -ms-animation:fd-dp-pulse 2s infinite;
-         -o-animation:fd-dp-pulse 2s infinite;
-    */
 }
 /*
     The "selected date" style
