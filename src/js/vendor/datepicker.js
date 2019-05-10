@@ -1161,7 +1161,7 @@ var datePickerController = (function datePickerController() {
                     for (var elemID in this.formElements) {
                         elem = document.getElementById(elemID);
                         if (elem) {
-                            elem.className += " fd-hidden-input";
+                            elem.className += " fsa-field__date-input-hidden";
                         };
                     };
                 };

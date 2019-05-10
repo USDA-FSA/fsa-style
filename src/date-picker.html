@@ -31,7 +31,7 @@
 
         <h1>Hello Date Picker</h1>
 
-        <p>Pulled from <a href="https://assets.cms.gov/resources/framework/3.4.1/Pages/#datepicker">assets.cms.gov</a></p>
+        <p>Sourced from <a href="https://assets.cms.gov/resources/framework/3.4.1/Pages/#datepicker">assets.cms.gov</a>. Config options at <a href="http://freqdec.github.io/datePicker/">http://freqdec.github.io/datePicker/</a></p>
 
         <div class="fsa-field fsa-field--date">
           <label class="fsa-field__label" for="datey">Date of birth <span class="fsa-field__label-desc">Required</span></label>
@@ -50,14 +50,20 @@
   <script>
     datePickerController.createDatePicker({
       formElements: { "datey": "%m/%d/%Y" },
-      // showWeeks: true,
-      statusFormat:"%l, %d%S %F %Y",
+      statusFormat:"%l, %F %d%S %Y",
       fillGrid: true,
-      noFadeEffect: true,
-      staticPos: true,
-      highlightDays:[0,0,0,1,0,0,0],
       disabledDays:[1,0,0,0,0,0,1],
-      labelText: "Date of birth"
+      labelText: "Date of birth",
+      // Highlight Monday (index 0) and Wednesday (index 2)
+      highlightDays:[1,0,1,0,0,0,0],
+      noFadeEffect: true,
+      bespokeTitles:{
+        "****1225":"Christmas Day",
+      },
+      // staticPos: true,
+      // positioned: "pos-demo",
+      // showWeeks: true,
+      // hideInput: true,
     });
   </script>
 

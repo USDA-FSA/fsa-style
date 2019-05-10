@@ -1,9 +1,17 @@
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
 
 
 /*
     Hide the datepickers associated input by using a className
 */
-.fd-hidden-input    {    display:none;}
+.fsa-field__date-input-hidden {
+    @include sr-only;
+}
 /*
     Screen reader class - used to hide spans inside each cell from the visual
     display. See: http://webaim.org/techniques/css/invisiblecontent/
@@ -63,6 +71,13 @@
 .fsa-field__calendar-btn--disabled:active  { //FORMERLY .date-picker-control-disabled
 }
 
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
 /*
     The wrapper div
 */
@@ -70,7 +85,7 @@
     position:absolute;
     z-index:9999;
     text-align:center;
-	width: 350px;
+	// width: 350px;
 	/*height: 525px;*/
     /*
     Change the font-size to suit your needs. The following line is for the demo
@@ -78,7 +93,7 @@
 
     All other rules are "em" based and inherit from the font-size set here.
     */
-    font:900 0.8em/1em 'Open Sans', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    // font:900 0.8em/1em 'Open Sans', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     background:transparent;
     user-select:none;
 }
@@ -110,59 +125,48 @@
 /*    The "month, year" display  */
 .date-picker .month-display,
 .date-picker .year-display   {
-    display:inline;
-    text-transform:uppercase;
-    font-weight:700;
-    font-size:1em;
-	color:#207b93;
+    display: inline-block;
+	color: $color-fsa-secondary-900;
 }
 /*
     Generic button class for Next & Previous (both month & year) buttons
 */
 .date-picker .prev-but,
 .date-picker .next-but   {
+    @include font-size(6);
     font-weight:normal;
-    font-size:2.4em;
-    /* font-family: georgia, times new roman, palatino, times, bookman, serif; */
     cursor:pointer;
 }
+
 .date-picker .prev-but,
 .date-picker .next-but,
 .date-picker .today-but   {
-    transition:all .2s ease-in-out;
+    color: $color-fsa-link;
 }
 /*
     Hover effect for Next & Previous (month, year) buttons
 */
 .date-picker .prev-but:hover,
 .date-picker .next-but:hover,
-.date-picker .today-but:hover   {   color:#029dd3; }
+.date-picker .today-but:hover   {
+    color: $color-fsa-link-hover;
+}
+
 .date-picker .prev-but:hover,
 .date-picker .next-but:hover  {
-    /*
-    Uncomment this if you want a scale effect...
-
-    -webkit-transform:scale(1.6);
-       -moz-transform:scale(1.6);
-        -ms-transform:scale(1.6);
-         -o-transform:scale(1.6);
-            transform:scale(1.6);
-
-    text-shadow:0 2px 1px rgba(0,0,0,.4);
-    */
 }
 /*     Today button */
 .date-picker .today-but   {
-    text-align:center;
-    margin:0 auto;
-    font-weight:900;
-    font-size:.85em;
-    width:100%;
-    text-decoration:none;
-    padding-top:0.3em;
-    text-transform:uppercase;
-    vertical-align:middle;
-    cursor:pointer
+    @include font-size(3);
+    display: block;
+    padding-top: $size-base;
+    font-weight: normal;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: $font-bold;
+    text-transform: uppercase;
+    vertical-align: middle;
+    cursor: pointer;
 }
 /*     Disabled buttons */
 .date-picker-disabled .prev-but,
@@ -253,12 +257,18 @@
     text-transform:none;
 }
 .date-picker .date-picker-week-header  {
-    font-style:oblique;
-    background:transparent;
-    cursor:default;
+    @include font-size(0);
+    background: transparent;
+    cursor: default;
+    border-left: 0;
+    font-weight: normal;
 }
+.date-picker [role="row"]:last-child .date-picker-week-header {
+}
+
 .date-picker .date-picker-thead .date-picker-week-header  {
-    border:0 none;
+    font-weight: normal;
+    text-transform: uppercase;
     cursor:help;
 }
 /*
@@ -355,7 +365,12 @@
     The "disabled days" style
 */
 .date-picker .day-disabled  {
-    text-decoration:line-through;
+    opacity: .5;
+    // text-decoration:line-through;
+}
+.date-picker .day-disabled:hover {
+    background-color: transparent;
+    color: inherit;
 }
 .date-picker .month-out   {
  /*   border-color:#ddd;
@@ -376,7 +391,6 @@
 .date-picker .out-of-range,
 .date-picker .not-selectable  {
     color:#ccc;
-    font-style:oblique;
     background:#fcfcfc;
     cursor:default;
 }
@@ -386,7 +400,6 @@
 .date-picker th.month-out,
 .date-picker th.out-of-range  {
     color:#aaa;
-    font-style:oblique;
     background:#fcfcfc;
 }
 /*
@@ -489,11 +502,15 @@
     */
     text-shadow:none;
 }
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
 body.fd-drag-active   {
-    -webkit-touch-callout:none;
-    -webkit-user-select:none;
-       -moz-user-select:none;
-            user-select:none;
+    user-select:none;
 }
 /*
     Glow effect for the focused (keyboard active) cursor cell and popup
