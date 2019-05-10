@@ -50,22 +50,31 @@
   <script>
     datePickerController.createDatePicker({
       formElements: { "datey": "%m/%d/%Y" },
-      statusFormat:"%l, %F %d%S %Y",
-      fillGrid: true,
-      disabledDays:[1,0,0,0,0,0,1],
-      labelText: "Date of birth",
-      // Highlight Monday (index 0) and Wednesday (index 2)
-      highlightDays:[1,0,1,0,0,0,0],
+      labelText: "Date of birth", // screenreader announces
+      statusFormat:"%l, %F %d%S, %Y",
       noFadeEffect: true,
+      staticPos: true,
+      titleFormat: "%l, %F %d%S, %Y",
+      // cursorDate: '20190501', // Default focus to May 1, 2019
+      // fillGrid: true,
+      // noTodayButton: true,
+      disabledDays:[0,0,0,0,0,1,1], // can't choose Sat or Sun
+      highlightDays:[1,0,1,0,0,0,0], // Highlight Monday (index 0) and Wednesday (index 2)
       bespokeTitles:{
         "****1225":"Christmas Day",
       },
-      // staticPos: true,
-      // positioned: "pos-demo",
+      // positioned: "pos-demo", // place originating in a <el id="pos-demo"></el> elsewhere
       // showWeeks: true,
       // hideInput: true,
     });
-  </script>
+    datePickerController.setRangeLow("datey", '20190407');  // disabled PRIOR to April 7, 2019
+    datePickerController.setRangeHigh("datey", new Date());  // disabled AFTER  today
+    datePickerController.setDisabledDates("datey", {
+      // "20091225":1, // Single Date: Disable the 25th December 2009
+      // "****1231":1, // Wilcard Date: Disable the 31st of December for all years
+      // "20110101":"20110120" // Date Range: Disable from the 1st of January 2011 to the 20th of January 2011. Note, wildcards can't be used within range declarations
+    });
+</script>
 
 </body>
 </html>

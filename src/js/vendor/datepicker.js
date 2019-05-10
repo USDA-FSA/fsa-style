@@ -1982,7 +1982,7 @@ var datePickerController = (function datePickerController() {
                         if (el == o.currentTR) break;
                         o.currentTR.className = "";
                     };
-                    el.className = "dp-row-highlight";
+                    el.className = "date-picker-row-highlight";
                     o.currentTR = el;
                     break;
                 };

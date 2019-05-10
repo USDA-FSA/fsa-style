@@ -10,7 +10,7 @@
     Hide the datepickers associated input by using a className
 */
 .fsa-field__date-input-hidden {
-    @include sr-only;
+    display: block;
 }
 /*
     Screen reader class - used to hide spans inside each cell from the visual
@@ -194,7 +194,6 @@
          -o-transform:scale(1);
             transform:scale(1);
     */
-    text-shadow:0 -1px 1px rgba(255,255,255,.8);
 }
 /*     The gradient background image */
 .date-picker table,
@@ -246,7 +245,6 @@
     border:none;
     text-transform:none;
     font-weight:700;
-    text-shadow:0 1px #fff;
 }
 .date-picker th  {
     border:0 none;
@@ -256,6 +254,9 @@
     vertical-align:middle;
     text-transform:none;
 }
+
+.date-picker .date-picker-row-highlight {}
+
 .date-picker .date-picker-week-header  {
     @include font-size(0);
     background: transparent;
@@ -357,8 +358,8 @@
 
 .date-picker .date-picker-hover,
 .date-picker .month-out.date-picker-hover  {
-    background: #046792;
-    outline: 2px solid #046792;
+    @include fsa-focus;
+    background: $color-fsa-secondary;
 	color: #fff;
 }
 /*
@@ -432,7 +433,6 @@
 .date-picker .date-picker-day-header,
 .date-picker .month-display,
 .date-picker .year-display  {
-    text-shadow: 0px 1px 1px #fff;
 }
 .date-picker .month-display,
 .date-picker .year-display  {
@@ -448,11 +448,15 @@
 	-o-highlight:0 none;
 	*/
 }
+.date-picker td[tabindex]:focus {
+    outline: 0;
+}
+
 /*
     The "selected date" style
 */
 .date-picker .date-picker-selected-date  {
-    background-color:#046792;
+    background-color:$color-fsa-secondary;
 	color:#fff;
    /*  color:rgba(3,3,3,.8);*/
 }
@@ -500,7 +504,6 @@
          -o-transform:scale(1);
             transform:scale(1);
     */
-    text-shadow:none;
 }
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
