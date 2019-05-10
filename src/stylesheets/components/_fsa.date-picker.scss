@@ -45,12 +45,11 @@
     activation button to let the user know. It's a little detail but it's the
     little things in life etc
 */
+.fsa-field__calendar-btn--date-is-valid,
 .fsa-field__calendar-btn--date-is-valid:link,
 .fsa-field__calendar-btn--date-is-valid:visited   { // FORMERLY .date-picker-dateval
-    &:after {
-        margin-left: $size-base;
-        content: '\2714';
-    }
+    outline: 1px solid green !important;
+    outline-offset: 3px;
 }
 
 /*
@@ -61,18 +60,6 @@
 .fsa-field__calendar-btn:focus,
 .fsa-field__calendar-btn:hover,
 .fsa-field__calendar-btn:active  { // FORMERLY .date-picker-control
-}
-
-/*
-    Disabled activation button
-*/
-.fsa-field__calendar-btn--disabled:link,
-.fsa-field__calendar-btn--disabled:visited,
-.fsa-field__calendar-btn--disabled:focus,
-.fsa-field__calendar-btn--disabled:active  { //FORMERLY .date-picker-control-disabled
-    color: $color-fsa-tertiary-300;
-    cursor: text;
-    outline: 0;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -216,7 +203,8 @@
     background-repeat:repeat-x;
     background-position:0 0;*/
 }
-.date-picker table    {
+.date-picker table {
+    @include font-size(2);
     table-layout:fixed;
     empty-cells:show;
     border-collapse:separate;
@@ -228,14 +216,6 @@
     z-index:2;
     width:auto;
     height:auto;
-    color:#333;
-    font-size:1em;
- /*   -webkit-border-radius:0.8em;
-       -moz-border-radius:0.8em;
-            border-radius:0.8em;
-    -webkit-box-shadow:0px 0px 5px #aaa;
-       -moz-box-shadow:0px 0px 5px #aaa;
-            box-shadow:0px 0px 5px #aaa;  */
 }
 /*     Common TD & TH styling */
 .date-picker td,
@@ -252,12 +232,11 @@
     outline:transparent none 0px;
     border:none;
     text-transform:none;
-    font-weight:700;
 }
 .date-picker th  {
+    @include font-size(1);
     border:0 none;
     padding:0;
-    font-weight:bold;
     text-align:center;
     vertical-align:middle;
     text-transform:none;
@@ -270,7 +249,7 @@
     background: transparent;
     cursor: default;
     border-left: 0;
-    font-weight: normal;
+    font-weight: $font-bold;
 }
 .date-picker [role="row"]:last-child .date-picker-week-header {
 }
@@ -294,13 +273,14 @@
 }
 /*     tfoot status bar */
 .date-picker .date-picker-statusbar  {
+    @include font-size(3);
+    line-height: 2;
     cursor:default;
     font-weight:normal;
     text-transform:uppercase;
     letter-spacing:0.1em;
     border:0 none;
     background:#fff;
-    height:2.8em;
 }
 /*     TD cell that is _not_ used to display a day of the month */
 .date-picker .date-picker-unused  {
@@ -311,19 +291,24 @@
 }
 /*     The TH cell used to display the "month, year" title */
 .date-picker .date-picker-title  {
-    width:auto;
-    height:auto;
-    padding:0.4em 0;
-	color:#073347	;
-	font-size:1.125em;
-	font-weight:bold;
-	line-height:1.5em;
-	border-bottom:1px solid #ccc;
-
+    @include font-size(3);
+    width: auto;
+    height: auto;
+    padding: $size-base;
+	font-weight: $font-bold;
+    border-bottom:1px solid #ccc;
+    background-color: rgba(0,0,0,.05);
 }
 /*     The "todays date" cell style */
 .date-picker .date-picker-today  {
-    background: rgba(0,0,0,.15) url(data:image/gif;base64,R0lGODlhKwEoAJEAAKnT6v////X6+gAAACH5BAAAAAAALAAAAAArASgAAALXjI+py+0Po5y02ouz3lz4D4biSJbmiabqyrbuC8fyLAcCgOf0zvf+DwwKhyJbDkdMKpfMpnNo1D2n1Kr1GowCsNyu99uNgsfksnlnPKvX7LbA5o7L51Q4/Y7P8+z6vv9fwgc4SJgnWIiYuHao2OgY9hgpecU4aXkJVIm5yQmj2QkaavIpWmpKapraiaraasnqGusIK1tbSGub64er23vH6xvsBixcfEZsnAyGrNyMxewcPQUtXb1EbZ0thK3d3cPtHV4jTl5Xft4Ejr4eyO6e9R7/LU8/UwAAOw==) no-repeat 0 0;
+    box-shadow: 0 0 0 1px inset rgba(0,0,0,.1);
+    background:
+      rgba(0,0,0,.4)
+      url(data:image/gif;base64,R0lGODlhKwEoAJEAAKnT6v////X6+gAAACH5BAAAAAAALAAAAAArASgAAALXjI+py+0Po5y02ouz3lz4D4biSJbmiabqyrbuC8fyLAcCgOf0zvf+DwwKhyJbDkdMKpfMpnNo1D2n1Kr1GowCsNyu99uNgsfksnlnPKvX7LbA5o7L51Q4/Y7P8+z6vv9fwgc4SJgnWIiYuHao2OgY9hgpecU4aXkJVIm5yQmj2QkaavIpWmpKapraiaraasnqGusIK1tbSGub64er23vH6xvsBixcfEZsnAyGrNyMxewcPQUtXb1EbZ0thK3d3cPtHV4jTl5Xft4Ejr4eyO6e9R7/LU8/UwAAOw==)
+      no-repeat
+      0
+      0
+    ;
  }
 .date-picker .month-out.date-picker-highlight   {
     // outline: 1px solid orangered;
@@ -367,8 +352,8 @@
 .date-picker .date-picker-hover,
 .date-picker .month-out.date-picker-hover  {
     @include fsa-focus;
-    background: $color-fsa-secondary;
-	color: #fff;
+    background: $color-fsa-aqua-200
+	// color: #fff;
 }
 /*
     The "disabled days" style
@@ -386,13 +371,6 @@
     border-color:rgba(220,220,220,0.8);*/
     color:#aaa;
     background-position:0 -25px;
-}
-/*
-    The "selected date" style - color changed below also
-*/
-.date-picker .date-picker-selected-date  {
-   /* border-color:#888 !important;
-    border-color:rgba(7,7,7,.6) !important;*/
 }
 /*
     The date "out of range" style
@@ -442,10 +420,12 @@
 .date-picker .month-display,
 .date-picker .year-display  {
 }
+
 .date-picker .month-display,
 .date-picker .year-display  {
     cursor:default;
 }
+
 .date-picker td:focus,
 .date-picker .date-picker-hover   {
     z-index:99999;
@@ -464,7 +444,7 @@
     The "selected date" style
 */
 .date-picker .date-picker-selected-date  {
-    background-color:$color-fsa-secondary;
+    background-color: $color-fsa-secondary-900;
 	color:#fff;
    /*  color:rgba(3,3,3,.8);*/
 }

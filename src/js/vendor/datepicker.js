@@ -2103,19 +2103,19 @@ var datePickerController = (function datePickerController() {
         wrap.className = "fsa-field__calendar-action";
 
         // but.href = "#" + this.id;
-        but.className = "fsa-field__calendar-btn";
+        but.className = "fsa-btn fsa-btn--secondary fsa-btn--small fsa-field__calendar-btn";
         //but.title       = getTitleTranslation(5);
         but.id = "fd-but-" + this.id;
         but.setAttribute("type", "button");
-        span.className = "fsa-field__calendar-icon-wrapper";
+        // span.className = "fsa-field__calendar-icon-wrapper";
         span.setAttribute("aria-hidden", "true");
 
         var altText = this.labelText ? getTitleTranslation(14, [this.labelText]) : but.title;
         var fontIconHolder = document.createElement("span");
 
-        fontIconHolder.className = "fsa-field__calendar-icon";
+        // fontIconHolder.className = "fsa-field__calendar-icon";
         fontIconHolder.style.fontFamily = "";
-        fontIconHolder.innerHTML = '<span class="fsa-field__calendar-text">Calendar</span>';
+        fontIconHolder.innerHTML = '<span class="fsa-field__calendar-text">Open Calendar</span>';
         span.appendChild(fontIconHolder);
         but.appendChild(span);
 
