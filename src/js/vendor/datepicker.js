@@ -2097,15 +2097,16 @@ var datePickerController = (function datePickerController() {
 
         var inp = document.getElementById(this.id),
             span = document.createElement('span'),
-            but = document.createElement('a'),
+            but = document.createElement('button'),
             wrap = document.createElement('span');
 
         wrap.className = "fsa-field__calendar-action";
 
-        but.href = "#" + this.id;
+        // but.href = "#" + this.id;
         but.className = "fsa-field__calendar-btn";
         //but.title       = getTitleTranslation(5);
         but.id = "fd-but-" + this.id;
+        but.setAttribute("type", "button");
         span.className = "fsa-field__calendar-icon-wrapper";
         span.setAttribute("aria-hidden", "true");
 
@@ -2125,7 +2126,7 @@ var datePickerController = (function datePickerController() {
         wrap.appendChild(but);
         //setARIAProperty(but, "label", altText);
         // Set the ARIA role to be "button"
-        setARIARole(but, "button");
+        // setARIARole(but, "button");
 
         // Set a "haspopup" ARIA property - should this not be a list if ID's????
         // setARIAProperty(but, "haspopup", true);
@@ -2677,6 +2678,7 @@ var datePickerController = (function datePickerController() {
             var but = document.getElementById("fd-but-" + this.id);
             if (but) {
                 addClass(but, "fsa-field__calendar-btn--disabled");
+                but.setAttribute("disabled", "disabled");
                 // Set a "disabled" ARIA state
                 setARIAProperty(but, "disabled", true);
                 but.onkeydown = but.onclick = function() {
