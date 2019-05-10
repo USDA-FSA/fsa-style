@@ -27,16 +27,75 @@
 
     <div class="fsa-section">
 
-      <div class="fsa-section__bd">
+      <h1>Hello Date Picker</h1>
 
-        <h1>Hello Date Picker</h1>
+      <p>Sourced from <a href="https://assets.cms.gov/resources/framework/3.4.1/Pages/#datepicker">assets.cms.gov</a>. Config options at <a href="http://freqdec.github.io/datePicker/">http://freqdec.github.io/datePicker/</a></p>
 
-        <p>Sourced from <a href="https://assets.cms.gov/resources/framework/3.4.1/Pages/#datepicker">assets.cms.gov</a>. Config options at <a href="http://freqdec.github.io/datePicker/">http://freqdec.github.io/datePicker/</a></p>
-
-        <div class="fsa-field fsa-field--date">
-          <label class="fsa-field__label" for="datey">Date of birth <span class="fsa-field__label-desc">Required</span></label>
-          <div class="fsa-field__date"><input class="fsa-input fsa-field__item" id="datey" aria-describedby="datey__help" aria-required="true" name="datey" type="text" value=""></div>
-          <span class="fsa-field__help" id="datey__help">e.g. 05/14/1975</span>
+      <div class="fsa-grid">
+        <div class="fsa-grid__1 fsa-grid__auto@l">
+          <div class="fsa-field fsa-field--date">
+            <label class="fsa-field__label" for="datey-example-1">Label <span class="fsa-field__label-desc">Required</span></label>
+            <div class="fsa-field__date"><input class="fsa-input fsa-field__item" id="datey-example-1" aria-describedby="datey-example-1__help" aria-required="true" name="datey-example-1" type="text" value=""></div>
+            <span class="fsa-field__help" id="datey-example-1__help">e.g. 05/14/1975</span>
+          </div>
+          <div class="fsa-field fsa-field--date">
+            <label class="fsa-field__label" for="datey-example-1b">Label <span class="fsa-field__label-desc">Required</span></label>
+            <div class="fsa-field__date"><input class="fsa-input fsa-field__item" id="datey-example-1b" aria-describedby="datey-example-1b__help" aria-required="true" name="datey-example-1b" type="text" value="11/21/1975"></div>
+            <span class="fsa-field__help" id="datey-example-1b__help">e.g. 05/14/1975</span>
+          </div>
+          <div class="fsa-field fsa-field--date fsa-field--columns">
+            <span class="fsa-field__label">Date</span>
+            <div class="fsa-field__date">
+              <div class="fsa-grid">
+                <div class="fsa-grid__auto">
+                  <div class="fsa-field__column">
+                    <label class="fsa-field__help" for="datey-example-1c_1">Month</label>
+                    <input placeholder="mm" class="fsa-input fsa-input--block" id="datey-example-1c_1" name="datey-example-1c_1" type="text" pattern="0?[1-9]|1[012]" min="1" max="12" value="" aria-describedby="lorem-1234-help-88">
+                  </div>
+                </div>
+                <div class="fsa-grid__auto">
+                  <div class="fsa-field__column">
+                    <label class="fsa-field__help" for="datey-example-1c_2">Day</label>
+                    <input placeholder="dd" class="fsa-input fsa-input--block" id="datey-example-1c_2" name="datey-example-1c_2" type="text" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" min="1" max="31" value="" aria-describedby="lorem-1234-help-88">
+                  </div>
+                </div>
+                <div class="fsa-grid__auto">
+                  <div class="fsa-field__column">
+                    <label class="fsa-field__help" for="datey-example-1c_3">Year</label>
+                    <input placeholder="yyyy" class="fsa-input fsa-input--block" id="datey-example-1c_3" name="datey-example-1c_3" type="text" pattern="[0-9]{4}" min="1900" max="2050" value="" aria-describedby="lorem-1234-help-88">
+                  </div>
+                </div>
+              </div>
+              <div id="datey-example-1c__activate" class="fsa-field__activate-button"></div>
+            </div>
+            <span class="fsa-field__help" id="lorem-1234-help-88">For example: 04 28 2017</span>
+          </div>
+          <div class="fsa-field fsa-field--date">
+            <label class="fsa-field__label" for="datey-example-1d">Label <span class="fsa-field__label-desc">Required</span></label>
+            <div class="fsa-field__date"><input disabled class="fsa-input fsa-field__item" id="datey-example-1d" aria-describedby="datey-example-1d__help" aria-required="true" name="datey-example-1d" type="text" value=""></div>
+            <span class="fsa-field__help" id="datey-example-1d__help">e.g. 05/14/1975</span>
+          </div>
+        </div>
+        <div class="fsa-grid__1 fsa-grid__auto@l">
+          <div class="fsa-field fsa-field--date">
+            <label class="fsa-field__label" for="datey-example-2">Label <span class="fsa-field__label-desc">Required</span></label>
+            <div class="fsa-field__date"><input class="fsa-input fsa-field__item" id="datey-example-2" aria-describedby="datey-example-2__help" aria-required="true" name="datey-example-2" type="text" value=""></div>
+            <span class="fsa-field__help" id="datey-example-2__help">e.g. 05/14/1975</span>
+          </div>
+        </div>
+        <div class="fsa-grid__1 fsa-grid__auto@l">
+          <div class="fsa-field fsa-field--date">
+            <label class="fsa-field__label" for="datey-example-3">Label <span class="fsa-field__label-desc">Required</span></label>
+            <div class="fsa-field__date"><input class="fsa-input fsa-field__item" id="datey-example-3" aria-describedby="datey-example-3__help" aria-required="true" name="datey-example-3" type="text" value=""></div>
+            <span class="fsa-field__help" id="datey-example-3__help">e.g. 05/14/1975</span>
+          </div>
+        </div>
+        <div class="fsa-grid__1 fsa-grid__auto@l">
+          <div class="fsa-field fsa-field--date">
+            <label class="fsa-field__label" for="datey-example-4">Label <span class="fsa-field__label-desc">Required</span></label>
+            <div class="fsa-field__date"><input class="fsa-input fsa-field__item" id="datey-example-4" aria-describedby="datey-example-4__help" aria-required="true" name="datey-example-4" type="text" value=""></div>
+            <span class="fsa-field__help" id="datey-example-4__help">e.g. 05/14/1975</span>
+          </div>
         </div>
 
       </div>
@@ -48,33 +107,100 @@
   <script src="js/vendor/datepicker.js"></script>
 
   <script>
+    ///////////////////////////////////////////////////////////////////////////
+    // Example 1
     datePickerController.createDatePicker({
-      formElements: { "datey": "%m/%d/%Y" },
+      formElements: { "datey-example-1": "%m/%d/%Y", },
+      noFadeEffect: true,
+    });
+
+    ///////////////////////////////////////////////////////////////////////////
+    // Example 1b
+
+    datePickerController.createDatePicker({
+      formElements: { "datey-example-1b": "%m/%d/%Y", },
+      noFadeEffect: true,
+    });
+
+    ///////////////////////////////////////////////////////////////////////////
+    // Example 1c
+    datePickerController.createDatePicker({
+        formElements:{
+            // Associate #inp1 with the day date part
+            "datey-example-1c_1":"%m",
+            // Associate #inp2 with the month date part
+            "datey-example-1c_2":"%d",
+            // Associate #inp3 with the year date part
+            "datey-example-1c_3":"%Y"
+        },
+        noFadeEffect: true,
+        positioned: "datey-example-1c__activate"
+    });
+
+    ///////////////////////////////////////////////////////////////////////////
+    // Example 1d
+    datePickerController.createDatePicker({
+      formElements: { "datey-example-1d": "%m/%d/%Y", },
+      noFadeEffect: true,
+    });
+
+    ///////////////////////////////////////////////////////////////////////////
+    // Example 2
+    datePickerController.createDatePicker({
+      formElements: { "datey-example-2": "%m/%d/%Y" },
+      labelText: "Date of birth", // screenreader announces
+      staticPos: true,
+      disabledDays:[0,0,0,0,0,1,1], // can't choose Sat or Sun
+      bespokeTitles:{
+        "****1225":"Christmas Day",
+      },
+    });
+    datePickerController.setRangeLow("datey-example-2", '20190407');  // disabled PRIOR to April 7, 2019
+    datePickerController.setRangeHigh("datey-example-2", new Date());  // disabled AFTER  today
+    datePickerController.setDisabledDates("datey-example-2", {
+      // "20091225":1, // Single Date: Disable the 25th December 2009
+      // "****1231":1, // Wilcard Date: Disable the 31st of December for all years
+      // "20110101":"20110120" // Date Range: Disable from the 1st of January 2011 to the 20th of January 2011. Note, wildcards can't be used within range declarations
+    });
+
+    ///////////////////////////////////////////////////////////////////////////
+    // Example 3
+    datePickerController.createDatePicker({
+      formElements: { "datey-example-3": "%m/%d/%Y" },
       labelText: "Date of birth", // screenreader announces
       statusFormat:"%l, %F %d%S, %Y",
       noFadeEffect: true,
       staticPos: true,
       titleFormat: "%l, %F %d%S, %Y",
-      // cursorDate: '20190501', // Default focus to May 1, 2019
-      // fillGrid: true,
-      // noTodayButton: true,
+      cursorDate: '20190501', // Default focus to May 1, 2019
+      fillGrid: true,
+      noTodayButton: true,
       disabledDays:[0,0,0,0,0,1,1], // can't choose Sat or Sun
-      highlightDays:[1,0,1,0,0,0,0], // Highlight Monday (index 0) and Wednesday (index 2)
+      highlightDays:[0,0,1,0,0,0,0], // Highlight Monday (index 0) and Wednesday (index 2)
       bespokeTitles:{
         "****1225":"Christmas Day",
       },
-      // positioned: "pos-demo", // place originating in a <el id="pos-demo"></el> elsewhere
-      // showWeeks: true,
-      // hideInput: true,
+      showWeeks: true,
+      hideInput: true,
     });
-    datePickerController.setRangeLow("datey", '20190407');  // disabled PRIOR to April 7, 2019
-    datePickerController.setRangeHigh("datey", new Date());  // disabled AFTER  today
-    datePickerController.setDisabledDates("datey", {
-      // "20091225":1, // Single Date: Disable the 25th December 2009
-      // "****1231":1, // Wilcard Date: Disable the 31st of December for all years
-      // "20110101":"20110120" // Date Range: Disable from the 1st of January 2011 to the 20th of January 2011. Note, wildcards can't be used within range declarations
+    datePickerController.setDisabledDates("datey-example-3", {
+      "20091225":1, // Single Date: Disable the 25th December 2009
+      "****1231":1, // Wilcard Date: Disable the 31st of December for all years
+      "20110101":"20110120" // Date Range: Disable from the 1st of January 2011 to the 20th of January 2011. Note, wildcards can't be used within range declarations
     });
-</script>
 
+    ///////////////////////////////////////////////////////////////////////////
+    // Example 2
+    datePickerController.createDatePicker({
+      formElements: { "datey-example-4": "%m/%d/%Y" },
+      labelText: "Date of birth", // screenreader announces
+      cursorDate: '20190506', // Default focus to May 1, 2019
+      fillGrid: true,
+      staticPos: true,
+    });
+    datePickerController.setRangeLow("datey-example-4", '20190506');  // disabled PRIOR to
+    datePickerController.setRangeHigh("datey-example-4", '20190509');  // disabled AFTER
+
+  </script>
 </body>
 </html>
