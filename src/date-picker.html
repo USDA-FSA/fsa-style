@@ -31,16 +31,18 @@
 
       <p>Sourced from <a href="https://assets.cms.gov/resources/framework/3.4.1/Pages/#datepicker">assets.cms.gov</a>. Config options at <a href="http://freqdec.github.io/datePicker/">http://freqdec.github.io/datePicker/</a></p>
 
+      <p> <input placeholder="mm/dd/yyyy" id="datey-example-0" name="datey-example-0" type="text"> </p>
+
       <div class="fsa-grid">
         <div class="fsa-grid__1 fsa-grid__auto@l">
           <div class="fsa-field fsa-field--date">
             <label class="fsa-field__label" for="datey-example-1">Label <span class="fsa-field__label-desc">Required</span></label>
-            <div class="fsa-field__date"><input class="fsa-input fsa-field__item" id="datey-example-1" aria-describedby="datey-example-1__help" aria-required="true" name="datey-example-1" type="text" value=""></div>
+            <div class="fsa-field__date"><input placeholder="mm/dd/yyyy" class="fsa-input fsa-field__item" id="datey-example-1" aria-describedby="datey-example-1__help" aria-required="true" name="datey-example-1" type="text" value=""></div>
             <span class="fsa-field__help" id="datey-example-1__help">e.g. 05/14/1975</span>
           </div>
           <div class="fsa-field fsa-field--date">
             <label class="fsa-field__label" for="datey-example-1b">Label <span class="fsa-field__label-desc">Required</span></label>
-            <div class="fsa-field__date"><input class="fsa-input fsa-field__item" id="datey-example-1b" aria-describedby="datey-example-1b__help" aria-required="true" name="datey-example-1b" type="text" value="11/21/1975"></div>
+            <div class="fsa-field__date"><input placeholder="mm/dd/yyyy" class="fsa-input fsa-field__item" id="datey-example-1b" aria-describedby="datey-example-1b__help" aria-required="true" name="datey-example-1b" type="text" value="11/21/1975"></div>
             <span class="fsa-field__help" id="datey-example-1b__help">e.g. 05/14/1975</span>
           </div>
           <div class="fsa-field fsa-field--date fsa-field--columns">
@@ -72,28 +74,28 @@
           </div>
           <div class="fsa-field fsa-field--date">
             <label class="fsa-field__label" for="datey-example-1d">Label <span class="fsa-field__label-desc">Required</span></label>
-            <div class="fsa-field__date"><input disabled class="fsa-input fsa-field__item" id="datey-example-1d" aria-describedby="datey-example-1d__help" aria-required="true" name="datey-example-1d" type="text" value=""></div>
+            <div class="fsa-field__date"><input placeholder="mm/dd/yyyy" disabled class="fsa-input fsa-field__item" id="datey-example-1d" aria-describedby="datey-example-1d__help" aria-required="true" name="datey-example-1d" type="text" value=""></div>
             <span class="fsa-field__help" id="datey-example-1d__help">e.g. 05/14/1975</span>
           </div>
         </div>
         <div class="fsa-grid__1 fsa-grid__auto@l">
           <div class="fsa-field fsa-field--date">
             <label class="fsa-field__label" for="datey-example-2">Label <span class="fsa-field__label-desc">Required</span></label>
-            <div class="fsa-field__date"><input class="fsa-input fsa-field__item" id="datey-example-2" aria-describedby="datey-example-2__help" aria-required="true" name="datey-example-2" type="text" value=""></div>
+            <div class="fsa-field__date"><input placeholder="mm/dd/yyyy" class="fsa-input fsa-field__item" id="datey-example-2" aria-describedby="datey-example-2__help" aria-required="true" name="datey-example-2" type="text" value=""></div>
             <span class="fsa-field__help" id="datey-example-2__help">e.g. 05/14/1975</span>
           </div>
         </div>
         <div class="fsa-grid__1 fsa-grid__auto@l">
           <div class="fsa-field fsa-field--date">
             <label class="fsa-field__label" for="datey-example-3">Label <span class="fsa-field__label-desc">Required</span></label>
-            <div class="fsa-field__date"><input class="fsa-input fsa-field__item" id="datey-example-3" aria-describedby="datey-example-3__help" aria-required="true" name="datey-example-3" type="text" value=""></div>
+            <div class="fsa-field__date"><input placeholder="mm/dd/yyyy" class="fsa-input fsa-field__item" id="datey-example-3" aria-describedby="datey-example-3__help" aria-required="true" name="datey-example-3" type="text" value=""></div>
             <span class="fsa-field__help" id="datey-example-3__help">e.g. 05/14/1975</span>
           </div>
         </div>
         <div class="fsa-grid__1 fsa-grid__auto@l">
           <div class="fsa-field fsa-field--date">
             <label class="fsa-field__label" for="datey-example-4">Label <span class="fsa-field__label-desc">Required</span></label>
-            <div class="fsa-field__date"><input class="fsa-input fsa-field__item" id="datey-example-4" aria-describedby="datey-example-4__help" aria-required="true" name="datey-example-4" type="text" value=""></div>
+            <div class="fsa-field__date"><input placeholder="mm/dd/yyyy" class="fsa-input fsa-field__item" id="datey-example-4" aria-describedby="datey-example-4__help" aria-required="true" name="datey-example-4" type="text" value=""></div>
             <span class="fsa-field__help" id="datey-example-4__help">e.g. 05/14/1975</span>
           </div>
         </div>
@@ -107,6 +109,13 @@
   <script src="js/vendor/datepicker.js"></script>
 
   <script>
+    ///////////////////////////////////////////////////////////////////////////
+    // Example 1
+    datePickerController.createDatePicker({
+      formElements: { "datey-example-0": "%m/%d/%Y", },
+      noFadeEffect: true,
+    });
+
     ///////////////////////////////////////////////////////////////////////////
     // Example 1
     datePickerController.createDatePicker({
@@ -195,7 +204,7 @@
       formElements: { "datey-example-4": "%m/%d/%Y" },
       labelText: "Date of birth", // screenreader announces
       cursorDate: '20190506', // Default focus to May 1, 2019
-      fillGrid: true,
+      // fillGrid: true,
       staticPos: true,
     });
     datePickerController.setRangeLow("datey-example-4", '20190506');  // disabled PRIOR to

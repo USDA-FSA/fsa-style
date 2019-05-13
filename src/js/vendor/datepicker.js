@@ -2103,7 +2103,7 @@ var datePickerController = (function datePickerController() {
         wrap.className = "fsa-field__calendar-action";
 
         // but.href = "#" + this.id;
-        but.className = "fsa-btn fsa-btn--secondary fsa-btn--small fsa-field__calendar-btn";
+        but.className = "fsa-field__calendar-btn";
         //but.title       = getTitleTranslation(5);
         but.id = "fd-but-" + this.id;
         but.setAttribute("type", "button");

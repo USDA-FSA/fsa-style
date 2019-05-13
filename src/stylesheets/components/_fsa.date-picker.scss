@@ -9,7 +9,9 @@
 /*
     Hide the datepickers associated input by using a className
 */
-.fsa-field__date {}
+.fsa-field__date {
+    position: relative;
+}
 .fsa-field__date-input-hidden {
     display: none;
 }
@@ -25,6 +27,30 @@
     The hover effect on the activation button
 */
 //.date-picker-button-active span, LINE BELOW FORMERLY
+.fsa-field__activate-button {
+}
+.fsa-field__calendar-action {
+    margin-left: $size-small;
+    .fsa-field__activate-button & {
+        margin-left: 0;
+        display: inline-block;
+        margin-top: $size-small;
+    }
+}
+.fsa-field__calendar-btn {
+    .fsa-field & {
+        position: absolute;
+        right: $size-base;
+        top: $size-base;
+    }
+    .fsa-field__activate-button & {
+        position: static;
+        margin-left: 0;
+    }
+    &[disabled] {
+        opacity: .6;
+    }
+}
 .fsa-field__calendar-btn--active span,
 .fsa-field__calendar-btn:focus span,
 .fsa-field__calendar-btn:hover span,
@@ -48,8 +74,7 @@
 .fsa-field__calendar-btn--date-is-valid,
 .fsa-field__calendar-btn--date-is-valid:link,
 .fsa-field__calendar-btn--date-is-valid:visited   { // FORMERLY .date-picker-dateval
-    outline: 1px solid green !important;
-    outline-offset: 3px;
+    color: limegreen;
 }
 
 /*
@@ -150,7 +175,7 @@
 .date-picker .today-but   {
     @include font-size(3);
     display: block;
-    padding-top: $size-base;
+    padding-top: $size-small;
     font-weight: normal;
     text-align: center;
     margin: 0 auto;
@@ -251,8 +276,6 @@
     border-left: 0;
     font-weight: $font-bold;
 }
-.date-picker [role="row"]:last-child .date-picker-week-header {
-}
 
 .date-picker .date-picker-thead .date-picker-week-header  {
     font-weight: normal;
@@ -263,13 +286,11 @@
     The "mon tue wed etc" day header styles
 */
 .date-picker .date-picker-day-header  {
-    cursor:help;
-    border:0 none;
-    text-transform:uppercase;
-	color:#000;
-    height:auto;
-	line-height:1.5em;
-	padding: 0 5px;
+    cursor: help;
+    border: 0 none;
+    text-transform: uppercase;
+	line-height: 1;
+	padding: $size-small $size-base;
 }
 /*     tfoot status bar */
 .date-picker .date-picker-statusbar  {
@@ -301,7 +322,7 @@
 }
 /*     The "todays date" cell style */
 .date-picker .date-picker-today  {
-    box-shadow: 0 0 0 1px inset rgba(0,0,0,.1);
+    box-shadow: 0 0 0 1px inset $color-fsa-tertiary-200;
     background:
       rgba(0,0,0,.4)
       url(data:image/gif;base64,R0lGODlhKwEoAJEAAKnT6v////X6+gAAACH5BAAAAAAALAAAAAArASgAAALXjI+py+0Po5y02ouz3lz4D4biSJbmiabqyrbuC8fyLAcCgOf0zvf+DwwKhyJbDkdMKpfMpnNo1D2n1Kr1GowCsNyu99uNgsfksnlnPKvX7LbA5o7L51Q4/Y7P8+z6vv9fwgc4SJgnWIiYuHao2OgY9hgpecU4aXkJVIm5yQmj2QkaavIpWmpKapraiaraasnqGusIK1tbSGub64er23vH6xvsBixcfEZsnAyGrNyMxewcPQUtXb1EbZ0thK3d3cPtHV4jTl5Xft4Ejr4eyO6e9R7/LU8/UwAAOw==)
@@ -337,7 +358,7 @@
     scaling TD cells so commented out until I find a curious CSS based fix.
     HH: I commented out the rest as well since this triggered a bug in FF where focus events are incorrectly sent when removing a classname
 */
-.date-picker-focus .date-picker-hover  {
+.date-picker-focus .date-picker-hover {
     /*
     -webkit-transform:scale(1.25);
     */
@@ -351,10 +372,15 @@
 
 .date-picker .date-picker-hover,
 .date-picker .month-out.date-picker-hover  {
-    @include fsa-focus;
-    background: $color-fsa-aqua-200
-	// color: #fff;
+    // color: #fff;
 }
+
+.date-picker--static:hover .date-picker-hover,
+.date-picker-focus .date-picker-hover {
+    background: $color-fsa-aqua-200;
+    @include fsa-focus;
+}
+
 /*
     The "disabled days" style
 */
@@ -448,20 +474,20 @@
 	color:#fff;
    /*  color:rgba(3,3,3,.8);*/
 }
+.date-picker .date-picker-selected-date.date-picker-today {
+    background-image: none;
+}
+
 /*
     Remove the box-shadow for the inline datepickers
 */
 .static-datepicker table  {
-    -webkit-box-shadow:0 0 0 transparent;
-       -moz-box-shadow:0 0 0 transparent;
-            box-shadow:0 0 0 transparent;
+    box-shadow:0 0 0 transparent;
 }
 .date-picker-focus table  {
     border-color:#999;
     border-color:rgba(153,153,153,.8);
-    -webkit-box-shadow:0px 0px 5px #aaa;
-       -moz-box-shadow:0px 0px 5px #aaa;
-            box-shadow:0px 0px 5px #aaa;
+    box-shadow:0px 0px 5px #aaa;
 }
 /*
     Draggable datepickers
