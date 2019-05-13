@@ -29,19 +29,29 @@
 //.date-picker-button-active span, LINE BELOW FORMERLY
 .fsa-field__activate-button {
 }
-.fsa-field__calendar-action {
-    margin-left: $size-small;
-    .fsa-field__activate-button & {
-        margin-left: 0;
-        display: inline-block;
-        margin-top: $size-small;
-    }
+.fsa-field__activate-button .fsa-field__calendar-action {
+    margin-left: 0;
+    display: inline-block;
+    margin-top: $size-small;
 }
 .fsa-field__calendar-btn {
+    @include reset-button();
+    display: inline-block;
+    vertical-align: baseline;
+    width: $button-height;
+    height: $button-height;
+    overflow: hidden;
+    color: transparent;
+    text-indent: -300%;
+    background-image: url('#{$image-path}/calendar.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80% 80%;
     .fsa-field & {
         position: absolute;
-        right: $size-base;
-        top: $size-base;
+        right: 0;
+        top: 0;
+        bottom: 0;
     }
     .fsa-field__activate-button & {
         position: static;
