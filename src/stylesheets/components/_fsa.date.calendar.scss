@@ -5,7 +5,7 @@ $date-picker-table-border-color: $table-border-color;
 $date-picker-table-cell-border-color: tint($table-border-color, 50%);
 $date-picker-table-cell-padding: $size-default;
 $date-picker-bg-color: #fff;
-$date-picker-bg-color-disabled: $color-fsa-tertiary-100;
+$date-picker-bg-color-disabled: tint($color-fsa-tertiary, 96%);
 
 /*
     The wrapper div
@@ -240,20 +240,17 @@ $date-picker-bg-color-disabled: $color-fsa-tertiary-100;
   padding: $size-base;
   font-weight: $font-bold;
   border-bottom:1px solid $date-picker-table-border-color;
-  background-color: $color-fsa-tertiary-100;
 }
 /*     The "todays date" cell style */
 .date-picker .date-picker-today  {
-  box-shadow:
-    1px 0 0 0 inset $date-picker-table-cell-border-color,
-    -1px 0 0 0 inset $date-picker-table-cell-border-color
-  ;
-  background :
-    url(data:image/gif;base64,R0lGODlhKwEoAJEAAKnT6v////X6+gAAACH5BAAAAAAALAAAAAArASgAAALXjI+py+0Po5y02ouz3lz4D4biSJbmiabqyrbuC8fyLAcCgOf0zvf+DwwKhyJbDkdMKpfMpnNo1D2n1Kr1GowCsNyu99uNgsfksnlnPKvX7LbA5o7L51Q4/Y7P8+z6vv9fwgc4SJgnWIiYuHao2OgY9hgpecU4aXkJVIm5yQmj2QkaavIpWmpKapraiaraasnqGusIK1tbSGub64er23vH6xvsBixcfEZsnAyGrNyMxewcPQUtXb1EbZ0thK3d3cPtHV4jTl5Xft4Ejr4eyO6e9R7/LU8/UwAAOw==)
-    no-repeat
-    0
-    0
-  ;
+  font-weight: $font-bold;
+
+  // background :
+  //   url(data:image/gif;base64,R0lGODlhKwEoAJEAAKnT6v////X6+gAAACH5BAAAAAAALAAAAAArASgAAALXjI+py+0Po5y02ouz3lz4D4biSJbmiabqyrbuC8fyLAcCgOf0zvf+DwwKhyJbDkdMKpfMpnNo1D2n1Kr1GowCsNyu99uNgsfksnlnPKvX7LbA5o7L51Q4/Y7P8+z6vv9fwgc4SJgnWIiYuHao2OgY9hgpecU4aXkJVIm5yQmj2QkaavIpWmpKapraiaraasnqGusIK1tbSGub64er23vH6xvsBixcfEZsnAyGrNyMxewcPQUtXb1EbZ0thK3d3cPtHV4jTl5Xft4Ejr4eyO6e9R7/LU8/UwAAOw==)
+  //   no-repeat
+  //   0
+  //   0
+  // ;
 }
 .date-picker .month-out.date-picker-highlight   {
   // outline: 1px solid $date-picker-text-color-disabled;
