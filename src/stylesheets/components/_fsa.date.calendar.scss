@@ -1,9 +1,17 @@
 
+$date-picker-text-color-default: $color-fsa-base;
+$date-picker-text-color-disabled: tint($date-picker-text-color-default, 60%);
+$date-picker-table-border-color: $table-border-color;
+$date-picker-table-cell-border-color: tint($table-border-color, 50%);
+$date-picker-table-cell-padding: $size-default;
+$date-picker-bg-color: #fff;
+$date-picker-bg-color-disabled: $color-fsa-tertiary-100;
+
 /*
     The wrapper div
 */
 .date-picker   {
-  border: 1px solid $table-border-color;
+  border: 1px solid $date-picker-table-border-color;
   position:absolute;
   z-index:9999;
   text-align:center;
@@ -60,13 +68,14 @@
   display: block;
 }
 /*
+
   Hover effect for Next & Previous (month, year) buttons
 */
 .date-picker .prev-but:hover,
 .date-picker .next-but:hover,
 .date-picker .today-but:hover   {
   color: $color-fsa-link-hover;
-  outline: 1px solid red;
+  outline: 1px solid $date-picker-text-color-disabled;
 }
 
 .date-picker .prev-but:hover,
@@ -107,7 +116,12 @@
 .date-picker .fd-disabled,
 .date-picker .fd-disabled:hover    {
   cursor:cursor !important;
-  opacity:1;
+  opacity:.5;
+  filter: grayscale(1);
+}
+
+.date-picker .today-but.fd-disabled {
+  color: $date-picker-text-color-default !important;
 }
 
 .date-picker-disabled .date-picker-hover {
@@ -155,18 +169,21 @@
 }
 /*     Common TD & TH styling */
 .date-picker td,
-.date-picker tbody th    {
+.date-picker tbody th {
   // border: 0 none;
-  border: 1px solid tint($table-border-color, 50%);
-  padding: $size-small $size-base;
+  color: $date-picker-text-color-default;
+  width: $size-large;
+  border: 1px solid $date-picker-table-cell-border-color;
+  border-left: 0;
+  border-right: 0;
+  padding: $date-picker-table-cell-padding;
   line-height: 1;
   text-align: right;
   vertical-align: bottom;
   cursor: pointer;
-  color: $color-fsa-base;
-  overflow: hidden;
-  text-transform: none;
+  // overflow: hidden;
 }
+
 .date-picker th {
   @include font-size(1);
   border:0 none;
@@ -200,38 +217,38 @@
   cursor: help;
   border: 0 none;
   text-transform: uppercase;
-line-height: 1;
-padding: $size-small $size-base;
+  line-height: 1;
+  padding: $size-small $size-base;
 }
 /*     tfoot status bar */
 .date-picker .date-picker-statusbar  {
-  @include font-size(3);
-  line-height: 2;
+  @include font-size(2);
   cursor:default;
   font-weight:normal;
   text-transform:uppercase;
-  letter-spacing:0.1em;
   border:0 none;
+  padding: ($date-picker-table-cell-padding / 2);
   // background:#fff;
 }
 /*     TD cell that is _not_ used to display a day of the month */
 .date-picker .date-picker-unused  {
   cursor:default !important;
-  background-color: lemonchiffon;
 }
 /*     The TH cell used to display the "month, year" title */
 .date-picker .date-picker-title  {
   @include font-size(3);
   padding: $size-base;
   font-weight: $font-bold;
-  border-bottom:1px solid $table-border-color;
+  border-bottom:1px solid $date-picker-table-border-color;
   background-color: $color-fsa-tertiary-100;
 }
 /*     The "todays date" cell style */
 .date-picker .date-picker-today  {
-  box-shadow: 0 0 0 1px inset $color-fsa-tertiary-200;
-  background:
-    rgba(0,0,0,.4)
+  box-shadow:
+    1px 0 0 0 inset $date-picker-table-cell-border-color,
+    -1px 0 0 0 inset $date-picker-table-cell-border-color
+  ;
+  background :
     url(data:image/gif;base64,R0lGODlhKwEoAJEAAKnT6v////X6+gAAACH5BAAAAAAALAAAAAArASgAAALXjI+py+0Po5y02ouz3lz4D4biSJbmiabqyrbuC8fyLAcCgOf0zvf+DwwKhyJbDkdMKpfMpnNo1D2n1Kr1GowCsNyu99uNgsfksnlnPKvX7LbA5o7L51Q4/Y7P8+z6vv9fwgc4SJgnWIiYuHao2OgY9hgpecU4aXkJVIm5yQmj2QkaavIpWmpKapraiaraasnqGusIK1tbSGub64er23vH6xvsBixcfEZsnAyGrNyMxewcPQUtXb1EbZ0thK3d3cPtHV4jTl5Xft4Ejr4eyO6e9R7/LU8/UwAAOw==)
     no-repeat
     0
@@ -239,27 +256,22 @@ padding: $size-small $size-base;
   ;
 }
 .date-picker .month-out.date-picker-highlight   {
-  // outline: 1px solid orangered;
+  // outline: 1px solid $date-picker-text-color-disabled;
 }
 /*
   The "highlight days" style
 */
-.date-picker .date-picker-highlight   {     }
-/*
-  The "active cursor" style
-*/
-.date-picker td  {
-  /*
-
-  Uncomment this if you want a transition on the cursor cells scale effect
-
-  -webkit-transition: all .2s ease;
-     -moz-transition: all .2s ease;
-      -ms-transition: all .2s ease;
-       -o-transition: all .2s ease;
-          transition: all .2s ease;
-  */
+.date-picker .date-picker-highlight   {
 }
+
+/*
+  style specific weekdays
+*/
+.date-picker .day-5, // Saturday
+.date-picker .day-6, { // Sunday
+  // background-color: rgba(0,0,0,.05);
+}
+
 /*
   Keyboard users get a scaled cursor. webKit exhibits buggy behaviour when
   scaling TD cells so commented out until I find a curious CSS based fix.
@@ -292,9 +304,8 @@ padding: $size-small $size-base;
   The "disabled days" style
 */
 .date-picker .day-disabled  {
-  // opacity: .5;
-  color: red;
-  // background-color: tint($color-fsa-tertiary, 95%);
+  color: $date-picker-text-color-disabled;
+  background-color: $date-picker-bg-color-disabled;
 ;
   // text-decoration:line-through;
 }
@@ -305,29 +316,33 @@ padding: $size-small $size-base;
 .date-picker .month-out   {
 /*   border-color:#ddd;
   border-color:rgba(220,220,220,0.8);*/
-  color:black !important;
+  color:$date-picker-text-color-disabled;
 }
 /*
   The date "out of range" style
 */
 .date-picker .out-of-range,
 .date-picker .not-selectable  {
-  // color:#ccc;
+  color: $date-picker-text-color-disabled;
+  background-color: $date-picker-bg-color-disabled;
   cursor:default;
 }
+
 /*
   Week number "out of range" && "month-out" styles
 */
 .date-picker th.month-out,
 .date-picker th.out-of-range  {
-  color:red;
+  color: $date-picker-text-color-disabled;
+  background-color: $date-picker-bg-color-disabled;
   // background:#fcfcfc;
 }
 /*
   Week numbers "out of range"
 */
 .date-picker .out-of-range  {
-  color: red;
+  color: $date-picker-text-color-disabled;
+  background-color: $date-picker-bg-color-disabled;
   // opacity:0.6;
 }
 /*
@@ -335,8 +350,7 @@ padding: $size-small $size-base;
   selected
 */
 .date-picker .not-selectable  {
-  // opacity:.8;
-  color: limegreen;
+  color:$date-picker-text-color-disabled;
 }
 .date-picker tr  {
   display:table-row;
@@ -352,20 +366,27 @@ padding: $size-small $size-base;
   vertical-align: baseline !important;
   vertical-align: top;
 }
+
 .date-picker .date-picker-day-header,
 .date-picker .month-display,
 .date-picker .year-display  {
-  color: fuchsia;
+  color: $color-fsa-link;
+  cursor: pointer;
+  &:hover {
+    color: $color-fsa-link-hover
+  }
 }
 
 .date-picker .month-display,
 .date-picker .year-display  {
+  @include font-size(4);
+  color: $date-picker-text-color-default;
   cursor:default;
 }
 
 .date-picker .date-picker-hover   {
   z-index:99999;
-  overflow:hidden;
+  // overflow:hidden;
 }
 
 .date-picker td:focus {
@@ -395,9 +416,9 @@ padding: $size-small $size-base;
   box-shadow: none;
 }
 .date-picker-focus table  {
-  border-color:#999;
-  border-color:rgba(153,153,153,.8);
-  box-shadow:0px 0px 5px #aaa;
+  // border-color:#999;
+  // border-color:rgba(153,153,153,.8);
+  // box-shadow:0px 0px 5px #aaa;
 }
 /*
   Draggable datepickers
