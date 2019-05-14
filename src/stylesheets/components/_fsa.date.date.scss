@@ -7,19 +7,8 @@
 .fsa-field__date-input-hidden {
   display: none;
 }
-/*
-  Screen reader class - used to hide spans inside each cell from the visual
-  display. See: http://webaim.org/techniques/css/invisiblecontent/
-*/
-/*
-  The activation "button" created beside each input for popup datePickers
-*/
 
-/*
-  The hover effect on the activation button
-*/
 //.date-picker-button-active span, LINE BELOW FORMERLY
-
 .fsa-field__calendar-action {
   .fsa-input + & {
     margin-left: -($button-height - .2rem);
@@ -29,6 +18,7 @@
     margin-left: initial;
   }
 }
+
 .fsa-field__calendar-btn {
   @include reset-button();
   display: inline-block;
@@ -38,20 +28,20 @@
   overflow: hidden;
   color: transparent;
   text-indent: -300%;
-  background-image: url('#{$image-path}/calendar.png');
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUAQMAAAC3R49OAAAABlBMVEUAAABJREA45cQRAAAAAXRSTlMAQObYZgAAAChJREFUCFtjePingOH//w9wfIDBAIJzN0AwkH0bSIMwBjsBgkFsqH4ADXIlBDFW/AsAAAAASUVORK5CYII=');
+  // background-image: url('#{$image-path}/calendar.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%;
   position: relative;
   top: -1px;
   .fsa-field & {
-      position: absolute;
-      right: -1px;
-      top: 0;
-      bottom: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
   }
   &[disabled] {
-      opacity: .4;
+    opacity: .4;
   }
 }
 
@@ -64,11 +54,10 @@
   get fed "normal" png images within the rule that follows.
 */
 .fsa-field__calendar-btn:link,
-.fsa-field__calendar-btn:visited   { // FORMERLY .date-picker-control
+.fsa-field__calendar-btn:visited {
+  // FORMERLY .date-picker-control
 }
-/*
-  IE6 & 7 fed "normal" png images
-*/
+
 /*
   If the datepicker has a valid date then use a different icon for the
   activation button to let the user know. It's a little detail but it's the
@@ -76,8 +65,8 @@
 */
 .fsa-field__calendar-btn--date-is-valid,
 .fsa-field__calendar-btn--date-is-valid:link,
-.fsa-field__calendar-btn--date-is-valid:visited   { // FORMERLY .date-picker-dateval
-  color: limegreen;
+.fsa-field__calendar-btn--date-is-valid:visited {
+  // FORMERLY .date-picker-dateval
 }
 
 /*
@@ -87,5 +76,6 @@
 .fsa-field__calendar-btn--active:visited,
 .fsa-field__calendar-btn:focus,
 .fsa-field__calendar-btn:hover,
-.fsa-field__calendar-btn:active  { // FORMERLY .date-picker-control
+.fsa-field__calendar-btn:active {
+  // FORMERLY .date-picker-control
 }
