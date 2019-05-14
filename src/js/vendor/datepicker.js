@@ -2107,6 +2107,7 @@ var datePickerController = (function datePickerController() {
         //but.title       = getTitleTranslation(5);
         but.id = "fd-but-" + this.id;
         but.setAttribute("type", "button");
+        but.setAttribute("title", "Open Calendar");
         // span.className = "fsa-field__calendar-icon-wrapper";
         span.setAttribute("aria-hidden", "true");
 
