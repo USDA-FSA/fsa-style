@@ -208,6 +208,10 @@ var datePickerController = (function datePickerController() {
                     nodrag = !!value;
                     return true;
                 },
+                "enableFirstDayOfWeekClick": function(value) {
+                    enableFirstDayOfWeekClick = !!value;
+                    return true;
+                },
                 "buttontabindex": function(value) {
                     buttonTabIndex = !!value;
                     return true;
@@ -1533,18 +1537,24 @@ var datePickerController = (function datePickerController() {
                     break;
                     // Day headers clicked, change the first day of the week
                 } else if (el.className.search(/date-picker-day-header/) != -1) {
-                    var cnt = o.showWeeks ? -1 : 0,
-                        elem = el;
 
-                    while (elem.previousSibling) {
-                        elem = elem.previousSibling;
-                        if (elem.tagName && elem.tagName.toLowerCase() == "th") {
-                            cnt++;
+                    
+
+                    if(o.enableFirstDayOfWeekClick) {
+
+                        var cnt = o.showWeeks ? -1 : 0,
+                            elem = el;
+
+                        while (elem.previousSibling) {
+                            elem = elem.previousSibling;
+                            if (elem.tagName && elem.tagName.toLowerCase() == "th") {
+                                cnt++;
+                            };
                         };
-                    };
 
-                    o.firstDayOfWeek = (o.firstDayOfWeek + cnt) % 7;
-                    o.updateTableHeaders();
+                        o.firstDayOfWeek = (o.firstDayOfWeek + cnt) % 7;
+                        o.updateTableHeaders();
+                    }
                     break;
                 };
                 try {
@@ -1785,7 +1795,7 @@ var datePickerController = (function datePickerController() {
                 };
                 kc -= 49;
                 o.firstDayOfWeek = (o.firstDayOfWeek + kc) % 7;
-                o.updateTableHeaders();
+                if(o.enableFirstDayOfWeekClick) o.updateTableHeaders();
                 return stopEvent(e);
             };
 
@@ -3263,6 +3273,9 @@ var datePickerController = (function datePickerController() {
         return !(!elem || !elem.tagName || !((elem.tagName.toLowerCase() == "input" && (elem.type == "text" || elem.type == "hidden")) || elem.tagName.toLowerCase() == "select"));
     };
     var addDatePicker = function(options) {
+
+				localeDefaults.firstDayOfWeek = options.firstDayOfWeek ? options.firstDayOfWeek : 0;
+
         updateLanguage();
 
         if (!options.formElements) {
@@ -3447,6 +3460,9 @@ var datePickerController = (function datePickerController() {
             noFadeEffect: !!(options.staticPos) ? true : !!(options.noFadeEffect),
             // No drag functionality
             dragDisabled: nodrag || !!(options.staticPos) ? true : !!(options.dragDisabled),
+            
+            enableFirstDayOfWeekClick: options.enableFirstDayOfWeekClick ? true : false,
+
             // Bespoke tabindex for this datePicker (or its activation button)
             bespokeTabIndex: options.bespokeTabindex && typeof options.bespokeTabindex == 'number' ? parseInt(options.bespokeTabindex, 10) : 0,
             // Bespoke titles
