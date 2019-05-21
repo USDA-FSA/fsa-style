@@ -1538,7 +1538,7 @@ var datePickerController = (function datePickerController() {
                     // Day headers clicked, change the first day of the week
                 } else if (el.className.search(/date-picker-day-header/) != -1) {
 
-                    
+
 
                     if(o.enableFirstDayOfWeekClick) {
 
@@ -2231,7 +2231,6 @@ var datePickerController = (function datePickerController() {
             this.setDateFromInput();
         };
     };
-
     datePicker.prototype.setDisabledDates = function(dateObj) {
         this.filterDateList(dateObj, true);
     };
@@ -2948,7 +2947,6 @@ var datePickerController = (function datePickerController() {
         nMonth = (nMonth + 12) % 12;
         return (((0 == (nYear % 4)) && ((0 != (nYear % 100)) || (0 == (nYear % 400)))) && nMonth == 1) ? 29 : [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][nMonth];
     };
-
     var getWeeksInYear = function(Y) {
         if (Y in weeksInYearCache) {
             return weeksInYearCache[Y];
@@ -2964,7 +2962,6 @@ var datePickerController = (function datePickerController() {
 
         return weeksInYearCache[Y];
     };
-
     var getWeekNumber = function(y, m, d) {
         var d = new Date(y, m, d, 0, 0, 0),
             DoW = d.getDay(),
@@ -2979,7 +2976,6 @@ var datePickerController = (function datePickerController() {
 
         return Math.round((ms - d.valueOf()) / (7 * 864e5)) + 1;
     };
-
     var printFormattedDate = function(date, fmt, useImportedLocale) {
         if (!date || isNaN(date)) {
             return fmt;
@@ -3196,7 +3192,6 @@ var datePickerController = (function datePickerController() {
             "y": yp ? +y : false
         };
     };
-
     var findLabelForElement = function(element) {
         var label;
         if (element.parentNode && element.parentNode.tagName.toLowerCase() == "label") {
@@ -3242,8 +3237,6 @@ var datePickerController = (function datePickerController() {
             }
         }
     };
-
-
     var updateLanguage = function() {
         selectFdLocale();
         if (typeof(window.fdLocale) == "object") {
@@ -3461,7 +3454,7 @@ var datePickerController = (function datePickerController() {
             noFadeEffect: !!(options.staticPos) ? true : !!(options.noFadeEffect),
             // No drag functionality
             dragDisabled: nodrag || !!(options.staticPos) ? true : !!(options.dragDisabled),
-            
+
             enableFirstDayOfWeekClick: options.enableFirstDayOfWeekClick ? true : false,
 
             // Bespoke tabindex for this datePicker (or its activation button)
