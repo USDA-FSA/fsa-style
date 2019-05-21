@@ -1026,8 +1026,8 @@ var datePickerController = (function datePickerController() {
             o = null;
         };
         this.resizeInlineDiv = function() {
-            o.div.style.width = o.table.offsetWidth + "px";
-            o.div.style.height = o.table.offsetHeight + "px";
+            // o.div.style.width = o.table.offsetWidth + "px";
+            // o.div.style.height = o.table.offsetHeight + "px";
         };
 
         this.reset = function() {
