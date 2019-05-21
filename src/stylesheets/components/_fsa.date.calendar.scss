@@ -218,8 +218,8 @@ $date-picker-bg-color-hover: $color-fsa-aqua-100;
 
 .date-picker .date-picker-highlight { /* The "highlight days" style */ }
 
-.date-picker .day-5 { // Saturday }
-.date-picker .day-6 { // Sunday // border-right: 1px solid $date-picker-border-color; }
+.date-picker .day-5 { /* Saturday*/ }
+.date-picker .day-6 { /* Sunday */ }
 
 .date-picker-focus {
   box-shadow: 0 $size-base $size-small 0 rgba(0, 0, 0, .25);
