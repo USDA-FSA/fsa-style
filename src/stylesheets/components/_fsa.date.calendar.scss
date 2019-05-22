@@ -7,10 +7,6 @@ $date-picker-bg-color: #fff;
 $date-picker-bg-color-disabled: tint($color-fsa-tertiary, 96%);
 $date-picker-bg-color-hover: $color-fsa-aqua-100;
 
-/*
-    The wrapper div
-*/
-
 .date-picker {
   border: 1px solid $date-picker-border-color;
   position: absolute;
@@ -84,8 +80,6 @@ $date-picker-bg-color-hover: $color-fsa-aqua-100;
     cursor: not-allowed !important;
   }
 }
-
-/*     Disabled buttons */
 
 .date-picker-disabled .prev-but,
 .date-picker-disabled .next-but,
@@ -337,10 +331,6 @@ $date-picker-bg-color-hover: $color-fsa-aqua-100;
 .date-picker .date-picker-selected-date.date-picker-today {
   background-image: none;
 }
-
-/*
-  Draggable datepickers
-*/
 
 .date-picker .drag-enabled,
 .date-picker .drag-enabled span {
