@@ -7,6 +7,32 @@ $date-picker-bg-color: #fff;
 $date-picker-bg-color-disabled: tint($color-fsa-tertiary, 96%);
 $date-picker-bg-color-hover: $color-fsa-aqua-100;
 
+// .sample-bespoke-class {
+//   outline: 2px solid blue;
+// }
+
+@mixin date-picker-disabled-item($opacity: .6) {
+  cursor: text;
+  opacity: $opacity !important;
+  filter: grayscale(1);
+}
+
+@mixin date-picker-cell-default {
+  color: $date-picker-text-color-default;
+  width: $size-large;
+  border: 1px solid $date-picker-table-cell-border-color;
+  border-left: 0;
+  border-right: 0;
+  padding: $date-picker-table-cell-padding;
+  line-height: 1;
+  text-align: center;
+  vertical-align: bottom;
+  cursor: pointer;
+  &:last-child {
+    padding: $date-picker-table-cell-padding;
+  }
+}
+
 /* body */.date-picker-is-dragging {
 }
 
@@ -38,12 +64,11 @@ $date-picker-bg-color-hover: $color-fsa-aqua-100;
   }
 
   &--disabled {
-    opacity: .6 !important;
+    @include date-picker-disabled-item();
     background-color: transparent;
-    filter: grayscale(1);
     &:hover *,
     &:hover {
-      cursor: not-allowed !important;
+      cursor: text;
     }
   }
 
@@ -55,24 +80,40 @@ $date-picker-bg-color-hover: $color-fsa-aqua-100;
 
   &--weeks-displayed {}
 
+  // ----------------------------------------------------------------------------
+  // Header
+
+  &__title-month,
+  &__title-year {
+    @include font-size(4);
+    display: inline-block;
+    line-height: 1;
+    margin: $size-small 0;
+    color: $date-picker-text-color-default;
+    // cursor: text;
+  }
+
+  // ----------------------------------------------------------------------------
+  // Variations
+
+  &__row {}
+
+  &__row--highlight {}
+
+  &__tfoot {}
+
 }
 
-.date-picker .date-picker__month-display,
-.date-picker .date-picker__year-display {
-  display: inline-block;
-  color: $color-fsa-secondary-900;
-}
-
-.date-picker .date-picker__prev-but,
-.date-picker .date-picker__next-but {
+.date-picker__prev-but,
+.date-picker__next-but {
   @include font-size(6);
   font-weight: normal;
   cursor: pointer;
 }
 
-.date-picker .date-picker__prev-but,
-.date-picker .date-picker__next-but,
-.date-picker .date-picker__today-but {
+.date-picker__prev-but,
+.date-picker__next-but,
+.date-picker__today-but {
   color: $color-fsa-link;
   display: block;
 }
@@ -83,18 +124,18 @@ $date-picker-bg-color-hover: $color-fsa-aqua-100;
 .date-picker__next-but--year {}
 .date-picker__next-but--month {}
 
-.date-picker .date-picker__prev-but:hover,
-.date-picker .date-picker__next-but:hover,
-.date-picker .date-picker__today-but:hover {
+.date-picker__prev-but:hover,
+.date-picker__next-but:hover,
+.date-picker__today-but:hover {
   color: $color-fsa-link-hover;
 }
 
-.date-picker .date-picker__prev-but:hover,
-.date-picker .date-picker__next-but:hover {
+.date-picker__prev-but:hover,
+.date-picker__next-but:hover {
   outline: 1px solid $date-picker-text-color-disabled;
 }
 
-.date-picker .date-picker__today-but {
+.date-picker__today-but {
   @include font-size(3);
   display: block;
   padding-top: $size-small;
@@ -117,18 +158,21 @@ $date-picker-bg-color-hover: $color-fsa-aqua-100;
 .date-picker .date-picker__next-but.date-picker__disabled-item:hover,
 .date-picker .date-picker__disabled-item,
 .date-picker .date-picker__disabled-item:hover {
-  cursor: cursor !important;
-  opacity: .5;
-  filter: grayscale(1);
+  @include date-picker-disabled-item(1);
 }
 
-.date-picker .date-picker__today-but.date-picker__disabled-item {
-  opacity: 1;
-  filter: grayscale(0);
+.date-picker__today-but.date-picker__disabled-item {
+  @include date-picker-disabled-item(1);
 }
 
-.date-picker .date-picker__day { /* [class*="date-picker__day"] */ }
-.date-picker .date-picker__day-name {}
+.date-picker__day {
+  @include date-picker-cell-default();
+}
+
+.date-picker__day-name {
+  display: block;
+  padding: $date-picker-table-cell-padding;
+}
 
 .date-picker--disabled .date-picker__day--hover {
   outline: 0 !important;
@@ -136,15 +180,9 @@ $date-picker-bg-color-hover: $color-fsa-aqua-100;
 }
 
 .date-picker .date-picker__prev-but.date-picker__disabled-item:hover,
-.date-picker .date-picker__next-but.date-picker__disabled-item:hover {}
-
-.date-picker table,
-.date-picker td,
-.date-picker tbody th,
-.date-picker .date-picker__day--disabled,
-.date-picker .date-picker__day--hover.date-picker__day--disabled,
-.date-picker .date-picker__day--unused,
-.date-picker .date-picker__day--month-out {}
+.date-picker .date-picker__next-but.date-picker__disabled-item:hover {
+  cursor: text;
+}
 
 .date-picker__table {
   @include font-size(2);
@@ -160,99 +198,79 @@ $date-picker-bg-color-hover: $color-fsa-aqua-100;
   height: auto;
 }
 
-.date-picker td,
-.date-picker tbody th {
-  color: $date-picker-text-color-default;
-  width: $size-large;
-  border: 1px solid $date-picker-table-cell-border-color;
-  border-left: 0;
-  border-right: 0;
-  padding: $date-picker-table-cell-padding;
-  line-height: 1;
-  text-align: center;
-  vertical-align: bottom;
-  cursor: pointer;
+
+.date-picker__thead {
+  th {
+    padding: 0;
+    text-align: center;
+  }
 }
 
-.date-picker th {
-  @include font-size(1);
-  border: 0 none;
-  padding: 0;
-  text-align: center;
-  vertical-align: middle;
-  text-transform: none;
-}
+.date-picker__week-header {
 
-.date-picker .date-picker__row {}
-
-.date-picker .date-picker__row--highlight {}
-
-.date-picker .date-picker__week-header {
+  @include date-picker-cell-default();
   @include font-size(0);
   background: transparent;
-  cursor: default;
+  cursor: text;
   border-left: 0;
   font-weight: $font-bold;
   background-color: tint($color-fsa-tertiary, 95%);
   border-right: 1px solid $date-picker-border-color;
+
+  .date-picker__thead & {
+    vertical-align: middle;
+    background-color: transparent;
+    font-weight: normal;
+    text-transform: uppercase;
+    border-right: 0;
+    cursor: help;
+  }
+
 }
 
-.date-picker .date-picker__thead {}
 
-.date-picker .date-picker__thead .date-picker__week-header {
-  background-color: transparent;
-  font-weight: normal;
-  text-transform: uppercase;
-  cursor: help;
-}
-
-.date-picker .date-picker__day--header {
+.date-picker__day--header {
   /* The "mon tue wed thu fri sat sun" day header styles */
+  @include font-size(1);
+  border: 0 none;
+  text-align: center;
+  vertical-align: middle;
   cursor: help;
   text-transform: uppercase;
   padding: $size-small $size-base;
 }
 
-.date-picker .date-picker__status-bar {
-  /* tfoot status bar */
-  @include font-size(2);
-  cursor: default;
-  font-weight: normal;
-  text-transform: uppercase;
-  border: 0 none;
-  padding: ($date-picker-table-cell-padding / 2);
-}
-
-.date-picker .date-picker__day--unused {
+.date-picker__day--unused {
   /* TD cell that is _not_ used to display a day of the month */
-  cursor: default !important;
+  cursor: text !important;
 }
 
-.date-picker .date-picker__title {
+.date-picker__title {
   /* [month] [year] title */
   @include font-size(3);
+  text-align: center;
   padding: $size-base;
   font-weight: $font-bold;
   border-bottom: 1px solid $date-picker-border-color;
 }
 
-.date-picker .date-picker__day--today {
+.date-picker__day--today {
   /* The "todays date" cell style */
   font-weight: $font-bold;
 }
 
-.date-picker .date-picker__day--month-out.date-picker__day--highlight {}
+.date-picker__day--month-out.date-picker__day--highlight {}
 
 
-.date-picker .date-picker__day--highlight { /* The "highlight days" style */ }
+.date-picker__day--highlight { /* The "highlight days" style */ }
 
-.date-picker .date-picker__day--0 { /* Monday */ }
-.date-picker .date-picker__day--1 { /* Tuesday */ }
-.date-picker .date-picker__day--2 { /* Wednesday */ }
-.date-picker .date-picker__day--3 { /* Thursday */ }
-.date-picker .date-picker__day--4 { /* Friday */ }
-.date-picker .date-picker__day--5 { /* Saturday */ }
-.date-picker .date-picker__day--6 { /* Sunday */ }
+.date-picker__day--0 { /* Monday */ }
+.date-picker__day--1 { /* Tuesday */ }
+.date-picker__day--2 { /* Wednesday */ }
+.date-picker__day--3 { /* Thursday */ }
+.date-picker__day--4 { /* Friday */ }
+.date-picker__day--5 { /* Saturday */ }
+.date-picker__day--6 { /* Sunday */ }
 
 .date-picker--focus .date-picker__day--hover {
   outline: 3px solid $color-focus !important;
@@ -272,39 +290,40 @@ $date-picker-bg-color-hover: $color-fsa-aqua-100;
   background: $date-picker-bg-color-hover;
 }
 
-.date-picker .date-picker__day--disabled {
+.date-picker__day--disabled {
   color: $date-picker-text-color-disabled;
   background-color: $date-picker-bg-color-disabled;
 }
 
-.date-picker .date-picker__day--disabled:hover {
+.date-picker__day--disabled:hover {
   background-color: $date-picker-bg-color-disabled;
   filter: grayscale(1);
   color: inherit;
 }
 
-.date-picker .date-picker__day--month-out { /* Used only when `fillGrid: true` */ }
+.date-picker__day--month-out { /* Used only when `fillGrid: true` */ }
 
-.date-picker .date-picker__day--out-of-range,
-.date-picker .date-picker__day--not-selectable {
+.date-picker__day--out-of-range,
+.date-picker__day--not-selectable {
+
   color: $date-picker-text-color-disabled;
   background-color: $date-picker-bg-color-disabled;
-  cursor: default;
+  cursor: text;
 }
 
-.date-picker th.date-picker__day--month-out,
-.date-picker th.date-picker__day--out-of-range {
+th.date-picker__day--month-out,
+th.date-picker__day--out-of-range {
   /* Week number "out of range" && "date-picker__day--month-out" styles */
   color: $date-picker-text-color-disabled;
   background-color: $date-picker-bg-color-disabled;
 }
 
-.date-picker .date-picker__day--out-of-range {
+.date-picker__day--out-of-range {
   color: $date-picker-text-color-disabled;
   background-color: $date-picker-bg-color-disabled;
 }
 
-.date-picker .date-picker__day--not-selectable {
+.date-picker__day--not-selectable {
   /* Used when the entire grid is full but the next/prev months dates cannot be selected */
   color: $date-picker-text-color-disabled;
 }
@@ -313,40 +332,26 @@ $date-picker-bg-color-hover: $color-fsa-aqua-100;
   text-transform: none;
 }
 
-.date-picker .date-picker__day--header,
-.date-picker .date-picker__month-display,
-.date-picker .date-picker__year-display {
-  color: $color-fsa-link;
-  cursor: pointer;
-  &:hover {
-    color: $color-fsa-link-hover
-  }
+.date-picker__day--header {
 }
 
-.date-picker .date-picker__month-display,
-.date-picker .date-picker__year-display {
-  @include font-size(4);
-  color: $date-picker-text-color-default;
-  cursor: default;
-}
-
-.date-picker .date-picker__day--hover {
+.date-picker__day--hover {
   z-index: 99999;
   // overflow:hidden;
 }
 
-.date-picker td[tabindex]:focus {
+.date-picker__day[tabindex]:focus {
   outline: 0;
 }
 
-.date-picker .date-picker__day--selected-date {
+.date-picker__day--selected-date {
   background-color: $color-fsa-secondary-900;
   color: #fff;
   font-weight: $font-bold;
 }
 
-.date-picker .date-picker--drag-enabled,
-.date-picker .date-picker--drag-enabled span {
+.date-picker--drag-enabled,
+.date-picker--drag-enabled span {
   cursor: move;
 }
 
@@ -358,20 +363,16 @@ $date-picker-bg-color-hover: $color-fsa-aqua-100;
 .date-picker--disabled td,
 .date-picker--disabled th,
 .date-picker--disabled th span {
-  cursor: default !important;
+  cursor: text !important;
 }
 
-.date-picker .date-picker__tfoot {}
-
-
-///////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
-// SHAME TOD
-
-// .sample-bespoke-class {
-//   outline: 2px solid blue;
-// }
+.date-picker__status-bar {
+  /* tfoot status bar */
+  @include font-size(2);
+  text-align: center;
+  cursor: text;
+  font-weight: normal;
+  text-transform: uppercase;
+  border: 0 none;
+  padding: ($date-picker-table-cell-padding / 2);
+}

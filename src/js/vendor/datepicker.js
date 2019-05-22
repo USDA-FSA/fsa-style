@@ -846,7 +846,7 @@ var datePickerController = (function datePickerController() {
                     weekDay = (weekDay + dt + 6) % 7;
 
                     // Push a classname representing the weekday e.g. "day-3"
-                    cName.push("date-picker__day--" + weekDay + " date-picker__cell--" + curr);
+                    cName.push("date-picker__day date-picker__day--" + weekDay + " date-picker__cell--" + curr);
 
                     // A YYYYMMDD String representation of this cells date
                     currentDate = currentStub + String(dt < 10 ? "0" : "") + dt;
@@ -854,7 +854,7 @@ var datePickerController = (function datePickerController() {
                     // If this cells date is out of range
                     if (o.rangeLow && +currentDate < +o.rangeLow || o.rangeHigh && +currentDate > +o.rangeHigh) {
                         // Add a classname to style the cell and stop selection
-                        td.className = "date-picker__day--out-of-range";
+                        td.className = "date-picker__day date-picker__day--out-of-range";
                         // Reset this TD nodes title attribute
                         //td.title = "";
                         // Append the cells date as a text node to the TD
@@ -939,7 +939,7 @@ var datePickerController = (function datePickerController() {
                     // The current TD node is empty i.e. represents no date in the UI
                 } else {
                     // Add a classname to style the cell
-                    td.className = "date-picker__day--unused";
+                    td.className = "date-picker__day date-picker__day--unused";
                     // Add a non-breaking space to unused TD node (for IEs benefit mostly)
                     td.appendChild(document.createTextNode(nbsp));
                     // Reset the TD nodes title attribute
@@ -1215,12 +1215,12 @@ var datePickerController = (function datePickerController() {
 
             var span = document.createElement('span');
             span.appendChild(document.createTextNode(nbsp));
-            span.className = "date-picker__month-display" + dragEnabledCN;
+            span.className = "date-picker__title-month" + dragEnabledCN;
             this.titleBar.appendChild(span);
 
             span = document.createElement('span');
             span.appendChild(document.createTextNode(nbsp));
-            span.className = "date-picker__year-display" + dragEnabledCN;
+            span.className = "date-picker__title-year" + dragEnabledCN;
             this.titleBar.appendChild(span);
 
             span = null;
@@ -1537,8 +1537,6 @@ var datePickerController = (function datePickerController() {
                     break;
                     // Day headers clicked, change the first day of the week
                 } else if (el.className.search(/date-picker__day--header/) != -1) {
-
-
 
                     if(o.enableFirstDayOfWeekClick) {
 
