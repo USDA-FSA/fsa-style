@@ -103,7 +103,8 @@ $date-picker-bg-color-hover: $color-fsa-aqua-100;
 }
 
 .date-picker .today-but.fd-disabled {
-  color: $date-picker-text-color-default !important;
+  opacity: 1;
+  filter: grayscale(0);
 }
 
 .date-picker-disabled .date-picker-hover {
