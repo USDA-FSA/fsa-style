@@ -644,7 +644,7 @@ var datePickerController = (function datePickerController() {
             var td = document.getElementById(o.id + "-date-picker__day--hover");
 
             if (td && !(td.getElementsByTagName("span").length)) {
-                var ymd = td.className.match(/cd-([\d]{4})([\d]{2})([\d]{2})/),
+                var ymd = td.className.match(/date-picker__day--cd-([\d]{4})([\d]{2})([\d]{2})/),
                     noS = td.className.search(noSelectionRegExp) != -1,
                     spn = document.createElement('span'),
                     spnC;
@@ -866,14 +866,14 @@ var datePickerController = (function datePickerController() {
                         // This cells date is within the lower & upper ranges (or no ranges have been defined)
                     } else {
                         // If it's a date from last or next month and the "constrainSelection" option
-                        // is false then give the cell a CD-YYYYMMDD class
+                        // is false then give the cell a date-picker__day--CD-YYYYMMDD class
                         if (selectable) {
                             //td.title = titleFormat ? printFormattedDate(new Date(+String(currentStub).substr(0,4), +String(currentStub).substr(4, 2) - 1, +dt), titleFormat, true) : "";
-                            cName.push("cd-" + currentDate + " yyyymm-" + currentStub + " mmdd-" + currentStub.substr(4, 2) + pad(dt));
+                            cName.push("date-picker__day--cd-" + currentDate + " date-picker__day--yyyymm-" + currentStub + " date-picker__day--mmdd-" + currentStub.substr(4, 2) + pad(dt));
                             // Otherwise give a "date-picker__day--not-selectable" class (which shouldn't be styled in any way, it's for internal use)
                         } else {
                             //td.title = titleFormat ? getTitleTranslation(13) + " " + printFormattedDate(new Date(+String(currentStub).substr(0,4), +String(currentStub).substr(4, 2) - 1, +dt), titleFormat, true) : "";
-                            cName.push("yyyymm-" + currentStub + " mmdd-" + currentStub.substr(4, 2) + pad(dt) + " date-picker__day--not-selectable");
+                            cName.push("date-picker__day--yyyymm-" + currentStub + " date-picker__day--mmdd-" + currentStub.substr(4, 2) + pad(dt) + " date-picker__day--not-selectable");
                         };
 
                         // Add a classname if the current cells date is today
@@ -1320,7 +1320,7 @@ var datePickerController = (function datePickerController() {
 
                 if (y > (this.showWeeks ? 0 : -1)) {
                     but = document.createElement("span");
-                    but.className = "fd-day-header";
+                    but.className = "date-picker__day-name";
 
                     if (oldIE) {
                         but.unselectable = "on";
@@ -1346,7 +1346,7 @@ var datePickerController = (function datePickerController() {
 
             if (this.showWeeks) {
                 this.wkThs = this.table.getElementsByTagName('tbody')[0].getElementsByTagName('th');
-                this.div.className += " weeks-displayed";
+                this.div.className += " date-picker--weeks-displayed";
             };
 
             tableBody = tableHead = tr = createThAndButton = createTH = null;
@@ -1407,7 +1407,7 @@ var datePickerController = (function datePickerController() {
         };
         this.stopDrag = function(e) {
             var b = document.getElementsByTagName("body")[0];
-            removeClass(b, "fd-drag-active");
+            removeClass(b, "date-picker-is-dragging");
             removeEvent(document, 'mousemove', o.trackDrag, false);
             removeEvent(document, 'mouseup', o.stopDrag, false);
             o.div.style.zIndex = 9999;
@@ -1440,7 +1440,7 @@ var datePickerController = (function datePickerController() {
                 return true;
             };
 
-            if ((o.div.className + origEl.className).search('fd-disabled') != -1) {
+            if ((o.div.className + origEl.className).search('date-picker__disabled-item') != -1) {
                 return true;
             };
 
@@ -1489,7 +1489,7 @@ var datePickerController = (function datePickerController() {
                 o.y = parseInt(o.div.style.top);
                 addEvent(document, 'mousemove', o.trackDrag, false);
                 addEvent(document, 'mouseup', o.stopDrag, false);
-                addClass(document.getElementsByTagName("body")[0], "fd-drag-active");
+                addClass(document.getElementsByTagName("body")[0], "date-picker-is-dragging");
                 o.div.style.zIndex = 10000;
 
                 return stopEvent(e);
@@ -1508,11 +1508,11 @@ var datePickerController = (function datePickerController() {
                 // Are we within a valid i.e. clickable TD node
                 if (el.tagName && el.tagName.toLowerCase() == "td") {
 
-                    if (el.className.search(/cd-([0-9]{8})/) == -1 || el.className.search(noSelectionRegExp) != -1) {
+                    if (el.className.search(/date-picker__day--cd-([0-9]{8})/) == -1 || el.className.search(noSelectionRegExp) != -1) {
                         return stopEvent(e);
                     };
 
-                    var cellDate = el.className.match(/cd-([0-9]{8})/)[1];
+                    var cellDate = el.className.match(/date-picker__day--cd-([0-9]{8})/)[1];
                     o.date = new Date(cellDate.substr(0, 4), cellDate.substr(4, 2) - 1, cellDate.substr(6, 2));
                     o.dateSet = new Date(o.date);
                     o.noFocus = true;
@@ -1749,7 +1749,7 @@ var datePickerController = (function datePickerController() {
             if (kc == 13 || (kc == 32 && !e.ctrlKey)) {
                 // RETURN/ENTER: close & select the date
                 var td = document.getElementById(o.id + "-date-picker__day--hover");
-                if (!td || td.className.search(/cd-([0-9]{8})/) == -1 || td.className.search(/date-picker__day--out-of-range|date-picker__day--disabled/) != -1) {
+                if (!td || td.className.search(/date-picker__day--cd-([0-9]{8})/) == -1 || td.className.search(/date-picker__day--out-of-range|date-picker__day--disabled/) != -1) {
                     return stopEvent(e);
                 };
                 o.dateSet = new Date(o.date);
@@ -1878,7 +1878,7 @@ var datePickerController = (function datePickerController() {
 
                 // Locate this TD
                 for (var i = 0, td; td = o.tds[i]; i++) {
-                    if (td.className.search("cd-" + t) == -1) {
+                    if (td.className.search("date-picker__day--cd-" + t) == -1) {
                         continue;
                     };
 
@@ -1934,9 +1934,9 @@ var datePickerController = (function datePickerController() {
                     if (el.className.search(/date-picker__day--unused|date-picker__day--out-of-range/) != -1) {
                         statusText = getTitleTranslation(9);
                     }
-                    if (el.className.search(/cd-([0-9]{8})/) != -1) {
+                    if (el.className.search(/date-picker__day--cd-([0-9]{8})/) != -1) {
                         o.stopTimer();
-                        var cellDate = el.className.match(/cd-([0-9]{8})/)[1];
+                        var cellDate = el.className.match(/date-picker__day--cd-([0-9]{8})/)[1];
 
                         o.removeOldFocus();
                         el.id = o.id + "-date-picker__day--hover";
@@ -2735,13 +2735,13 @@ var datePickerController = (function datePickerController() {
     };
     datePicker.prototype.disableTodayButton = function() {
         var today = new Date();
-        removeClass(this.butToday, "fd-disabled");
+        removeClass(this.butToday, "date-picker__disabled-item");
         if (this.outOfRange(today) ||
             (this.date.getDate() == today.getDate() &&
                 this.date.getMonth() == today.getMonth() &&
                 this.date.getFullYear() == today.getFullYear())
         ) {
-            addClass(this.butToday, "fd-disabled");
+            addClass(this.butToday, "date-picker__disabled-item");
         };
     };
     datePicker.prototype.updateTableHeaders = function() {
@@ -2802,39 +2802,39 @@ var datePickerController = (function datePickerController() {
             tdy = tmpDate.getFullYear();
 
         if (this.outOfRange(new Date((tdy - 1), tdm, daysInMonth(+tdm, tdy - 1)))) {
-            addClass(this.butPrevYear, "fd-disabled");
+            addClass(this.butPrevYear, "date-picker__disabled-item");
             if (this.yearInc == -1) {
                 this.stopTimer();
             };
         } else {
-            removeClass(this.butPrevYear, "fd-disabled");
+            removeClass(this.butPrevYear, "date-picker__disabled-item");
         };
 
         if (this.outOfRange(new Date(tdy, (+tdm - 1), daysInMonth(+tdm - 1, tdy)))) {
-            addClass(this.butPrevMonth, "fd-disabled");
+            addClass(this.butPrevMonth, "date-picker__disabled-item");
             if (this.monthInc == -1) {
                 this.stopTimer();
             };
         } else {
-            removeClass(this.butPrevMonth, "fd-disabled");
+            removeClass(this.butPrevMonth, "date-picker__disabled-item");
         };
 
         if (this.outOfRange(new Date((tdy + 1), +tdm, 1))) {
-            addClass(this.butNextYear, "fd-disabled");
+            addClass(this.butNextYear, "date-picker__disabled-item");
             if (this.yearInc == 1) {
                 this.stopTimer();
             };
         } else {
-            removeClass(this.butNextYear, "fd-disabled");
+            removeClass(this.butNextYear, "date-picker__disabled-item");
         };
 
         if (this.outOfRange(new Date(tdy, +tdm + 1, 1))) {
-            addClass(this.butNextMonth, "fd-disabled");
+            addClass(this.butNextMonth, "date-picker__disabled-item");
             if (this.monthInc == 1) {
                 this.stopTimer();
             };
         } else {
-            removeClass(this.butNextMonth, "fd-disabled");
+            removeClass(this.butNextMonth, "date-picker__disabled-item");
         };
     };
     var localeDefaults = {

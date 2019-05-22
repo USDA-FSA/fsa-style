@@ -7,6 +7,9 @@ $date-picker-bg-color: #fff;
 $date-picker-bg-color-disabled: tint($color-fsa-tertiary, 96%);
 $date-picker-bg-color-hover: $color-fsa-aqua-100;
 
+/* body */.date-picker-is-dragging {
+}
+
 .date-picker {
 
   & {
@@ -49,6 +52,8 @@ $date-picker-bg-color-hover: $color-fsa-aqua-100;
   }
 
   &--drag-enabled {}
+
+  &--weeks-displayed {}
 
 }
 
@@ -108,18 +113,27 @@ $date-picker-bg-color-hover: $color-fsa-aqua-100;
 .date-picker--disabled .date-picker__prev-but:hover,
 .date-picker--disabled .date-picker__next-but:hover,
 .date-picker--disabled .date-picker__today-but:hover,
-.date-picker .date-picker__prev-but.fd-disabled:hover,
-.date-picker .date-picker__next-but.fd-disabled:hover,
-.date-picker .fd-disabled,
-.date-picker .fd-disabled:hover {
+.date-picker .date-picker__prev-but.date-picker__disabled-item:hover,
+.date-picker .date-picker__next-but.date-picker__disabled-item:hover,
+.date-picker .date-picker__disabled-item,
+.date-picker .date-picker__disabled-item:hover {
   cursor: cursor !important;
   opacity: .5;
   filter: grayscale(1);
 }
 
-.date-picker .date-picker__today-but.fd-disabled {
+.date-picker .date-picker__today-but.date-picker__disabled-item {
   opacity: 1;
   filter: grayscale(0);
+}
+
+.date-picker .date-picker__day { /* [class*="date-picker__day"] */ }
+.date-picker .date-picker__day-name {}
+
+.date-picker [class*="date-picker__day--mmdd-"] {
+  outline: 1px solid green !important;
+}
+.date-picker [class*="date-picker__day--cd-"] {
 }
 
 .date-picker--disabled .date-picker__day--hover {
@@ -127,8 +141,8 @@ $date-picker-bg-color-hover: $color-fsa-aqua-100;
   background-color: transparent !important;
 }
 
-.date-picker .date-picker__prev-but.fd-disabled:hover,
-.date-picker .date-picker__next-but.fd-disabled:hover {}
+.date-picker .date-picker__prev-but.date-picker__disabled-item:hover,
+.date-picker .date-picker__next-but.date-picker__disabled-item:hover {}
 
 .date-picker table,
 .date-picker td,
@@ -275,10 +289,7 @@ $date-picker-bg-color-hover: $color-fsa-aqua-100;
   color: inherit;
 }
 
-.date-picker .date-picker__day--month-out {
-  color: $date-picker-text-color-disabled;
-  outline: 8px solid black !important;
-}
+.date-picker .date-picker__day--month-out { /* Used only when `fillGrid: true` */ }
 
 .date-picker .date-picker__day--out-of-range,
 .date-picker .date-picker__day--not-selectable {
@@ -357,3 +368,16 @@ $date-picker-bg-color-hover: $color-fsa-aqua-100;
 }
 
 .date-picker .date-picker__tfoot {}
+
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+// SHAME TOD
+
+// .sample-bespoke-class {
+//   outline: 2px solid blue;
+// }
