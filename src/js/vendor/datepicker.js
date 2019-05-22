@@ -644,7 +644,7 @@ var datePickerController = (function datePickerController() {
             var td = document.getElementById(o.id + "-date-picker__day--hover");
 
             if (td && !(td.getElementsByTagName("span").length)) {
-                var ymd = td.className.match(/date-picker__day--cd-([\d]{4})([\d]{2})([\d]{2})/),
+                var ymd = td.className.match(/date-picker__yyyymmdd--([\d]{4})([\d]{2})([\d]{2})/),
                     noS = td.className.search(noSelectionRegExp) != -1,
                     spn = document.createElement('span'),
                     spnC;
@@ -866,14 +866,14 @@ var datePickerController = (function datePickerController() {
                         // This cells date is within the lower & upper ranges (or no ranges have been defined)
                     } else {
                         // If it's a date from last or next month and the "constrainSelection" option
-                        // is false then give the cell a date-picker__day--CD-YYYYMMDD class
+                        // is false then give the cell a date-picker__yyyymmdd--YYYYMMDD class
                         if (selectable) {
                             //td.title = titleFormat ? printFormattedDate(new Date(+String(currentStub).substr(0,4), +String(currentStub).substr(4, 2) - 1, +dt), titleFormat, true) : "";
-                            cName.push("date-picker__day--cd-" + currentDate + " date-picker__day--yyyymm-" + currentStub + " date-picker__day--mmdd-" + currentStub.substr(4, 2) + pad(dt));
+                            cName.push("date-picker__yyyymmdd--" + currentDate + " date-picker__yyyymm--" + currentStub + " date-picker__mmdd--" + currentStub.substr(4, 2) + pad(dt));
                             // Otherwise give a "date-picker__day--not-selectable" class (which shouldn't be styled in any way, it's for internal use)
                         } else {
                             //td.title = titleFormat ? getTitleTranslation(13) + " " + printFormattedDate(new Date(+String(currentStub).substr(0,4), +String(currentStub).substr(4, 2) - 1, +dt), titleFormat, true) : "";
-                            cName.push("date-picker__day--yyyymm-" + currentStub + " date-picker__day--mmdd-" + currentStub.substr(4, 2) + pad(dt) + " date-picker__day--not-selectable");
+                            cName.push("date-picker__yyyymm--" + currentStub + " date-picker__mmdd--" + currentStub.substr(4, 2) + pad(dt) + " date-picker__day--not-selectable");
                         };
 
                         // Add a classname if the current cells date is today
@@ -1508,11 +1508,11 @@ var datePickerController = (function datePickerController() {
                 // Are we within a valid i.e. clickable TD node
                 if (el.tagName && el.tagName.toLowerCase() == "td") {
 
-                    if (el.className.search(/date-picker__day--cd-([0-9]{8})/) == -1 || el.className.search(noSelectionRegExp) != -1) {
+                    if (el.className.search(/date-picker__yyyymmdd--([0-9]{8})/) == -1 || el.className.search(noSelectionRegExp) != -1) {
                         return stopEvent(e);
                     };
 
-                    var cellDate = el.className.match(/date-picker__day--cd-([0-9]{8})/)[1];
+                    var cellDate = el.className.match(/date-picker__yyyymmdd--([0-9]{8})/)[1];
                     o.date = new Date(cellDate.substr(0, 4), cellDate.substr(4, 2) - 1, cellDate.substr(6, 2));
                     o.dateSet = new Date(o.date);
                     o.noFocus = true;
@@ -1749,7 +1749,7 @@ var datePickerController = (function datePickerController() {
             if (kc == 13 || (kc == 32 && !e.ctrlKey)) {
                 // RETURN/ENTER: close & select the date
                 var td = document.getElementById(o.id + "-date-picker__day--hover");
-                if (!td || td.className.search(/date-picker__day--cd-([0-9]{8})/) == -1 || td.className.search(/date-picker__day--out-of-range|date-picker__day--disabled/) != -1) {
+                if (!td || td.className.search(/date-picker__yyyymmdd--([0-9]{8})/) == -1 || td.className.search(/date-picker__day--out-of-range|date-picker__day--disabled/) != -1) {
                     return stopEvent(e);
                 };
                 o.dateSet = new Date(o.date);
@@ -1878,7 +1878,7 @@ var datePickerController = (function datePickerController() {
 
                 // Locate this TD
                 for (var i = 0, td; td = o.tds[i]; i++) {
-                    if (td.className.search("date-picker__day--cd-" + t) == -1) {
+                    if (td.className.search("date-picker__yyyymmdd--" + t) == -1) {
                         continue;
                     };
 
@@ -1934,9 +1934,9 @@ var datePickerController = (function datePickerController() {
                     if (el.className.search(/date-picker__day--unused|date-picker__day--out-of-range/) != -1) {
                         statusText = getTitleTranslation(9);
                     }
-                    if (el.className.search(/date-picker__day--cd-([0-9]{8})/) != -1) {
+                    if (el.className.search(/date-picker__yyyymmdd--([0-9]{8})/) != -1) {
                         o.stopTimer();
-                        var cellDate = el.className.match(/date-picker__day--cd-([0-9]{8})/)[1];
+                        var cellDate = el.className.match(/date-picker__yyyymmdd--([0-9]{8})/)[1];
 
                         o.removeOldFocus();
                         el.id = o.id + "-date-picker__day--hover";

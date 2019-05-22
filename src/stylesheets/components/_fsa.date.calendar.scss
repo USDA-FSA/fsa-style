@@ -130,12 +130,6 @@ $date-picker-bg-color-hover: $color-fsa-aqua-100;
 .date-picker .date-picker__day { /* [class*="date-picker__day"] */ }
 .date-picker .date-picker__day-name {}
 
-.date-picker [class*="date-picker__day--mmdd-"] {
-  outline: 1px solid green !important;
-}
-.date-picker [class*="date-picker__day--cd-"] {
-}
-
 .date-picker--disabled .date-picker__day--hover {
   outline: 0 !important;
   background-color: transparent !important;
