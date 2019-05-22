@@ -27,7 +27,7 @@ var datePickerController = (function datePickerController() {
         dPartsRegExp = /%([d|j])/,
         mPartsRegExp = /%([M|F|m|n])/,
         yPartsRegExp = /%[y|Y]/,
-        noSelectionRegExp = /date-picker-unused|out-of-range|day-disabled|not-selectable/,
+        noSelectionRegExp = /date-picker__day--unused|date-picker__day--out-of-range|date-picker__day--disabled|date-picker__day--not-selectable/,
         formatTestRegExp = /%([d|j|M|F|m|n|Y|y])/,
         formatSplitRegExp = /%([d|D|l|j|N|w|S|W|M|F|m|n|t|Y|y])/,
         rangeRegExp = /^((\d\d\d\d)(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01]))$/,
@@ -596,11 +596,11 @@ var datePickerController = (function datePickerController() {
 
         // Resets the tabindex of the previously focused cell
         this.removeOldFocus = function() {
-            var td = document.getElementById(o.id + "-date-picker-hover");
+            var td = document.getElementById(o.id + "-date-picker__day--hover");
             if (td) {
                 try {
                     setTabIndex(td, -1);
-                    removeClass(td, "date-picker-hover");
+                    removeClass(td, "date-picker__day--hover");
                     td.id = "";
                     td.onblur = null;
                     td.onfocus = null;
@@ -610,11 +610,11 @@ var datePickerController = (function datePickerController() {
 
         // Sets the tabindex & focus on the currently highlighted cell
         this.setNewFocus = function() {
-            var td = document.getElementById(o.id + "-date-picker-hover");
+            var td = document.getElementById(o.id + "-date-picker__day--hover");
             if (td) {
                 try {
                     setTabIndex(td, 0);
-                    addClass(td, "date-picker-hover");
+                    addClass(td, "date-picker__day--hover");
                     // If opened with the keyboard then add focus & blur events to the cell
                     if (!this.clickActivated) {
                         td.onblur = o.onblur;
@@ -641,7 +641,7 @@ var datePickerController = (function datePickerController() {
         // Adds a screen-reader friendly date to the current cell whenever
         // the datepicker has been opened with the keyboard
         this.addAccessibleDate = function() {
-            var td = document.getElementById(o.id + "-date-picker-hover");
+            var td = document.getElementById(o.id + "-date-picker__day--hover");
 
             if (td && !(td.getElementsByTagName("span").length)) {
                 var ymd = td.className.match(/cd-([\d]{4})([\d]{2})([\d]{2})/),
@@ -832,21 +832,21 @@ var datePickerController = (function datePickerController() {
                         currentStub = stubP;
                         weekDay = weekDayP;
                         selectable = !o.constrainSelection;
-                        cName.push("month-out");
+                        cName.push("date-picker__day--month-out");
                         // Are we drawing next month
                     } else if (dt > dpm) {
                         dt -= dpm;
                         currentStub = stubN;
                         weekDay = weekDayN;
                         selectable = !o.constrainSelection;
-                        cName.push("month-out");
+                        cName.push("date-picker__day--month-out");
                     };
 
                     // Calcuate this cells weekday
                     weekDay = (weekDay + dt + 6) % 7;
 
                     // Push a classname representing the weekday e.g. "day-3"
-                    cName.push("day-" + weekDay + " cell-" + curr);
+                    cName.push("date-picker__day--" + weekDay + " date-picker__cell--" + curr);
 
                     // A YYYYMMDD String representation of this cells date
                     currentDate = currentStub + String(dt < 10 ? "0" : "") + dt;
@@ -854,7 +854,7 @@ var datePickerController = (function datePickerController() {
                     // If this cells date is out of range
                     if (o.rangeLow && +currentDate < +o.rangeLow || o.rangeHigh && +currentDate > +o.rangeHigh) {
                         // Add a classname to style the cell and stop selection
-                        td.className = "out-of-range";
+                        td.className = "date-picker__day--out-of-range";
                         // Reset this TD nodes title attribute
                         //td.title = "";
                         // Append the cells date as a text node to the TD
@@ -870,21 +870,21 @@ var datePickerController = (function datePickerController() {
                         if (selectable) {
                             //td.title = titleFormat ? printFormattedDate(new Date(+String(currentStub).substr(0,4), +String(currentStub).substr(4, 2) - 1, +dt), titleFormat, true) : "";
                             cName.push("cd-" + currentDate + " yyyymm-" + currentStub + " mmdd-" + currentStub.substr(4, 2) + pad(dt));
-                            // Otherwise give a "not-selectable" class (which shouldn't be styled in any way, it's for internal use)
+                            // Otherwise give a "date-picker__day--not-selectable" class (which shouldn't be styled in any way, it's for internal use)
                         } else {
                             //td.title = titleFormat ? getTitleTranslation(13) + " " + printFormattedDate(new Date(+String(currentStub).substr(0,4), +String(currentStub).substr(4, 2) - 1, +dt), titleFormat, true) : "";
-                            cName.push("yyyymm-" + currentStub + " mmdd-" + currentStub.substr(4, 2) + pad(dt) + " not-selectable");
+                            cName.push("yyyymm-" + currentStub + " mmdd-" + currentStub.substr(4, 2) + pad(dt) + " date-picker__day--not-selectable");
                         };
 
                         // Add a classname if the current cells date is today
                         if (currentDate == today) {
-                            cName.push("date-picker-today");
+                            cName.push("date-picker__day--today");
                         };
 
                         // If this cell represents the currently selected date
                         if (dateSetD == currentDate) {
                             // Add a classname (for styling purposes)
-                            cName.push("date-picker-selected-date");
+                            cName.push("date-picker__day--selected-date");
                             // Set the ARIA selected property to true
                             setARIAProperty(td, "selected", "true");
                             // And cache a reference to the current cell
@@ -902,7 +902,7 @@ var datePickerController = (function datePickerController() {
                             )
                         ) {
                             // Add a classname to style the cell and stop selection
-                            cName.push("day-disabled");
+                            cName.push("date-picker__day--disabled");
                             // Update the current cells title to say "Disabled date: ..." (or whatever the translation says)
                             if (titleFormat && selectable) {
                                 td.title = getTitleTranslation(13) + " " + td.title;
@@ -916,12 +916,12 @@ var datePickerController = (function datePickerController() {
 
                         // Do we need to highlight this cells weekday representation
                         if (o.highlightDays[weekDay]) {
-                            cName.push("date-picker-highlight");
+                            cName.push("date-picker__day--highlight");
                         };
 
                         // Is the current onscreen cursor set to this cells date
                         if (cursorDate == currentDate) {
-                            td.id = o.id + "-date-picker-hover";
+                            td.id = o.id + "-date-picker__day--hover";
                         };
 
                         // Add the date to the TD cell as a text node. Note: If the datepicker has been given keyboard
@@ -933,13 +933,13 @@ var datePickerController = (function datePickerController() {
 
                         // If the UI displays week numbers then update the celladded
                         if (o.showWeeks) {
-                            cellAdded[row] = Math.min(cName[0] == "month-out" ? 3 : 1, cellAdded[row]);
+                            cellAdded[row] = Math.min(cName[0] == "date-picker__day--month-out" ? 3 : 1, cellAdded[row]);
                         };
                     };
                     // The current TD node is empty i.e. represents no date in the UI
                 } else {
                     // Add a classname to style the cell
-                    td.className = "date-picker-unused";
+                    td.className = "date-picker__day--unused";
                     // Add a non-breaking space to unused TD node (for IEs benefit mostly)
                     td.appendChild(document.createTextNode(nbsp));
                     // Reset the TD nodes title attribute
@@ -952,7 +952,7 @@ var datePickerController = (function datePickerController() {
                         o.wkThs[row].removeChild(o.wkThs[row].firstChild);
                     };
                     o.wkThs[row].appendChild(document.createTextNode(cellAdded[row] == 4 && !o.fillGrid ? nbsp : getWeekNumber(cy, cm, curr - firstColIndex - 6)));
-                    o.wkThs[row].className = "date-picker-week-header" + (["", "", " out-of-range", " month-out", ""][cellAdded[row]]);
+                    o.wkThs[row].className = "date-picker__week-header" + (["", "", " date-picker__day--out-of-range", " date-picker__day--month-out", ""][cellAdded[row]]);
                 };
             };
 
@@ -1108,7 +1108,7 @@ var datePickerController = (function datePickerController() {
             var tr, row, col, tableHead, tableBody, tableFoot;
 
             this.table = document.createElement('table');
-            this.table.className = "date-picker-table";
+            this.table.className = "date-picker__table";
             this.table.onmouseover = this.onmouseover;
             this.table.onmouseout = this.onmouseout;
             this.table.onclick = this.onclick;
@@ -1119,7 +1119,7 @@ var datePickerController = (function datePickerController() {
 
             this.div.appendChild(this.table);
 
-            var dragEnabledCN = !this.dragDisabled ? " drag-enabled" : "";
+            var dragEnabledCN = !this.dragDisabled ? " date-picker--drag-enabled" : "";
 
             if (!this.staticPos) {
                 this.div.style.visibility = "hidden";
@@ -1183,10 +1183,10 @@ var datePickerController = (function datePickerController() {
                 tableFoot = document.createElement('tfoot');
                 this.table.appendChild(tableFoot);
                 tr = document.createElement('tr');
-                tr.className = "date-picker-tfoot";
+                tr.className = "date-picker__tfoot";
                 tableFoot.appendChild(tr);
                 this.statusBar = createTH({
-                    thClassName: "date-picker-statusbar" + dragEnabledCN,
+                    thClassName: "date-picker__status-bar" + dragEnabledCN,
                     colspan: this.showWeeks ? 8 : 7
                 });
                 tr.appendChild(this.statusBar);
@@ -1194,7 +1194,7 @@ var datePickerController = (function datePickerController() {
             };
 
             tableHead = document.createElement('thead');
-            tableHead.className = "date-picker-thead";
+            tableHead.className = "date-picker__thead";
             this.table.appendChild(tableHead);
 
             tr = document.createElement('tr');
@@ -1204,7 +1204,7 @@ var datePickerController = (function datePickerController() {
 
             // Title Bar
             this.titleBar = createTH({
-                thClassName: "date-picker-title" + dragEnabledCN,
+                thClassName: "date-picker__title" + dragEnabledCN,
                 colspan: this.showWeeks ? 8 : 7
             });
             //this.titleBar.setAttribute("role", "presentation");
@@ -1215,12 +1215,12 @@ var datePickerController = (function datePickerController() {
 
             var span = document.createElement('span');
             span.appendChild(document.createTextNode(nbsp));
-            span.className = "month-display" + dragEnabledCN;
+            span.className = "date-picker__month-display" + dragEnabledCN;
             this.titleBar.appendChild(span);
 
             span = document.createElement('span');
             span.appendChild(document.createTextNode(nbsp));
-            span.className = "year-display" + dragEnabledCN;
+            span.className = "date-picker__year-display" + dragEnabledCN;
             this.titleBar.appendChild(span);
 
             span = null;
@@ -1230,27 +1230,27 @@ var datePickerController = (function datePickerController() {
             tableHead.appendChild(tr);
 
             createThAndButton(tr, [{
-                className: "prev-but prev-year",
+                className: "date-picker__prev-but date-picker__prev-but--year",
                 id: "-prev-year-but",
                 text: "\u00AB",
                 title: getTitleTranslation(2)
             }, {
-                className: "prev-but prev-month",
+                className: "date-picker__prev-but date-picker__prev-but--month",
                 id: "-prev-month-but",
                 text: "\u2039",
                 title: getTitleTranslation(0)
             }, {
                 colspan: this.showWeeks ? 4 : 3,
-                className: "today-but",
+                className: "date-picker__today-but",
                 id: "-today-but",
                 text: getTitleTranslation(4)
             }, {
-                className: "next-but next-month",
+                className: "date-picker__next-but date-picker__next-but--month",
                 id: "-next-month-but",
                 text: "\u203A",
                 title: getTitleTranslation(1)
             }, {
-                className: "next-but next-year",
+                className: "date-picker__next-but date-picker__next-but--year",
                 id: "-next-year-but",
                 text: "\u00BB",
                 title: getTitleTranslation(3)
@@ -1292,13 +1292,13 @@ var datePickerController = (function datePickerController() {
                         setARIARole(col, "gridcell");
                     } else {
                         if (rows === 0 && cols > colOffset) {
-                            col.className = "date-picker-day-header";
+                            col.className = "date-picker__day--header";
                             col.scope = "col";
                             //commented out based on this open issue https://github.com/freqdec/datePicker/issues/42
                             //setARIARole(col, "columnheader");
                             col.id = this.id + "-col-" + cols;
                         } else {
-                            col.className = "date-picker-week-header";
+                            col.className = "date-picker__week-header";
                             col.scope = "row";
                             //commented out based on this open issue https://github.com/freqdec/datePicker/issues/42
                             //setARIARole(col, "rowheader");
@@ -1482,7 +1482,7 @@ var datePickerController = (function datePickerController() {
 
                 return stopEvent(e);
 
-            } else if (el.className.search("drag-enabled") != -1) {
+            } else if (el.className.search("date-picker--drag-enabled") != -1) {
                 o.mx = e.pageX ? e.pageX : e.clientX ? e.clientX : e.x;
                 o.my = e.pageY ? e.pageY : e.clientY ? e.clientY : e.Y;
                 o.x = parseInt(o.div.style.left);
@@ -1536,7 +1536,7 @@ var datePickerController = (function datePickerController() {
                     o.stopTimer();
                     break;
                     // Day headers clicked, change the first day of the week
-                } else if (el.className.search(/date-picker-day-header/) != -1) {
+                } else if (el.className.search(/date-picker__day--header/) != -1) {
 
 
 
@@ -1640,7 +1640,7 @@ var datePickerController = (function datePickerController() {
             }
             this.kbEvent = false;
 
-            removeClass(o.div, "date-picker-focus");
+            removeClass(o.div, "date-picker--focus");
 
             this.stopTimer();
             this.removeOnFocusEvents();
@@ -1694,7 +1694,7 @@ var datePickerController = (function datePickerController() {
         // The current cursor cell gains focus
         this.onfocus = function(e) {
             o.noFocus = false;
-            addClass(o.div, "date-picker-focus");
+            addClass(o.div, "date-picker--focus");
             if (o.statusBar) {
                 o.updateStatus(printFormattedDate(o.date, o.statusFormat, true));
             };
@@ -1748,8 +1748,8 @@ var datePickerController = (function datePickerController() {
 
             if (kc == 13 || (kc == 32 && !e.ctrlKey)) {
                 // RETURN/ENTER: close & select the date
-                var td = document.getElementById(o.id + "-date-picker-hover");
-                if (!td || td.className.search(/cd-([0-9]{8})/) == -1 || td.className.search(/out-of-range|day-disabled/) != -1) {
+                var td = document.getElementById(o.id + "-date-picker__day--hover");
+                if (!td || td.className.search(/cd-([0-9]{8})/) == -1 || td.className.search(/date-picker__day--out-of-range|date-picker__day--disabled/) != -1) {
                     return stopEvent(e);
                 };
                 o.dateSet = new Date(o.date);
@@ -1882,7 +1882,7 @@ var datePickerController = (function datePickerController() {
                         continue;
                     };
 
-                    td.id = o.id + "-date-picker-hover";
+                    td.id = o.id + "-date-picker__day--hover";
                     o.setNewFocus();
                     break;
                 };
@@ -1931,7 +1931,7 @@ var datePickerController = (function datePickerController() {
 
             switch (el.tagName.toLowerCase()) {
                 case "td":
-                    if (el.className.search(/date-picker-unused|out-of-range/) != -1) {
+                    if (el.className.search(/date-picker__day--unused|date-picker__day--out-of-range/) != -1) {
                         statusText = getTitleTranslation(9);
                     }
                     if (el.className.search(/cd-([0-9]{8})/) != -1) {
@@ -1939,7 +1939,7 @@ var datePickerController = (function datePickerController() {
                         var cellDate = el.className.match(/cd-([0-9]{8})/)[1];
 
                         o.removeOldFocus();
-                        el.id = o.id + "-date-picker-hover";
+                        el.id = o.id + "-date-picker__day--hover";
                         o.setNewFocus();
 
                         o.date = new Date(+cellDate.substr(0, 4), +cellDate.substr(4, 2) - 1, +cellDate.substr(6, 2));
@@ -1954,9 +1954,9 @@ var datePickerController = (function datePickerController() {
                     if (!o.statusBar) {
                         break;
                     };
-                    if (el.className.search(/drag-enabled/) != -1) {
+                    if (el.className.search(/date-picker--drag-enabled/) != -1) {
                         statusText = getTitleTranslation(10);
-                    } else if (el.className.search(/date-picker-week-header/) != -1) {
+                    } else if (el.className.search(/date-picker__week-header/) != -1) {
                         var txt = el.firstChild ? el.firstChild.nodeValue : "";
                         statusText = txt.search(/^(\d+)$/) != -1 ? getTitleTranslation(7, [txt, txt < 3 && o.date.getMonth() == 11 ? getWeeksInYear(o.date.getFullYear()) + 1 : getWeeksInYear(o.date.getFullYear())]) : getTitleTranslation(9);
                     };
@@ -1965,20 +1965,20 @@ var datePickerController = (function datePickerController() {
                     if (!o.statusBar) {
                         break;
                     };
-                    if (el.className.search(/drag-enabled/) != -1) {
+                    if (el.className.search(/date-picker--drag-enabled/) != -1) {
                         statusText = getTitleTranslation(10);
-                    } else if (el.className.search(/day-([0-6])/) != -1) {
-                        var day = el.className.match(/day-([0-6])/)[1];
+                    } else if (el.className.search(/date-picker__day--([0-6])/) != -1) {
+                        var day = el.className.match(/date-picker__day--([0-6])/)[1];
                         statusText = getTitleTranslation(11, [getDayTranslation(day, false)]);
-                    } else if (el.className.search(/prev-year/) != -1) {
+                    } else if (el.className.search(/date-picker__prev-but--year/) != -1) {
                         statusText = getTitleTranslation(2);
-                    } else if (el.className.search(/prev-month/) != -1) {
+                    } else if (el.className.search(/date-picker__prev-but--month/) != -1) {
                         statusText = getTitleTranslation(0);
-                    } else if (el.className.search(/next-year/) != -1) {
+                    } else if (el.className.search(/date-picker__next-but--year/) != -1) {
                         statusText = getTitleTranslation(3);
-                    } else if (el.className.search(/next-month/) != -1) {
+                    } else if (el.className.search(/date-picker__next-but--month/) != -1) {
                         statusText = getTitleTranslation(1);
-                    } else if (el.className.search(/today-but/) != -1 && el.className.search(/disabled/) == -1) {
+                    } else if (el.className.search(/date-picker__today-but/) != -1 && el.className.search(/disabled/) == -1) {
                         statusText = getTitleTranslation(12);
                     };
                     break;
@@ -1992,7 +1992,7 @@ var datePickerController = (function datePickerController() {
                         if (el == o.currentTR) break;
                         o.currentTR.className = "";
                     };
-                    el.className = "date-picker-row-highlight";
+                    el.className = "date-picker__row--highlight";
                     o.currentTR = el;
                     break;
                 };
@@ -2677,7 +2677,7 @@ var datePickerController = (function datePickerController() {
             this.removeOnFocusEvents();
             this.removeOldFocus();
             this.noFocus = true;
-            addClass(this.div, "date-picker-disabled")
+            addClass(this.div, "date-picker--disabled")
             this.table.onmouseover = this.table.onclick = this.table.onmouseout = this.table.onmousedown = null;
             removeEvent(document, "mousedown", this.onmousedown);
             removeEvent(document, "mouseup", this.clearTimer);
@@ -2715,7 +2715,7 @@ var datePickerController = (function datePickerController() {
             };
             this.noFocus = true;
             this.updateTable();
-            removeClass(this.div, "date-picker-disabled");
+            removeClass(this.div, "date-picker--disabled");
             this.disabled = false;
             this.table.onmouseover = this.onmouseover;
             this.table.onmouseout = this.onmouseout;
@@ -2769,9 +2769,9 @@ var datePickerController = (function datePickerController() {
                 this.ths[col].appendChild(document.createTextNode(getDayTranslation(d, true)));
             };
 
-            removeClass(this.ths[col], "date-picker-highlight");
+            removeClass(this.ths[col], "date-picker__day--highlight");
             if (this.highlightDays[d]) {
-                addClass(this.ths[col], "date-picker-highlight");
+                addClass(this.ths[col], "date-picker__day--highlight");
             };
         };
 

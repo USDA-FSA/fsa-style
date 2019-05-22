@@ -169,7 +169,7 @@
       bespokeTitles:{
         "****1225":"Christmas Day",
       },
-      // showWeeks: true,
+      showWeeks: true,
       hideInput: true,
     });
     datePickerController.setDisabledDates("datey-example-3", {
@@ -177,6 +177,8 @@
       "****1231":1, // Wilcard Date: Disable the 31st of December for all years
       "20110101":"20110120" // Date Range: Disable from the 1st of January 2011 to the 20th of January 2011. Note, wildcards can't be used within range declarations
     });
+    datePickerController.setRangeLow("datey-example-3", '20190407');  // disabled PRIOR to April 7, 2019
+    datePickerController.setRangeHigh("datey-example-3", new Date());  // disabled AFTER  today
 
     ///////////////////////////////////////////////////////////////////////////
     // Example 4
