@@ -102,7 +102,6 @@ $date-picker-bg-color-selected: $color-fsa-secondary-900;
     /* [month] [year] title */
     @include font-size(4);
     text-align: center;
-    padding: $size-base $size-base 0;
   }
 
   &__title-month,
@@ -120,16 +119,32 @@ $date-picker-bg-color-selected: $color-fsa-secondary-900;
   // Month/Year Navigation
 
   &__prev-but,
-  &__next-but {
-
-    @include font-size(6);
+  &__next-but,
+  &__today-but {
+    line-height: 1;
     display: block;
-    font-weight: normal;
+    font-weight: $font-normal;
     cursor: pointer;
     color: $color-fsa-link;
+    margin: 0 0 $size-base;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+
+  &__prev-but,
+  &__next-but {
+
+    font-size: 36px;
+    padding: 0 $size-default $size-base $size-default;
 
     &:hover {
       color: $color-fsa-link-hover;
+    }
+
+    &:active:not(.date-picker__disabled-item) {
+      @include fsa-focus();
+      // outline: 3px solid $color-focus;
     }
 
     &.date-picker__disabled-item,
@@ -143,7 +158,9 @@ $date-picker-bg-color-selected: $color-fsa-secondary-900;
 
     &--month {}
 
-    &--year {}
+    &--year {
+      margin-left: $size-small;
+    }
 
   }
 
@@ -151,23 +168,16 @@ $date-picker-bg-color-selected: $color-fsa-secondary-900;
 
     &--month {}
 
-    &--year {}
+    &--year {
+      margin-right: $size-small;
+    }
 
   }
 
   &__today-but {
 
     @include font-size(3);
-    color: $color-fsa-link;
-    display: block;
-    padding-top: $size-small;
-    font-weight: normal;
-    text-align: center;
-    margin: 0 auto;
-    font-weight: $font-bold;
-    text-transform: uppercase;
-    vertical-align: middle;
-    cursor: pointer;
+    padding: $size-default $size-default;
 
     &.date-picker__disabled-item {
       @include date-picker-disabled-item(1);
@@ -177,10 +187,20 @@ $date-picker-bg-color-selected: $color-fsa-secondary-900;
       color: $color-fsa-link-hover;
     }
 
+    &:active:not(.date-picker__disabled-item) {
+      @include fsa-focus();
+    }
+
     .date-picker__disabled-item & {
       @include date-picker-disabled-item(1);
     }
 
+  }
+
+  &__prev-but:not(.date-picker__disabled-item):hover,
+  &__next-but:not(.date-picker__disabled-item):hover,
+  &__today-but:not(.date-picker__disabled-item):hover {
+    box-shadow: 0 0 0 1px $color-fsa-tertiary-200 inset; // maybe try $button-secondary-border
   }
 
   // ----------------------------------------------------------------------------
@@ -257,7 +277,7 @@ $date-picker-bg-color-selected: $color-fsa-secondary-900;
       }
 
       .date-picker--focus & {
-        outline: 3px solid $color-focus !important;
+        @include fsa-focus();
         background: $date-picker-bg-color-hover;
         &:hover {
           outline: 0 !important;
@@ -276,6 +296,18 @@ $date-picker-bg-color-selected: $color-fsa-secondary-900;
     &--hover:not(.date-picker__day--selected-date) {
       .date-picker--static & {
         background-color: $date-picker-bg-color-hover;
+      }
+    }
+
+    &:active {
+      .date-picker--focus & {
+        outline: 3px solid $color-focus !important;
+      }
+    }
+
+    &.date-picker__day--disabled:active {
+      .date-picker--focus & {
+        outline: 0 !important;
       }
     }
 
