@@ -11,3 +11,12 @@
 body.fd-drag-active   {
     user-select:none;
 }
+
+    max-width: 100%;
+    width: 100%;
+    @include breakpoint(S) {
+      width: auto;
+    }
+    .date-picker--static & {
+      width: 100%;
+    }
