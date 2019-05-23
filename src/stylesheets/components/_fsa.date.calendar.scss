@@ -6,10 +6,7 @@ $date-picker-table-cell-padding: $size-default;
 $date-picker-bg-color: #fff;
 $date-picker-bg-color-disabled: tint($color-fsa-tertiary, 96%);
 $date-picker-bg-color-hover: $color-fsa-aqua-100;
-
-// .sample-bespoke-class {
-//   outline: 2px solid blue;
-// }
+$date-picker-bg-color-selected: $color-fsa-secondary-900;
 
 @mixin date-picker-disabled-item($opacity: .6) {
   cursor: text;
@@ -33,8 +30,7 @@ $date-picker-bg-color-hover: $color-fsa-aqua-100;
   }
 }
 
-/* body */.date-picker-is-dragging {
-}
+/* body */.date-picker-is-dragging {}
 
 .date-picker {
 
@@ -193,6 +189,167 @@ $date-picker-bg-color-hover: $color-fsa-aqua-100;
   // ----------------------------------------------------------------------------
   // ----------------------------------------------------------------------------
   // ----------------------------------------------------------------------------
+  // Table
+
+  &__table {
+    @include font-size(2);
+    table-layout: fixed;
+    empty-cells: show;
+    border-collapse: collapse;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    z-index: 2;
+    width: auto;
+    height: auto;
+  }
+
+  &__thead {
+    th {
+      padding: 0;
+      text-align: center;
+    }
+  }
+
+  &__day-name {
+    display: block;
+    padding: $date-picker-table-cell-padding;
+  }
+
+  &__day {
+
+    @include date-picker-cell-default();
+
+    &:focus { // focused via [tabindex]
+      // prevents weird double-focus effect (focus state collision/redundancy)
+      outline: 0;
+    }
+
+    &--header {
+
+      /* The "mon tue wed thu fri sat sun" day header styles */
+      @include font-size(1);
+      border: 0 none;
+      text-align: center;
+      vertical-align: middle;
+      cursor: help;
+      text-transform: uppercase;
+      padding: $size-small $size-base;
+
+    }
+
+    &--unused {
+      /* TD cell that is _not_ used to display a day of the month */
+      cursor: text !important;
+    }
+
+    &--today {
+      /* The "todays date" cell style */
+      font-weight: $font-bold;
+    }
+
+    &--highlight { /* The "highlight days" style */ }
+
+    &--hover {
+
+      & {
+        z-index: 99999;
+      }
+
+      .date-picker--focus & {
+        outline: 3px solid $color-focus !important;
+        background: $date-picker-bg-color-hover;
+        &:hover {
+          outline: 0 !important;
+        }
+      }
+
+      .date-picker--static & {}
+
+      .date-picker--disabled & {
+        outline: 0 !important;
+        background-color: transparent !important;
+      }
+
+    }
+
+    &--hover:not(.date-picker__day--selected-date) {
+      .date-picker--static & {
+        background-color: $date-picker-bg-color-hover;
+      }
+    }
+
+    &--selected-date {
+      $bgc: $date-picker-bg-color-selected;
+      background-color: $bgc;
+      color: #fff;
+      font-weight: $font-bold;
+      &.date-picker__day--hover {
+        background-color: $bgc;
+      }
+    }
+
+    &--0 { /* Monday */ }
+    &--1 { /* Tuesday */ }
+    &--2 { /* Wednesday */ }
+    &--3 { /* Thursday */ }
+    &--4 { /* Friday */ }
+    &--5 { /* Saturday */ }
+    &--6 { /* Sunday */ }
+
+    &--month-out { /* Used only when `fillGrid: true` */ }
+
+    &--disabled,
+    &--out-of-range,
+    &--not-selectable {
+
+      &,
+      &:hover {
+        color: $date-picker-text-color-disabled !important;
+        background-color: $date-picker-bg-color-disabled !important;
+        cursor: text;
+      }
+
+      &.date-picker__day--hover {
+        outline-color: gray !important;
+      }
+
+    }
+
+  }
+
+  &__week-header {
+
+    @include date-picker-cell-default();
+    @include font-size(0);
+    background: transparent;
+    cursor: text;
+    border-left: 0;
+    font-weight: $font-bold;
+    background-color: transparent;
+    box-shadow:
+      -2px 0 0 0 tint($color-fsa-tertiary, 90%) inset,
+      -4px 0 0 0 tint($color-fsa-tertiary, 95%) inset,
+      -6px 0 0 0 tint($color-fsa-tertiary, 98%) inset
+    ;
+    border-right: 1px solid $date-picker-border-color;
+
+    .date-picker__thead & {
+      vertical-align: middle;
+      background-color: transparent;
+      font-weight: normal;
+      text-transform: uppercase;
+      // border-right: 0;
+      cursor: help;
+      border-top: 0;
+    }
+
+  }
+
+  // ----------------------------------------------------------------------------
+  // ----------------------------------------------------------------------------
+  // ----------------------------------------------------------------------------
   // Foot
 
   &__status-bar {
@@ -218,139 +375,3 @@ $date-picker-bg-color-hover: $color-fsa-aqua-100;
 
 }
 
-.date-picker__table {
-  @include font-size(2);
-  table-layout: fixed;
-  empty-cells: show;
-  border-collapse: collapse;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  z-index: 2;
-  width: auto;
-  height: auto;
-}
-
-.date-picker__thead {
-  th {
-    padding: 0;
-    text-align: center;
-  }
-}
-
-.date-picker__day-name {
-  display: block;
-  padding: $date-picker-table-cell-padding;
-}
-
-.date-picker__day {
-  @include date-picker-cell-default();
-}
-
-.date-picker__day:focus { // focused via [tabindex]
-  outline: 0;
-}
-
-.date-picker__day--header {
-
-  /* The "mon tue wed thu fri sat sun" day header styles */
-  @include font-size(1);
-  border: 0 none;
-  text-align: center;
-  vertical-align: middle;
-  cursor: help;
-  text-transform: uppercase;
-  padding: $size-small $size-base;
-
-}
-
-.date-picker__day--unused {
-  /* TD cell that is _not_ used to display a day of the month */
-  cursor: text !important;
-}
-
-.date-picker__day--today {
-  /* The "todays date" cell style */
-  font-weight: $font-bold;
-}
-
-.date-picker__day--highlight { /* The "highlight days" style */ }
-
-.date-picker__day--hover {
-  & {
-    z-index: 99999;
-  }
-  .date-picker--focus & {
-    outline: 3px solid $color-focus !important;
-    background: $date-picker-bg-color-hover;
-  }
-  .date-picker--disabled & {
-    outline: 0 !important;
-    background-color: transparent !important;
-  }
-}
-
-.date-picker--focus:hover .date-picker__day--hover:not(.date-picker__day--selected-date) {
-  outline: 0 !important;
-  background: $date-picker-bg-color-hover;
-}
-
-.date-picker--static:hover .date-picker__day--hover:not(.date-picker__day--selected-date) {
-  background: $date-picker-bg-color-hover;
-}
-
-.date-picker__day--selected-date {
-  background-color: $color-fsa-secondary-900;
-  color: #fff;
-  font-weight: $font-bold;
-}
-
-.date-picker__day--0 { /* Monday */ }
-.date-picker__day--1 { /* Tuesday */ }
-.date-picker__day--2 { /* Wednesday */ }
-.date-picker__day--3 { /* Thursday */ }
-.date-picker__day--4 { /* Friday */ }
-.date-picker__day--5 { /* Saturday */ }
-.date-picker__day--6 { /* Sunday */ }
-
-.date-picker__day--month-out { /* Used only when `fillGrid: true` */ }
-
-.date-picker__day--disabled,
-.date-picker__day--out-of-range,
-.date-picker__day--not-selectable {
-
-  &,
-  &:hover {
-    color: $date-picker-text-color-disabled !important;
-    background-color: $date-picker-bg-color-disabled !important;
-    cursor: text;
-  }
-
-  &.date-picker__day--hover {
-    outline-color: gray !important;
-  }
-
-}
-
-.date-picker__week-header {
-
-  @include date-picker-cell-default();
-  @include font-size(0);
-  background: transparent;
-  cursor: text;
-  border-left: 0;
-  font-weight: $font-bold;
-  background-color: tint($color-fsa-tertiary, 95%);
-  border-right: 1px solid $date-picker-border-color;
-
-  .date-picker__thead & {
-    vertical-align: middle;
-    background-color: transparent;
-    font-weight: normal;
-    text-transform: uppercase;
-    border-right: 0;
-    cursor: help;
-  }
-
-}
