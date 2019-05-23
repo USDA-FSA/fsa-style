@@ -1165,7 +1165,7 @@ var datePickerController = (function datePickerController() {
                     for (var elemID in this.formElements) {
                         elem = document.getElementById(elemID);
                         if (elem) {
-                            elem.className += " fsa-field__date-input-hidden";
+                            elem.className += " date-picker-control__date-input-hidden";
                         };
                     };
                 };
@@ -1622,7 +1622,7 @@ var datePickerController = (function datePickerController() {
             this.fade();
             var butt = document.getElementById('fd-but-' + this.id);
             if (butt) {
-                addClass(butt, "fsa-field__calendar-btn--active");
+                addClass(butt, "date-picker-control__btn--active");
             };
         };
         this.hide = function() {
@@ -1657,7 +1657,7 @@ var datePickerController = (function datePickerController() {
 
             var butt = document.getElementById('fd-but-' + this.id);
             if (butt) {
-                removeClass(butt, "fsa-field__calendar-btn--active");
+                removeClass(butt, "date-picker-control__btn--active");
             };
 
             removeEvent(document, "mousedown", this.onmousedown);
@@ -2064,7 +2064,7 @@ var datePickerController = (function datePickerController() {
                 var kc = e.keyCode != null ? e.keyCode : e.charCode;
                 if (kc != 13 && kc != 32) return true;
                 if (dpVisible) {
-                    removeClass(this, "fsa-field__calendar-btn--active")
+                    removeClass(this, "date-picker-control__btn--active")
                     hideAll();
                     return stopEvent(e);
                 };
@@ -2074,11 +2074,11 @@ var datePickerController = (function datePickerController() {
             };
 
             if (!dpVisible) {
-                addClass(this, "fsa-field__calendar-btn--active")
+                addClass(this, "date-picker-control__btn--active")
                 hideAll(inpId);
                 showDatePicker(inpId, autoFocus);
             } else {
-                removeClass(this, "fsa-field__calendar-btn--active");
+                removeClass(this, "date-picker-control__btn--active");
                 hideAll();
             };
 
@@ -2108,23 +2108,23 @@ var datePickerController = (function datePickerController() {
             but = document.createElement('button'),
             wrap = document.createElement('span');
 
-        wrap.className = "fsa-field__calendar-action";
+        wrap.className = "date-picker-control";
 
         // but.href = "#" + this.id;
-        but.className = "fsa-field__calendar-btn";
+        but.className = "date-picker-control__btn";
         //but.title       = getTitleTranslation(5);
         but.id = "fd-but-" + this.id;
         but.setAttribute("type", "button");
         but.setAttribute("title", "Open Calendar");
-        // span.className = "fsa-field__calendar-icon-wrapper";
+        // span.className = "date-picker-control__icon-wrapper";
         span.setAttribute("aria-hidden", "true");
 
         var altText = this.labelText ? getTitleTranslation(14, [this.labelText]) : but.title;
         var fontIconHolder = document.createElement("span");
 
-        // fontIconHolder.className = "fsa-field__calendar-icon";
+        // fontIconHolder.className = "date-picker-control__icon";
         fontIconHolder.style.fontFamily = "";
-        fontIconHolder.innerHTML = '<span class="fsa-field__calendar-text">Open Calendar</span>';
+        fontIconHolder.innerHTML = '<span class="date-picker-control__text">Open Calendar</span>';
         span.appendChild(fontIconHolder);
         but.appendChild(span);
 
@@ -2568,7 +2568,7 @@ var datePickerController = (function datePickerController() {
         };
 
         if (but) {
-            removeClass(but, "fsa-field__calendar-btn--date-is-valid");
+            removeClass(but, "date-picker-control__btn--date-is-valid");
         };
 
         if (!dt || isNaN(dt)) {
@@ -2590,7 +2590,7 @@ var datePickerController = (function datePickerController() {
         if (dt.getTime() == this.date.getTime() && this.canDateBeSelected(this.date)) {
             this.dateSet = new Date(this.date);
             if (but) {
-                addClass(but, "fsa-field__calendar-btn--date-is-valid");
+                addClass(but, "date-picker-control__btn--date-is-valid");
             };
         };
 
@@ -2614,7 +2614,7 @@ var datePickerController = (function datePickerController() {
 
         if (!this.dateSet) {
             if (but) {
-                removeClass(but, "fsa-field__calendar-btn--date-is-valid");
+                removeClass(but, "date-picker-control__btn--date-is-valid");
             };
             return;
         };
@@ -2653,7 +2653,7 @@ var datePickerController = (function datePickerController() {
             this.updateTable();
             this.noFocus = false;
         } else if (but) {
-            addClass(but, "fsa-field__calendar-btn--date-is-valid");
+            addClass(but, "date-picker-control__btn--date-is-valid");
         };
 
         if (this.fullCreate) {
@@ -2685,7 +2685,7 @@ var datePickerController = (function datePickerController() {
             };
             var but = document.getElementById("fd-but-" + this.id);
             if (but) {
-                addClass(but, "fsa-field__calendar-btn--disabled");
+                addClass(but, "date-picker-control__btn--disabled");
                 but.setAttribute("disabled", "disabled");
                 // Set a "disabled" ARIA state
                 setARIAProperty(but, "disabled", true);
@@ -2722,7 +2722,7 @@ var datePickerController = (function datePickerController() {
         } else {
             var but = document.getElementById("fd-but-" + this.id);
             if (but) {
-                removeClass(but, "fsa-field__calendar-btn--disabled");
+                removeClass(but, "date-picker-control__btn--disabled");
                 // Reset the "disabled" ARIA state
                 setARIAProperty(but, "disabled", false);
                 this.addButtonEvents(but);

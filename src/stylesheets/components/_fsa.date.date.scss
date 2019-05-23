@@ -1,81 +1,55 @@
-/*
-    Hide the datepickers associated input by using a className
-*/
 .fsa-field__date {
   position: relative;
 }
-.fsa-field__date-input-hidden {
-  display: none;
-}
 
-//.date-picker-button-active span, LINE BELOW FORMERLY
-.fsa-field__calendar-action {
-  .fsa-input + & {
-    margin-left: -($button-height - .2rem);
+.date-picker-control {
+
+  & {
+    .fsa-input + & {
+      margin-left: -($button-height - .2rem);
+    }
+    .fsa-input--block + &,
+    .date-picker-control__item + & {
+      margin-left: initial;
+    }
   }
-  .fsa-input--block + &,
-  .fsa-field__item + & {
-    margin-left: initial;
+
+  &__date-input-hidden {
+    display: none;
   }
-}
 
-.fsa-field__calendar-btn {
-  @include reset-button();
-  display: inline-block;
-  vertical-align: baseline;
-  width: $button-height;
-  height: $button-height;
-  overflow: hidden;
-  color: transparent;
-  text-indent: -300%;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUAQMAAAC3R49OAAAABlBMVEUAAABJREA45cQRAAAAAXRSTlMAQObYZgAAAChJREFUCFtjePingOH//w9wfIDBAIJzN0AwkH0bSIMwBjsBgkFsqH4ADXIlBDFW/AsAAAAASUVORK5CYII=');
-  // background-image: url('#{$image-path}/calendar.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-  top: -1px;
-  .fsa-field & {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
+  &__btn {
+    @include reset-button();
+    display: inline-block;
+    vertical-align: baseline;
+    width: $button-height;
+    height: $button-height;
+    overflow: hidden;
+    color: transparent;
+    text-indent: -300%;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUAQMAAAC3R49OAAAABlBMVEUAAABJREA45cQRAAAAAXRSTlMAQObYZgAAAChJREFUCFtjePingOH//w9wfIDBAIJzN0AwkH0bSIMwBjsBgkFsqH4ADXIlBDFW/AsAAAAASUVORK5CYII='); // calendar.png
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    top: -1px;
+    .fsa-field & {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+    &[disabled] {
+      opacity: .4;
+    }
   }
-  &[disabled] {
-    opacity: .4;
+
+  &__text {
+    visibility: hidden;
   }
-}
 
-.fsa-field__calendar-text {
-  visibility: hidden;
-}
-
-/*
-  A base64 encoded image-sprite is used for the activation button. IE6 and 7
-  get fed "normal" png images within the rule that follows.
-*/
-.fsa-field__calendar-btn:link,
-.fsa-field__calendar-btn:visited {
-  // FORMERLY .date-picker-control
-}
-
-/*
-  If the datepicker has a valid date then use a different icon for the
-  activation button to let the user know. It's a little detail but it's the
-  little things in life etc
-*/
-.fsa-field__calendar-btn--date-is-valid,
-.fsa-field__calendar-btn--date-is-valid:link,
-.fsa-field__calendar-btn--date-is-valid:visited {
-  // FORMERLY .date-picker-dateval
-}
-
-/*
-  Hover states etc for the activation button
-*/
-.fsa-field__calendar-btn--active:link,
-.fsa-field__calendar-btn--active:visited,
-.fsa-field__calendar-btn:focus,
-.fsa-field__calendar-btn:hover,
-.fsa-field__calendar-btn:active {
-  // FORMERLY .date-picker-control
+  &__btn--date-is-valid,
+  &__btn--date-is-valid:link,
+  &__btn--date-is-valid:visited {
+    // If the datepicker has a valid date then use a different icon for the activation button to let the user know.
+  }
 }
