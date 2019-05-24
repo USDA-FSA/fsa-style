@@ -1,28 +1,33 @@
 ////////////////////////////////////////////////////////////////////////
 // Date Picker
 
-$date-picker-control-btn-width: $button-height; // from fsa-b
-$date-picker-control-btn-height: $date-picker-control-btn-width;
-$date-picker-cal-text-color-default: $color-fsa-base;
-$date-picker-cal-text-color-disabled: tint($date-picker-cal-text-color-default, 60%);
-$date-picker-cal-border-color: $form-outline-color;
-$date-picker-cal-table-cell-border-color: tint($table-border-color, 50%);
-$date-picker-cal-table-cell-padding: $size-default;
-$date-picker-cal-bg-color: #fff;
-$date-picker-cal-bg-color-disabled: tint($color-fsa-tertiary, 96%);
-$date-picker-cal-bg-color-hover: $color-fsa-aqua-100;
-$date-picker-cal-bg-color-selected: $color-fsa-secondary-900;
+$date-control-btn-width: $button-height; // from fsa-btn
+$date-control-btn-height: $date-control-btn-width;
+$date-calendar-text-color-default: $color-fsa-base;
+$date-calendar-text-color-disabled: tint($date-calendar-text-color-default, 60%);
+$date-calendar-border-color: $form-outline-color;
+$date-calendar-table-cell-border-color: tint($table-border-color, 50%);
+$date-calendar-table-cell-padding: $size-default;
+$date-calendar-bg-color: #fff;
+$date-calendar-bg-color-disabled: tint($color-fsa-tertiary, 96%);
+$date-calendar-bg-color-hover: $color-fsa-aqua-100;
+$date-calendar-bg-color-selected: $color-fsa-secondary-900;
 
-.date-picker-control {
+$dateControl: fsa-date-control;
+$dateCalendar: fsa-date-calendar;
+
+.#{$dateControl} {
 
   & {
 
+    color: $date-calendar-text-color-default;
+
     .fsa-input + & {
-      margin-left: -($date-picker-control-btn-width - .2rem);
+      margin-left: -($date-control-btn-width - .2rem);
     }
 
     .fsa-input--block + &,
-    .date-picker-control__item + & {
+    .fsa-field__item + & {
       margin-left: initial;
     }
 
@@ -41,8 +46,8 @@ $date-picker-cal-bg-color-selected: $color-fsa-secondary-900;
     @include reset-button();
     display: inline-block;
     vertical-align: baseline;
-    width: $date-picker-control-btn-width;
-    height: $date-picker-control-btn-height;
+    width: $date-control-btn-width;
+    height: $date-control-btn-height;
     overflow: hidden;
     color: transparent;
     text-indent: -300%;
@@ -52,11 +57,12 @@ $date-picker-cal-bg-color-selected: $color-fsa-secondary-900;
     position: relative;
     top: -1px;
     vertical-align: middle;
+
     &[disabled] {
       opacity: .4;
     }
 
-    .fsa-field__item + .date-picker-control & {
+    .fsa-field__item + .#{$dateControl} & {
       position: absolute;
       top: -39px;
       right: 0;
@@ -75,27 +81,27 @@ $date-picker-cal-bg-color-selected: $color-fsa-secondary-900;
   }
 }
 
-.date-picker {
+.#{$dateCalendar} {
 
-  @mixin date-picker-disabled-item($opacity: .6) {
+  @mixin date-calendar-disabled-item($opacity: .6) {
     cursor: text;
     opacity: $opacity !important;
     filter: grayscale(1);
   }
 
-  @mixin date-picker-cell-default {
-    color: $date-picker-cal-text-color-default;
-    border: 1px solid $date-picker-cal-table-cell-border-color;
+  @mixin date-calendar-cell-default {
+    color: $date-calendar-text-color-default;
+    border: 1px solid $date-calendar-table-cell-border-color;
     border-left: 0;
     border-right: 0;
     line-height: 1;
     text-align: center;
     vertical-align: bottom;
     cursor: pointer;
-    padding: $date-picker-cal-table-cell-padding;
+    padding: $date-calendar-table-cell-padding;
     width: $size-large;
     &:last-child {
-      padding: $date-picker-cal-table-cell-padding;
+      padding: $date-calendar-table-cell-padding;
     }
   }
 
@@ -105,7 +111,8 @@ $date-picker-cal-bg-color-selected: $color-fsa-secondary-900;
   // Root Default
 
   & {
-    border: 1px solid $date-picker-cal-border-color;
+    color: $date-calendar-text-color-default;
+    border: 1px solid $date-calendar-border-color;
     position: absolute;
     z-index: 9999;
     text-align: center;
@@ -132,14 +139,14 @@ $date-picker-cal-bg-color-selected: $color-fsa-secondary-900;
       margin-top: 0;
     }
 
-    &.date-picker--focus {
+    &.#{$dateCalendar}--focus {
       box-shadow: none;
     }
 
   }
 
   &--disabled {
-    @include date-picker-disabled-item();
+    @include date-calendar-disabled-item();
     background-color: transparent;
     &:hover *,
     &:hover {
@@ -179,7 +186,7 @@ $date-picker-cal-bg-color-selected: $color-fsa-secondary-900;
     display: inline-block;
     line-height: 1;
     margin: $size-small 0 0;
-    color: $date-picker-cal-text-color-default;
+    color: $date-calendar-text-color-default;
     // cursor: text;
   }
 
@@ -212,14 +219,14 @@ $date-picker-cal-bg-color-selected: $color-fsa-secondary-900;
       color: $color-fsa-link-hover;
     }
 
-    &:active:not(.date-picker__disabled-item) {
+    &:active:not(.#{$dateCalendar}__disabled-item) {
       @include fsa-focus();
       // outline: 3px solid $color-focus;
     }
 
-    &.date-picker__disabled-item,
-    .date-picker__disabled-item & {
-      @include date-picker-disabled-item();
+    &.#{$dateCalendar}__disabled-item,
+    .#{$dateCalendar}__disabled-item & {
+      @include date-calendar-disabled-item();
     }
 
   }
@@ -249,27 +256,27 @@ $date-picker-cal-bg-color-selected: $color-fsa-secondary-900;
     @include font-size(3);
     padding: $size-default $size-default;
 
-    &.date-picker__disabled-item {
-      @include date-picker-disabled-item(1);
+    &.#{$dateCalendar}__disabled-item {
+      @include date-calendar-disabled-item(1);
     }
 
     &:hover {
       color: $color-fsa-link-hover;
     }
 
-    &:active:not(.date-picker__disabled-item) {
+    &:active:not(.#{$dateCalendar}__disabled-item) {
       @include fsa-focus();
     }
 
-    .date-picker__disabled-item & {
-      @include date-picker-disabled-item(1);
+    .#{$dateCalendar}__disabled-item & {
+      @include date-calendar-disabled-item(1);
     }
 
   }
 
-  &__prev-but:not(.date-picker__disabled-item):hover,
-  &__next-but:not(.date-picker__disabled-item):hover,
-  &__today-but:not(.date-picker__disabled-item):hover {
+  &__prev-but:not(.#{$dateCalendar}__disabled-item):hover,
+  &__next-but:not(.#{$dateCalendar}__disabled-item):hover,
+  &__today-but:not(.#{$dateCalendar}__disabled-item):hover {
     box-shadow: 0 0 0 1px $color-fsa-tertiary-200 inset; // maybe try $button-secondary-border
   }
 
@@ -293,7 +300,7 @@ $date-picker-cal-bg-color-selected: $color-fsa-secondary-900;
     @include breakpoint(S) {
       width: auto;
     }
-    .date-picker--static & {
+    .#{$dateCalendar}--static & {
       width: 100%;
     }
   }
@@ -302,18 +309,19 @@ $date-picker-cal-bg-color-selected: $color-fsa-secondary-900;
     th {
       padding: 0;
       text-align: center;
+      color: inherit
     }
   }
 
   &__day-name {
     display: block;
-    padding: $date-picker-cal-table-cell-padding;
+    padding: $date-calendar-table-cell-padding;
     line-height: 1;
   }
 
   &__day {
 
-    @include date-picker-cell-default();
+    @include date-calendar-cell-default();
 
     &:focus { // focused via [tabindex]
       // prevents weird double-focus effect (focus state collision/redundancy)
@@ -325,7 +333,7 @@ $date-picker-cal-bg-color-selected: $color-fsa-secondary-900;
       /* The "mon tue wed thu fri sat sun" day header styles */
       @include font-size(1);
       border: 0;
-      border-top: 1px solid $date-picker-cal-border-color;
+      border-top: 1px solid $date-calendar-border-color;
       text-align: center;
       vertical-align: middle;
       cursor: help;
@@ -352,47 +360,47 @@ $date-picker-cal-bg-color-selected: $color-fsa-secondary-900;
         z-index: 99999;
       }
 
-      .date-picker--focus & {
+      .#{$dateCalendar}--focus & {
         @include fsa-focus();
-        background: $date-picker-cal-bg-color-hover;
+        background: $date-calendar-bg-color-hover;
         &:hover {
           outline: 0 !important;
         }
       }
 
-      .date-picker--static & {}
+      .#{$dateCalendar}--static & {}
 
-      .date-picker--disabled & {
+      .#{$dateCalendar}--disabled & {
         outline: 0 !important;
         background-color: transparent !important;
       }
 
     }
 
-    &--hover:not(.date-picker__day--selected-date) {
-      .date-picker--static & {
-        background-color: $date-picker-cal-bg-color-hover;
+    &--hover:not(.#{$dateCalendar}__day--selected-date) {
+      .#{$dateCalendar}--static & {
+        background-color: $date-calendar-bg-color-hover;
       }
     }
 
     &:active {
-      .date-picker--focus & {
+      .#{$dateCalendar}--focus & {
         outline: 3px solid $color-focus !important;
       }
     }
 
-    &.date-picker__day--disabled:active {
-      .date-picker--focus & {
+    &.#{$dateCalendar}__day--disabled:active {
+      .#{$dateCalendar}--focus & {
         outline: 0 !important;
       }
     }
 
     &--selected-date {
-      $bgc: $date-picker-cal-bg-color-selected;
+      $bgc: $date-calendar-bg-color-selected;
       background-color: $bgc;
       color: #fff;
       font-weight: $font-bold;
-      &.date-picker__day--hover {
+      &.#{$dateCalendar}__day--hover {
         background-color: $bgc;
       }
     }
@@ -413,12 +421,12 @@ $date-picker-cal-bg-color-selected: $color-fsa-secondary-900;
 
       &,
       &:hover {
-        color: $date-picker-cal-text-color-disabled !important;
-        background-color: $date-picker-cal-bg-color-disabled !important;
+        color: $date-calendar-text-color-disabled !important;
+        background-color: $date-calendar-bg-color-disabled !important;
         cursor: text;
       }
 
-      &.date-picker__day--hover {
+      &.#{$dateCalendar}__day--hover {
         outline-color: gray !important;
       }
 
@@ -428,7 +436,7 @@ $date-picker-cal-bg-color-selected: $color-fsa-secondary-900;
 
   &__week-header {
 
-    @include date-picker-cell-default();
+    @include date-calendar-cell-default();
     @include font-size(0);
     background: transparent;
     cursor: text;
@@ -440,9 +448,9 @@ $date-picker-cal-bg-color-selected: $color-fsa-secondary-900;
       -4px 0 0 0 tint($color-fsa-tertiary, 95%) inset,
       -6px 0 0 0 tint($color-fsa-tertiary, 98%) inset
     ;
-    border-right: 1px solid $date-picker-cal-border-color;
+    border-right: 1px solid $date-calendar-border-color;
 
-    .date-picker__thead & {
+    .#{$dateCalendar}__thead & {
       vertical-align: middle;
       background-color: transparent;
       font-weight: normal;
@@ -466,7 +474,7 @@ $date-picker-cal-bg-color-selected: $color-fsa-secondary-900;
     font-weight: normal;
     text-transform: uppercase;
     border: 0 none;
-    padding: ($date-picker-cal-table-cell-padding / 2);
+    padding: ($date-calendar-table-cell-padding / 2);
   }
 
   // ----------------------------------------------------------------------------

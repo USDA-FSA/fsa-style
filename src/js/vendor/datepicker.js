@@ -27,7 +27,7 @@ var datePickerController = (function datePickerController() {
         dPartsRegExp = /%([d|j])/,
         mPartsRegExp = /%([M|F|m|n])/,
         yPartsRegExp = /%[y|Y]/,
-        noSelectionRegExp = /date-picker__day--unused|date-picker__day--out-of-range|date-picker__day--disabled|date-picker__day--not-selectable/,
+        noSelectionRegExp = /fsa-date-calendar__day--unused|fsa-date-calendar__day--out-of-range|fsa-date-calendar__day--disabled|fsa-date-calendar__day--not-selectable/,
         formatTestRegExp = /%([d|j|M|F|m|n|Y|y])/,
         formatSplitRegExp = /%([d|D|l|j|N|w|S|W|M|F|m|n|t|Y|y])/,
         rangeRegExp = /^((\d\d\d\d)(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01]))$/,
@@ -596,11 +596,11 @@ var datePickerController = (function datePickerController() {
 
         // Resets the tabindex of the previously focused cell
         this.removeOldFocus = function() {
-            var td = document.getElementById(o.id + "-date-picker__day--hover");
+            var td = document.getElementById(o.id + "-fsa-date-calendar__day--hover");
             if (td) {
                 try {
                     setTabIndex(td, -1);
-                    removeClass(td, "date-picker__day--hover");
+                    removeClass(td, "fsa-date-calendar__day--hover");
                     td.id = "";
                     td.onblur = null;
                     td.onfocus = null;
@@ -610,11 +610,11 @@ var datePickerController = (function datePickerController() {
 
         // Sets the tabindex & focus on the currently highlighted cell
         this.setNewFocus = function() {
-            var td = document.getElementById(o.id + "-date-picker__day--hover");
+            var td = document.getElementById(o.id + "-fsa-date-calendar__day--hover");
             if (td) {
                 try {
                     setTabIndex(td, 0);
-                    addClass(td, "date-picker__day--hover");
+                    addClass(td, "fsa-date-calendar__day--hover");
                     // If opened with the keyboard then add focus & blur events to the cell
                     if (!this.clickActivated) {
                         td.onblur = o.onblur;
@@ -641,10 +641,10 @@ var datePickerController = (function datePickerController() {
         // Adds a screen-reader friendly date to the current cell whenever
         // the datepicker has been opened with the keyboard
         this.addAccessibleDate = function() {
-            var td = document.getElementById(o.id + "-date-picker__day--hover");
+            var td = document.getElementById(o.id + "-fsa-date-calendar__day--hover");
 
             if (td && !(td.getElementsByTagName("span").length)) {
-                var ymd = td.className.match(/date-picker__yyyymmdd--([\d]{4})([\d]{2})([\d]{2})/),
+                var ymd = td.className.match(/fsa-date-calendar__yyyymmdd--([\d]{4})([\d]{2})([\d]{2})/),
                     noS = td.className.search(noSelectionRegExp) != -1,
                     spn = document.createElement('span'),
                     spnC;
@@ -832,21 +832,21 @@ var datePickerController = (function datePickerController() {
                         currentStub = stubP;
                         weekDay = weekDayP;
                         selectable = !o.constrainSelection;
-                        cName.push("date-picker__day--month-out");
+                        cName.push("fsa-date-calendar__day--month-out");
                         // Are we drawing next month
                     } else if (dt > dpm) {
                         dt -= dpm;
                         currentStub = stubN;
                         weekDay = weekDayN;
                         selectable = !o.constrainSelection;
-                        cName.push("date-picker__day--month-out");
+                        cName.push("fsa-date-calendar__day--month-out");
                     };
 
                     // Calcuate this cells weekday
                     weekDay = (weekDay + dt + 6) % 7;
 
                     // Push a classname representing the weekday e.g. "day-3"
-                    cName.push("date-picker__day date-picker__day--" + weekDay + " date-picker__cell--" + curr);
+                    cName.push("fsa-date-calendar__day fsa-date-calendar__day--" + weekDay + " fsa-date-calendar__cell--" + curr);
 
                     // A YYYYMMDD String representation of this cells date
                     currentDate = currentStub + String(dt < 10 ? "0" : "") + dt;
@@ -854,7 +854,7 @@ var datePickerController = (function datePickerController() {
                     // If this cells date is out of range
                     if (o.rangeLow && +currentDate < +o.rangeLow || o.rangeHigh && +currentDate > +o.rangeHigh) {
                         // Add a classname to style the cell and stop selection
-                        td.className = "date-picker__day date-picker__day--out-of-range";
+                        td.className = "fsa-date-calendar__day fsa-date-calendar__day--out-of-range";
                         // Reset this TD nodes title attribute
                         //td.title = "";
                         // Append the cells date as a text node to the TD
@@ -866,25 +866,25 @@ var datePickerController = (function datePickerController() {
                         // This cells date is within the lower & upper ranges (or no ranges have been defined)
                     } else {
                         // If it's a date from last or next month and the "constrainSelection" option
-                        // is false then give the cell a date-picker__yyyymmdd--YYYYMMDD class
+                        // is false then give the cell a fsa-date-calendar__yyyymmdd--YYYYMMDD class
                         if (selectable) {
                             //td.title = titleFormat ? printFormattedDate(new Date(+String(currentStub).substr(0,4), +String(currentStub).substr(4, 2) - 1, +dt), titleFormat, true) : "";
-                            cName.push("date-picker__yyyymmdd--" + currentDate + " date-picker__yyyymm--" + currentStub + " date-picker__mmdd--" + currentStub.substr(4, 2) + pad(dt));
-                            // Otherwise give a "date-picker__day--not-selectable" class (which shouldn't be styled in any way, it's for internal use)
+                            cName.push("fsa-date-calendar__yyyymmdd--" + currentDate + " fsa-date-calendar__yyyymm--" + currentStub + " fsa-date-calendar__mmdd--" + currentStub.substr(4, 2) + pad(dt));
+                            // Otherwise give a "fsa-date-calendar__day--not-selectable" class (which shouldn't be styled in any way, it's for internal use)
                         } else {
                             //td.title = titleFormat ? getTitleTranslation(13) + " " + printFormattedDate(new Date(+String(currentStub).substr(0,4), +String(currentStub).substr(4, 2) - 1, +dt), titleFormat, true) : "";
-                            cName.push("date-picker__yyyymm--" + currentStub + " date-picker__mmdd--" + currentStub.substr(4, 2) + pad(dt) + " date-picker__day--not-selectable");
+                            cName.push("fsa-date-calendar__yyyymm--" + currentStub + " fsa-date-calendar__mmdd--" + currentStub.substr(4, 2) + pad(dt) + " fsa-date-calendar__day--not-selectable");
                         };
 
                         // Add a classname if the current cells date is today
                         if (currentDate == today) {
-                            cName.push("date-picker__day--today");
+                            cName.push("fsa-date-calendar__day--today");
                         };
 
                         // If this cell represents the currently selected date
                         if (dateSetD == currentDate) {
                             // Add a classname (for styling purposes)
-                            cName.push("date-picker__day--selected-date");
+                            cName.push("fsa-date-calendar__day--selected-date");
                             // Set the ARIA selected property to true
                             setARIAProperty(td, "selected", "true");
                             // And cache a reference to the current cell
@@ -902,7 +902,7 @@ var datePickerController = (function datePickerController() {
                             )
                         ) {
                             // Add a classname to style the cell and stop selection
-                            cName.push("date-picker__day--disabled");
+                            cName.push("fsa-date-calendar__day--disabled");
                             // Update the current cells title to say "Disabled date: ..." (or whatever the translation says)
                             if (titleFormat && selectable) {
                                 td.title = getTitleTranslation(13) + " " + td.title;
@@ -916,12 +916,12 @@ var datePickerController = (function datePickerController() {
 
                         // Do we need to highlight this cells weekday representation
                         if (o.highlightDays[weekDay]) {
-                            cName.push("date-picker__day--highlight");
+                            cName.push("fsa-date-calendar__day--highlight");
                         };
 
                         // Is the current onscreen cursor set to this cells date
                         if (cursorDate == currentDate) {
-                            td.id = o.id + "-date-picker__day--hover";
+                            td.id = o.id + "-fsa-date-calendar__day--hover";
                         };
 
                         // Add the date to the TD cell as a text node. Note: If the datepicker has been given keyboard
@@ -933,13 +933,13 @@ var datePickerController = (function datePickerController() {
 
                         // If the UI displays week numbers then update the celladded
                         if (o.showWeeks) {
-                            cellAdded[row] = Math.min(cName[0] == "date-picker__day--month-out" ? 3 : 1, cellAdded[row]);
+                            cellAdded[row] = Math.min(cName[0] == "fsa-date-calendar__day--month-out" ? 3 : 1, cellAdded[row]);
                         };
                     };
                     // The current TD node is empty i.e. represents no date in the UI
                 } else {
                     // Add a classname to style the cell
-                    td.className = "date-picker__day date-picker__day--unused";
+                    td.className = "fsa-date-calendar__day fsa-date-calendar__day--unused";
                     // Add a non-breaking space to unused TD node (for IEs benefit mostly)
                     td.appendChild(document.createTextNode(nbsp));
                     // Reset the TD nodes title attribute
@@ -952,7 +952,7 @@ var datePickerController = (function datePickerController() {
                         o.wkThs[row].removeChild(o.wkThs[row].firstChild);
                     };
                     o.wkThs[row].appendChild(document.createTextNode(cellAdded[row] == 4 && !o.fillGrid ? nbsp : getWeekNumber(cy, cm, curr - firstColIndex - 6)));
-                    o.wkThs[row].className = "date-picker__week-header" + (["", "", " date-picker__day--out-of-range", " date-picker__day--month-out", ""][cellAdded[row]]);
+                    o.wkThs[row].className = "fsa-date-calendar__week-header" + (["", "", " fsa-date-calendar__day--out-of-range", " fsa-date-calendar__day--month-out", ""][cellAdded[row]]);
                 };
             };
 
@@ -1089,7 +1089,7 @@ var datePickerController = (function datePickerController() {
 
             this.div = document.createElement('div');
             this.div.id = "fd-" + this.id;
-            this.div.className = "date-picker" + this.bespokeClass;
+            this.div.className = "fsa-date-calendar" + this.bespokeClass;
 
             // Attempt to hide the div from screen readers during content creation
             this.div.style.visibility = "hidden";
@@ -1108,7 +1108,7 @@ var datePickerController = (function datePickerController() {
             var tr, row, col, tableHead, tableBody, tableFoot;
 
             this.table = document.createElement('table');
-            this.table.className = "date-picker__table";
+            this.table.className = "fsa-date-calendar__table";
             this.table.onmouseover = this.onmouseover;
             this.table.onmouseout = this.onmouseout;
             this.table.onclick = this.onclick;
@@ -1119,7 +1119,7 @@ var datePickerController = (function datePickerController() {
 
             this.div.appendChild(this.table);
 
-            var dragEnabledCN = !this.dragDisabled ? " date-picker--drag-enabled" : "";
+            var dragEnabledCN = !this.dragDisabled ? " fsa-date-calendar--drag-enabled" : "";
 
             if (!this.staticPos) {
                 this.div.style.visibility = "hidden";
@@ -1153,7 +1153,7 @@ var datePickerController = (function datePickerController() {
                     return;
                 };
 
-                this.div.className += " date-picker--static";
+                this.div.className += " fsa-date-calendar--static";
 
                 if (this.positioned) {
                     elem.appendChild(this.div);
@@ -1165,7 +1165,7 @@ var datePickerController = (function datePickerController() {
                     for (var elemID in this.formElements) {
                         elem = document.getElementById(elemID);
                         if (elem) {
-                            elem.className += " date-picker-control__date-input-hidden";
+                            elem.className += " fsa-date-control__date-input-hidden";
                         };
                     };
                 };
@@ -1183,10 +1183,10 @@ var datePickerController = (function datePickerController() {
                 tableFoot = document.createElement('tfoot');
                 this.table.appendChild(tableFoot);
                 tr = document.createElement('tr');
-                tr.className = "date-picker__tfoot";
+                tr.className = "fsa-date-calendar__tfoot";
                 tableFoot.appendChild(tr);
                 this.statusBar = createTH({
-                    thClassName: "date-picker__status-bar" + dragEnabledCN,
+                    thClassName: "fsa-date-calendar__status-bar" + dragEnabledCN,
                     colspan: this.showWeeks ? 8 : 7
                 });
                 tr.appendChild(this.statusBar);
@@ -1194,7 +1194,7 @@ var datePickerController = (function datePickerController() {
             };
 
             tableHead = document.createElement('thead');
-            tableHead.className = "date-picker__thead";
+            tableHead.className = "fsa-date-calendar__thead";
             this.table.appendChild(tableHead);
 
             tr = document.createElement('tr');
@@ -1204,7 +1204,7 @@ var datePickerController = (function datePickerController() {
 
             // Title Bar
             this.titleBar = createTH({
-                thClassName: "date-picker__title" + dragEnabledCN,
+                thClassName: "fsa-date-calendar__title" + dragEnabledCN,
                 colspan: this.showWeeks ? 8 : 7
             });
             //this.titleBar.setAttribute("role", "presentation");
@@ -1215,12 +1215,12 @@ var datePickerController = (function datePickerController() {
 
             var span = document.createElement('span');
             span.appendChild(document.createTextNode(nbsp));
-            span.className = "date-picker__title-month" + dragEnabledCN;
+            span.className = "fsa-date-calendar__title-month" + dragEnabledCN;
             this.titleBar.appendChild(span);
 
             span = document.createElement('span');
             span.appendChild(document.createTextNode(nbsp));
-            span.className = "date-picker__title-year" + dragEnabledCN;
+            span.className = "fsa-date-calendar__title-year" + dragEnabledCN;
             this.titleBar.appendChild(span);
 
             span = null;
@@ -1230,27 +1230,27 @@ var datePickerController = (function datePickerController() {
             tableHead.appendChild(tr);
 
             createThAndButton(tr, [{
-                className: "date-picker__prev-but date-picker__prev-but--year",
+                className: "fsa-date-calendar__prev-but fsa-date-calendar__prev-but--year",
                 id: "-prev-year-but",
                 text: "\u00AB",
                 title: getTitleTranslation(2)
             }, {
-                className: "date-picker__prev-but date-picker__prev-but--month",
+                className: "fsa-date-calendar__prev-but fsa-date-calendar__prev-but--month",
                 id: "-prev-month-but",
                 text: "\u2039",
                 title: getTitleTranslation(0)
             }, {
                 colspan: this.showWeeks ? 4 : 3,
-                className: "date-picker__today-but",
+                className: "fsa-date-calendar__today-but",
                 id: "-today-but",
                 text: getTitleTranslation(4)
             }, {
-                className: "date-picker__next-but date-picker__next-but--month",
+                className: "fsa-date-calendar__next-but fsa-date-calendar__next-but--month",
                 id: "-next-month-but",
                 text: "\u203A",
                 title: getTitleTranslation(1)
             }, {
-                className: "date-picker__next-but date-picker__next-but--year",
+                className: "fsa-date-calendar__next-but fsa-date-calendar__next-but--year",
                 id: "-next-year-but",
                 text: "\u00BB",
                 title: getTitleTranslation(3)
@@ -1292,13 +1292,13 @@ var datePickerController = (function datePickerController() {
                         setARIARole(col, "gridcell");
                     } else {
                         if (rows === 0 && cols > colOffset) {
-                            col.className = "date-picker__day--header";
+                            col.className = "fsa-date-calendar__day--header";
                             col.scope = "col";
                             //commented out based on this open issue https://github.com/freqdec/datePicker/issues/42
                             //setARIARole(col, "columnheader");
                             col.id = this.id + "-col-" + cols;
                         } else {
-                            col.className = "date-picker__week-header";
+                            col.className = "fsa-date-calendar__week-header";
                             col.scope = "row";
                             //commented out based on this open issue https://github.com/freqdec/datePicker/issues/42
                             //setARIARole(col, "rowheader");
@@ -1320,7 +1320,7 @@ var datePickerController = (function datePickerController() {
 
                 if (y > (this.showWeeks ? 0 : -1)) {
                     but = document.createElement("span");
-                    but.className = "date-picker__day-name";
+                    but.className = "fsa-date-calendar__day-name";
 
                     if (oldIE) {
                         but.unselectable = "on";
@@ -1346,7 +1346,7 @@ var datePickerController = (function datePickerController() {
 
             if (this.showWeeks) {
                 this.wkThs = this.table.getElementsByTagName('tbody')[0].getElementsByTagName('th');
-                this.div.className += " date-picker--weeks-displayed";
+                this.div.className += " fsa-date-calendar--weeks-displayed";
             };
 
             tableBody = tableHead = tr = createThAndButton = createTH = null;
@@ -1407,7 +1407,7 @@ var datePickerController = (function datePickerController() {
         };
         this.stopDrag = function(e) {
             var b = document.getElementsByTagName("body")[0];
-            removeClass(b, "date-picker-is-dragging");
+            removeClass(b, "fsa-date-calendar-is-dragging");
             removeEvent(document, 'mousemove', o.trackDrag, false);
             removeEvent(document, 'mouseup', o.stopDrag, false);
             o.div.style.zIndex = 9999;
@@ -1440,7 +1440,7 @@ var datePickerController = (function datePickerController() {
                 return true;
             };
 
-            if ((o.div.className + origEl.className).search('date-picker__disabled-item') != -1) {
+            if ((o.div.className + origEl.className).search('fsa-date-calendar__disabled-item') != -1) {
                 return true;
             };
 
@@ -1482,14 +1482,14 @@ var datePickerController = (function datePickerController() {
 
                 return stopEvent(e);
 
-            } else if (el.className.search("date-picker--drag-enabled") != -1) {
+            } else if (el.className.search("fsa-date-calendar--drag-enabled") != -1) {
                 o.mx = e.pageX ? e.pageX : e.clientX ? e.clientX : e.x;
                 o.my = e.pageY ? e.pageY : e.clientY ? e.clientY : e.Y;
                 o.x = parseInt(o.div.style.left);
                 o.y = parseInt(o.div.style.top);
                 addEvent(document, 'mousemove', o.trackDrag, false);
                 addEvent(document, 'mouseup', o.stopDrag, false);
-                addClass(document.getElementsByTagName("body")[0], "date-picker-is-dragging");
+                addClass(document.getElementsByTagName("body")[0], "fsa-date-calendar-is-dragging");
                 o.div.style.zIndex = 10000;
 
                 return stopEvent(e);
@@ -1508,11 +1508,11 @@ var datePickerController = (function datePickerController() {
                 // Are we within a valid i.e. clickable TD node
                 if (el.tagName && el.tagName.toLowerCase() == "td") {
 
-                    if (el.className.search(/date-picker__yyyymmdd--([0-9]{8})/) == -1 || el.className.search(noSelectionRegExp) != -1) {
+                    if (el.className.search(/fsa-date-calendar__yyyymmdd--([0-9]{8})/) == -1 || el.className.search(noSelectionRegExp) != -1) {
                         return stopEvent(e);
                     };
 
-                    var cellDate = el.className.match(/date-picker__yyyymmdd--([0-9]{8})/)[1];
+                    var cellDate = el.className.match(/fsa-date-calendar__yyyymmdd--([0-9]{8})/)[1];
                     o.date = new Date(cellDate.substr(0, 4), cellDate.substr(4, 2) - 1, cellDate.substr(6, 2));
                     o.dateSet = new Date(o.date);
                     o.noFocus = true;
@@ -1536,7 +1536,7 @@ var datePickerController = (function datePickerController() {
                     o.stopTimer();
                     break;
                     // Day headers clicked, change the first day of the week
-                } else if (el.className.search(/date-picker__day--header/) != -1) {
+                } else if (el.className.search(/fsa-date-calendar__day--header/) != -1) {
 
                     if(o.enableFirstDayOfWeekClick) {
 
@@ -1622,7 +1622,7 @@ var datePickerController = (function datePickerController() {
             this.fade();
             var butt = document.getElementById('fd-but-' + this.id);
             if (butt) {
-                addClass(butt, "date-picker-control__btn--active");
+                addClass(butt, "fsa-date-control__btn--active");
             };
         };
         this.hide = function() {
@@ -1638,7 +1638,7 @@ var datePickerController = (function datePickerController() {
             }
             this.kbEvent = false;
 
-            removeClass(o.div, "date-picker--focus");
+            removeClass(o.div, "fsa-date-calendar--focus");
 
             this.stopTimer();
             this.removeOnFocusEvents();
@@ -1657,7 +1657,7 @@ var datePickerController = (function datePickerController() {
 
             var butt = document.getElementById('fd-but-' + this.id);
             if (butt) {
-                removeClass(butt, "date-picker-control__btn--active");
+                removeClass(butt, "fsa-date-control__btn--active");
             };
 
             removeEvent(document, "mousedown", this.onmousedown);
@@ -1692,7 +1692,7 @@ var datePickerController = (function datePickerController() {
         // The current cursor cell gains focus
         this.onfocus = function(e) {
             o.noFocus = false;
-            addClass(o.div, "date-picker--focus");
+            addClass(o.div, "fsa-date-calendar--focus");
             if (o.statusBar) {
                 o.updateStatus(printFormattedDate(o.date, o.statusFormat, true));
             };
@@ -1746,8 +1746,8 @@ var datePickerController = (function datePickerController() {
 
             if (kc == 13 || (kc == 32 && !e.ctrlKey)) {
                 // RETURN/ENTER: close & select the date
-                var td = document.getElementById(o.id + "-date-picker__day--hover");
-                if (!td || td.className.search(/date-picker__yyyymmdd--([0-9]{8})/) == -1 || td.className.search(/date-picker__day--out-of-range|date-picker__day--disabled/) != -1) {
+                var td = document.getElementById(o.id + "-fsa-date-calendar__day--hover");
+                if (!td || td.className.search(/fsa-date-calendar__yyyymmdd--([0-9]{8})/) == -1 || td.className.search(/fsa-date-calendar__day--out-of-range|fsa-date-calendar__day--disabled/) != -1) {
                     return stopEvent(e);
                 };
                 o.dateSet = new Date(o.date);
@@ -1876,11 +1876,11 @@ var datePickerController = (function datePickerController() {
 
                 // Locate this TD
                 for (var i = 0, td; td = o.tds[i]; i++) {
-                    if (td.className.search("date-picker__yyyymmdd--" + t) == -1) {
+                    if (td.className.search("fsa-date-calendar__yyyymmdd--" + t) == -1) {
                         continue;
                     };
 
-                    td.id = o.id + "-date-picker__day--hover";
+                    td.id = o.id + "-fsa-date-calendar__day--hover";
                     o.setNewFocus();
                     break;
                 };
@@ -1929,15 +1929,15 @@ var datePickerController = (function datePickerController() {
 
             switch (el.tagName.toLowerCase()) {
                 case "td":
-                    if (el.className.search(/date-picker__day--unused|date-picker__day--out-of-range/) != -1) {
+                    if (el.className.search(/fsa-date-calendar__day--unused|fsa-date-calendar__day--out-of-range/) != -1) {
                         statusText = getTitleTranslation(9);
                     }
-                    if (el.className.search(/date-picker__yyyymmdd--([0-9]{8})/) != -1) {
+                    if (el.className.search(/fsa-date-calendar__yyyymmdd--([0-9]{8})/) != -1) {
                         o.stopTimer();
-                        var cellDate = el.className.match(/date-picker__yyyymmdd--([0-9]{8})/)[1];
+                        var cellDate = el.className.match(/fsa-date-calendar__yyyymmdd--([0-9]{8})/)[1];
 
                         o.removeOldFocus();
-                        el.id = o.id + "-date-picker__day--hover";
+                        el.id = o.id + "-fsa-date-calendar__day--hover";
                         o.setNewFocus();
 
                         o.date = new Date(+cellDate.substr(0, 4), +cellDate.substr(4, 2) - 1, +cellDate.substr(6, 2));
@@ -1952,9 +1952,9 @@ var datePickerController = (function datePickerController() {
                     if (!o.statusBar) {
                         break;
                     };
-                    if (el.className.search(/date-picker--drag-enabled/) != -1) {
+                    if (el.className.search(/fsa-date-calendar--drag-enabled/) != -1) {
                         statusText = getTitleTranslation(10);
-                    } else if (el.className.search(/date-picker__week-header/) != -1) {
+                    } else if (el.className.search(/fsa-date-calendar__week-header/) != -1) {
                         var txt = el.firstChild ? el.firstChild.nodeValue : "";
                         statusText = txt.search(/^(\d+)$/) != -1 ? getTitleTranslation(7, [txt, txt < 3 && o.date.getMonth() == 11 ? getWeeksInYear(o.date.getFullYear()) + 1 : getWeeksInYear(o.date.getFullYear())]) : getTitleTranslation(9);
                     };
@@ -1963,20 +1963,20 @@ var datePickerController = (function datePickerController() {
                     if (!o.statusBar) {
                         break;
                     };
-                    if (el.className.search(/date-picker--drag-enabled/) != -1) {
+                    if (el.className.search(/fsa-date-calendar--drag-enabled/) != -1) {
                         statusText = getTitleTranslation(10);
-                    } else if (el.className.search(/date-picker__day--([0-6])/) != -1) {
-                        var day = el.className.match(/date-picker__day--([0-6])/)[1];
+                    } else if (el.className.search(/fsa-date-calendar__day--([0-6])/) != -1) {
+                        var day = el.className.match(/fsa-date-calendar__day--([0-6])/)[1];
                         statusText = getTitleTranslation(11, [getDayTranslation(day, false)]);
-                    } else if (el.className.search(/date-picker__prev-but--year/) != -1) {
+                    } else if (el.className.search(/fsa-date-calendar__prev-but--year/) != -1) {
                         statusText = getTitleTranslation(2);
-                    } else if (el.className.search(/date-picker__prev-but--month/) != -1) {
+                    } else if (el.className.search(/fsa-date-calendar__prev-but--month/) != -1) {
                         statusText = getTitleTranslation(0);
-                    } else if (el.className.search(/date-picker__next-but--year/) != -1) {
+                    } else if (el.className.search(/fsa-date-calendar__next-but--year/) != -1) {
                         statusText = getTitleTranslation(3);
-                    } else if (el.className.search(/date-picker__next-but--month/) != -1) {
+                    } else if (el.className.search(/fsa-date-calendar__next-but--month/) != -1) {
                         statusText = getTitleTranslation(1);
-                    } else if (el.className.search(/date-picker__today-but/) != -1 && el.className.search(/disabled/) == -1) {
+                    } else if (el.className.search(/fsa-date-calendar__today-but/) != -1 && el.className.search(/disabled/) == -1) {
                         statusText = getTitleTranslation(12);
                     };
                     break;
@@ -1990,7 +1990,7 @@ var datePickerController = (function datePickerController() {
                         if (el == o.currentTR) break;
                         o.currentTR.className = "";
                     };
-                    el.className = "date-picker__row--highlight";
+                    el.className = "fsa-date-calendar__row--highlight";
                     o.currentTR = el;
                     break;
                 };
@@ -2064,7 +2064,7 @@ var datePickerController = (function datePickerController() {
                 var kc = e.keyCode != null ? e.keyCode : e.charCode;
                 if (kc != 13 && kc != 32) return true;
                 if (dpVisible) {
-                    removeClass(this, "date-picker-control__btn--active")
+                    removeClass(this, "fsa-date-control__btn--active")
                     hideAll();
                     return stopEvent(e);
                 };
@@ -2074,11 +2074,11 @@ var datePickerController = (function datePickerController() {
             };
 
             if (!dpVisible) {
-                addClass(this, "date-picker-control__btn--active")
+                addClass(this, "fsa-date-control__btn--active")
                 hideAll(inpId);
                 showDatePicker(inpId, autoFocus);
             } else {
-                removeClass(this, "date-picker-control__btn--active");
+                removeClass(this, "fsa-date-control__btn--active");
                 hideAll();
             };
 
@@ -2108,23 +2108,23 @@ var datePickerController = (function datePickerController() {
             but = document.createElement('button'),
             wrap = document.createElement('span');
 
-        wrap.className = "date-picker-control";
+        wrap.className = "fsa-date-control";
 
         // but.href = "#" + this.id;
-        but.className = "date-picker-control__btn";
+        but.className = "fsa-date-control__btn";
         //but.title       = getTitleTranslation(5);
         but.id = "fd-but-" + this.id;
         but.setAttribute("type", "button");
         but.setAttribute("title", "Open Calendar");
-        // span.className = "date-picker-control__icon-wrapper";
+        // span.className = "fsa-date-control__icon-wrapper";
         span.setAttribute("aria-hidden", "true");
 
         var altText = this.labelText ? getTitleTranslation(14, [this.labelText]) : but.title;
         var fontIconHolder = document.createElement("span");
 
-        // fontIconHolder.className = "date-picker-control__icon";
+        // fontIconHolder.className = "fsa-date-control__icon";
         fontIconHolder.style.fontFamily = "";
-        fontIconHolder.innerHTML = '<span class="date-picker-control__text">Open Calendar</span>';
+        fontIconHolder.innerHTML = '<span class="fsa-date-control__text">Open Calendar</span>';
         span.appendChild(fontIconHolder);
         but.appendChild(span);
 
@@ -2568,7 +2568,7 @@ var datePickerController = (function datePickerController() {
         };
 
         if (but) {
-            removeClass(but, "date-picker-control__btn--date-is-valid");
+            removeClass(but, "fsa-date-control__btn--date-is-valid");
         };
 
         if (!dt || isNaN(dt)) {
@@ -2590,7 +2590,7 @@ var datePickerController = (function datePickerController() {
         if (dt.getTime() == this.date.getTime() && this.canDateBeSelected(this.date)) {
             this.dateSet = new Date(this.date);
             if (but) {
-                addClass(but, "date-picker-control__btn--date-is-valid");
+                addClass(but, "fsa-date-control__btn--date-is-valid");
             };
         };
 
@@ -2614,7 +2614,7 @@ var datePickerController = (function datePickerController() {
 
         if (!this.dateSet) {
             if (but) {
-                removeClass(but, "date-picker-control__btn--date-is-valid");
+                removeClass(but, "fsa-date-control__btn--date-is-valid");
             };
             return;
         };
@@ -2653,7 +2653,7 @@ var datePickerController = (function datePickerController() {
             this.updateTable();
             this.noFocus = false;
         } else if (but) {
-            addClass(but, "date-picker-control__btn--date-is-valid");
+            addClass(but, "fsa-date-control__btn--date-is-valid");
         };
 
         if (this.fullCreate) {
@@ -2675,7 +2675,7 @@ var datePickerController = (function datePickerController() {
             this.removeOnFocusEvents();
             this.removeOldFocus();
             this.noFocus = true;
-            addClass(this.div, "date-picker--disabled")
+            addClass(this.div, "fsa-date-calendar--disabled")
             this.table.onmouseover = this.table.onclick = this.table.onmouseout = this.table.onmousedown = null;
             removeEvent(document, "mousedown", this.onmousedown);
             removeEvent(document, "mouseup", this.clearTimer);
@@ -2685,7 +2685,7 @@ var datePickerController = (function datePickerController() {
             };
             var but = document.getElementById("fd-but-" + this.id);
             if (but) {
-                addClass(but, "date-picker-control__btn--disabled");
+                addClass(but, "fsa-date-control__btn--disabled");
                 but.setAttribute("disabled", "disabled");
                 // Set a "disabled" ARIA state
                 setARIAProperty(but, "disabled", true);
@@ -2713,7 +2713,7 @@ var datePickerController = (function datePickerController() {
             };
             this.noFocus = true;
             this.updateTable();
-            removeClass(this.div, "date-picker--disabled");
+            removeClass(this.div, "fsa-date-calendar--disabled");
             this.disabled = false;
             this.table.onmouseover = this.onmouseover;
             this.table.onmouseout = this.onmouseout;
@@ -2722,7 +2722,7 @@ var datePickerController = (function datePickerController() {
         } else {
             var but = document.getElementById("fd-but-" + this.id);
             if (but) {
-                removeClass(but, "date-picker-control__btn--disabled");
+                removeClass(but, "fsa-date-control__btn--disabled");
                 // Reset the "disabled" ARIA state
                 setARIAProperty(but, "disabled", false);
                 this.addButtonEvents(but);
@@ -2733,13 +2733,13 @@ var datePickerController = (function datePickerController() {
     };
     datePicker.prototype.disableTodayButton = function() {
         var today = new Date();
-        removeClass(this.butToday, "date-picker__disabled-item");
+        removeClass(this.butToday, "fsa-date-calendar__disabled-item");
         if (this.outOfRange(today) ||
             (this.date.getDate() == today.getDate() &&
                 this.date.getMonth() == today.getMonth() &&
                 this.date.getFullYear() == today.getFullYear())
         ) {
-            addClass(this.butToday, "date-picker__disabled-item");
+            addClass(this.butToday, "fsa-date-calendar__disabled-item");
         };
     };
     datePicker.prototype.updateTableHeaders = function() {
@@ -2767,9 +2767,9 @@ var datePickerController = (function datePickerController() {
                 this.ths[col].appendChild(document.createTextNode(getDayTranslation(d, true)));
             };
 
-            removeClass(this.ths[col], "date-picker__day--highlight");
+            removeClass(this.ths[col], "fsa-date-calendar__day--highlight");
             if (this.highlightDays[d]) {
-                addClass(this.ths[col], "date-picker__day--highlight");
+                addClass(this.ths[col], "fsa-date-calendar__day--highlight");
             };
         };
 
@@ -2800,39 +2800,39 @@ var datePickerController = (function datePickerController() {
             tdy = tmpDate.getFullYear();
 
         if (this.outOfRange(new Date((tdy - 1), tdm, daysInMonth(+tdm, tdy - 1)))) {
-            addClass(this.butPrevYear, "date-picker__disabled-item");
+            addClass(this.butPrevYear, "fsa-date-calendar__disabled-item");
             if (this.yearInc == -1) {
                 this.stopTimer();
             };
         } else {
-            removeClass(this.butPrevYear, "date-picker__disabled-item");
+            removeClass(this.butPrevYear, "fsa-date-calendar__disabled-item");
         };
 
         if (this.outOfRange(new Date(tdy, (+tdm - 1), daysInMonth(+tdm - 1, tdy)))) {
-            addClass(this.butPrevMonth, "date-picker__disabled-item");
+            addClass(this.butPrevMonth, "fsa-date-calendar__disabled-item");
             if (this.monthInc == -1) {
                 this.stopTimer();
             };
         } else {
-            removeClass(this.butPrevMonth, "date-picker__disabled-item");
+            removeClass(this.butPrevMonth, "fsa-date-calendar__disabled-item");
         };
 
         if (this.outOfRange(new Date((tdy + 1), +tdm, 1))) {
-            addClass(this.butNextYear, "date-picker__disabled-item");
+            addClass(this.butNextYear, "fsa-date-calendar__disabled-item");
             if (this.yearInc == 1) {
                 this.stopTimer();
             };
         } else {
-            removeClass(this.butNextYear, "date-picker__disabled-item");
+            removeClass(this.butNextYear, "fsa-date-calendar__disabled-item");
         };
 
         if (this.outOfRange(new Date(tdy, +tdm + 1, 1))) {
-            addClass(this.butNextMonth, "date-picker__disabled-item");
+            addClass(this.butNextMonth, "fsa-date-calendar__disabled-item");
             if (this.monthInc == 1) {
                 this.stopTimer();
             };
         } else {
-            removeClass(this.butNextMonth, "date-picker__disabled-item");
+            removeClass(this.butNextMonth, "fsa-date-calendar__disabled-item");
         };
     };
     var localeDefaults = {

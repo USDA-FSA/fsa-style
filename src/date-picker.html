@@ -40,44 +40,46 @@
 
       <div class="fsa-grid">
         <div class="fsa-grid__1 fsa-grid__1/2@m fsa-grid__auto@l">
-          <div class="fsa-field fsa-field--date">
+          <div class="fsa-field">
             <label class="fsa-field__label" for="datey-example-1">Label <span class="fsa-field__label-desc">Required</span></label>
             <input placeholder="mm/dd/yyyy" class="fsa-input fsa-field__item" id="datey-example-1" aria-describedby="datey-example-1__help" aria-required="true" name="datey-example-1" type="text" value="">
             <span class="fsa-field__help" id="datey-example-1__help">Example 05/14/1975</span>
           </div>
-          <div class="fsa-field fsa-field--date">
+          <div class="fsa-field">
             <label class="fsa-field__label" for="datey-example-1b">Label <span class="fsa-field__label-desc">Required</span></label>
             <input placeholder="mm/dd/yyyy" class="fsa-input fsa-field__item" id="datey-example-1b" aria-describedby="datey-example-1b__help" aria-required="true" name="datey-example-1b" type="text" value="11/21/1975">
             <span class="fsa-field__help" id="datey-example-1b__help">Example 05/14/1975</span>
           </div>
-          <div class="fsa-field fsa-field--date">
+          <div class="fsa-field">
             <label class="fsa-field__label" for="datey-example-1d">Label <span class="fsa-field__label-desc">Required</span></label>
             <input placeholder="mm/dd/yyyy" disabled class="fsa-input fsa-field__item" id="datey-example-1d" aria-describedby="datey-example-1d__help" aria-required="true" name="datey-example-1d" type="text" value="">
             <span class="fsa-field__help" id="datey-example-1d__help">Example 05/14/1975</span>
           </div>
         </div>
         <div class="fsa-grid__1 fsa-grid__1/2@m fsa-grid__auto@l">
-          <div class="fsa-field fsa-field--date">
+          <div class="fsa-field">
             <label class="fsa-field__label" for="datey-example-2">Label <span class="fsa-field__label-desc">Required</span></label>
             <input placeholder="mm/dd/yyyy" class="fsa-input fsa-field__item" id="datey-example-2" aria-describedby="datey-example-2__help" aria-required="true" name="datey-example-2" type="text" value="">
             <span class="fsa-field__help" id="datey-example-2__help">Example 05/14/1975</span>
           </div>
         </div>
         <div class="fsa-grid__1 fsa-grid__1/2@m fsa-grid__auto@l" hidden>
-          <div class="fsa-field fsa-field--date">
+          <div class="fsa-field">
             <label class="fsa-field__label" for="datey-example-3">Label <span class="fsa-field__label-desc">Required</span></label>
             <input placeholder="mm/dd/yyyy" class="fsa-input fsa-field__item" id="datey-example-3" aria-describedby="datey-example-3__help" aria-required="true" name="datey-example-3" type="text" value="">
             <span class="fsa-field__help" id="datey-example-3__help">Example 05/14/1975</span>
           </div>
         </div>
         <div class="fsa-grid__1 fsa-grid__1/2@m fsa-grid__auto@l" hidden>
-          <div class="fsa-field fsa-field--date">
+          <div class="fsa-field">
             <label class="fsa-field__label" for="datey-example-4">Label <span class="fsa-field__label-desc">Required</span></label>
             <input disabled placeholder="mm/dd/yyyy" class="fsa-input fsa-field__item" id="datey-example-4" aria-describedby="datey-example-4__help" aria-required="true" name="datey-example-4" type="text" value="">
             <span class="fsa-field__help" id="datey-example-4__help">Example 05/14/1975</span>
           </div>
         </div>
       </div>
+
+      <p><a href="asdf">dummy link</a></p>
 
     </div>
 
@@ -90,7 +92,6 @@
     // Example 0
     datePickerController.createDatePicker({
       formElements: { "datey-example-0": "%m/%d/%Y", },
-      enableFirstDayOfWeekClick: true,
       firstDayOfWeek: 6,
       noFadeEffect: true,
     });
