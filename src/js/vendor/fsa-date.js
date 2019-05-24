@@ -2,7 +2,6 @@
 var datePickerController = (function datePickerController() {
 
     var debug = false,
-        // urlLocal = $("html").attr("lang"),
         urlLocal = document.getElementsByTagName("html")[0].attributes["lang"],
         isOpera = Object.prototype.toString.call(window.opera) === "[object Opera]",
         describedBy = "",
