@@ -23,7 +23,7 @@ $dateCalendar: fsa-date-calendar;
     color: $date-calendar-text-color-default;
 
     .fsa-input + & {
-      margin-left: -($date-control-btn-width - .2rem);
+      margin-left: -$date-control-btn-width;
     }
 
     .fsa-input--block + &,
@@ -64,7 +64,7 @@ $dateCalendar: fsa-date-calendar;
 
     .fsa-field__item + .#{$dateControl} & {
       position: absolute;
-      top: -39px;
+      top: -$date-control-btn-height;
       right: 0;
     }
 
@@ -133,7 +133,6 @@ $dateCalendar: fsa-date-calendar;
     position: relative;
     margin: 0;
     margin-top: $size-small;
-    margin-bottom: 1em;
 
     .fsa-field__date-input-hidden + & {
       margin-top: 0;
@@ -141,6 +140,10 @@ $dateCalendar: fsa-date-calendar;
 
     &.#{$dateCalendar}--focus {
       box-shadow: none;
+    }
+
+    .#{$dateControl}__date-input-hidden + & {
+      margin-top: 0;
     }
 
   }
