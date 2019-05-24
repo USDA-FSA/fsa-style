@@ -1,10 +1,8 @@
-///////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+// Date Picker
 
+$date-picker-control-btn-width: $button-height; // from fsa-b
+$date-picker-control-btn-height: $date-picker-control-btn-width;
 $date-picker-cal-text-color-default: $color-fsa-base;
 $date-picker-cal-text-color-disabled: tint($date-picker-cal-text-color-default, 60%);
 $date-picker-cal-border-color: $form-outline-color;
@@ -15,42 +13,24 @@ $date-picker-cal-bg-color-disabled: tint($color-fsa-tertiary, 96%);
 $date-picker-cal-bg-color-hover: $color-fsa-aqua-100;
 $date-picker-cal-bg-color-selected: $color-fsa-secondary-900;
 
-@mixin date-picker-disabled-item($opacity: .6) {
-  cursor: text;
-  opacity: $opacity !important;
-  filter: grayscale(1);
-}
-
-@mixin date-picker-cell-default {
-  color: $date-picker-cal-text-color-default;
-  border: 1px solid $date-picker-cal-table-cell-border-color;
-  border-left: 0;
-  border-right: 0;
-  line-height: 1;
-  text-align: center;
-  vertical-align: bottom;
-  cursor: pointer;
-  padding: $date-picker-cal-table-cell-padding;
-  width: $size-large;
-  &:last-child {
-    padding: $date-picker-cal-table-cell-padding;
-  }
-}
-
-.fsa-field__date {
-  position: relative;
-}
-
 .date-picker-control {
 
   & {
+
     .fsa-input + & {
-      margin-left: -($button-height - .2rem);
+      margin-left: -($date-picker-control-btn-width - .2rem);
     }
+
     .fsa-input--block + &,
     .date-picker-control__item + & {
       margin-left: initial;
     }
+
+    .fsa-field__item + & {
+      position: relative;
+      display: block;
+    }
+
   }
 
   &__date-input-hidden {
@@ -61,8 +41,8 @@ $date-picker-cal-bg-color-selected: $color-fsa-secondary-900;
     @include reset-button();
     display: inline-block;
     vertical-align: baseline;
-    width: $button-height;
-    height: $button-height;
+    width: $date-picker-control-btn-width;
+    height: $date-picker-control-btn-height;
     overflow: hidden;
     color: transparent;
     text-indent: -300%;
@@ -71,15 +51,17 @@ $date-picker-cal-bg-color-selected: $color-fsa-secondary-900;
     background-position: center;
     position: relative;
     top: -1px;
-    .fsa-field & {
-      position: absolute;
-      right: 0;
-      top: 0;
-      bottom: 0;
-    }
+    vertical-align: middle;
     &[disabled] {
       opacity: .4;
     }
+
+    .fsa-field__item + .date-picker-control & {
+      position: absolute;
+      top: -39px;
+      right: 0;
+    }
+
   }
 
   &__text {
@@ -93,11 +75,34 @@ $date-picker-cal-bg-color-selected: $color-fsa-secondary-900;
   }
 }
 
-/* body */.date-picker-is-dragging {
-  user-select:none;
-}
-
 .date-picker {
+
+  @mixin date-picker-disabled-item($opacity: .6) {
+    cursor: text;
+    opacity: $opacity !important;
+    filter: grayscale(1);
+  }
+
+  @mixin date-picker-cell-default {
+    color: $date-picker-cal-text-color-default;
+    border: 1px solid $date-picker-cal-table-cell-border-color;
+    border-left: 0;
+    border-right: 0;
+    line-height: 1;
+    text-align: center;
+    vertical-align: bottom;
+    cursor: pointer;
+    padding: $date-picker-cal-table-cell-padding;
+    width: $size-large;
+    &:last-child {
+      padding: $date-picker-cal-table-cell-padding;
+    }
+  }
+
+  // ----------------------------------------------------------------------------
+  // ----------------------------------------------------------------------------
+  // ----------------------------------------------------------------------------
+  // Root Default
 
   & {
     border: 1px solid $date-picker-cal-border-color;
@@ -113,7 +118,7 @@ $date-picker-cal-bg-color-selected: $color-fsa-secondary-900;
   // ----------------------------------------------------------------------------
   // ----------------------------------------------------------------------------
   // ----------------------------------------------------------------------------
-  // Variations
+  // Root Variations
 
   &--static {
 
@@ -463,10 +468,11 @@ $date-picker-cal-bg-color-selected: $color-fsa-secondary-900;
     border: 0 none;
     padding: ($date-picker-cal-table-cell-padding / 2);
   }
+
   // ----------------------------------------------------------------------------
   // ----------------------------------------------------------------------------
   // ----------------------------------------------------------------------------
-  // Other / Unused / Placeholders / etc
+  // Unused / Placeholders / etc
 
   &__row {}
 
@@ -474,6 +480,12 @@ $date-picker-cal-bg-color-selected: $color-fsa-secondary-900;
 
   &__tfoot {}
 
-}
+  // ----------------------------------------------------------------------------
+  // ----------------------------------------------------------------------------
+  // ----------------------------------------------------------------------------
+  // Other
 
+  &-is-dragging { /* body */ }
+
+}
 
