@@ -1377,7 +1377,7 @@ var datePickerController = (function datePickerController() {
             o.fadeTimer = null;
             var diff = Math.round(o.opacity + ((o.opacityTo - o.opacity) / 4));
             o.setOpacity(diff);
-            if (Math.abs(o.opacityTo - diff) > 3 && !o.noFadeEffect) {
+            if (Math.abs(o.opacityTo - diff) > 3 && o.useFadeEffect) {
                 o.fadeTimer = window.setTimeout(o.fade, 50);
             } else {
                 o.setOpacity(o.opacityTo);
@@ -3448,7 +3448,7 @@ var datePickerController = (function datePickerController() {
             // Status bar format
             statusFormat: options.statusFormat || statusFormat,
             // No fade in/out effect
-            noFadeEffect: !!(options.staticPos) ? true : !!(options.noFadeEffect),
+            useFadeEffect: !!(options.staticPos) ? false : !!(options.useFadeEffect),
             // No drag functionality
             dragDisabled: nodrag || !!(options.staticPos) ? true : !!(options.dragDisabled),
 
