@@ -18,7 +18,7 @@
   },
   "scripts": {
     "build": "grunt build",
-    "start": "npm i && grunt",
+    "start": "grunt",
     "deploy": "grunt deploy",
     "test": "grunt test"
   },
