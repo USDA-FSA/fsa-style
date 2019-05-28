@@ -2841,7 +2841,7 @@ var datePickerController = (function datePickerController() {
         dayAbbrs: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
         titles: ["Previous month", "Next month", "Previous year", "Next year", "Today", "Show Calendar", "wk", "Week [[%0%]] of [[%1%]]", "Week", "Select a date", "Click \u0026 Drag to move", "Display \u201C[[%0%]]\u201D first", "Go to Today\u2019s date", "Disabled date :", "Show calendar for [[%0%]]"],
         rtl: false,
-        firstDayOfWeek: 0,
+        firstDayOfWeek: 6, //0 = monday
         imported: false
     };
     var joinNodeLists = function() {
@@ -3243,7 +3243,7 @@ var datePickerController = (function datePickerController() {
                 monthAbbrs: fdLocale.monthAbbrs,
                 fullDays: fdLocale.fullDays,
                 dayAbbrs: fdLocale.dayAbbrs,
-                firstDayOfWeek: ("firstDayOfWeek" in fdLocale) ? fdLocale.firstDayOfWeek : 0,
+                firstDayOfWeek: ("firstDayOfWeek" in fdLocale) ? fdLocale.firstDayOfWeek : 6, //0 = monday
                 rtl: ("rtl" in fdLocale) ? !!(fdLocale.rtl) : false,
                 imported: true
             };
@@ -3265,7 +3265,7 @@ var datePickerController = (function datePickerController() {
     };
     var addDatePicker = function(options) {
 
-				localeDefaults.firstDayOfWeek = options.firstDayOfWeek ? options.firstDayOfWeek : 0;
+				localeDefaults.firstDayOfWeek = options.firstDayOfWeek ? options.firstDayOfWeek : 6; //0 = monday
 
         updateLanguage();
 

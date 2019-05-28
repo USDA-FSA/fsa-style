@@ -92,7 +92,6 @@
     // Example 0
     datePickerController.createDatePicker({
       formElements: { "datey-example-0": "%m/%d/%Y", },
-      firstDayOfWeek: 6,
       noFadeEffect: true,
     });
 
@@ -101,7 +100,6 @@
     datePickerController.createDatePicker({
       formElements: { "datey-example-1": "%m/%d/%Y", },
       disabledDays:[0,0,0,0,0,1,1], // can't choose Sat or Sun
-      firstDayOfWeek: 6,
       noFadeEffect: true,
     });
     datePickerController.setRangeLow("datey-example-1", '20190407');  // disabled PRIOR to April 7, 2019
@@ -112,7 +110,6 @@
 
     datePickerController.createDatePicker({
       formElements: { "datey-example-1b": "%m/%d/%Y", },
-      firstDayOfWeek: 6,
       statusFormat:"%l, %F %d%S, %Y",
       noFadeEffect: true,
     });
@@ -121,7 +118,6 @@
     // Example 1c
     datePickerController.createDatePicker({
       formElements: { "datey-example-1c_1": "%m/%d/%Y", },
-      firstDayOfWeek: 6,
       noFadeEffect: true,
       positioned: "datey-example-1c__activate"
     });
@@ -130,7 +126,6 @@
     // Example 1d
     datePickerController.createDatePicker({
       formElements: { "datey-example-1d": "%m/%d/%Y", },
-      firstDayOfWeek: 6,
       noFadeEffect: true,
     });
 
@@ -138,7 +133,6 @@
     // Example 2
     datePickerController.createDatePicker({
       formElements: { "datey-example-2": "%m/%d/%Y" },
-      firstDayOfWeek: 6,
       labelText: "Date of birth", // screenreader announces
       staticPos: true,
       bespokeTitles:{
@@ -157,7 +151,6 @@
     // Example 3
     datePickerController.createDatePicker({
       formElements: { "datey-example-3": "%m/%d/%Y" },
-      firstDayOfWeek: 6,
       labelText: "Date of birth", // screenreader announces
       statusFormat:"%l, %F %d%S, %Y",
       noFadeEffect: true,
@@ -185,7 +178,6 @@
     // Example 4
     datePickerController.createDatePicker({
       formElements: { "datey-example-4": "%m/%d/%Y" },
-      firstDayOfWeek: 6,
       labelText: "Date of birth", // screenreader announces
       // fillGrid: true,
       staticPos: true,
