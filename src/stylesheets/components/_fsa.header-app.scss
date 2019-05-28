@@ -37,11 +37,6 @@
 
   }
 
-  &__primary,
-  &__secondary {
-    // outline: 1px solid rgba(255, 255, 255, .2);
-  }
-
   &__primary {}
 
   &__secondary {
@@ -128,6 +123,8 @@
 
   &__app-name {
 
+    display: flex;
+
     @include font-size(5);
 
     @include breakpoint(M) {
@@ -157,8 +154,15 @@
     &:after {
 
       @include breakpoint(M) {
-        content: ' |';
+        content: '|';
         font-weight: $font-light;
+        position: relative;
+        top: -2px;
+        padding-left: $size-base;
+      }
+
+      @include breakpoint(L) {
+        padding-left: $size-small;
       }
 
       .fsa-header-app__home-link:hover & {
@@ -176,6 +180,12 @@
 
     @include breakpoint(M) {
       display: inline;
+      padding-left: $size-base;
+    }
+
+    @include breakpoint(L) {
+      display: inline;
+      padding-left: $size-small;
     }
 
     .fsa-header-app__home-link:hover & {
