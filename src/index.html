@@ -2082,6 +2082,11 @@
             <span class="fsa-field__help">This is how people can contact you</span>
           </div>
           <div class="fsa-field">
+            <label class="fsa-field__label" for="date-picker-example-0">Date of Birth</label>
+            <input placeholder="mm/dd/yyyy" class="fsa-input fsa-field__item" id="date-picker-example-0" aria-describedby="date-picker-example-0__help" aria-required="true" name="date-picker-example-0" type="text" value="">
+            <span class="fsa-field__help" id="date-picker-example-0__help">Example 05/14/1975</span>
+          </div>
+          <div class="fsa-field">
             <label class="fsa-field__label" for="lorem-beisbol">Team <span class="fsa-field__label-desc">Optional</span></label>
             <select class="fsa-select fsa-field__item" id="lorem-beisbol" name="lorem-beisbol">
               <optgroup label="American League West">
@@ -6541,6 +6546,11 @@
 
   <script src="js/fsa-style-docs.min.js"></script>
   <script src="js/vendor/fsa-date.js"></script>
+  <script>
+    datePickerController.createDatePicker({
+      formElements: { "date-picker-example-0": "%m/%d/%Y" }
+    });
+  </script>
   <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 </body>
