@@ -257,7 +257,6 @@ th {
       top: -2px;
       margin-left: 4px;
       opacity: .2;
-      background-image: url('#{$image-path}/chevron-up.png');
       background-image: url('#{$image-path}/chevron-up.svg');
     }
 
@@ -267,12 +266,10 @@ th {
     }
 
     &--ascending:after {
-      background-image: url('#{$image-path}/chevron-up.png');
       background-image: url('#{$image-path}/chevron-up.svg');
     }
 
     &--descending:after {
-      background-image: url('#{$image-path}/chevron-down.png');
       background-image: url('#{$image-path}/chevron-down.svg');
     }
 

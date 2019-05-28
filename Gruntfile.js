@@ -120,7 +120,7 @@ module.exports = function (grunt) {
         files: [
           'src/js/**/*.js',
         ],
-        tasks: ['browserify', 'uglify']
+        tasks: ['browserify', 'uglify', 'copy:js']
       },
       img: {
         files: [

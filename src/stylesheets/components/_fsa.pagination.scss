@@ -167,13 +167,11 @@
     }
 
     &--previous:before {
-      background-image: url('#{$image-path}/chevron-left.png');
       background-image: url('#{$image-path}/chevron-left--link.svg');
       margin-right: $size-small;
     }
 
     &--next:after {
-      background-image: url('#{$image-path}/chevron-right.png');
       background-image: url('#{$image-path}/chevron-right--link.svg');
       margin-left: $size-small;
     }
