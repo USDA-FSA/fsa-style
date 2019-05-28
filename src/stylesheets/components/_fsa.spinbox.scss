@@ -176,12 +176,10 @@
     }
 
     &--increment {
-      background-image: url('#{$image-path}/angle-arrow-up-primary.png');
       background-image: url('#{$image-path}/angle-arrow-up-primary.svg');
     }
 
     &--decrement {
-      background-image: url('#{$image-path}/angle-arrow-down-primary.png');
       background-image: url('#{$image-path}/angle-arrow-down-primary.svg');
       border-top: 0;
       &:focus {

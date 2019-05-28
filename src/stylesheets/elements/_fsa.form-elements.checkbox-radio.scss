@@ -168,7 +168,6 @@
 
 .fsa-checkbox:checked + label::before,
 .fsa-checkbox:checked + [type="hidden"] + label::before {
-  background-image: url('#{$image-path}/correct8.png');
   background-image: url('#{$image-path}/correct8.svg');
   background-position: 50%;
   background-repeat: no-repeat;
@@ -176,7 +175,6 @@
 
 .fsa-checkbox:indeterminate + label::before,
 .fsa-checkbox:indeterminate + [type="hidden"] + label::before {
-  background-image: url('#{$image-path}/dash.png');
   background-image: url('#{$image-path}/dash.svg');
   background-position: 50%;
   background-repeat: no-repeat;

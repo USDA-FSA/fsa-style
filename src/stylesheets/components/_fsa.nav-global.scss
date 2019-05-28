@@ -237,7 +237,6 @@
         margin-left: ($size-small);
         width: ($size * .66);
         height: ($size * .66);
-        background-image: url('#{$image-path}/angle-arrow-down.png');
         background-image: url('#{$image-path}/angle-arrow-down.svg');
         background-size: 100%;
         background-repeat: no-repeat;
@@ -257,7 +256,6 @@
 
     [aria-expanded="true"] & {
       &:after {
-        background-image: url('#{$image-path}/angle-arrow-down-hover.png');
         background-image: url('#{$image-path}/angle-arrow-down-hover.svg');
       }
     }
