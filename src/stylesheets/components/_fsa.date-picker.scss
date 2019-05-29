@@ -43,6 +43,7 @@ $dateCalendar: fsa-date-calendar;
   }
 
   &__btn {
+
     @include reset-button();
     display: inline-block;
     vertical-align: baseline;
@@ -51,12 +52,18 @@ $dateCalendar: fsa-date-calendar;
     overflow: hidden;
     color: transparent;
     text-indent: -300%;
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUAQMAAAC3R49OAAAABlBMVEUAAABJREA45cQRAAAAAXRSTlMAQObYZgAAAChJREFUCNdjePijgOH//w9wfIDBAIJzN4AwmH0bSN/Gxs4BYxAbph8ADbolGFC4g3gAAAAASUVORK5CYII='); // url('#{$image-path}/calendar.png');
-    background-repeat: no-repeat;
-    background-position: center;
     position: relative;
     top: -1px;
     vertical-align: middle;
+    // background-image: url('#{$image-path}/calendar.png');
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUAgMAAADw5/WeAAAACVBMVEUAAABJRED///+d7TLCAAAAAXRSTlMAQObYZgAAAC9JREFUCNdjCGEMdRBlCAUBFDJq1apVS+HktMhUOAkSiUwFsSEkHpEoGAkRQTIfACPTLNlYz9hoAAAAAElFTkSuQmCC');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:hover {
+      // background-image: url('#{$image-path}/calendar--blue.png');
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUAgMAAADw5/WeAAAACVBMVEUAAAAAcbz///8Qy/ePAAAAAXRSTlMAQObYZgAAAC9JREFUCNdjCGEMdRBlCAUBFDJq1apVS+HktMhUOAkSiUwFsSEkHpEoGAkRQTIfACPTLNlYz9hoAAAAAElFTkSuQmCC');
+    }
 
     &[disabled] {
       opacity: .4;
