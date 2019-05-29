@@ -69,7 +69,6 @@
       $search-icon-width-small: ($size-base * 8);
       $search-icon-width-large: ($size-base * 13);
 
-      background-image: url('#{$image-path}/search.png');
       background-image: url('#{$image-path}/search.svg');
       background-position: 50%;
       background-repeat: no-repeat;
