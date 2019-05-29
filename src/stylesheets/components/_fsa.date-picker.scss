@@ -31,6 +31,7 @@ $dateCalendar: fsa-date-calendar;
       margin-left: initial;
     }
 
+    .fsa-input--block + &,
     .fsa-field__item + & {
       position: relative;
       display: block;
@@ -69,6 +70,7 @@ $dateCalendar: fsa-date-calendar;
       opacity: .4;
     }
 
+    .fsa-input--block + .#{$dateControl} &,
     .fsa-field__item + .#{$dateControl} & {
       position: absolute;
       top: -$date-control-btn-height;
