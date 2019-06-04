@@ -211,8 +211,8 @@ var datePickerController = (function datePickerController() {
                     enableFirstDayOfWeekClick = !!value;
                     return true;
 								},
-								"formatDateSimple": function(value) {
-									formatDateSimple = !!value;
+								"disableFormatting": function(value) {
+									disableFormatting = !!value;
 									return true;
 								},
                 "buttontabindex": function(value) {
@@ -429,7 +429,7 @@ var datePickerController = (function datePickerController() {
         this.dateList = [];
         this.bespokeClass = options.bespokeClass;
 				this.firstDayOfWeek = localeImport.firstDayOfWeek;
-				this.formatDateSimple = options.formatDateSimple;
+				this.disableFormatting = options.disableFormatting;
         this.interval = new Date();
         this.clickActivated = false;
         this.noFocus = true;
@@ -2238,7 +2238,7 @@ var datePickerController = (function datePickerController() {
     };
     datePicker.prototype.setEnabledDates = function(dateObj) {
         this.filterDateList(dateObj, false);
-    };
+		};
     datePicker.prototype.addDisabledDates = function(dateObj) {
         this.addDatesToList(dateObj, true);
     };
@@ -2456,7 +2456,12 @@ var datePickerController = (function datePickerController() {
         } else {
             this.statusBar.appendChild(document.createTextNode(msg ? msg : getTitleTranslation(9)));
         };
-    };
+		};
+
+		//Adding for future development
+		// datePicker.prototype.setValidationCallback = function(cb) {
+		// 	this.validationCallback = cb;
+		// };
 
     /* So needs rewritten */
     datePicker.prototype.setDateFromInput = function() {
@@ -2499,29 +2504,36 @@ var datePickerController = (function datePickerController() {
 								// Inject some common formats, placing the easiest
 								// to spot at the beginning.
 								allFormats = allFormats.concat([
-										"%m/%d/%Y",
-										"%n/%j/%Y",           
-										"%m/%d/%y",
-										"%n/%j/%y",
-										"%Y%m%d",
-										"%Y/%m/%d",
-										"%Y/%n/%d",
-										"%Y/%n/%j",
-										"%d/%m/%Y",
-										"%j/%m/%Y",
-										"%j/%n/%Y",
-										"%d/%m/%y",
-										"%d/%M/%Y",
-										"%d/%F/%Y",
-										"%d/%M/%y",
-										"%d/%F/%y",
-										"%d%m%Y",
-										"%j%m%Y",
-										"%d%n%Y",
-										"%j%n%Y",
-										"%d%m%y",
-										"%j%m%y",
-										"%j%n%y"
+                                        
+                    "%m%d%Y", // MMDDYYYY    
+										"%n%j%Y", // MDYYYY
+										//"%n%j%y", // MDYY this causes bugs
+                    "%m/%d/%Y", // MM/DD/YYYY
+										"%n/%j/%Y", // M/D/YYYY           
+										"%m/%d/%y", // MM/DD/YY
+                    "%n/%j/%y" // M/D/YY
+										
+										// commenting out, as these don't follow month first protocol 
+										// "%Y%m%d",
+										// "%Y/%m/%d",
+										// "%Y/%n/%d",
+										// "%Y/%n/%j",
+										// "%d/%m/%Y",
+										// "%j/%m/%Y",
+										// "%j/%n/%Y",
+										// "%d/%m/%y",
+										// "%d/%M/%Y",
+										// "%d/%F/%Y",
+										// "%d/%M/%y",
+										// "%d/%F/%y",
+										// "%d%m%Y",
+										// "%j%m%Y",
+										// "%d%n%Y",
+										// "%j%n%Y",
+										// "%d%m%y",
+										// "%j%m%y",
+                    // "%j%n%y"
+                                        
 								]);
 						} else if (yp) {
 								allFormats = allFormats.concat([
@@ -2545,7 +2557,7 @@ var datePickerController = (function datePickerController() {
 						for (i = 0; i < allFormats.length; i++) {
 
 								// added conditional to allow for external JS validation
-								dt = this.formatDateSimple ? parseDateString(elemVal, allFormats[i]) : parseDateString(elemVal, "%m/%d/%Y");
+								dt = this.disableFormatting ? parseDateString(elemVal, "%m/%d/%Y") : parseDateString(elemVal, allFormats[i]);
 
 								if (dt) {
 										if (!d && dp && dt.d) {
@@ -3466,7 +3478,7 @@ var datePickerController = (function datePickerController() {
 
 						enableFirstDayOfWeekClick: options.enableFirstDayOfWeekClick ? true : false,
 						
-						formatDateSimple: options.formatDateSimple ? true : false,
+						disableFormatting: options.disableFormatting ? true : false,
 
             // Bespoke tabindex for this datePicker (or its activation button)
             bespokeTabIndex: options.bespokeTabindex && typeof options.bespokeTabindex == 'number' ? parseInt(options.bespokeTabindex, 10) : 0,
@@ -3670,6 +3682,12 @@ var datePickerController = (function datePickerController() {
         }, // Converts Date Object to a YYYYMMDD formatted String
         dateToYYYYMMDDStr: function(dt) {
             return dateToYYYYMMDD(dt);
-        }
+				}
+				//Adding for future develoment
+				// setValidationCallback: function(inpID, cb) {
+				// 	if (!inpID || !(inpID in datePickers)) return false;
+				// 	datePickers[inpID].setValidationCallback(cb);
+				// }
+				
     };
 })();
