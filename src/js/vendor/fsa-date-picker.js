@@ -1248,7 +1248,7 @@ var datePickerController = (function datePickerController() {
                 className: "fsa-date-calendar__today-but",
                 id: "-today-but",
                 text: getTitleTranslation(4),
-                title: getTitleTranslation(4)
+                title: "Go to" + " " + getTitleTranslation(4)
             }, {
                 className: "fsa-date-calendar__next-but fsa-date-calendar__next-but--month",
                 id: "-next-month-but",
@@ -2473,7 +2473,7 @@ var datePickerController = (function datePickerController() {
 
         // Reset the internal dateSet variable
         this.dateSet = null;
-	
+
 
 				// Try and get a year, month and day from the form element values
 				for (elemID in this.formElements) {
@@ -2505,16 +2505,16 @@ var datePickerController = (function datePickerController() {
 								// Inject some common formats, placing the easiest
 								// to spot at the beginning.
 								allFormats = allFormats.concat([
-                                        
-                    "%m%d%Y", // MMDDYYYY    
+
+                    "%m%d%Y", // MMDDYYYY
 										"%n%j%Y", // MDYYYY
 										//"%n%j%y", // MDYY this causes bugs
                     "%m/%d/%Y", // MM/DD/YYYY
-										"%n/%j/%Y", // M/D/YYYY           
+										"%n/%j/%Y", // M/D/YYYY
 										"%m/%d/%y", // MM/DD/YY
                     "%n/%j/%y" // M/D/YY
-										
-										// commenting out, as these don't follow month first protocol 
+
+										// commenting out, as these don't follow month first protocol
 										// "%Y%m%d",
 										// "%Y/%m/%d",
 										// "%Y/%n/%d",
@@ -2534,7 +2534,7 @@ var datePickerController = (function datePickerController() {
 										// "%d%m%y",
 										// "%j%m%y",
                     // "%j%n%y"
-                                        
+
 								]);
 						} else if (yp) {
 								allFormats = allFormats.concat([
@@ -3478,7 +3478,7 @@ var datePickerController = (function datePickerController() {
             dragDisabled: nodrag || !!(options.staticPos) ? true : !!(options.dragDisabled),
 
 						enableFirstDayOfWeekClick: options.enableFirstDayOfWeekClick ? true : false,
-						
+
 						disableFormatting: options.disableFormatting ? true : false,
 
             // Bespoke tabindex for this datePicker (or its activation button)
@@ -3689,6 +3689,6 @@ var datePickerController = (function datePickerController() {
 				// 	if (!inpID || !(inpID in datePickers)) return false;
 				// 	datePickers[inpID].setValidationCallback(cb);
 				// }
-				
+
     };
 })();
