@@ -1247,7 +1247,8 @@ var datePickerController = (function datePickerController() {
                 colspan: this.showWeeks ? 4 : 3,
                 className: "fsa-date-calendar__today-but",
                 id: "-today-but",
-                text: getTitleTranslation(4)
+                text: getTitleTranslation(4),
+                title: getTitleTranslation(4)
             }, {
                 className: "fsa-date-calendar__next-but fsa-date-calendar__next-but--month",
                 id: "-next-month-but",
