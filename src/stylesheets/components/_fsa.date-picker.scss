@@ -70,6 +70,11 @@ $dateCalendar: fsa-date-calendar;
       background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUAgMAAADw5/WeAAAACVBMVEUAAAAAcbz///8Qy/ePAAAAAXRSTlMAQObYZgAAAC9JREFUCNdjCGEMdRBlCAUBFDJq1apVS+HktMhUOAkSiUwFsSEkHpEoGAkRQTIfACPTLNlYz9hoAAAAAElFTkSuQmCC');
     }
 
+    &--date-is-valid {
+      // background-color: rgb(46, 133, 64);
+    }
+
+
     &[disabled] {
       opacity: .4;
     }
@@ -87,9 +92,6 @@ $dateCalendar: fsa-date-calendar;
     visibility: hidden;
   }
 
-  &__btn--date-is-valid {
-    // background-color: rgb(46, 133, 64);
-  }
 }
 
 .#{$dateCalendar} {
