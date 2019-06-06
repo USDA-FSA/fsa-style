@@ -1,4 +1,4 @@
-/*! FSA Style v2.3.0 | http://usda-fsa.github.io/fsa-design-system/ */
+/*! FSA Style v2.3.1 | http://usda-fsa.github.io/fsa-design-system/ */
 
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -3802,15 +3802,16 @@ a.fsa-badge:active {
 
 .fsa-header-app__app-abbr {
   font-weight: 700;
+  border-bottom: 1px solid transparent;
 }
 
 .fsa-header-app__home-link:hover .fsa-header-app__app-abbr {
-  border-bottom: 1px solid #fff;
+  border-bottom-color: #fff;
   cursor: pointer;
 }
 
 .fsa-header-app__app-abbr[title] {
-  border-bottom: 0;
+  border-bottom: 1px solid transparent;
   text-decoration: none;
 }
 
@@ -4568,12 +4569,19 @@ a.fsa-badge:active {
      -moz-user-select: text;
       -ms-user-select: text;
           user-select: text;
+  width: 48px;
+  width: 4.8rem;
+  height: 48px;
+  height: 4.8rem;
   position: absolute;
   top: 0;
   right: 0;
   padding: 18px;
   padding: 1.8rem;
   z-index: 2;
+  background-image: url("../img/close.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .fsa-modal__close::-moz-focus-inner {
@@ -4586,9 +4594,7 @@ a.fsa-badge:active {
 }
 
 .fsa-modal__close-icon {
-  width: 16px;
-  width: 1.6rem;
-  display: block;
+  display: none;
 }
 
 .fsa-modal__title {
@@ -5110,6 +5116,10 @@ a.fsa-badge:active {
      -moz-user-select: text;
       -ms-user-select: text;
           user-select: text;
+  width: 48px;
+  width: 4.8rem;
+  height: 48px;
+  height: 4.8rem;
   position: absolute;
   top: -12px;
   top: -1.2rem;
@@ -5117,6 +5127,9 @@ a.fsa-badge:active {
   right: -1.2rem;
   padding: 18px;
   padding: 1.8rem;
+  background-image: url("../img/close.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .fsa-growl__close::-moz-focus-inner {
@@ -5129,9 +5142,7 @@ a.fsa-badge:active {
 }
 
 .fsa-growl__close-icon {
-  width: 12px;
-  width: 1.2rem;
-  display: block;
+  display: none;
 }
 
 .fsa-growl__title {
@@ -5469,6 +5480,10 @@ h1 + .fsa-field {
 }
 
 .fsa-date-control__btn:hover {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUAgMAAADw5/WeAAAACVBMVEUAAAAAcbz///8Qy/ePAAAAAXRSTlMAQObYZgAAAC9JREFUCNdjCGEMdRBlCAUBFDJq1apVS+HktMhUOAkSiUwFsSEkHpEoGAkRQTIfACPTLNlYz9hoAAAAAElFTkSuQmCC");
+}
+
+.fsa-date-control__btn--active {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUAgMAAADw5/WeAAAACVBMVEUAAAAAcbz///8Qy/ePAAAAAXRSTlMAQObYZgAAAC9JREFUCNdjCGEMdRBlCAUBFDJq1apVS+HktMhUOAkSiUwFsSEkHpEoGAkRQTIfACPTLNlYz9hoAAAAAElFTkSuQmCC");
 }
 
