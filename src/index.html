@@ -1093,18 +1093,6 @@
           <p>
             <input class="fsa-input fsa-input--error fsa-input--block" type="text" name="some_name" value="Value" placeholder="Placeholder">
           </p>
-          <h4 class="docs__sub_style">Positive</h4>
-          <p class="docs__code-sample"><code>class="fsa-input <strong>fsa-input--positive</strong>"</code></p>
-          <p>
-            <input class="fsa-input fsa-input--positive" type="text" name="some_name" value="Value" placeholder="Placeholder">
-          </p>
-          <p>
-            <input class="fsa-input fsa-input--positive" type="password" name="some_name" value="pa55w0rd" placeholder="Placeholder">
-          </p>
-          <p>
-            <input class="fsa-input fsa-input--positive fsa-input--block" type="text" name="some_name" value="Value" placeholder="Placeholder">
-          </p>
-
         </div>
       </div>
       <div class="docs__jump-target" id="component__textarea">
@@ -2078,8 +2066,8 @@
           <p class="docs__code-sample"><code>class="<strong>fsa-field</strong>"</code></p>
           <div class="fsa-field">
             <label class="fsa-field__label" for="lorem-1234">Email address <span class="fsa-field__label-desc">Required</span></label>
-            <input class="fsa-input fsa-field__item" id="lorem-1234" name="lorem-1234" type="email" value="" aria-required="true">
-            <span class="fsa-field__help">This is how people can contact you</span>
+            <input class="fsa-input fsa-field__item" id="lorem-1234" name="lorem-1234" type="email" value="" aria-required="true" aria-describedby="lorem-1234_help">
+            <span class="fsa-field__help" id="lorem-1234_help">This is how people can contact you</span>
           </div>
           <div class="fsa-field">
             <label class="fsa-field__label" for="date-picker-example-0">Date of Birth</label>
@@ -2088,7 +2076,7 @@
           </div>
           <div class="fsa-field">
             <label class="fsa-field__label" for="lorem-beisbol">Team <span class="fsa-field__label-desc">Optional</span></label>
-            <select class="fsa-select fsa-field__item" id="lorem-beisbol" name="lorem-beisbol">
+            <select class="fsa-select fsa-field__item" id="lorem-beisbol" name="lorem-beisbol" aria-describedby="lorem-beisbol_help">
               <optgroup label="American League West">
                 <option value="Houston Astros">Houston Astros</option>
                 <option value="Los Angeles Angels of Anaheim">Los Angeles Angels of Anaheim</option>
@@ -2132,7 +2120,7 @@
                 <option value="San Francisco Giants">San Francisco Giants</option>
               </optgroup>
             </select>
-            <span class="fsa-field__help">Where does your loyalty lie?</span>
+            <span class="fsa-field__help" id="lorem-beisbol_help">Where does your loyalty lie?</span>
           </div>
           <div class="fsa-field--block">
             <label class="fsa-field__label" for="lorem-7789">Full width (Block)</label>
@@ -2159,8 +2147,8 @@
           <h4 class="docs__sub_style">Error States</h4>
           <div class="fsa-field fsa-field--error">
             <label class="fsa-field__label" for="lorem-7650">Error label <span class="fsa-field__label-desc">Required</span></label>
-            <input class="fsa-input fsa-field__item fsa-input--error" aria-describedby="lorem-7650--message" id="lorem-7650" name="lorem-7650" type="text" value="" aria-required="true">
-            <span class="fsa-field__help">This is how people can contact you</span>
+            <input class="fsa-input fsa-field__item fsa-input--error" aria-describedby="lorem-7650--help lorem-7650--message" id="lorem-7650" name="lorem-7650" type="text" value="" aria-required="true">
+            <span class="fsa-field__help" id="lorem-7650--help">This is how people can contact you</span>
             <span class="fsa-field__message" id="lorem-7650--message" role="alert">Helpful error message</span>
           </div>
           <div class="fsa-field fsa-field--columns fsa-field--error">
