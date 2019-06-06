@@ -72,11 +72,16 @@
   &__close {
 
     @include fsa-button-reset;
+    width: $size-extra-large;
+    height: $size-extra-large;
     position: absolute;
     top: 0;
     right: 0;
     padding: ($size-default * 1.5);
     z-index: 2;
+    background-image: url('#{$image-path}/close.svg');
+    background-position: center;
+    background-repeat: no-repeat;
 
     &:active {
       opacity: .6;
@@ -85,8 +90,7 @@
   }
 
   &__close-icon {
-    width: ($size-base * 4);
-    display: block;
+    display: none;
   }
 
   &__title {

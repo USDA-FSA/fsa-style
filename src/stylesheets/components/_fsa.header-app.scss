@@ -140,14 +140,15 @@
   &__app-abbr {
 
     font-weight: $font-bold;
+    border-bottom: 1px solid transparent;
 
     .fsa-header-app__home-link:hover & {
-      border-bottom: 1px solid $component-text-color;
+      border-bottom-color: $component-text-color;
       cursor: pointer;
     }
 
     &[title] {
-      border-bottom: 0;
+      border-bottom: 1px solid transparent;
       text-decoration: none;
     }
 

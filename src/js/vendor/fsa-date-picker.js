@@ -19,7 +19,7 @@ var datePickerController = (function datePickerController() {
         nodrag = false,
         returnLocaleDate = false,
         kbEvent = false,
-        cellFormat = "%d %F %Y",
+        cellFormat = "%m %d %Y",
         titleFormat = "%F %d, %Y",
         statusFormat = "",
         formatParts = isOpera ? ["%j"] : ["%j", " %F %Y"],
@@ -210,7 +210,11 @@ var datePickerController = (function datePickerController() {
                 "enableFirstDayOfWeekClick": function(value) {
                     enableFirstDayOfWeekClick = !!value;
                     return true;
-                },
+								},
+								"disableFormatting": function(value) {
+									disableFormatting = !!value;
+									return true;
+								},
                 "buttontabindex": function(value) {
                     buttonTabIndex = !!value;
                     return true;
@@ -424,7 +428,8 @@ var datePickerController = (function datePickerController() {
         this.dynDisabledDates = {};
         this.dateList = [];
         this.bespokeClass = options.bespokeClass;
-        this.firstDayOfWeek = localeImport.firstDayOfWeek;
+				this.firstDayOfWeek = localeImport.firstDayOfWeek;
+				this.disableFormatting = options.disableFormatting;
         this.interval = new Date();
         this.clickActivated = false;
         this.noFocus = true;
@@ -904,7 +909,7 @@ var datePickerController = (function datePickerController() {
                             cName.push("fsa-date-calendar__day--disabled");
                             // Update the current cells title to say "Disabled date: ..." (or whatever the translation says)
                             if (titleFormat && selectable) {
-                                td.title = getTitleTranslation(13) + " " + td.title;
+                                td.title = getTitleTranslation(13);
                             };
                         };
 
@@ -1242,7 +1247,8 @@ var datePickerController = (function datePickerController() {
                 colspan: this.showWeeks ? 4 : 3,
                 className: "fsa-date-calendar__today-but",
                 id: "-today-but",
-                text: getTitleTranslation(4)
+                text: getTitleTranslation(4),
+                title: "Go to" + " " + getTitleTranslation(4)
             }, {
                 className: "fsa-date-calendar__next-but fsa-date-calendar__next-but--month",
                 id: "-next-month-but",
@@ -2233,7 +2239,7 @@ var datePickerController = (function datePickerController() {
     };
     datePicker.prototype.setEnabledDates = function(dateObj) {
         this.filterDateList(dateObj, false);
-    };
+		};
     datePicker.prototype.addDisabledDates = function(dateObj) {
         this.addDatesToList(dateObj, true);
     };
@@ -2451,7 +2457,12 @@ var datePickerController = (function datePickerController() {
         } else {
             this.statusBar.appendChild(document.createTextNode(msg ? msg : getTitleTranslation(9)));
         };
-    };
+		};
+
+		//Adding for future development
+		// datePicker.prototype.setValidationCallback = function(cb) {
+		// 	this.validationCallback = cb;
+		// };
 
     /* So needs rewritten */
     datePicker.prototype.setDateFromInput = function() {
@@ -2463,97 +2474,111 @@ var datePickerController = (function datePickerController() {
         // Reset the internal dateSet variable
         this.dateSet = null;
 
-        // Try and get a year, month and day from the form element values
-        for (elemID in this.formElements) {
 
-            elem = document.getElementById(elemID);
+				// Try and get a year, month and day from the form element values
+				for (elemID in this.formElements) {
 
-            if (!elem) {
-                return false;
-            };
+						elem = document.getElementById(elemID);
 
-            elemVal = String(elem.value);
-            elemFmt = this.formElements[elemID];
-            dt = false;
+						if (!elem) {
+								return false;
+						};
 
-            dp = elemFmt.search(dPartsRegExp) != -1 ? 1 : 0;
-            mp = elemFmt.search(mPartsRegExp) != -1 ? 1 : 0;
-            yp = elemFmt.search(yPartsRegExp) != -1 ? 1 : 0;
+						elemVal = String(elem.value);
+						elemFmt = this.formElements[elemID];
+						dt = false;
 
-            dpt = dp + mp + yp;
+						dp = elemFmt.search(dPartsRegExp) != -1 ? 1 : 0;
+						mp = elemFmt.search(mPartsRegExp) != -1 ? 1 : 0;
+						yp = elemFmt.search(yPartsRegExp) != -1 ? 1 : 0;
 
-            allFormats = [];
-            allFormats.push(elemFmt);
+						dpt = dp + mp + yp;
 
-            // Try to assign some default date formats to throw at
-            // the (simple) regExp parser.
+						allFormats = [];
+						allFormats.push(elemFmt);
 
-            // If year, month & day required
-            if (dp && mp && yp) {
-                // Inject some common formats, placing the easiest
-                // to spot at the beginning.
-                allFormats = allFormats.concat([
-                    "%Y%m%d",
-                    "%Y/%m/%d",
-                    "%Y/%n/%d",
-                    "%Y/%n/%j",
-                    "%d/%m/%Y",
-                    "%j/%m/%Y",
-                    "%j/%n/%Y",
-                    "%d/%m/%y",
-                    "%d/%M/%Y",
-                    "%d/%F/%Y",
-                    "%d/%M/%y",
-                    "%d/%F/%y",
-                    "%d%m%Y",
-                    "%j%m%Y",
-                    "%d%n%Y",
-                    "%j%n%Y",
-                    "%d%m%y",
-                    "%j%m%y",
-                    "%j%n%y"
-                ]);
-            } else if (yp) {
-                allFormats = allFormats.concat([
-                    "%Y",
-                    "%y"
-                ]);
-            } else if (mp) {
-                allFormats = allFormats.concat([
-                    "%M",
-                    "%F",
-                    "%m",
-                    "%n"
-                ]);
-            } else if (dp) {
-                allFormats = allFormats.concat([
-                    "%d%",
-                    "%j"
-                ]);
-            };
+						// Try to assign some default date formats to throw at
+						// the (simple) regExp parser.
 
-            for (i = 0; i < allFormats.length; i++) {
-                dt = parseDateString(elemVal, allFormats[i]);
+						// If year, month & day required
+						if (dp && mp && yp) {
+								// Inject some common formats, placing the easiest
+								// to spot at the beginning.
+								allFormats = allFormats.concat([
 
-                if (dt) {
-                    if (!d && dp && dt.d) {
-                        d = dt.d;
-                    };
-                    if (m === false && mp && dt.m) {
-                        m = dt.m;
-                    };
-                    if (!y && yp && dt.y) {
-                        y = dt.y;
-                    };
-                };
+                    "%m%d%Y", // MMDDYYYY
+										"%n%j%Y", // MDYYYY
+										//"%n%j%y", // MDYY this causes bugs
+                    "%m/%d/%Y", // MM/DD/YYYY
+										"%n/%j/%Y", // M/D/YYYY
+										"%m/%d/%y", // MM/DD/YY
+                    "%n/%j/%y" // M/D/YY
 
-                if (((dp && d) || !dp) &&
-                    ((mp && !m === false) || !mp) &&
-                    ((yp && y) || !yp)) {
-                    break;
-                };
-            };
-        };
+										// commenting out, as these don't follow month first protocol
+										// "%Y%m%d",
+										// "%Y/%m/%d",
+										// "%Y/%n/%d",
+										// "%Y/%n/%j",
+										// "%d/%m/%Y",
+										// "%j/%m/%Y",
+										// "%j/%n/%Y",
+										// "%d/%m/%y",
+										// "%d/%M/%Y",
+										// "%d/%F/%Y",
+										// "%d/%M/%y",
+										// "%d/%F/%y",
+										// "%d%m%Y",
+										// "%j%m%Y",
+										// "%d%n%Y",
+										// "%j%n%Y",
+										// "%d%m%y",
+										// "%j%m%y",
+                    // "%j%n%y"
+
+								]);
+						} else if (yp) {
+								allFormats = allFormats.concat([
+										"%Y",
+										"%y"
+								]);
+						} else if (mp) {
+								allFormats = allFormats.concat([
+										"%M",
+										"%F",
+										"%m",
+										"%n"
+								]);
+						} else if (dp) {
+								allFormats = allFormats.concat([
+										"%d%",
+										"%j"
+								]);
+						};
+
+						for (i = 0; i < allFormats.length; i++) {
+
+								// added conditional to allow for external JS validation
+								dt = this.disableFormatting ? parseDateString(elemVal, "%m/%d/%Y") : parseDateString(elemVal, allFormats[i]);
+
+								if (dt) {
+										if (!d && dp && dt.d) {
+												d = dt.d;
+										};
+										if (m === false && mp && dt.m) {
+												m = dt.m;
+										};
+										if (!y && yp && dt.y) {
+												y = dt.y;
+										};
+								};
+
+								if (((dp && d) || !dp) &&
+										((mp && !m === false) || !mp) &&
+										((yp && y) || !yp)) {
+										break;
+								};
+						};
+				};
 
         dt = false;
 
@@ -2839,7 +2864,7 @@ var datePickerController = (function datePickerController() {
         monthAbbrs: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
         fullDays: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
         dayAbbrs: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-        titles: ["Previous month", "Next month", "Previous year", "Next year", "Today", "Show Calendar", "wk", "Week [[%0%]] of [[%1%]]", "Week", "Select a date", "Click \u0026 Drag to move", "Display \u201C[[%0%]]\u201D first", "Go to Today\u2019s date", "Disabled date :", "Show calendar for [[%0%]]"],
+        titles: ["Previous month", "Next month", "Previous year", "Next year", "Today", "Show Calendar", "wk", "Week [[%0%]] of [[%1%]]", "Week", "Select a date", "Click \u0026 Drag to move", "Display \u201C[[%0%]]\u201D first", "Go to Today\u2019s date", "Disabled date", "Show calendar for [[%0%]]"],
         rtl: false,
         firstDayOfWeek: 6, //0 = monday
         imported: false
@@ -3028,7 +3053,7 @@ var datePickerController = (function datePickerController() {
             pt, part;
 
 
-        //console.log("attempting to parse " + fmt + " from string " + str)
+        console.log("attempting to parse " + fmt + " from string " + str)
 
         loopLabel: for (pt = 0; pt < len; pt++) {
             part = parts[pt];
@@ -3037,7 +3062,7 @@ var datePickerController = (function datePickerController() {
                 continue loopLabel;
             };
 
-            //console.log(pt + ": parsing " + part + " from string " + str)
+            console.log(pt + ": parsing " + part + " from string " + str)
 
             if (str.length == 0) {
                 break;
@@ -3058,7 +3083,7 @@ var datePickerController = (function datePickerController() {
                     if (str.search(/^(3[01]|[12][0-9]|0[1-9])/) != -1) {
                         d = str.substr(0, 2);
                         str = str.substr(2);
-                        //console.log("d and str: " + d + " " + str)
+                        console.log("d and str: " + d + " " + str)
                         break;
                     } else {
                         return false;
@@ -3173,7 +3198,7 @@ var datePickerController = (function datePickerController() {
             };
         };
 
-        //console.log("parse end, dmy: " + d + ", " + m + ", " + y)
+        console.log("parse end, dmy: " + d + ", " + m + ", " + y)
 
         if ((dp && d === false) || (mp && m === false) || (yp && y === false)) {
             return false;
@@ -3452,7 +3477,9 @@ var datePickerController = (function datePickerController() {
             // No drag functionality
             dragDisabled: nodrag || !!(options.staticPos) ? true : !!(options.dragDisabled),
 
-            enableFirstDayOfWeekClick: options.enableFirstDayOfWeekClick ? true : false,
+						enableFirstDayOfWeekClick: options.enableFirstDayOfWeekClick ? true : false,
+
+						disableFormatting: options.disableFormatting ? true : false,
 
             // Bespoke tabindex for this datePicker (or its activation button)
             bespokeTabIndex: options.bespokeTabindex && typeof options.bespokeTabindex == 'number' ? parseInt(options.bespokeTabindex, 10) : 0,
@@ -3656,6 +3683,12 @@ var datePickerController = (function datePickerController() {
         }, // Converts Date Object to a YYYYMMDD formatted String
         dateToYYYYMMDDStr: function(dt) {
             return dateToYYYYMMDD(dt);
-        }
+				}
+				//Adding for future develoment
+				// setValidationCallback: function(inpID, cb) {
+				// 	if (!inpID || !(inpID in datePickers)) return false;
+				// 	datePickers[inpID].setValidationCallback(cb);
+				// }
+
     };
 })();

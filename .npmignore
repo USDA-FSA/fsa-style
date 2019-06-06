@@ -1,5 +1,4 @@
 # Guarantee these are added
-
 !dist/
 !src/
 
@@ -7,5 +6,9 @@
 .github/
 .editorconfig
 .eslintrc
+dist/scratch.html
 src/scratch.html
 published
+.vscode
+yarn.lock
+yarn-error.log
