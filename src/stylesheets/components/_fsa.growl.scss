@@ -155,10 +155,16 @@ $growlDistance: 110%;
   &__close {
 
     @include fsa-button-reset;
+    width: $size-extra-large;
+    height: $size-extra-large;
     position: absolute;
     top: -$growlPadding;
     right: -$growlPadding;
     padding: ($growlPadding * 1.5);
+
+    background-image: url('#{$image-path}/close.svg');
+    background-position: center;
+    background-repeat: no-repeat;
 
     &:active {
       opacity: .6;
@@ -167,8 +173,7 @@ $growlDistance: 110%;
   }
 
   &__close-icon {
-    width: $growlPadding;
-    display: block;
+    display: none;
   }
 
   &__title {
