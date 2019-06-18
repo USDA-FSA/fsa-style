@@ -2067,7 +2067,9 @@ var datePickerController = (function datePickerController() {
             if (e.type == "keydown") {
                 datePickers[inpId].kbEvent = true;
                 var kc = e.keyCode != null ? e.keyCode : e.charCode;
-                if (kc != 13 && kc != 32) return true;
+                // Code updated for FF bug that immediately recloses the calendar
+                //if (kc != 13 && kc != 32) return true;
+                if (kc != 13) return true;
                 if (dpVisible) {
                     removeClass(this, "fsa-date-control__btn--active")
                     hideAll();
