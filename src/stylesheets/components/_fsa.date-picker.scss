@@ -61,7 +61,8 @@ $dateCalendar: fsa-date-calendar;
     background-repeat: no-repeat;
     background-position: center;
 
-    &:hover {
+
+    &:hover:not(:disabled) {
       // background-image: url('#{$image-path}/calendar--blue.png');
       background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUAgMAAADw5/WeAAAACVBMVEUAAAAAcbz///8Qy/ePAAAAAXRSTlMAQObYZgAAAC9JREFUCNdjCGEMdRBlCAUBFDJq1apVS+HktMhUOAkSiUwFsSEkHpEoGAkRQTIfACPTLNlYz9hoAAAAAElFTkSuQmCC');
     }
