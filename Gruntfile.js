@@ -14,7 +14,7 @@ module.exports = function (grunt) {
     // Clear files and folders
     clean: {
       dist: [ 'dist' ],
-      datepicker_cl: ['dist/js/vendor/datepicker.js']
+      datepicker_cl: ['dist/js/vendor/datepicker.js','src/js/vendor/fsa-date-picker.js']
       // lorem: [ 'path/to/someting-else.scss' ],
     },
 
