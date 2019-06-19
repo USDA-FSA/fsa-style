@@ -14,6 +14,7 @@ module.exports = function (grunt) {
     // Clear files and folders
     clean: {
       dist: [ 'dist' ],
+      datepicker_cl: ['dist/js/vendor/datepicker.js']
       // lorem: [ 'path/to/someting-else.scss' ],
     },
 
@@ -43,6 +44,16 @@ module.exports = function (grunt) {
 
     // Copies templates and assets from dependencies and/or src
     copy: {
+
+      datepicker_bk: {
+        files: [{
+          expand: true,
+          src: ['src/js/vendor/datepicker.js'],
+          rename: function () {
+            return 'src/js/vendor/fsa-date-picker.js';
+          }
+        }]
+      },
 
       // Stylesheets, fonts, img, and js **FROM** /node_modules/uswds/
 
@@ -299,6 +310,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build-and-lint', ['build', 'lint', 'browserSync', 'watch']);
   grunt.registerTask('build', [
     'clean:dist',
+    'copy:datepicker_bk',
     'copy:uswds_stylesheets',
     'copy:uswds_fonts',
     'copy:uswds_img',
@@ -312,6 +324,7 @@ module.exports = function (grunt) {
     'usebanner',
     'postcss',
     'prettify',
+    'clean:datepicker_cl',
   ]);
   grunt.registerTask('lint', 'scsslint');
   grunt.registerTask('deploy', ['build', 'buildcontrol:pages']);
