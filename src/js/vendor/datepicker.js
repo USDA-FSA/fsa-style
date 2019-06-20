@@ -41,12 +41,12 @@ var datePickerController = (function datePickerController() {
         }());
 
     (function() {
-        var scriptFiles = document.getElementsByTagName('script'),
-            json = parseJSON(String(scriptFiles[scriptFiles.length - 1].innerHTML).replace(/[\n\r\s\t]+/g, " ").replace(/^\s+/, "").replace(/\s+$/, ""));
-
-        if (typeof json === "object" && !("err" in json)) {
-            affectJSON(json);
-        };
+        var scriptFiles = document.getElementsByTagName('script');
+        //     json = parseJSON(String(scriptFiles[scriptFiles.length - 1].innerHTML).replace(/[\n\r\s\t]+/g, " ").replace(/^\s+/, "").replace(/\s+$/, ""));
+        //
+        // if (typeof json === "object" && !("err" in json)) {
+        //     affectJSON(json);
+        // };
 
         if (deriveLocale && typeof(fdLocale) != "object") {
             var head = document.getElementsByTagName("head")[0] || document.documentElement,
