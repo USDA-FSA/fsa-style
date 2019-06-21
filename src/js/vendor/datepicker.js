@@ -41,12 +41,12 @@ var datePickerController = (function datePickerController() {
         }());
 
     (function() {
-        var scriptFiles = document.getElementsByTagName('script'),
-            json = parseJSON(String(scriptFiles[scriptFiles.length - 1].innerHTML).replace(/[\n\r\s\t]+/g, " ").replace(/^\s+/, "").replace(/\s+$/, ""));
-
-        if (typeof json === "object" && !("err" in json)) {
-            affectJSON(json);
-        };
+        var scriptFiles = document.getElementsByTagName('script');
+        //     json = parseJSON(String(scriptFiles[scriptFiles.length - 1].innerHTML).replace(/[\n\r\s\t]+/g, " ").replace(/^\s+/, "").replace(/\s+$/, ""));
+        //
+        // if (typeof json === "object" && !("err" in json)) {
+        //     affectJSON(json);
+        // };
 
         if (deriveLocale && typeof(fdLocale) != "object") {
             var head = document.getElementsByTagName("head")[0] || document.documentElement,
@@ -2067,7 +2067,9 @@ var datePickerController = (function datePickerController() {
             if (e.type == "keydown") {
                 datePickers[inpId].kbEvent = true;
                 var kc = e.keyCode != null ? e.keyCode : e.charCode;
-                if (kc != 13 && kc != 32) return true;
+                // Code updated for FF bug that immediately recloses the calendar
+                //if (kc != 13 && kc != 32) return true;
+                if (kc != 13) return true;
                 if (dpVisible) {
                     removeClass(this, "fsa-date-control__btn--active")
                     hideAll();
