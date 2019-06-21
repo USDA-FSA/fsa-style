@@ -399,14 +399,10 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
     @include checkerboard();
 
-    padding: $size-small;
-
-    @include breakpoint(S) {
-      padding: $size-medium;
-    }
+    padding: ($size-base * 7);
 
     @include breakpoint(M) {
-      padding: $size-medium $size-extra-large;
+      padding: ($size-base * 15);
     }
 
     &__demo {
