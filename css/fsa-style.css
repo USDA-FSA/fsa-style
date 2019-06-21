@@ -1,4 +1,4 @@
-/*! FSA Style v2.3.1 | http://usda-fsa.github.io/fsa-design-system/ */
+/*! FSA Style v2.3.2 | http://usda-fsa.github.io/fsa-design-system/ */
 
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -5479,7 +5479,7 @@ h1 + .fsa-field {
   border: 0;
 }
 
-.fsa-date-control__btn:hover {
+.fsa-date-control__btn:hover:not(:disabled) {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUAgMAAADw5/WeAAAACVBMVEUAAAAAcbz///8Qy/ePAAAAAXRSTlMAQObYZgAAAC9JREFUCNdjCGEMdRBlCAUBFDJq1apVS+HktMhUOAkSiUwFsSEkHpEoGAkRQTIfACPTLNlYz9hoAAAAAElFTkSuQmCC");
 }
 
