@@ -3,6 +3,8 @@
 
 $date-control-btn-width: $button-height; // from fsa-btn
 $date-control-btn-height: $date-control-btn-width;
+$date-control-btn-small-width: $button-height--sm; // from fsa-btn
+$date-control-btn-small-height: $date-control-btn-small-width;
 $date-calendar-text-color-default: $color-fsa-base;
 $date-calendar-text-color-disabled: tint($date-calendar-text-color-default, 60%);
 $date-calendar-border-color: $form-outline-color;
@@ -24,6 +26,10 @@ $dateCalendar: fsa-date-calendar;
 
     .fsa-input + & {
       margin-left: -$date-control-btn-width;
+    }
+
+    .fsa-input--small + & {
+      margin-left: -$date-control-btn-small-width;
     }
 
     .fsa-input--block + &,
@@ -61,7 +67,6 @@ $dateCalendar: fsa-date-calendar;
     background-repeat: no-repeat;
     background-position: center;
 
-
     &:hover:not(:disabled) {
       // background-image: url('#{$image-path}/calendar--blue.png');
       background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUAgMAAADw5/WeAAAACVBMVEUAAAAAcbz///8Qy/ePAAAAAXRSTlMAQObYZgAAAC9JREFUCNdjCGEMdRBlCAUBFDJq1apVS+HktMhUOAkSiUwFsSEkHpEoGAkRQTIfACPTLNlYz9hoAAAAAElFTkSuQmCC');
@@ -84,6 +89,14 @@ $dateCalendar: fsa-date-calendar;
     .fsa-field__item + .#{$dateControl} & {
       position: absolute;
       top: -$date-control-btn-height;
+      right: 0;
+    }
+
+    .fsa-input--block.fsa-input--small + .#{$dateControl} &,
+    .fsa-field__item.fsa-input--small + .#{$dateControl} & {
+      width: $date-control-btn-small-width;
+      height: $date-control-btn-small-height;
+      top: -$date-control-btn-small-height;
       right: 0;
     }
 
@@ -238,7 +251,6 @@ $dateCalendar: fsa-date-calendar;
 
     &:active:not(.#{$dateCalendar}__disabled-item) {
       @include fsa-focus();
-      // outline: 3px solid $color-focus;
     }
 
     &.#{$dateCalendar}__disabled-item,
@@ -473,7 +485,6 @@ $dateCalendar: fsa-date-calendar;
       font-weight: normal;
       text-transform: uppercase;
       cursor: help;
-      // border-top: 0;
     }
 
   }
