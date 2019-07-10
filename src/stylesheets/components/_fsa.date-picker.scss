@@ -92,10 +92,14 @@ $dateCalendar: fsa-date-calendar;
       right: 0;
     }
 
-    .fsa-input--block.fsa-input--small + .#{$dateControl} &,
-    .fsa-field__item.fsa-input--small + .#{$dateControl} & {
+    .fsa-input--small + .#{$dateControl} &,
+    .fsa-input--small + .#{$dateControl} & {
       width: $date-control-btn-small-width;
       height: $date-control-btn-small-height;
+    }
+
+    .fsa-input--block.fsa-input--small + .#{$dateControl} &,
+    .fsa-field__item.fsa-input--small + .#{$dateControl} & {
       top: -$date-control-btn-small-height;
       right: 0;
     }
