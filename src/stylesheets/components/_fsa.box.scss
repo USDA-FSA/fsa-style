@@ -24,8 +24,6 @@
   &__ft {}
 
   &__title {
-    @include h3();
-    font-family: $font-sans;
     margin-top: 0;
   }
 

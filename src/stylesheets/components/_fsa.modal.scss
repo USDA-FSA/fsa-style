@@ -97,6 +97,7 @@
     @include h2();
     margin-top: 0;
     margin-bottom: .5em;
+    font-weight: normal;
     margin-right: $size-default; // to prevent awkward space with Close button
   }
 
