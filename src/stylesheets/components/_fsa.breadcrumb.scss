@@ -16,7 +16,7 @@
     display: inline-block;
 
     @include breakpoint(M) {
-      @include font-size(3);
+      @include font-size(2);
     }
 
     &:before,
