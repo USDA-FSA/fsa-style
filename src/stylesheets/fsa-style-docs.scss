@@ -43,7 +43,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     &__version {
       font-size: 66%;
       color: $color-fsa-primary-200;
-      font-weight: $font-normal;
     }
 
   }
@@ -159,6 +158,32 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1em;
+    display: flex;
+    align-items: baseline;
+
+    &:before {
+      content: attr(data-title);
+      font-size: 28px;
+      opacity: 0;
+      color: rgba(255, 255, 255, .8);
+      display: block;
+      width: 1px;
+      overflow: hidden;
+      white-space: nowrap;
+      transition: all .125s ease-in-out;
+      line-height: 1;
+      font-weight: $font-light;
+      margin-left: -1px;
+      .docs__nav--fixed & {
+        opacity: 1;
+        width: 110px;
+        border-right: 1px solid rgba(255, 255, 255, .4);
+        padding-right: ($size-default + $size-base);
+        margin-left: 0;
+        margin-right: ($size-default + $size-base);
+        transition-duration: .4s;
+      }
+    }
 
     @media print {
       max-width: none;
@@ -174,7 +199,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
         margin-right: $size-base;
       }
 
-
       // scss-lint:disable NestingDepth
       &--floater {
 
@@ -185,6 +209,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
         @include breakpoint(L) {
           float: right;
           margin-top: 0;
+          margin-left: auto;
         }
 
       }
@@ -223,6 +248,11 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
             display: none;
           }
         }
+      }
+
+      &--github {
+        font-size: $font-size-2;
+        text-transform: uppercase;
       }
 
       // scss-lint:disable NestingDepth
