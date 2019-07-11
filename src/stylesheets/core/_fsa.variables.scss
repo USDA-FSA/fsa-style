@@ -100,7 +100,7 @@ $font-bold:   700;
 // ---------------------------------------------------------------------------
 // Forms
 
-$fsa-form-width: 40rem;
+$fsa-form-width: $size-base * 96;
 
 $form-font                     : $font-sans;
 $form-text-size                : $font-size-3;
