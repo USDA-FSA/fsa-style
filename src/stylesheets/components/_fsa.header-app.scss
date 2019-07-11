@@ -14,6 +14,7 @@
   &__bd {
 
     display: flex;
+    align-items: baseline;
     max-width: ($site-max-width + 24px);
     margin-left: auto;
     margin-right: auto;
@@ -49,22 +50,45 @@
     padding-left: $component-spacing;
     padding-bottom: ($component-spacing / 4);
 
+    a {
+      &:link,
+      &:visited,
+      &:active {
+        color: $component-text-color;
+        text-decoration: none;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
   }
 
   &__profile {
     line-height: 1;
+    display: flex;
   }
 
   &__profile-link {
 
     display: inline-block;
     white-space: nowrap;
+    margin-left: $size-default;
 
     &:link,
     &:visited,
     &:active {
       color: $component-text-color;
       text-decoration: none;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    .fsa-header-app__profile-name + & {
+      border-left: 1px solid white;
+      padding-left: $size-default;
     }
 
   }
@@ -83,9 +107,9 @@
       max-width: ($size-base * 55);
     }
 
-    .fsa-header-app__profile-link:hover & {
-      text-decoration: underline;
-    }
+  }
+
+  &__profile-auth {
 
   }
 
