@@ -42,6 +42,7 @@
 
   &__secondary {
 
+    @include font-size(1);
     position: relative;
     display: flex;
     align-items: flex-end;
@@ -49,6 +50,10 @@
     margin-left: auto;
     padding-left: $component-spacing;
     padding-bottom: ($component-spacing / 4);
+
+    @include breakpoint(L) {
+      @include font-size(2);
+    }
 
     a {
       &:link,
@@ -98,13 +103,15 @@
     @include fsa-ellipsis();
     display: inline-block;
     max-width: ($size-base * 32);
+    max-width: 28ch;
 
     @include breakpoint(M) {
-      max-width: ($size-base * 40);
+      max-width: 20ch;
     }
 
     @include breakpoint(L) {
       max-width: ($size-base * 55);
+      max-width: 33ch;
     }
 
   }
