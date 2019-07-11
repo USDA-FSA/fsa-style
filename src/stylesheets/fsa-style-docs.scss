@@ -24,6 +24,22 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   }
 }
 
+:root {
+  --grid-demo-columns: #{$fsa-grid-columns};
+  --grid-demo-gutter: #{$fsa-grid-gutter};
+  --grid-demo-bgcolor: #{transparentize($color-fsa-aqua, .92)};
+  --grid-demo-repeating-width: calc(100% / var(--grid-demo-columns));
+  --grid-demo-column-width: calc((100% / var(--grid-demo-columns)) - var(--grid-demo-gutter));
+  --grid-demo-background-width: calc(100% + var(--grid-demo-gutter));
+  --grid-demo-background-columns: repeating-linear-gradient(
+    to right,
+    var(--grid-demo-bgcolor),
+    var(--grid-demo-bgcolor) var(--grid-demo-column-width),
+    transparent var(--grid-demo-column-width),
+    transparent var(--grid-demo-repeating-width)
+  );
+}
+
 .docs {
 
   // -----------------------------------------------------------------------------
@@ -615,17 +631,12 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   // Grid Demo
 
   &__grid-inventory {
-    &-item {
 
-      margin-bottom: $size-base;
-      margin-left: 0;
-      padding-left: 0;
-
-      > div {
-        padding-left: 0;
-      }
-
+    & {
+      background-image: var(--grid-demo-background-columns);
+      background-size: var(--grid-demo-background-width) 100%;
     }
+
   }
 
   // -----------------------------------------------------------------------------
