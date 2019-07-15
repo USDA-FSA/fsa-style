@@ -77,7 +77,6 @@
     display: block;
     flex: 1;
     text-align: right;
-    border-bottom: 1px solid pink;
 
     // scss-lint:disable SelectorFormat
     .fsa-content-tabs--justified &,
@@ -213,14 +212,14 @@
       right: $size-small;
     }
 
+    .fsa-content-tabs__label:hover & {
+      box-shadow: 0 (-$size-base) 0 0 $color-fsa-tertiary-300 inset;
+    }
+
+    .fsa-content-tabs__label:focus & {
+      box-shadow: none;
+    }
+
   }
 
-}
-
-.fsa-content-tabs__label:hover .fsa-content-tabs__label-text {
-  box-shadow: 0 (-$size-base) 0 0 $color-fsa-tertiary-300 inset;
-}
-
-.fsa-content-tabs__label:focus .fsa-content-tabs__label-text {
-  box-shadow: 0 (-($size-base - .1rem)) 0 0 $color-focus inset;
 }
