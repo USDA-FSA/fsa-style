@@ -1,4 +1,4 @@
-/*! FSA Style v2.3.2 | http://usda-fsa.github.io/fsa-design-system/ */
+/*! FSA Style v2.3.3 | http://usda-fsa.github.io/fsa-design-system/ */
 
 
 @charset "UTF-8";
@@ -89,7 +89,25 @@ html:hover body::before {
   }
 }
 
+:root {
+  --grid-demo-columns: 12;
+  --grid-demo-gutter: 40.8px;
+  --grid-demo-gutter: 2.55rem;
+  --grid-demo-bgcolor: rgba(0, 166, 210, 0.08);
+  --grid-demo-repeating-width: calc(100% / var(--grid-demo-columns));
+  --grid-demo-column-width: calc((100% / var(--grid-demo-columns)) - var(--grid-demo-gutter));
+  --grid-demo-background-width: calc(100% + var(--grid-demo-gutter));
+  --grid-demo-background-columns: repeating-linear-gradient(
+    to right,
+    var(--grid-demo-bgcolor),
+    var(--grid-demo-bgcolor) var(--grid-demo-column-width),
+    transparent var(--grid-demo-column-width),
+    transparent var(--grid-demo-repeating-width)
+  );
+}
+
 .docs__title {
+  margin: 0;
   margin-top: 2em;
   margin-top: 20vh;
   color: #fff;
@@ -106,7 +124,6 @@ html:hover body::before {
 .docs__title__version {
   font-size: 66%;
   color: #b2c9b7;
-  font-weight: 400;
 }
 
 .docs__anchor {
@@ -196,7 +213,50 @@ html:hover body::before {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 1em;
+}
+
+@media (min-width: 37.5em) {
+  .docs__primary-nav {
+    margin-bottom: 1em;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: baseline;
+        align-items: baseline;
+  }
+}
+
+.docs__primary-nav:before {
+  display: none;
+}
+
+@media (min-width: 37.5em) {
+  .docs__primary-nav:before {
+    display: block;
+    content: attr(data-title);
+    font-size: 28px;
+    opacity: 0;
+    color: rgba(255, 255, 255, 0.8);
+    display: block;
+    width: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all .125s ease-in-out;
+    line-height: 1;
+    font-weight: 300;
+    margin-left: -1px;
+  }
+}
+
+@media (min-width: 37.5em) {
+  .docs__nav--fixed .docs__primary-nav:before {
+    opacity: 1;
+    width: 110px;
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+    padding-right: 1.6rem;
+    margin-left: 0;
+    margin-right: 1.6rem;
+    transition-duration: .4s;
+  }
 }
 
 @media print {
@@ -211,6 +271,7 @@ html:hover body::before {
   padding: 0;
   display: inline-block;
   position: relative;
+  white-space: nowrap;
 }
 
 @media (min-width: 54em) {
@@ -220,15 +281,17 @@ html:hover body::before {
 }
 
 .docs__primary-nav-item--floater {
-  display: block;
-  margin-top: 1em;
-  margin-right: 0;
+  position: absolute;
+  top: 19.2px;
+  top: 1.2rem;
+  right: 19.2px;
+  right: 1.2rem;
 }
 
-@media (min-width: 54em) {
+@media (min-width: 37.5em) {
   .docs__primary-nav-item--floater {
-    float: right;
-    margin-top: 0;
+    position: static;
+    margin-left: auto;
   }
 }
 
@@ -238,11 +301,14 @@ html:hover body::before {
   margin-right: 0.8rem;
   text-decoration: none;
   color: #fff;
+  font-size: 22.4px;
+  font-size: 1.4rem;
 }
 
 @media (min-width: 37.5em) {
   .docs__primary-nav-link {
     margin-right: 0.8rem;
+    font-size: 1.7rem;
   }
 }
 
@@ -262,6 +328,18 @@ html:hover body::before {
   }
   .docs__primary-nav-link--sub _:-ms-fullscreen, :root .docs__primary-nav-link--sub:after {
     display: none;
+  }
+}
+
+.docs__primary-nav-link--github {
+  font-size: 22.4px;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 37.5em) {
+  .docs__primary-nav-link--github {
+    font-size: 1.5rem;
   }
 }
 
@@ -401,6 +479,7 @@ html:hover body::before {
 }
 
 .docs__intro {
+  position: relative;
   padding-top: 38.4px;
   padding-top: 2.4rem;
   padding-bottom: 38.4px;
@@ -408,6 +487,12 @@ html:hover body::before {
   background-color: #236430;
   margin-bottom: 38.4px;
   margin-bottom: 2.4rem;
+}
+
+@media (min-width: 37.5em) {
+  .docs__intro {
+    position: static;
+  }
 }
 
 .docs__bd {
@@ -631,15 +716,9 @@ html:hover body::before {
   letter-spacing: 0.4rem;
 }
 
-.docs__grid-inventory-item {
-  margin-bottom: 6.4px;
-  margin-bottom: 0.4rem;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.docs__grid-inventory-item > div {
-  padding-left: 0;
+.docs__grid-inventory {
+  background-image: var(--grid-demo-background-columns);
+  background-size: var(--grid-demo-background-width) 100%;
 }
 
 .docs__utilities__demo {
