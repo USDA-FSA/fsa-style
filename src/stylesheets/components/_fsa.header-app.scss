@@ -14,6 +14,7 @@
   &__bd {
 
     display: flex;
+    align-items: baseline;
     max-width: ($site-max-width + 24px);
     margin-left: auto;
     margin-right: auto;
@@ -41,6 +42,7 @@
 
   &__secondary {
 
+    @include font-size(1);
     position: relative;
     display: flex;
     align-items: flex-end;
@@ -49,22 +51,49 @@
     padding-left: $component-spacing;
     padding-bottom: ($component-spacing / 4);
 
+    @include breakpoint(L) {
+      @include font-size(2);
+    }
+
+    a {
+      &:link,
+      &:visited,
+      &:active {
+        color: $component-text-color;
+        text-decoration: none;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
   }
 
   &__profile {
     line-height: 1;
+    display: flex;
   }
 
   &__profile-link {
 
     display: inline-block;
     white-space: nowrap;
+    margin-left: $size-default;
 
     &:link,
     &:visited,
     &:active {
       color: $component-text-color;
       text-decoration: none;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    .fsa-header-app__profile-name + & {
+      border-left: 1px solid white;
+      padding-left: $size-default;
     }
 
   }
@@ -74,18 +103,20 @@
     @include fsa-ellipsis();
     display: inline-block;
     max-width: ($size-base * 32);
+    max-width: 28ch;
 
     @include breakpoint(M) {
-      max-width: ($size-base * 40);
+      max-width: 20ch;
     }
 
     @include breakpoint(L) {
       max-width: ($size-base * 55);
+      max-width: 33ch;
     }
 
-    .fsa-header-app__profile-link:hover & {
-      text-decoration: underline;
-    }
+  }
+
+  &__profile-auth {
 
   }
 

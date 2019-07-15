@@ -24,6 +24,22 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   }
 }
 
+:root {
+  --grid-demo-columns: #{$fsa-grid-columns};
+  --grid-demo-gutter: #{$fsa-grid-gutter};
+  --grid-demo-bgcolor: #{transparentize($color-fsa-aqua, .92)};
+  --grid-demo-repeating-width: calc(100% / var(--grid-demo-columns));
+  --grid-demo-column-width: calc((100% / var(--grid-demo-columns)) - var(--grid-demo-gutter));
+  --grid-demo-background-width: calc(100% + var(--grid-demo-gutter));
+  --grid-demo-background-columns: repeating-linear-gradient(
+    to right,
+    var(--grid-demo-bgcolor),
+    var(--grid-demo-bgcolor) var(--grid-demo-column-width),
+    transparent var(--grid-demo-column-width),
+    transparent var(--grid-demo-repeating-width)
+  );
+}
+
 .docs {
 
   // -----------------------------------------------------------------------------
@@ -31,6 +47,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   &__title {
 
+    margin: 0;
     margin-top: 2em;
     margin-top: 20vh;
     color: $color-fsa-white;
@@ -43,7 +60,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     &__version {
       font-size: 66%;
       color: $color-fsa-primary-200;
-      font-weight: $font-normal;
     }
 
   }
@@ -158,7 +174,42 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     max-width: $site-max-width;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1em;
+
+    @include breakpoint(M) {
+      margin-bottom: 1em;
+      display: flex;
+      align-items: baseline;
+    }
+
+    &:before {
+      display: none;
+      @include breakpoint(M) {
+        display: block;
+        content: attr(data-title);
+        font-size: 28px;
+        opacity: 0;
+        color: rgba(255, 255, 255, .8);
+        display: block;
+        width: 1px;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: all .125s ease-in-out;
+        line-height: 1;
+        font-weight: $font-light;
+        margin-left: -1px;
+      }
+      .docs__nav--fixed & {
+        @include breakpoint(M) {
+          opacity: 1;
+          width: 110px;
+          border-right: 1px solid rgba(255, 255, 255, .4);
+          padding-right: ($size-default + $size-base);
+          margin-left: 0;
+          margin-right: ($size-default + $size-base);
+          transition-duration: .4s;
+        }
+      }
+    }
 
     @media print {
       max-width: none;
@@ -169,22 +220,22 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       @include reset-li();
       display: inline-block;
       position: relative;
+      white-space: nowrap;
 
       @include breakpoint(L) {
         margin-right: $size-base;
       }
 
-
       // scss-lint:disable NestingDepth
       &--floater {
 
-        display: block;
-        margin-top: 1em;
-        margin-right: 0;
+        position: absolute;
+        top: $size-default;
+        right: $size-default;
 
-        @include breakpoint(L) {
-          float: right;
-          margin-top: 0;
+        @include breakpoint(M) {
+          position: static;
+          margin-left: auto;
         }
 
       }
@@ -197,9 +248,11 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       margin-right: $size-small;
       text-decoration: none;
       color: $color-fsa-white;
+      font-size: $font-size-1;
 
       @include breakpoint(M) {
         margin-right: $size-small;
+        font-size: $font-size-3;
       }
 
       &--sub {
@@ -222,6 +275,14 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
             // IE 11 doesn't support :focus-within, so let's just suppress it
             display: none;
           }
+        }
+      }
+
+      &--github {
+        font-size: $font-size-1;
+        text-transform: uppercase;
+        @include breakpoint(M) {
+          font-size: $font-size-2;
         }
       }
 
@@ -324,12 +385,9 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   &__page {} // scss-lint:disable EmptyRule
 
   &__section {
-
     @include fudgeMargin();
-
     padding-right: $size-default;
     padding-left: $size-default;
-
   }
 
   &__section-title {
@@ -368,10 +426,14 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   }
 
   &__intro {
+    position: relative;
     padding-top: $size-medium;
     padding-bottom: $size-medium;
     background-color: $color-fsa-primary;
     margin-bottom: $size-medium;
+    @include breakpoint(M) {
+      position: static;
+    }
   }
 
   &__bd {
@@ -585,17 +647,12 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   // Grid Demo
 
   &__grid-inventory {
-    &-item {
 
-      margin-bottom: $size-base;
-      margin-left: 0;
-      padding-left: 0;
-
-      > div {
-        padding-left: 0;
-      }
-
+    & {
+      background-image: var(--grid-demo-background-columns);
+      background-size: var(--grid-demo-background-width) 100%;
     }
+
   }
 
   // -----------------------------------------------------------------------------

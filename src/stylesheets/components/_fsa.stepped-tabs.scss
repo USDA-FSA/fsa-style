@@ -3,6 +3,7 @@
   $colorComplete: $color-fsa-secondary-300;
   $colorActive: $color-fsa-secondary;
   $colorFuture: $color-fsa-secondary-100;
+  $colorFutureActionable: tint($color-fsa-secondary, 80%);
   $colorFutureText: transparentize($color-fsa-base, .3); // $color-fsa-secondary-900
   $colorDark: $color-fsa-secondary-900;
   $labelPadding: $size-small;
@@ -11,33 +12,26 @@
 
   & {
     display: none;
-    margin: $size-medium 0;
     @media (min-width: 20em) {
+      margin: $size-large 0;
       display: block;
+      overflow: auto;
+      overflow-x: auto;
+      overflow-y: hidden;
     }
   }
 
   &__bd {}
 
   &__list {
-
     margin: 0;
     padding: 0;
-    display: table;
-    width: 100%;
+    display: flex;
     list-style: none;
-
-    // scss-lint:disable SelectorFormat
-    .fsa-stepped-tabs--justified & {
-      @include breakpoint(L) {
-        table-layout: fixed;
-      }
-    }
-
   }
 
   &__item {
-    display: table-cell;
+    flex: 1;
     vertical-align: bottom;
   }
 
@@ -50,7 +44,7 @@
       width: 100%;
       text-align: center;
       text-decoration: none;
-      padding: ($labelPadding - .1rem) $labelPadding ($labelPadding);
+      padding: ($labelPadding - .1rem) 0 ($labelPadding);
       background-color: $color-fsa-tertiary-100;
       color: $color-fsa-base;
       position: relative;
@@ -63,10 +57,6 @@
 
     @include breakpoint(M) {
       font-size: $font-size-2;
-    }
-
-    @include breakpoint(M, down) {
-      padding-left: $labelPadding + ($size-base / 2);
     }
 
     @include breakpoint(L) {
@@ -132,15 +122,13 @@
       &:active,
       &:hover {
         // scss-lint:disable ImportantRule
-        &:not(span,div) {
+        &:not(span) {
           color: $color-fsa-white;
         }
       }
 
-      &:focus,
       &:hover {
-        &:not(span,div) {
-          // outline: 0;
+        &:not(span) {
           background-color: $colorDark;
         }
       }
@@ -158,13 +146,13 @@
       &:active,
       &:hover {
         // scss-lint:disable ImportantRule
-        &:not(span,div) {
+        &:not(span) {
           color: $color-fsa-white !important;
         }
       }
 
       &:hover {
-        &:not(span,div) {
+        &:not(span) {
           background-color: $colorDark;
         }
       }
@@ -172,16 +160,14 @@
     }
 
     &--incomplete {
+
       background-color: $colorFuture;
       color: $colorFutureText;
-    }
 
-    .fsa-stepped-tabs__item:first-child & {
-
-      padding-right: ( ($labelPadding * 2) + ($labelPadding / 3) );
-
-      @include breakpoint(M, down) {
-        padding-left: ($labelPadding / 2);
+      &:hover {
+        &:not(span) {
+          background-color: $colorFutureActionable;
+        }
       }
 
     }
@@ -220,18 +206,36 @@
   &__text {
 
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 90%;
     display: inline-block;
     vertical-align: middle;
+    padding: 0 ($labelPadding * 2);
+
+    @include breakpoint(M) {
+      padding: 0 ($labelPadding * 3);
+    }
+
+    .fsa-stepped-tabs__item:first-child & {
+      padding-left: ($labelPadding / 2);
+      @include breakpoint(M) {
+        padding-left: $labelPadding * 2;
+      }
+    }
+
+    .fsa-stepped-tabs__item:last-child & {
+      padding-right: ($labelPadding / 2);
+      @include breakpoint(M) {
+        padding-right: $labelPadding * 2;
+      }
+    }
 
     .fsa-stepped-tabs__label:focus & {
       @include fsa-focus;
     }
 
-    @include breakpoint(L) {
-      max-width: 75%;
+    @include breakpoint(L, down) {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 30vw;
     }
 
   }
@@ -246,3 +250,4 @@
     display: none;
   }
 }
+
