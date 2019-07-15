@@ -3,6 +3,7 @@
   $colorComplete: $color-fsa-secondary-300;
   $colorActive: $color-fsa-secondary;
   $colorFuture: $color-fsa-secondary-100;
+  $colorFutureActionable: tint($color-fsa-secondary, 80%);
   $colorFutureText: transparentize($color-fsa-base, .3); // $color-fsa-secondary-900
   $colorDark: $color-fsa-secondary-900;
   $labelPadding: $size-small;
@@ -121,14 +122,13 @@
       &:active,
       &:hover {
         // scss-lint:disable ImportantRule
-        &:not(span,div) {
+        &:not(span) {
           color: $color-fsa-white;
         }
       }
 
-      &:focus,
       &:hover {
-        &:not(span,div) {
+        &:not(span) {
           background-color: $colorDark;
         }
       }
@@ -146,13 +146,13 @@
       &:active,
       &:hover {
         // scss-lint:disable ImportantRule
-        &:not(span,div) {
+        &:not(span) {
           color: $color-fsa-white !important;
         }
       }
 
       &:hover {
-        &:not(span,div) {
+        &:not(span) {
           background-color: $colorDark;
         }
       }
@@ -160,8 +160,16 @@
     }
 
     &--incomplete {
+
       background-color: $colorFuture;
       color: $colorFutureText;
+
+      &:hover {
+        &:not(span) {
+          background-color: $colorFutureActionable;
+        }
+      }
+
     }
 
     &:not(span) {
