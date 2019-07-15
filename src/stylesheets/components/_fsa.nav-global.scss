@@ -357,7 +357,12 @@
   &__sub-menu-list {
 
     @include reset-ul();
+    @include font-size(1);
     margin-bottom: .5em;
+
+    @include breakpoint(L) {
+      @include font-size(3);
+    }
 
   }
 

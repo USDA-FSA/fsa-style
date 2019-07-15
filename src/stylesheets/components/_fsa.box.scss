@@ -2,12 +2,15 @@
 
   $box-bgcolor-default: $white;
   $box-border-color: $color-fsa-tertiary-200;
-  $box-padding: $size-medium;
+  $box-padding: $size-default;
 
   & {
     border: 1px solid $box-border-color;
     background-color: $box-bgcolor-default;
     padding: $box-padding;
+    @include breakpoint(L) {
+      padding: ($box-padding * 2);
+    }
   }
 
   &__hd {}
@@ -24,8 +27,6 @@
   &__ft {}
 
   &__title {
-    @include h3();
-    font-family: $font-sans;
     margin-top: 0;
   }
 

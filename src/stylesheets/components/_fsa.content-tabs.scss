@@ -9,6 +9,8 @@
     display: flex;
     margin-left: -$size-default;
     margin-right: -$size-default;
+    align-items: center;
+    box-shadow: 0 -1px 0 0 $color-fsa-tertiary-200 inset;
 
     @include breakpoint(L) {
       margin-left: 0;
@@ -43,7 +45,6 @@
     padding: 0;
     margin-top: 0;
     margin-bottom: 0;
-    // width: 100%;
     margin-left: $size-default;
 
     @include breakpoint(M) {
@@ -75,7 +76,7 @@
 
     display: block;
     flex: 1;
-    border-bottom: 1px solid $color-fsa-tertiary-200;
+    text-align: right;
 
     // scss-lint:disable SelectorFormat
     .fsa-content-tabs--justified &,
@@ -92,7 +93,6 @@
     display: flex;
     display: table-cell;
     vertical-align: bottom;
-    border-bottom: 1px solid $color-fsa-tertiary-200;
 
   }
 
@@ -212,14 +212,14 @@
       right: $size-small;
     }
 
+    .fsa-content-tabs__label:hover & {
+      box-shadow: 0 (-$size-base) 0 0 $color-fsa-tertiary-300 inset;
+    }
+
+    .fsa-content-tabs__label:focus & {
+      box-shadow: none;
+    }
+
   }
 
-}
-
-.fsa-content-tabs__label:hover .fsa-content-tabs__label-text {
-  box-shadow: 0 (-$size-base) 0 0 $color-fsa-tertiary-300 inset;
-}
-
-.fsa-content-tabs__label:focus .fsa-content-tabs__label-text {
-  box-shadow: 0 (-($size-base - .1rem)) 0 0 $color-focus inset;
 }

@@ -17,6 +17,8 @@
 
   &__bd {
 
+    display: flex;
+    align-items: center;
     max-width: ($site-max-width + 24px);
     margin-left: auto;
     margin-right: auto;
@@ -31,7 +33,10 @@
   }
 
   &__official {
-    display: inline-block;
+    margin-right: auto;
+  }
+
+  &__agency {
   }
 
   &__flag-icon {
@@ -42,26 +47,14 @@
   }
 
   &__stage {
-
-    // This hides the stage note (i.e. alpha, beta, etc) of the disclaimer for
-    // anything smaller than large screen sizes
-    @include margin(2px null);
-    display: none;
-    float: right;
-
-    @include breakpoint(M) {
-      display: block;
-    }
-
+    margin-left: $size-small;
     &--prototype {
-      @include font-size(0);
       background-color: $color-gold-light;
       color: black;
       padding: 0 $size-base;
-      position: relative;
-      top: -2px;
+      font-size: 10px;
+      text-transform: uppercase;
     }
-
   }
 
 }
