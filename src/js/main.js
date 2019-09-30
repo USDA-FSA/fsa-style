@@ -20,3 +20,4 @@ var GrowlComponent = require('./components/fsa-growl');
 var SelectMultipleComponent = require('./components/fsa-select-multi');
 var SteppedControlComponent = require('./components/fsa-stepped-control');
 var SpinboxComponent = require('./components/fsa-spinbox');
+var ProgressComponent = require('./components/fsa-progress');

@@ -34,56 +34,61 @@
           </div>
           <div class="docs__bd">
             <p class="docs__code-sample"><code>class="fsa-progress"</code></p>
-            <h4 class="docs__sub_style">Indeterminate</h4>
-            <p>
-              <span class="fsa-progress fsa-progress--indeterminate">
-                <span class="fsa-progress__bar">
-                  <span class="fsa-progress__primary" aria-live="polite" aria-label="Progress">Page loading</span>
-                  <span class="fsa-progress__secondary"></span>
-                </span>
-              </span>
-            </p>
-            <h4 class="docs__sub_style">Indeterminate, with label</h4>
-            <p>
-              <span class="fsa-progress fsa-progress--indeterminate">
-                <span class="fsa-progress__bar">
-                  <span class="fsa-progress__primary"></span>
-                  <span class="fsa-progress__secondary"></span>
-                </span>
-                <span class="fsa-progress__details" aria-live="polite" aria-label="Progress">
-                  <span class="fsa-progress__label">Processing Claims</span>
-                </span>
-              </span>
-            </p>
-            <h4 class="docs__sub_style">Determinate</h4>
-            <p>
-              <span class="fsa-progress" id="showProgress">
-                <span class="fsa-progress__bar">
-                  <span class="fsa-progress__primary" aria-live="polite" aria-label="Progress">0%</span>
-                  <span class="fsa-progress__secondary"></span>
-                </span>
-              </span>
-            </p>
-            <p>
-              <button type="button" class="fsa-btn fsa-btn--secondary fsa-btn--small" id="progressStarter" onclick="fakeSystemTracksProgress()">Start Progress Bar</button>
-            </p>
-            <h4 class="docs__sub_style">Determinate, with label</h4>
-            <p>
-              <span class="fsa-progress" id="showProgressDeterminate">
-                <span class="fsa-progress__bar">
-                  <span class="fsa-progress__primary" style="transform:scaleX(.00);"></span>
-                  <span class="fsa-progress__secondary"></span>
-                </span>
-                <span class="fsa-progress__details" aria-live="polite" aria-label="Progress">
-                  <span class="fsa-progress__label">Soft Red Winter Wheat</span>
-                  <span class="fsa-progress__value">0%</span>
-                </span>
-              </span>
-            </p>
-            <p>
-              <button type="button" class="fsa-btn fsa-btn--secondary fsa-btn--small" id="progressStarterDeterminate" onclick="fakeSystemTracksProgressDeterminate()">Start Progress Bar</button>
-            </p>
-            <h4 class="docs__sub_style">Determinate, with label/value</h4>
+            <div class="fsa-grid">
+              <div class="fsa-grid__1 fsa-grid__1/2@m">
+                <h4 class="docs__sub_style">Indeterminate</h4>
+                <p>
+                  <span class="fsa-progress fsa-progress--indeterminate">
+                    <span class="fsa-progress__bar">
+                      <span class="fsa-progress__primary" aria-live="polite" aria-label="Progress">Page loading</span>
+                      <span class="fsa-progress__secondary"></span>
+                    </span>
+                  </span>
+                </p>
+              </div>
+              <div class="fsa-grid__1 fsa-grid__1/2@m">
+                <h4 class="docs__sub_style">Indeterminate, with label</h4>
+                <p>
+                  <span class="fsa-progress fsa-progress--indeterminate">
+                    <span class="fsa-progress__bar">
+                      <span class="fsa-progress__primary"></span>
+                      <span class="fsa-progress__secondary"></span>
+                    </span>
+                    <span class="fsa-progress__details" aria-live="polite" aria-label="Progress">
+                      <span class="fsa-progress__label">Processing Claims</span>
+                    </span>
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div class="fsa-grid">
+              <div class="fsa-grid__1 fsa-grid__1/2@m">
+                <h4 class="docs__sub_style">Determinate <button type="button" class="fsa-btn fsa-btn--secondary fsa-btn--small fsa-m-l--xs" data-behavior="fakeSystemTrackLoop" data-target="showProgress">Start Progress Bar</button></h4>
+                <p>
+                  <span class="fsa-progress">
+                    <span class="fsa-progress__bar">
+                      <span class="fsa-progress__primary" aria-live="polite" aria-label="Progress" id="showProgress">0%</span>
+                      <span class="fsa-progress__secondary"></span>
+                    </span>
+                  </span>
+                </p>
+              </div>
+              <div class="fsa-grid__1 fsa-grid__1/2@m">
+                <h4 class="docs__sub_style">Determinate, with label/value <button type="button" class="fsa-btn fsa-btn--secondary fsa-btn--small fsa-m-l--xs" data-behavior="fakeSystemTrackLoop" data-target="showProgressWithLabel">Start Progress Bar</button></h4>
+                <p>
+                  <span class="fsa-progress">
+                    <span class="fsa-progress__bar">
+                      <span class="fsa-progress__primary" id="showProgressWithLabel"></span>
+                      <span class="fsa-progress__secondary"></span>
+                    </span>
+                    <span class="fsa-progress__details" aria-live="polite" aria-label="Progress">
+                      <span class="fsa-progress__label">Soft Red Winter Wheat</span>
+                      <span class="fsa-progress__value">0%</span>
+                    </span>
+                  </span>
+                </p>
+              </div>
+            </div>
             <h4 class="docs__sub_style">Paired with Box</h4>
             <h4 class="docs__sub_style">Paired with Select</h4>
             <h4 class="docs__sub_style">Paired with Select, block</h4>
@@ -120,100 +125,6 @@
     </main>
 
   <script src="js/fsa-style-docs.min.js"></script>
-
-  <script>
-
-    $ = jQuery;
-
-    function fakeSystemTracksProgress() {
-
-      $starter = $('#progressStarter');
-
-      $starter.css('visibility','hidden')
-      $('#showProgress').css('transform','scaleX(0)')
-      setTimeout(function() {
-        $('#showProgress').css('transform','scaleX(.005)')
-      },200);
-      setTimeout(function() {
-        $('#showProgress').css('transform','scaleX(.04)')
-      },400);
-      setTimeout(function() {
-        $('#showProgress').css('transform','scaleX(.10)')
-      },600);
-      setTimeout(function() {
-        $('#showProgress').css('transform','scaleX(.25)')
-      },800);
-      setTimeout(function() {
-        $('#showProgress').css('transform','scaleX(.4)')
-      },1000);
-      setTimeout(function() {
-        $('#showProgress').css('transform','scaleX(.45)')
-      },1200);
-      setTimeout(function() {
-        $('#showProgress').css('transform','scaleX(.52)')
-      },1500);
-      setTimeout(function() {
-        $('#showProgress').css('transform','scaleX(.55)')
-      },1700);
-      setTimeout(function() {
-        $('#showProgress').css('transform','scaleX(.65)')
-      },1900);
-      setTimeout(function() {
-        $('#showProgress').css('transform','scaleX(.68)')
-      },2000);
-      setTimeout(function() {
-        $('#showProgress').css('transform','scaleX(.75)')
-      },2500);
-      setTimeout(function() {
-        $('#showProgress').css('transform','scaleX(.75)')
-      },2700);
-      setTimeout(function() {
-        $('#showProgress').css('transform','scaleX(.78)')
-      },2900);
-      setTimeout(function() {
-        $('#showProgress').css('transform','scaleX(.8)')
-      },3000);
-      setTimeout(function() {
-        $('#showProgress').css('transform','scaleX(.85)')
-      },3400);
-      setTimeout(function() {
-        $('#showProgress').css('transform','scaleX(.88)')
-      },3600);
-      setTimeout(function() {
-        $('#showProgress').css('transform','scaleX(.89)')
-      },3700);
-      setTimeout(function() {
-        $('#showProgress').css('transform','scaleX(.9)')
-      },4000);
-      setTimeout(function() {
-        $('#showProgress').css('transform','scaleX(.92)')
-      },4500);
-      setTimeout(function() {
-        $('#showProgress').css('transform','scaleX(.94)')
-      },4700);
-      setTimeout(function() {
-        $('#showProgress').css('transform','scaleX(.96)')
-      },4900);
-      setTimeout(function() {
-        $('#showProgress').css('transform','scaleX(.97)')
-      },5400);
-      setTimeout(function() {
-        $('#showProgress').css('transform','scaleX(1)')
-        $starter.removeAttr('style');
-        console.log('done');
-      },8500);
-    }
-
-    function fakeTableDone() {
-      $('#tableProgress').hide();
-    }
-
-    function fakeTableShow() {
-      $('#tableProgress').removeAttr('style');
-    }
-
-
-  </script>
 
 </body>
 
