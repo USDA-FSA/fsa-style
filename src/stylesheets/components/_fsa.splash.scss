@@ -18,8 +18,11 @@ $splash: fsa-splash;
 
   &__tophat__bd {
     max-width: initial;
+    color: $color-fsa-tertiary-300;
   }
 
+  &__tophat__link,
+  &__tophat__link:link,
   &__tophat__link:visited,
   &__tophat__link:active,
   &__tophat__link:hover {
