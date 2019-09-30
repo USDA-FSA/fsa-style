@@ -81,6 +81,8 @@
 
   &__agency {
 
+    white-space: nowrap;
+
     &:after {
 
       content: '|';
