@@ -1,5 +1,17 @@
 const $ = window.jQuery = require('jquery');
 
+$('body').on('click', '[data-behavior~="toggleProgressBars"]', function(event) {
+
+  const $bars = $('.fsa-progress');
+
+  if ($bars.is('[style]')) {
+    $bars.removeAttr('style');
+  } else {
+    $bars.css('visibility', 'hidden');
+  }
+
+})
+
 $('body').on('click', '[data-behavior~="fakeSystemTrackLoop"]', function(event) {
 
   const $self = $(this);
@@ -30,16 +42,19 @@ $('body').on('click', '[data-behavior~="fakeSystemTrackLoop"]', function(event) 
     $targetValue.html('100%');
     $target.css('transform','scaleX(1)');
     $self.removeAttr('style');
+
+    $('#UNIQUE-ID-ttfrancbra').attr('aria-hidden', 'false');
+
   }, 7000);
 
 })
 
-function fakeTableDone() {
+$('body').on('click', '[data-behavior~="fakeTableDone"]', function(event) {
   $('#tableProgress').hide();
-}
+})
 
-function fakeTableShow() {
+$('body').on('click', '[data-behavior~="fakeTableShow"]', function(event) {
   $('#tableProgress').removeAttr('style');
-}
+})
 
 console.log('ProgressComponent loaded, its JS is NOT to be used for Production, demo purposes only');1
