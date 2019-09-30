@@ -37,6 +37,10 @@ body {
 
 }
 
+#main-content {
+  min-height: 25vh;
+}
+
 @media print {
   @page {
     size: (8.5in * 1.75) (11in * 1.75);
