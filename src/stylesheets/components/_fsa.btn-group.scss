@@ -74,6 +74,10 @@
       border-bottom-left-radius: 0;
     }
 
+    &:only-child {
+      border-radius: $button-border-radius;
+    }
+
     &--active {
 
       @include fsa-button(primary);
