@@ -28,7 +28,7 @@ $color-fsa-primary-900: shade($color-fsa-primary, 25%);
 
 $color-fsa-secondary: $color-primary-darker;
 $color-fsa-secondary-300: tint($color-fsa-secondary, 21%);
-$color-fsa-secondary-200: tint($color-fsa-secondary, 60%);
+$color-fsa-secondary-200: tint($color-fsa-secondary, 70%);
 $color-fsa-secondary-100: tint($color-fsa-secondary, 85%);
 $color-fsa-secondary-900: shade($color-fsa-secondary, 25%);
 
@@ -67,6 +67,15 @@ $color-fsa-link-visited: $color-fsa-link;
 // Semantic
 $color-title: $color-fsa-tertiary;
 $color-fsa-site-bg: tint($color-fsa-secondary, 97%); // Super light gray bg, but with a slight tint of blue
+
+$marker-text-color: $color-base;
+
+$marker-bgc: $color-fsa-tertiary-200;
+$marker-bgc-neutral: $color-fsa-white;
+$marker-bgc-general: $color-fsa-secondary-200;
+$marker-bgc-alert: $color-fsa-red-200;
+$marker-bgc-warning: $color-gold-lighter;
+$marker-bgc-success: $color-fsa-primary-200;
 
 // ---------------------------------------------------------------------------
 // Typography

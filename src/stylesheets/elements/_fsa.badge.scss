@@ -1,37 +1,31 @@
 $badge-spacing: ($size-base - .1rem);
 
-$badge-text-color: $color-fsa-white;
-
-
-$badge-bgc: $color-fsa-tertiary-300;
-$badge-bgc-general: $color-fsa-secondary-900;
-$badge-bgc-alert: $color-fsa-red;
-$badge-bgc-warning: $color-gold-light;
-$badge-bgc-success: $color-fsa-primary;
-
-$badge-text-color-warning: $color-black;
-
 .fsa-badge {
 
   & {
     @include reset-button();
     @include font-size(0);
     line-height: 1;
-    font-weight: $font-bold;
+    font-family: $font-sans; // brute-force to override any inheritance (e.g. within an <h1>)
+    font-weight: $font-normal; // brute-force to override any inheritance (e.g. within an <h1>)
     display: inline-block;
-    vertical-align: middle;
     text-decoration: none;
-    background-color: $badge-bgc;
-    border-radius: $size-default;
+    background-color: $marker-bgc;
+    border-radius: $size-medium;
+    color: $marker-text-color;
+    min-width: 19px;
     text-align: center;
-    min-width: 20px;
-    color: $badge-text-color;
-    padding: $badge-spacing;
-    cursor: default;
+    cursor: initial;
+    padding: $badge-spacing ($badge-spacing * 2);
+    box-shadow: 0 -1px 0 adjust-color($color-fsa-tertiary, $alpha: -0.75) inset;
+    a &,
+    button & {
+      cursor: pointer;
+    }
   }
 
   &:visited {
-    color: $badge-text-color;
+    color: $marker-text-color;
   }
 
   &:not(:empty) + & {
@@ -49,30 +43,35 @@ $badge-text-color-warning: $color-black;
     display: none;
   }
 
+  &--inverse,
+  &--neutral {
+    background-color: $marker-bgc-neutral;
+    box-shadow:
+      0 -1px 0   adjust-color($color-fsa-tertiary, $alpha: -0.70) inset,
+      0 0 0 1px  adjust-color($color-fsa-tertiary, $alpha: -0.80) inset
+    ;
+  }
+
   &--general {
-    background-color: $badge-bgc-general;
+    background-color: $marker-bgc-general;
   }
 
   &--alert {
 
-    background-color: $badge-bgc-alert;
+    background-color: $marker-bgc-alert;
 
     @media print {
-      background-color: shade($badge-bgc-alert, 60%);
+      background-color: shade($marker-bgc-alert, 60%);
     }
 
   }
 
   &--warning {
-    background-color: $badge-bgc-warning;
-    color: $badge-text-color-warning;
-    &:visited {
-      color: $badge-text-color-warning;
-    }
+    background-color: $marker-bgc-warning;
   }
 
   &--success {
-    background-color: $badge-bgc-success;
+    background-color: $marker-bgc-success;
   }
 
   &--large {
@@ -81,45 +80,19 @@ $badge-text-color-warning: $color-black;
     min-width: 24px;
   }
 
-  &--inverse {
-
-    background-color: $badge-text-color;
-    color: $color-fsa-base;
-
-    &[href] {
-
-      &:hover,
-      &:focus,
-      &:active {
-        color: inherit;
-        background-color: $color-fsa-secondary-100;
-      }
-
-    }
-
+  &[disabled] {
+    opacity: .75;
+    filter: grayscale(55%);
+    color: transparentize($marker-text-color, .1);
+    cursor: not-allowed;
+    box-shadow: none;
   }
 
-  .fsa-btn &,
-  .fsa-btn-group__item & {
-    float: right;
-    margin-left: $size-small;
+  h1 &,
+  h2 & {
     position: relative;
-    top: -3px;
-  }
-
-  // scss-lint:disable SelectorFormat
-  .fsa-btn-group--small &,
-  .fsa-btn--small & {
-    top: -5px;
-  }
-
-  .fsa-btn--large &,
-  .fsa-btn-group--large & {
-    top: -1px;
-  }
-
-  .fsa-btn--large &.fsa-badge--large {
-    top: -3px;
+    top: -$size-base;
+    margin-left: $size-base;
   }
 
 }
@@ -128,14 +101,14 @@ $badge-text-color-warning: $color-black;
 button.fsa-badge,
 a.fsa-badge {
 
-  cursor: pointer;
-
-  &:hover,
+  &:hover:not([disabled]),
   &:focus,
   &:active {
-    color: $badge-text-color;
-    background-color: $color-fsa-aqua-900;
-    outline-offset: 3px;
+    cursor: pointer;
+    box-shadow:
+      0 -1px 0   adjust-color($color-fsa-tertiary, $alpha: -0.20) inset,
+      0 0 0 1px  adjust-color($color-fsa-tertiary, $alpha: -0.60) inset
+    ;
   }
 
 }
