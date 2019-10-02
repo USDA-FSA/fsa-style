@@ -103,15 +103,19 @@
     @include fsa-ellipsis();
     display: inline-block;
     max-width: ($size-base * 32);
-    max-width: 28ch;
+    max-width: 18ch;
+
+    @include breakpoint(S) {
+      max-width: 40ch;
+    }
 
     @include breakpoint(M) {
-      max-width: 20ch;
+      max-width: 35ch;
     }
 
     @include breakpoint(L) {
       max-width: ($size-base * 55);
-      max-width: 33ch;
+      max-width: 40ch;
     }
 
   }
