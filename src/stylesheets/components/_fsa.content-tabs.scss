@@ -86,6 +86,10 @@
       }
     }
 
+    @include breakpoint(L, down) {
+      margin-right: $size-default;
+    }
+
   }
 
   &__item {
