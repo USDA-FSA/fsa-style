@@ -843,6 +843,39 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   background-color: $color-fsa-red-100;
 }
 
+.color-fsa-yellow-dark {
+  background-color: transparent;
+  color: transparent;
+}
+.color-fsa-yellow {
+  background-color: $color-fsa-yellow;
+  code {
+    color: $color-fsa-base;
+  }
+}
+.color-fsa-yellow-light {
+  background-color: $color-fsa-yellow-300;
+  code {
+    color: $color-fsa-base;
+  }
+}
+.color-fsa-yellow-lighter {
+  background-color: $color-fsa-yellow-200;
+  code {
+    color: $color-fsa-base;
+  }
+}
+.color-fsa-yellow-lightest {
+  background-color: $color-fsa-yellow-100;
+  code {
+    color: $color-fsa-base;
+  }
+}
+
+.color-fsa-site-bg {
+  background-color: $color-fsa-site-bg;
+  border: 1px dashed $color-fsa-tertiary-200;
+}
 .color-fsa-link {
   background-color: $color-fsa-link;
 }
@@ -937,7 +970,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
 .docs-highlight {
 
-  $thisBGC: transparentize($color-gold, .7);
+  $thisBGC: transparentize($color-fsa-yellow, .7);
 
   background-color: $thisBGC;
 

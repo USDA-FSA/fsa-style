@@ -1,10 +1,10 @@
 /* FSA-specific overrides/additions */
 
 .fsa-browser-upgrade {
-  background-color: $color-gold-lighter;
+  background-color: $color-fsa-yellow;
   margin: 0;
   padding: $size-small $size-default;
-  border-bottom: 2px solid $color-gold;
+  border-bottom: 2px solid $color-fsa-yellow;
   text-align: center;
 }
 
@@ -130,7 +130,7 @@ u {
 }
 
 mark {
-  background-color: $color-gold-lightest;
+  background-color: $color-fsa-yellow-100;
 }
 
 blockquote {
