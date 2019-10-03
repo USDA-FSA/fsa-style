@@ -102,6 +102,9 @@
     &:only-child {
       margin-top: .5em;
     }
+    & + & {
+      margin-top: .5em;
+    }
     .fsa-alert--no-icon & {
       margin: 0;
     }

@@ -4761,10 +4761,21 @@
                 </div>
               </div>
             </div>
+          </div>
+          <h4 class="docs__sub_style">Dismissable option</h4>
+          <div class="fsa-grid">
             <div class="fsa-grid__1 fsa-grid__1/2@l">
-              <h4 class="docs__sub_style">Dismissable (optional)</h4>
               <div class="fsa-alert fsa-alert--success" role="alert">
-                <button class="fsa-alert__close" type="button" title="Dismiss this message" aria-label="Dismiss this message"></button>
+                <button class="fsa-alert__close" data-behavior="alert-dismiss" type="button" title="Dismiss this message" aria-label="Dismiss this message"></button>
+                <div class="fsa-alert__body">
+                  <h3 class="fsa-alert__heading">Optional success title</h3>
+                  <p class="fsa-alert__text">Lorem ipsum <strong>bold text</strong>, consectetur adipiscing assumenda harum accusamus nemo non iste quia. Nihil ab tenetur ipsa dolore nisi qui molestias assumenda a perferendis maxime sed do eiusmod.</p>
+                </div>
+              </div>
+            </div>
+            <div class="fsa-grid__1 fsa-grid__1/2@l">
+              <div class="fsa-alert fsa-alert--success fsa-alert--no-icon" role="alert">
+                <button class="fsa-alert__close" data-behavior="alert-dismiss" type="button" title="Dismiss this message" aria-label="Dismiss this message"></button>
                 <div class="fsa-alert__body">
                   <h3 class="fsa-alert__heading">Optional success title</h3>
                   <p class="fsa-alert__text">Lorem ipsum <strong>bold text</strong>, consectetur adipiscing elit, sed do eiusmod.</p>
@@ -4811,6 +4822,7 @@
           <p class="docs__code-sample"><code>class="fsa-label <strong>fsa-label--[type] fsa-label--[size]</strong>"</code></p>
           <p>
             <span class="fsa-label">Label</span>
+            <span class="fsa-label fsa-label--neutral">Lorem ipsum</span>
             <span class="fsa-label fsa-label--general">Lorem ipsum</span>
             <span class="fsa-label fsa-label--alert">Lorem ipsum</span>
             <span class="fsa-label fsa-label--warning">Label</span>
@@ -4818,6 +4830,7 @@
           </p>
           <p>
             <span class="fsa-label fsa-label--large">Label</span>
+            <span class="fsa-label fsa-label--large fsa-label--neutral">Lorem</span>
             <span class="fsa-label fsa-label--large fsa-label--general">Lorem ipsum</span>
             <span class="fsa-label fsa-label--large fsa-label--alert">Lorem ipsum</span>
             <span class="fsa-label fsa-label--large fsa-label--warning">Label</span>
@@ -4840,6 +4853,7 @@
           <p class="docs__code-sample"><code>class="fsa-badge fsa-badge--[type] fsa-badge--[size]"</code></p>
           <p>
             <span class="fsa-badge">1</span>
+            <span class="fsa-badge fsa-badge--neutral">8</span>
             <span class="fsa-badge fsa-badge--general">11</span>
             <span class="fsa-badge fsa-badge--alert">11</span>
             <span class="fsa-badge fsa-badge--warning">22</span>
