@@ -48,10 +48,11 @@ $('body').on('click', '[data-behavior~="fakeSystemTrackLoop"]', function(event) 
 
   const $self = $(this);
   const $target = $('#' + $self.attr('data-target'));
-  const $targetValue = $target.closest('.fsa-progress').find('.fsa-progress__value');
+  const $targetBar = $target.find('.fsa-progress__primary');
+  const $targetValue = $target.find('.fsa-progress__value');
 
   $self.css('visibility','hidden');
-  $target.css('transform','scaleX(.03)');
+  $targetBar.css('transform','scaleX(.03)');
   $targetValue.html('3%');
 
   for (percentageComplete = 10; percentageComplete <= 97; ++percentageComplete) {
@@ -62,17 +63,15 @@ $('body').on('click', '[data-behavior~="fakeSystemTrackLoop"]', function(event) 
 
     setTimeout(function(){
       // console.log("'percentageComplete' is " + percentageComplete + ", and 'delay' is " + (66 * percentageComplete));
-      $target.css('transform','scaleX(.' + percentageComplete +')');
-      $target.html(percentageComplete + '%');
+      $targetBar.css('transform','scaleX(.' + percentageComplete +')');
       $targetValue.html(percentageComplete + '%');
     }, 66 * percentageComplete);
 
   }
 
   setTimeout(function(){
-    $target.html('100%');
     $targetValue.html('100%');
-    $target.css('transform','scaleX(1)');
+    $targetBar.css('transform','scaleX(1)');
     $self.removeAttr('style');
 
     $('#UNIQUE-ID-ttfrancbra').attr('aria-hidden', 'false');
@@ -82,11 +81,11 @@ $('body').on('click', '[data-behavior~="fakeSystemTrackLoop"]', function(event) 
 })
 
 $('body').on('click', '[data-behavior~="fakeTableDone"]', function(event) {
-  $('#tableProgress').hide();
+  $('#tableProgress').attr('hidden', true);
 })
 
 $('body').on('click', '[data-behavior~="fakeTableShow"]', function(event) {
-  $('#tableProgress').removeAttr('style');
+  $('#tableProgress').removeAttr('hidden');
 })
 
 console.log('ProgressComponent loaded, its JS is NOT to be used for Production, demo purposes only');1

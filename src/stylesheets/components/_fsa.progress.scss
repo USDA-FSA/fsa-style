@@ -1,5 +1,5 @@
 $progress: fsa-progress;
-$progress-height: $size-base ;
+$progress-height: $size-base;
 $progress-bg-color: $color-fsa-aqua-100;
 $progress-fill-color: $color-fsa-aqua-200;
 $progress-fill-color-dark: $color-fsa-aqua;
@@ -11,7 +11,11 @@ $progress-fill-color-complete: $progress-fill-color-dark;
 
 .#{$progress} {
 
-  & {}
+  & {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column-reverse;
+  }
 
   &__details {
     display: flex;

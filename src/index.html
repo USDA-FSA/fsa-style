@@ -85,16 +85,16 @@
       </div>
       <div class="fsa-growl__bd fsa-p-r--none">
         <div class="fsa-m-t--xs">
-          <span class="fsa-progress">
-            <span class="fsa-progress__bar">
-              <span class="fsa-progress__primary" style="transform:scaleX(.21);"></span>
-              <span class="fsa-progress__secondary"></span>
-            </span>
-            <span class="fsa-progress__details fsa-m-b--none" aria-live="polite" aria-label="Progress">
-              <span class="fsa-progress__label">Finding all the PII...</span>
-              <span class="fsa-progress__value">21%</span>
-            </span>
-          </span>
+          <div class="fsa-progress" aria-live="polite">
+            <div class="fsa-progress__details fsa-m-b--none">
+              <div class="fsa-progress__label">Finding all the PII...</div>
+              <div class="fsa-progress__value">21%</div>
+            </div>
+            <div class="fsa-progress__bar" aria-hidden="true">
+              <div class="fsa-progress__primary" style="transform:scaleX(.21);"></div>
+              <div class="fsa-progress__secondary"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -133,16 +133,16 @@
       <div class="fsa-growl__bd">
         <p>This might take a while. Sorry not sorry.</p>
         <p>
-          <span class="fsa-progress fsa-progress--indeterminate">
-            <span class="fsa-progress__bar">
-              <span class="fsa-progress__primary"></span>
-              <span class="fsa-progress__secondary"></span>
-            </span>
-            <span class="fsa-progress__details" aria-live="polite" aria-label="Progress">
-              <span class="fsa-progress__label">Encrpyting...</span>
-              <span class="fsa-progress__value">About 20 min</span>
-            </span>
-          </span>
+          <div class="fsa-progress fsa-progress--indeterminate" aria-live="polite">
+            <div class="fsa-progress__details">
+              <div class="fsa-progress__label">Encrpyting...</div>
+              <div class="fsa-progress__value">About 20 min</div>
+            </div>
+            <div class="fsa-progress__bar" aria-hidden="true">
+              <div class="fsa-progress__primary"></div>
+              <div class="fsa-progress__secondary"></div>
+            </div>
+          </div>
         </p>
         <p>
           <button data-behavior="growl-dismiss whiteout-dismiss" class="fsa-btn fsa-btn--small fsa-btn--secondary" type="button">Cancel Encryption</button>
@@ -4887,99 +4887,113 @@
           <p><button class="fsa-btn fsa-btn--small fsa-btn--secondary" type="button" data-behavior="toggleProgressBars">Toggle all Progress Bars</button></p>
           <div class="fsa-grid">
             <div class="fsa-grid__1 fsa-grid__1/2@m">
-              <h4 class="docs__sub_style">Indeterminate</h4>
-              <span class="fsa-progress fsa-progress--indeterminate">
-                <span class="fsa-progress__bar">
-                  <span class="fsa-progress__primary" aria-live="polite" aria-label="Progress">Page loading</span>
-                  <span class="fsa-progress__secondary"></span>
-                </span>
-              </span>
-            </div>
-            <div class="fsa-grid__1 fsa-grid__1/2@m">
               <h4 class="docs__sub_style">Indeterminate, with label</h4>
-              <span class="fsa-progress fsa-progress--indeterminate">
-                <span class="fsa-progress__bar">
-                  <span class="fsa-progress__primary"></span>
-                  <span class="fsa-progress__secondary"></span>
-                </span>
-                <span class="fsa-progress__details" aria-live="polite" aria-label="Progress">
-                  <span class="fsa-progress__label">Processing Claims</span>
-                </span>
-              </span>
+              <div class="fsa-progress fsa-progress--indeterminate" aria-live="polite">
+                <div class="fsa-progress__details">
+                  <div class="fsa-progress__label">Processing Claims</div>
+                  <div class="fsa-progress__value">About 10 min</div>
+                </div>
+                <div class="fsa-progress__bar" aria-hidden="true">
+                  <div class="fsa-progress__primary"></div>
+                  <div class="fsa-progress__secondary"></div>
+                </div>
+              </div>
             </div>
             <div class="fsa-grid__1 fsa-grid__1/2@m">
-              <h4 class="docs__sub_style">Determinate <button type="button" class="fsa-btn fsa-btn--secondary fsa-btn--small fsa-m-l--xs" data-behavior="fakeSystemTrackLoop" data-target="showProgress">Start Progress Bar</button></h4>
-              <span class="fsa-progress">
-                <span class="fsa-progress__bar">
-                  <span class="fsa-progress__primary" aria-live="polite" aria-label="Progress" id="showProgress">0%</span>
-                  <span class="fsa-progress__secondary"></span>
-                </span>
-              </span>
+              <h4 class="docs__sub_style">Indeterminate, hidden label</h4>
+              <div class="fsa-progress fsa-progress--indeterminate" aria-live="polite">
+                <div class="fsa-progress__details fsa-sr-only">
+                  <div class="fsa-progress__label">Page loading</div>
+                </div>
+                <div class="fsa-progress__bar" aria-hidden="true">
+                  <div class="fsa-progress__primary"></div>
+                  <div class="fsa-progress__secondary"></div>
+                </div>
+              </div>
             </div>
             <div class="fsa-grid__1 fsa-grid__1/2@m">
               <h4 class="docs__sub_style">Determinate, with label/value <button type="button" class="fsa-btn fsa-btn--secondary fsa-btn--small fsa-m-l--xs" data-behavior="fakeSystemTrackLoop" data-target="showProgressWithLabel">Start Progress Bar</button></h4>
-              <span class="fsa-progress">
-                <span class="fsa-progress__bar">
-                  <span class="fsa-progress__primary" id="showProgressWithLabel"></span>
-                  <span class="fsa-progress__secondary"></span>
-                </span>
-                <span class="fsa-progress__details" aria-live="polite" aria-label="Progress">
-                  <span class="fsa-progress__label">Soft Red Winter Wheat</span>
-                  <span class="fsa-progress__value">0%</span>
-                </span>
-              </span>
+              <div class="fsa-progress" aria-live="polite" id="showProgressWithLabel">
+                <div class="fsa-progress__details">
+                  <div class="fsa-progress__label">Soft Red Winter Wheat</div>
+                  <div class="fsa-progress__value">0%</div>
+                </div>
+                <div class="fsa-progress__bar" aria-hidden="true">
+                  <div class="fsa-progress__primary"></div>
+                  <div class="fsa-progress__secondary"></div>
+                </div>
+              </div>
+            </div>
+            <div class="fsa-grid__1 fsa-grid__1/2@m">
+              <h4 class="docs__sub_style">Determinate, hidden label <button type="button" class="fsa-btn fsa-btn--secondary fsa-btn--small fsa-m-l--xs" data-behavior="fakeSystemTrackLoop" data-target="showProgress">Start Progress Bar</button></h4>
+              <div class="fsa-progress" aria-live="polite" id="showProgress">
+                <div class="fsa-progress__details fsa-sr-only">
+                  <div class="fsa-progress__label">Downloading Terminal Adjustments</div>
+                  <div class="fsa-progress__value">0%</div>
+                </div>
+                <div class="fsa-progress__bar" aria-hidden="true">
+                  <div class="fsa-progress__primary"></div>
+                  <div class="fsa-progress__secondary"></div>
+                </div>
+              </div>
             </div>
             <div class="fsa-grid__1 fsa-grid__1/2@m">
               <h4 class="docs__sub_style">Determinate, manual demo <button type="button" class="fsa-btn fsa-btn--secondary fsa-btn--small fsa-m-l--xs" data-behavior="fakeSystemTrackAddition" data-target="showProgressAddition">Increase by 10%</button> </h4>
-              <span class="fsa-progress">
-                <span class="fsa-progress__bar">
-                  <span class="fsa-progress__primary" id="showProgressAddition"></span>
-                  <span class="fsa-progress__secondary"></span>
-                </span>
-                <span class="fsa-progress__details" aria-live="polite" aria-label="Progress">
-                  <span class="fsa-progress__label">Uploading <abbr title="Daily Loan Deficiency Payment Rates">LDP</abbr></span>
-                  <span class="fsa-progress__value">0%</span>
-                </span>
-              </span>
+              <div class="fsa-progress" aria-live="polite">
+                <div class="fsa-progress__details">
+                  <div class="fsa-progress__label">Uploading <abbr title="Daily Loan Deficiency Payment Rates">LDP</abbr></div>
+                  <div class="fsa-progress__value">10%</div>
+                </div>
+                <div class="fsa-progress__bar" aria-hidden="true">
+                  <div class="fsa-progress__primary" id="showProgressAddition" style="transform: scaleX(0.1);"></div>
+                  <div class="fsa-progress__secondary"></div>
+                </div>
+              </div>
             </div>
             <div class="fsa-grid__1 fsa-grid__1/2@m">
               <h4 class="docs__sub_style">Determinate, example </h4>
-              <span class="fsa-progress">
-                <span class="fsa-progress__bar">
-                  <span class="fsa-progress__primary" style="transform: scaleX(.4)"></span>
-                  <span class="fsa-progress__secondary"></span>
-                </span>
-                <span class="fsa-progress__details" aria-live="polite" aria-label="Progress">
-                  <span class="fsa-progress__label">Processing Commodities</span>
-                  <span class="fsa-progress__value">4 of 10</span>
-                </span>
-              </span>
+              <div class="fsa-progress" aria-live="polite">
+                <div class="fsa-progress__details">
+                  <div class="fsa-progress__label">Processing Commodities</div>
+                  <div class="fsa-progress__value">4 of 10</div>
+                </div>
+                <div class="fsa-progress__bar" aria-hidden="true">
+                  <div class="fsa-progress__primary" style="transform: scaleX(.4)"></div>
+                  <div class="fsa-progress__secondary"></div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="fsa-grid">
             <div class="fsa-grid__1 fsa-grid__1/2@m">
               <h4 class="docs__sub_style">Paired with Select, inline</h4>
-              <span class="fsa-progress-inline">
-                <span class="fsa-progress fsa-progress--indeterminate">
-                  <span class="fsa-progress__bar">
-                    <span class="fsa-progress__primary" aria-live="polite" aria-label="Progress">Loading tracts</span>
-                    <span class="fsa-progress__secondary"></span>
-                  </span>
-                </span>
+              <div class="fsa-progress-inline">
+                <div class="fsa-progress fsa-progress--indeterminate" aria-live="polite">
+                  <div class="fsa-progress__details fsa-sr-only">
+                    <div class="fsa-progress__label">Loading tracts</div>
+                  </div>
+                  <div class="fsa-progress__bar" aria-hidden="true">
+                    <div class="fsa-progress__primary"></div>
+                    <div class="fsa-progress__secondary"></div>
+                  </div>
+                </div>
                 <select name="UNIQUE-ID-WAGS" id="UNIQUE-ID-WAGS" class="fsa-select">
                   <option>Farm 1234</option>
                   <option>Farm 6789</option>
                 </select>
-              </span>
+              </div>
             </div>
             <div class="fsa-grid__1 fsa-grid__1/2@m">
               <h4 class="docs__sub_style">Paired with Select, block</h4>
-              <span class="fsa-progress fsa-progress--indeterminate">
-                <span class="fsa-progress__bar">
-                  <span class="fsa-progress__primary" aria-live="polite" aria-label="Progress">Loading counties</span>
-                  <span class="fsa-progress__secondary"></span>
-                </span>
-              </span>
+              <div class="fsa-progress fsa-progress--indeterminate" aria-live="polite">
+                <div class="fsa-progress__details fsa-sr-only">
+                  <div class="fsa-progress__label">Loading counties</div>
+                </div>
+                <div class="fsa-progress__bar" aria-hidden="true">
+                  <div class="fsa-progress__primary"></div>
+                  <div class="fsa-progress__secondary"></div>
+                </div>
+              </div>
               <select name="UNIQUE-ID-WAGSYS61" id="UNIQUE-ID-WAGSYS61" class="fsa-select fsa-select--block">
                 <option>California</option>
                 <option>Kansas</option>
@@ -4987,24 +5001,30 @@
             </div>
             <div class="fsa-grid__1 fsa-grid__1/2@m">
               <h4 class="docs__sub_style">Paired with Input, inline</h4>
-              <span class="fsa-progress-inline">
-                <span class="fsa-progress fsa-progress--indeterminate">
-                  <span class="fsa-progress__bar">
-                    <span class="fsa-progress__primary" aria-live="polite" aria-label="Progress">Calculating age</span>
-                    <span class="fsa-progress__secondary"></span>
-                  </span>
-                </span>
+              <div class="fsa-progress-inline">
+                <div class="fsa-progress fsa-progress--indeterminate" aria-live="polite">
+                  <div class="fsa-progress__details fsa-sr-only">
+                    <div class="fsa-progress__label">Calculating age</div>
+                  </div>
+                  <div class="fsa-progress__bar" aria-hidden="true">
+                    <div class="fsa-progress__primary"></div>
+                    <div class="fsa-progress__secondary"></div>
+                  </div>
+                </div>
                 <input type="text" class="fsa-input" value="05/14/1975">
-              </span>
+              </div>
             </div>
             <div class="fsa-grid__1 fsa-grid__1/2@m">
               <h4 class="docs__sub_style">Paired with Input, block</h4>
-              <span class="fsa-progress fsa-progress--indeterminate">
-                <span class="fsa-progress__bar">
-                  <span class="fsa-progress__primary" aria-live="polite" aria-label="Progress">Loading counties</span>
-                  <span class="fsa-progress__secondary"></span>
-                </span>
-              </span>
+              <div class="fsa-progress fsa-progress--indeterminate" aria-live="polite">
+                <div class="fsa-progress__details fsa-sr-only">
+                  <div class="fsa-progress__label">Loading counties</div>
+                </div>
+                <div class="fsa-progress__bar" aria-hidden="true">
+                  <div class="fsa-progress__primary"></div>
+                  <div class="fsa-progress__secondary"></div>
+                </div>
+              </div>
               <input class="fsa-input fsa-input--block" value="California">
             </div>
           </div>
@@ -5019,12 +5039,15 @@
             <button type="button" class="fsa-btn fsa-btn--secondary fsa-btn--small fsa-m-l--xs" data-behavior="fakeTableDone">Finish progress</button>
             <button type="button" class="fsa-btn fsa-btn--secondary fsa-btn--small" data-behavior="fakeTableShow">Show progress</button>
           </h4>
-          <span class="fsa-progress fsa-progress--indeterminate" id="tableProgress">
-            <span class="fsa-progress__bar">
-              <span class="fsa-progress__primary" aria-live="polite" aria-label="Progress">Loading Commodities</span>
-              <span class="fsa-progress__secondary"></span>
-            </span>
-          </span>
+          <div class="fsa-progress fsa-progress--indeterminate" aria-live="polite" id="tableProgress">
+            <div class="fsa-progress__details fsa-sr-only">
+              <div class="fsa-progress__label">Loading Commodities</div>
+            </div>
+            <div class="fsa-progress__bar" aria-hidden="true">
+              <div class="fsa-progress__primary"></div>
+              <div class="fsa-progress__secondary"></div>
+            </div>
+          </div>
           <table class="fsa-table fsa-table--borderless fsa-m-t--none">
             <thead>
               <tr>
@@ -5074,12 +5097,15 @@
             </tbody>
           </table>
           <h4 class="docs__sub_style">Paired with Box</h4>
-          <span class="fsa-progress fsa-progress--indeterminate">
-            <span class="fsa-progress__bar">
-              <span class="fsa-progress__primary" aria-live="polite" aria-label="Progress">Processing claims</span>
-              <span class="fsa-progress__secondary"></span>
-            </span>
-          </span>
+          <div class="fsa-progress fsa-progress--indeterminate" aria-live="polite">
+            <div class="fsa-progress__details fsa-sr-only">
+              <div class="fsa-progress__label">Processing claims</div>
+            </div>
+            <div class="fsa-progress__bar" aria-hidden="true">
+              <div class="fsa-progress__primary"></div>
+              <div class="fsa-progress__secondary"></div>
+            </div>
+          </div>
           <div class="fsa-box">
             Ipsum magni blanditiis inve labore hic atque expedita voluptate fuga!
           </div>
@@ -6805,14 +6831,18 @@
     </div>
   </footer>
 
+
   <div tabindex="0" id="UNIQUE-ID-yshtgj77" class="fsa-modal" role="dialog" aria-hidden="true">
     <div class="fsa-modal__dialog">
-      <span class="fsa-progress fsa-progress--indeterminate">
-        <span class="fsa-progress__bar">
-          <span class="fsa-progress__primary" aria-live="polite" aria-label="Progress">Loading stuff</span>
-          <span class="fsa-progress__secondary"></span>
-        </span>
-      </span>
+      <div class="fsa-progress fsa-progress--indeterminate" aria-live="polite">
+        <div class="fsa-progress__details fsa-sr-only">
+          <div class="fsa-progress__label">Loading stuff</div>
+        </div>
+        <div class="fsa-progress__bar" aria-hidden="true">
+          <div class="fsa-progress__primary"></div>
+          <div class="fsa-progress__secondary"></div>
+        </div>
+      </div>
       <div class="fsa-modal__content">
         <button class="fsa-modal__close" data-behavior="close-modal" title="Close Modal" aria-label="Close Modal" type="button"></button>
         <h1 class="fsa-modal__title">[default title]</h1>

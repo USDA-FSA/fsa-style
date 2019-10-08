@@ -45,12 +45,15 @@
     <div class="fsa-splash__bd">
       <div class="fsa-splash__item">
         <div class="fsa-splash__progress">
-          <span class="fsa-progress fsa-progress--indeterminate">
-            <span class="fsa-progress__bar">
-              <span class="fsa-progress__primary" aria-live="polite" aria-label="Progress">Application is loading</span>
-              <span class="fsa-progress__secondary"></span>
-            </span>
-          </span>
+          <div class="fsa-progress fsa-progress--indeterminate" aria-live="polite">
+            <div class="fsa-progress__details fsa-sr-only">
+              <div class="fsa-progress__label">Application is loading</div>
+            </div>
+            <div class="fsa-progress__bar" aria-hidden="true">
+              <div class="fsa-progress__primary"></div>
+              <div class="fsa-progress__secondary"></div>
+            </div>
+          </div>
         </div>
         <div class="fsa-splash__title">
           <span class="fsa-splash__title-abbr">SPAR</span>
