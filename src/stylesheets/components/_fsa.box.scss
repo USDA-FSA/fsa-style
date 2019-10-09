@@ -1,39 +1,10 @@
+$box-bgcolor-default: $white;
+$box-border-color: transparentize($color-fsa-tertiary,.85);
+$box-padding: $size-medium;
+
 .fsa-box {
 
-  $box-bgcolor-default: $white;
-  $box-border-color: transparentize($color-fsa-tertiary,.85);
-  $box-padding: $size-default;
-
-  & {
-    border: 1px solid $box-border-color;
-    background-color: $box-bgcolor-default;
-    padding: $box-padding;
-    @include breakpoint(L) {
-      padding: ($box-padding * 2);
-    }
-  }
-
-  &--bg-000 { background-color: transparent; }
-
-  &--bg-100 { background-color: $color-fsa-tertiary-100; }
-
-  &--bg-200 { background-color: $color-fsa-tertiary-200; }
-
-  &--br-000 { border-radius: $button-border-radius; }
-
-  &--br-100 { border-radius: ($button-border-radius * 2); }
-
-  &--br-200 { border-radius: ($button-border-radius * 4); }
-
-  &--bw-000 { border-width: 0; }
-  &--bw-100 { border-width: 2px; }
-  &--bw-200 { border-width: 4px; }
-
-  &--clear {
-    background-color: transparent;
-    border: 0;
-    padding: 0;
-  }
+  // cHILDREN -----------------------------------------------------------------
 
   &__hd {
     > :first-child {
@@ -57,6 +28,143 @@
     > :last-child {
       margin-bottom: 0;
     }
+  }
+
+  // VARIATIONS ---------------------------------------------------------------
+
+  // BASE ---------------------------------------------------------------------
+
+  &,
+  &--base {
+    border: 1px solid $box-border-color;
+    background-color: $box-bgcolor-default;
+    padding: $box-padding;
+  }
+
+  @include breakpoint(S) {
+    &--base\@s {
+      border: 1px solid $box-border-color;
+      background-color: $box-bgcolor-default;
+      padding: $box-padding;
+    }
+  }
+
+  @include breakpoint(M) {
+    &--base\@m {
+      border: 1px solid $box-border-color;
+      background-color: $box-bgcolor-default;
+      padding: $box-padding;
+    }
+  }
+
+  @include breakpoint(L) {
+    &--base\@l {
+      border: 1px solid $box-border-color;
+      background-color: $box-bgcolor-default;
+      padding: $box-padding;
+    }
+  }
+
+  @include breakpoint(XL) {
+    &--base\@xl {
+      border: 1px solid $box-border-color;
+      background-color: $box-bgcolor-default;
+      padding: $box-padding;
+    }
+  }
+
+  // Background Color
+  &--bg-000 { background-color: transparent; }
+  &--bg-100 { background-color: $color-fsa-tertiary-100; }
+  &--bg-200 { background-color: $color-fsa-tertiary-200; }
+
+  @include breakpoint(S) {
+    &--bg-000\@s { background-color: transparent; }
+    &--bg-100\@s { background-color: $color-fsa-tertiary-100; }
+    &--bg-200\@s { background-color: $color-fsa-tertiary-200; }
+  }
+
+  @include breakpoint(M) {
+    &--bg-000\@m { background-color: transparent; }
+    &--bg-100\@m { background-color: $color-fsa-tertiary-100; }
+    &--bg-200\@m { background-color: $color-fsa-tertiary-200; }
+  }
+
+  @include breakpoint(L) {
+    &--bg-000\@l { background-color: transparent; }
+    &--bg-100\@l { background-color: $color-fsa-tertiary-100; }
+    &--bg-200\@l { background-color: $color-fsa-tertiary-200; }
+  }
+
+  @include breakpoint(XL) {
+    &--bg-000\@xl { background-color: transparent; }
+    &--bg-100\@xl { background-color: $color-fsa-tertiary-100; }
+    &--bg-200\@xl { background-color: $color-fsa-tertiary-200; }
+  }
+
+  // Background Radius
+  &--br-000 { border-radius: $button-border-radius; }
+  &--br-100 { border-radius: ($button-border-radius * 2); }
+  &--br-200 { border-radius: ($button-border-radius * 4); }
+
+  @include breakpoint(S) {
+    &--br-000\@s { border-radius: $button-border-radius; }
+    &--br-100\@s { border-radius: ($button-border-radius * 2); }
+    &--br-200\@s { border-radius: ($button-border-radius * 4); }
+  }
+
+  @include breakpoint(M) {
+    &--br-000\@m { border-radius: $button-border-radius; }
+    &--br-100\@m { border-radius: ($button-border-radius * 2); }
+    &--br-200\@m { border-radius: ($button-border-radius * 4); }
+  }
+
+  @include breakpoint(L) {
+    &--br-000\@l { border-radius: $button-border-radius; }
+    &--br-100\@l { border-radius: ($button-border-radius * 2); }
+    &--br-200\@l { border-radius: ($button-border-radius * 4); }
+  }
+
+  @include breakpoint(XL) {
+    &--br-000\@xl { border-radius: $button-border-radius; }
+    &--br-100\@xl { border-radius: ($button-border-radius * 2); }
+    &--br-200\@xl { border-radius: ($button-border-radius * 4); }
+  }
+
+  // Border Width
+  &--bw-000 { border-width: 0; }
+  &--bw-100 { border-width: 2px; }
+  &--bw-200 { border-width: 4px; }
+
+  @include breakpoint(S) {
+  }
+
+  @include breakpoint(M) {
+  }
+
+  @include breakpoint(L) {
+  }
+
+  @include breakpoint(XL) {
+  }
+
+  // Unset / Reset / Clear / Flat / non-box
+  &--clear {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+  }
+
+  @include breakpoint(S) {
+  }
+
+  @include breakpoint(M) {
+  }
+
+  @include breakpoint(L) {
+  }
+
+  @include breakpoint(XL) {
   }
 
 }
