@@ -1,170 +1,98 @@
 $box-bgcolor-default: $white;
 $box-border-color: transparentize($color-fsa-tertiary,.85);
 $box-padding: $size-medium;
+$box-radius: $button-border-radius;
 
-.fsa-box {
+@mixin fsa-box($box-breakpoint:'') {
+  .fsa-box {
 
-  // cHILDREN -----------------------------------------------------------------
+    // Background Color
+    &--bg-0#{$box-breakpoint} { background-color: transparent; }
+    &--bg-1#{$box-breakpoint} { background-color: $color-fsa-white; }
+    &--bg-2#{$box-breakpoint} { background-color: $color-fsa-tertiary-100; }
+    &--bg-3#{$box-breakpoint} { background-color: $color-fsa-tertiary-200; }
 
-  &__hd {
-    > :first-child {
-      margin-top: 0;
-    }
+    // Border Width
+    &--bw-0#{$box-breakpoint} { box-shadow: none; }
+    &--bw-1#{$box-breakpoint} { box-shadow: 0 0 0 1px $box-border-color inset; }
+    &--bw-2#{$box-breakpoint} { box-shadow: 0 0 0 2px $box-border-color inset; }
+    &--bw-3#{$box-breakpoint} { box-shadow: 0 0 0 4px $box-border-color inset; }
+
+    // Background Radius
+    &--br-0#{$box-breakpoint} { border-radius: 0; }
+    &--br-1#{$box-breakpoint} { border-radius: $box-radius; }
+    &--br-2#{$box-breakpoint} { border-radius: ($box-radius * 2); }
+    &--br-3#{$box-breakpoint} { border-radius: ($box-radius * 4); }
   }
+}
 
-  &__bd {
-    > :first-child {
-      margin-top: 0;
-    }
-    > :last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  &__ft {
-    > :first-child {
-      margin-top: 0;
-    }
-    > :last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  // VARIATIONS ---------------------------------------------------------------
-
-  // BASE ---------------------------------------------------------------------
-
-  &,
-  &--base {
-    border: 1px solid $box-border-color;
+@mixin fsa-boxBase($boxBase-breakpoint:'') {
+  .fsa-box#{$boxBase-breakpoint} {
+    box-shadow: 0 0 0 1px $box-border-color inset;
     background-color: $box-bgcolor-default;
+    border-radius: 0;
     padding: $box-padding;
-  }
-
-  @include breakpoint(S) {
-    &--base\@s {
-      border: 1px solid $box-border-color;
-      background-color: $box-bgcolor-default;
-      padding: $box-padding;
+    > :first-child {
+      margin-top: 0;
+    }
+    > :last-child {
+      margin-bottom: 0;
     }
   }
+}
+// BASE ---------------------------------------------------------------------
+@include fsa-boxBase;
 
-  @include breakpoint(M) {
-    &--base\@m {
-      border: 1px solid $box-border-color;
-      background-color: $box-bgcolor-default;
-      padding: $box-padding;
-    }
+@include breakpoint(S) {
+  @include fsa-boxBase(\@s);
+}
+@include breakpoint(M) {
+  @include fsa-boxBase(\@m);
+}
+@include breakpoint(L) {
+  @include fsa-boxBase(\@l);
+}
+@include breakpoint(XL) {
+  @include fsa-boxBase(\@xl);
+}
+
+@include fsa-box();
+
+@include breakpoint(S) {
+  @include fsa-box(\@s);
+}
+@include breakpoint(M) {
+  @include fsa-box(\@m);
+}
+@include breakpoint(L) {
+  @include fsa-box(\@l);
+}
+@include breakpoint(XL) {
+  @include fsa-box(\@xl);
+}
+
+// cHILDREN -----------------------------------------------------------------
+
+.fsa-box__hd {
+  > :first-child {
+    margin-top: 0;
   }
+}
 
-  @include breakpoint(L) {
-    &--base\@l {
-      border: 1px solid $box-border-color;
-      background-color: $box-bgcolor-default;
-      padding: $box-padding;
-    }
+.fsa-box__bd {
+  > :first-child {
+    margin-top: 0;
   }
-
-  @include breakpoint(XL) {
-    &--base\@xl {
-      border: 1px solid $box-border-color;
-      background-color: $box-bgcolor-default;
-      padding: $box-padding;
-    }
+  > :last-child {
+    margin-bottom: 0;
   }
+}
 
-  // Background Color
-  &--bg-000 { background-color: transparent; }
-  &--bg-100 { background-color: $color-fsa-tertiary-100; }
-  &--bg-200 { background-color: $color-fsa-tertiary-200; }
-
-  @include breakpoint(S) {
-    &--bg-000\@s { background-color: transparent; }
-    &--bg-100\@s { background-color: $color-fsa-tertiary-100; }
-    &--bg-200\@s { background-color: $color-fsa-tertiary-200; }
+.fsa-box__ft {
+  > :first-child {
+    margin-top: 0;
   }
-
-  @include breakpoint(M) {
-    &--bg-000\@m { background-color: transparent; }
-    &--bg-100\@m { background-color: $color-fsa-tertiary-100; }
-    &--bg-200\@m { background-color: $color-fsa-tertiary-200; }
+  > :last-child {
+    margin-bottom: 0;
   }
-
-  @include breakpoint(L) {
-    &--bg-000\@l { background-color: transparent; }
-    &--bg-100\@l { background-color: $color-fsa-tertiary-100; }
-    &--bg-200\@l { background-color: $color-fsa-tertiary-200; }
-  }
-
-  @include breakpoint(XL) {
-    &--bg-000\@xl { background-color: transparent; }
-    &--bg-100\@xl { background-color: $color-fsa-tertiary-100; }
-    &--bg-200\@xl { background-color: $color-fsa-tertiary-200; }
-  }
-
-  // Background Radius
-  &--br-000 { border-radius: $button-border-radius; }
-  &--br-100 { border-radius: ($button-border-radius * 2); }
-  &--br-200 { border-radius: ($button-border-radius * 4); }
-
-  @include breakpoint(S) {
-    &--br-000\@s { border-radius: $button-border-radius; }
-    &--br-100\@s { border-radius: ($button-border-radius * 2); }
-    &--br-200\@s { border-radius: ($button-border-radius * 4); }
-  }
-
-  @include breakpoint(M) {
-    &--br-000\@m { border-radius: $button-border-radius; }
-    &--br-100\@m { border-radius: ($button-border-radius * 2); }
-    &--br-200\@m { border-radius: ($button-border-radius * 4); }
-  }
-
-  @include breakpoint(L) {
-    &--br-000\@l { border-radius: $button-border-radius; }
-    &--br-100\@l { border-radius: ($button-border-radius * 2); }
-    &--br-200\@l { border-radius: ($button-border-radius * 4); }
-  }
-
-  @include breakpoint(XL) {
-    &--br-000\@xl { border-radius: $button-border-radius; }
-    &--br-100\@xl { border-radius: ($button-border-radius * 2); }
-    &--br-200\@xl { border-radius: ($button-border-radius * 4); }
-  }
-
-  // Border Width
-  &--bw-000 { border-width: 0; }
-  &--bw-100 { border-width: 2px; }
-  &--bw-200 { border-width: 4px; }
-
-  @include breakpoint(S) {
-  }
-
-  @include breakpoint(M) {
-  }
-
-  @include breakpoint(L) {
-  }
-
-  @include breakpoint(XL) {
-  }
-
-  // Unset / Reset / Clear / Flat / non-box
-  &--clear {
-    background-color: transparent;
-    border: 0;
-    padding: 0;
-  }
-
-  @include breakpoint(S) {
-  }
-
-  @include breakpoint(M) {
-  }
-
-  @include breakpoint(L) {
-  }
-
-  @include breakpoint(XL) {
-  }
-
 }
