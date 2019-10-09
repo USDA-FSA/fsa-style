@@ -1,7 +1,7 @@
 .fsa-box {
 
   $box-bgcolor-default: $white;
-  $box-border-color: $color-fsa-tertiary-200;
+  $box-border-color: transparentize($color-fsa-tertiary,.85);
   $box-padding: $size-default;
 
   & {
@@ -13,7 +13,33 @@
     }
   }
 
-  &__hd {}
+  &--bg-000 { background-color: transparent; }
+
+  &--bg-100 { background-color: $color-fsa-tertiary-100; }
+
+  &--bg-200 { background-color: $color-fsa-tertiary-200; }
+
+  &--br-000 { border-radius: $button-border-radius; }
+
+  &--br-100 { border-radius: ($button-border-radius * 2); }
+
+  &--br-200 { border-radius: ($button-border-radius * 4); }
+
+  &--bw-000 { border-width: 0; }
+  &--bw-100 { border-width: 2px; }
+  &--bw-200 { border-width: 4px; }
+
+  &--clear {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+  }
+
+  &__hd {
+    > :first-child {
+      margin-top: 0;
+    }
+  }
 
   &__bd {
     > :first-child {
@@ -24,10 +50,13 @@
     }
   }
 
-  &__ft {}
-
-  &__title {
-    margin-top: 0;
+  &__ft {
+    > :first-child {
+      margin-top: 0;
+    }
+    > :last-child {
+      margin-bottom: 0;
+    }
   }
 
 }
