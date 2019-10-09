@@ -3,6 +3,22 @@ $box-border-color: transparentize($color-fsa-tertiary,.85);
 $box-padding: $size-medium;
 $box-radius: $button-border-radius;
 
+@mixin fsa-boxBase($boxBase-breakpoint:'') {
+  .fsa-box#{$boxBase-breakpoint} {
+    box-shadow: 0 0 0 1px $box-border-color inset;
+    background-color: $box-bgcolor-default;
+    border-radius: 0;
+    padding: $box-padding;
+    transition: all .23s ease-in-out;
+    > :first-child {
+      margin-top: 0;
+    }
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 @mixin fsa-box($box-breakpoint:'') {
   .fsa-box {
 
@@ -26,20 +42,6 @@ $box-radius: $button-border-radius;
   }
 }
 
-@mixin fsa-boxBase($boxBase-breakpoint:'') {
-  .fsa-box#{$boxBase-breakpoint} {
-    box-shadow: 0 0 0 1px $box-border-color inset;
-    background-color: $box-bgcolor-default;
-    border-radius: 0;
-    padding: $box-padding;
-    > :first-child {
-      margin-top: 0;
-    }
-    > :last-child {
-      margin-bottom: 0;
-    }
-  }
-}
 // BASE ---------------------------------------------------------------------
 @include fsa-boxBase;
 
@@ -69,30 +71,4 @@ $box-radius: $button-border-radius;
 }
 @include breakpoint(XL) {
   @include fsa-box(\@xl);
-}
-
-// cHILDREN -----------------------------------------------------------------
-
-.fsa-box__hd {
-  > :first-child {
-    margin-top: 0;
-  }
-}
-
-.fsa-box__bd {
-  > :first-child {
-    margin-top: 0;
-  }
-  > :last-child {
-    margin-bottom: 0;
-  }
-}
-
-.fsa-box__ft {
-  > :first-child {
-    margin-top: 0;
-  }
-  > :last-child {
-    margin-bottom: 0;
-  }
 }

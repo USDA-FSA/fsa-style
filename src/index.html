@@ -200,6 +200,7 @@
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__breadcrumbs">Breadcrumbs</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__labels">Labels</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__badges">Badges</a></li>
+                <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__box">Box</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__progress">Progress</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__splash">Splash</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__tophat">Header: Tophat</a></li>
@@ -220,7 +221,6 @@
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#utilities__text-alignment">Text Alignment</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#utilities__text-headers">Text Headers</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#utilities__visibility">Visibility</a></li>
-                <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__box">Box</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__media-objects">Media Object</a></li>
               </ul>
             </li>
@@ -4877,6 +4877,127 @@
           </p>
         </div>
       </div>
+      <div class="docs__jump-target" id="component__box">
+        <div class="docs__bd docs__section-title">
+          <h3 class="docs__figure"><a class="docs__anchor" aria-hidden="true" href="#component__box">#</a>Box</h3>
+          <a class="fsa-btn fsa-btn--secondary fsa-btn--small docs__section-link" disabled title="Work in Progress">Docs <span class="sr-only">for Box</span></a>
+        </div>
+        <div class="docs__bd">
+          <p class="docs__code-sample"><code>class="fsa-box"</code></p>
+          <div class="fsa-box">
+            <p>Deserunt db excepturi rem asperiores. Sapiente aliquid, hic natus.</p>
+          </div>
+          <h4 class="docs__sub_style">Responsive</h4>
+          <div class="fsa-show@l">
+            <p>Selectively apply to an element at each Media Query breakpoint via <code>class="fsa-box<strong>@[breakpoint]</strong>"</code>, where <code>breakpoint</code> is one of <code title="small">s</code>, <code title="medium">m</code>, <code title="large">l</code>, or <code title="extra large">xl</code></p>
+          </div>
+          <div class="fsa-hide@l">
+            <div class="fsa-alert fsa-alert--info fsa-alert--no-icon" role="alert">
+              <div class="fsa-alert__body">
+                <p class="fsa-alert__text">View this page on a large screen to view complete Responsive Web Design options.</p>
+              </div>
+            </div>
+          </div>
+          <div class="docs__rwd-demo-block">
+            <p>
+              <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_box" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait"><span class="sr-only">Portrait</span> Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_box" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape"><span class="sr-only">Landscape</span> Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_box" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_box" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+              </span>
+              <a class="fsa-m-l--xs fsa-text-size--1" href="demo/rwd__box.html" target="_blank">View in new window</a>
+            </p>
+            <div class="docs__rwd-embed-container">
+              <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_box">
+                <iframe src="demo/rwd__box.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+              </div>
+            </div>
+          </div>
+          <h4 class="docs__sub_style">Modifiers</h4>
+          <div class="fsa-grid">
+            <div class="fsa-grid__1 fsa-grid__1/3@m">
+              <p class="docs__code-sample"><code>class="fsa-box fsa-box--<strong>bg-0</strong>"</code></p>
+              <div class="fsa-box fsa-box--bg-0">
+                <p>Deserunt db excepturi rem asperiores. Sapiente aliquid, hic natus.</p>
+              </div>
+              <p class="docs__code-sample"><code>class="fsa-box fsa-box--<strong>bg-1</strong>"</code></p>
+              <div class="fsa-box fsa-box--bg-1">
+                <p>Deserunt db excepturi rem asperiores. Sapiente aliquid, hic natus.</p>
+              </div>
+              <p class="docs__code-sample"><code>class="fsa-box fsa-box--<strong>bg-2</strong>"</code></p>
+              <div class="fsa-box fsa-box--bg-2">
+                <p>Deserunt db excepturi rem asperiores. Sapiente aliquid, hic natus.</p>
+              </div>
+              <p class="docs__code-sample"><code>class="fsa-box fsa-box--<strong>bg-3</strong>"</code></p>
+              <div class="fsa-box fsa-box--bg-3">
+                <p>Deserunt db excepturi rem asperiores. Sapiente aliquid, hic natus.</p>
+              </div>
+            </div>
+            <div class="fsa-grid__1 fsa-grid__1/3@m">
+              <p class="docs__code-sample"><code>class="fsa-box fsa-box--<strong>bw-0</strong>"</code></p>
+              <div class="fsa-box fsa-box--bw-0">
+                <p>Deserunt db excepturi rem asperiores. Sapiente aliquid, hic natus.</p>
+              </div>
+              <p class="docs__code-sample"><code>class="fsa-box fsa-box--<strong>bw-1</strong>"</code></p>
+              <div class="fsa-box fsa-box--bw-1">
+                <p>Deserunt db excepturi rem asperiores. Sapiente aliquid, hic natus.</p>
+              </div>
+              <p class="docs__code-sample"><code>class="fsa-box fsa-box--<strong>bw-2</strong>"</code></p>
+              <div class="fsa-box fsa-box--bw-2">
+                <p>Deserunt db excepturi rem asperiores. Sapiente aliquid, hic natus.</p>
+              </div>
+              <p class="docs__code-sample"><code>class="fsa-box fsa-box--<strong>bw-3</strong>"</code></p>
+              <div class="fsa-box fsa-box--bw-3">
+                <p>Deserunt db excepturi rem asperiores. Sapiente aliquid, hic natus.</p>
+              </div>
+            </div>
+            <div class="fsa-grid__1 fsa-grid__1/3@m">
+              <p class="docs__code-sample"><code>class="fsa-box fsa-box--<strong>br-0</strong>"</code></p>
+              <div class="fsa-box fsa-box--br-0">
+                <p>Deserunt db excepturi rem asperiores. Sapiente aliquid, hic natus.</p>
+              </div>
+              <p class="docs__code-sample"><code>class="fsa-box fsa-box--<strong>br-1</strong>"</code></p>
+              <div class="fsa-box fsa-box--br-1">
+                <p>Deserunt db excepturi rem asperiores. Sapiente aliquid, hic natus.</p>
+              </div>
+              <p class="docs__code-sample"><code>class="fsa-box fsa-box--<strong>br-2</strong>"</code></p>
+              <div class="fsa-box fsa-box--br-2">
+                <p>Deserunt db excepturi rem asperiores. Sapiente aliquid, hic natus.</p>
+              </div>
+              <p class="docs__code-sample"><code>class="fsa-box fsa-box--<strong>br-3</strong>"</code></p>
+              <div class="fsa-box fsa-box--br-3">
+                <p>Deserunt db excepturi rem asperiores. Sapiente aliquid, hic natus.</p>
+              </div>
+            </div>
+          </div>
+          <h4 class="docs__sub_style">Responsive Modifiers</h4>
+          <div class="fsa-show@l">
+            <p>
+              Selectively override several style properties of <code>.fsa-box</code> at each Media Query breakpoint via
+              <code>class="fsa-box<strong>[property]@[breakpoint]</strong>"</code>, where
+              <code>property</code> is one of <code title="background-color">bg</code>, <code title="border-width">bw</code>, or <code title="border-radius">br</code>, and
+              where <code>breakpoint</code> is one of <code title="small">s</code>, <code title="medium">m</code>, <code title="large">l</code>, or <code title="extra large">xl</code></p>
+            </p>
+          </div>
+          <div class="docs__rwd-demo-block">
+            <p>
+              <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_box-modifiers" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait"><span class="sr-only">Portrait</span> Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_box-modifiers" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape"><span class="sr-only">Landscape</span> Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_box-modifiers" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                <button data-behavior="toggle-rwd-size" data-target="rwd-demo_box-modifiers" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+              </span>
+              <a class="fsa-m-l--xs fsa-text-size--1" href="demo/rwd__box-modifiers.html" target="_blank">View in new window</a>
+            </p>
+            <div class="docs__rwd-embed-container">
+              <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_box-modifiers">
+                <iframe src="demo/rwd__box-modifiers.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="docs__jump-target" id="component__progress">
         <div class="docs__bd docs__section-title">
           <h3 class="docs__figure"><a class="docs__anchor" aria-hidden="true" href="#component__progress">#</a>Progress</h3>
@@ -6715,26 +6836,6 @@
               <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_vis--hide-at-screen-size">
                 <iframe src="demo/rwd__visibility--hide-at-screen-size.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="docs__jump-target" id="component__box">
-          <div class="docs__bd docs__section-title">
-            <h3 class="docs__figure"><a class="docs__anchor" aria-hidden="true" href="#component__box">#</a>Box</h3>
-            <a class="fsa-btn fsa-btn--secondary fsa-btn--small docs__section-link" disabled title="Work in Progress">Docs <span class="sr-only">for Box</span></a>
-          </div>
-          <div class="docs__bd">
-            <h4 class="docs__sub_style">(Work in progress)</h4>
-            <p class="docs__code-sample"><code>class="fsa-box"</code></p>
-            <div class="fsa-box">
-              <div class="fsa-box__hd">
-                <h2 class="fsa-box__title">[Title]</h2>
-              </div>
-              <div class="fsa-box__bd">
-                <p>At vero eaque totam tempore beatae molestiae ad cum, magnam. Eligendi, ipsum, similique. Molestiae consequatur vero adipisci tempore, nesciunt, voluptatum ipsum suscipit.</p>
-                <p>Deserunt distinctio nam odit enim earum est iusto deleniti ipsam, voluptatem soluta quas praesentium, ab excepturi rem asperiores. Sapiente aliquid, hic natus.</p>
-              </div>
-              <div class="fsa-box__ft"></div>
             </div>
           </div>
         </div>
