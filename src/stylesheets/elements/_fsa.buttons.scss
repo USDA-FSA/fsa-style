@@ -67,6 +67,7 @@ $button-flat-border-width: 0;
     line-height: $button-line-height;
     position: relative;
     top: .1rem;
+
     // scss-lint:disable all ImportantRule
     text-decoration: none !important; // yep, intentional
 
@@ -229,6 +230,11 @@ $button-flat-border-width: 0;
     display: block;
   }
 
+  @elseif $variation == 'inline' {
+    display: inline-block;
+    width: auto;
+  }
+
   @elseif $variation == 'small' {
 
     height: $button-height--sm;
@@ -239,6 +245,19 @@ $button-flat-border-width: 0;
       ($size-small)
     ;
     font-size: $font-size-1; // no we're not using mixin cuz we don't want its line-height
+
+  }
+
+  @elseif $variation == 'medium' {
+
+    height: $button-height;
+    // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon Shorthand
+    padding:
+      ($button-padding - .1rem)
+      ($button-padding * 1.5)
+      ($button-padding - .1rem)
+    ;
+    font-size: $button-font-size;
 
   }
 
@@ -313,8 +332,39 @@ $button-flat-border-width: 0;
   &--alt       { @include fsa-button(secondary); }
   &--tertiary  { @include fsa-button(tertiary);  }
   &--block     { @include fsa-button(block);     }
+  &--inline    { @include fsa-button(inline);    }
   &--small     { @include fsa-button(small);     }
+  &--medium    { @include fsa-button(medium);    }
   &--large     { @include fsa-button(large);     }
   &--flat      { @include fsa-button(flat);      }
+
+  @include breakpoint(S) {
+    &--small\@s { @include fsa-button(small); }
+    &--medium\@s { @include fsa-button(medium); }
+    &--large\@s { @include fsa-button(large); }
+    &--block\@s { @include fsa-button(block); }
+    &--inline\@s { @include fsa-button(inline); }
+  }
+  @include breakpoint(M) {
+    &--small\@m { @include fsa-button(small); }
+    &--medium\@m { @include fsa-button(medium); }
+    &--large\@m { @include fsa-button(large); }
+    &--block\@m { @include fsa-button(block); }
+    &--inline\@m { @include fsa-button(inline); }
+  }
+  @include breakpoint(L) {
+    &--small\@l { @include fsa-button(small); }
+    &--medium\@l { @include fsa-button(medium); }
+    &--large\@l { @include fsa-button(large); }
+    &--block\@l { @include fsa-button(block); }
+    &--inline\@l { @include fsa-button(inline); }
+  }
+  @include breakpoint(XL) {
+    &--small\@xl { @include fsa-button(small); }
+    &--medium\@xl { @include fsa-button(medium); }
+    &--large\@xl { @include fsa-button(large); }
+    &--block\@xl { @include fsa-button(block); }
+    &--inline\@xl { @include fsa-button(inline); }
+  }
 
 }
