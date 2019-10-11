@@ -970,42 +970,50 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   height: 100%;
 }
 
+[class*="docs-highlight"] {
+  text-decoration: line-through;
+  text-decoration: line-through;
+  text-decoration-color: black;
+}
+
 .docs-highlight {
 
   $thisBGC: transparentize($color-fsa-yellow, .7);
 
   background-color: $thisBGC;
+  text-decoration: none;
 
   &\@xs {
     &,
     &-only {
-      @include breakpoint(S, down)   { background-color: $thisBGC; }
+      @include breakpoint(S, down)   { background-color: $thisBGC; text-decoration: none; }
     }
   }
   &\@s {
-    @include breakpoint(S)   { background-color: $thisBGC; }
+    @include breakpoint(S)   { background-color: $thisBGC; text-decoration: none; }
     &-only {
-      @media screen and (max-width: $screen-m) and (min-width: $screen-s) { background-color: $thisBGC; }
+      @media screen and (max-width: $screen-m) and (min-width: $screen-s) { background-color: $thisBGC; text-decoration: none; }
     }
   }
   &\@m {
-    @include breakpoint(M)   { background-color: $thisBGC; }
+    @include breakpoint(M)   { background-color: $thisBGC; text-decoration: none; }
     &-only {
-      @media screen and (max-width: $screen-l) and (min-width: $screen-m) { background-color: $thisBGC; }
+      @media screen and (max-width: $screen-l) and (min-width: $screen-m) { background-color: $thisBGC; text-decoration: none; }
     }
   }
   &\@l {
-    @include breakpoint(L)   { background-color: $thisBGC; }
+    @include breakpoint(L)   { background-color: $thisBGC; text-decoration: none; }
     &-only {
-      @media screen and (max-width: $screen-xl) and (min-width: $screen-l) { background-color: $thisBGC; }
+      @media screen and (max-width: $screen-xl) and (min-width: $screen-l) { background-color: $thisBGC; text-decoration: none; }
     }
   }
   &\@xl {
     &,
     &-only {
-      @include breakpoint(XL)   { background-color: $thisBGC; }
+      @include breakpoint(XL)   { background-color: $thisBGC; text-decoration: none; }
     }
   }
+
 }
 
 .docs__rwd-demo-icon {
