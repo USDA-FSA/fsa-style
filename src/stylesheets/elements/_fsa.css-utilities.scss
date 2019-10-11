@@ -804,9 +804,15 @@
   @include fsa-ellipsis();
 }
 
+// Screenreader-only
 .fsa-sr-only,
 .sr-only {
   @include sr-only(); // mixin from USWDS
+  &\@xs-only { @media (max-width: $screen-s)                             { @include sr-only(); } }
+  &\@s-only  { @media (min-width: $screen-s) and (max-width: $screen-m)  { @include sr-only(); } }
+  &\@m-only  { @media (min-width: $screen-m) and (max-width: $screen-l)  { @include sr-only(); } }
+  &\@l-only  { @media (min-width: $screen-l) and (max-width: $screen-xl) { @include sr-only(); } }
+  &\@xl-only { @media (min-width: $screen-xl)                            { @include sr-only(); } }
 }
 
 .fsa-email-string {
