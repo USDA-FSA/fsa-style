@@ -4,7 +4,7 @@
 
   & {
     @include fsa-space-between();
-    display: inline-block;
+    display: inline-flex;
     white-space: nowrap;
   }
 
@@ -12,36 +12,67 @@
     display: flex;
   }
 
-  &--small {}
+  &--inline {
+    display: inline-flex;
+  }
 
-  &--large {}
+  @include breakpoint(S) {
+    &--block\@s  { display: flex; }
+    &--inline\@s { display: inline-flex; }
+  }
+  @include breakpoint(M) {
+    &--block\@m  { display: flex; }
+    &--inline\@m { display: inline-flex; }
+  }
+  @include breakpoint(L) {
+    &--block\@l  { display: flex; }
+    &--inline\@l { display: inline-flex; }
+  }
+  @include breakpoint(XL) {
+    &--block\@xl  { display: flex; }
+    &--inline\@xl { display: inline-flex; }
+  }
 
   &__item {
 
     & {
       @include fsa-button;
       @include fsa-button(secondary);
-    }
-
-    & + & {
-
-      margin-left: -5px;
-
-      // scss-lint:disable SelectorFormat
-      .fsa-btn-group--block & {
-        margin-left: -1px;
-      }
-
-    }
-
-    // scss-lint:disable SelectorFormat
-    .fsa-btn-group--block & {
       flex: auto;
     }
 
+    & + & {
+      margin-left: -1px;
+    }
+
     // scss-lint:disable SelectorFormat
-    .fsa-btn-group--small & { @include fsa-button(small); }
-    .fsa-btn-group--large & { @include fsa-button(large); }
+    .fsa-btn-group--small  & { @include fsa-button(small);  }
+    .fsa-btn-group--medium & { @include fsa-button(medium); }
+    .fsa-btn-group--large  & { @include fsa-button(large);  }
+
+    @include breakpoint(S) {
+      .fsa-btn-group--small\@s  & { @include fsa-button(small);  }
+      .fsa-btn-group--medium\@s & { @include fsa-button(medium); }
+      .fsa-btn-group--large\@s  & { @include fsa-button(large);  }
+    }
+
+    @include breakpoint(M) {
+      .fsa-btn-group--small\@m  & { @include fsa-button(small);  }
+      .fsa-btn-group--medium\@m & { @include fsa-button(medium); }
+      .fsa-btn-group--large\@m  & { @include fsa-button(large);  }
+    }
+
+    @include breakpoint(L) {
+      .fsa-btn-group--small\@l  & { @include fsa-button(small);  }
+      .fsa-btn-group--medium\@l & { @include fsa-button(medium); }
+      .fsa-btn-group--large\@l  & { @include fsa-button(large);  }
+    }
+
+    @include breakpoint(XL) {
+      .fsa-btn-group--small\@xl  & { @include fsa-button(small);  }
+      .fsa-btn-group--medium\@xl & { @include fsa-button(medium); }
+      .fsa-btn-group--large\@xl  & { @include fsa-button(large);  }
+    }
 
     &:focus:not([disabled]) {
       z-index: 1;
@@ -51,9 +82,7 @@
       z-index: 1;
     }
 
-    &:focus:not([disabled]) {
-
-    }
+    &:focus:not([disabled]) {}
 
     &:active:not([disabled]) {
       background-color: $button-primary-hover;
