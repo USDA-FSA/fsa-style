@@ -6,7 +6,7 @@ p {
 
 a {
 
-  &           { color: $color-fsa-link; }
+  &           { color: $color-fsa-link; text-decoration-skip-ink: auto; }
 
   &:visited   { color: $color-fsa-link-visited; }
 
