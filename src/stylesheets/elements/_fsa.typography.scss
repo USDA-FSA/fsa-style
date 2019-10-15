@@ -12,7 +12,7 @@ a {
 
   &:hover     { color: $color-fsa-link-hover; }
 
-  &[disabled] { pointer-events: none; } // hacky, and technically invalid HTML but does the intended job.
+  &[disabled] { pointer-events: none; cursor: not-allowed; } // hacky, and technically invalid HTML but does the intended job.
 
 }
 
