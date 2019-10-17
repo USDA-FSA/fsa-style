@@ -13,7 +13,7 @@ $date-calendar-table-cell-padding: $size-default;
 $date-calendar-bg-color: #fff;
 $date-calendar-bg-color-disabled: tint($color-fsa-tertiary, 96%);
 $date-calendar-bg-color-hover: $color-fsa-aqua-100;
-$date-calendar-bg-color-selected: $color-fsa-secondary-900;
+$date-calendar-bg-color-selected: $color-fsa-selection-bg;
 
 $dateControl: fsa-date-control;
 $dateCalendar: fsa-date-calendar;
@@ -432,7 +432,7 @@ $dateCalendar: fsa-date-calendar;
     &--selected-date {
       $bgc: $date-calendar-bg-color-selected;
       background-color: $bgc;
-      color: #fff;
+      // color: #fff;
       font-weight: $font-bold;
       &.#{$dateCalendar}__day--hover {
         background-color: $bgc;

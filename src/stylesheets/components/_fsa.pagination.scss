@@ -148,10 +148,9 @@
     }
 
     &--current {
-      background-color: $color-fsa-secondary;
-      color: white;
+      background-color: $color-fsa-selection-bg;
+      color: $color-fsa-base;
       margin: 0 $size-small;
-      font-weight: $font-bold;
     }
 
     &--previous:before,

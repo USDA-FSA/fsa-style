@@ -1034,8 +1034,8 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   margin-top: -2px;
 
   // .fsa-btn-group__item:focus &,
-  .fsa-btn-group__item--active &,
-  .fsa-btn-group__item:active & {
+  .fsa-btn-group__item--active:hover &,
+  .fsa-btn-group__item:active:hover & {
     border-color: white;
   }
 

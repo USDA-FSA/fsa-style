@@ -108,13 +108,12 @@
     }
 
     &--active {
-
       @include fsa-button(primary);
-
+      background-color: $color-fsa-selection-bg;
+      color: $button-secondary-text;
       &:hover:not([disabled]) {
         color: $button-primary-text;
       }
-
     }
 
   }

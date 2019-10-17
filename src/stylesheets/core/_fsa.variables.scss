@@ -69,6 +69,8 @@ $color-fsa-link: darken($color-primary, 3%); // 006bb3
 $color-fsa-link-hover: $color-fsa-secondary-900;
 $color-fsa-link-visited: $color-fsa-link;
 
+$color-fsa-selection-bg: $color-fsa-secondary-100;
+
 // Semantic
 $color-title: $color-fsa-tertiary;
 $color-fsa-site-bg: tint($color-fsa-secondary, 97%); // Super light gray bg, but with a slight tint of blue
