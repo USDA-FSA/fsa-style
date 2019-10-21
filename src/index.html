@@ -964,13 +964,18 @@
               <button class="fsa-btn fsa-btn--flat" type="button" disabled>Label</button>
             </p>
             <h4 class="docs__sub_style">HTML Elements</h4>
-            <p><code>&lt;button&gt;</code>: Trigger an action or behavior.<br><code title="anchor">&lt;a&gt;</code>: Navigate between destinations.</p>
-            <p>
-              <button class="fsa-btn fsa-btn--primary">&lt;button&gt;</button>
-              <button class="fsa-btn fsa-btn--primary" disabled="">&lt;button&gt;</button>
-              <a class="fsa-btn fsa-btn--primary" href="//fsa.usda.gov">&lt;a&gt;</a>
-              <a class="fsa-btn fsa-btn--primary" disabled="">&lt;a&gt;</a>
-            </p>
+            <div class="fsa-grid">
+              <div class="fsa-grid__1 fsa-grid__1/4@m">
+                <code>&lt;button&gt;</code><br>Trigger an action or behavior.<br>
+                <button class="fsa-btn fsa-btn--primary" onclick="alert('you triggered something! g\'job')">&lt;button&gt;</button>
+                <button class="fsa-btn fsa-btn--primary" disabled="">&lt;button&gt;</button>
+              </div>
+              <div class="fsa-grid__1 fsa-grid__1/4@m">
+                <code title="anchor">&lt;a&gt;</code><br>Navigate between destinations.<br>
+                <a class="fsa-btn fsa-btn--primary" href="//fsa.usda.gov">&lt;a&gt;</a>
+                <a class="fsa-btn fsa-btn--primary" disabled="">&lt;a&gt;</a>
+              </div>
+            </div>
             <h4 class="docs__sub_style">Responsive</h4>
             <div class="fsa-hide@l">
               <div class="fsa-alert fsa-alert--info fsa-alert--no-icon" role="alert">
@@ -1098,19 +1103,19 @@
             <h4 class="docs__sub_style">HTML Elements</h4>
             <div class="fsa-grid">
               <div class="fsa-grid__1 fsa-grid__1/3@l">
-                <code>&lt;button&gt;</code>: Trigger an action or behavior. <br>
+                <code>&lt;button&gt;</code> Trigger an action or behavior. <br>
                 <span class="fsa-btn-group" role="group" aria-label="Label describing this group">
-                  <button class="fsa-btn-group__item" type="button">&lt;button&gt;</button>
-                  <button class="fsa-btn-group__item" type="button">&lt;button&gt;</button>
-                  <button class="fsa-btn-group__item" type="button">&lt;button&gt;</button>
+                  <button class="fsa-btn-group__item" type="button" onclick="alert('you triggered something! g\'job')">&lt;button&gt;</button>
+                  <button class="fsa-btn-group__item" type="button" onclick="alert('you triggered something! g\'job')">&lt;button&gt;</button>
+                  <button class="fsa-btn-group__item" type="button" onclick="alert('you triggered something! g\'job')">&lt;button&gt;</button>
                 </span>
               </div>
               <div class="fsa-grid__1 fsa-grid__1/3@l">
-                <code title="anchor">&lt;a&gt;</code>: Navigate between destinations. <br>
+                <code title="anchor">&lt;a&gt;</code> Navigate between destinations. <br>
                 <span class="fsa-btn-group" role="group" aria-label="Label describing this group">
-                  <a class="fsa-btn-group__item" href="link.html">&lt;a&gt;</a>
-                  <a class="fsa-btn-group__item" href="link.html">&lt;a&gt;</a>
-                  <a class="fsa-btn-group__item" href="link.html">&lt;a&gt;</a>
+                  <a class="fsa-btn-group__item" href="//fsa.usda.gov">&lt;a&gt;</a>
+                  <a class="fsa-btn-group__item" href="//rma.usda.gov">&lt;a&gt;</a>
+                  <a class="fsa-btn-group__item" href="//nrcs.usda.gov">&lt;a&gt;</a>
                 </span>
               </div>
             </div>
