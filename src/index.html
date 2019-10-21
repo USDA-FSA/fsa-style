@@ -633,7 +633,7 @@
       <div class="docs__bd">
         <p>A 12-column, responsive grid provides structure for website content.</p>
         <h3 class="docs__bd docs__figure">Grid Column Sizes</h3>
-        <p>Available columns that can be appended to the <code>fsa-grid<strong>__[size]</strong></code> selector, where <code>size</code> is one of the unit fractions listed below. For example, the selector for 50% width can be <code>fsa-grid__1/2</code> or even <code>fsa-grid__6/12</code>.</p>
+        <p>Available columns that can be appended to the <code>fsa-grid<strong>__[size]</strong></code> selector, where <code>size</code> is one of the unit fractions listed below. For example, the selector for 50% width can be <code>fsa-grid__<strong>1/2</strong></code> or <code>fsa-grid__<strong>6/12</strong></code>.</p>
         <div class="docs__grid-inventory">
           <div class="fsa-grid">
             <div class="fsa-grid__1/12">
@@ -671,6 +671,16 @@
             </div>
             <div class="fsa-grid__1/12">
               <div class="fsa-grid__demo"><code>1/12</code></div>
+            </div>
+          </div>
+          <div class="fsa-grid">
+            <div class="fsa-grid__shrink">
+              <div class="fsa-grid__demo"><code>shrink</code></div>
+            </div>
+          </div>
+          <div class="fsa-grid">
+            <div class="fsa-grid__grow">
+              <div class="fsa-grid__demo"><code>grow</code></div>
             </div>
           </div>
           <div class="fsa-grid">
@@ -804,20 +814,6 @@
             </div>
           </div>
         </div>
-        <h4 class="docs__sub_style">Auto-width</h4>
-        <div class="docs__grid-inventory">
-          <div class="fsa-grid">
-            <div class="fsa-grid__auto">
-              <div class="fsa-grid__demo"><code>fsa-grid__<strong>auto</strong></code></div>
-            </div>
-            <div class="fsa-grid__1/2">
-              <div class="fsa-grid__demo"><code>fsa-grid__<strong>1/2</strong></code></div>
-            </div>
-            <div class="fsa-grid__auto">
-              <div class="fsa-grid__demo"><code>fsa-grid__<strong>auto</strong></code></div>
-            </div>
-          </div>
-        </div>
         <h4 class="docs__sub_style">Nested: 3/4 (1/2, 1/2; 1/3, 1/3, 1/3), 1/4</h4>
         <div class="docs__grid-inventory">
           <div class="fsa-grid">
@@ -847,6 +843,34 @@
             </div>
             <div class="fsa-grid__1/4">
               <div class="fsa-grid__demo"><code>fsa-grid__<strong>1/4</strong></code></div>
+            </div>
+          </div>
+        </div>
+        <h4 class="docs__sub_style">Grow <span style="font-weight: normal;">(auto-width to remainder of container)</span></h4>
+        <div class="docs__grid-inventory">
+          <div class="fsa-grid">
+            <div class="fsa-grid__grow">
+              <div class="fsa-grid__demo"><code>fsa-grid__<strong>grow</strong></code></div>
+            </div>
+            <div class="fsa-grid__1/2">
+              <div class="fsa-grid__demo"><code>fsa-grid__<strong>1/2</strong></code></div>
+            </div>
+            <div class="fsa-grid__grow">
+              <div class="fsa-grid__demo"><code>fsa-grid__<strong>grow</strong></code></div>
+            </div>
+          </div>
+        </div>
+        <h4 class="docs__sub_style">Shrink <span style="font-weight: normal;">(auto-width to column's content)</span></h4>
+        <div class="docs__grid-inventory">
+          <div class="fsa-grid">
+            <div class="fsa-grid__shrink">
+              <div class="fsa-grid__demo"><code>fsa-grid__<strong>shrink</strong></code></div>
+            </div>
+            <div class="fsa-grid__1/2">
+              <div class="fsa-grid__demo"><code>fsa-grid__<strong>1/2</strong></code></div>
+            </div>
+            <div class="fsa-grid__shrink">
+              <div class="fsa-grid__demo"><code>fsa-grid__<strong>shrink</strong></code> with a reallyreallyreallyreallyreallylongword</div>
             </div>
           </div>
         </div>
@@ -3107,23 +3131,23 @@
             <h4 class="docs__sub_style">Custom Width</h4>
             <p>Though rarely necessary, the width of <code>.fsa-input</code> can be overridden by using the <code>size</code> attribute, whici specifies the width of the input in characters. From a display perspective, one character is equivalent to <code>1em</code> (approximately <code>17px</code> in with <code>fsa-style</code>'s typography system).</p>
             <div class="fsa-grid">
-              <div class="fsa-grid__1 fsa-grid__auto@l">
+              <div class="fsa-grid__1 fsa-grid__grow@l">
                 <p class="docs__code-sample"><code>size="<strong>2</strong>"</code></p>
                 <p><input class="fsa-input" size="2" type="text" name="some_name" value=""></p>
               </div>
-              <div class="fsa-grid__1 fsa-grid__auto@l">
+              <div class="fsa-grid__1 fsa-grid__grow@l">
                 <p class="docs__code-sample"><code>size="<strong>5</strong>"</code></p>
                 <p><input class="fsa-input" size="5" type="text" name="some_name" value=""></p>
               </div>
-              <div class="fsa-grid__1 fsa-grid__auto@l">
+              <div class="fsa-grid__1 fsa-grid__grow@l">
                 <p class="docs__code-sample"><code>size="<strong>7</strong>"</code></p>
                 <p><input class="fsa-input" size="7" type="text" name="some_name" value=""></p>
               </div>
-              <div class="fsa-grid__1 fsa-grid__auto@l">
+              <div class="fsa-grid__1 fsa-grid__grow@l">
                 <p class="docs__code-sample"><code>size="<strong>14</strong>"</code></p>
                 <p><input class="fsa-input" size="14" type="text" name="some_name" value=""></p>
               </div>
-              <div class="fsa-grid__1 fsa-grid__auto@l">
+              <div class="fsa-grid__1 fsa-grid__grow@l">
                 <p class="docs__code-sample"><code>size="<strong>28</strong>"</code></p>
                 <p><input class="fsa-input" size="29" type="text" name="some_name" value=""></p>
               </div>
@@ -5252,7 +5276,7 @@
           </div>
         </div>
         <div class="docs__jump-target" id="component__timeline">
-          <p class="fsa-box fsa-p--xl fsa-text-size--6 fsa-text-align--center outline">In Progress</p>
+          <p class="docs__bd fsa-box fsa-p--xl fsa-text-size--6 fsa-text-align--center outline">In Progress</p>
         </div>
       </div>
       <div id="component-group__header">
