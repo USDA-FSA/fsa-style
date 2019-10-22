@@ -1,0 +1,69 @@
+////////////////////////////////////////////////////////////////////////
+// Switch
+
+$switch: fsa-switch;
+$switch-height: 22px;
+$switch-width: ($switch-height * 2);
+$switch-bg-color-off: $color-fsa-tertiary-200;
+$switch-bg-color-on: $form-checkbox-radio-fill;
+$switch-border-color: $form-checkbox-radio-outline-color;
+
+.fsa-switch {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.fsa-switch__checkbox {
+	position: absolute;
+	opacity: 0;
+}
+
+/* Normal Track */
+.fsa-switch__checkbox + .fsa-switch__track {
+  cursor: pointer;
+	vertical-align: middle;
+  width: $switch-width;
+  height: $switch-height;
+	border: 1px solid $form-checkbox-radio-outline-color;
+	border-radius: 999px;
+	background-color: $switch-bg-color-off;
+	transition-duration: .4s;
+	transition-property: background-color, box-shadow;
+	// box-shadow: inset 0 0 0 0px $form-checkbox-radio-outline-color;
+}
+
+/* Checked Track */
+.fsa-switch__checkbox:checked + .fsa-switch__track {
+	background-position: 0 0;
+	background-color: $switch-bg-color-on;
+	border-color: $form-checkbox-radio-fill;
+	// box-shadow: inset 0 0 0 10px rgba(59,137,259,1);
+}
+
+.fsa-switch__checkbox:focus + .fsa-switch__track {
+  @include fsa-focus;
+  outline-offset: 4px;
+}
+
+/* Normal Knob */
+.fsa-switch__checkbox + .fsa-switch__track > .fsa-switch__thumb {
+	float: left;
+  width: 18px;
+  height: 18px;
+	border-radius: inherit;
+	background: #ffffff;
+	transition-timing-function: cubic-bezier(.54,1.85,.5,1);
+	transition-duration: 0.4s;
+	transition-property: transform, background-color, box-shadow;
+  box-shadow: 0 0 0 1px tint($switch-border-color, 25%) inset;
+	pointer-events: none;
+	margin-top: 1px;
+	margin-left: 1px;
+}
+
+/* Checked Knob */
+.fsa-switch__checkbox:checked + .fsa-switch__track > .fsa-switch__thumb {
+	transform: translate3d($switch-height, 0, 0);
+	background-color: #ffffff;
+  box-shadow: 0 0 0 1px $switch-bg-color-on inset;
+}
