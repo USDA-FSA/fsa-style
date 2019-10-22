@@ -435,6 +435,14 @@ $breakpoints: (
   word-wrap: normal;
 }
 
+@mixin fsa-ellipsis-unset {
+  max-width: initial;
+  overflow: initial;
+  text-overflow: unset;
+  text-overflow: initial;
+  white-space: normal;
+}
+
 // -----------------------------------------------------------------------------
 // :focus'ing
 @mixin fsa-focus {

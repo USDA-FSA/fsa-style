@@ -800,8 +800,32 @@
 }
 
 // ETC ------------------------------------------------------------------------
+.fsa-text-overflow,
 .fsa-ellipsis {
-  @include fsa-ellipsis();
+
+  &        { @include fsa-ellipsis(); }
+  &--none  { @include fsa-ellipsis-unset(); }
+
+  @include breakpoint(S)  {
+          &\@s  { @include fsa-ellipsis(); }
+    &--none\@s  { @include fsa-ellipsis-unset(); }
+  }
+
+  @include breakpoint(M)  {
+          &\@m  { @include fsa-ellipsis(); }
+    &--none\@m  { @include fsa-ellipsis-unset(); }
+  }
+
+  @include breakpoint(L)  {
+          &\@l  { @include fsa-ellipsis(); }
+    &--none\@l  { @include fsa-ellipsis-unset(); }
+  }
+
+  @include breakpoint(XL) {
+    &\@xl { @include fsa-ellipsis(); }
+    &--none\@xl { @include fsa-ellipsis-unset(); }
+  }
+
 }
 
 // Screenreader-only
