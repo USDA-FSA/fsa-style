@@ -51,7 +51,7 @@ $switch-border-color: transparent;
     }
 
     .#{$switch}__checkbox:disabled + & {
-      opacity: .5;
+      opacity: .45;
       cursor: not-allowed;
     }
 
