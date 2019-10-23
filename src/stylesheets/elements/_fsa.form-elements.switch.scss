@@ -21,22 +21,20 @@ $switch-border-color: $form-checkbox-radio-outline-color;
   &__checkbox {
     position: absolute;
     opacity: 0;
+    cursor: pointer;
   }
-
-  &__label {}
 
   &__track {
 
     & {
       display: block;
       cursor: pointer;
-      vertical-align: middle;
       width: $switch-width;
       height: $switch-height;
       border: 1px solid $form-checkbox-radio-outline-color;
       border-radius: 999px;
       background-color: $switch-bg-color-off;
-      transition-duration: .23s;
+      transition-duration: .4s;
       transition-property: background-color, box-shadow;
     }
 
@@ -57,11 +55,14 @@ $switch-border-color: $form-checkbox-radio-outline-color;
       cursor: not-allowed;
     }
 
+    .#{$switch}__checkbox:indeterminate + & {}
+
   }
 
-  &__thumb {
+  &__track:after {
 
     & {
+      content: '';
       display: block;
       float: left;
       width: $switch-thumb-size;
@@ -69,7 +70,7 @@ $switch-border-color: $form-checkbox-radio-outline-color;
       border-radius: inherit;
       background: #ffffff;
       transition-timing-function: cubic-bezier(.54,1.85,.5,1);
-      transition-duration: 0.4s;
+      transition-duration: .23s;
       transition-property: transform, background-color, box-shadow;
       box-shadow: 0 0 0 1px tint($switch-border-color, 25%) inset;
       pointer-events: none;
@@ -77,13 +78,17 @@ $switch-border-color: $form-checkbox-radio-outline-color;
       margin-left: .1rem;
     }
 
-    .#{$switch}__checkbox:checked + .#{$switch}__track > & {
+    .#{$switch}__checkbox:checked + & {
       transform: translate3d($switch-height, 0, 0);
       background-color: #ffffff;
       box-shadow: 0 0 0 1px $switch-bg-color-on inset;
     }
 
-    .#{$switch}__checkbox:indeterminate + .#{$switch}__track > & {
+    .#{$switch}__checkbox:focus + & {}
+
+    .#{$switch}__checkbox:disabled + & {}
+
+    .#{$switch}__checkbox:indeterminate + & {
       transform: translate3d(($switch-height / 2), 0, 0);
     }
 
