@@ -5,9 +5,9 @@ $switch: fsa-switch;
 $switch-height: 2rem;
 $switch-width: ($switch-height * 2);
 $switch-thumb-size: $switch-height - .4rem;
-$switch-bg-color-off: $color-fsa-tertiary-200;
+$switch-bg-color-off: tint($color-fsa-tertiary, 60%);
 $switch-bg-color-on: $form-checkbox-radio-fill;
-$switch-border-color: $form-checkbox-radio-outline-color;
+$switch-border-color: transparent;
 
 .#{$switch} {
 
@@ -31,7 +31,7 @@ $switch-border-color: $form-checkbox-radio-outline-color;
       cursor: pointer;
       width: $switch-width;
       height: $switch-height;
-      border: 1px solid $form-checkbox-radio-outline-color;
+      border: 1px solid $switch-border-color;
       border-radius: 999px;
       background-color: $switch-bg-color-off;
       transition-duration: .4s;
