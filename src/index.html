@@ -1200,8 +1200,14 @@
                   <label for="moms-apple-pie">Checkbox</label>
                 </span>
               </li>
+              <li>
+                <span>
+                  <input class="fsa-checkbox" id="sponge-pie----that-isnt-really-a-thing-is-it" type="checkbox" name="pies" value="sponge-pie----that-isnt-really-a-thing-is-it">
+                  <label for="sponge-pie----that-isnt-really-a-thing-is-it">Checkbox</label>
+                </span>
+              </li>
             </ul>
-            <h4 class="docs__sub_style">Solo (label hidden or elsewhere)</h4>
+            <h4 class="docs__sub_style">Solo <span style="font-weight: normal;">(label hidden or elsewhere)</span></h4>
             <p class="docs__code-sample"><code>&lt;input class="fsa-checkbox <strong>fsa-checkbox--solo</strong>" ... &gt;</code></p>
             <p>
               <span>
@@ -1221,6 +1227,10 @@
                 <label for="solo-example__04"><span class="fsa-sr-only">Label</span></label>
               </span>
             </p>
+            <script>
+              var checkboxIndeterminateExample01 = document.getElementById("sponge-pie----that-isnt-really-a-thing-is-it");
+              checkboxIndeterminateExample01.indeterminate = true;
+            </script>
           </div>
         </div>
         <div class="docs__jump-target" id="component__form-fields">
@@ -1544,7 +1554,7 @@
                 </span>
               </li>
             </ul>
-            <h4 class="docs__sub_style">Solo (label hidden or elsewhere)</h4>
+            <h4 class="docs__sub_style">Solo <span style="font-weight: normal;">(label hidden or elsewhere)</span></h4>
             <p class="docs__code-sample"><code>&lt;input class="fsa-radio <strong>fsa-radio--solo</strong>" ... &gt;</code></p>
             <p>
               <span>
@@ -1564,7 +1574,6 @@
                 <label for="solo-radio-example__04"><span class="fsa-sr-only">Label</span></label>
               </span>
             </p>
-
           </div>
         </div>
         <div class="docs__jump-target" id="component__search">
@@ -2817,50 +2826,60 @@
           </div>
           <div class="docs__bd">
             <p class="docs__code-sample"><code>class="fsa-switch"</code></p>
-            <p>
-              <label class="fsa-switch">
-                <input type="checkbox" class="fsa-switch__checkbox" id="switch-example__123" name="switch-example__123">
-                <span class="fsa-switch__track"></span>
-              </label>
-              <label class="fsa-switch">
-                <input checked type="checkbox" class="fsa-switch__checkbox" id="switch-example__456" name="switch-example__456">
-                <span class="fsa-switch__track"></span>
-              </label>
-              <label class="fsa-switch">
-                <input type="checkbox" class="fsa-switch__checkbox" id="checkbox-indeterminate-example__01" name="checkbox-indeterminate-example__01">
-                <span class="fsa-switch__track"></span>
-              </label>
-            </p>
-            <h4 class="docs__sub_style">Disabled</h4>
-            <p>
-              <label class="fsa-switch">
-                <input disabled type="checkbox" class="fsa-switch__checkbox">
-                <span class="fsa-switch__track"></span>
-              </label>
-              <label class="fsa-switch">
-                <input checked disabled type="checkbox" class="fsa-switch__checkbox">
-                <span class="fsa-switch__track"></span>
-              </label>
-              <label class="fsa-switch">
-                <input type="checkbox" class="fsa-switch__checkbox" id="checkbox-indeterminate-example__02" disabled>
-                <span class="fsa-switch__track"></span>
-              </label>
-            </p>
-            <h4 class="docs__sub_style">With Label</h4>
-            <p>
-              <label class="fsa-switch">
-                <input type="checkbox" class="fsa-switch__checkbox" id="switch-example__wy7" name="switch-example__wy7" checked>
-                <span class="fsa-switch__track"></span>
-              </label>
-              <label class="fsa-m-l--xs" for="switch-example__wy7">Label on the right</label>
-            </p>
-            <p>
-              <label class="fsa-m-r--xs" for="switch-example__hghg7s_1">Label on the left</label>
-              <label class="fsa-switch">
-                <input type="checkbox" class="fsa-switch__checkbox" id="switch-example__hghg7s_1" name="switch-example__hghg7s_1">
-                <span class="fsa-switch__track"></span>
-              </label>
-            </p>
+            <div class="fsa-grid">
+              <div class="fsa-grid__1 fsa-grid__1/4@m">
+                <h4 class="docs__sub_style">Default</h4>
+                <p>
+                  <label class="fsa-switch">
+                    <input type="checkbox" class="fsa-switch__checkbox" id="switch-example__123" name="switch-example__123">
+                    <span class="fsa-switch__track"></span>
+                  </label>
+                </p>
+                <p>
+                  <label class="fsa-switch">
+                    <input type="checkbox" class="fsa-switch__checkbox" id="switch-example__wy7" name="switch-example__wy7">
+                    <span class="fsa-switch__track"></span>
+                  </label>
+                  <label class="fsa-m-l--xs" for="switch-example__wy7">Label on the right</label>
+                </p>
+                <p>
+                  <label class="fsa-m-r--xs" for="switch-example__hghg7s_1">Label on the left</label>
+                  <label class="fsa-switch">
+                    <input type="checkbox" class="fsa-switch__checkbox" id="switch-example__hghg7s_1" name="switch-example__hghg7s_1">
+                    <span class="fsa-switch__track"></span>
+                  </label>
+                </p>
+              </div>
+              <div class="fsa-grid__1 fsa-grid__1/4@m">
+                <h4 class="docs__sub_style">Checked</h4>
+                <label class="fsa-switch">
+                  <input checked type="checkbox" class="fsa-switch__checkbox" id="switch-example__456" name="switch-example__456">
+                  <span class="fsa-switch__track"></span>
+                </label>
+              </div>
+              <div class="fsa-grid__1 fsa-grid__1/4@m">
+                <h4 class="docs__sub_style">Indeterminate</h4>
+                <label class="fsa-switch">
+                  <input type="checkbox" class="fsa-switch__checkbox" id="checkbox-indeterminate-example__01" name="checkbox-indeterminate-example__01">
+                  <span class="fsa-switch__track"></span>
+                </label>
+              </div>
+              <div class="fsa-grid__1 fsa-grid__1/4@m">
+                <h4 class="docs__sub_style">Disabled</h4>
+                <label class="fsa-switch">
+                  <input disabled type="checkbox" class="fsa-switch__checkbox">
+                  <span class="fsa-switch__track"></span>
+                </label>
+                <label class="fsa-switch">
+                  <input checked disabled type="checkbox" class="fsa-switch__checkbox">
+                  <span class="fsa-switch__track"></span>
+                </label>
+                <label class="fsa-switch">
+                  <input type="checkbox" class="fsa-switch__checkbox" id="checkbox-indeterminate-example__02" disabled>
+                  <span class="fsa-switch__track"></span>
+                </label>
+              </div>
+            </div>
             <h4 class="docs__sub_style">Example <span style="font-weight: normal;">(e.g. label elsewhere in DOM)</span></h4>
             <div class="fsa-grid">
               <div class="fsa-grid__1 fsa-grid__1/2@m fsa-grid__1/4@l">
@@ -2871,7 +2890,7 @@
                     </div>
                     <div class="fsa-float--right">
                       <label class="fsa-switch">
-                        <input type="checkbox" class="fsa-switch__checkbox" id="switch-thing__01" name="switch-thing__01">
+                        <input type="checkbox" class="fsa-switch__checkbox" id="switch-thing__01" name="switch-thing__01" checked>
                         <span class="fsa-switch__track"></span>
                       </label>
                     </div>
@@ -2903,6 +2922,14 @@
                 </div>
               </div>
             </div>
+            <script>
+
+              var switchIndeterminateExample01 = document.getElementById("checkbox-indeterminate-example__01");
+              switchIndeterminateExample01.indeterminate = true;
+
+              var switchIndeterminateExample02 = document.getElementById("checkbox-indeterminate-example__02");
+              switchIndeterminateExample02.indeterminate = true;
+            </script>
           </div>
         </div>
         <div class="docs__jump-target" id="component__stepped-control">
