@@ -73,6 +73,24 @@
 
 }
 
+.fsa-checkbox--solo +  label,
+.fsa-radio--solo + label,
+.fsa-checkbox--solo + [type="hidden"] + label,
+.fsa-radio--solo + [type="hidden"] + label {
+  $indent-amount: 1em;
+  text-indent: -$indent-amount;
+  margin-left: $indent-amount;
+  margin-right: 0;
+}
+
+.fsa-radio--solo + label,
+.fsa-radio--solo + [type="hidden"] + label {
+  $indent-amount: 1.3em;
+  text-indent: -$indent-amount;
+  margin-left: $indent-amount + .05em;
+}
+
+
 .fsa-checkbox + :not(label),
 .fsa-radio + :not(label) {
   &:before {
@@ -86,13 +104,6 @@
     font-size: 2rem;
     font-weight: bold;
   }
-}
-
-.fsa-radio + label,
-.fsa-radio + [type="hidden"] + label {
-  $indent-amount: 1.6em;
-  text-indent: -$indent-amount;
-  margin-left: $indent-amount + .1em;
 }
 
 .fsa-checkbox + label::before,
@@ -119,6 +130,13 @@
 
 }
 
+.fsa-checkbox--solo + label::before,
+.fsa-radio--solo + label::before,
+.fsa-checkbox--solo + [type="hidden"] + label::before,
+.fsa-radio--solo + [type="hidden"] + label::before {
+  margin-right: 0;
+}
+
 .fsa-checkbox + label::after,
 .fsa-radio + label::after,
 .fsa-checkbox + [type="hidden"] + label::after,
@@ -129,6 +147,24 @@
   top: -5px;
   bottom: -2px;
   width: 36px;
+}
+
+.fsa-checkbox--solo + label::after,
+.fsa-checkbox--solo + [type="hidden"] + label::after{
+  left: -18px;
+  top: 0;
+  bottom: 3px;
+  width: auto;
+  right: 0;
+}
+
+.fsa-radio--solo + label::after,
+.fsa-radio--solo + [type="hidden"] + label::after {
+  left: -25px;
+  top: 0;
+  bottom: 3px;
+  width: auto;
+  right: 2px;
 }
 
 .fsa-radio + label::before,
