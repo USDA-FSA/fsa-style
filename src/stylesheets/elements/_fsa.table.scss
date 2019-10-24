@@ -103,6 +103,14 @@ th {
 
   }
 
+  &__th--select {
+    width: $size-medium;
+  }
+
+  &__row--selected {
+    background-color: $color-fsa-selection-bg;
+  }
+
   thead {
 
     tr {
@@ -124,10 +132,16 @@ th {
 
       &:first-child {
         padding-left: 0;
+        @include breakpoint(M) {
+          padding-left: $size-small;
+        }
       }
 
       &:last-child {
         padding-right: 0;
+        @include breakpoint(M) {
+          padding-right: $size-small;
+        }
       }
 
     }
