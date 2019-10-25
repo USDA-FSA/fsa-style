@@ -10493,6 +10493,36 @@ console.log('DocsRWD loaded, its JS is NOT to be used for Production, demo purpo
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 
+const $ = window.jQuery = require('jquery');
+
+$('body').on('click', '[data-behavior~="alert-dismiss"]', function(event) {
+
+  const $self = $(this);
+  const $alert = $self.closest('.fsa-alert');
+
+  // 1. Hide it visually via opacity.
+  // 2. Animate the component's height.
+  // 3. When animation is complete, remove it from the DOM.
+
+  $alert.css('opacity', 0); // 1.
+
+  $alert.slideUp('slow', function(){ // 2.
+    this.remove(); // 3.
+  });
+
+})
+},{"jquery":1}],6:[function(require,module,exports){
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+
 var Helper = require('../utilities/helper');
 var WhiteoutComponent = require('./fsa-whiteout');
 
@@ -10611,7 +10641,7 @@ function growl__trapTab(e){
 
 console.log('GrowlComponent loaded, its JS is NOT to be used for Production, demo purposes only');
 
-},{"../utilities/helper":13,"./fsa-whiteout":11}],6:[function(require,module,exports){
+},{"../utilities/helper":16,"./fsa-whiteout":14}],7:[function(require,module,exports){
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
@@ -10734,7 +10764,7 @@ function modal__trapTab(e){
 
 console.log('ModalComponent loaded, its JS is NOT to be used for Production, demo purposes only');
 
-},{"../utilities/helper":13,"./fsa-whiteout":11}],7:[function(require,module,exports){
+},{"../utilities/helper":16,"./fsa-whiteout":14}],8:[function(require,module,exports){
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
@@ -10833,7 +10863,100 @@ if (document.querySelectorAll('.docs__page').length == 0) {
 
 }
 
-},{"../utilities/helper":13}],8:[function(require,module,exports){
+},{"../utilities/helper":16}],9:[function(require,module,exports){
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+
+const $ = window.jQuery = require('jquery');
+
+$('body').on('click', '[data-behavior~="fakeSystemTrackAddition"]', function(event) {
+
+  const $self = $(this);
+  const $target = $('#' + $self.attr('data-target'));
+  const updateValueBy = 10;
+  const $targetValue = $target.closest('.fsa-progress').find('.fsa-progress__value');
+  const currentValue = $targetValue.html().slice(0, -1);
+  const newValue = Number(updateValueBy) + Number(currentValue);
+
+  if (newValue >= 100) {
+    $target.css('transform','scaleX(1)');
+    $targetValue.html('100%');
+    $self.attr('disabled', true);
+  } else {
+    $target.css('transform','scaleX(.' + newValue + ')');
+    $targetValue.html(newValue + '%');
+  }
+
+})
+
+
+$('body').on('click', '[data-behavior~="toggleProgressBars"]', function(event) {
+
+  const $bars = $('.fsa-progress');
+
+  if ($bars.is('[style]')) {
+    $bars.removeAttr('style');
+  } else {
+    $bars.css('visibility', 'hidden');
+  }
+
+})
+
+$('body').on('click', '[data-behavior~="fakeSystemTrackLoop"]', function(event) {
+
+  const $self = $(this);
+  const $target = $('#' + $self.attr('data-target'));
+  const $targetBar = $target.find('.fsa-progress__primary');
+  const $targetValue = $target.find('.fsa-progress__value');
+
+  $self.css('visibility','hidden');
+  $targetBar.css('transform','scaleX(.03)');
+  $targetValue.html('3%');
+
+  for (percentageComplete = 10; percentageComplete <= 97; ++percentageComplete) {
+    fakeProgressUpdate(percentageComplete);
+  }
+
+  function fakeProgressUpdate(percentageComplete) {
+
+    setTimeout(function(){
+      // console.log("'percentageComplete' is " + percentageComplete + ", and 'delay' is " + (66 * percentageComplete));
+      $targetBar.css('transform','scaleX(.' + percentageComplete +')');
+      $targetValue.html(percentageComplete + '%');
+    }, 66 * percentageComplete);
+
+  }
+
+  setTimeout(function(){
+    $targetValue.html('100%');
+    $targetBar.css('transform','scaleX(1)');
+    $self.removeAttr('style');
+
+    $('#UNIQUE-ID-ttfrancbra').attr('aria-hidden', 'false');
+
+  }, 7000);
+
+})
+
+$('body').on('click', '[data-behavior~="fakeTableDone"]', function(event) {
+  $('#tableProgress').attr('hidden', true);
+})
+
+$('body').on('click', '[data-behavior~="fakeTableShow"]', function(event) {
+  $('#tableProgress').removeAttr('hidden');
+})
+
+console.log('ProgressComponent loaded, its JS is NOT to be used for Production, demo purposes only');1
+
+},{"jquery":1}],10:[function(require,module,exports){
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
@@ -10925,7 +11048,7 @@ selectMulti__setState();
 
 console.log('SelectMultipleComponent loaded, its JS is NOT to be used for Production, demo purposes only');
 
-},{"../utilities/helper":13}],9:[function(require,module,exports){
+},{"../utilities/helper":16}],11:[function(require,module,exports){
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
@@ -10983,7 +11106,7 @@ Helper.forEach(spinbox__triggers, function (index, value) {
 
 console.log('Spinbox loaded, its JS is NOT to be used for Production, demo purposes only');
 
-},{"../utilities/helper":13}],10:[function(require,module,exports){
+},{"../utilities/helper":16}],12:[function(require,module,exports){
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
@@ -11044,7 +11167,28 @@ if(steppedControl__elements.length){
 
 console.log('SteppedControl loaded, its JS is NOT to be used for Production, demo purposes only');
 
-},{"../utilities/helper":13}],11:[function(require,module,exports){
+},{"../utilities/helper":16}],13:[function(require,module,exports){
+const $ = window.jQuery = require('jquery');
+
+$('body').on('change', '[data-behavior~="select-table-row"]', function(event) {
+  const $self = $(this);
+  const $row = $self.closest('tr');
+  $row.toggleClass('fsa-table__row--selected');
+  console.log('row toggled');
+})
+
+$('body').on('change', '[data-behavior~="select-one-table-row"]', function(event) {
+  const $self = $(this);
+  const $row = $self.closest('tr');
+  $row
+    .addClass('fsa-table__row--selected')
+    .siblings('tr')
+      .removeClass('fsa-table__row--selected')
+    ;
+  ;
+})
+
+},{"jquery":1}],14:[function(require,module,exports){
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
@@ -11079,7 +11223,7 @@ Helper.forEach(whiteout__dismiss, function (index, value) {
 
 console.log('WhiteoutComponent loaded, its JS is NOT to be used for Production, demo purposes only');
 
-},{"../utilities/helper":13}],12:[function(require,module,exports){
+},{"../utilities/helper":16}],15:[function(require,module,exports){
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 // None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
@@ -11102,8 +11246,11 @@ var GrowlComponent = require('./components/fsa-growl');
 var SelectMultipleComponent = require('./components/fsa-select-multi');
 var SteppedControlComponent = require('./components/fsa-stepped-control');
 var SpinboxComponent = require('./components/fsa-spinbox');
+var ProgressComponent = require('./components/fsa-progress');
+var AlertComponent = require('./components/fsa-alert');
+var TableComponent = require('./components/fsa-table');
 
-},{"./components/docs-color":2,"./components/docs-nav":3,"./components/docs-rwd":4,"./components/fsa-growl":5,"./components/fsa-modal":6,"./components/fsa-nav-global":7,"./components/fsa-select-multi":8,"./components/fsa-spinbox":9,"./components/fsa-stepped-control":10}],13:[function(require,module,exports){
+},{"./components/docs-color":2,"./components/docs-nav":3,"./components/docs-rwd":4,"./components/fsa-alert":5,"./components/fsa-growl":6,"./components/fsa-modal":7,"./components/fsa-nav-global":8,"./components/fsa-progress":9,"./components/fsa-select-multi":10,"./components/fsa-spinbox":11,"./components/fsa-stepped-control":12,"./components/fsa-table":13}],16:[function(require,module,exports){
 
 var Helper = (function () {
 
@@ -11207,4 +11354,4 @@ var Helper = (function () {
 
 module.exports = Helper;
 
-},{}]},{},[12]);
+},{}]},{},[15]);

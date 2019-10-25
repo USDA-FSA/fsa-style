@@ -1,4 +1,4 @@
-/*! FSA Style v2.3.3 | http://usda-fsa.github.io/fsa-design-system/ */
+/*! FSA Style v2.4.0 | http://usda-fsa.github.io/fsa-design-system/ */
 
 
 @charset "UTF-8";
@@ -368,6 +368,7 @@ html:hover body::before {
     display: none;
     margin: 0;
     position: absolute;
+    z-index: 2;
     left: -1.2rem;
     top: 100%;
     background-color: #1a4b24;
@@ -414,6 +415,24 @@ html:hover body::before {
 
 .docs__primary-nav-sub-link:focus {
   outline-offset: -3px;
+}
+
+.docs__primary-nav-sub-link--category {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-top: 6.4px;
+  margin-top: 0.4rem;
+  margin-bottom: 6.4px;
+  margin-bottom: 0.4rem;
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 700;
+  font-size: 24px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.docs__primary-nav-sub-link--category:hover {
+  text-decoration: none;
 }
 
 .docs__primary-nav__icon {
@@ -871,7 +890,7 @@ html:hover body::before {
 }
 
 .color-fsa-secondary-lighter {
-  background-color: #a6bbd4;
+  background-color: #bcccdf;
 }
 
 .color-fsa-secondary-lightest {
@@ -936,6 +955,50 @@ html:hover body::before {
 
 .color-fsa-red-lightest {
   background-color: #f9e4e5;
+}
+
+.color-fsa-blank {
+  background-color: white;
+  color: #dbdad9;
+  outline: 2px dashed #f0f0f0;
+  outline-offset: -2px;
+}
+
+.color-fsa-yellow {
+  background-color: #fdb81e;
+}
+
+.color-fsa-yellow code {
+  color: #2f2c2a;
+}
+
+.color-fsa-yellow-light {
+  background-color: #f9c642;
+}
+
+.color-fsa-yellow-light code {
+  color: #2f2c2a;
+}
+
+.color-fsa-yellow-lighter {
+  background-color: #fad980;
+}
+
+.color-fsa-yellow-lighter code {
+  color: #2f2c2a;
+}
+
+.color-fsa-yellow-lightest {
+  background-color: #fff1d2;
+}
+
+.color-fsa-yellow-lightest code {
+  color: #2f2c2a;
+}
+
+.color-fsa-site-bg {
+  background-color: #f8fafc;
+  border: 1px dashed #dbdad9;
 }
 
 .color-fsa-link {
@@ -1049,55 +1112,71 @@ html:hover body::before {
   height: 100%;
 }
 
+[class*="docs-highlight"] {
+  text-decoration: line-through;
+  text-decoration: line-through;
+  -webkit-text-decoration-color: black;
+          text-decoration-color: black;
+}
+
 .docs-highlight {
   background-color: rgba(253, 184, 30, 0.3);
+  text-decoration: none;
 }
 
 @media (max-width: 30.0625em) {
   .docs-highlight\@xs, .docs-highlight\@xs-only {
     background-color: rgba(253, 184, 30, 0.3);
+    text-decoration: none;
   }
 }
 
 @media (min-width: 30.0625em) {
   .docs-highlight\@s {
     background-color: rgba(253, 184, 30, 0.3);
+    text-decoration: none;
   }
 }
 
 @media screen and (max-width: 37.5em) and (min-width: 30.0625em) {
   .docs-highlight\@s-only {
     background-color: rgba(253, 184, 30, 0.3);
+    text-decoration: none;
   }
 }
 
 @media (min-width: 37.5em) {
   .docs-highlight\@m {
     background-color: rgba(253, 184, 30, 0.3);
+    text-decoration: none;
   }
 }
 
 @media screen and (max-width: 54em) and (min-width: 37.5em) {
   .docs-highlight\@m-only {
     background-color: rgba(253, 184, 30, 0.3);
+    text-decoration: none;
   }
 }
 
 @media (min-width: 54em) {
   .docs-highlight\@l {
     background-color: rgba(253, 184, 30, 0.3);
+    text-decoration: none;
   }
 }
 
 @media screen and (max-width: 78.75em) and (min-width: 54em) {
   .docs-highlight\@l-only {
     background-color: rgba(253, 184, 30, 0.3);
+    text-decoration: none;
   }
 }
 
 @media (min-width: 78.75em) {
   .docs-highlight\@xl, .docs-highlight\@xl-only {
     background-color: rgba(253, 184, 30, 0.3);
+    text-decoration: none;
   }
 }
 
@@ -1115,8 +1194,8 @@ html:hover body::before {
   margin-top: -2px;
 }
 
-.fsa-btn-group__item--active .docs__rwd-demo-icon,
-.fsa-btn-group__item:active .docs__rwd-demo-icon {
+.fsa-btn-group__item--active:hover .docs__rwd-demo-icon,
+.fsa-btn-group__item:active:hover .docs__rwd-demo-icon {
   border-color: white;
 }
 
