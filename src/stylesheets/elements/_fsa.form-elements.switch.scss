@@ -1,0 +1,99 @@
+////////////////////////////////////////////////////////////////////////
+// Switch
+
+$switch: fsa-switch;
+$switch-height: 2rem;
+$switch-width: ($switch-height * 2);
+$switch-thumb-size: $switch-height - .4rem;
+$switch-bg-color-off: tint($color-fsa-tertiary, 60%);
+$switch-bg-color-on: $form-checkbox-radio-fill;
+$switch-border-color: transparent;
+
+.#{$switch} {
+
+  & {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -.2rem;
+  }
+
+  &__checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__track {
+
+    & {
+      display: block;
+      cursor: pointer;
+      width: $switch-width;
+      height: $switch-height;
+      border: 1px solid $switch-border-color;
+      border-radius: 999px;
+      background-color: $switch-bg-color-off;
+      transition-duration: .4s;
+      transition-property: background-color, box-shadow;
+    }
+
+    .#{$switch}__checkbox:checked + & {
+      background-position: 0 0;
+      background-color: $switch-bg-color-on;
+      border-color: $form-checkbox-radio-fill;
+    }
+
+    .#{$switch}__checkbox:focus + & {
+      @include fsa-focus;
+      outline-offset: 4px;
+      display: block;
+    }
+
+    .#{$switch}__checkbox:disabled + & {
+      opacity: .45;
+      cursor: not-allowed;
+    }
+
+    .#{$switch}__checkbox:indeterminate + & {}
+
+  }
+
+  &__track:after {
+
+    & {
+      content: '';
+      display: block;
+      float: left;
+      width: $switch-thumb-size;
+      height: $switch-thumb-size;
+      border-radius: inherit;
+      background: #ffffff;
+      transition-timing-function: cubic-bezier(.54,1.85,.5,1);
+      transition-duration: .23s;
+      transition-property: transform, background-color, box-shadow;
+      box-shadow: 0 0 0 1px tint($switch-border-color, 25%) inset;
+      pointer-events: none;
+      margin-top: .1rem;
+      margin-left: .1rem;
+    }
+
+    .#{$switch}__checkbox:checked + & {
+      transform: translate3d($switch-height, 0, 0);
+      background-color: #ffffff;
+      box-shadow: 0 0 0 1px $switch-bg-color-on inset;
+    }
+
+    .#{$switch}__checkbox:focus + & {}
+
+    .#{$switch}__checkbox:disabled + & {}
+
+    .#{$switch}__checkbox:indeterminate + & {
+      transform: translate3d(($switch-height / 2), 0, 0);
+    }
+
+  }
+
+}
+
+

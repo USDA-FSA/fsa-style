@@ -1,0 +1,68 @@
+$splash: fsa-splash;
+
+.#{$splash} {
+
+  & {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__hd {}
+
+  &__tophat {
+    background-color: white;
+    color: $color-fsa-tertiary-300;
+    box-shadow: 0 -1px 0 0 $color-fsa-tertiary-200 inset;
+  }
+
+  &__tophat__bd {
+    max-width: initial;
+    color: $color-fsa-tertiary-300;
+  }
+
+  &__tophat__link,
+  &__tophat__link:link,
+  &__tophat__link:visited,
+  &__tophat__link:active,
+  &__tophat__link:hover {
+      color: $color-fsa-tertiary-300;
+  }
+
+  &__bd {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 1vh;
+  }
+
+  &__item {}
+
+  &__progress {}
+
+  &__title {
+    padding-top: $size-default;
+    font-size: $font-size-4;
+    font-weight: $font-light;
+    text-align: center;
+    margin-bottom: 1em;
+    @include breakpoint(S) {
+      font-size: $font-size-5;
+    }
+  }
+
+  &__title-abbr {
+    font-weight: bolder;
+  }
+
+  &__title-name {
+    .#{$splash}__title-abbr + &:before {
+      content: ' | ';
+      position: relative;
+      top: -2px;
+    }
+  }
+
+}

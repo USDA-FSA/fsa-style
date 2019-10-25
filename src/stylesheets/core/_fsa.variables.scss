@@ -20,36 +20,41 @@ $site-max-width: 1200px;
 // Colors
 
 // Core Colors
-$color-fsa-primary: shade($color-green, 25%);
+$color-fsa-primary: shade($color-green, 25%); // from USWDS
 $color-fsa-primary-300: tint($color-fsa-primary, 19%);
 $color-fsa-primary-200: tint($color-fsa-primary, 65%);
 $color-fsa-primary-100: tint($color-fsa-primary, 85%);
 $color-fsa-primary-900: shade($color-fsa-primary, 25%);
 
-$color-fsa-secondary: $color-primary-darker;
+$color-fsa-secondary: $color-primary-darker; // from USWDS
 $color-fsa-secondary-300: tint($color-fsa-secondary, 21%);
-$color-fsa-secondary-200: tint($color-fsa-secondary, 60%);
+$color-fsa-secondary-200: tint($color-fsa-secondary, 70%);
 $color-fsa-secondary-100: tint($color-fsa-secondary, 85%);
 $color-fsa-secondary-900: shade($color-fsa-secondary, 25%);
 
-$color-fsa-tertiary: $color-gray-warm-dark;
+$color-fsa-tertiary: $color-gray-warm-dark; // from USWDS
 $color-fsa-tertiary-300: tint($color-fsa-tertiary, 24%);
 $color-fsa-tertiary-200: tint($color-fsa-tertiary, 80%);
 $color-fsa-tertiary-100: tint($color-fsa-tertiary, 92%);
 $color-fsa-tertiary-900: shade($color-fsa-tertiary, 35%);
 
 // Accent Colors
-$color-fsa-aqua: $color-primary-alt-dark;
+$color-fsa-aqua: $color-primary-alt-dark; // from USWDS
 $color-fsa-aqua-300: $color-primary-alt;
 $color-fsa-aqua-200: $color-primary-alt-light;
 $color-fsa-aqua-100: $color-primary-alt-lightest;
 $color-fsa-aqua-900: $color-primary-alt-darkest;
 
-$color-fsa-red: $color-secondary-dark;
+$color-fsa-red: $color-secondary-dark; // from USWDS
 $color-fsa-red-300: tint($color-secondary-dark, 40%);
 $color-fsa-red-200: tint($color-secondary-dark, 70%);
 $color-fsa-red-100: tint($color-secondary-dark, 88%);
 $color-fsa-red-900: $color-secondary-darkest;
+
+$color-fsa-yellow: $color-gold; // from USWDS
+$color-fsa-yellow-300: $color-gold-light;
+$color-fsa-yellow-200: $color-gold-lighter;
+$color-fsa-yellow-100: $color-gold-lightest;
 
 // Base
 $color-base:  $color-fsa-tertiary-900;
@@ -64,9 +69,20 @@ $color-fsa-link: darken($color-primary, 3%); // 006bb3
 $color-fsa-link-hover: $color-fsa-secondary-900;
 $color-fsa-link-visited: $color-fsa-link;
 
+$color-fsa-selection-bg: $color-fsa-secondary-100;
+
 // Semantic
 $color-title: $color-fsa-tertiary;
 $color-fsa-site-bg: tint($color-fsa-secondary, 97%); // Super light gray bg, but with a slight tint of blue
+
+$marker-text-color: $color-base;
+
+$marker-bgc: $color-fsa-tertiary-200;
+$marker-bgc-neutral: $color-fsa-white;
+$marker-bgc-general: $color-fsa-secondary-200;
+$marker-bgc-alert: $color-fsa-red-200;
+$marker-bgc-warning: $color-fsa-yellow-200;
+$marker-bgc-success: $color-fsa-primary-200;
 
 // ---------------------------------------------------------------------------
 // Typography

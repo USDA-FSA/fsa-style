@@ -1,14 +1,5 @@
 $label-spacing: ($size-base - .1rem);
 
-$label-text-color: $color-fsa-white;
-$label-text-color-warning: $color-black;
-
-$label-bgc: $color-fsa-tertiary-300;
-$label-bgc-general: $color-fsa-secondary-900;
-$label-bgc-alert: $color-fsa-red;
-$label-bgc-warning: $color-gold-light;
-$label-bgc-success: $color-fsa-primary;
-
 .fsa-label {
 
   & {
@@ -18,80 +9,72 @@ $label-bgc-success: $color-fsa-primary;
     font-weight: $font-normal; // brute-force to override any inheritance (e.g. within an <h1>)
     line-height: 1;
     display: inline-block;
-    background-color: $label-bgc;
-    color: $label-text-color;
+    background-color: $marker-bgc;
+    color: $marker-text-color;
     text-transform: uppercase;
     text-decoration: none;
     line-height: 1;
+    cursor: initial;
     padding: $label-spacing ($label-spacing + .1rem);
-    cursor: default;
+    letter-spacing: .5px;
+    border-radius: 2px;
+    box-shadow: 0 -1px 0 adjust-color($color-fsa-tertiary, $alpha: -0.85) inset;
+    a &,
+    button & {
+      cursor: pointer;
+    }
   }
 
   &:visited {
-    color: $label-text-color;
+    color: $marker-text-color;
   }
 
-  &[href]:hover {
-    color: $label-text-color;
-  }
-
-  &[disabled] {
-    opacity: .65;
-    filter: saturate(70%);
-    cursor: not-allowed;
-  }
-
-  & + & {
-    margin-left: $label-spacing;
+  &--neutral {
+    background-color: $marker-bgc-neutral;
+    box-shadow:
+      0 -1px 0   adjust-color($color-fsa-tertiary, $alpha: -0.70) inset,
+      0 0 0 1px  adjust-color($color-fsa-tertiary, $alpha: -0.80) inset
+    ;
   }
 
   &--general {
-    background-color: $label-bgc-general;
-    &[href]:hover {
-      color: $label-text-color;
-    }
+    background-color: $marker-bgc-general;
   }
 
   &--alert {
 
-    background-color: $label-bgc-alert;
+    background-color: $marker-bgc-alert;
 
     @media print {
-      background-color: shade($label-bgc-alert, 60%);
-    }
-
-    &[href]:hover {
-      color: $label-text-color;
+      background-color: shade($marker-bgc-alert, 60%);
     }
 
   }
 
   &--warning {
-
-    background-color: $label-bgc-warning;
-    color: $label-text-color-warning;
-
-    &[href]:hover {
-      color: $label-text-color-warning;
-    }
-
-    &:visited {
-      color: $label-text-color-warning;
-    }
-
+    background-color: $marker-bgc-warning;
   }
 
   &--success {
-    background-color: $label-bgc-success;
+    background-color: $marker-bgc-success;
   }
 
   &--large {
     @include font-size(3);
     padding-left: ($label-spacing * 1.5);
     padding-right: ($label-spacing * 1.5);
+    letter-spacing: initial;
   }
 
-  h1 & {
+  &[disabled] {
+    opacity: .75;
+    filter: grayscale(55%);
+    color: transparentize($marker-text-color, .1);
+    cursor: not-allowed;
+  }
+
+  h1 &,
+  h2 & {
     position: relative;
     top: -$size-base;
     margin-left: $size-base;
@@ -103,14 +86,14 @@ $label-bgc-success: $color-fsa-primary;
 button.fsa-label,
 a.fsa-label {
 
-  cursor: pointer;
-
-  &:hover,
+  &:hover:not([disabled]),
   &:focus,
   &:active {
-    color: $label-text-color !important;
-    background-color: $color-fsa-aqua-900;
-    outline-offset: 3px;
+    cursor: pointer;
+    box-shadow:
+      0 -1px 0   adjust-color($color-fsa-tertiary, $alpha: -0.20) inset,
+      0 0 0 1px  adjust-color($color-fsa-tertiary, $alpha: -0.60) inset
+    ;
   }
 
 }
