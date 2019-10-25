@@ -86,6 +86,10 @@
       }
     }
 
+    @include breakpoint(L, down) {
+      margin-right: $size-default;
+    }
+
   }
 
   &__item {
@@ -98,7 +102,7 @@
 
   &__label {
 
-    @include font-size(3);
+    @include font-size(2);
     @include reset-button();
     display: block;
     width: 100%;
@@ -117,13 +121,13 @@
     }
 
     @include breakpoint(L) {
-      @include font-size(4);
+      @include font-size(3);
     }
 
     @include breakpoint(XL) {
       white-space: normal;
-      padding-right: ($tab-padding * 2);
-      padding-left: ($tab-padding * 2);
+      // padding-right: ($tab-padding * 2);
+      // padding-left: ($tab-padding * 2);
     }
 
     .fsa-content-tabs__item:first-child & {
@@ -150,12 +154,12 @@
     }
 
     &--small {
-      @include font-size(3);
+      @include font-size(2);
     }
 
     &--large {
       @include breakpoint(L) {
-        font-size: ($font-size-4 + ($font-size-4 / 4));
+        @include font-size(4);
       }
     }
 

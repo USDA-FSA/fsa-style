@@ -68,6 +68,9 @@ linters:
   EmptyRule:
     enabled: false
 
+  EmptyRules:
+    enabled: false
+
   ExtendDirective:
     enabled: false
 

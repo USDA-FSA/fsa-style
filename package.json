@@ -1,7 +1,7 @@
 {
   "name": "fsa-style",
   "description": "Open Source CSS Framework for USDA Farm Production and Conservation",
-  "version": "2.3.3",
+  "version": "2.4.0",
   "license": "SEE LICENSE in LICENSE.md",
   "repository": {
     "type": "git",

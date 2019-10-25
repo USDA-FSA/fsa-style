@@ -1,21 +1,15 @@
-.fsa-box {
+$box-bgcolor-default: $white;
+$box-border-color: transparentize($color-fsa-tertiary,.85);
+$box-padding: $size-medium;
+$box-radius: $button-border-radius;
 
-  $box-bgcolor-default: $white;
-  $box-border-color: $color-fsa-tertiary-200;
-  $box-padding: $size-default;
-
-  & {
-    border: 1px solid $box-border-color;
+@mixin fsa-boxBase($boxBase-breakpoint:'') {
+  .fsa-box#{$boxBase-breakpoint} {
+    box-shadow: 0 0 0 1px $box-border-color inset;
     background-color: $box-bgcolor-default;
+    border-radius: 0;
     padding: $box-padding;
-    @include breakpoint(L) {
-      padding: ($box-padding * 2);
-    }
-  }
-
-  &__hd {}
-
-  &__bd {
+    transition: all .23s ease-in-out;
     > :first-child {
       margin-top: 0;
     }
@@ -23,11 +17,58 @@
       margin-bottom: 0;
     }
   }
+}
 
-  &__ft {}
+@mixin fsa-box($box-breakpoint:'') {
+  .fsa-box {
 
-  &__title {
-    margin-top: 0;
+    // Background Color
+    &--bg-0#{$box-breakpoint} { background-color: transparent; }
+    &--bg-1#{$box-breakpoint} { background-color: $color-fsa-white; }
+    &--bg-2#{$box-breakpoint} { background-color: $color-fsa-tertiary-100; }
+    &--bg-3#{$box-breakpoint} { background-color: $color-fsa-tertiary-200; }
+
+    // Border Width
+    &--bw-0#{$box-breakpoint} { box-shadow: none; }
+    &--bw-1#{$box-breakpoint} { box-shadow: 0 0 0 1px $box-border-color inset; }
+    &--bw-2#{$box-breakpoint} { box-shadow: 0 0 0 2px $box-border-color inset; }
+    &--bw-3#{$box-breakpoint} { box-shadow: 0 0 0 4px $box-border-color inset; }
+
+    // Background Radius
+    &--br-0#{$box-breakpoint} { border-radius: 0; }
+    &--br-1#{$box-breakpoint} { border-radius: $box-radius; }
+    &--br-2#{$box-breakpoint} { border-radius: ($box-radius * 2); }
+    &--br-3#{$box-breakpoint} { border-radius: ($box-radius * 4); }
   }
+}
 
+// BASE ---------------------------------------------------------------------
+@include fsa-boxBase;
+
+@include breakpoint(S) {
+  @include fsa-boxBase(\@s);
+}
+@include breakpoint(M) {
+  @include fsa-boxBase(\@m);
+}
+@include breakpoint(L) {
+  @include fsa-boxBase(\@l);
+}
+@include breakpoint(XL) {
+  @include fsa-boxBase(\@xl);
+}
+
+@include fsa-box();
+
+@include breakpoint(S) {
+  @include fsa-box(\@s);
+}
+@include breakpoint(M) {
+  @include fsa-box(\@m);
+}
+@include breakpoint(L) {
+  @include fsa-box(\@l);
+}
+@include breakpoint(XL) {
+  @include fsa-box(\@xl);
 }

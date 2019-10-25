@@ -1,10 +1,10 @@
 /* FSA-specific overrides/additions */
 
 .fsa-browser-upgrade {
-  background-color: $color-gold-lighter;
+  background-color: $color-fsa-yellow;
   margin: 0;
   padding: $size-small $size-default;
-  border-bottom: 2px solid $color-gold;
+  border-bottom: 2px solid $color-fsa-yellow;
   text-align: center;
 }
 
@@ -35,6 +35,10 @@ body {
     background-color: transparent;
   }
 
+}
+
+#main-content {
+  min-height: 25vh;
 }
 
 @media print {
@@ -103,6 +107,7 @@ pre {
 abbr[title] {
   cursor: default;
   text-decoration: none;
+  border-bottom-color: tint($color-fsa-tertiary, 60%);
   a & {
     cursor: pointer;
   }
@@ -125,7 +130,7 @@ u {
 }
 
 mark {
-  background-color: $color-gold-lightest;
+  background-color: $color-fsa-yellow-100;
 }
 
 blockquote {
@@ -150,6 +155,7 @@ hr {
   border: 0;
   height: 1px;
   background: $color-fsa-tertiary-200;
+  clear: both;
 }
 
 form,
@@ -172,4 +178,13 @@ input:not([disabled]):focus,
 select:not([disabled]):focus,
 textarea:not([disabled]):focus {
   @include fsa-focus;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

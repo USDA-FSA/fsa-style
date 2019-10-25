@@ -6,13 +6,13 @@ p {
 
 a {
 
-  &           { color: $color-fsa-link; }
+  &           { color: $color-fsa-link; text-decoration-skip-ink: auto; }
 
   &:visited   { color: $color-fsa-link-visited; }
 
   &:hover     { color: $color-fsa-link-hover; }
 
-  &[disabled] { pointer-events: none; } // hacky, and technically invalid HTML but does the intended job.
+  &[disabled] { pointer-events: none; cursor: not-allowed; } // hacky, and technically invalid HTML but does the intended job.
 
 }
 

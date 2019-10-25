@@ -1,9 +1,9 @@
 ////////////////////////////////////////////////////////////////////////
 // Date Picker
 
-$date-control-btn-width: $button-height; // from fsa-btn
+$date-control-btn-width: 3.9rem; // from fsa-btn
 $date-control-btn-height: $date-control-btn-width;
-$date-control-btn-small-width: $button-height--sm; // from fsa-btn
+$date-control-btn-small-width: 3rem; // from fsa-btn
 $date-control-btn-small-height: $date-control-btn-small-width;
 $date-calendar-text-color-default: $color-fsa-base;
 $date-calendar-text-color-disabled: tint($date-calendar-text-color-default, 60%);
@@ -13,7 +13,7 @@ $date-calendar-table-cell-padding: $size-default;
 $date-calendar-bg-color: #fff;
 $date-calendar-bg-color-disabled: tint($color-fsa-tertiary, 96%);
 $date-calendar-bg-color-hover: $color-fsa-aqua-100;
-$date-calendar-bg-color-selected: $color-fsa-secondary-900;
+$date-calendar-bg-color-selected: $color-fsa-selection-bg;
 
 $dateControl: fsa-date-control;
 $dateCalendar: fsa-date-calendar;
@@ -432,7 +432,7 @@ $dateCalendar: fsa-date-calendar;
     &--selected-date {
       $bgc: $date-calendar-bg-color-selected;
       background-color: $bgc;
-      color: #fff;
+      // color: #fff;
       font-weight: $font-bold;
       &.#{$dateCalendar}__day--hover {
         background-color: $bgc;

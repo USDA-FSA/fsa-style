@@ -21,6 +21,10 @@
   flex-flow: row wrap;
   align-content: flex-start;
   margin-left: -$fsa-grid-gutter;
+  @supports (display:flex) {
+    letter-spacing: normal;
+    word-spacing: normal;
+  }
 }
 
 @mixin fsa-grid-column() {
@@ -47,9 +51,15 @@
 
 @mixin fsa-grid($namespace: '') {
 
+  .fsa-grid__grow#{$namespace},
   .fsa-grid__auto#{$namespace} {
     @include fsa-grid-column();
     flex: 1;
+  }
+
+  .fsa-grid__shrink#{$namespace} {
+    @include fsa-grid-column();
+    flex: 0;
   }
 
   .fsa-grid__1#{$namespace},
@@ -423,6 +433,14 @@ $breakpoints: (
   text-overflow: ellipsis;
   white-space: nowrap;
   word-wrap: normal;
+}
+
+@mixin fsa-ellipsis-unset {
+  max-width: initial;
+  overflow: initial;
+  text-overflow: unset;
+  text-overflow: initial;
+  white-space: normal;
 }
 
 // -----------------------------------------------------------------------------

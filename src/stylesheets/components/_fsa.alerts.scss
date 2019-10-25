@@ -24,7 +24,7 @@
 
   &--warning {
     @extend .usa-alert-warning;
-    border-left-color: $color-gold;
+    border-left-color: $color-fsa-yellow;
   }
 
   &--error {
@@ -45,6 +45,26 @@
   }
 
   // Elements
+
+  &__close {
+
+    @include fsa-button-reset;
+    width: $size-extra-large;
+    height: $size-extra-large;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: ($size-default * 1.5);
+
+    background-image: url('#{$image-path}/close.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &:active {
+      opacity: .6;
+    }
+
+  }
 
   &__icon {
     @extend .usa-alert-icon;
@@ -80,6 +100,9 @@
   &__text {
     @extend .usa-alert-text;
     &:only-child {
+      margin-top: .5em;
+    }
+    & + & {
       margin-top: .5em;
     }
     .fsa-alert--no-icon & {

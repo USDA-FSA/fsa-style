@@ -1,0 +1,89 @@
+$timeline: fsa-timeline;
+
+.#{$timeline} {
+
+  & {
+    margin: $size-medium 0;
+    position: relative;
+  }
+
+  &:before {
+    content: '';
+    border-left: 2px solid $color-fsa-tertiary-200;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: $size-medium;
+  }
+
+  &__item {
+
+    & {
+      border: 1px solid $color-fsa-tertiary-200;
+      margin: 1em 0;
+      padding: $size-default;
+      border-radius: $size-base;
+      position: relative;
+    }
+
+    &--system {
+      border: 0;
+      padding: 0;
+      padding-left: ($size-base * 12.5);
+    }
+
+    &--system:before {
+      content: '';
+      width: $size-medium;
+      height: $size-medium;
+      background-color: white;
+      display: block;
+      border: 1px solid $color-fsa-tertiary-200;
+      position: absolute;
+      left: ($size-default + .1rem);
+      border-radius: 100%;
+    }
+
+    &--user {
+      background-color: white;
+    }
+
+    &--add-comment {
+
+      border-top-width: 2px;
+      background-color: $color-fsa-site-bg;
+
+      &:focus-within {
+        background-color: $color-fsa-aqua-100;
+        border-color: $color-fsa-aqua-200;
+      }
+
+    }
+
+    &--editing {
+      background-color: $color-fsa-aqua-100;
+      border-color: $color-fsa-aqua-200;
+    }
+
+  }
+
+  &__hd {
+    @include font-size(2);
+  }
+
+  &__info {}
+
+  &__action {
+    margin-left: $size-small;
+    @include breakpoint(S) {
+      float: right;
+    }
+  }
+
+  &__action-btn {}
+
+  &__bd {
+    margin-top: $size-small;
+  }
+
+}
