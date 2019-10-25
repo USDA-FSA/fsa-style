@@ -50,7 +50,8 @@ th {
 
   font-weight: $font-normal;
 
-  thead & {
+  thead &,
+  tfoot & {
     font-weight: $font-bold;
     color: tint($color-fsa-tertiary, 15%);
   }
@@ -84,12 +85,15 @@ th {
 
   }
 
-  &__th--sticky {
+  &__th--sticky,
+  &__td--sticky,
+  &__td--sticky-foot,
+  &__th--sticky-foot {
 
     position: sticky;
     top: -1px;
     background-color: $color-fsa-site-bg;
-    z-index: 2;
+    z-index: 3;
     box-shadow: 0 1px 0 0 $color-fsa-tertiary-200;
 
     .fsa-table:not(.fsa-table--borderless) & {
@@ -101,6 +105,15 @@ th {
       padding-top: $size-small;
     }
 
+  }
+
+  &__th--sticky-foot,
+  &__td--sticky-foot {
+    top: auto;
+    bottom: 1px;
+    box-shadow: 0 -1px 0 0 $color-fsa-tertiary-200;
+    border-bottom-width: 2px !important;
+    z-index: 2;
   }
 
   &__th--select {
