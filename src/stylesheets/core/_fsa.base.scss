@@ -188,3 +188,10 @@ textarea:not([disabled]):focus {
     scroll-behavior: auto !important;
   }
 }
+
+[hidden],
+template,
+html body [hidden],
+html body template {
+  display: none !important;
+}
