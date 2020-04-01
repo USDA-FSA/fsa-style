@@ -96,9 +96,11 @@ $button-flat-border-width: 0;
     // default
 
     background-color: $button-default;
-    color: $button-default-text;
 
-    &:visited {
+    &,
+    &:visited,
+    .fsa-alert &,
+    .fsa-alert &:visited {
       color: $button-default-text;
     }
 
@@ -152,9 +154,11 @@ $button-flat-border-width: 0;
   @elseif $variation == 'primary' {
 
     background-color: $button-primary;
-    color: $button-primary-text;
 
-    &:visited {
+    &,
+    &:visited,
+    .fsa-alert &,
+    .fsa-alert &:visited {
       color: $button-primary-text;
     }
 
@@ -175,8 +179,14 @@ $button-flat-border-width: 0;
 
   @elseif $variation == 'tertiary' {
 
-    color: $button-tertiary-text;
     background-color: $button-tertiary;
+
+    &,
+    &:visited,
+    .fsa-alert &,
+    .fsa-alert &:visited {
+      color: $button-tertiary-text;
+    }
 
     &:hover:not([disabled]) {
       color: $button-tertiary-text;
@@ -192,11 +202,13 @@ $button-flat-border-width: 0;
 
   @elseif $variation == 'secondary' {
 
-    color: $button-alt-text;
     background-color: $button-alt;
     box-shadow: 0 0 0 $button-alt-border-width $button-alt-border inset;
 
-    &:visited {
+    &,
+    &:visited,
+    .fsa-alert &,
+    .fsa-alert &:visited {
       color: $button-alt-text;
     }
 
@@ -281,21 +293,24 @@ $button-flat-border-width: 0;
     height: auto;
     padding-top: 0;
     padding-bottom: 0;
-    color: $button-flat-text;
     font-weight: normal;
     background-color: $button-flat;
     box-shadow: none;
     // scss-lint:disable ImportantRule
     text-decoration: underline !important; // ¯\_(ツ)_/¯
 
+
+    &,
+    &:visited,
+    .fsa-alert &,
+    .fsa-alert &:visited {
+      color: $button-flat-text;
+    }
+
     &:not(.fsa-btn-small),
     &:not(.fsa-btn-large) {
       padding-right: $button-flat-padding;
       padding-left: $button-flat-padding;
-    }
-
-    &:visited {
-      color: $button-flat-text;
     }
 
     &:hover:not([disabled]) {
