@@ -73,7 +73,8 @@ $color-fsa-selection-bg: $color-fsa-secondary-100;
 
 // Semantic
 $color-title: $color-fsa-tertiary;
-$color-fsa-site-bg: tint($color-fsa-secondary, 97%); // Super light gray bg, but with a slight tint of blue
+$color-fsa-site-bg: #f7f7f7;
+// $color-fsa-site-bg: tint($color-fsa-secondary, 97%); // Super light gray bg, but with a slight tint of blue
 
 $marker-text-color: $color-base;
 

@@ -113,6 +113,10 @@ abbr[title] {
   }
 }
 
+[for] {
+  cursor: pointer;
+}
+
 // scss-lint:disable QualifyingElement PlaceholderInExtend
 acronym[title],
 dfn[title] {
@@ -187,4 +191,11 @@ textarea:not([disabled]):focus {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+[hidden],
+template,
+html body [hidden],
+html body template {
+  display: none !important;
 }

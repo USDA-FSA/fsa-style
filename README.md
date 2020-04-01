@@ -1,6 +1,6 @@
-# FSA Style
+# FSA Style - a CSS Framework implementation of the FPAC Design System
 
-USDA FPAC's **Visual Language** and **HTML/CSS Framework**, as documented by the [Design System](http://usda-fsa.github.io/fsa-design-system/).
+USDA FPAC's **Visual Language** and **HTML/CSS Framework**, as documented by the [FPAC Design System](http://usda-fsa.github.io/fsa-design-system/).
 
 The Design System comprises of two core repositories:
 
@@ -73,7 +73,7 @@ Lastly, refer to [Using the Boilerplate](#using-the-boilerplate) for basic guida
 
 If you don't have Node or the ability to incorporate source files into a build process (Grunt, Gulp, Webpack, etc), follow these steps to manually use the FSA Style.
 
-Download the latest assets: **https://github.com/usda-fsa/fsa-style/releases/download/2.4.0/fsa-style-2.4.0.zip**
+Download the latest assets: **https://github.com/usda-fsa/fsa-style/releases/download/2.4.1/fsa-style-2.4.1.zip**
 
 #### 1. Visual Index
 

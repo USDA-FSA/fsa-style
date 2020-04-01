@@ -1,11 +1,11 @@
 $box-bgcolor-default: $white;
-$box-border-color: transparentize($color-fsa-tertiary,.85);
+$box-border-color: $color-fsa-tertiary-200;
 $box-padding: $size-medium;
 $box-radius: $button-border-radius;
 
 @mixin fsa-boxBase($boxBase-breakpoint:'') {
   .fsa-box#{$boxBase-breakpoint} {
-    box-shadow: 0 0 0 1px $box-border-color inset;
+    border: 1px $box-border-color solid;
     background-color: $box-bgcolor-default;
     border-radius: 0;
     padding: $box-padding;
@@ -26,13 +26,13 @@ $box-radius: $button-border-radius;
     &--bg-0#{$box-breakpoint} { background-color: transparent; }
     &--bg-1#{$box-breakpoint} { background-color: $color-fsa-white; }
     &--bg-2#{$box-breakpoint} { background-color: $color-fsa-tertiary-100; }
-    &--bg-3#{$box-breakpoint} { background-color: $color-fsa-tertiary-200; }
+    &--bg-3#{$box-breakpoint} { background-color: $color-fsa-tertiary-200; border-color: shade($box-border-color, 10%); }
 
     // Border Width
-    &--bw-0#{$box-breakpoint} { box-shadow: none; }
-    &--bw-1#{$box-breakpoint} { box-shadow: 0 0 0 1px $box-border-color inset; }
-    &--bw-2#{$box-breakpoint} { box-shadow: 0 0 0 2px $box-border-color inset; }
-    &--bw-3#{$box-breakpoint} { box-shadow: 0 0 0 4px $box-border-color inset; }
+    &--bw-0#{$box-breakpoint} { border: none; }
+    &--bw-1#{$box-breakpoint} { border: 1px $box-border-color solid; }
+    &--bw-2#{$box-breakpoint} { border: 2px $box-border-color solid; }
+    &--bw-3#{$box-breakpoint} { border: 4px $box-border-color solid; }
 
     // Background Radius
     &--br-0#{$box-breakpoint} { border-radius: 0; }
