@@ -166,7 +166,7 @@
       </div>
     </div>
     <section class="docs__section docs__intro">
-      <h1 class="docs__bd docs__title">fsa-style <span class="docs__title__version" title="version">2.4.0</span></h1>
+      <h1 class="docs__bd docs__title">fsa-style <span class="docs__title__version" title="version">2.4.1</span></h1>
       <div class="docs__nav-shell" id="global-nav">
         <nav class="docs__nav">
           <ul class="docs__primary-nav" id="primary-navigation" aria-label="Primary Navigation" data-title="fsa-style">
@@ -3905,6 +3905,7 @@
           </div>
           <div class="docs__bd">
             <p class="docs__code-sample"><code>class="<strong>fsa-breadcrumb</strong>"</code></p>
+            <h4 class="docs__sub_style">Multiple Crumbs</h4>
             <div class="fsa-breadcrumb">
               <nav class="fsa-breadcrumb__nav" aria-label="Breadcrumbs">
                 <ol class="fsa-breadcrumb__list">
@@ -3923,6 +3924,16 @@
                 </ol>
               </nav>
             </div>
+            <h4 class="docs__sub_style">One Crumb</h4>
+            <div class="fsa-breadcrumb">
+              <nav class="fsa-breadcrumb__nav" aria-label="Breadcrumbs">
+                <ol class="fsa-breadcrumb__list">
+                  <li class="fsa-breadcrumb__item">
+                    <a href="link/to/level-0/" class="fsa-breadcrumb__link">Level 0</a>
+                  </li>
+                </ol>
+              </nav>
+            </div>
           </div>
         </div>
         <div class="docs__jump-target" id="component__content-tabs">
@@ -3936,7 +3947,7 @@
             <div class="fsa-content-tabs">
               <ul class="fsa-content-tabs__list">
                 <li class="fsa-content-tabs__item">
-                  <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="link.html" aria-current="true">
+                  <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="link.html" aria-current="tab">
                     <span class="fsa-content-tabs__label-text">Lorem</span>
                   </a>
                 </li>
@@ -3968,7 +3979,7 @@
             <div class="fsa-content-tabs fsa-content-tabs--light">
               <ul class="fsa-content-tabs__list">
                 <li class="fsa-content-tabs__item">
-                  <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="link.html" aria-current="true">
+                  <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="link.html" aria-current="tab">
                     <span class="fsa-content-tabs__label-text">Lorem</span>
                   </a>
                 </li>
@@ -4000,7 +4011,7 @@
             <div class="fsa-content-tabs fsa-content-tabs--contrast">
               <ul class="fsa-content-tabs__list">
                 <li class="fsa-content-tabs__item">
-                  <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="link.html" aria-current="true">
+                  <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="link.html" aria-current="tab">
                     <span class="fsa-content-tabs__label-text">Lorem</span>
                   </a>
                 </li>
@@ -4037,7 +4048,7 @@
                   </a>
                 </li>
                 <li class="fsa-content-tabs__item">
-                  <a class="fsa-content-tabs__label fsa-content-tabs__label--small fsa-content-tabs__label--active" href="link.html" aria-current="true">
+                  <a class="fsa-content-tabs__label fsa-content-tabs__label--small fsa-content-tabs__label--active" href="link.html" aria-current="tab">
                     <span class="fsa-content-tabs__label-text">Ipsum dolor sit amet</span>
                   </a>
                 </li>
@@ -4069,7 +4080,7 @@
                   </a>
                 </li>
                 <li class="fsa-content-tabs__item">
-                  <a class="fsa-content-tabs__label fsa-content-tabs__label--large fsa-content-tabs__label--active" href="link.html" aria-current="true">
+                  <a class="fsa-content-tabs__label fsa-content-tabs__label--large fsa-content-tabs__label--active" href="link.html" aria-current="tab">
                     <span class="fsa-content-tabs__label-text">Ipsum dolor sit amet</span>
                   </a>
                 </li>
@@ -4096,7 +4107,7 @@
             <div class="fsa-content-tabs fsa-content-tabs--justified">
               <ul class="fsa-content-tabs__list">
                 <li class="fsa-content-tabs__item">
-                  <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="link.html" aria-current="true">
+                  <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="link.html" aria-current="tab">
                     <span class="fsa-content-tabs__label-text">Lorem</span>
                   </a>
                 </li>
@@ -4123,7 +4134,7 @@
             <div class="fsa-content-tabs fsa-content-tabs--justified-equal">
               <ul class="fsa-content-tabs__list">
                 <li class="fsa-content-tabs__item">
-                  <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="link.html" aria-current="true">
+                  <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="link.html" aria-current="tab">
                     <span class="fsa-content-tabs__label-text">Lorem</span>
                   </a>
                 </li>
@@ -4151,7 +4162,7 @@
             <div class="fsa-content-tabs">
               <ul class="fsa-content-tabs__list">
                 <li class="fsa-content-tabs__item">
-                  <button class="fsa-content-tabs__label fsa-content-tabs__label--active" type="button" aria-current="true">
+                  <button class="fsa-content-tabs__label fsa-content-tabs__label--active" type="button" aria-current="tab">
                     <span class="fsa-content-tabs__label-text">tab 1</span>
                   </button>
                 </li>
@@ -4218,7 +4229,7 @@
                     <span class="fsa-pagination__label fsa-pagination__label--previous fsa-pagination__label--disabled"><span class="fsa-sr-only">Go to</span> Previous <span class="fsa-sr-only">page</span></span>
                   </li>
                   <li class="fsa-pagination__item">
-                    <span class="fsa-pagination__label fsa-pagination__label--current" aria-current="true"><span class="fsa-sr-only">Currently on page</span> 1</span>
+                    <span class="fsa-pagination__label fsa-pagination__label--current" aria-current="page"><span class="fsa-sr-only">Currently on page</span> 1</span>
                   </li>
                   <li class="fsa-pagination__item">
                     <a class="fsa-pagination__label" href="link.html"><span class="fsa-sr-only">Go to page</span> 2</a>
@@ -4252,7 +4263,7 @@
                     <a class="fsa-pagination__label" href="link.html"><span class="fsa-sr-only">Go to page</span> 55</a>
                   </li>
                   <li class="fsa-pagination__item">
-                    <span class="fsa-pagination__label fsa-pagination__label--current" aria-current="true"><span class="fsa-sr-only">Currently on page</span> 56</span>
+                    <span class="fsa-pagination__label fsa-pagination__label--current" aria-current="page"><span class="fsa-sr-only">Currently on page</span> 56</span>
                   </li>
                   <li class="fsa-pagination__item">
                     <a class="fsa-pagination__label" href="link.html"><span class="fsa-sr-only">Go to page</span> 57</a>
@@ -4286,7 +4297,7 @@
                     <a class="fsa-pagination__label" href="link.html"><span class="fsa-sr-only">Go to page</span> 119</a>
                   </li>
                   <li class="fsa-pagination__item">
-                    <span class="fsa-pagination__label fsa-pagination__label--current" aria-current="true"><span class="fsa-sr-only">Currently on page</span> 120</span>
+                    <span class="fsa-pagination__label fsa-pagination__label--current" aria-current="page"><span class="fsa-sr-only">Currently on page</span> 120</span>
                   </li>
                   <li class="fsa-pagination__item fsa-pagination__item--next" aria-hidden="true">
                     <span class="fsa-pagination__label fsa-pagination__label--next fsa-pagination__label--disabled"><span class="fsa-sr-only">Go to</span> Next <span class="fsa-sr-only">page</span></span>
@@ -4305,7 +4316,7 @@
                     <a class="fsa-pagination__label" href="link.html"><span class="fsa-sr-only">Go to page</span> 1</a>
                   </li>
                   <li class="fsa-pagination__item">
-                    <span class="fsa-pagination__label fsa-pagination__label--current" aria-current="true"><span class="fsa-sr-only">Currently on page</span> 2</span>
+                    <span class="fsa-pagination__label fsa-pagination__label--current" aria-current="page"><span class="fsa-sr-only">Currently on page</span> 2</span>
                   </li>
                   <li class="fsa-pagination__item">
                     <a class="fsa-pagination__label" href="link.html"><span class="fsa-sr-only">Go to page</span> 3</a>
@@ -4333,7 +4344,7 @@
                     <a class="fsa-pagination__label" href="link.html"><span class="fsa-sr-only">Go to page</span> 1</a>
                   </li>
                   <li class="fsa-pagination__item">
-                    <span class="fsa-pagination__label fsa-pagination__label--current" aria-current="true"><span class="fsa-sr-only">Currently on page</span> 2</span>
+                    <span class="fsa-pagination__label fsa-pagination__label--current" aria-current="page"><span class="fsa-sr-only">Currently on page</span> 2</span>
                   </li>
                   <li class="fsa-pagination__item">
                     <a class="fsa-pagination__label" href="link.html"><span class="fsa-sr-only">Go to page</span> 3</a>
@@ -4397,7 +4408,7 @@
                       </a>
                     </li>
                     <li class="fsa-stepped-tabs__item">
-                      <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" href="link.html" aria-current="true">
+                      <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" href="link.html" aria-current="step">
                         <span class="fsa-stepped-tabs__text">Em ipsum</span>
                       </a>
                     </li>
@@ -4427,7 +4438,7 @@
                       </button>
                     </li>
                     <li class="fsa-stepped-tabs__item">
-                      <button class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" type="button" aria-current="true">
+                      <button class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" type="button" aria-current="step">
                         <span class="fsa-stepped-tabs__text">Em ipsum</span>
                       </button>
                     </li>
@@ -4455,7 +4466,7 @@
                     </span>
                   </li>
                   <li class="fsa-stepped-tabs__item">
-                    <span class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" aria-current="true">
+                    <span class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" aria-current="step">
                       <span class="fsa-stepped-tabs__text">Em ipsum</span>
                     </span>
                   </li>
@@ -4483,7 +4494,7 @@
                       </a>
                     </li>
                     <li class="fsa-stepped-tabs__item">
-                      <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" href="link.html" aria-current="true">
+                      <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" href="link.html" aria-current="step">
                         <span class="fsa-stepped-tabs__text">Em ipsum</span>
                       </a>
                     </li>
@@ -4507,7 +4518,7 @@
                 <div class="fsa-stepped-tabs__bd">
                   <ol class="fsa-stepped-tabs__list">
                     <li class="fsa-stepped-tabs__item">
-                      <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" href="link.html">
+                      <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" href="link.html" aria-current="step">
                         <span class="fsa-stepped-tabs__text">Discovery</span>
                       </a>
                     </li>
@@ -4540,7 +4551,7 @@
                       </a>
                     </li>
                     <li class="fsa-stepped-tabs__item">
-                      <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" href="link.html">
+                      <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" href="link.html" aria-current="step">
                         <span class="fsa-stepped-tabs__text">Adjustments</span>
                       </a>
                     </li>
@@ -4573,7 +4584,7 @@
                       </a>
                     </li>
                     <li class="fsa-stepped-tabs__item">
-                      <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" href="link.html">
+                      <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" href="link.html" aria-current="step">
                         <span class="fsa-stepped-tabs__text">Review</span>
                       </a>
                     </li>
@@ -4606,7 +4617,7 @@
                       </a>
                     </li>
                     <li class="fsa-stepped-tabs__item">
-                      <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" href="link.html">
+                      <a class="fsa-stepped-tabs__label fsa-stepped-tabs__label--active" href="link.html" aria-current="step">
                         <span class="fsa-stepped-tabs__text">Publish</span>
                       </a>
                     </li>

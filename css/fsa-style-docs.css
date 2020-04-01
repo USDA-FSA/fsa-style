@@ -1,4 +1,4 @@
-/*! FSA Style v2.4.0 | http://usda-fsa.github.io/fsa-design-system/ */
+/*! FSA Style v2.4.1 | http://usda-fsa.github.io/fsa-design-system/ */
 
 
 @charset "UTF-8";
@@ -997,7 +997,7 @@ html:hover body::before {
 }
 
 .color-fsa-site-bg {
-  background-color: #f8fafc;
+  background-color: #f7f7f7;
   border: 1px dashed #dbdad9;
 }
 
@@ -1088,7 +1088,7 @@ html:hover body::before {
   font-size: 83.2px;
   font-size: 5.2rem;
   font-weight: 700;
-  color: #f8fafc;
+  color: #f7f7f7;
   line-height: 1;
   transform: scaleX(0.8);
   transform-origin: left;
@@ -1103,7 +1103,7 @@ html:hover body::before {
   height: 38.4px;
   height: 2.4rem;
   width: calc(100% - 110px);
-  background-color: #f8fafc;
+  background-color: #f7f7f7;
 }
 
 .docs__rwd-iframe {
