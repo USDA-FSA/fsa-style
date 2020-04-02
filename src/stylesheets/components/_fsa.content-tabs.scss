@@ -6,6 +6,10 @@
 
     @include overflow-gradient();
 
+    @media (min-width: 75em) {
+      background-image: none;
+    }
+
     display: flex;
     margin-left: -$size-default;
     margin-right: -$size-default;
