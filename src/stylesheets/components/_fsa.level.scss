@@ -1,0 +1,155 @@
+$level: fsa-level;
+
+.#{$level} {}
+
+@mixin levelBase($bp:'') {
+
+  .#{$level}#{$bp} {
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+@mixin level($bp:'') {
+  .#{$level} {
+
+    // &#{$bp} > * { outline: 1px solid blue; }
+
+    &#{$bp} > :not(:last-child) { margin-right: $size-default; }
+
+    &--full#{$bp}   { display: flex; } // default, effectively an override
+    &--inline#{$bp} { display: inline-flex; }
+    &--none#{$bp}   { display: initial; } // remove flex'ing, reverts to whatever *initial* (implicit) property of display this element may have (e.g. <span> = inline; <div> = block)
+
+    &--no-wrap#{$bp} { flex-wrap: initial; } // default
+    &--wrap#{$bp}   { flex-wrap: wrap; }
+
+    &--align-top#{$bp}      { align-items: flex-start; }
+    &--align-middle#{$bp}   { align-items: center;     } // default
+    &--align-baseline#{$bp} { align-items: baseline;   }
+    &--align-bottom#{$bp}   { align-items: flex-end;   }
+    &--align-stretch#{$bp}  { align-items: stretch;    }
+
+    &--justify-left#{$bp}    { justify-content: flex-start; }
+    &--justify-right#{$bp}   { justify-content: flex-end; }
+    &--justify-center#{$bp}  { justify-content: center; }
+    &--justify-between#{$bp} { justify-content: space-between; }
+    &--justify-around#{$bp}  { justify-content: space-around; }
+
+    &--grow-auto#{$bp}    > * { flex: auto; }
+    &--grow-even#{$bp}    > * { flex: 1;    }
+    &--grow-none#{$bp}    > * { flex-grow: 0; }
+
+    &--gutter-xxs#{$bp}  > :not(:last-child) { margin-right: $size-base; }
+    &--gutter-xs#{$bp}   > :not(:last-child) { margin-right: $size-small; }
+    &--gutter-s#{$bp}    > :not(:last-child) { margin-right: $size-default; }
+    &--gutter-m#{$bp}    > :not(:last-child) { margin-right: $size-medium; }
+    &--gutter-l#{$bp}    > :not(:last-child) { margin-right: $size-large; }
+    &--gutter-xl#{$bp}   > :not(:last-child) { margin-right: $size-extra-large; }
+    &--gutter-none#{$bp} > :not(:last-child) { margin-right: initial; }
+
+    &--none#{$bp}        > :not(:last-child) { margin-right: initial; }
+
+    &__item {
+
+      &--min#{$bp} {
+        min-width: 0;
+      }
+
+      &--grow-auto#{$bp}   { flex: auto; }
+      &--grow-even#{$bp}   { flex: 1;    }
+      &--grow-none#{$bp}   { flex-grow: 0; }
+      &--shrink-none#{$bp} { flex-shrink: 0; }
+
+      &--align-top#{$bp}      { align-self: flex-start; }
+      &--align-middle#{$bp}   { align-self: center;     }
+      &--align-baseline#{$bp} { align-self: baseline;   }
+      &--align-bottom#{$bp}   { align-self: flex-end;   }
+      &--align-stretch#{$bp}  { align-self: stretch;    }
+
+      &--split#{$bp}  { margin-left: auto; }
+
+    }
+
+  }
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+@include levelBase();
+.#{$level} {
+
+  &--selected {
+    &,
+    &:focus,
+    &:visited,
+    &:hover {
+      box-shadow: -2px 0 0 0 $color-fsa-secondary inset;
+      background-color: $color-fsa-selection-bg;
+      border-radius: 0;;
+    }
+  }
+
+  .#{$level}-demo & {
+    background-color: rgba(0,0,0,0.05);
+    background-image: linear-gradient(45deg, rgba(0,0,0,0.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0.1)),linear-gradient(45deg, rgba(0,0,0,0.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0.1));
+    background-size: 2rem 2rem;
+    background-position: 0 0, 50px 50px;
+    background-position: 0 0, 5rem 5rem;
+  }
+
+}
+@include breakpoint(S)  { @include levelBase(\@s); }
+@include breakpoint(M)  { @include levelBase(\@m); }
+@include breakpoint(L)  { @include levelBase(\@l); }
+@include breakpoint(XL) { @include levelBase(\@xl); }
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+@include level();
+@include breakpoint(S)  { @include level(\@s); }
+@include breakpoint(M)  { @include level(\@m); }
+@include breakpoint(L)  { @include level(\@l); }
+@include breakpoint(XL) { @include level(\@xl); }
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            a.#{$level},
+       button.#{$level},
+   [tabindex].#{$level},
+  [role=link].#{$level},
+[role=button].#{$level} {
+
+  & {
+    color: $color-fsa-base;
+    text-decoration: none;
+  }
+
+  &:focus {
+    background-color: $color-fsa-tertiary-100;
+    outline-offset: 3px;
+  }
+
+  &:hover {
+    background-color: $color-fsa-tertiary-100;
+    cursor: pointer;
+  }
+
+  &:visited {
+    color: $color-fsa-base;
+  }
+
+}
+
+.phblppppbbbbh {
+  border-top: 2px solid rgba(0,0,0,.05);
+  padding: 2em 0;
+}
+
+.#{$level}-demo {
+  & + & {
+    margin-top: 1em;
+  }
+}
+.#{$level}-demo .#{$level} > * {
+  background-color: white;
+  border: 1px solid $color-fsa-tertiary-300;
+}
