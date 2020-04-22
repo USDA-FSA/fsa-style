@@ -90,14 +90,6 @@ $level: fsa-level;
     }
   }
 
-  .#{$level}-demo & {
-    background-color: rgba(0,0,0,0.05);
-    background-image: linear-gradient(45deg, rgba(0,0,0,0.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0.1)),linear-gradient(45deg, rgba(0,0,0,0.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0.1));
-    background-size: 2rem 2rem;
-    background-position: 0 0, 50px 50px;
-    background-position: 0 0, 5rem 5rem;
-  }
-
 }
 @include breakpoint(S)  { @include levelBase(\@s); }
 @include breakpoint(M)  { @include levelBase(\@m); }
@@ -144,11 +136,6 @@ $level: fsa-level;
   padding: 2em 0;
 }
 
-.#{$level}-demo {
-  & + & {
-    margin-top: 1em;
-  }
-}
 .#{$level}-demo .#{$level} > * {
   background-color: white;
   border: 1px solid $color-fsa-tertiary-300;
