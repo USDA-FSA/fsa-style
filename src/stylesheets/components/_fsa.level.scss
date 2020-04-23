@@ -137,6 +137,15 @@ $level: fsa-level;
 }
 
 .#{$level}-demo .#{$level} > * {
-  background-color: white;
-  border: 1px solid $color-fsa-tertiary-300;
+  // background-color: white;
+  background-color: $color-fsa-aqua-100;
+  // border: 1px solid $color-fsa-tertiary-300;
+  // border: 1px solid rgba(0,0,0,.2);
+  box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+  // color: white;
+  @include breakpoint(XL) {
+    &:not([class*="fsa-text-size"]) {
+      @include font-size(1);
+    }
+  }
 }
