@@ -7828,12 +7828,22 @@
           <h3 class="docs__figure"><a class="docs__anchor" aria-hidden="true" href="#component__media-objects">#</a>Media Object</h3>
           <a class="fsa-btn fsa-btn--secondary fsa-btn--small docs__section-link" href="http://usda-fsa.github.io/fsa-design-system/utilities/#media-objects">Docs <span class="sr-only">for Media Object</span></a>
         </div>
-        <div class="docs__bd"
-          <h4 class="docs__sub_style">What's a Media Object?</h4>
-          <ul>
-            <li><strong>Short Summary:</strong> an image of any width/height to one side, paired with something (usually text) to the other side.</li>
-            <li><strong>Longer answer and background:</strong> <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">The media object saves hundreds of lines of code</a></li>
-          </ul>
+        <div class="docs__bd">
+          <div class="fsa-alert fsa-alert--warning">
+            <div class="fsa-alert__body">
+              <h3 class="fsa-alert__heading">Deprecated</h3>
+              <p><code>fsa-media</code> has been deprecated in favor of the <a href="#component__level"></a><code>fsa-level</code> layout component. For example, below is an implementation of Media using Level:</p>
+              <div class="fsa-level fsa-level--align-top fsa-level--gutter-m">
+                <div>
+                  <img class="fsa-media__img" src="img/100x100.jpg" alt="">
+                </div>
+                <div>
+                  Lorem ipsum sed do eiusmod tempor incididunt dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                </div>
+              </div>
+            </div>
+          </div>
+          <h4 class="docs__sub_style">Deprecated Variations</h4>
           <p class="docs__code-sample"><code>class="fsa-media"</code></p>
           <div class="fsa-media">
             <div class="fsa-media__section">
