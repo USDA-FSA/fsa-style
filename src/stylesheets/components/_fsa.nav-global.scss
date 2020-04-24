@@ -22,10 +22,14 @@
 
   &__bd {
 
-    max-width: ($site-max-width + 24px);
     margin-left: auto;
     margin-right: auto;
     padding: 0;
+    max-width: ($site-max-width + 24px);
+
+    .fsa-nav-global--fullscreen > & {
+      max-width: none;
+    }
 
     @include breakpoint(L) {
       display: flex;

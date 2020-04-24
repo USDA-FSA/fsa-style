@@ -15,17 +15,21 @@
 
     display: flex;
     align-items: baseline;
-    max-width: ($site-max-width + 24px);
     margin-left: auto;
     margin-right: auto;
     text-align: left;
     color: $component-text-color;
     // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon
     padding:
-      ($component-spacing * 2)
-      ($component-spacing + ($component-spacing / 2))
-      ($component-spacing / 2)
+    ($component-spacing * 2)
+    ($component-spacing + ($component-spacing / 2))
+    ($component-spacing / 2)
     ;
+    max-width: ($site-max-width + 24px);
+
+    .fsa-header-app--fullscreen > & {
+      max-width: none;
+    }
 
     @include breakpoint(M) {
       padding-top: ($component-spacing * 4);
