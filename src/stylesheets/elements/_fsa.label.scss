@@ -1,4 +1,5 @@
 $label-spacing: ($size-base - .1rem);
+$label-dismiss-width: 1.33em;
 
 .fsa-label {
 
@@ -64,6 +65,36 @@ $label-spacing: ($size-base - .1rem);
     padding-left: ($label-spacing * 1.5);
     padding-right: ($label-spacing * 1.5);
     letter-spacing: initial;
+  }
+
+  &--extra-large {
+    @include font-size(4);
+    padding-left: ($label-spacing * 2);
+    padding-right: ($label-spacing * 2);
+    letter-spacing: initial;
+  }
+
+  &--dismissable {
+    position: relative;
+    padding-right: ($label-dismiss-width);
+  }
+
+  &__remove {
+    @include reset-button();
+    width: $label-dismiss-width;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    background-image: url('#{$image-path}/close.svg');;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 48%;
+    &[disabled] {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
   }
 
   &[disabled] {
