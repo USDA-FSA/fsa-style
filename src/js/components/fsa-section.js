@@ -6,6 +6,7 @@ $('body').on('click', '[data-behavior~="toggle-fullscreen-components"]', functio
   $('.fsa-tophat')     .toggleClass('fsa-tophat--fullscreen');
   $('.fsa-header-app') .toggleClass('fsa-header-app--fullscreen');
   $('.fsa-nav-global') .toggleClass('fsa-nav-global--fullscreen');
+  $('.fsa-topper')     .toggleClass('fsa-topper--fullscreen');
   $('.fsa-footer')     .toggleClass('fsa-footer--fullscreen');
   $('.fsa-screen-id')  .toggleClass('fsa-screen-id--fullscreen');
 
