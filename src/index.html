@@ -687,23 +687,27 @@
               </div>
             </div>
             <h4 class="docs__sub_style">Disabled</h4>
-            <p>
-              <button class="fsa-btn fsa-btn--primary" type="button" disabled>Label</button>
-              <button class="fsa-btn fsa-btn--secondary" type="button" disabled>Label</button>
-              <button class="fsa-btn fsa-btn--tertiary" type="button" disabled>Label</button>
-              <button class="fsa-btn fsa-btn--flat" type="button" disabled>Label</button>
+            <p class="fsa-level">
+              <span><button class="fsa-btn fsa-btn--primary" type="button" disabled>Label</button></span>
+              <span><button class="fsa-btn fsa-btn--secondary" type="button" disabled>Label</button></span>
+              <span><button class="fsa-btn fsa-btn--tertiary" type="button" disabled>Label</button></span>
+              <span><button class="fsa-btn fsa-btn--flat" type="button" disabled>Label</button></span>
             </p>
             <h4 class="docs__sub_style">HTML Elements</h4>
             <div class="fsa-grid">
               <div class="fsa-grid__1 fsa-grid__1/4@m">
                 <code>&lt;button&gt;</code><br>Trigger an action or behavior.<br>
-                <button class="fsa-btn fsa-btn--primary" onclick="alert('you triggered something! g\'job')">&lt;button&gt;</button>
-                <button class="fsa-btn fsa-btn--primary" disabled="">&lt;button&gt;</button>
+                <span class="fsa-level">
+                  <span><button class="fsa-btn fsa-btn--primary" onclick="alert('you triggered something! g\'job')">&lt;button&gt;</button></span>
+                  <span><button class="fsa-btn fsa-btn--primary" disabled="">&lt;button&gt;</button></span>
+                </span>
               </div>
               <div class="fsa-grid__1 fsa-grid__1/4@m">
                 <code title="anchor">&lt;a&gt;</code><br>Navigate between destinations.<br>
-                <a class="fsa-btn fsa-btn--primary" href="//fsa.usda.gov">&lt;a&gt;</a>
-                <a class="fsa-btn fsa-btn--primary" disabled="">&lt;a&gt;</a>
+                <span class="fsa-level">
+                  <span><a class="fsa-btn fsa-btn--primary" href="//fsa.usda.gov">&lt;a&gt;</a></span>
+                  <span><a class="fsa-btn fsa-btn--primary" disabled="">&lt;a&gt;</a></span>
+                </span>
               </div>
             </div>
             <h4 class="docs__sub_style">Responsive</h4>
@@ -1022,27 +1026,34 @@
               </select>
               <span class="fsa-field__help" id="lorem-beisbol_help">Where does your loyalty lie?</span>
             </div>
+            <div class="fsa-field">
+              <label class="fsa-field__label" id="lorem-aa457s_label" for="lorem-aa457s__1">Multi-part <span class="fsa-field__label-desc">Optional</span></label>
+              <div class="fsa-level">
+                <div class="fsa-level__item--grow-even">
+                  <select class="fsa-select fsa-field__item" id="lorem-aa457s__2" name="lorem-aa457s__2" aria-describedby="lorem-aa457s__2_help" aria-labelledby="lorem-aa457s_label" aria-describedby="date-picker-example-0__help">
+                    <option value="0">Item 0</option>
+                    <option value="1">Item 1</option>
+                    <option value="2">Item 2</option>
+                    <option value="3">Item 3</option>
+                  </select>
+                </div>
+                <div class="fsa-level__item--grow-even">
+                  <div class="fsa-spinbox">
+                    <div class="fsa-spinbox__number">
+                      <input class="fsa-input fsa-spinbox__input" id="qewasfd555-sss__hsus" name="qewasfd555-sss" type="number" value="10" aria-describedby="date-picker-example-0__help" size="2">
+                    </div>
+                    <div class="fsa-spinbox__actions" aria-hidden="true">
+                      <button tabindex="-1" class="fsa-spinbox__btn fsa-spinbox__btn--increment" type="button" data-behavior="spinbox-spin" title="Increase"></button>
+                      <button tabindex="-1" class="fsa-spinbox__btn fsa-spinbox__btn--decrement" type="button" data-behavior="spinbox-spin" title="Decrease"></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="fsa-field__help" id="date-picker-example-0__help">Lorem ipsum dolor</span>
+            </div>
             <div class="fsa-field--block">
               <label class="fsa-field__label" for="lorem-7789">Full width (Block)</label>
               <input class="fsa-input fsa-field__item" id="lorem-7789" name="lorem-7789" type="text" value="">
-            </div>
-            <h4 class="docs__sub_style">Custom text input width</h4>
-            <p>The width of this component's <code>&lt;input type="text"&gt;</code> element spans the full width of its parent container (e.g., <code>.fsa-field</code>). Though it should <strong>rarely</strong> be necessary, it can be overridden by using the <code>size</code> attribute.</p>
-            <p><code>size</code> specifies the width of the input in characters. From a display perspective, one character is equivalent to <code>1em</code> (approximately <code>17px</code> in with <code>fsa-style</code>'s typography system).</p>
-            <p class="docs__code-sample"><code>&lt;input .... size=<strong>"4"</strong>&gt;</code></p>
-            <div class="fsa-field">
-              <label class="fsa-field__label" for="lorem-0129">Label</label>
-              <input class="fsa-input fsa-field__item" id="lorem-0129" name="lorem-0129" type="text" value="" size="4">
-            </div>
-            <p class="docs__code-sample"><code>&lt;input .... size=<strong>"7"</strong>&gt;</code></p>
-            <div class="fsa-field">
-              <label class="fsa-field__label" for="lorem-0128">Label</label>
-              <input class="fsa-input fsa-field__item" id="lorem-0128" name="lorem-0128" type="text" value="" size="7">
-            </div>
-            <p class="docs__code-sample"><code>&lt;input .... size=<strong>"20"</strong>&gt;</code></p>
-            <div class="fsa-field">
-              <label class="fsa-field__label" for="lorem-6719">Label</label>
-              <input class="fsa-input fsa-input--block fsa-field__item" id="lorem-6719" name="lorem-6719" type="text" value="" size="20">
             </div>
             <h4 class="docs__sub_style">Error States</h4>
             <div class="fsa-field fsa-field--error">
@@ -2944,55 +2955,36 @@
             <p>Its most common usage is as a nested component of the <a href="#component__form-fields">Form Fields</a> component.</p>
           </div>
           <div class="docs__bd">
-            <div class="fsa-grid">
-              <div class="fsa-grid__1 fsa-grid__1/3@m">
+            <div>
+              <div>
                 <h4 class="docs__sub_style">Default</h4>
                 <p class="docs__code-sample"><code>class="<strong>fsa-input</strong>"</code></p>
-                <p>
+                <p class="fsa-level@m">
                   <input class="fsa-input" type="text" name="some_name" value="" placeholder="Placeholder">
-                </p>
-                <p>
                   <input class="fsa-input" type="text" name="some_name" value="Value" placeholder="Placeholder">
-                </p>
-                <p>
                   <input class="fsa-input" type="password" name="some_name" value="pa55w0rd" placeholder="Placeholder">
-                </p>
-                <p>
                   <input class="fsa-input" disabled="" type="text" name="some_name" value="disabled">
-                </p>
-                <p>
                   <input class="fsa-input" readonly="" type="text" name="some_name" value="readonly">
                 </p>
               </div>
-              <div class="fsa-grid__1 fsa-grid__1/3@m">
+              <div>
                 <h4 class="docs__sub_style">Small</h4>
                 <p class="docs__code-sample"><code>class="fsa-input <strong>fsa-input--small</strong>"</code></p>
-                <p>
+                <p class="fsa-level@m">
                   <input class="fsa-input fsa-input--small" type="text" name="some_name" value="" placeholder="Placeholder">
-                </p>
-                <p>
                   <input class="fsa-input fsa-input--small" type="text" name="some_name" value="Value" placeholder="Placeholder">
-                </p>
-                <p>
                   <input class="fsa-input fsa-input--small" type="password" name="some_name" value="pa55w0rd" placeholder="Placeholder">
-                </p>
-                <p>
                   <input class="fsa-input fsa-input--small" disabled="" type="text" name="some_name" value="disabled">
+                  <input class="fsa-input fsa-input--small" readonly="" type="text" name="some_name" value="disabled">
                 </p>
               </div>
-              <div class="fsa-grid__1 fsa-grid__1/3@m">
+              <div>
                 <h4 class="docs__sub_style">Large</h4>
                 <p class="docs__code-sample"><code>class="fsa-input <strong>fsa-input--large</strong>"</code></p>
-                <p>
+                <p class="fsa-level@m">
                   <input class="fsa-input fsa-input--large" type="text" name="some_name" value="" placeholder="Placeholder">
-                </p>
-                <p>
                   <input class="fsa-input fsa-input--large" type="text" name="some_name" value="Value" placeholder="Placeholder">
-                </p>
-                <p>
                   <input class="fsa-input fsa-input--large" type="password" name="some_name" value="pa55w0rd" placeholder="Placeholder">
-                </p>
-                <p>
                   <input class="fsa-input fsa-input--large" disabled="" type="text" name="some_name" value="disabled">
                 </p>
               </div>
@@ -3016,38 +3008,33 @@
             </p>
             <h4 class="docs__sub_style">Custom Width</h4>
             <p>Though rarely necessary, the width of <code>.fsa-input</code> can be overridden by using the <code>size</code> attribute, whici specifies the width of the input in characters. From a display perspective, one character is equivalent to <code>1em</code> (approximately <code>17px</code> in with <code>fsa-style</code>'s typography system).</p>
-            <div class="fsa-grid">
-              <div class="fsa-grid__1 fsa-grid__grow@l">
-                <p class="docs__code-sample"><code>size="<strong>2</strong>"</code></p>
-                <p><input class="fsa-input" size="2" type="text" name="some_name" value=""></p>
+            <div class="fsa-level">
+              <div>
+                <div class="docs__code-sample"><code>size="<strong>2</strong>"</code></div>
+                <input class="fsa-input" size="2" type="text" name="some_name" value="">
               </div>
-              <div class="fsa-grid__1 fsa-grid__grow@l">
-                <p class="docs__code-sample"><code>size="<strong>5</strong>"</code></p>
-                <p><input class="fsa-input" size="5" type="text" name="some_name" value=""></p>
+              <div>
+                <div class="docs__code-sample"><code>size="<strong>5</strong>"</code></div>
+                <input class="fsa-input" size="5" type="text" name="some_name" value="">
               </div>
-              <div class="fsa-grid__1 fsa-grid__grow@l">
-                <p class="docs__code-sample"><code>size="<strong>7</strong>"</code></p>
-                <p><input class="fsa-input" size="7" type="text" name="some_name" value=""></p>
+              <div>
+                <div class="docs__code-sample"><code>size="<strong>7</strong>"</code></div>
+                <input class="fsa-input" size="7" type="text" name="some_name" value="">
               </div>
-              <div class="fsa-grid__1 fsa-grid__grow@l">
-                <p class="docs__code-sample"><code>size="<strong>14</strong>"</code></p>
-                <p><input class="fsa-input" size="14" type="text" name="some_name" value=""></p>
+              <div>
+                <div class="docs__code-sample"><code>size="<strong>14</strong>"</code></div>
+                <input class="fsa-input" size="14" type="text" name="some_name" value="">
               </div>
-              <div class="fsa-grid__1 fsa-grid__grow@l">
-                <p class="docs__code-sample"><code>size="<strong>28</strong>"</code></p>
-                <p><input class="fsa-input" size="29" type="text" name="some_name" value=""></p>
+              <div>
+                <div class="docs__code-sample"><code>size="<strong>28</strong>"</code></div>
+                <input class="fsa-input" size="29" type="text" name="some_name" value="">
               </div>
             </div>
             <h4 class="docs__sub_style">Error</h4>
             <p class="docs__code-sample"><code>class="fsa-input <strong>fsa-input--error</strong>"</code></p>
-            <p>
+            <p class="fsa-level">
               <input class="fsa-input fsa-input--error" type="text" name="some_name" value="Value" placeholder="Placeholder">
-            </p>
-            <p>
               <input class="fsa-input fsa-input--error" type="password" name="some_name" value="pa55w0rd" placeholder="Placeholder">
-            </p>
-            <p>
-              <input class="fsa-input fsa-input--error fsa-input--block" type="text" name="some_name" value="Value" placeholder="Placeholder">
             </p>
           </div>
         </div>
@@ -3118,7 +3105,7 @@
           </div>
           <div class="docs__bd">
             <p class="docs__code-sample"><code>class="fsa-badge fsa-badge--[type] fsa-badge--[size]"</code></p>
-            <p>
+            <p class="fsa-level">
               <span class="fsa-badge">1</span>
               <span class="fsa-badge fsa-badge--neutral">8</span>
               <span class="fsa-badge fsa-badge--general">11</span>
@@ -3126,14 +3113,14 @@
               <span class="fsa-badge fsa-badge--warning">22</span>
               <span class="fsa-badge fsa-badge--success">99+</span>
             </p>
-            <p>
+            <p class="fsa-level">
               <span class="fsa-badge fsa-badge--large">1</span>
               <span class="fsa-badge fsa-badge--large fsa-badge--general">11</span>
               <span class="fsa-badge fsa-badge--large fsa-badge--alert">11</span>
               <span class="fsa-badge fsa-badge--large fsa-badge--warning">22</span>
               <span class="fsa-badge fsa-badge--large fsa-badge--success">99+</span>
             </p>
-            <p>
+            <p class="fsa-level">
               <span class="fsa-badge fsa-badge--extra-large">1</span>
               <span class="fsa-badge fsa-badge--extra-large fsa-badge--general">11</span>
               <span class="fsa-badge fsa-badge--extra-large fsa-badge--alert">11</span>
@@ -3141,7 +3128,7 @@
               <span class="fsa-badge fsa-badge--extra-large fsa-badge--success">99+</span>
             </p>
             <p>Badge styles can be applied to nearly any <strong>HTML</strong> element, most likely <code>&lt;span&gt;</code> as shown above. Actionable examples seen below (<code>&lt;a&gt;</code> and <code>&lt;button&gt;</code>).</p>
-            <p>
+            <p class="fsa-level">
               <a class="fsa-badge fsa-badge--general" href="link.html">A</a>
               <button class="fsa-badge fsa-badge--general" type="button">B</button>
               <button class="fsa-badge fsa-badge--general" type="button" disabled="disabled">Z</button>
@@ -3155,12 +3142,12 @@
           </div>
           <div class="docs__bd">
             <p class="docs__code-sample"><code>class="fsa-growl <strong>fsa-growl--[variation]</strong>"</code></p>
-            <p>
-              <button class="fsa-btn fsa-btn--secondary" data-behavior="growl-show" aria-controls="UNIQUE-ID-AC598060D7502E9E" aria-expanded="false" type="button">Default</button>
-              <button class="fsa-btn fsa-btn--secondary" data-behavior="growl-show" aria-controls="UNIQUE-ID-8A386E512C033F57" aria-expanded="false" type="button">Success</button>
-              <button class="fsa-btn fsa-btn--secondary" data-behavior="growl-show" aria-controls="UNIQUE-ID-BC33C95AA75A8E1C" aria-expanded="false" type="button">Warning</button>
-              <button class="fsa-btn fsa-btn--secondary" data-behavior="growl-show" aria-controls="UNIQUE-ID-832353AD65DB511B" aria-expanded="false" type="button">Error</button>
-              <button class="fsa-btn fsa-btn--secondary" data-behavior="growl-show whiteout-show" aria-controls="UNIQUE-ID-9469E21387FAF609" aria-expanded="false" type="button">Centered (Prompt)</button>
+            <p class="fsa-level">
+              <span><button class="fsa-btn fsa-btn--secondary" data-behavior="growl-show" aria-controls="UNIQUE-ID-AC598060D7502E9E" aria-expanded="false" type="button">Default</button></span>
+              <span><button class="fsa-btn fsa-btn--secondary" data-behavior="growl-show" aria-controls="UNIQUE-ID-8A386E512C033F57" aria-expanded="false" type="button">Success</button></span>
+              <span><button class="fsa-btn fsa-btn--secondary" data-behavior="growl-show" aria-controls="UNIQUE-ID-BC33C95AA75A8E1C" aria-expanded="false" type="button">Warning</button></span>
+              <span><button class="fsa-btn fsa-btn--secondary" data-behavior="growl-show" aria-controls="UNIQUE-ID-832353AD65DB511B" aria-expanded="false" type="button">Error</button></span>
+              <span><button class="fsa-btn fsa-btn--secondary" data-behavior="growl-show whiteout-show" aria-controls="UNIQUE-ID-9469E21387FAF609" aria-expanded="false" type="button">Centered (Prompt)</button></span>
             </p>
           </div>
         </div>
@@ -3269,7 +3256,7 @@
           <div class="docs__bd">
             <p class="docs__code-sample"><code>class="fsa-label <strong>fsa-label--[type] fsa-label--[size]</strong>"</code></p>
             <h4 class="docs__sub_style">Variations</h4>
-            <p>
+            <p class="fsa-level">
               <span class="fsa-label">Label</span>
               <span class="fsa-label fsa-label--neutral">Lorem ipsum</span>
               <span class="fsa-label fsa-label--general">Lorem ipsum</span>
@@ -3278,7 +3265,7 @@
               <span class="fsa-label fsa-label--success">Label</span>
             </p>
             <h4 class="docs__sub_style">Large</h4>
-            <p>
+            <p class="fsa-level">
               <span class="fsa-label fsa-label--large">Label</span>
               <span class="fsa-label fsa-label--large fsa-label--neutral">Lorem</span>
               <span class="fsa-label fsa-label--large fsa-label--general">Lorem ipsum</span>
@@ -3287,7 +3274,7 @@
               <span class="fsa-label fsa-label--large fsa-label--success">Label</span>
             </p>
             <h4 class="docs__sub_style">Extra Large</h4>
-            <p>
+            <p class="fsa-level">
               <span class="fsa-label fsa-label--extra-large">Label</span>
               <span class="fsa-label fsa-label--extra-large fsa-label--neutral">Lorem</span>
               <span class="fsa-label fsa-label--extra-large fsa-label--general">Lorem ipsum</span>
@@ -3296,7 +3283,7 @@
               <span class="fsa-label fsa-label--extra-large fsa-label--success">Label</span>
             </p>
             <h4 class="docs__sub_style">Dismissable</h4>
-            <p>
+            <p class="fsa-level">
               <span class="fsa-label fsa-label--dismissable">
                 Label
                 <button class="fsa-label__remove" aria-label="Remove" title="Remove"></button>
@@ -3308,7 +3295,7 @@
             </p>
             <h4 class="docs__sub_style">HTML Elements</h4>
             <p>Label styles can be applied to nearly any <strong>HTML</strong> element, most likely <code>&lt;span&gt;</code> as shown above. Actionable examples seen below (<code>&lt;a&gt;</code> and <code>&lt;button&gt;</code>).</p>
-            <p>
+            <p class="fsa-level">
               <a class="fsa-label fsa-label--general" href="link.html">Anchor</a>
               <button class="fsa-label fsa-label--general" type="button">Button</button>
               <button class="fsa-label fsa-label--general" type="button" disabled="disabled">Disabled Button</button>
@@ -3322,12 +3309,12 @@
           </div>
           <div class="docs__bd">
             <p class="docs__code-sample"><code>class="fsa-modal <strong>fsa-modal--[size]</strong>"</code></p>
-            <p>
-              <button class="fsa-btn fsa-btn--secondary" data-behavior="open-modal" aria-controls="UNIQUE-ID-GGFD36765SSSGH" aria-expanded="false" type="button">Default</button>
-              <button class="fsa-btn fsa-btn--secondary" data-behavior="open-modal" aria-controls="UNIQUE-ID-2345SFGER99786" aria-expanded="false" type="button">Top</button>
-              <button class="fsa-btn fsa-btn--secondary" data-behavior="open-modal" aria-controls="UNIQUE-ID-23458CF9J99DIS" aria-expanded="false" type="button">Small</button>
-              <button class="fsa-btn fsa-btn--secondary" data-behavior="open-modal" aria-controls="UNIQUE-ID-23458CF77S77S7" aria-expanded="false" type="button">Large</button>
-              <button class="fsa-btn fsa-btn--secondary" data-behavior="open-modal" aria-controls="UNIQUE-ID-23451CF80S77S9" aria-expanded="false" type="button">Fullscreen</button>
+            <p class="fsa-level">
+              <span><button class="fsa-btn fsa-btn--secondary" data-behavior="open-modal" aria-controls="UNIQUE-ID-GGFD36765SSSGH" aria-expanded="false" type="button">Default</button></span>
+              <span><button class="fsa-btn fsa-btn--secondary" data-behavior="open-modal" aria-controls="UNIQUE-ID-2345SFGER99786" aria-expanded="false" type="button">Top</button></span>
+              <span><button class="fsa-btn fsa-btn--secondary" data-behavior="open-modal" aria-controls="UNIQUE-ID-23458CF9J99DIS" aria-expanded="false" type="button">Small</button></span>
+              <span><button class="fsa-btn fsa-btn--secondary" data-behavior="open-modal" aria-controls="UNIQUE-ID-23458CF77S77S7" aria-expanded="false" type="button">Large</button></span>
+              <span><button class="fsa-btn fsa-btn--secondary" data-behavior="open-modal" aria-controls="UNIQUE-ID-23451CF80S77S9" aria-expanded="false" type="button">Fullscreen</button></span>
             </p>
             <h4 class="docs__bd fsa-show@l">Responsive</h4>
             <div class="fsa-hide@l">

@@ -19,7 +19,7 @@ $label-dismiss-width: 1.33em;
     padding: $label-spacing ($label-spacing + .1rem);
     letter-spacing: .5px;
     border-radius: 2px;
-    box-shadow: 0 -1px 0 adjust-color($color-fsa-tertiary, $alpha: -0.85) inset;
+    box-shadow: 0 -1px 0 adjust-color($color-fsa-tertiary, $alpha: -0.75) inset;
     a &,
     button & {
       cursor: pointer;
@@ -122,7 +122,7 @@ a.fsa-label {
   &:active {
     cursor: pointer;
     box-shadow:
-      0 -1px 0   adjust-color($color-fsa-tertiary, $alpha: -0.20) inset,
+      0 -1px 0   adjust-color($color-fsa-tertiary, $alpha: -0.10) inset,
       0 0 0 1px  adjust-color($color-fsa-tertiary, $alpha: -0.60) inset
     ;
   }

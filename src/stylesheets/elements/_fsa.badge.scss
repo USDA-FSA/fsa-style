@@ -18,7 +18,7 @@ $badge-spacing: ($size-base - .1rem);
     text-align: center;
     cursor: initial;
     padding: $badge-spacing ($badge-spacing * 2);
-    box-shadow: 0 -1px 0 adjust-color($color-fsa-tertiary, $alpha: -0.85) inset;
+    box-shadow: 0 -1px 0 adjust-color($color-fsa-tertiary, $alpha: -0.75) inset;
     a &,
     button & {
       cursor: pointer;
@@ -27,10 +27,6 @@ $badge-spacing: ($size-base - .1rem);
 
   &:visited {
     color: $marker-text-color;
-  }
-
-  &:not(:empty) + & {
-    margin-left: ($badge-spacing / 2);
   }
 
   &[disabled] {
@@ -48,8 +44,8 @@ $badge-spacing: ($size-base - .1rem);
   &--neutral {
     background-color: $marker-bgc-neutral;
     box-shadow:
-      0 -1px 0   adjust-color($color-fsa-tertiary, $alpha: -0.70) inset,
-      0 0 0 1px  adjust-color($color-fsa-tertiary, $alpha: -0.80) inset
+      0 -1px 0  adjust-color($color-fsa-tertiary, $alpha: -0.60) inset,
+      0 0 0 1px adjust-color($color-fsa-tertiary, $alpha: -0.70) inset
     ;
   }
 

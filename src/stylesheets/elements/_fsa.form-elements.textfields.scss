@@ -227,7 +227,7 @@
 }
 
 // File input type
-[type='file'] {
+[type=file] {
 
   height: auto;
   font-size: $font-size-1;
@@ -255,6 +255,10 @@
     @include file-upload-button;
   }
 
+}
+
+[type=password] {
+  font-family: $font-mono;
 }
 
 
