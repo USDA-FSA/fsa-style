@@ -919,12 +919,13 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 .docs__rwd-demo-block {
   display: none;
   @include breakpoint(L)   {
+    text-align: center;
     display: block;
   }
 }
 
 .docs__rwd-embed-container {
-  padding: $size-default;
+  padding: $size-medium $size-default;
   background-color: white;
   border: 1px solid $color-fsa-tertiary-200;
 }
