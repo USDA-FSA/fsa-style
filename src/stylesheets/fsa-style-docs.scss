@@ -933,6 +933,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   transition: all .23s ease-in-out;
   border: $size-base solid shade($color-fsa-tertiary-100,2%);
   margin: auto;
+  margin-top: $size-medium;
   position: relative;
   &--phone {
     width: 340px;
