@@ -44,6 +44,7 @@
       border-bottom-width: 1px;
       border-left-width: 1px;
 
+      .fsa-section--fullscreen &,
       &.fsa-stepped-control--modal {
         bottom: 0;
       }
