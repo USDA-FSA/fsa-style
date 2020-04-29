@@ -82,7 +82,8 @@ $growlDistance: 110%;
     @include breakpoint(L) {
       position: fixed;
       left: 50%;
-      top: $size-extra-large;
+      top: ($size-extra-large * 3);
+      top: 20vh;
       transform: translate(-50%, 0);
     }
 
