@@ -1,23 +1,85 @@
-////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
 // Text Fields
+
+@mixin textFieldMedium() {
+  @include fsa-shared-form-properties();
+  @include placeholder { color: $form-placeholder-color; }
+  padding:
+    ($form-padding - .1rem) // to achieve vertical alignment
+    ($form-padding)
+    ($form-padding)
+  ;
+}
+
+@mixin textFieldSmall() {
+  height: $button-height--sm;
+  font-size: $form-text-size--sm;
+}
+
+@mixin textFieldLarge() {
+  height: $button-height--lg;
+  font-size: $form-text-size--lg;
+  padding-left: $form-padding + $size-base;
+}
+
+@mixin textFieldBlock() {
+  display: block;
+  width: 100%;
+}
+
+@mixin textFieldInline() {
+  display: initial;
+  width: initial;
+}
 
 .fsa-input,
 .fsa-textarea {
 
-  @include fsa-shared-form-properties();
+  // --------------------------------------------------------------------------
+  // Variations
 
-  & {
-    // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
-    padding:
-      ($form-padding - .1rem) // to achieve vertical alignment
-      ($form-padding)
-      ($form-padding)
-    ;
+  &          { @include textFieldMedium(); }
+  &--small   { @include textFieldSmall();  }
+  &--medium  { @include textFieldMedium(); }
+  &--large   { @include textFieldLarge();  }
+  &--block   { @include textFieldBlock();  }
+  &--inline  { @include textFieldBlock();  }
+
+  @include breakpoint(S) {
+    &--small\@s  { @include textFieldSmall(); }
+    &--medium\@s { @include textFieldMedium(); }
+    &--large\@s  { @include textFieldLarge(); }
+    &--block\@s  { @include textFieldBlock(); }
+    &--inline\@s { @include textFieldInline(); }
   }
 
-  @include placeholder {
-    color: $form-placeholder-color;
+  @include breakpoint(M) {
+    &--small\@m  { @include textFieldSmall(); }
+    &--medium\@m { @include textFieldMedium(); }
+    &--large\@m  { @include textFieldLarge(); }
+    &--block\@m  { @include textFieldBlock(); }
+    &--inline\@m { @include textFieldInline(); }
   }
+
+  @include breakpoint(L) {
+    &--small\@l  { @include textFieldSmall(); }
+    &--medium\@l { @include textFieldMedium(); }
+    &--large\@l  { @include textFieldLarge(); }
+    &--block\@l  { @include textFieldBlock(); }
+    &--inline\@l { @include textFieldInline(); }
+  }
+
+  @include breakpoint(XL) {
+    &--small\@xl  { @include textFieldSmall(); }
+    &--medium\@xl { @include textFieldMedium(); }
+    &--large\@xl  { @include textFieldLarge(); }
+    &--block\@xl  { @include textFieldBlock(); }
+    &--inline\@xl { @include textFieldInline(); }
+  }
+
+
+  // --------------------------------------------------------------------------
+  // States
 
   &:focus {
     border-color: $form-focus-color;
@@ -56,22 +118,6 @@
       border-color: transparent;
     }
 
-  }
-
-  &--block {
-    display: block;
-    width: 100%;
-  }
-
-  &--small {
-    height: $button-height--sm;
-    font-size: $form-text-size--sm;
-  }
-
-  &--large {
-    height: $button-height--lg;
-    font-size: $form-text-size--lg;
-    padding-left: $form-padding + $size-base;
   }
 
 }

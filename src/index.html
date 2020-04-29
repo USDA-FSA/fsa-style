@@ -3007,27 +3007,21 @@
               <input class="fsa-input fsa-input--block" readonly="" type="text" name="some_name" value="readonly">
             </p>
             <h4 class="docs__sub_style">Custom Width</h4>
-            <p>Though rarely necessary, the width of <code>.fsa-input</code> can be overridden by using the <code>size</code> attribute, whici specifies the width of the input in characters. From a display perspective, one character is equivalent to <code>1em</code> (approximately <code>17px</code> in with <code>fsa-style</code>'s typography system).</p>
-            <div class="fsa-level">
+            <p>Though rarely necessary, the width of <code>.fsa-input</code> can be overridden by using the <code>size</code> attribute, which specifies the width of the input in characters. From a display perspective, one character is equivalent to <code>1em</code> (approximately <code>17px</code> with <code>fsa-style</code>'s typography system).</p>
+            <h5>Examples</h5>
+            <p class="docs__code-sample"><code>&lt;input class="fsa-input" <strong>size="[#]"</strong> .... &gt;</code></p>
+            <div class="fsa-level@l">
               <div>
                 <div class="docs__code-sample"><code>size="<strong>2</strong>"</code></div>
                 <input class="fsa-input" size="2" type="text" name="some_name" value="">
-              </div>
-              <div>
-                <div class="docs__code-sample"><code>size="<strong>5</strong>"</code></div>
-                <input class="fsa-input" size="5" type="text" name="some_name" value="">
-              </div>
-              <div>
-                <div class="docs__code-sample"><code>size="<strong>7</strong>"</code></div>
-                <input class="fsa-input" size="7" type="text" name="some_name" value="">
               </div>
               <div>
                 <div class="docs__code-sample"><code>size="<strong>14</strong>"</code></div>
                 <input class="fsa-input" size="14" type="text" name="some_name" value="">
               </div>
               <div>
-                <div class="docs__code-sample"><code>size="<strong>28</strong>"</code></div>
-                <input class="fsa-input" size="29" type="text" name="some_name" value="">
+                <div class="docs__code-sample"><code>size="<strong>55</strong>"</code></div>
+                <input class="fsa-input" size="55" type="text" name="some_name" value="">
               </div>
             </div>
             <h4 class="docs__sub_style">Error</h4>
@@ -3601,11 +3595,11 @@
                 <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
                   <button data-behavior="toggle-rwd-size" data-target="rwd-demo_splash" data-size="phone" class="fsa-btn-group__item" aria-selected="true" type="button" title="Portrait"><span class="sr-only">Portrait</span> Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
                   <button data-behavior="toggle-rwd-size" data-target="rwd-demo_splash" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape"><span class="sr-only">Landscape</span> Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
-                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_splash" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
-                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_splash" data-size="desktop" class="fsa-btn-group__item fsa-btn-group__item--active" type="button">Desktop</button>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_splash" data-size="tablet" class="fsa-btn-group__item fsa-btn-group__item--active" type="button">Tablet</button>
+                  <button data-behavior="toggle-rwd-size" data-target="rwd-demo_splash" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
                   <a class="fsa-btn-group__item" href="demo/rwd__splash.html" target="_blank" title="View in its own browser window">New window</a>
                 </span>
-                <div class="docs__rwd-embed docs__rwd-embed--desktop" id="rwd-demo_splash">
+                <div class="docs__rwd-embed docs__rwd-embed--tablet" id="rwd-demo_splash">
                   <iframe title="Responsive Demo: splash" src="demo/rwd__splash.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
                 </div>
               </div>
