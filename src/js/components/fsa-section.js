@@ -1,6 +1,6 @@
 var $ = window.jQuery = require('jquery');
 
-$('body').on('click', '[data-behavior~="toggle-fullscreen-components"]', function(event) {
+$('body').on('change', '[data-behavior~="toggle-fullscreen-components"]', function(event) {
 
   $('.fsa-section')    .toggleClass('fsa-section--fullscreen');
   $('.fsa-tophat')     .toggleClass('fsa-tophat--fullscreen');
