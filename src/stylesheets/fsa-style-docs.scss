@@ -139,6 +139,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     background-color: $color-fsa-tertiary-100;
     padding-bottom: $size-large;
     margin-bottom: $size-medium;
+    border-bottom: 1px solid $color-fsa-tertiary-200;
   }
 
   // -----------------------------------------------------------------------------
