@@ -11,13 +11,21 @@
 
   $nav-spacing-unit: $size-default;
 
-  @media print {
-    border-bottom-color: $color-fsa-tertiary-200;
+  & {
+
+    @media print {
+      border-bottom-color: $color-fsa-tertiary-200;
+    }
+
+    @include breakpoint(L) {
+      border-bottom: 1px solid $nav-border-color;
+      background-color: $nav-bgcolor;
+    }
+
   }
 
-  @include breakpoint(L) {
-    border-bottom: 1px solid $nav-border-color;
-    background-color: $nav-bgcolor;
+  &:focus-within {
+    z-index: 99;
   }
 
   &__bd {
