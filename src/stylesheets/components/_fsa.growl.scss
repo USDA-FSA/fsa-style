@@ -57,32 +57,36 @@ $growlDistance: 110%;
 
 .fsa-growl-container {
 
-  pointer-events: none;
   position: fixed;
   top: 0;
   right: 0;
-  left: $growlPadding;
+  left: 0;
   z-index: 1003;
-  padding: $growlPadding;
 
-  max-height: calc(100vh - #{$growlPadding});
+  // max-height: calc(100vh - #{$growlPadding});
+  max-height: 100%;
+  max-height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
 
-  @include breakpoint(L) {
+  @include breakpoint(M) {
     left: auto;
     width: 364px;
   }
 
   &--centered {
 
+    max-height: 100%;
     z-index: 1002;
     animation: none;
 
     @include breakpoint(L) {
+      $topish: ($size-extra-large * 3);
       position: fixed;
       left: 50%;
-      top: ($size-extra-large * 3);
+      top: $topish;
+      max-height: 100%;
+      max-height: calc(100vh - #{$topish});
       top: 20vh;
       transform: translate(-50%, 0);
     }
@@ -100,7 +104,7 @@ $growlDistance: 110%;
   & {
     pointer-events: all;
     box-shadow: 0 $size-base $size-small 0 rgba(0, 0, 0, .25);
-    margin: 0 0 $growlMargin;
+    margin: $growlMargin;
     padding: $growlPadding;
     background-color: $color-fsa-aqua-100;
     border: 1px solid $color-fsa-aqua;
