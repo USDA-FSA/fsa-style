@@ -42,19 +42,45 @@
     }
 
     &:only-child {
-      display: none;
+
+      & {
+        display: inline-block;
+        align-items: center;
+      }
+
+      &:after {
+        display: none;
+      }
+
     }
 
   }
 
   &__link {
 
-    color: $color-fsa-link;
-    text-decoration: none;
+    & {
+      color: $color-fsa-link;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
 
     &:visited,
     &:hover {
       color: $color-fsa-link;
+    }
+
+    &:before {
+      .fsa-breadcrumb__item:only-child & {
+        content: '';
+        display: block;
+        width: $size-default;
+        height: $size-default;
+        margin-right: $size-base;
+        background-image: url('#{$image-path}/chevron-left--link.svg');
+        background-size: 100%; // fallback
+        background-size: contain;
+      }
     }
 
   }

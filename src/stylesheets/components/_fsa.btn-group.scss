@@ -111,6 +111,9 @@
       @include fsa-button(primary);
       background-color: $color-fsa-selection-bg;
       color: $button-secondary-text;
+      .fsa-btn-group & {
+        color: $button-secondary-text; // intentionall over-specific
+      }
       &:hover:not([disabled]) {
         color: $button-primary-text;
       }

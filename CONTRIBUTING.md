@@ -1,6 +1,6 @@
 # Contributing
 
-We're so glad you're thinking about contributing to an FSA open source project! If you're unsure about anything, just ask — submit your issue or pull request anyway. The worst that can happen is we'll politely ask you to change something. We appreciate all friendly contributions, whether they be from FSA collaborators or citizens alike.
+We're so glad you're thinking about contributing to an FPAC open source project! If you're unsure about anything, just ask — submit your issue or pull request anyway. The worst that can happen is we'll politely ask you to change something. We appreciate all friendly contributions, whether they be from FPAC collaborators or citizens alike.
 
 One of our goals is to ensure a welcoming environment for all contributors to our projects. Our staff follows the [FSA Employee Responsibilities and Conduct](http://www.fsa.usda.gov/FSA/hrdapp?area=home&subject=labr&topic=erc), and all contributors should do the same.
 
@@ -19,7 +19,7 @@ To help us get a better understanding of the issue you're submitting, follow our
 Here are a few guidelines to follow when submitting a pull request:
 
 1. Create a GitHub account or sign in to your existing account.
-1. Fork this repo into your GitHub account (or just clone it if you're a member of the USDA-FSA GitHub Organization). Read more about [forking a GitHub repository](https://help.github.com/articles/fork-a-repo).
+1. Fork this repo into your GitHub account (or just clone it if you're a member of the FPAC , nee USDA-FSA, GitHub Organization). Read more about [forking a GitHub repository](https://help.github.com/articles/fork-a-repo).
 1. Create a branch that lightly defines what you're working on (for example, `proposed-foo-styles`).
 1. Ensure that your contribution works via `npm`, if applicable. See below under
    _Install the package locally via `npm-link`_.
@@ -31,7 +31,7 @@ Have questions or need help with setup? Open an issue here [https://github.com/1
 
 ### Building fsa-style locally with Grunt
 
-The FSA Design System's [fsa-style](https://github.com/USDA-FSA/fsa-style) package (the ZIP download or contents of published NPM module) and Design System website (our public site that displays examples of each component and the HTML code) are built using Grunt automation. To use Grunt, first make sure you've installed it on your machine globally.
+The FPAC Design System's [fsa-style](https://github.com/USDA-FSA/fsa-style) package (the ZIP download or contents of published NPM module) and Design System website (our public site that displays examples of each component and the HTML code) are built using Grunt automation. To use Grunt, first make sure you've installed it on your machine globally.
 
 ```sh
 npm install --global grunt-cli
