@@ -213,10 +213,10 @@
         border-bottom: 1px solid $component-bgcolor;
       }
 
-      .fsa-header-app__home-link:only-child & {
-        display: none;
-      }
+    }
 
+    &:only-child:after {
+      display: none;
     }
 
   }
