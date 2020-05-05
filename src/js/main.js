@@ -23,3 +23,4 @@ var SpinboxComponent = require('./components/fsa-spinbox');
 var ProgressComponent = require('./components/fsa-progress');
 var AlertComponent = require('./components/fsa-alert');
 var TableComponent = require('./components/fsa-table');
+var SectionComponent = require('./components/fsa-section');

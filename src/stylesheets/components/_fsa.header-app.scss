@@ -15,7 +15,6 @@
 
     display: flex;
     align-items: baseline;
-    max-width: ($site-max-width + 24px);
     margin-left: auto;
     margin-right: auto;
     text-align: left;
@@ -26,6 +25,11 @@
       ($component-spacing + ($component-spacing / 2))
       ($component-spacing / 2)
     ;
+    max-width: ($site-max-width + 24px);
+
+    .fsa-header-app--fullscreen > & {
+      max-width: none;
+    }
 
     @include breakpoint(M) {
       padding-top: ($component-spacing * 4);
@@ -42,7 +46,7 @@
 
   &__secondary {
 
-    @include font-size(1);
+    font-size: 1.2rem;
     position: relative;
     display: flex;
     align-items: flex-end;
@@ -50,6 +54,10 @@
     margin-left: auto;
     padding-left: $component-spacing;
     padding-bottom: ($component-spacing / 4);
+
+    @include breakpoint(M) {
+      @include font-size(1);
+    }
 
     @include breakpoint(L) {
       @include font-size(2);
@@ -207,12 +215,36 @@
 
     }
 
+    &:only-child:after {
+      display: none;
+    }
+
   }
 
   &__app-full {
 
     display: none;
     font-weight: $font-light;
+
+    &:only-child {
+      @include fsa-ellipsis();
+      display: block;
+      max-width: $size-base * 39;
+      font-size: 17px;
+      font-weight: bold;
+      @include breakpoint(S) {
+        max-width: $size-base * 67;
+      }
+      @include breakpoint(M) {
+        max-width: $size-base * 80;
+        @include font-size(4);
+        font-weight: $font-light;
+      }
+      @include breakpoint(L) {
+        @include font-size(5);
+        max-width: $size-base * 135;
+      }
+    }
 
     @include breakpoint(M) {
       display: inline;
@@ -222,6 +254,10 @@
     @include breakpoint(L) {
       display: inline;
       padding-left: $size-small;
+    }
+
+    &:only-child {
+      padding-left: initial;
     }
 
     .fsa-header-app__home-link:hover & {

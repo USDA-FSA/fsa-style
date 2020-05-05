@@ -1,4 +1,5 @@
 $label-spacing: ($size-base - .1rem);
+$label-dismiss-width: 1.33em;
 
 .fsa-label {
 
@@ -18,7 +19,7 @@ $label-spacing: ($size-base - .1rem);
     padding: $label-spacing ($label-spacing + .1rem);
     letter-spacing: .5px;
     border-radius: 2px;
-    box-shadow: 0 -1px 0 adjust-color($color-fsa-tertiary, $alpha: -0.85) inset;
+    box-shadow: 0 -1px 0 adjust-color($color-fsa-tertiary, $alpha: -0.75) inset;
     a &,
     button & {
       cursor: pointer;
@@ -66,6 +67,36 @@ $label-spacing: ($size-base - .1rem);
     letter-spacing: initial;
   }
 
+  &--extra-large {
+    @include font-size(4);
+    padding-left: ($label-spacing * 2.25);
+    padding-right: ($label-spacing * 2.25);
+    letter-spacing: initial;
+  }
+
+  &--dismissable {
+    position: relative;
+    padding-right: ($label-dismiss-width);
+  }
+
+  &__remove {
+    @include reset-button();
+    width: $label-dismiss-width;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    background-image: url('#{$image-path}/close.svg');;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 48%;
+    &[disabled] {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+  }
+
   &[disabled] {
     opacity: .75;
     filter: grayscale(55%);
@@ -91,7 +122,7 @@ a.fsa-label {
   &:active {
     cursor: pointer;
     box-shadow:
-      0 -1px 0   adjust-color($color-fsa-tertiary, $alpha: -0.20) inset,
+      0 -1px 0   adjust-color($color-fsa-tertiary, $alpha: -0.10) inset,
       0 0 0 1px  adjust-color($color-fsa-tertiary, $alpha: -0.60) inset
     ;
   }
