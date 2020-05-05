@@ -21,9 +21,9 @@
     color: $component-text-color;
     // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon
     padding:
-    ($component-spacing * 2)
-    ($component-spacing + ($component-spacing / 2))
-    ($component-spacing / 2)
+      ($component-spacing * 2)
+      ($component-spacing + ($component-spacing / 2))
+      ($component-spacing / 2)
     ;
     max-width: ($site-max-width + 24px);
 
@@ -46,7 +46,7 @@
 
   &__secondary {
 
-    @include font-size(1);
+    font-size: 1.2rem;
     position: relative;
     display: flex;
     align-items: flex-end;
@@ -54,6 +54,10 @@
     margin-left: auto;
     padding-left: $component-spacing;
     padding-bottom: ($component-spacing / 4);
+
+    @include breakpoint(M) {
+      @include font-size(1);
+    }
 
     @include breakpoint(L) {
       @include font-size(2);
@@ -209,6 +213,10 @@
         border-bottom: 1px solid $component-bgcolor;
       }
 
+      .fsa-header-app__home-link:only-child & {
+        display: none;
+      }
+
     }
 
   }
@@ -218,6 +226,26 @@
     display: none;
     font-weight: $font-light;
 
+    &:only-child {
+      @include fsa-ellipsis();
+      display: block;
+      max-width: $size-base * 39;
+      font-size: 17px;
+      font-weight: bold;
+      @include breakpoint(S) {
+        max-width: $size-base * 67;
+      }
+      @include breakpoint(M) {
+        max-width: $size-base * 80;
+        @include font-size(4);
+        font-weight: $font-light;
+      }
+      @include breakpoint(L) {
+        @include font-size(5);
+        max-width: $size-base * 135;
+      }
+    }
+
     @include breakpoint(M) {
       display: inline;
       padding-left: $size-base;
@@ -226,6 +254,10 @@
     @include breakpoint(L) {
       display: inline;
       padding-left: $size-small;
+    }
+
+    &:only-child {
+      padding-left: initial;
     }
 
     .fsa-header-app__home-link:hover & {
