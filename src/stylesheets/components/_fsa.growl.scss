@@ -177,7 +177,7 @@ $growlDistance: 110%;
   }
 
   &__title {
-    @include h3();
+    @include fsa-header('3');
     margin-top: 0;
     margin-bottom: .5em;
     font-family: $font-sans;

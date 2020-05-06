@@ -542,6 +542,10 @@ $breakpoints: (
 
     @include h1(); // from USWDS mixins
 
+    @include breakpoint(M, down) {
+      font-size: 36px;
+    }
+
     .fsa-breadcrumb + & {
       margin-top: 0;
     }

@@ -71,7 +71,7 @@
   }
 
   &__cat-header {
-    @include h3();
+    @include fsa-header('3');
     margin-top: 0;
     font-family: $font-sans;
     color: $white;

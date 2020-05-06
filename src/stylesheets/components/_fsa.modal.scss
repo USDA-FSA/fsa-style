@@ -94,7 +94,7 @@
   }
 
   &__title {
-    @include h2();
+    @include fsa-header('2');
     margin-top: 0;
     margin-bottom: .5em;
     font-weight: normal;

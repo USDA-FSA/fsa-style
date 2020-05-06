@@ -48,7 +48,7 @@ td {
 }
 
 caption {
-  @include h5;
+  @include fsa-header('5');
   font-family: $font-serif;
   margin-bottom: 1.2rem;
   text-align: left;
