@@ -1,4 +1,4 @@
-/*! FSA Style v2.4.2 | http://usda-fsa.github.io/fsa-design-system/ */
+/*! FSA Style v2.5.0 | http://usda-fsa.github.io/fsa-design-system/ */
 
 
 @charset "UTF-8";
@@ -182,6 +182,7 @@ html:hover body::before {
   padding-bottom: 3.6rem;
   margin-bottom: 38.4px;
   margin-bottom: 2.4rem;
+  border-bottom: 1px solid #dbdad9;
 }
 
 @media (min-width: 54em) {
@@ -1027,13 +1028,14 @@ html:hover body::before {
 
 @media (min-width: 54em) {
   .docs__rwd-demo-block {
+    text-align: center;
     display: block;
   }
 }
 
 .docs__rwd-embed-container {
-  padding: 19.2px;
-  padding: 1.2rem;
+  padding: 38.4px 19.2px;
+  padding: 2.4rem 1.2rem;
   background-color: white;
   border: 1px solid #dbdad9;
 }
@@ -1043,6 +1045,8 @@ html:hover body::before {
   border: 6.4px solid #ebebeb;
   border: 0.4rem solid #ebebeb;
   margin: auto;
+  margin-top: 38.4px;
+  margin-top: 2.4rem;
   position: relative;
 }
 
