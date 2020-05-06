@@ -6,6 +6,7 @@
     @extend .usa-alert;
     padding: 1em;
     margin-bottom: 1.5em;
+    border: 1px solid rgba(0,0,0,.07);
     border-left: $size-base solid $color-fsa-tertiary-900;
     background-position: 1rem 2rem;
   }

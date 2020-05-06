@@ -1,0 +1,17 @@
+$divider: fsa-divider;
+$divider-border-color: $box-border-color;
+$divider-border-width: 1px;
+
+.#{$divider} {
+  & {
+    display: block;
+    clear: both;
+    border-top: 1px solid $divider-border-color;
+  }
+  &--strong {
+    border-width: $divider-border-width * 2;
+  }
+  &--stronger {
+    border-width: $divider-border-width * 4;
+  }
+}

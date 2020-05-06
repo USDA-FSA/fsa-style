@@ -12,11 +12,15 @@
   &__bd {
 
     @include font-size(2);
-    max-width: ($site-max-width + 24px);
     margin-left: auto;
     margin-right: auto;
     text-align: left;
     color: $component-text-color;
+    max-width: ($site-max-width + 24px);
+
+    .fsa-tophat--fullscreen > & {
+      max-width: none;
+    }
 
     // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
     padding:

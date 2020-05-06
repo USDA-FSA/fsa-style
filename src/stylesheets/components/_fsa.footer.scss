@@ -35,10 +35,14 @@
 
     margin-left: auto;
     margin-right: auto;
-    max-width: $site-max-width;
     text-align: left;
     padding: $size-medium 0;
     color: white;
+    max-width: $site-max-width;
+
+    .fsa-footer--fullscreen > & {
+      max-width: none;
+    }
 
     @media print {
       max-width: none;
@@ -67,7 +71,7 @@
   }
 
   &__cat-header {
-    @include h3();
+    @include fsa-header('3');
     margin-top: 0;
     font-family: $font-sans;
     color: $white;

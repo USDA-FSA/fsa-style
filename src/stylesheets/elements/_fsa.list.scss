@@ -14,44 +14,6 @@ li {
   margin-bottom: .5em;
 }
 
-.fsa-list {
-
-  &--unstyled {
-
-    @include reset-ul();
-
-    > li {
-      @include reset-li();
-    }
-
-  }
-
-  &--inline {
-
-    @include reset-ul();
-    margin-bottom: 1em;
-
-    > li {
-
-      @include reset-li();
-      display: inline-block;
-      margin-right: $size-small;
-
-      &:last-child {
-        margin-right: 0;
-      }
-
-    }
-
-  }
-
-}
-
-.usa-unstyled-list {
-  // scss-lint:disable PlaceholderInExtend
-  @extend .fsa-list--unstyled;
-}
-
 dl,
 dt,
 dd {
@@ -86,3 +48,42 @@ p {
     margin-top: 0;
   }
 }
+
+.fsa-list {
+
+  &--unstyled {
+
+    @include reset-ul();
+
+    > * {
+      @include reset-li();
+    }
+
+  }
+
+  &--inline {
+
+    @include reset-ul();
+    display: flex;
+    margin-bottom: 1em;
+
+    > * {
+
+      @include reset-li();
+      margin-right: $size-small;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+    }
+
+  }
+
+}
+
+.usa-unstyled-list {
+  // scss-lint:disable PlaceholderInExtend
+  @extend .fsa-list--unstyled;
+}
+

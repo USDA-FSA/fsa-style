@@ -139,6 +139,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     background-color: $color-fsa-tertiary-100;
     padding-bottom: $size-large;
     margin-bottom: $size-medium;
+    border-bottom: 1px solid $color-fsa-tertiary-200;
   }
 
   // -----------------------------------------------------------------------------
@@ -919,12 +920,13 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 .docs__rwd-demo-block {
   display: none;
   @include breakpoint(L)   {
+    text-align: center;
     display: block;
   }
 }
 
 .docs__rwd-embed-container {
-  padding: $size-default;
+  padding: $size-medium $size-default;
   background-color: white;
   border: 1px solid $color-fsa-tertiary-200;
 }
@@ -933,6 +935,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   transition: all .23s ease-in-out;
   border: $size-base solid shade($color-fsa-tertiary-100,2%);
   margin: auto;
+  margin-top: $size-medium;
   position: relative;
   &--phone {
     width: 340px;
@@ -1069,6 +1072,8 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   }
 
 }
+
+
 
 // .cp_embed_wrapper {
 //   /* required for resize to work */
