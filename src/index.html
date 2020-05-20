@@ -184,6 +184,7 @@
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__buttons">Buttons</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__button-group">Button Group</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__checkbox">Checkbox</a></li>
+                <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__date-picker">Date Picker</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__form-fields">Form Fields</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__radio">Radio</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" href="#component__search">Search</a></li>
@@ -960,6 +961,62 @@
               var checkboxIndeterminateExample01 = document.getElementById("sponge-pie----that-isnt-really-a-thing-is-it");
               checkboxIndeterminateExample01.indeterminate = true;
             </script>
+          </div>
+        </div>
+        <div class="docs__jump-target" id="component__date-picker">
+          <div class="docs__bd docs__section-title">
+            <h3 class="docs__figure"><a class="docs__anchor" aria-hidden="true" href="#component__date-picker">#</a>Date Picker</h3>
+            <a class="fsa-btn fsa-btn--secondary fsa-btn--small docs__section-link" href="http://usda-fsa.github.io/fsa-design-system/components/date-picker">Docs <span class="sr-only">for Date Picker</span></a>
+          </div>
+          <div class="docs__bd">
+            <h4>Default</h4>
+            <div class="fsa-field">
+              <label class="fsa-field__label" for="date-picker-basic">Date of Birth</label>
+              <input placeholder="mm/dd/yyyy" class="fsa-input fsa-field__item" id="date-picker-basic" aria-describedby="date-picker-basic__help" aria-required="true" name="date-picker-basic" type="text" value="">
+              <span class="fsa-field__help" id="date-picker-basic__help">Example 05/14/1975</span>
+            </div>
+            <h4>Block (full-width)</h4>
+            <div class="fsa-field fsa-field--block">
+              <label class="fsa-field__label" for="date-picker-block">Date of Birth</label>
+              <input placeholder="mm/dd/yyyy" class="fsa-input fsa-field__item" id="date-picker-block" aria-describedby="date-picker-block__help" aria-required="true" name="date-picker-block" type="text" value="">
+              <span class="fsa-field__help" id="date-picker-block__help">Example 05/14/1975</span>
+            </div>
+            <h4>Disabled</h4>
+            <div class="fsa-field">
+              <label class="fsa-field__label" for="date-picker-disabled">Date of Birth</label>
+              <input placeholder="mm/dd/yyyy" disabled class="fsa-input fsa-field__item" id="date-picker-disabled" aria-describedby="date-picker-disabled__help" aria-required="true" name="date-picker-disabled" type="text" value="">
+              <span class="fsa-field__help" id="date-picker-disabled__help">Example 05/14/1975</span>
+            </div>
+            <h4>Disable Weekends</h4>
+            <div class="fsa-field">
+              <label class="fsa-field__label" for="date-picker-disabledweekends">Select Date</label>
+              <input placeholder="mm/dd/yyyy" class="fsa-input fsa-field__item" id="date-picker-disabledweekends" aria-describedby="date-picker-disabledweekends__help" aria-required="true" name="date-picker-disabledweekends" type="text" value="">
+              <span class="fsa-field__help" id="date-picker-disabledweekends__help">Example 07/04/2019</span>
+            </div>
+            <h4>Upper and Lower Dates</h4>
+            <div class="fsa-field">
+              <label class="fsa-field__label" for="date-picker-upper-lower">Select Date Between 04/07/2019 - Today</label>
+              <input placeholder="mm/dd/yyyy" class="fsa-input fsa-field__item" id="date-picker-upper-lower" aria-describedby="date-picker-upper-lower__help" aria-required="true" name="date-picker-upper-lower" type="text" value="">
+              <span class="fsa-field__help" id="date-picker-upper-lower__help">Example 06/06/2019</span>
+            </div>
+            <h4>Static Calendar Location</h4>
+            <div class="fsa-field">
+              <label class="fsa-field__label" for="date-picker-static-display">Select Date</label>
+              <input placeholder="mm/dd/yyyy" class="fsa-input fsa-field__item" id="date-picker-static-display" aria-describedby="date-picker-static-display__help" aria-required="true" name="date-picker-static-display" type="text" value="">
+              <span class="fsa-field__help" id="date-picker-static-display__help">Example 05/14/1975</span>
+            </div>
+            <h4>Disabled Static Calendar Location</h4>
+            <div class="fsa-field">
+              <label class="fsa-field__label" for="date-picker-static-display-disabled">Select Date</label>
+              <input placeholder="mm/dd/yyyy" disabled class="fsa-input fsa-field__item" id="date-picker-static-display-disabled" aria-describedby="date-picker-static-display-disabled__help" aria-required="true" name="date-picker-static-display-disabled" type="text" value="">
+              <span class="fsa-field__help" id="date-picker-static-display-disabled__help">Example 05/14/1975</span>
+            </div>
+            <h4>Calendar with Status Bar</h4>
+            <div class="fsa-field">
+              <label class="fsa-field__label" for="date-picker-status">Select Date</label>
+              <input placeholder="mm/dd/yyyy" class="fsa-input fsa-field__item" id="date-picker-status" aria-describedby="date-picker-status__help" aria-required="true" name="date-picker-status" type="text" value="">
+              <span class="fsa-field__help" id="date-picker-status__help">Example 05/14/1975</span>
+            </div>
           </div>
         </div>
         <div class="docs__jump-target" id="component__form-fields">
@@ -9125,11 +9182,60 @@
   <script src="js/fsa-style-docs.min.js"></script>
   <script src="js/vendor/fsa-date-picker.js"></script>
   <script>
+
     datePickerController.createDatePicker({
       formElements: { "date-picker-example-0": "%m/%d/%Y" },
       disabledDays:[0,0,0,0,0,1,1]
       //disableFormatting: true // default is false
     });
-  </script>
+
+    datePickerController.createDatePicker({
+      // Associate the text input to a DD/MM/YYYY date format
+      formElements: { "date-picker-basic": "%m/%d/%Y" }
+    });
+
+    datePickerController.createDatePicker({
+      // Associate the text input to a DD/MM/YYYY date format
+      formElements: { "date-picker-block": "%m/%d/%Y" }
+    });
+
+    datePickerController.createDatePicker({
+      // Associate the text input to a DD/MM/YYYY date format
+      formElements: { "date-picker-disabled": "%m/%d/%Y" }
+    });
+
+    datePickerController.createDatePicker({
+      formElements: { "date-picker-disabledweekends": "%m/%d/%Y" },
+      disabledDays:[0,0,0,0,0,1,1]
+    });
+
+    datePickerController.createDatePicker({
+      formElements: { "date-picker-upper-lower": "%m/%d/%Y" },
+    });
+
+    // disabled PRIOR to April 7, 2019
+    datePickerController.setRangeLow("date-picker-upper-lower", '20190407');
+
+    // disabled AFTER today
+    datePickerController.setRangeHigh("date-picker-upper-lower", new Date());
+
+    datePickerController.createDatePicker({
+      formElements: { "date-picker-static-display": "%m/%d/%Y" },
+      disabledDays:[0,0,0,0,0,1,1],
+      staticPos: true
+    });
+
+    datePickerController.createDatePicker({
+      formElements: { "date-picker-static-display-disabled": "%m/%d/%Y" },
+      staticPos: true
+    });
+
+    datePickerController.createDatePicker({
+      formElements: { "date-picker-status": "%m/%d/%Y" },
+      statusFormat:"%l, %d%S %F %Y"
+    });
+
+</script>
+
 </body>
 </html>
