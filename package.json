@@ -1,7 +1,7 @@
 {
   "name": "fsa-style",
-  "description": "Open Source CSS Framework for USDA Farm Production and Conservation",
-  "version": "2.5.0",
+  "description": "Open Source CSS Framework of FPAC Design System",
+  "version": "2.5.1",
   "license": "SEE LICENSE in LICENSE.md",
   "repository": {
     "type": "git",
