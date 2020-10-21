@@ -2,6 +2,7 @@
 
   $colorComplete: $color-fsa-secondary-300;
   $colorActive: $color-fsa-secondary;
+  $colorBgActive: $button-primary-active;
   $colorFuture: $color-fsa-secondary-100;
   $colorFutureActionable: tint($color-fsa-secondary, 80%);
   $colorFutureText: transparentize($color-fsa-base, .3); // $color-fsa-secondary-900
@@ -53,6 +54,11 @@
 
     &:focus {
       outline: 0 !important;
+    }
+
+    &:active,
+    &:active:hover {
+      background-color: $colorBgActive;
     }
 
     @include breakpoint(M) {

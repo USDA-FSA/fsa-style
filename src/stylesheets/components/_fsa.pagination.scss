@@ -106,6 +106,7 @@
     & {
 
       @include reset-button();
+      margin: auto;
       cursor: text;
       color: $color-fsa-link;
       background-color: white;
@@ -132,11 +133,15 @@
     }
 
     &:not(span):focus,
-    &:not(span):active,
     &:not(span):hover {
       cursor: pointer;
       background-color: white;
       box-shadow: 0 0 0 1px $color-fsa-tertiary-200 inset; // maybe try $button-secondary-border
+    }
+
+    &:not(span):active {
+      background-color: $color-fsa-tertiary-100;
+      // box-shadow: 0 0 0 1px $color-fsa-tertiary-300 inset;
     }
 
     &--previous,
