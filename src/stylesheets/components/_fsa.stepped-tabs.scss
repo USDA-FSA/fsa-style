@@ -229,7 +229,13 @@
     }
 
     .fsa-stepped-tabs__label:focus & {
-      @include fsa-focus();
+      outline: 3px solid $color-focus;
+    }
+    .fsa-stepped-tabs__label:focus:not(:focus-visible) & {
+      outline: 0;
+    }
+    .fsa-stepped-tabs__label:focus-visible & {
+      outline: 3px solid $color-focus;
     }
 
     @include breakpoint(L, down) {
