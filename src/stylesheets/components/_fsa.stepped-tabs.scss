@@ -229,7 +229,7 @@
     }
 
     .fsa-stepped-tabs__label:focus & {
-      @include fsa-focus;
+      @include fsa-focus();
     }
 
     @include breakpoint(L, down) {

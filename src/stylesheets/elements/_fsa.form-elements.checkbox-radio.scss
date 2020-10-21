@@ -218,7 +218,7 @@
 
 .fsa-checkbox:focus + label::before,
 .fsa-checkbox:focus + [type="hidden"] + label::before {
-  @include fsa-focus;
+  @include fsa-focus();
   outline-offset: 4px;
 }
 

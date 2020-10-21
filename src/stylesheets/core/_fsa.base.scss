@@ -181,7 +181,7 @@ iframe:focus,
 input:not([disabled]):focus,
 select:not([disabled]):focus,
 textarea:not([disabled]):focus {
-  @include fsa-focus;
+  @include fsa-focus();
 }
 
 @media (prefers-reduced-motion: reduce) {
