@@ -59,4 +59,9 @@
 
   }
 
+  &:active,
+  &:focus-within {
+    outline: 3px solid $color-focus;
+  }
+
 }
