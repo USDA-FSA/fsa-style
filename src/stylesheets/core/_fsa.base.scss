@@ -47,9 +47,18 @@ body {
   }
 }
 
-main:focus,
-main[tabindex]:focus {
-  outline: 0;
+main {
+  // TODO: unclunkify the redundant :focus:focus
+  &:focus,
+  &:focus:focus,
+  &[tabindex]:focus,
+  &[tabindex]:focus:focus,
+  &:focus:focus-visible,
+  &:focus-visible,
+  &[tabindex]:focus:focus-visible,
+  &[tabindex]:focus-visible {
+    outline: 0;
+  }
 }
 
 pre,
