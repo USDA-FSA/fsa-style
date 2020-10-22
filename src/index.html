@@ -4257,6 +4257,32 @@
                 </ul>
               </div>
             </nav>
+            <h4 class="docs__sub_style">HTML Elements</h4>
+            <p>Actionable steps in Pagination will likel be <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code>. Choose the appropriate semantic element. </p>
+            <nav aria-label="Pagination">
+              <div class="fsa-pagination" data-current="1" data-total="120">
+                <ul class="fsa-pagination__list">
+                  <li class="fsa-pagination__item fsa-pagination__item--previous" aria-hidden="true">
+                    <span class="fsa-pagination__label fsa-pagination__label--previous fsa-pagination__label--disabled"><span class="fsa-sr-only">Go to</span> Previous <span class="fsa-sr-only">page</span></span>
+                  </li>
+                  <li class="fsa-pagination__item">
+                    <span class="fsa-pagination__label fsa-pagination__label--current" aria-current="page"><span class="fsa-sr-only">Currently on page</span> 1</span>
+                  </li>
+                  <li class="fsa-pagination__item">
+                    <button type="button" class="fsa-pagination__label"><span class="fsa-sr-only">Go to page</span> 2</button>
+                  </li>
+                  <li class="fsa-pagination__item" aria-hidden="true">
+                    <span class="fsa-pagination__label">…</span>
+                  </li>
+                  <li class="fsa-pagination__item">
+                    <button type="button" class="fsa-pagination__label"><span class="fsa-sr-only">Go to page</span> 120</button>
+                  </li>
+                  <li class="fsa-pagination__item fsa-pagination__item--next">
+                    <button type="button" class="fsa-pagination__label fsa-pagination__label--next"><span class="fsa-sr-only">Go to</span> Next <span class="fsa-sr-only">page</span></button>
+                  </li>
+                </ul>
+              </div>
+            </nav>
             <h4 class="docs__bd fsa-show@l">Responsive</h4>
             <div class="fsa-hide@l">
               <div class="fsa-alert fsa-alert--info fsa-alert--no-icon" role="alert">
