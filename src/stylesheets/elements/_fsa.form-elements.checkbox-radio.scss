@@ -130,6 +130,10 @@
 
 }
 
+.fsa-radio:not(.fsa-radio--solo) + label::before {
+  margin-left: 2px; // warning: magic number ¯\_(ツ)_/¯
+}
+
 .fsa-checkbox--solo + label::before,
 .fsa-radio--solo + label::before,
 .fsa-checkbox--solo + [type="hidden"] + label::before,
