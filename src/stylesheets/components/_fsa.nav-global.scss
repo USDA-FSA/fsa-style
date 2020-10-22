@@ -24,6 +24,14 @@
 
   }
 
+  &--fullscreen {
+    @include breakpoint(L) {
+      padding-left: $nav-spacing-unit;
+      padding-right: $nav-spacing-unit;
+    }
+  }
+
+
   &:focus-within {
     z-index: 99;
   }

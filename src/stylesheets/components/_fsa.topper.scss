@@ -11,6 +11,13 @@
 
   }
 
+  &--fullscreen {
+    @include breakpoint(L) {
+      padding-left: $size-medium;
+      padding-right: $size-medium;
+    }
+  }
+
   &__bd {
 
     margin-left: auto;
