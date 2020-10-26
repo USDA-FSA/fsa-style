@@ -7,7 +7,7 @@ $badge-spacing: ($size-base - .1rem);
     @include font-size(0);
     line-height: 1;
     font-family: $font-sans; // brute-force to override any inheritance (e.g. within an <h1>)
-    font-weight: $font-bold;
+    // font-weight: $font-bold;
     letter-spacing: .5px;
     display: inline-block;
     text-decoration: none;
