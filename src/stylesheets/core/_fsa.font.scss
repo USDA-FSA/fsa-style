@@ -39,7 +39,6 @@
   $file-formats: woff2 woff ttf
 );
 
-// sup
 @include font-face(
   'Public Sans',
   '#{$font-path}/PublicSans-Light',
