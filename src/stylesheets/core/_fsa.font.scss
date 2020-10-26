@@ -41,7 +41,7 @@
 
 @include font-face(
   'Public Sans',
-  '#{$font-path}/PublicSans-Light',
+  '#{$font-path}/PublicSans-ExtraLight',
   400,
   normal,
   $file-formats: woff2 woff ttf
@@ -49,7 +49,7 @@
 
 @include font-face(
   'Public Sans',
-  '#{$font-path}/PublicSans-Italic',
+  '#{$font-path}/PublicSans-LightItalic',
   400,
   italic,
   $file-formats: woff2 woff ttf
