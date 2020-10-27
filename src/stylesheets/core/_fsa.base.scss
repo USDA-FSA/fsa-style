@@ -121,6 +121,10 @@ abbr[title] {
 [for] {
   cursor: pointer;
 }
+output,
+output[for] {
+  cursor: default;
+}
 
 // scss-lint:disable QualifyingElement PlaceholderInExtend
 acronym[title],

@@ -154,23 +154,26 @@
 ////////////////////////////////////////////////////////////////////////
 // Range
 @mixin range-focus {
-  box-shadow: 0 0 0 3px $form-focus-color;
+  box-shadow:
+    0 0 0 3px white,
+    0 0 0 6px $form-focus-color
+  ;
 }
 
 @mixin range-track {
   background: $color-fsa-tertiary-200;
   cursor: pointer;
-  height: $size-default;
+  height: $size-small;
   width: 100%;
+  border-radius: 8px;
 }
 
 @mixin range-thumb {
-  background: #fff;
-  box-shadow: 0 0 0 1px $color-fsa-tertiary-300;
+  background: $color-fsa-secondary;
   border-radius: 100%;
   cursor: pointer;
-  height: $size-medium;
-  width: $size-medium;
+  height: ($size-medium * .8);
+  width: ($size-medium * .8);
 }
 
 @mixin range-ms-fill {
