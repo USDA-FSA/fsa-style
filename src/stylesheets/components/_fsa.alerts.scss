@@ -100,6 +100,7 @@
 
   &__text {
     @extend .usa-alert-text;
+    font-family: $font-sans;
     &:only-child {
       margin-top: .5em;
     }
