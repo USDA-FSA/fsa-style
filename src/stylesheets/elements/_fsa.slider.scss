@@ -1,0 +1,131 @@
+////////////////////////////////////////////////////////////////////////
+// Range
+@mixin range-focus {
+  box-shadow:
+    0 0 0 3px white,
+    0 0 0 6px $form-focus-color
+  ;
+}
+
+@mixin range-track {
+  background: $color-fsa-tertiary-200;
+  cursor: pointer;
+  height: $size-small;
+  width: 100%;
+  border-radius: 8px;
+}
+
+@mixin range-progress {
+  height: $size-small;
+  background-color: $color-fsa-secondary;
+}
+
+@mixin range-thumb {
+  border:0;
+  background: $color-fsa-secondary;
+  border-radius: 100%;
+  cursor: pointer;
+  height: ($size-medium * .8);
+  width: ($size-medium * .8);
+}
+
+@mixin range-ms-fill {
+  background: $color-gray-light;
+  border: 1px solid $color-gray-medium;
+  border-radius: 2rem;
+}
+
+// ::-ms-fill-lower:   The track portion underneath / before the handle.
+// ::-ms-fill-upper:   The track portion above / after the handle.
+// ::-ms-ticks-before: An area above / before the range track with tick marks.
+// ::-ms-ticks-after:  An area below / after the range track with tick marks.
+// ::-ms-thumb:        The handle.
+// ::-ms-track:        The range track itself.
+// ::ms-tooltip:       The tooltip that appears when the user is selecting a value with the range selector. Note that this element cannot be styled, only hidden using
+
+.fsa-slider,
+.fsa-input[type=range],
+[type=range] {
+
+  & {
+    background-color: transparent;
+    appearance: none;
+    border: none;
+    padding-left: 0;
+    display: block;
+    width: 100%;
+    padding: 0;
+    height: $size-medium;
+  }
+
+  &:focus {
+    outline: none !important;
+    box-shadow: none;
+
+    &::-webkit-slider-thumb {
+      @include range-focus;
+    }
+
+    &::-moz-range-thumb {
+      @include range-focus;
+    }
+
+    &::-ms-thumb {
+      @include range-focus;
+      background-color: $color-focus;
+      border: 0;
+    }
+  }
+
+  &::-webkit-slider-runnable-track {
+    @include range-track;
+  }
+
+  &::-moz-range-track {
+    @include range-track;
+  }
+
+  &::-moz-range-progress {
+    @include range-progress;
+  }
+
+  &::-ms-track {
+    @include range-track;
+    height: $size-base;
+    border: 0;
+  }
+
+  &::-webkit-slider-thumb {
+    @include range-thumb;
+    appearance: none;
+    margin-top: -0.6rem;
+  }
+
+  &::-moz-range-thumb {
+    @include range-thumb;
+  }
+
+  &::-ms-thumb {
+    @include range-thumb;
+    box-shadow: none;
+    margin-top: 0;
+    width: $size-default;
+    height: $size-default;
+    border: 0;
+    // border-radius: 0;
+    background-color: $color-fsa-secondary;
+  }
+
+  &::-ms-fill-lower {
+    @include range-ms-fill;
+    background-color: $color-fsa-secondary;
+    border: 0;
+  }
+
+  &::-ms-fill-upper {
+    @include range-ms-fill;
+    background-color: $color-fsa-tertiary-200;
+    border: 0;
+  }
+}
+
