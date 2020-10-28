@@ -35,20 +35,8 @@
   border-radius: 2rem;
 }
 
-// ::-ms-fill-lower:   The track portion underneath / before the handle.
-// ::-ms-fill-upper:   The track portion above / after the handle.
-// ::-ms-ticks-before: An area above / before the range track with tick marks.
-// ::-ms-ticks-after:  An area below / after the range track with tick marks.
-// ::-ms-thumb:        The handle.
-// ::-ms-track:        The range track itself.
-// ::ms-tooltip:       The tooltip that appears when the user is selecting a value with the range selector. Note that this element cannot be styled, only hidden using
-
 :root {
-  --slider-vertical-height: 13rem;
-}
-
-.asdfasdf {
-  color: var(--main-color);
+  --slider-vertical-height: 13.4rem;
 }
 
 .fsa-slider-vertical {
