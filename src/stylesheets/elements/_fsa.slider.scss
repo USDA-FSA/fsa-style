@@ -43,6 +43,12 @@
 // ::-ms-track:        The range track itself.
 // ::ms-tooltip:       The tooltip that appears when the user is selecting a value with the range selector. Note that this element cannot be styled, only hidden using
 
+.fsa-slider-vertical {
+  display: inline-block;
+  width: $size-medium;
+  height: ($size-base * 32);
+}
+
 .fsa-slider,
 .fsa-input[type=range],
 [type=range] {
@@ -52,8 +58,6 @@
     appearance: none;
     border: none;
     padding-left: 0;
-    display: block;
-    width: 100%;
     padding: 0;
     height: $size-medium;
   }
@@ -75,6 +79,18 @@
       background-color: $color-focus;
       border: 0;
     }
+  }
+
+  &:disabled {
+    filter: grayscale(1);
+    cursor: not-allowed;
+  }
+
+  .fsa-slider-vertical & {
+    width: ($size-base * 32);
+    transform-origin: (($size-base * 32) / 2) (($size-base * 32) / 2);
+    transform: rotate(-90deg);
+    margin: 0;
   }
 
   &::-webkit-slider-runnable-track {
@@ -127,5 +143,10 @@
     background-color: $color-fsa-tertiary-200;
     border: 0;
   }
+
 }
 
+.fsa-slider--block {
+  display: block;
+  width: 100%;
+}
