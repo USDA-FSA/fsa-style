@@ -14,6 +14,13 @@
       box-shadow: none !important;
     }
 
+    &--fullscreen {
+      @include breakpoint(L) {
+        padding-left: $size-medium;
+        padding-right: $size-medium;
+      }
+    }
+
   }
 
   a {

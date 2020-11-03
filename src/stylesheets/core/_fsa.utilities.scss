@@ -445,8 +445,16 @@ $breakpoints: (
 
 // -----------------------------------------------------------------------------
 // :focus'ing
-@mixin fsa-focus {
-  outline: 3px solid $color-focus;
+@mixin fsa-focus() {
+  &:focus {
+    outline: 3px solid $color-focus;
+  }
+  &:focus:not(:focus-visible) {
+    outline: 0;
+  }
+  &:focus-visible {
+    outline: 3px solid $color-focus;
+  }
 }
 
 // -----------------------------------------------------------------------------

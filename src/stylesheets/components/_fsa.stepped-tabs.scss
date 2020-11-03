@@ -2,6 +2,7 @@
 
   $colorComplete: $color-fsa-secondary-300;
   $colorActive: $color-fsa-secondary;
+  $colorBgActive: $button-primary-active;
   $colorFuture: $color-fsa-secondary-100;
   $colorFutureActionable: tint($color-fsa-secondary, 80%);
   $colorFutureText: transparentize($color-fsa-base, .3); // $color-fsa-secondary-900
@@ -53,6 +54,11 @@
 
     &:focus {
       outline: 0 !important;
+    }
+
+    &:active,
+    &:active:hover {
+      background-color: $colorBgActive;
     }
 
     @include breakpoint(M) {
@@ -229,7 +235,13 @@
     }
 
     .fsa-stepped-tabs__label:focus & {
-      @include fsa-focus;
+      outline: 3px solid $color-focus;
+    }
+    .fsa-stepped-tabs__label:focus:not(:focus-visible) & {
+      outline: 0;
+    }
+    .fsa-stepped-tabs__label:focus-visible & {
+      outline: 3px solid $color-focus;
     }
 
     @include breakpoint(L, down) {
