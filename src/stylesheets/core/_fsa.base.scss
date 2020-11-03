@@ -10,6 +10,9 @@
 
 html {
   scroll-behavior: smooth;
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: initial;
+  }
 }
 
 html { // http://bit.ly/1qk2tVR
@@ -47,9 +50,11 @@ body {
   }
 }
 
-main:focus,
-main[tabindex]:focus {
-  outline: 0;
+main {
+  &,
+  &:focus {
+    outline: 0 !important;
+  }
 }
 
 pre,
@@ -116,6 +121,10 @@ abbr[title] {
 [for] {
   cursor: pointer;
 }
+output,
+output[for] {
+  cursor: default;
+}
 
 // scss-lint:disable QualifyingElement PlaceholderInExtend
 acronym[title],
@@ -181,7 +190,7 @@ iframe:focus,
 input:not([disabled]):focus,
 select:not([disabled]):focus,
 textarea:not([disabled]):focus {
-  @include fsa-focus;
+  @include fsa-focus();
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -189,7 +198,7 @@ textarea:not([disabled]):focus {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+    scroll-behavior: initial !important;
   }
 }
 

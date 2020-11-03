@@ -1,6 +1,9 @@
 $level: fsa-level;
 
-.#{$level} {}
+.#{$level} {
+  margin: initial;
+  padding: 0;
+}
 
 @mixin levelBase($bp:'') {
 
@@ -14,9 +17,15 @@ $level: fsa-level;
 @mixin level($bp:'') {
   .#{$level} {
 
-    // &#{$bp} > * { outline: 1px solid blue; }
+    &#{$bp} > * {
+      margin-bottom: 0;
+      margin-right: 0;
+      list-style-type: none;
+    }
 
-    &#{$bp} > :not(:last-child) { margin-right: $size-default; }
+    &#{$bp} > :not(:last-child) {
+      margin-right: $size-default;
+    }
 
     &--full#{$bp}   { display: flex; } // default, effectively an override
     &--inline#{$bp} { display: inline-flex; }

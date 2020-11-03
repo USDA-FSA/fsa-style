@@ -29,6 +29,10 @@
 
     .fsa-header-app--fullscreen > & {
       max-width: none;
+      @include breakpoint(L) {
+        padding-left: ($component-spacing * 3);
+        padding-right: ($component-spacing * 3);
+      }
     }
 
     @include breakpoint(M) {

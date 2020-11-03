@@ -19,7 +19,14 @@
     max-width: ($site-max-width + 24px);
 
     .fsa-tophat--fullscreen > & {
+
       max-width: none;
+
+      @include breakpoint(L) {
+        padding-left: ($component-spacing * 6);
+        padding-right: ($component-spacing * 6);
+      }
+
     }
 
     // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
@@ -49,13 +56,7 @@
 
   &__primary,
   &__secondary {
-
     display: inline-block;
-
-    // @include breakpoint(M) {
-    //   flex: 1;
-    // }
-
   }
 
   &__primary {}

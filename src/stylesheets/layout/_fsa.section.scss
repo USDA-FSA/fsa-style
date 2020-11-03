@@ -8,7 +8,12 @@
     border-bottom: 1px solid transparent;
   }
 
-  &--fullscreen {}
+  &--fullscreen {
+    @include breakpoint(L) {
+      padding-left: $size-medium;
+      padding-right: $size-medium;
+    }
+  }
 
   &--dark,
   &--contrast {
