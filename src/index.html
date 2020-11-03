@@ -2541,56 +2541,84 @@
             <a class="fsa-btn fsa-btn--secondary fsa-btn--small docs__section-link" href="http://usda-fsa.github.io/fsa-design-system/components/slider">Docs <span class="sr-only">for Slider</span></a>
           </div>
           <div class="docs__bd">
-            <p class="docs__code-sample"><code>class="fsa-slider [<strong>fsa-slider--block</strong>]"</code></p>
-            <h4 class="docs__sub_style">Default</h4>
-            <input class="fsa-slider" id="lorem-range-2229" name="lorem-range-2229" type="range" min="0" max="100" value="90" step="1">
-            <h4 class="docs__sub_style">Disabled</h4>
-            <input class="fsa-slider" id="lorem-range-3309" name="lorem-range-3309" type="range" min="0" max="100" value="40" step="1" disabled>
-            <h4 class="docs__sub_style">Full-width</h4>
-            <input class="fsa-slider fsa-slider--block" id="lorem-range-4453" name="lorem-range-4453" type="range" min="0" max="100" value="90" step="1">
-            <h4 class="docs__sub_style">Vertical</h4>
-            <div class="fsa-slider-vertical">
-              <input class="fsa-slider" id="lorem-range-2229" name="lorem-range-2229" type="range" min="0" max="100" value="30" step="10">
-            </div>
-            <h4 class="docs__sub_style">Vertical, custom height</h4>
-            <div class="fsa-slider-vertical" style="--slider-vertical-height: 10rem">
-              <input class="fsa-slider" id="lorem-range-2229" name="lorem-range-2229" type="range" min="0" max="100" value="30" step="10">
-            </div>
-            <h4 class="docs__sub_style">Example: with output</h4>
-            <div class="fsa-level">
-              <span>
-                <input class="fsa-slider fsa-slider--block" id="lorem-range-4672" name="lorem-range-4672" type="range" min="0" max="100" value="90" step="1">
-              </span>
-              <span><output id="lorem-range-ouput-6789" name="lorem-range-ouput-6789" for="lorem-range-4672">90</output></span>
-            </div>
-            <h4 class="docs__sub_style">Example: Full-width, with output</h4>
-            <div class="fsa-level">
-              <span class="fsa-level__item--grow-auto">
-                <input class="fsa-slider fsa-slider--block" id="lorem-range-4672" name="lorem-range-4672" type="range" min="0" max="100" value="9" step="1">
-              </span>
-              <span><output id="lorem-range-ouput-6789" name="lorem-range-ouput-6789" for="lorem-range-4672">90</output></span>
-            </div>
-            <h4 class="docs__sub_style">Examples: Within <code>fsa-field</code></h4>
-            <div class="fsa-field">
-              <label class="fsa-field__label" for="lorem-range-1234">Range <span class="fsa-field__label-desc">Required</span></label>
-              <input class="fsa-slider fsa-field__item" id="lorem-range-1234" name="lorem-range-1234" type="range" min="0" max="10" value="3" step="1">
-            </div>
-            <div class="fsa-field">
-              <label class="fsa-field__label" for="lorem-range-7710">Range with output, right <span class="fsa-field__label-desc">Required</span></label>
-              <div class="fsa-level">
-                <span class="fsa-level__item--grow-auto">
-                  <input class="fsa-slider fsa-field__item" id="lorem-range-7710" name="lorem-range-7710" type="range" min="0" max="100" value="90" step="1">
-                </span>
-                <span><output id="lorem-range-ouput-7710" name="lorem-range-ouput-7710" for="lorem-range-7710">90</output></span>
+            <p class="docs__code-sample"><code>class="fsa-slider <strong>fsa-slider--block</strong>"</code>, aka <code>input[type="<strong>range</strong>"]</code></p>
+            <div class="fsa-grid">
+              <div class="fsa-grid__1 fsa-grid__1/3@m">
+                <h4 class="docs__sub_style">Standalone</h4>
+                <input class="fsa-slider" id="lorem-range-2229" name="lorem-range-2229" type="range" min="0" max="100" value="90" step="1">
+              </div>
+              <div class="fsa-grid__1 fsa-grid__1/3@m">
+                <h4 class="docs__sub_style">Full-width</h4>
+                <input class="fsa-slider fsa-slider--block" id="lorem-range-4453" name="lorem-range-4453" type="range" min="0" max="100" value="90" step="1">
+              </div>
+              <div class="fsa-grid__1 fsa-grid__1/3@m">
+                <h4 class="docs__sub_style">Disabled</h4>
+                <input class="fsa-slider" id="lorem-range-3309" name="lorem-range-3309" type="range" min="0" max="100" value="40" step="1" disabled>
               </div>
             </div>
-            <div class="fsa-field">
-              <label class="fsa-field__label" for="lorem-range-6789">Range with output, left <span class="fsa-field__label-desc">Required</span></label>
-              <div class="fsa-level">
-                <span><output id="lorem-range-ouput-6789" name="lorem-range-ouput-6789" for="lorem-range-6789">90</output></span>
-                <span class="fsa-level__item--grow-auto">
-                  <input class="fsa-slider fsa-field__item" id="lorem-range-6789" name="lorem-range-6789" type="range" min="0" max="100" value="90" step="1">
-                </span>
+            <div class="fsa-grid">
+              <div class="fsa-grid__1 fsa-grid__1/3@m">
+                <h4 class="docs__sub_style">Vertical</h4>
+                <div class="fsa-slider-vertical">
+                  <input class="fsa-slider" id="lorem-range-2229" name="lorem-range-2229" type="range" min="0" max="100" value="30" step="10">
+                </div>
+              </div>
+              <div class="fsa-grid__1 fsa-grid__1/3@m">
+                <h4 class="docs__sub_style">Vertical, custom height</h4>
+                <div class="fsa-slider-vertical" style="--slider-vertical-height: 10rem">
+                  <input class="fsa-slider" id="lorem-range-2229" name="lorem-range-2229" type="range" min="0" max="100" value="30" step="10">
+                </div>
+              </div>
+            </div>
+            <div class="fsa-grid">
+              <div class="fsa-grid__1 fsa-grid__1/3@m">
+                <h4 class="docs__sub_style">Example: with output</h4>
+                <div class="fsa-level">
+                  <span>
+                    <input class="fsa-slider fsa-slider--block" id="lorem-range-4672" name="lorem-range-4672" type="range" min="0" max="100" value="90" step="1">
+                  </span>
+                  <span><output id="lorem-range-ouput-6789" name="lorem-range-ouput-6789" for="lorem-range-4672">90</output></span>
+                </div>
+              </div>
+              <div class="fsa-grid__1 fsa-grid__1/3@m">
+                <h4 class="docs__sub_style">Example: Full-width, with output</h4>
+                <div class="fsa-level">
+                  <span class="fsa-level__item--grow-auto">
+                    <input class="fsa-slider fsa-slider--block" id="lorem-range-4672" name="lorem-range-4672" type="range" min="0" max="100" value="9" step="1">
+                  </span>
+                  <span><output id="lorem-range-ouput-6789" name="lorem-range-ouput-6789" for="lorem-range-4672">90</output></span>
+                </div>
+              </div>
+            </div>
+            <h4 class="docs__sub_style">Examples: Within <code>fsa-field</code></h4>
+            <div class="fsa-grid">
+              <div class="fsa-grid__1 fsa-grid__1/3@m">
+                <div class="fsa-field">
+                  <label class="fsa-field__label" for="lorem-range-1234">Range <span class="fsa-field__label-desc">Required</span></label>
+                  <input class="fsa-slider fsa-field__item" id="lorem-range-1234" name="lorem-range-1234" type="range" min="0" max="10" value="3" step="1">
+                </div>
+              </div>
+              <div class="fsa-grid__1 fsa-grid__1/3@m">
+                <div class="fsa-field">
+                  <label class="fsa-field__label" for="lorem-range-7710">Range with output, right <span class="fsa-field__label-desc">Required</span></label>
+                  <div class="fsa-level">
+                    <span class="fsa-level__item--grow-auto">
+                      <input class="fsa-slider fsa-field__item" id="lorem-range-7710" name="lorem-range-7710" type="range" min="0" max="100" value="90" step="1">
+                    </span>
+                    <span><output id="lorem-range-ouput-7710" name="lorem-range-ouput-7710" for="lorem-range-7710">90</output></span>
+                  </div>
+                </div>
+              </div>
+              <div class="fsa-grid__1 fsa-grid__1/3@m">
+                <div class="fsa-field">
+                  <label class="fsa-field__label" for="lorem-range-6789">Range with output, left <span class="fsa-field__label-desc">Required</span></label>
+                  <div class="fsa-level">
+                    <span><output id="lorem-range-ouput-6789" name="lorem-range-ouput-6789" for="lorem-range-6789">90</output></span>
+                    <span class="fsa-level__item--grow-auto">
+                      <input class="fsa-slider fsa-field__item" id="lorem-range-6789" name="lorem-range-6789" type="range" min="0" max="100" value="90" step="1">
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

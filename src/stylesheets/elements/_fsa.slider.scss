@@ -18,6 +18,7 @@
 @mixin range-progress {
   height: $size-small;
   background-color: $color-fsa-secondary;
+  border-radius: 2rem;
 }
 
 @mixin range-thumb {
@@ -56,6 +57,7 @@
     padding-left: 0;
     padding: 0;
     height: $size-medium;
+    vertical-align: text-bottom;
   }
 
   &:focus {
