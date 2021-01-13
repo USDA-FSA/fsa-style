@@ -782,6 +782,16 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
 }
 
+.color-fsa-page-bg {
+  background-color: $color-fsa-site-bg;
+  border: 1px solid $color-fsa-tertiary-200;
+}
+
+.color-fsa-white {
+  background-color: $color-fsa-white;
+  border: 1px solid $color-fsa-tertiary-200;
+}
+
 .color-fsa-primary-dark {
   background-color: $color-fsa-primary-900;
 }
