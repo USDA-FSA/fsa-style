@@ -672,6 +672,20 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       background-size: var(--grid-demo-background-width) 100%;
     }
 
+    & & {
+      --grid-demo-bgcolor-nest: #{tint($color-fsa-aqua, 75%)};
+      --grid-demo-background-columns-nest: repeating-linear-gradient(
+        to right,
+        var(--grid-demo-bgcolor-nest),
+        var(--grid-demo-bgcolor-nest) var(--grid-demo-column-width),
+        transparent var(--grid-demo-column-width),
+        transparent var(--grid-demo-repeating-width)
+      );
+
+      background-image: var(--grid-demo-background-columns-nest);
+
+    }
+
   }
 
   // -----------------------------------------------------------------------------
