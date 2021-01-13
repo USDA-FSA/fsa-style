@@ -13,10 +13,8 @@
 
   &__demo {
 
-    $bgc: transparentize($color-fsa-tertiary, .95);
-
-    background-color: $color-fsa-tertiary-100;
-    background-color: $bgc;
+    padding: 0;
+    background-color: rgba(0, 0, 0, .05);
     box-shadow: 0 0 1px rgba(0,0,0,.7) inset;
 
     code {

@@ -672,6 +672,20 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       background-size: var(--grid-demo-background-width) 100%;
     }
 
+    & & {
+      --grid-demo-bgcolor-nest: #{tint($color-fsa-aqua, 75%)};
+      --grid-demo-background-columns-nest: repeating-linear-gradient(
+        to right,
+        var(--grid-demo-bgcolor-nest),
+        var(--grid-demo-bgcolor-nest) var(--grid-demo-column-width),
+        transparent var(--grid-demo-column-width),
+        transparent var(--grid-demo-repeating-width)
+      );
+
+      background-image: var(--grid-demo-background-columns-nest);
+
+    }
+
   }
 
   // -----------------------------------------------------------------------------
@@ -780,6 +794,16 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   }
 
+}
+
+.color-fsa-page-bg {
+  background-color: $color-fsa-site-bg;
+  border: 1px solid $color-fsa-tertiary-200;
+}
+
+.color-fsa-white {
+  background-color: $color-fsa-white;
+  border: 1px solid $color-fsa-tertiary-200;
 }
 
 .color-fsa-primary-dark {
@@ -956,8 +980,8 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     border-width: $size-large;
   }
   &--desktop {
-    width: 100%;
-    height: 480px;
+    width: 1187px;
+    height: 50vh;
     border-top-width: $size-extra-large;
     &:before {
       content: '← →';
