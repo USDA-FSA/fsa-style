@@ -1,4 +1,4 @@
-/*! FSA Style v2.5.2 | http://usda-fsa.github.io/fsa-design-system/ */
+/*! FSA Style v2.5.3 | http://usda-fsa.github.io/fsa-design-system/ */
 
 
 @charset "UTF-8";
@@ -741,6 +741,18 @@ html:hover body::before {
   background-size: var(--grid-demo-background-width) 100%;
 }
 
+.docs__grid-inventory .docs__grid-inventory {
+  --grid-demo-bgcolor-nest: #bfe9f4;
+  --grid-demo-background-columns-nest: repeating-linear-gradient(
+        to right,
+        var(--grid-demo-bgcolor-nest),
+        var(--grid-demo-bgcolor-nest) var(--grid-demo-column-width),
+        transparent var(--grid-demo-column-width),
+        transparent var(--grid-demo-repeating-width)
+      );
+  background-image: var(--grid-demo-background-columns-nest);
+}
+
 .docs__utilities__demo {
   background-color: rgba(0, 0, 0, 0.1);
   overflow: auto;
@@ -856,6 +868,16 @@ html:hover body::before {
   width: 4.8rem;
   height: 76.8px;
   height: 4.8rem;
+}
+
+.color-fsa-page-bg {
+  background-color: #f7f7f7;
+  border: 1px solid #dbdad9;
+}
+
+.color-fsa-white {
+  background-color: #fff;
+  border: 1px solid #dbdad9;
 }
 
 .color-fsa-primary-dark {
@@ -1075,8 +1097,8 @@ html:hover body::before {
 }
 
 .docs__rwd-embed--desktop {
-  width: 100%;
-  height: 480px;
+  width: 1187px;
+  height: 50vh;
   border-top-width: 76.8px;
   border-top-width: 4.8rem;
 }

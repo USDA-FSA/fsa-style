@@ -1,4 +1,4 @@
-/*! FSA Style v2.5.2 | http://usda-fsa.github.io/fsa-design-system/ */
+/*! FSA Style v2.5.3 | http://usda-fsa.github.io/fsa-design-system/ */
 
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -1336,8 +1336,8 @@ html body template {
 }
 
 .fsa-grid__demo {
-  background-color: #f0f0f0;
-  background-color: rgba(73, 68, 64, 0.05);
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.05);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.7) inset;
 }
 
@@ -7643,8 +7643,8 @@ button.fsa-level:visited,
   box-shadow: 0 -0.4rem 0 0 #75716e inset;
 }
 
-.fsa-content-tabs__label:focus .fsa-content-tabs__label-text {
-  box-shadow: none;
+.fsa-content-tabs__label:active .fsa-content-tabs__label-text {
+  box-shadow: 0 -0.4rem 0 0 #205493 inset;
 }
 
 .fsa-modal {
@@ -9800,10 +9800,6 @@ h1 + .fsa-field {
   outline: 0 !important;
 }
 
-.fsa-stepped-tabs__label:active, .fsa-stepped-tabs__label:active:hover {
-  background-color: #122e51;
-}
-
 @media (min-width: 37.5em) {
   .fsa-stepped-tabs__label {
     font-size: 1.5rem;
@@ -9976,6 +9972,12 @@ h1 + .fsa-field {
     text-overflow: ellipsis;
     max-width: 30vw;
   }
+}
+
+.fsa-stepped-tabs__label[href]:active,
+.fsa-stepped-tabs__label[tabindex]:active,
+button:not([disabled]).fsa-stepped-tabs__label:active {
+  background-color: #122e51;
 }
 
 .fsa-stepped-tabs-note {
@@ -10409,7 +10411,7 @@ h1 + .fsa-field {
   outline-offset: -3px;
 }
 
-.fsa-pagination__label:not(span):focus, .fsa-pagination__label:not(span):hover {
+.fsa-pagination__label:not(span):hover {
   cursor: pointer;
   background-color: white;
   box-shadow: 0 0 0 1px #dbdad9 inset;
