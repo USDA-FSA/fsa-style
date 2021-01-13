@@ -966,8 +966,8 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     border-width: $size-large;
   }
   &--desktop {
-    width: 100%;
-    height: 480px;
+    width: 1187px;
+    height: 50vh;
     border-top-width: $size-extra-large;
     &:before {
       content: '← →';
