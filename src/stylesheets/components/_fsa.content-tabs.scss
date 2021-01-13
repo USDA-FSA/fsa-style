@@ -224,8 +224,8 @@
       box-shadow: 0 (-$size-base) 0 0 $color-fsa-tertiary-300 inset;
     }
 
-    .fsa-content-tabs__label:focus & {
-      box-shadow: none;
+    .fsa-content-tabs__label:active & {
+      box-shadow: 0 (-$size-base) 0 0 $color-fsa-secondary inset;
     }
 
   }
