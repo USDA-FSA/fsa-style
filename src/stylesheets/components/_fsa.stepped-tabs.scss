@@ -250,10 +250,9 @@
 
 .fsa-stepped-tabs__label[href]:active,
 .fsa-stepped-tabs__label[tabindex]:active,
-button:not([disabled]).fsa-stepped-tabs__label:active,
+button:not([disabled]).fsa-stepped-tabs__label:active {
   background-color: $button-primary-active;
 }
-
 
 .fsa-stepped-tabs-note {
   border: 1px solid $color-fsa-red;
