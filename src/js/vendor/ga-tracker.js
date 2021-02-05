@@ -15,34 +15,19 @@ if ('serviceWorker' in navigator) {
     
     trackAction: function(action, label){
       gat.trackedAction = action;
-      if(gat.onProduction){
-        gtag('event', action, {
-          'event_category': gat.trackerName,
-          'event_label': label
-        });
-      }
+      gat.sendToGA(action, gat.trackerName, label);
     },
 
 
     trackScrollDepth: function(perc){
       //console.log('Scroll % -- ', perc)
-      if(gat.onProduction){
-        gtag('event', 'Scroll Percent', {
-          'event_category': gat.trackerName,
-          'event_label': perc
-        });
-      }
+      gat.sendToGA('Scroll Percent', gat.trackerName, perc);
     },
 
     trackLeavePage: function(){
       if(gat.trackingScroll){
         // record last scroll percent
-        if(gat.onProduction){
-          gtag('event', 'Last Scroll', {
-            'event_category': gat.trackerName,
-            'event_label': gat.currentScrollPercent
-          });
-        }
+        gat.sendToGA('Last Scroll', gat.trackerName, gat.currentScrollPercent);
         gat.trackingScroll = false;
       }
     },
@@ -50,38 +35,37 @@ if ('serviceWorker' in navigator) {
     startScrollTracking: function(){
       gat.trackingScroll = true;
       window.addEventListener('scroll', (evt)=>{
-        // calculate scroll position and if it is a multiple of 10, record that value        
+        // Calculate scroll position and if it is a multiple of 10, record that value
+        // This prevents constantly recording the pages scrolled percent in GA 
         let perc = Math.ceil( ((gat.getWindowYScroll() + gat.getWindowHeight()) / gat.getDocHeight()) * 100);
-
         if((perc % 10 == 0) && (perc != gat.currentScrollPercent)){
           gat.trackScrollDepth(perc);
           gat.currentScrollPercent = perc;
         }
-
       });
     },
 
-    /**
-     * Get current browser viewpane heigtht
-     */
+    /*
+      Get current browser viewpane heigtht
+    */
     getWindowHeight: function(){
       return window.innerHeight || 
         document.documentElement.clientHeight ||
         document.body.clientHeight || 0;
     },
     
-    /**
-     * Get current absolute window scroll position
-     */
+    /*
+      Get current absolute window scroll position
+    */
     getWindowYScroll: function(){
       return window.pageYOffset || 
         document.body.scrollTop ||
         document.documentElement.scrollTop || 0;
     },
     
-    /**
-     * Get current absolute document height
-     */
+    /*
+      Get current absolute document height
+    */
     getDocHeight: function(){
       return Math.max(
         document.body.scrollHeight || 0, 
@@ -106,6 +90,14 @@ if ('serviceWorker' in navigator) {
           rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
           rect.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
+    },
+
+    sendToGA: function(typ, cat, lab){
+      if(gat.onProduction){
+        gtag('event', typ, { 'event_category': cat, 'event_label': lab });
+      } else {
+        console.log('GA TRACKING: ' + typ + " | " + cat + " | " + lab)
+      }
     },
 
     setTrackerName: function(trackerName){
