@@ -9387,9 +9387,15 @@
     let datepickers = document.querySelectorAll('[id^="fd-but-"]');
     datepickers.forEach( (dp) => {
       dp.addEventListener('click', (evt) => {
-        trackDemo('Date Picker', 'Example: '+evt.currentTarget.id);
+        trackDemo('Date Picker', 'Example: '+ createLabelFromID(evt.currentTarget.id, 'fd-but-'));
       })
     });
+  }
+
+  function createLabelFromID(id, splitter=null){
+    let newId = splitter != null ? id.split(splitter)[1] : '';
+    newId = newId.split('-').join(' ');
+    return newId;
   }
 
   function trackNavClick(btn){
