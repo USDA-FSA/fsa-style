@@ -85,6 +85,13 @@ module.exports = function (grunt) {
         dest: 'src/js/vendor'
       },
 
+      font_awesome_icons: {
+        expand: true,
+        src: '**',
+        cwd: 'node_modules/@fortawesome/fontawesome-free/svgs/regular',
+        dest: 'src/img/font-awesome-icons'
+      },
+
       // Copy fonts, img, and js **TO** /dist/
 
       fonts: {
