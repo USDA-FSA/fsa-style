@@ -8,14 +8,27 @@
 // TODO: Responsive Sizing
 // TODO: Responsive Sizing
 // TODO: Responsive Sizing
+
+// TODO: Default font-sizeing, EM-based
+// TODO: Default font-sizeing, EM-based
+// TODO: Default font-sizeing, EM-based
+// TODO: Default font-sizeing, EM-based
+// TODO: Default font-sizeing, EM-based
+// TODO: Default font-sizeing, EM-based
+// TODO: Default font-sizeing, EM-based
+// TODO: Default font-sizeing, EM-based
+// TODO: Default font-sizeing, EM-based
+// TODO: Default font-sizeing, EM-based
 //       i.e. fsa-icon--large@m (large icon at M breakpoint)
 
 .fsa-icon {
 
   & {
     fill: currentColor;
-    width: $size-medium;
-    height: $size-medium;
+    background-color: rgba(0,0,0,.05);
+    // outline: 1px solid rgba(0,0,0,.05);
+    width: 1.412em;
+    height: 1.412em;
   }
 
   &--extra-small {
