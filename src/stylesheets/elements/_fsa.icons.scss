@@ -1,0 +1,39 @@
+// TODO: Responsive Sizing
+// TODO: Responsive Sizing
+// TODO: Responsive Sizing
+// TODO: Responsive Sizing
+// TODO: Responsive Sizing
+// TODO: Responsive Sizing
+// TODO: Responsive Sizing
+// TODO: Responsive Sizing
+// TODO: Responsive Sizing
+// TODO: Responsive Sizing
+//       i.e. fsa-icon--large@m (large icon at M breakpoint)
+
+.fsa-icon {
+
+  & {
+    fill: currentColor;
+    width: $size-medium;
+    height: $size-medium;
+  }
+
+  &--extra-small {
+    width: $size-default;
+    height: $size-default;
+  }
+  &--small {
+    width: $size-default + $size-base;
+    height: $size-default + $size-base;
+  }
+  &--large {
+    width: $size-large;
+    height: $size-large;
+  }
+  &--extra-large {
+    width: $size-extra-large;
+    height: $size-extra-large;
+  }
+}
+
+
