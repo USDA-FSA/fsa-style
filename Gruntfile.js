@@ -88,7 +88,7 @@ module.exports = function (grunt) {
       font_awesome_icons: {
         expand: true,
         src: '**',
-        cwd: 'node_modules/@fortawesome/fontawesome-free/svgs/regular',
+        cwd: 'node_modules/@fortawesome/fontawesome-free/svgs/solid',
         dest: 'src/img/font-awesome-icons'
       },
 
