@@ -1,32 +1,25 @@
 // TODO: Responsive Sizing
-// TODO: Responsive Sizing
-// TODO: Responsive Sizing
-// TODO: Responsive Sizing
-// TODO: Responsive Sizing
-// TODO: Responsive Sizing
-// TODO: Responsive Sizing
-// TODO: Responsive Sizing
-// TODO: Responsive Sizing
-// TODO: Responsive Sizing
-
-// TODO: Default font-sizeing, EM-based
-// TODO: Default font-sizeing, EM-based
-// TODO: Default font-sizeing, EM-based
-// TODO: Default font-sizeing, EM-based
-// TODO: Default font-sizeing, EM-based
-// TODO: Default font-sizeing, EM-based
-// TODO: Default font-sizeing, EM-based
-// TODO: Default font-sizeing, EM-based
-// TODO: Default font-sizeing, EM-based
-// TODO: Default font-sizeing, EM-based
 //       i.e. fsa-icon--large@m (large icon at M breakpoint)
+
+// TODO: Build steps
+//       particularly optimizing?
+
+// TODO: Remove inline HTML comments e.g. <!-- Font Awesome Free 5.15.2....
+
+// TODO: Attrtibutes
+//       i.e. <svg class="fsa-icon fsa-icon--extra-small" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">....
+
+// TODO: Attrtibutes
+//       i.e. <svg class="fsa-icon fsa-icon--extra-small" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">....
+
+// TODO: Default font-sizing, EM-based
+//       e.g. 1em when in context of base copy would be 17px, while 1em *within* an <hN> element would be...
 
 .fsa-icon {
 
   & {
     fill: currentColor;
     background-color: rgba(0,0,0,.05);
-    // outline: 1px solid rgba(0,0,0,.05);
     width: 1.412em;
     height: 1.412em;
   }
