@@ -160,7 +160,7 @@
     &--previous:before,
     &--next:after {
       content: '';
-      background-size: 100%;
+      background-size: contain;
       background-repeat: no-repeat;
       display: inline-block;
       width: $arrow-size;
@@ -170,13 +170,15 @@
     }
 
     &--previous:before {
-      background-image: url('#{$image-path}/chevron-left--link.svg');
-      margin-right: $size-small;
+      // background-image: url('#{$image-path}/chevron-left--link.svg');
+      background-image: url('#{$image-path}/font-awesome-icons/chevron-left.svg');
+      margin-right: $size-base;
     }
 
     &--next:after {
-      background-image: url('#{$image-path}/chevron-right--link.svg');
-      margin-left: $size-small;
+      // background-image: url('#{$image-path}/chevron-right--link.svg');
+      background-image: url('#{$image-path}/font-awesome-icons/chevron-right.svg');
+      margin-left: $size-base;
     }
 
     &--disabled {

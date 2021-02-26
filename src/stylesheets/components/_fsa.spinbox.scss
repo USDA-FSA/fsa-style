@@ -176,11 +176,13 @@
     }
 
     &--increment {
-      background-image: url('#{$image-path}/angle-arrow-up-primary.svg');
+      // background-image: url('#{$image-path}/angle-arrow-up-primary.svg');
+      background-image: url('#{$image-path}/font-awesome-icons/chevron-up.svg');
     }
 
     &--decrement {
-      background-image: url('#{$image-path}/angle-arrow-down-primary.svg');
+      // background-image: url('#{$image-path}/angle-arrow-down-primary.svg');
+      background-image: url('#{$image-path}/font-awesome-icons/chevron-down.svg');
       border-top: 0;
       &:focus {
         box-shadow: 0 0 0 1px $form-focus-color inset, 0 1px 0 1px $form-focus-color inset, 1px 0 0 1px $form-focus-color inset;

@@ -54,8 +54,24 @@
         </div>
         <div class="fsa-header-app__secondary">
           <span class="fsa-header-app__profile">
-            <span class="fsa-header-app__profile-name">Brandon Christopher Reuben</span>
-            <a href="https://www.eauth.usda.gov/Logout/logoff.asp" class="fsa-header-app__profile-link">Log out</a>
+            <a href="https://www.eauth.usda.gov/Logout/logoff.asp" class="fsa-header-app__profile-item">
+              <svg class="fsa-icon fsa-icon--small fsa-header-app__profile-icon" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zM262.655 90c-54.497 0-89.255 22.957-116.549 63.758-3.536 5.286-2.353 12.415 2.715 16.258l34.699 26.31c5.205 3.947 12.621 3.008 16.665-2.122 17.864-22.658 30.113-35.797 57.303-35.797 20.429 0 45.698 13.148 45.698 32.958 0 14.976-12.363 22.667-32.534 33.976C247.128 238.528 216 254.941 216 296v4c0 6.627 5.373 12 12 12h56c6.627 0 12-5.373 12-12v-1.333c0-28.462 83.186-29.647 83.186-106.667 0-58.002-60.165-102-116.531-102zM256 338c-25.365 0-46 20.635-46 46 0 25.364 20.635 46 46 46s46-20.636 46-46c0-25.365-20.635-46-46-46z"></path>
+              </svg>
+              Help
+            </a>
+            <span class="fsa-header-app__profile-item">
+              <svg class="fsa-icon fsa-icon--small fsa-header-app__profile-icon" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path>
+              </svg>
+              Brandon Christopher Reuben
+            </span>
+            <a href="https://www.eauth.usda.gov/Logout/logoff.asp" class="fsa-header-app__profile-item">
+              <svg class="fsa-icon fsa-icon--small fsa-header-app__profile-icon" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"></path>
+              </svg>
+              Log out
+            </a>
           </span>
         </div>
       </div>
@@ -257,8 +273,23 @@
                 <p class="fsa-alert__text">Lorem ipsum <strong>bold text</strong>, consectetur adipiscing elit, sed do eiusmod.</p>
               </div>
             </div>
+            <div class="fsa-alert fsa-alert--success" role="alert">
+              <button class="fsa-alert__close" data-behavior="alert-dismiss" type="button" title="Dismiss this message" aria-label="Dismiss this message"></button>
+              <div class="fsa-alert__body">
+                <h3 class="fsa-alert__heading">Optional success title</h3>
+                <p class="fsa-alert__text">Lorem ipsum <strong>bold text</strong>, consectetur adipiscing assumenda harum accusamus nemo non iste quia. Nihil ab tenetur ipsa dolore nisi qui molestias assumenda a perferendis maxime sed do eiusmod.</p>
+              </div>
+            </div>
             <p>
               <span class="fsa-label fsa-label--dismissable">
+                Label
+                <button class="fsa-label__remove" aria-label="Remove" title="Remove"></button>
+              </span>
+              <span class="fsa-label fsa-label--dismissable">
+                Label
+                <button class="fsa-label__remove" disabled aria-label="Remove" title="Remove"></button>
+              </span>
+              <span class="fsa-label fsa-label--large fsa-label--dismissable">
                 Label
                 <button class="fsa-label__remove" aria-label="Remove" title="Remove"></button>
               </span>
@@ -414,7 +445,7 @@
               <div class="fsa-pagination" data-current="1" data-total="120">
                 <ul class="fsa-pagination__list">
                   <li class="fsa-pagination__item fsa-pagination__item--previous" aria-hidden="true">
-                    <span class="fsa-pagination__label fsa-pagination__label--previous fsa-pagination__label--disabled"><span class="fsa-sr-only">Go to</span> Previous <span class="fsa-sr-only">page</span></span>
+                    <span class="fsa-pagination__label fsa-pagination__label--previous fsa-pagination__label--disabled"><span class="fsa-sr-only">Go to</span>Previous <span class="fsa-sr-only">page</span></span>
                   </li>
                   <li class="fsa-pagination__item">
                     <span class="fsa-pagination__label fsa-pagination__label--current" aria-current="page"><span class="fsa-sr-only">Currently on page</span> 1</span>
@@ -442,16 +473,16 @@
             <ul class="fsa-list--unstyled">
               <li><code>[-]</code> Header App (profile/logout/help)</li>
               <li><code>[x]</code> Global Nav (arrows)</li>
-              <li><code>[-]</code> Inline Alerts</li>
-              <li><code>[-]</code> Search</li>
-              <li><code>[-]</code> Growl Notification</li>
-              <li><code>[-]</code> Select</li>
-              <li><code>[-]</code> Spinbox</li>
-              <li><code>[-]</code> Modal</li>
-              <li><code>[-]</code> Pagination</li>
+              <li><code>[x]</code> Inline Alerts</li>
+              <li><code>[x]</code> Search</li>
+              <li><code>[x]</code> Growl Notification</li>
+              <li><code>[x]</code> Select</li>
+              <li><code>[x]</code> Spinbox</li>
+              <li><code>[x]</code> Modal</li>
+              <li><code>[x]</code> Pagination</li>
               <li><code>[-]</code> Table (sort)</li>
-              <li><code>[-]</code> Date Picker</li>
-              <li><code>[-]</code> Label (close)</li>
+              <li><code>[x]</code> Date Picker</li>
+              <li><code>[x]</code> Label (close)</li>
               <li><code>[-]</code> Breadcrumb(?)</li>
               <li><code>[-]</code> Checkbox(?)</li>
               <li><code>[-]</code> Radio(?)</li>
@@ -470,82 +501,6 @@
     </div>
 
   </main>
-
-  <footer>
-
-    <div class="fsa-topper">
-      <div class="fsa-topper__bd">
-        <a class="fsa-topper__link" href="#main-content">Return to top</a>
-      </div>
-    </div>
-
-    <!-- <div class="fsa-footer-nav">
-      <div class="fsa-footer-nav__bd">
-        <ul class="fsa-footer-nav__list">
-          <li class="fsa-footer-nav__list-item"><a class="fsa-footer-nav__link" href="link.html">Home</a></li>
-          <li class="fsa-footer-nav__list-item"><a class="fsa-footer-nav__link" href="link.html">Nav item 2</a></li>
-          <li class="fsa-footer-nav__list-item"><a class="fsa-footer-nav__link" href="link.html">Another Nav item 3</a></li>
-          <li class="fsa-footer-nav__list-item"><a class="fsa-footer-nav__link" href="link.html">Nav item 4</a></li>
-        </ul>
-      </div>
-    </div> -->
-
-    <div class="fsa-footer">
-      <div class="fsa-footer__bd">
-        <div class="fsa-grid">
-          <div class="fsa-footer__primary fsa-grid__1/1 fsa-grid__9/12@l">
-            <div class="fsa-grid">
-              <div class="fsa-grid__1/1 fsa-grid__1/3@m">
-                <h3 class="fsa-footer__cat-header">Program Information</h3>
-                <ul class="fsa-footer__list">
-                  <li class="fsa-footer__list-item"><a href="link.html" target="_blank">About XMPL</a></li>
-                  <li class="fsa-footer__list-item"><a href="link.html" target="_blank">XMPL - Handbook 1</a></li>
-                  <li class="fsa-footer__list-item"><a href="link.html" target="_blank">XMPL - Handbook 2</a></li>
-                </ul>
-              </div>
-              <div class="fsa-grid__1/1 fsa-grid__1/3@m">
-                <h3 class="fsa-footer__cat-header">Agency Guidelines</h3>
-                <ul class="fsa-footer__list">
-                  <li class="fsa-footer__list-item"><a href="link.html" target="_blank">Publications</a></li>
-                  <li class="fsa-footer__list-item"><a href="link.html" target="_blank">Handbooks</a></li>
-                  <li class="fsa-footer__list-item"><a href="link.html" target="_blank">Notices</a></li>
-                  <li class="fsa-footer__list-item"><a href="link.html" target="_blank">FFAS Employee Forms</a></li>
-                  <li class="fsa-footer__list-item"><a href="link.html" target="_blank">Software Transmittals</a></li>
-                </ul>
-              </div>
-              <div class="fsa-grid__1/1 fsa-grid__1/3@m">
-                <h3 class="fsa-footer__cat-header">Resources</h3>
-                <ul class="fsa-footer__list">
-                  <li class="fsa-footer__list-item"><a href="link.html" target="_blank">Inside FSA</a></li>
-                  <li class="fsa-footer__list-item"><a href="link.html" target="_blank">Policies and Links</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="fsa-footer__secondary fsa-grid__1/1 fsa-grid__3/12@l">
-            <ul class="fsa-footer__list fsa-footer__secondary-list">
-              <li class="fsa-footer__list-item fsa-footer__secondary-list-item">
-                <a class="fsa-btn fsa-footer__btn" href="link.html" target="_blank">Contact Us</a>
-              </li>
-              <li class="fsa-footer__list-item fsa-footer__secondary-list-item"><a href="tel:+8005551234" target="_blank">1-800-555-1234</a></li>
-              <li class="fsa-footer__list-item fsa-footer__secondary-list-item"><a href="//www.fsa.usda.gov/" target="_blank">FSA Website</a></li>
-              <li class="fsa-footer__list-item fsa-footer__secondary-list-item"><a href="//www.usda.gov/" target="_blank">USDA Website</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="fsa-screen-id">
-      <div class="fsa-screen-id__bd">
-        <dl class="fsa-screen-id__dl">
-          <dt class="fsa-screen-id__dt">Screen ID</dt>
-          <dd class="fsa-screen-id__dd">XYZ-WEB-007</dd>
-        </dl>
-      </div>
-    </div>
-
-  </footer>
 
   <div tabindex="0" id="UNIQUE-ID-GGFD36765SSSGH" class="fsa-modal" role="dialog" aria-hidden="true">
     <div class="fsa-modal__dialog">

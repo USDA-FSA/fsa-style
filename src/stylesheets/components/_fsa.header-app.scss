@@ -86,9 +86,28 @@
     display: flex;
   }
 
+  &__profile-item {
+    display: inline-flex;
+    align-items: center;
+    text-align: left;
+    & + & {
+      margin-left: $size-default;
+      @include breakpoint(L) {
+        margin-left: $size-medium;
+      }
+    }
+  }
+
+  &__profile-icon {
+    margin-right: $size-base;
+    @include breakpoint(L) {
+      margin-right: $size-small;
+    }
+  }
+
   &__profile-link {
 
-    display: inline-block;
+    display: inline-flex;
     white-space: nowrap;
     margin-left: $size-default;
 
@@ -113,7 +132,7 @@
   &__profile-name {
 
     @include fsa-ellipsis();
-    display: inline-block;
+    display: inline-flex;
     max-width: ($size-base * 32);
     max-width: 18ch;
 

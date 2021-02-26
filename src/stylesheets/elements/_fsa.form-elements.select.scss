@@ -5,10 +5,11 @@
 
   @include fsa-shared-form-properties();
 
-  background-image: url('#{$image-path}/arrow-down.svg');
+  // background-image: url('#{$image-path}/arrow-down.svg');
+  background-size: 1.3rem;
+  background-image: url('#{$image-path}/font-awesome-icons/chevron-down.svg');
   background-position: right 1.3rem center;
   background-repeat: no-repeat;
-  background-size: 1.3rem;
 
   // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
   padding:

@@ -231,7 +231,8 @@
         margin-left: ($size-small);
         width: ($size * .66);
         height: ($size * .66);
-        background-image: url('#{$image-path}/angle-arrow-down.svg');
+        // background-image: url('#{$image-path}/angle-arrow-down.svg');
+        background-image: url('#{$image-path}/font-awesome-icons/chevron-down.svg');
         background-size: 100%;
         background-repeat: no-repeat;
 

@@ -62,18 +62,21 @@ $dateCalendar: fsa-date-calendar;
     position: relative;
     top: -1px;
     vertical-align: middle;
+    // background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUAgMAAADw5/WeAAAACVBMVEUAAABJRED///+d7TLCAAAAAXRSTlMAQObYZgAAAC9JREFUCNdjCGEMdRBlCAUBFDJq1apVS+HktMhUOAkSiUwFsSEkHpEoGAkRQTIfACPTLNlYz9hoAAAAAElFTkSuQmCC');
     // background-image: url('#{$image-path}/calendar.png');
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUAgMAAADw5/WeAAAACVBMVEUAAABJRED///+d7TLCAAAAAXRSTlMAQObYZgAAAC9JREFUCNdjCGEMdRBlCAUBFDJq1apVS+HktMhUOAkSiUwFsSEkHpEoGAkRQTIfACPTLNlYz9hoAAAAAElFTkSuQmCC');
+    background-image: url('#{$image-path}/font-awesome-icons/calendar.svg');
+    background-size: $size-medium;
     background-repeat: no-repeat;
     background-position: center;
 
-    &:hover:not(:disabled) {
+    &:active:not(:disabled) {
       // background-image: url('#{$image-path}/calendar--blue.png');
-      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUAgMAAADw5/WeAAAACVBMVEUAAAAAcbz///8Qy/ePAAAAAXRSTlMAQObYZgAAAC9JREFUCNdjCGEMdRBlCAUBFDJq1apVS+HktMhUOAkSiUwFsSEkHpEoGAkRQTIfACPTLNlYz9hoAAAAAElFTkSuQmCC');
+      // background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUAgMAAADw5/WeAAAACVBMVEUAAAAAcbz///8Qy/ePAAAAAXRSTlMAQObYZgAAAC9JREFUCNdjCGEMdRBlCAUBFDJq1apVS+HktMhUOAkSiUwFsSEkHpEoGAkRQTIfACPTLNlYz9hoAAAAAElFTkSuQmCC');
+      opacity: .6;
     }
 
     &--active {
-      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUAgMAAADw5/WeAAAACVBMVEUAAAAAcbz///8Qy/ePAAAAAXRSTlMAQObYZgAAAC9JREFUCNdjCGEMdRBlCAUBFDJq1apVS+HktMhUOAkSiUwFsSEkHpEoGAkRQTIfACPTLNlYz9hoAAAAAElFTkSuQmCC');
+      // background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUAgMAAADw5/WeAAAACVBMVEUAAAAAcbz///8Qy/ePAAAAAXRSTlMAQObYZgAAAC9JREFUCNdjCGEMdRBlCAUBFDJq1apVS+HktMhUOAkSiUwFsSEkHpEoGAkRQTIfACPTLNlYz9hoAAAAAElFTkSuQmCC');
     }
 
     &--date-is-valid {
@@ -237,7 +240,7 @@ $dateCalendar: fsa-date-calendar;
     display: block;
     font-weight: $font-normal;
     cursor: pointer;
-    color: $color-fsa-link;
+    color: transparent;
     margin: 0 0 $size-base;
     text-align: center;
     // text-transform: uppercase;
@@ -247,8 +250,13 @@ $dateCalendar: fsa-date-calendar;
   &__prev-but,
   &__next-but {
 
-    font-size: 36px;
-    padding: 0 $size-default $size-base $size-default;
+    & {
+      font-size: 36px;
+      padding: 0 $size-default $size-base $size-default;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: 2.4rem;
+    }
 
     &:hover {
       color: $color-fsa-link-hover;
@@ -267,19 +275,30 @@ $dateCalendar: fsa-date-calendar;
 
   &__prev-but {
 
-    &--month {}
+    &--month {
+      background-image: url('#{$image-path}/font-awesome-icons/angle-left.svg');
+      background-size: 27%;
+    }
 
     &--year {
+      background-image: url('#{$image-path}/font-awesome-icons/angle-double-left.svg');
       margin-left: $size-small;
     }
 
   }
 
+  // background-size: 50%;
+
+
   &__next-but {
 
-    &--month {}
+    &--month {
+      background-image: url('#{$image-path}/font-awesome-icons/angle-right.svg');
+      background-size: 27%;
+    }
 
     &--year {
+      background-image: url('#{$image-path}/font-awesome-icons/angle-double-right.svg');
       margin-right: $size-small;
     }
 
@@ -289,6 +308,7 @@ $dateCalendar: fsa-date-calendar;
 
     @include font-size(3);
     padding: $size-default $size-default;
+    color: $color-fsa-link;
 
     &.#{$dateCalendar}__disabled-item {
       @include date-calendar-disabled-item(1);
@@ -311,7 +331,12 @@ $dateCalendar: fsa-date-calendar;
   &__prev-but:not(.#{$dateCalendar}__disabled-item):hover,
   &__next-but:not(.#{$dateCalendar}__disabled-item):hover,
   &__today-but:not(.#{$dateCalendar}__disabled-item):hover {
+    color: transparent;
     box-shadow: 0 0 0 1px $color-fsa-tertiary-200 inset; // maybe try $button-secondary-border
+  }
+
+  &__today-but:not(.#{$dateCalendar}__disabled-item):hover {
+    color: $color-fsa-link-hover;
   }
 
   // ----------------------------------------------------------------------------
