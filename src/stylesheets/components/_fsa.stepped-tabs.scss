@@ -27,28 +27,30 @@
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
     list-style: none;
   }
 
   &__item {
     flex: 1;
-    vertical-align: bottom;
   }
 
   &__label {
 
     & {
       @include reset-button();
+      height: 39px;
       cursor: initial;
       display: block;
       width: 100%;
       text-align: center;
       text-decoration: none;
-      padding: ($labelPadding - .1rem) 0 ($labelPadding);
+      padding: ($labelPadding + $size-base) ($labelPadding * 3);
       background-color: $color-fsa-tertiary-100;
       color: $color-fsa-base;
       position: relative;
       font-size: $font-size-0;
+      line-height: 1;
     }
 
     &:focus {
@@ -62,7 +64,17 @@
     @include breakpoint(L) {
       font-weight: $font-bold;
       font-size: $font-size-3;
+      height: 42px;
     }
+
+    .fsa-stepped-tabs__item:first-child & {
+      padding-left: $labelPadding;
+    }
+
+    .fsa-stepped-tabs__item:last-child & {
+      padding-right: $labelPadding;
+    }
+
 
     &:before,
     &:after {
@@ -113,7 +125,6 @@
     &--complete {
 
       background-color: $colorComplete;
-      text-shadow: 1px 1px 0 rgba(0, 0, 0, .6);
       // scss-lint:disable ImportantRule
       color: $color-fsa-white !important;
 
@@ -138,7 +149,7 @@
     &--active {
 
       background-color: $colorActive;
-      text-shadow: 1px 1px 0 $color-black;
+      // text-shadow: 1px 1px 0 $color-black;
       color: $color-fsa-white;
 
       &:focus,
@@ -182,50 +193,20 @@
 
     display: none;
 
-    @include breakpoint(L) {
-      display: inline-block;
-      width: ($size-medium - $size-base);
-      margin-right: $size-base;
-      vertical-align: bottom;
-      filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, .6));
-
-      // scss-lint:disable SelectorFormat
-      .fsa-stepped-tabs__label--incomplete & {
-        filter: none;
-      }
-
-    }
-
-    // scss-lint:disable SelectorFormat
-    &.fsa-icon--contrast {
-      transform: scaleX(-1);
+    @include breakpoint(M) {
+      display: inline;
+      margin-right: $size-small;
     }
 
   }
 
   &__text {
 
-    white-space: nowrap;
-    display: inline-block;
-    vertical-align: middle;
-    padding: 0 ($labelPadding * 2);
-
-    @include breakpoint(M) {
-      padding: 0 ($labelPadding * 3);
-    }
-
-    .fsa-stepped-tabs__item:first-child & {
-      padding-left: ($labelPadding / 2);
-      @include breakpoint(M) {
-        padding-left: $labelPadding * 2;
-      }
-    }
-
-    .fsa-stepped-tabs__item:last-child & {
-      padding-right: ($labelPadding / 2);
-      @include breakpoint(M) {
-        padding-right: $labelPadding * 2;
-      }
+    & {
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      letter-spacing: .25px;
     }
 
     .fsa-stepped-tabs__label:focus & {

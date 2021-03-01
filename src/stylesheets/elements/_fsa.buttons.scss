@@ -83,6 +83,8 @@ $button-flat-border-width: 0;
     font-family: $button-font-family;
     font-weight: $button-font-weight;
     display: inline-block;
+    display: inline-flex;
+    align-items: center;
     border-radius: $button-border-radius;
 
     // scss-lint:disable Shorthand
@@ -352,6 +354,15 @@ $button-flat-border-width: 0;
   &--medium    { @include fsa-button(medium);    }
   &--large     { @include fsa-button(large);     }
   &--flat      { @include fsa-button(flat);      }
+
+  &__icon {
+    &--left {
+      margin-right: $size-small;
+    }
+    &--right {
+      margin-left: $size-small;
+    }
+  }
 
   @include breakpoint(S) {
     &--small\@s { @include fsa-button(small); }

@@ -17,13 +17,6 @@
 
 .fsa-icon {
 
-  $icon-size-1: $size-base * 3;
-  $icon-size-2: $size-base * 4;
-  $icon-size-3: $size-base * 6;
-  $icon-size-4: $size-base * 9;
-  $icon-size-5: $size-base * 12;
-  $icon-size-6: $size-base * 18;
-
   & {
     fill: currentColor;
     width: $icon-size-2;
