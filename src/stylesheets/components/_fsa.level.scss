@@ -1,8 +1,6 @@
 $level: fsa-level;
 
 .#{$level} {
-  margin: initial;
-  padding: 0;
 }
 
 @mixin levelBase($bp:'') {
