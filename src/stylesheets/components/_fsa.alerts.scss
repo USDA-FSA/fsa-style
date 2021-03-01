@@ -46,7 +46,7 @@
   }
 
   &--no-icon {
-    @extend .usa-alert-no_icon;
+    background-image: none;
     padding: $size-small;
   }
 

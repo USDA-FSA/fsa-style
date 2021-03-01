@@ -1,5 +1,5 @@
 // TODO: Responsive Sizing
-//       i.e. fsa-icon--large@m (large icon at M breakpoint)
+//       i.e. fsa-icon--size-4@m (large icon at M breakpoint)
 
 // TODO: Build steps
 //       particularly optimizing?
@@ -7,39 +7,55 @@
 // TODO: Remove inline HTML comments e.g. <!-- Font Awesome Free 5.15.2....
 
 // TODO: Attrtibutes
-//       i.e. <svg class="fsa-icon fsa-icon--extra-small" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">....
+//       i.e. <svg class="fsa-icon fsa-icon--size-1" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">....
 
 // TODO: Attrtibutes
-//       i.e. <svg class="fsa-icon fsa-icon--extra-small" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">....
+//       i.e. <svg class="fsa-icon fsa-icon--size-1" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">....
 
 // TODO: Default font-sizing, EM-based
 //       e.g. 1em when in context of base copy would be 17px, while 1em *within* an <hN> element would be...
 
 .fsa-icon {
 
+  $icon-size-1: $size-base * 3;
+  $icon-size-2: $size-base * 4;
+  $icon-size-3: $size-base * 6;
+  $icon-size-4: $size-base * 9;
+  $icon-size-5: $size-base * 12;
+  $icon-size-6: $size-base * 18;
+
   & {
     fill: currentColor;
-    background-color: rgba(0,0,0,.05);
-    width: 1.412em;
-    height: 1.412em;
+    width: $icon-size-2;
+    height: $icon-size-2;
+    position: relative;
   }
 
-  &--extra-small {
-    width: $size-default;
-    height: $size-default;
+  &--size-1 {
+    width: $icon-size-1;
+    height: $icon-size-1;
   }
-  &--small {
-    width: $size-default + $size-base;
-    height: $size-default + $size-base;
+  &--size-2 {
+    width: $icon-size-2;
+    height: $icon-size-2;
   }
-  &--large {
-    width: $size-large;
-    height: $size-large;
+  &--size-3 {
+    width: $icon-size-3;
+    height: $icon-size-3;
   }
-  &--extra-large {
-    width: $size-extra-large;
-    height: $size-extra-large;
+  &--size-4 {
+    width: $icon-size-4;
+    height: $icon-size-4;
   }
+  &--size-5 {
+    width: $icon-size-5;
+    height: $icon-size-5;
+  }
+  &--size-6 {
+    width: $icon-size-6;
+    height: $icon-size-6;
+  }
+
 }
 
 
