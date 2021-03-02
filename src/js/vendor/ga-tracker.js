@@ -7,6 +7,7 @@ if ('serviceWorker' in navigator) {
     trackerName: '',
     trackedAction: '',
     trackingScroll: false,
+    docsObj: {},
     currentScrollPercent: 0,
 
     getSearchCollection: function(){
@@ -18,10 +19,14 @@ if ('serviceWorker' in navigator) {
       gat.sendToGA(action, gat.trackerName, label);
     },
 
-
     trackScrollDepth: function(perc){
       //console.log('Scroll % -- ', perc)
       gat.sendToGA('Scroll Percent', gat.trackerName, perc);
+    },
+
+    trackDocs: function(action, label){
+      gat.docsObj.action = action;
+      gat.docsObj.label = label;
     },
 
     trackLeavePage: function(){
@@ -29,6 +34,10 @@ if ('serviceWorker' in navigator) {
         // record last scroll percent
         gat.sendToGA('Last Scroll', gat.trackerName, gat.currentScrollPercent);
         gat.trackingScroll = false;
+      }
+      if(gat.docsObj.action != null){
+        // record Docs button clicked
+        gat.sendToGA(gat.docsObj.action, gat.trackerName, gat.docsObj.label);
       }
     },
 
