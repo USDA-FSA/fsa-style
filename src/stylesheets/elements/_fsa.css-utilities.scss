@@ -46,6 +46,7 @@
     &--yellow-100     { color: $color-fsa-yellow-100 !important }
     &--white          { color: $color-fsa-white !important }
     &--black          { color: $color-fsa-black !important }
+    &--transparent    { color: transparent !important }
 
     @include breakpoint(S) {
       &--primary\@s       { color: $color-fsa-primary !important }
@@ -79,6 +80,7 @@
       &--yellow-100\@s    { color: $color-fsa-yellow-100 !important }
       &--white\@s         { color: $color-fsa-white !important }
       &--black\@s         { color: $color-fsa-black !important }
+      &--transparent\@s   { color: transparent !important }
     }
 
     @include breakpoint(M) {
@@ -113,6 +115,7 @@
       &--yellow-100\@m    { color: $color-fsa-yellow-100 !important }
       &--white\@m         { color: $color-fsa-white !important }
       &--black\@m         { color: $color-fsa-black !important }
+      &--transparent\@m   { color: transparent !important }
     }
 
     @include breakpoint(L) {
@@ -147,6 +150,7 @@
       &--yellow-100\@l    { color: $color-fsa-yellow-100 !important }
       &--white\@l         { color: $color-fsa-white !important }
       &--black\@l         { color: $color-fsa-black !important }
+      &--transparent\@l   { color: transparent !important }
     }
 
     @include breakpoint(XL) {
@@ -181,6 +185,7 @@
       &--yellow-100\@xl    { color: $color-fsa-yellow-100 !important }
       &--white\@xl         { color: $color-fsa-white !important }
       &--black\@xl         { color: $color-fsa-black !important }
+      &--transparent\@xl   { color: transparent !important }
     }
 
   }
@@ -218,6 +223,7 @@
     &--yellow-100     { background-color: $color-fsa-yellow-100 !important }
     &--white          { background-color: $color-fsa-white !important }
     &--black          { background-color: $color-fsa-black !important }
+    &--transparent    { background-color: transparent !important }
 
     @include breakpoint(S) {
       &--primary\@s       { background-color: $color-fsa-primary !important }
@@ -250,7 +256,7 @@
       &--yellow-200\@s    { background-color: $color-fsa-yellow-200 !important }
       &--yellow-100\@s    { background-color: $color-fsa-yellow-100 !important }
       &--white\@s         { background-color: $color-fsa-white !important }
-      &--black\@s         { background-color: $color-fsa-black !important }
+      &--transparent\@s   { background-color: transparent !important }
     }
 
     @include breakpoint(M) {
@@ -285,6 +291,7 @@
       &--yellow-100\@m    { background-color: $color-fsa-yellow-100 !important }
       &--white\@m         { background-color: $color-fsa-white !important }
       &--black\@m         { background-color: $color-fsa-black !important }
+      &--transparent\@m   { background-color: transparent !important }
     }
 
     @include breakpoint(L) {
@@ -319,6 +326,7 @@
       &--yellow-100\@l    { background-color: $color-fsa-yellow-100 !important }
       &--white\@l         { background-color: $color-fsa-white !important }
       &--black\@l         { background-color: $color-fsa-black !important }
+      &--transparent\@l   { background-color: transparent !important }
     }
 
     @include breakpoint(XL) {
@@ -353,6 +361,7 @@
       &--yellow-100\@xl    { background-color: $color-fsa-yellow-100 !important }
       &--white\@xl         { background-color: $color-fsa-white !important }
       &--black\@xl         { background-color: $color-fsa-black !important }
+      &--transparent\@xl   { background-color: transparent !important }
     }
 
   }
