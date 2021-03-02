@@ -124,15 +124,15 @@ $level: fsa-level;
     text-decoration: none;
   }
 
-  &:focus {
-    background-color: $color-fsa-tertiary-100;
-    outline-offset: 3px;
-  }
+  // &:focus {
+  //   background-color: $color-fsa-tertiary-100;
+  //   outline-offset: 3px;
+  // }
 
-  &:hover {
-    background-color: $color-fsa-tertiary-100;
-    cursor: pointer;
-  }
+  // &:hover {
+  //   background-color: $color-fsa-tertiary-100;
+  //   cursor: pointer;
+  // }
 
   &:visited {
     color: $color-fsa-base;
