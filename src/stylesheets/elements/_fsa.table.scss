@@ -283,8 +283,9 @@ th {
       position: relative;
       top: -2px;
       margin-left: 4px;
-      opacity: .2;
-      background-image: url('#{$image-path}/chevron-up.svg');
+      opacity: .4;
+      // background-image: url('#{$image-path}/chevron-up.svg');
+      background-image: url('#{$image-path}/font-awesome-icons/chevron-up.svg');
     }
 
     &--descending:after,
@@ -293,11 +294,13 @@ th {
     }
 
     &--ascending:after {
-      background-image: url('#{$image-path}/chevron-up.svg');
+      // background-image: url('#{$image-path}/chevron-up.svg');
+      background-image: url('#{$image-path}/font-awesome-icons/chevron-up.svg');
     }
 
     &--descending:after {
-      background-image: url('#{$image-path}/chevron-down.svg');
+      // background-image: url('#{$image-path}/chevron-down.svg');
+      background-image: url('#{$image-path}/font-awesome-icons/chevron-down.svg');
     }
 
     &:hover:not(.fsa-table__sort--descending, .fsa-table__sort--ascending) {
