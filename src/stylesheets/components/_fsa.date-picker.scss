@@ -255,7 +255,7 @@ $dateCalendar: fsa-date-calendar;
       padding: 0 $size-default $size-base $size-default;
       background-repeat: no-repeat;
       background-position: 50%;
-      background-size: 2.4rem;
+      background-size: 2rem;
     }
 
     &:hover {
@@ -277,7 +277,6 @@ $dateCalendar: fsa-date-calendar;
 
     &--month {
       background-image: url('#{$image-path}/font-awesome-icons/angle-left.svg');
-      background-size: 27%;
     }
 
     &--year {
@@ -294,7 +293,6 @@ $dateCalendar: fsa-date-calendar;
 
     &--month {
       background-image: url('#{$image-path}/font-awesome-icons/angle-right.svg');
-      background-size: 27%;
     }
 
     &--year {
