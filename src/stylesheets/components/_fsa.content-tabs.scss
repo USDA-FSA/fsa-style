@@ -177,9 +177,14 @@
 
   }
 
+  &__label-icon {
+    margin-right: $size-small;
+  }
+
   &__label-text {
 
-    display: block;
+    display: flex;
+    align-items: center;
     padding-top: $tab-padding;
     padding-bottom: ($tab-padding + $size-base);
     position: relative;
