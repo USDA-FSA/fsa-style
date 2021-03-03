@@ -1,4 +1,20 @@
 ///////////////////////////////////////////////////////////////////////
+.exp-a {
+  & {
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  &__item {
+    & {}
+    &--grow {
+      flex: 1;
+    }
+  }
+}
+
+///////////////////////////////////////////////////////////////////////
 .fsa-circle {
   border-radius: 100%;
   display: inline-flex;
