@@ -205,7 +205,8 @@
 
   &__text {
 
-    display: block;
+    display: flex;
+    align-items: center;
     padding: ($nav-spacing-unit - $size-base) $nav-spacing-unit;
 
     @include breakpoint(M) {
@@ -255,6 +256,10 @@
       }
     }
 
+  }
+
+  &__icon {
+    margin-right: $size-small;
   }
 
   &__sub-menu {
