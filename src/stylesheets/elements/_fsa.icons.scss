@@ -56,6 +56,18 @@
     height: $icon-size-6;
   }
 
+  // IE11 subtle workaround
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .fsa-btn &,
+    .fsa-btn-group &,
+    .fsa-stepped-tabs &,
+    .fsa-nav-global__text &,
+    .fsa-content-tabs & {
+      margin-left: $size-base;
+      margin-right: $size-base;
+    }
+  }
+
 }
 
 
