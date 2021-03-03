@@ -38,6 +38,7 @@
     & {
       @include fsa-button;
       @include fsa-button(secondary);
+      display: flex;
       flex: auto;
     }
 
