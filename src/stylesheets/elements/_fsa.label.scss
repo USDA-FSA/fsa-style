@@ -10,6 +10,7 @@ $label-dismiss-width: 1.33em;
     font-weight: $font-bold;
     line-height: 1;
     display: inline-flex;
+    gap: $size-base;
     align-items: center;
     background-color: $marker-bgc;
     color: $marker-text-color;

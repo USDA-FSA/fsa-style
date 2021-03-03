@@ -3,7 +3,6 @@
   $component-bgcolor-default: $white;
   $component-border-color: $color-fsa-tertiary-200;
   $component-padding: $size-default;
-  $component-icon-size: $size-medium;
 
   & {
 
@@ -183,8 +182,10 @@
 
   &__btn {
 
-    display: block;
+    display: flex;
+    align-items: center;
     width: 100%;
+    justify-content: center;
 
     @include breakpoint(L, down) {
       height: $button-height;
@@ -194,25 +195,6 @@
         ($button-padding * 1.5)
         ($button-padding - .1rem)
       ;
-    }
-
-  }
-
-  &__btn-label {
-    .fsa-stepped-control__icon + & {
-      margin-left: $size-small;
-    }
-  }
-
-  &__icon {
-
-    width: ($component-icon-size * .8);
-    height: ($component-icon-size * .8);
-    transform: translateY(-1px);
-
-    @include breakpoint(L) {
-      width: ($component-icon-size);
-      height: ($component-icon-size);
     }
 
   }

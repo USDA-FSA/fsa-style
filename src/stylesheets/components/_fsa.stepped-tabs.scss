@@ -195,7 +195,6 @@
 
     @include breakpoint(M) {
       display: inline;
-      margin-right: $size-small;
     }
 
   }
@@ -205,6 +204,7 @@
     & {
       white-space: nowrap;
       display: inline-flex;
+      gap: $size-small;
       align-items: center;
       letter-spacing: .25px;
     }

@@ -84,6 +84,7 @@ $button-flat-border-width: 0;
     font-weight: $button-font-weight;
     display: inline-block;
     display: inline-flex;
+    gap: $size-small;
     align-items: center;
     border-radius: $button-border-radius;
 
@@ -241,7 +242,8 @@ $button-flat-border-width: 0;
 
   @elseif $variation == 'block' {
     width: 100%;
-    display: block;
+    display: flex;
+    justify-content: center;
   }
 
   @elseif $variation == 'inline' {
@@ -355,16 +357,7 @@ $button-flat-border-width: 0;
   &--large     { @include fsa-button(large);     }
   &--flat      { @include fsa-button(flat);      }
 
-  &__icon {
-    &--left {
-      margin-right: $size-small;
-    }
-    &--right {
-      margin-left: $size-small;
-    }
-  }
-
-  @include breakpoint(S) {
+    @include breakpoint(S) {
     &--small\@s { @include fsa-button(small); }
     &--medium\@s { @include fsa-button(medium); }
     &--large\@s { @include fsa-button(large); }

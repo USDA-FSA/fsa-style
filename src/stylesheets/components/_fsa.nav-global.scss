@@ -206,6 +206,7 @@
   &__text {
 
     display: flex;
+    gap: $size-small;
     align-items: center;
     padding: ($nav-spacing-unit - $size-base) $nav-spacing-unit;
 
@@ -256,10 +257,6 @@
       }
     }
 
-  }
-
-  &__icon {
-    margin-right: $size-small;
   }
 
   &__sub-menu {
