@@ -96,6 +96,7 @@ if ('serviceWorker' in navigator) {
       if(gat.onProduction){
         gtag('event', typ, { 'event_category': cat, 'event_label': lab });
       } else {
+        // KEEP this console, as it will only fire on "localhost"
         console.log('GA TRACKING: ' + typ + " | " + cat + " | " + lab)
       }
     },

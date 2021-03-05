@@ -30,4 +30,5 @@ Helper.forEach(whiteout__dismiss, function (index, value) {
   }, false);
 });
 
-console.log('WhiteoutComponent loaded, its JS is NOT to be used for Production, demo purposes only');
+// Commenting out for Product JS issue #440
+//console.log('WhiteoutComponent loaded, its JS is NOT to be used for Production, demo purposes only');

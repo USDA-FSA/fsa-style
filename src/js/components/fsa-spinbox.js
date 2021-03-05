@@ -40,12 +40,12 @@ Helper.forEach(spinbox__triggers, function (index, value) {
       if (Helper.hasClass(_el, 'fsa-spinbox__btn--decrement')){
         // If you click the "Down" button SUBTRACT the step value from the current value
         _target.stepDown();
-        console.log('Spinbox decremented');
+        //console.log('Spinbox decremented');
       }
       else {
         // If you click the "Up" button ADD the step value from the current value
         _target.stepUp();
-        console.log('Spinbox incremented');
+        //console.log('Spinbox incremented');
       }
     }
 
@@ -53,4 +53,5 @@ Helper.forEach(spinbox__triggers, function (index, value) {
 
 });
 
-console.log('Spinbox loaded, its JS is NOT to be used for Production, demo purposes only');
+// Commenting out for Product JS issue #440
+//console.log('Spinbox loaded, its JS is NOT to be used for Production, demo purposes only');

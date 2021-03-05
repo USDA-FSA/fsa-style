@@ -88,4 +88,5 @@ $('body').on('click', '[data-behavior~="fakeTableShow"]', function(event) {
   $('#tableProgress').removeAttr('hidden');
 })
 
-console.log('ProgressComponent loaded, its JS is NOT to be used for Production, demo purposes only');1
+// Commenting out for Product JS issue #440
+//console.log('ProgressComponent loaded, its JS is NOT to be used for Production, demo purposes only');1
