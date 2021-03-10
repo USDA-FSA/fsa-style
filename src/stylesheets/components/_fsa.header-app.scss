@@ -90,6 +90,7 @@
     display: inline-flex;
     align-items: center;
     text-align: left;
+    gap: $size-small;
     & + & {
       margin-left: $size-default;
       @include breakpoint(L) {
