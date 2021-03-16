@@ -22,8 +22,8 @@
 
   & {
     fill: currentColor;
-    width: $icon-size-2;
-    height: $icon-size-2;
+    width: $icon-size-1;
+    height: $icon-size-1;
     vertical-align: middle;
     position: relative;
 
@@ -63,10 +63,6 @@
   &--size-5 {
     width: $icon-size-5;
     height: $icon-size-5;
-  }
-  &--size-6 {
-    width: $icon-size-6;
-    height: $icon-size-6;
   }
 
   // IE11 subtle workaround
