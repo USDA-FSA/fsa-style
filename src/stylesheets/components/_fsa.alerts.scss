@@ -22,27 +22,27 @@
     @extend .usa-alert-success;
     background-color: $color-fsa-primary-100;
     border-left-color: $color-fsa-primary;
-    background-image: url('#{$image-path}/font-awesome-icons/check-circle.svg');
+    background-image: url('#{$image-path}/material-design-icons/ic_check_circle_24px.svg');
   }
 
   &--warning {
     @extend .usa-alert-warning;
     border-left-color: $color-fsa-yellow;
-    background-image: url('#{$image-path}/font-awesome-icons/exclamation-triangle.svg');
+    background-image: url('#{$image-path}/material-design-icons/ic_warning_24px.svg');
   }
 
   &--error {
     @extend .usa-alert-error;
     background-color: $color-fsa-red-100;
     border-left-color: $color-fsa-red;
-    background-image: url('#{$image-path}/font-awesome-icons/exclamation-circle.svg');
+    background-image: url('#{$image-path}/material-design-icons/ic_error_24px.svg');
   }
 
   &--info {
     @extend .usa-alert-info;
     background-color: $color-fsa-aqua-100;
     border-left-color: $color-fsa-aqua;
-    background-image: url('#{$image-path}/font-awesome-icons/info-circle.svg');
+    background-image: url('#{$image-path}/material-design-icons/ic_info_24px.svg');
   }
 
   &--no-icon {
