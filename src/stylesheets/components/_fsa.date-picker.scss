@@ -51,21 +51,23 @@ $dateCalendar: fsa-date-calendar;
 
   &__btn {
 
-    @include reset-button();
-    display: inline-block;
-    vertical-align: baseline;
-    width: $date-control-btn-width;
-    height: $date-control-btn-height;
-    overflow: hidden;
-    color: transparent;
-    text-indent: -300%;
-    position: relative;
-    top: -1px;
-    vertical-align: middle;
-    background-image: url('#{$image-path}/material-design-icons/ic_calendar_today_24px.svg');
-    background-size: $size-medium;
-    background-repeat: no-repeat;
-    background-position: center;
+    & {
+      @include reset-button();
+      display: inline-block;
+      vertical-align: baseline;
+      width: $date-control-btn-width;
+      height: $date-control-btn-height;
+      overflow: hidden;
+      color: transparent;
+      text-indent: -300%;
+      position: relative;
+      top: -1px;
+      vertical-align: middle;
+      background-image: url('#{$image-path}/material-design-icons/ic_calendar_today_24px.svg');
+      background-size: $size-medium;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
 
     &:active:not(:disabled) {
       opacity: .6;
@@ -250,7 +252,7 @@ $dateCalendar: fsa-date-calendar;
       padding: 0 $size-default $size-base $size-default;
       background-repeat: no-repeat;
       background-position: 50%;
-      background-size: 2rem;
+      background-size: $size-medium;
     }
 
     &:hover {
@@ -271,27 +273,24 @@ $dateCalendar: fsa-date-calendar;
   &__prev-but {
 
     &--month {
-      background-image: url('#{$image-path}/font-awesome-icons/angle-left.svg');
+      background-image: url('#{$image-path}/material-design-icons/ic_chevron_left_24px.svg');
     }
 
     &--year {
-      background-image: url('#{$image-path}/font-awesome-icons/angle-double-left.svg');
+      background-image: url('#{$image-path}/material-design-icons/ic_chevron_double_left_24px.svg');
       margin-left: $size-small;
     }
 
   }
 
-  // background-size: 50%;
-
-
   &__next-but {
 
     &--month {
-      background-image: url('#{$image-path}/font-awesome-icons/angle-right.svg');
+      background-image: url('#{$image-path}/material-design-icons/ic_chevron_right_24px.svg');
     }
 
     &--year {
-      background-image: url('#{$image-path}/font-awesome-icons/angle-double-right.svg');
+      background-image: url('#{$image-path}/material-design-icons/ic_chevron_double_right_24px.svg');
       margin-right: $size-small;
     }
 
@@ -325,7 +324,13 @@ $dateCalendar: fsa-date-calendar;
   &__next-but:not(.#{$dateCalendar}__disabled-item):hover,
   &__today-but:not(.#{$dateCalendar}__disabled-item):hover {
     color: transparent;
-    box-shadow: 0 0 0 1px $color-fsa-tertiary-200 inset; // maybe try $button-secondary-border
+    box-shadow: 0 0 0 1px $color-fsa-tertiary-200 inset;
+  }
+
+  &__prev-but:not(.#{$dateCalendar}__disabled-item):active,
+  &__next-but:not(.#{$dateCalendar}__disabled-item):active,
+  &__today-but:not(.#{$dateCalendar}__disabled-item):active {
+    box-shadow: 0 0 0 1px $color-fsa-tertiary-300 inset;
   }
 
   &__today-but:not(.#{$dateCalendar}__disabled-item):hover {
