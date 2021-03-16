@@ -1,7 +1,7 @@
 .fsa-pagination {
 
   $padding: $size-small;
-  $arrow-size: $icon-size-1; // $size-default + $size-base
+  $arrow-size: $icon-size-1;
 
   & {
 
@@ -110,7 +110,7 @@
       cursor: text;
       color: $color-fsa-link;
       background-color: white;
-      box-shadow: 0 0 0 1px $color-fsa-tertiary-200 inset; // maybe try $button-secondary-border
+      box-shadow: 0 0 0 1px $color-fsa-tertiary-200 inset;
       display: block;
       width: 100%;
       padding: ($padding) ($padding + ($padding / 2));
@@ -135,12 +135,11 @@
     &:not(span):hover {
       cursor: pointer;
       background-color: white;
-      box-shadow: 0 0 0 1px $color-fsa-tertiary-200 inset; // maybe try $button-secondary-border
+      box-shadow: 0 0 0 1px $color-fsa-tertiary-200 inset;
     }
 
     &:not(span):active {
       background-color: $color-fsa-tertiary-100;
-      // box-shadow: 0 0 0 1px $color-fsa-tertiary-300 inset;
     }
 
     &--previous,

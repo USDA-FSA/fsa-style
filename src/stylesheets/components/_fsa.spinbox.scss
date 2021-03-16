@@ -132,7 +132,7 @@
       line-height: 1;
       width: $button-width;
       text-align: center;
-      background-size: 18px;
+      background-size: $icon-size-1;
       background-repeat: no-repeat;
       background-position: 50%;
 
@@ -150,7 +150,7 @@
     // scss-lint:disable SelectorFormat
     .fsa-spinbox--large & {
       width: $button-width-large;
-      background-size: 37%;
+      background-size: $icon-size-2;
     }
 
     &[disabled] {
