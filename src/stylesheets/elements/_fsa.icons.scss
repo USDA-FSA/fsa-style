@@ -64,6 +64,10 @@
     width: $icon-size-5;
     height: $icon-size-5;
   }
+  &--size-6 {
+    width: $icon-size-6;
+    height: $icon-size-6;
+  }
 
   // IE11 subtle workaround
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -72,7 +76,7 @@
     .fsa-stepped-tabs &,
     .fsa-nav-global__text &,
     .fsa-content-tabs & {
-      margin-left: $size-base;
+      margin-left: ($size-base / 2);
       margin-right: $size-base;
     }
   }
