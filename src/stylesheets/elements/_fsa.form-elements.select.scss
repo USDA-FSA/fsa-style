@@ -6,9 +6,9 @@
   @include fsa-shared-form-properties();
 
   // background-image: url('#{$image-path}/arrow-down.svg');
-  background-size: 1.3rem;
-  background-image: url('#{$image-path}/font-awesome-icons/chevron-down.svg');
-  background-position: right 1.3rem center;
+  background-size: $size-medium;
+  background-image: url('#{$image-path}/material-design-icons/ic_expand_more_24px.svg');
+  background-position: right ($size-small - .2rem) center;
   background-repeat: no-repeat;
 
   // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
