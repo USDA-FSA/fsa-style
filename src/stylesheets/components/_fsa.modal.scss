@@ -82,9 +82,7 @@
     right: 0;
     padding: ($size-default * 1.5);
     z-index: 2;
-    // background-image: url('#{$image-path}/close.svg');
-    background-image: url('#{$image-path}/font-awesome-icons/times.svg');
-    background-size: 33%;
+    background-image: url('#{$image-path}/material-design-icons/ic_close_24px.svg');
     background-position: center;
     background-repeat: no-repeat;
 
