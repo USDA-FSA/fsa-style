@@ -41,7 +41,8 @@
       @include reset-button();
       height: 39px;
       cursor: initial;
-      display: block;
+      display: flex;
+      align-items: center;
       width: 100%;
       text-align: center;
       text-decoration: none;
@@ -74,7 +75,6 @@
     .fsa-stepped-tabs__item:last-child & {
       padding-right: $labelPadding;
     }
-
 
     &:before,
     &:after {
@@ -149,7 +149,6 @@
     &--active {
 
       background-color: $colorActive;
-      // text-shadow: 1px 1px 0 $color-black;
       color: $color-fsa-white;
 
       &:focus,
@@ -203,10 +202,14 @@
 
     & {
       white-space: nowrap;
-      display: inline-flex;
+      display: flex;
       gap: $size-small;
       align-items: center;
-      letter-spacing: .25px;
+      flex: 1;
+      justify-content: center;
+      @include breakpoint(M) {
+        letter-spacing: .25px;
+      }
     }
 
     .fsa-stepped-tabs__label:focus & {
@@ -225,6 +228,13 @@
       max-width: 30vw;
     }
 
+  }
+
+  .fsa-icon {
+    display: none;
+    @include breakpoint(S) {
+      display: initial;
+    }
   }
 
 }
