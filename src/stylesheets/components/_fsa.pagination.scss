@@ -1,7 +1,7 @@
 .fsa-pagination {
 
   $padding: $size-small;
-  $arrow-size: $size-default; // $size-default + $size-base
+  $arrow-size: $icon-size-1; // $size-default + $size-base
 
   & {
 
@@ -145,9 +145,12 @@
 
     &--previous,
     &--next {
-      display: block;
+      display: flex;
+      align-items: center;
+      gap: $size-small;
+      justify-content: center;
       @include breakpoint(M) {
-        display: inline-block;
+        display: inline-flex;
       }
     }
 
@@ -160,25 +163,19 @@
     &--previous:before,
     &--next:after {
       content: '';
-      background-size: contain;
+      background-position: center;
       background-repeat: no-repeat;
       display: inline-block;
       width: $arrow-size;
       height: $arrow-size;
-      position: relative;
-      top: 1px;
     }
 
     &--previous:before {
-      // background-image: url('#{$image-path}/chevron-left--link.svg');
-      background-image: url('#{$image-path}/font-awesome-icons/chevron-left.svg');
-      margin-right: $size-base;
+      background-image: url('#{$image-path}/material-design-icons/ic_chevron_left_24px.svg');
     }
 
     &--next:after {
-      // background-image: url('#{$image-path}/chevron-right--link.svg');
-      background-image: url('#{$image-path}/font-awesome-icons/chevron-right.svg');
-      margin-left: $size-base;
+      background-image: url('#{$image-path}/material-design-icons/ic_chevron_right_24px.svg');
     }
 
     &--disabled {
