@@ -276,16 +276,15 @@ th {
     &:after {
       content: '';
       background-size: 100%;
-      width: 12px;
-      height: 12px;
+      width: $icon-size-1;
+      height: $icon-size-1;
       display: inline-block;
       vertical-align: middle;
       position: relative;
       top: -2px;
-      margin-left: 4px;
-      opacity: .4;
-      // background-image: url('#{$image-path}/chevron-up.svg');
-      background-image: url('#{$image-path}/font-awesome-icons/chevron-up.svg');
+      margin-left: 2px;
+      opacity: .5;
+      background-image: url('#{$image-path}/material-design-icons/ic_expand_less_24px.svg');
     }
 
     &--descending:after,
@@ -294,13 +293,11 @@ th {
     }
 
     &--ascending:after {
-      // background-image: url('#{$image-path}/chevron-up.svg');
-      background-image: url('#{$image-path}/font-awesome-icons/chevron-up.svg');
+      background-image: url('#{$image-path}/material-design-icons/ic_expand_less_24px.svg');
     }
 
     &--descending:after {
-      // background-image: url('#{$image-path}/chevron-down.svg');
-      background-image: url('#{$image-path}/font-awesome-icons/chevron-down.svg');
+      background-image: url('#{$image-path}/material-design-icons/ic_expand_more_24px.svg');
     }
 
     &:hover:not(.fsa-table__sort--descending, .fsa-table__sort--ascending) {
