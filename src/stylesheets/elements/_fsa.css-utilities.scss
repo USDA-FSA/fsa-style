@@ -252,7 +252,7 @@
     &--red-100       { &,&:visited { color: $color-fsa-red-100 !important;       }  &:hover { color: tint($color-fsa-red-100, 30%)        !important} }
     &--red-900       { &,&:visited { color: $color-fsa-red-900 !important;       }  &:hover { color: shade($color-fsa-red-900, 20%)       !important} }
     &--yellow        { &,&:visited { color: $color-fsa-yellow !important;        }  &:hover { color: shade($color-fsa-yellow, 20%)        !important} }
-    &--yellow-300    { &,&:visited { color: $color-fsa-yellow-300 !important;    }  &:hover { color: shade($color-fsa-yellow-300, 20%)    !important} }
+    &--yellow-300    { &,&:visited { color: $color-fsa-yellow-300 !important;    }  &:hover { color: tint($color-fsa-yellow-300, 30%)     !important} }
     &--yellow-200    { &,&:visited { color: $color-fsa-yellow-200 !important;    }  &:hover { color: tint($color-fsa-yellow-200, 30%)     !important} }
     &--yellow-100    { &,&:visited { color: $color-fsa-yellow-100 !important;    }  &:hover { color: tint($color-fsa-yellow-100, 30%)     !important} }
     &--white         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 20%)         !important} }
