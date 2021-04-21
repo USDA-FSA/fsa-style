@@ -3397,28 +3397,39 @@
           </div>
           <div class="docs__bd">
             <p class="docs__code-sample"><code>class="fsa-badge fsa-badge--[type] fsa-badge--[size]"</code></p>
-            <p class="fsa-level">
-              <span class="fsa-badge">1</span>
-              <span class="fsa-badge fsa-badge--neutral">8</span>
-              <span class="fsa-badge fsa-badge--general">11</span>
-              <span class="fsa-badge fsa-badge--alert">11</span>
-              <span class="fsa-badge fsa-badge--warning">22</span>
-              <span class="fsa-badge fsa-badge--success">99+</span>
-            </p>
-            <p class="fsa-level">
-              <span class="fsa-badge fsa-badge--large">1</span>
-              <span class="fsa-badge fsa-badge--large fsa-badge--general">11</span>
-              <span class="fsa-badge fsa-badge--large fsa-badge--alert">11</span>
-              <span class="fsa-badge fsa-badge--large fsa-badge--warning">22</span>
-              <span class="fsa-badge fsa-badge--large fsa-badge--success">99+</span>
-            </p>
-            <p class="fsa-level">
-              <span class="fsa-badge fsa-badge--extra-large">1</span>
-              <span class="fsa-badge fsa-badge--extra-large fsa-badge--general">11</span>
-              <span class="fsa-badge fsa-badge--extra-large fsa-badge--alert">11</span>
-              <span class="fsa-badge fsa-badge--extra-large fsa-badge--warning">22</span>
-              <span class="fsa-badge fsa-badge--extra-large fsa-badge--success">99+</span>
-            </p>
+            <div class="fsa-grid">
+              <div class="fsa-grid__1 fsa-grid__1/3@m">
+                <h4>Small</h4>
+                <p class="fsa-level">
+                  <span class="fsa-badge">1</span>
+                  <span class="fsa-badge fsa-badge--neutral">8</span>
+                  <span class="fsa-badge fsa-badge--general">11</span>
+                  <span class="fsa-badge fsa-badge--alert">11</span>
+                  <span class="fsa-badge fsa-badge--warning">22</span>
+                  <span class="fsa-badge fsa-badge--success">99+</span>
+                </p>
+              </div>
+              <div class="fsa-grid__1 fsa-grid__1/3@m">
+                <h4>Large</h4>
+                <p class="fsa-level">
+                  <span class="fsa-badge fsa-badge--large">1</span>
+                  <span class="fsa-badge fsa-badge--large fsa-badge--general">11</span>
+                  <span class="fsa-badge fsa-badge--large fsa-badge--alert">11</span>
+                  <span class="fsa-badge fsa-badge--large fsa-badge--warning">22</span>
+                  <span class="fsa-badge fsa-badge--large fsa-badge--success">99+</span>
+                </p>
+              </div>
+              <div class="fsa-grid__1 fsa-grid__1/3@m">
+                <h4>Extra Large</h4>
+                <p class="fsa-level">
+                  <span class="fsa-badge fsa-badge--extra-large">1</span>
+                  <span class="fsa-badge fsa-badge--extra-large fsa-badge--general">11</span>
+                  <span class="fsa-badge fsa-badge--extra-large fsa-badge--alert">11</span>
+                  <span class="fsa-badge fsa-badge--extra-large fsa-badge--warning">22</span>
+                  <span class="fsa-badge fsa-badge--extra-large fsa-badge--success">99+</span>
+                </p>
+              </div>
+            </div>
             <p>Badge styles can be applied to nearly any <strong>HTML</strong> element, most likely <code>&lt;span&gt;</code> as shown above. Actionable examples seen below (<code>&lt;a&gt;</code> and <code>&lt;button&gt;</code>).</p>
             <p class="fsa-level">
               <a class="fsa-badge fsa-badge--general" href="link.html">A</a>
@@ -3581,6 +3592,10 @@
                 <button class="fsa-label__remove" aria-label="Remove" title="Remove"></button>
               </span>
               <span class="fsa-label fsa-label--large fsa-label--dismissable">
+                Label
+                <button class="fsa-label__remove" aria-label="Remove" title="Remove"></button>
+              </span>
+              <span class="fsa-label fsa-label--extra-large fsa-label--dismissable">
                 Label
                 <button class="fsa-label__remove" aria-label="Remove" title="Remove"></button>
               </span>
@@ -7358,7 +7373,7 @@
             </div>
           </div>
           <h4 class="docs__sub_style">Modifiers</h4>
-          <p>While these modifiers are specific to <code>.fsa-box</code>, CSS Utilities and Helpers (e.g. <a href="#utilities__padding">Padding</a>) can be combined for further flexibility.</p>
+          <p>While these modifiers are specific to <code>.fsa-box</code>, CSS Utilities and Helpers (e.g. <a href="#utilities__padding">Padding</a>, <a href="#utilities__color">Background Color</a>, etc.) can be combined for further flexibility.</p>
           <div class="fsa-grid">
             <div class="fsa-grid__1 fsa-grid__1/3@m">
               <p class="docs__code-sample"><code>class="fsa-box fsa-box--<strong>bg-0</strong>"</code></p>
@@ -8476,6 +8491,11 @@
             <a class="fsa-btn fsa-btn--secondary fsa-btn--small docs__section-link" onclick="trackDocsClick(this)" href="http://usda-fsa.github.io/fsa-design-system/utilities/#color">Docs <span class="sr-only">for Color Utilities</span></a>
           </div>
           <div>
+            <div class="fsa-alert fsa-alert--warning fsa-alert--no-icon">
+              <div class="fsa-alert__body">
+                <p class="fsa-alert__text">Follow <a href="https://usda-fsa.github.io/fsa-design-system/guides/accessibility/color-and-contrast">Accessibility requirements</a> when considering color combinations.</p>
+              </div>
+            </div>
             <div class="fsa-level">
               <label class="fsa-switch">
                 <input type="checkbox" class="fsa-switch__checkbox" id="demo-background" name="demo-background" data-target="demo-background-target" data-behavior="toggle-demo-background">
@@ -8488,7 +8508,7 @@
                 <div class="fsa-grid__1 fsa-grid__1/3@m">
                   <h4 class="docs__sub_style fsa-m-t--none">Text</h4>
                   <p class="docs__code-sample"><code>class="fsa-color-text--<strong>[color]</strong>"</code></p>
-                  <div>default</div>
+                  <div>Base</div>
                   <div class="fsa-color-text--primary-900">fsa-color-text--primary-900</div>
                   <div class="fsa-color-text--primary">fsa-color-text--primary</div>
                   <div class="fsa-color-text--primary-300">fsa-color-text--primary-300</div>
@@ -8524,7 +8544,7 @@
                 <div class="fsa-grid__1 fsa-grid__1/3@m">
                   <h4 class="docs__sub_style fsa-m-t--none">Link</h4>
                   <p class="docs__code-sample"><code>class="fsa-color-text-link--<strong>[color]</strong>"</code></p>
-                  <div><a href="link.html">default</a></div>
+                  <div><a href="link.html">Default</a></div>
                   <div><a href="link.html" class="fsa-color-text-link--primary-900">fsa-color-text-link--primary-900</a></div>
                   <div><a href="link.html" class="fsa-color-text-link--primary">fsa-color-text-link--primary</a></div>
                   <div><a href="link.html" class="fsa-color-text-link--primary-300">fsa-color-text-link--primary-300</a></div>
@@ -8600,6 +8620,7 @@
               <p>Selectively apply Text and/or Background Color Utilities at each Media Query breakpoint</p>
               <p>
                 <code>class="fsa-color-text-link--<strong>[color]@[breakpoint]</strong>"</code>
+                where
                 <code>breakpoint</code> is one of
                 <code title="small">s</code>,
                 <code title="medium">m</code>,
