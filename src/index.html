@@ -249,6 +249,7 @@
             <li class="docs__primary-nav-item docs__primary-nav-item--sub">
               <a class="docs__primary-nav-link docs__primary-nav-link--sub" onclick="trackNavClick(this)" href="#utilities">Utilities</a>
               <ul class="docs__primary-nav-sub">
+                <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" onclick="trackNavClick(this)" href="#utilities__color">Color</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" onclick="trackNavClick(this)" href="#utilities__ellipsis">Ellipsis</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" onclick="trackNavClick(this)" href="#utilities__floats">Floats</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" onclick="trackNavClick(this)" href="#utilities__margins">Margins</a></li>
@@ -8468,6 +8469,167 @@
         <a class="fsa-btn fsa-btn--secondary fsa-btn--small docs__section-link" onclick="trackDocsClick(this)" href="http://usda-fsa.github.io/fsa-design-system/utilities/">Docs <span class="sr-only">for Utilities</span></a>
       </div>
       <div class="docs__bd">
+        <div class="docs__jump-target" id="utilities__color">
+          <div class="docs__section-title">
+            <h3 class="docs__figure"><a class="docs__anchor" aria-hidden="true" href="#utilities__color">#</a>Color</h3>
+            <a class="fsa-btn fsa-btn--secondary fsa-btn--small docs__section-link" onclick="trackDocsClick(this)" href="http://usda-fsa.github.io/fsa-design-system/utilities/#color">Docs <span class="sr-only">for Color Utilities</span></a>
+          </div>
+          <div>
+            <div class="fsa-level">
+              <label class="fsa-switch">
+                <input type="checkbox" class="fsa-switch__checkbox" id="demo-background" name="demo-background" data-target="demo-background-target" data-behavior="toggle-demo-background">
+                <span class="fsa-switch__track"></span>
+              </label>
+              <label for="demo-background">Dark Background</label>
+            </div>
+            <div class="docs__color-utilities" id="demo-background-target">
+              <div class="fsa-grid">
+                <div class="fsa-grid__1 fsa-grid__1/3@m">
+                  <h4 class="docs__sub_style fsa-m-t--none">Text</h4>
+                  <p class="docs__code-sample"><code>class="fsa-color-text--<strong>[color]</strong>"</code></p>
+                  <div>default</div>
+                  <div class="fsa-color-text--primary-900">fsa-color-text--primary-900</div>
+                  <div class="fsa-color-text--primary">fsa-color-text--primary</div>
+                  <div class="fsa-color-text--primary-300">fsa-color-text--primary-300</div>
+                  <div class="fsa-color-text--primary-200">fsa-color-text--primary-200</div>
+                  <div class="fsa-color-text--primary-100">fsa-color-text--primary-100</div>
+                  <div class="fsa-color-text--secondary-900">fsa-color-text--secondary-900</div>
+                  <div class="fsa-color-text--secondary">fsa-color-text--secondary</div>
+                  <div class="fsa-color-text--secondary-300">fsa-color-text--secondary-300</div>
+                  <div class="fsa-color-text--secondary-200">fsa-color-text--secondary-200</div>
+                  <div class="fsa-color-text--secondary-100">fsa-color-text--secondary-100</div>
+                  <div class="fsa-color-text--tertiary-900">fsa-color-text--tertiary-900</div>
+                  <div class="fsa-color-text--tertiary">fsa-color-text--tertiary</div>
+                  <div class="fsa-color-text--tertiary-300">fsa-color-text--tertiary-300</div>
+                  <div class="fsa-color-text--tertiary-200">fsa-color-text--tertiary-200</div>
+                  <div class="fsa-color-text--tertiary-100">fsa-color-text--tertiary-100</div>
+                  <div class="fsa-color-text--aqua-900">fsa-color-text--aqua-900</div>
+                  <div class="fsa-color-text--aqua">fsa-color-text--aqua</div>
+                  <div class="fsa-color-text--aqua-300">fsa-color-text--aqua-300</div>
+                  <div class="fsa-color-text--aqua-200">fsa-color-text--aqua-200</div>
+                  <div class="fsa-color-text--aqua-100">fsa-color-text--aqua-100</div>
+                  <div class="fsa-color-text--red-900">fsa-color-text--red-900</div>
+                  <div class="fsa-color-text--red">fsa-color-text--red</div>
+                  <div class="fsa-color-text--red-300">fsa-color-text--red-300</div>
+                  <div class="fsa-color-text--red-200">fsa-color-text--red-200</div>
+                  <div class="fsa-color-text--red-100">fsa-color-text--red-100</div>
+                  <div class="fsa-color-text--yellow">fsa-color-text--yellow</div>
+                  <div class="fsa-color-text--yellow-300">fsa-color-text--yellow-300</div>
+                  <div class="fsa-color-text--yellow-200">fsa-color-text--yellow-200</div>
+                  <div class="fsa-color-text--yellow-100">fsa-color-text--yellow-100</div>
+                  <div class="fsa-color-text--white">fsa-color-text--white</div>
+                  <div class="fsa-color-text--black">fsa-color-text--black</div>
+                </div>
+                <div class="fsa-grid__1 fsa-grid__1/3@m">
+                  <h4 class="docs__sub_style fsa-m-t--none">Link</h4>
+                  <p class="docs__code-sample"><code>class="fsa-color-text-link--<strong>[color]</strong>"</code></p>
+                  <div><a href="link.html">default</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--primary-900">fsa-color-text-link--primary-900</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--primary">fsa-color-text-link--primary</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--primary-300">fsa-color-text-link--primary-300</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--primary-200">fsa-color-text-link--primary-200</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--primary-100">fsa-color-text-link--primary-100</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--secondary-900">fsa-color-text-link--secondary-900</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--secondary">fsa-color-text-link--secondary</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--secondary-300">fsa-color-text-link--secondary-300</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--secondary-200">fsa-color-text-link--secondary-200</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--secondary-100">fsa-color-text-link--secondary-100</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--tertiary-900">fsa-color-text-link--tertiary-900</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--tertiary">fsa-color-text-link--tertiary</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--tertiary-300">fsa-color-text-link--tertiary-300</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--tertiary-200">fsa-color-text-link--tertiary-200</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--tertiary-100">fsa-color-text-link--tertiary-100</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--aqua-900">fsa-color-text-link--aqua-900</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--aqua">fsa-color-text-link--aqua</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--aqua-300">fsa-color-text-link--aqua-300</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--aqua-200">fsa-color-text-link--aqua-200</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--aqua-100">fsa-color-text-link--aqua-100</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--red-900">fsa-color-text-link--red-900</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--red">fsa-color-text-link--red</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--red-300">fsa-color-text-link--red-300</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--red-200">fsa-color-text-link--red-200</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--red-100">fsa-color-text-link--red-100</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--yellow">fsa-color-text-link--yellow</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--yellow-300">fsa-color-text-link--yellow-300</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--yellow-200">fsa-color-text-link--yellow-200</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--yellow-100">fsa-color-text-link--yellow-100</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--white">fsa-color-text-link--white</a></div>
+                  <div><a href="link.html" class="fsa-color-text-link--black">fsa-color-text-link--black</a></div>
+                </div>
+                <div class="fsa-grid__1 fsa-grid__1/3@m">
+                  <h4 class="docs__sub_style fsa-m-t--none">Background</h4>
+                  <p class="docs__code-sample"><code>class="fsa-color-bg--<strong>[color]</strong>"</code></p>
+                  <div class="fsa-color-bg--base">fsa-color-bg--base</div>
+                  <div class="fsa-color-bg--primary-900"><div class="fsa-color-text--white">fsa-color-bg--primary-900</div></div>
+                  <div class="fsa-color-bg--primary"><div class="fsa-color-text--white">fsa-color-bg--primary</div></div>
+                  <div class="fsa-color-bg--primary-300"><div class="fsa-color-text--white">fsa-color-bg--primary-300</div></div>
+                  <div class="fsa-color-bg--primary-200">fsa-color-bg--primary-200</div>
+                  <div class="fsa-color-bg--primary-100">fsa-color-bg--primary-100</div>
+                  <div class="fsa-color-bg--secondary-900"><div class="fsa-color-text--white">fsa-color-bg--secondary-900</div></div>
+                  <div class="fsa-color-bg--secondary"><div class="fsa-color-text--white">fsa-color-bg--secondary</div></div>
+                  <div class="fsa-color-bg--secondary-300"><div class="fsa-color-text--white">fsa-color-bg--secondary-300</div></div>
+                  <div class="fsa-color-bg--secondary-200">fsa-color-bg--secondary-200</div>
+                  <div class="fsa-color-bg--secondary-100">fsa-color-bg--secondary-100</div>
+                  <div class="fsa-color-bg--tertiary-900"><div class="fsa-color-text--white">fsa-color-bg--tertiary-900</div></div>
+                  <div class="fsa-color-bg--tertiary"><div class="fsa-color-text--white">fsa-color-bg--tertiary</div></div>
+                  <div class="fsa-color-bg--tertiary-300"><div class="fsa-color-text--white">fsa-color-bg--tertiary-300</div></div>
+                  <div class="fsa-color-bg--tertiary-200">fsa-color-bg--tertiary-200</div>
+                  <div class="fsa-color-bg--tertiary-100">fsa-color-bg--tertiary-100</div>
+                  <div class="fsa-color-bg--aqua-900"><div class="fsa-color-text--white">fsa-color-bg--aqua-900</div></div>
+                  <div class="fsa-color-bg--aqua"><div class="fsa-color-text--white">fsa-color-bg--aqua</div></div>
+                  <div class="fsa-color-bg--aqua-300">fsa-color-bg--aqua-300</div>
+                  <div class="fsa-color-bg--aqua-200">fsa-color-bg--aqua-200</div>
+                  <div class="fsa-color-bg--aqua-100">fsa-color-bg--aqua-100</div>
+                  <div class="fsa-color-bg--red-900"><div class="fsa-color-text--white">fsa-color-bg--red-900</div></div>
+                  <div class="fsa-color-bg--red"><div class="fsa-color-text--white">fsa-color-bg--red</div></div>
+                  <div class="fsa-color-bg--red-300">fsa-color-bg--red-300</div>
+                  <div class="fsa-color-bg--red-200">fsa-color-bg--red-200</div>
+                  <div class="fsa-color-bg--red-100">fsa-color-bg--red-100</div>
+                  <div class="fsa-color-bg--yellow">fsa-color-bg--yellow</div>
+                  <div class="fsa-color-bg--yellow-300">fsa-color-bg--yellow-300</div>
+                  <div class="fsa-color-bg--yellow-200">fsa-color-bg--yellow-200</div>
+                  <div class="fsa-color-bg--yellow-100">fsa-color-bg--yellow-100</div>
+                  <div class="fsa-color-bg--black"><div class="fsa-color-text--white">fsa-color-bg--black</div></div>
+                  <div class="fsa-color-bg--white">fsa-color-bg--white</div>
+                </div>
+              </div>
+            </div>
+            <h4>Responsive</h4>
+            <div class="fsa-show@l">
+              <p>Selectively apply Text and/or Background Color Utilities at each Media Query breakpoint</p>
+              <p>
+                <code>class="fsa-color-text-link--<strong>[color]@[breakpoint]</strong>"</code>
+                <code>breakpoint</code> is one of
+                <code title="small">s</code>,
+                <code title="medium">m</code>,
+                <code title="large">l</code>,
+                or
+                <code title="extra large">xl</code>
+              </p>
+            </div>
+            <div class="fsa-hide@l">
+              <div class="fsa-alert fsa-alert--info fsa-alert--no-icon" role="alert">
+                <div class="fsa-alert__body">
+                  <p class="fsa-alert__text">View this page on a large screen to view complete Responsive Web Design options.</p>
+                </div>
+              </div>
+            </div>
+            <div class="docs__rwd-demo-block">
+              <div class="docs__rwd-embed-container">
+                <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+                  <button onclick="trackRWDDemo('Text Color',this)" data-behavior="toggle-rwd-size" data-target="rwd-demo_color-text" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait"><span class="sr-only">Portrait</span> Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                  <button onclick="trackRWDDemo('Text Color',this)" data-behavior="toggle-rwd-size" data-target="rwd-demo_color-text" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape"><span class="sr-only">Landscape</span> Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                  <button onclick="trackRWDDemo('Text Color',this)" data-behavior="toggle-rwd-size" data-target="rwd-demo_color-text" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                  <button onclick="trackRWDDemo('Text Color',this)" data-behavior="toggle-rwd-size" data-target="rwd-demo_color-text" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+                  <a onclick="trackRWDDemo('Text Color',this)" class="fsa-btn-group__item" href="demo/rwd__color.html" target="_blank" title="View in its own browser window">New window</a>
+                </span>
+                <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_color-text">
+                  <iframe title="Responsive Demo: Text Color" src="demo/rwd__color.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="docs__jump-target" id="utilities__ellipsis">
           <div class="docs__section-title">
             <h3 class="docs__figure"><a class="docs__anchor" aria-hidden="true" href="#utilities__ellipsis">#</a>Ellipsis</h3>
