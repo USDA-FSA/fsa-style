@@ -5,6 +5,7 @@ $badge-spacing: ($size-base - .1rem);
   & {
     @include reset-button();
     @include font-size(0);
+    cursor: default;
     line-height: 1;
     font-family: $font-sans; // brute-force to override any inheritance (e.g. within an <h1>)
     font-weight: $font-bold;
@@ -16,7 +17,6 @@ $badge-spacing: ($size-base - .1rem);
     color: $marker-text-color;
     min-width: 19px;
     text-align: center;
-    cursor: initial;
     padding: $badge-spacing ($badge-spacing * 2);
     box-shadow: 0 -1px 0 adjust-color($color-fsa-tertiary, $alpha: -0.75) inset;
     a &,
