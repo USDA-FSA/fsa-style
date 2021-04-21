@@ -899,12 +899,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   background-color: $color-fsa-red-100;
 }
 
-.color-fsa-blank {
-  background-color: white;
-  color: $color-fsa-tertiary-200;
-  outline: 2px dashed $color-fsa-tertiary-100;
-  outline-offset: -2px;
-}
 .color-fsa-yellow {
   background-color: $color-fsa-yellow;
   code {
@@ -928,6 +922,13 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   code {
     color: $color-fsa-base;
   }
+}
+
+.color-fsa-blank {
+  background-color: white;
+  color: $color-fsa-tertiary-200;
+  outline: 2px dashed $color-fsa-tertiary-100;
+  outline-offset: -2px;
 }
 
 .color-fsa-base-bg,
