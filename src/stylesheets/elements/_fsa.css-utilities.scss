@@ -14,7 +14,6 @@
 
     &--white          { color: $color-fsa-white !important }
     &--black          { color: $color-fsa-black !important }
-    &--transparent    { color: transparent !important }
     &--primary        { color: $color-fsa-primary !important }
     &--primary-300    { color: $color-fsa-primary-300 !important }
     &--primary-200    { color: $color-fsa-primary-200 !important }
@@ -77,7 +76,6 @@
       &--yellow-100\@s     { color: $color-fsa-yellow-100 !important }
       &--white\@s          { color: $color-fsa-white !important }
       &--black\@s          { color: $color-fsa-black !important }
-      &--transparent\@s    { color: transparent !important }
     }
 
     @include breakpoint(M) {
@@ -112,7 +110,6 @@
       &--yellow-100\@m     { color: $color-fsa-yellow-100 !important }
       &--white\@m          { color: $color-fsa-white !important }
       &--black\@m          { color: $color-fsa-black !important }
-      &--transparent\@m    { color: transparent !important }
     }
 
     @include breakpoint(L) {
@@ -147,7 +144,6 @@
       &--yellow-100\@l     { color: $color-fsa-yellow-100 !important }
       &--white\@l          { color: $color-fsa-white !important }
       &--black\@l          { color: $color-fsa-black !important }
-      &--transparent\@l    { color: transparent !important }
     }
 
     @include breakpoint(XL) {
@@ -182,7 +178,6 @@
       &--yellow-100\@xl     { color: $color-fsa-yellow-100 !important }
       &--white\@xl          { color: $color-fsa-white !important }
       &--black\@xl          { color: $color-fsa-black !important }
-      &--transparent\@xl    { color: transparent !important }
     }
 
   }
@@ -191,7 +186,6 @@
 
     &--white         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 20%) !important} }
     &--black         { &,&:visited { color: $color-fsa-black !important;         }  &:hover { color: shade($color-fsa-black, 20%) !important} }
-    &--transparent   { &,&:visited { color: transparent !important;              }  &:hover { color: transparent                  !important} }
     &--primary-900   { &,&:visited { color: $color-fsa-primary-900 !important;   }  &:hover { color: $color-fsa-black             !important} }
     &--primary       { &,&:visited { color: $color-fsa-primary !important;       }  &:hover { color: $color-fsa-black             !important} }
     &--primary-300   { &,&:visited { color: $color-fsa-primary-300 !important;   }  &:hover { color: $color-fsa-black             !important} }
@@ -225,7 +219,6 @@
     @include breakpoint(S) {
       &--white\@s         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 20%) !important} }
       &--black\@s         { &,&:visited { color: $color-fsa-black !important;         }  &:hover { color: shade($color-fsa-black, 20%) !important} }
-      &--transparent\@s   { &,&:visited { color: transparent !important;              }  &:hover { color: transparent                  !important} }
       &--primary-900\@s   { &,&:visited { color: $color-fsa-primary-900 !important;   }  &:hover { color: $color-fsa-black             !important} }
       &--primary\@s       { &,&:visited { color: $color-fsa-primary !important;       }  &:hover { color: $color-fsa-black             !important} }
       &--primary-300\@s   { &,&:visited { color: $color-fsa-primary-300 !important;   }  &:hover { color: $color-fsa-black             !important} }
@@ -260,7 +253,6 @@
     @include breakpoint(M) {
       &--white\@m         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 20%) !important} }
       &--black\@m         { &,&:visited { color: $color-fsa-black !important;         }  &:hover { color: shade($color-fsa-black, 20%) !important} }
-      &--transparent\@m   { &,&:visited { color: transparent !important;              }  &:hover { color: transparent                  !important} }
       &--primary-900\@m   { &,&:visited { color: $color-fsa-primary-900 !important;   }  &:hover { color: $color-fsa-black             !important} }
       &--primary\@m       { &,&:visited { color: $color-fsa-primary !important;       }  &:hover { color: $color-fsa-black             !important} }
       &--primary-300\@m   { &,&:visited { color: $color-fsa-primary-300 !important;   }  &:hover { color: $color-fsa-black             !important} }
@@ -295,7 +287,6 @@
     @include breakpoint(L) {
       &--white\@l         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 20%) !important} }
       &--black\@l         { &,&:visited { color: $color-fsa-black !important;         }  &:hover { color: shade($color-fsa-black, 20%) !important} }
-      &--transparent\@l   { &,&:visited { color: transparent !important;              }  &:hover { color: transparent                  !important} }
       &--primary-900\@l   { &,&:visited { color: $color-fsa-primary-900 !important;   }  &:hover { color: $color-fsa-black             !important} }
       &--primary\@l       { &,&:visited { color: $color-fsa-primary !important;       }  &:hover { color: $color-fsa-black             !important} }
       &--primary-300\@l   { &,&:visited { color: $color-fsa-primary-300 !important;   }  &:hover { color: $color-fsa-black             !important} }
@@ -330,7 +321,6 @@
     @include breakpoint(XL) {
       &--white\@xl         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 20%) !important} }
       &--black\@xl         { &,&:visited { color: $color-fsa-black !important;         }  &:hover { color: shade($color-fsa-black, 20%) !important} }
-      &--transparent\@xl   { &,&:visited { color: transparent !important;              }  &:hover { color: transparent                  !important} }
       &--primary-900\@xl   { &,&:visited { color: $color-fsa-primary-900 !important;   }  &:hover { color: $color-fsa-black             !important} }
       &--primary\@xl       { &,&:visited { color: $color-fsa-primary !important;       }  &:hover { color: $color-fsa-black             !important} }
       &--primary-300\@xl   { &,&:visited { color: $color-fsa-primary-300 !important;   }  &:hover { color: $color-fsa-black             !important} }
@@ -368,6 +358,7 @@
 
     &--white          { background-color: $color-fsa-white !important }
     &--black          { background-color: $color-fsa-black !important }
+    &--base           { background-color: $color-fsa-base-bg !important }
     &--transparent    { background-color: transparent !important }
     &--primary        { background-color: $color-fsa-primary !important }
     &--primary-300    { background-color: $color-fsa-primary-300 !important }
@@ -402,6 +393,7 @@
     @include breakpoint(S) {
       &--white\@s          { background-color: $color-fsa-white !important }
       &--black\@s          { background-color: $color-fsa-black !important }
+      &--base\@s           { background-color: $color-fsa-base-bg !important }
       &--transparent\@s    { background-color: transparent !important }
       &--primary\@s        { background-color: $color-fsa-primary !important }
       &--primary-300\@s    { background-color: $color-fsa-primary-300 !important }
@@ -437,6 +429,7 @@
     @include breakpoint(M) {
       &--white\@m          { background-color: $color-fsa-white !important }
       &--black\@m          { background-color: $color-fsa-black !important }
+      &--base\@m           { background-color: $color-fsa-base-bg !important }
       &--transparent\@m    { background-color: transparent !important }
       &--primary\@m        { background-color: $color-fsa-primary !important }
       &--primary-300\@m    { background-color: $color-fsa-primary-300 !important }
@@ -472,6 +465,7 @@
     @include breakpoint(L) {
       &--white\@l          { background-color: $color-fsa-white !important }
       &--black\@l          { background-color: $color-fsa-black !important }
+      &--base\@l           { background-color: $color-fsa-base-bg !important }
       &--transparent\@l    { background-color: transparent !important }
       &--primary\@l        { background-color: $color-fsa-primary !important }
       &--primary-300\@l    { background-color: $color-fsa-primary-300 !important }
@@ -507,6 +501,7 @@
     @include breakpoint(XL) {
       &--white\@xl          { background-color: $color-fsa-white !important }
       &--black\@xl          { background-color: $color-fsa-black !important }
+      &--base\@xl           { background-color: $color-fsa-base-bg !important }
       &--transparent\@xl    { background-color: transparent !important }
       &--primary\@xl        { background-color: $color-fsa-primary !important }
       &--primary-300\@xl    { background-color: $color-fsa-primary-300 !important }
