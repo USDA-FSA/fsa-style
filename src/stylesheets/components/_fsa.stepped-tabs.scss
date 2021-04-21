@@ -103,7 +103,7 @@
     &:before {
 
       left: -12px;
-      border-color: $color-fsa-site-bg $color-fsa-site-bg $color-fsa-site-bg transparent;
+      border-color: $color-fsa-base-bg $color-fsa-base-bg $color-fsa-base-bg transparent;
 
       .fsa-stepped-tabs__item:first-child & {
         display: none;
@@ -114,7 +114,7 @@
     &:after {
 
       right: -12px;
-      border-color: transparent transparent transparent $color-fsa-site-bg;
+      border-color: transparent transparent transparent $color-fsa-base-bg;
 
       .fsa-stepped-tabs__item:last-child & {
         display: none;
