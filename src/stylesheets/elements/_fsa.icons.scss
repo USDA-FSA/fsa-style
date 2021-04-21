@@ -21,6 +21,7 @@
 .fsa-icon {
 
   & {
+    transition: all .125s ease-in-out;
     fill: currentColor;
     width: $icon-size-1;
     height: $icon-size-1;
@@ -40,33 +41,52 @@
 
   }
 
-  &--size-auto {
-    width: .942em;
-    height: .942em;
+  &--size-auto { width: .942em;       height: .942em; }
+  &--size-1    { width: $icon-size-1; height: $icon-size-1; }
+  &--size-2    { width: $icon-size-2; height: $icon-size-2; }
+  &--size-3    { width: $icon-size-3; height: $icon-size-3; }
+  &--size-4    { width: $icon-size-4; height: $icon-size-4; }
+  &--size-5    { width: $icon-size-5; height: $icon-size-5; }
+  &--size-6    { width: $icon-size-6; height: $icon-size-6; }
+
+  @include breakpoint(S) {
+    &--size-auto\@s  { width: .942em;       height: .942em; }
+    &--size-1\@s     { width: $icon-size-1; height: $icon-size-1; }
+    &--size-2\@s     { width: $icon-size-2; height: $icon-size-2; }
+    &--size-3\@s     { width: $icon-size-3; height: $icon-size-3; }
+    &--size-4\@s     { width: $icon-size-4; height: $icon-size-4; }
+    &--size-5\@s     { width: $icon-size-5; height: $icon-size-5; }
+    &--size-6\@s     { width: $icon-size-6; height: $icon-size-6; }
   }
-  &--size-1 {
-    width: $icon-size-1;
-    height: $icon-size-1;
+
+  @include breakpoint(M) {
+    &--size-auto\@m { width: .942em;       height: .942em; }
+    &--size-1\@m    { width: $icon-size-1; height: $icon-size-1; }
+    &--size-2\@m    { width: $icon-size-2; height: $icon-size-2; }
+    &--size-3\@m    { width: $icon-size-3; height: $icon-size-3; }
+    &--size-4\@m    { width: $icon-size-4; height: $icon-size-4; }
+    &--size-5\@m    { width: $icon-size-5; height: $icon-size-5; }
+    &--size-6\@m    { width: $icon-size-6; height: $icon-size-6; }
   }
-  &--size-2 {
-    width: $icon-size-2;
-    height: $icon-size-2;
+
+  @include breakpoint(L) {
+    &--size-auto\@l { width: .942em;       height: .942em; }
+    &--size-1\@l    { width: $icon-size-1; height: $icon-size-1; }
+    &--size-2\@l    { width: $icon-size-2; height: $icon-size-2; }
+    &--size-3\@l    { width: $icon-size-3; height: $icon-size-3; }
+    &--size-4\@l    { width: $icon-size-4; height: $icon-size-4; }
+    &--size-5\@l    { width: $icon-size-5; height: $icon-size-5; }
+    &--size-6\@l    { width: $icon-size-6; height: $icon-size-6; }
   }
-  &--size-3 {
-    width: $icon-size-3;
-    height: $icon-size-3;
-  }
-  &--size-4 {
-    width: $icon-size-4;
-    height: $icon-size-4;
-  }
-  &--size-5 {
-    width: $icon-size-5;
-    height: $icon-size-5;
-  }
-  &--size-6 {
-    width: $icon-size-6;
-    height: $icon-size-6;
+
+  @include breakpoint(XL) {
+    &--size-auto\@xl { width: .942em;       height: .942em; }
+    &--size-1\@xl    { width: $icon-size-1; height: $icon-size-1; }
+    &--size-2\@xl    { width: $icon-size-2; height: $icon-size-2; }
+    &--size-3\@xl    { width: $icon-size-3; height: $icon-size-3; }
+    &--size-4\@xl    { width: $icon-size-4; height: $icon-size-4; }
+    &--size-5\@xl    { width: $icon-size-5; height: $icon-size-5; }
+    &--size-6\@xl    { width: $icon-size-6; height: $icon-size-6; }
   }
 
   // IE11 subtle workaround
