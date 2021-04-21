@@ -226,35 +226,41 @@
 
   &-text-link {
 
-    &--primary       { &,&:visited { color: $color-fsa-primary !important;       }  &:hover { color: shade($color-fsa-primary, 20%)       !important} }
-    &--primary-300   { &,&:visited { color: $color-fsa-primary-300 !important;   }  &:hover { color: shade($color-fsa-primary-300, 20%)   !important} }
-    &--primary-200   { &,&:visited { color: $color-fsa-primary-200 !important;   }  &:hover { color: tint($color-fsa-primary-200, 30%)    !important} }
-    &--primary-100   { &,&:visited { color: $color-fsa-primary-100 !important;   }  &:hover { color: tint($color-fsa-primary-100, 30%)    !important} }
-    &--primary-900   { &,&:visited { color: $color-fsa-primary-900 !important;   }  &:hover { color: shade($color-fsa-primary-900, 20%)   !important} }
-    &--secondary     { &,&:visited { color: $color-fsa-secondary !important;     }  &:hover { color: shade($color-fsa-secondary, 20%)     !important} }
-    &--secondary-300 { &,&:visited { color: $color-fsa-secondary-300 !important; }  &:hover { color: shade($color-fsa-secondary-300, 20%) !important} }
-    &--secondary-200 { &,&:visited { color: $color-fsa-secondary-200 !important; }  &:hover { color: tint($color-fsa-secondary-200, 30%)  !important} }
-    &--secondary-100 { &,&:visited { color: $color-fsa-secondary-100 !important; }  &:hover { color: tint($color-fsa-secondary-100, 30%)  !important} }
-    &--secondary-900 { &,&:visited { color: $color-fsa-secondary-900 !important; }  &:hover { color: shade($color-fsa-secondary-900, 20%) !important} }
-    &--tertiary      { &,&:visited { color: $color-fsa-tertiary !important;      }  &:hover { color: shade($color-fsa-tertiary, 20%)      !important} }
-    &--tertiary-300  { &,&:visited { color: $color-fsa-tertiary-300 !important;  }  &:hover { color: shade($color-fsa-tertiary-300, 20%)  !important} }
-    &--tertiary-200  { &,&:visited { color: $color-fsa-tertiary-200 !important;  }  &:hover { color: tint($color-fsa-tertiary-200, 30%)   !important} }
-    &--tertiary-100  { &,&:visited { color: $color-fsa-tertiary-100 !important;  }  &:hover { color: tint($color-fsa-tertiary-100, 30%)   !important} }
-    &--tertiary-900  { &,&:visited { color: $color-fsa-tertiary-900 !important;  }  &:hover { color: shade($color-fsa-tertiary-900, 20%)  !important} }
-    &--aqua          { &,&:visited { color: $color-fsa-aqua !important;          }  &:hover { color: shade($color-fsa-aqua, 20%)          !important} }
-    &--aqua-300      { &,&:visited { color: $color-fsa-aqua-300 !important;      }  &:hover { color: shade($color-fsa-aqua-300, 20%)      !important} }
-    &--aqua-200      { &,&:visited { color: $color-fsa-aqua-200 !important;      }  &:hover { color: tint($color-fsa-aqua-200, 30%)       !important} }
-    &--aqua-100      { &,&:visited { color: $color-fsa-aqua-100 !important;      }  &:hover { color: tint($color-fsa-aqua-100, 30%)       !important} }
-    &--aqua-900      { &,&:visited { color: $color-fsa-aqua-900 !important;      }  &:hover { color: shade($color-fsa-aqua-900, 20%)      !important} }
-    &--red           { &,&:visited { color: $color-fsa-red !important;           }  &:hover { color: shade($color-fsa-red, 20%)           !important} }
-    &--red-300       { &,&:visited { color: $color-fsa-red-300 !important;       }  &:hover { color: shade($color-fsa-red-300, 20%)       !important} }
-    &--red-200       { &,&:visited { color: $color-fsa-red-200 !important;       }  &:hover { color: tint($color-fsa-red-200, 30%)        !important} }
-    &--red-100       { &,&:visited { color: $color-fsa-red-100 !important;       }  &:hover { color: tint($color-fsa-red-100, 30%)        !important} }
-    &--red-900       { &,&:visited { color: $color-fsa-red-900 !important;       }  &:hover { color: shade($color-fsa-red-900, 20%)       !important} }
-    &--yellow        { &,&:visited { color: $color-fsa-yellow !important;        }  &:hover { color: shade($color-fsa-yellow, 20%)        !important} }
-    &--yellow-300    { &,&:visited { color: $color-fsa-yellow-300 !important;    }  &:hover { color: tint($color-fsa-yellow-300, 30%)     !important} }
-    &--yellow-200    { &,&:visited { color: $color-fsa-yellow-200 !important;    }  &:hover { color: tint($color-fsa-yellow-200, 30%)     !important} }
-    &--yellow-100    { &,&:visited { color: $color-fsa-yellow-100 !important;    }  &:hover { color: tint($color-fsa-yellow-100, 30%)     !important} }
+    &--primary-900   { &,&:visited { color: $color-fsa-primary-900 !important;   }  &:hover { color: $color-fsa-black                          !important} }
+    &--primary       { &,&:visited { color: $color-fsa-primary !important;       }  &:hover { color: $color-fsa-black                          !important} }
+    &--primary-300   { &,&:visited { color: $color-fsa-primary-300 !important;   }  &:hover { color: $color-fsa-black                          !important} }
+    &--primary-200   { &,&:visited { color: $color-fsa-primary-200 !important;   }  &:hover { color: $color-fsa-white                     !important} }
+    &--primary-100   { &,&:visited { color: $color-fsa-primary-100 !important;   }  &:hover { color: $color-fsa-white                     !important} }
+
+    &--secondary-900 { &,&:visited { color: $color-fsa-secondary-900 !important; }  &:hover { color: $color-fsa-black                          !important} }
+    &--secondary     { &,&:visited { color: $color-fsa-secondary !important;     }  &:hover { color: $color-fsa-black                          !important} }
+    &--secondary-300 { &,&:visited { color: $color-fsa-secondary-300 !important; }  &:hover { color: $color-fsa-black                          !important} }
+    &--secondary-200 { &,&:visited { color: $color-fsa-secondary-200 !important; }  &:hover { color: $color-fsa-white                     !important} }
+    &--secondary-100 { &,&:visited { color: $color-fsa-secondary-100 !important; }  &:hover { color: $color-fsa-white                     !important} }
+
+    &--tertiary-900  { &,&:visited { color: $color-fsa-tertiary-900 !important;  }  &:hover { color: $color-fsa-black                          !important} }
+    &--tertiary      { &,&:visited { color: $color-fsa-tertiary !important;      }  &:hover { color: $color-fsa-black                          !important} }
+    &--tertiary-300  { &,&:visited { color: $color-fsa-tertiary-300 !important;  }  &:hover { color: $color-fsa-black                          !important} }
+    &--tertiary-200  { &,&:visited { color: $color-fsa-tertiary-200 !important;  }  &:hover { color: $color-fsa-white                     !important} }
+    &--tertiary-100  { &,&:visited { color: $color-fsa-tertiary-100 !important;  }  &:hover { color: $color-fsa-white                     !important} }
+
+    &--aqua-900      { &,&:visited { color: $color-fsa-aqua-900 !important;      }  &:hover { color: $color-fsa-black                          !important} }
+    &--aqua          { &,&:visited { color: $color-fsa-aqua !important;          }  &:hover { color: $color-fsa-black                          !important} }
+    &--aqua-300      { &,&:visited { color: $color-fsa-aqua-300 !important;      }  &:hover { color: $color-fsa-black                          !important} }
+    &--aqua-200      { &,&:visited { color: $color-fsa-aqua-200 !important;      }  &:hover { color: $color-fsa-white                     !important} }
+    &--aqua-100      { &,&:visited { color: $color-fsa-aqua-100 !important;      }  &:hover { color: $color-fsa-white                     !important} }
+
+    &--red-900       { &,&:visited { color: $color-fsa-red-900 !important;       }  &:hover { color: $color-fsa-black                          !important} }
+    &--red           { &,&:visited { color: $color-fsa-red !important;           }  &:hover { color: $color-fsa-black                          !important} }
+    &--red-300       { &,&:visited { color: $color-fsa-red-300 !important;       }  &:hover { color: $color-fsa-black                          !important} }
+    &--red-200       { &,&:visited { color: $color-fsa-red-200 !important;       }  &:hover { color: $color-fsa-white                     !important} }
+    &--red-100       { &,&:visited { color: $color-fsa-red-100 !important;       }  &:hover { color: $color-fsa-white                     !important} }
+
+    &--yellow        { &,&:visited { color: $color-fsa-yellow !important;        }  &:hover { color: $color-fsa-white                     !important} }
+    &--yellow-300    { &,&:visited { color: $color-fsa-yellow-300 !important;    }  &:hover { color: $color-fsa-white                     !important} }
+    &--yellow-200    { &,&:visited { color: $color-fsa-yellow-200 !important;    }  &:hover { color: $color-fsa-white                     !important} }
+    &--yellow-100    { &,&:visited { color: $color-fsa-yellow-100 !important;    }  &:hover { color: $color-fsa-white                     !important} }
+
     &--white         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 20%)         !important} }
     &--black         { &,&:visited { color: $color-fsa-black !important;         }  &:hover { color: shade($color-fsa-black, 20%)         !important} }
     &--transparent   { &,&:visited { color: transparent !important;              }  &:hover { color: transparent                          !important} }
