@@ -8493,12 +8493,12 @@
           <div>
             <div class="fsa-alert fsa-alert--warning fsa-alert--no-icon">
               <div class="fsa-alert__body">
-                <p class="fsa-alert__text">Follow <a href="https://usda-fsa.github.io/fsa-design-system/guides/accessibility/color-and-contrast">Accessibility requirements</a> when considering color combinations.</p>
+                <p class="fsa-alert__text">Follow <a onclick="trackLink('DS Link', 'Accessibility Color and Contrast')" href="https://usda-fsa.github.io/fsa-design-system/guides/accessibility/color-and-contrast">Accessibility requirements</a> when considering color combinations.</p>
               </div>
             </div>
             <div class="fsa-level">
               <label class="fsa-switch">
-                <input type="checkbox" class="fsa-switch__checkbox" id="demo-background" name="demo-background" data-target="demo-background-target" data-behavior="toggle-demo-background">
+                <input onchange="trackDemo('Color Utilities', 'Dark Background Switch')" type="checkbox" class="fsa-switch__checkbox" id="demo-background" name="demo-background" data-target="demo-background-target" data-behavior="toggle-demo-background">
                 <span class="fsa-switch__track"></span>
               </label>
               <label for="demo-background">Dark Background</label>
@@ -8639,14 +8639,14 @@
             <div class="docs__rwd-demo-block">
               <div class="docs__rwd-embed-container">
                 <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
-                  <button onclick="trackRWDDemo('Text Color',this)" data-behavior="toggle-rwd-size" data-target="rwd-demo_color-text" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait"><span class="sr-only">Portrait</span> Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
-                  <button onclick="trackRWDDemo('Text Color',this)" data-behavior="toggle-rwd-size" data-target="rwd-demo_color-text" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape"><span class="sr-only">Landscape</span> Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
-                  <button onclick="trackRWDDemo('Text Color',this)" data-behavior="toggle-rwd-size" data-target="rwd-demo_color-text" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
-                  <button onclick="trackRWDDemo('Text Color',this)" data-behavior="toggle-rwd-size" data-target="rwd-demo_color-text" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
-                  <a onclick="trackRWDDemo('Text Color',this)" class="fsa-btn-group__item" href="demo/rwd__color.html" target="_blank" title="View in its own browser window">New window</a>
+                  <button onclick="trackRWDDemo('Color',this)" data-behavior="toggle-rwd-size" data-target="rwd-demo_color" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait"><span class="sr-only">Portrait</span> Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                  <button onclick="trackRWDDemo('Color',this)" data-behavior="toggle-rwd-size" data-target="rwd-demo_color" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape"><span class="sr-only">Landscape</span> Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                  <button onclick="trackRWDDemo('Color',this)" data-behavior="toggle-rwd-size" data-target="rwd-demo_color" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                  <button onclick="trackRWDDemo('Color',this)" data-behavior="toggle-rwd-size" data-target="rwd-demo_color" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+                  <a onclick="trackRWDDemo('Color',this)" class="fsa-btn-group__item" href="demo/rwd__color.html" target="_blank" title="View in its own browser window">New window</a>
                 </span>
-                <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_color-text">
-                  <iframe title="Responsive Demo: Text Color" src="demo/rwd__color.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+                <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_color">
+                  <iframe title="Responsive Demo: Color" src="demo/rwd__color.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
                 </div>
               </div>
             </div>
