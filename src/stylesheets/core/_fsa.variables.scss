@@ -167,6 +167,16 @@ $fsa-grid-gutter: ($base-font-size * 1.5);
 $fsa-grid-columns: 12;
 
 // ---------------------------------------------------------------------------
+// Border Utilities
+
+$u-border-none : 0;
+$u-border-xxs  : 1px;
+$u-border-xs   : ($size-base / 2);
+$u-border-s    : $size-base;
+$u-border-m    : $size-small;
+$u-border-l    : $size-default;
+
+// ---------------------------------------------------------------------------
 // Breakpoint Settings (screen width)
 
 $screen-s  : 30.0625em; //  481px at 16px base font
