@@ -24,6 +24,7 @@ html { // http://bit.ly/1qk2tVR
   &::after,
   &::before {
     box-sizing: inherit;
+    border:0 solid $color-fsa-tertiary-200;
   }
 }
 
