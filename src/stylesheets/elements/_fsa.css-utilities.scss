@@ -1,9 +1,30 @@
 ////////////////////////////////////////////////////////////////////////
 // Styling Utilities
 
-// TODO: so much of this is repeatable, convert to mixin sometime!
+// TODO: almost all of these are repeatable, convert to MIXIN sometime!
 
 // scss-lint:disable ImportantRule SpaceBeforeBrace DeclarationOrder
+
+// Text -----------------------------------------------------------------------
+.fsa-border {
+
+  &-width {
+    &--none   { border-color: black; border: solid 0; }
+    &--xxs    { border-color: black; border: solid 1px; }
+    &--xs     { border-color: black; border: solid 2px; }
+    &--s      { border-color: black; border: solid 4px; }
+    &--m      { border-color: black; border: solid 8px; }
+    &--l      { border-color: black; border: solid 12px; }
+    &--custom { border-color: black; border: solid var(--border-width); }
+  }
+
+  &-color {}
+
+  &-radius {}
+
+  &-between {}
+
+}
 
 // Text -----------------------------------------------------------------------
 .fsa-color {
