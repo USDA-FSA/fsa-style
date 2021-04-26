@@ -54,6 +54,7 @@
     &--custom { --custom-border-left-width: #{$u-border-xxs}; border-left-width: var(--custom-border-left-width) !important; }
   }
 
+  &--transparent    { border-color: transparent !important }
   &--white          { border-color: $color-fsa-white !important }
   &--black          { border-color: $color-fsa-black !important }
   &--primary        { border-color: $color-fsa-primary !important }
