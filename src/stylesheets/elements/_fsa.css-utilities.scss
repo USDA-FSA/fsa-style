@@ -8,14 +8,57 @@
 // Text -----------------------------------------------------------------------
 .fsa-border {
 
+  // Width
   & {
+
     &--none   { border-width: $u-border-none !important; }
     &--xxs    { border-width: $u-border-xxs !important; }
     &--xs     { border-width: $u-border-xs !important; }
     &--s      { border-width: $u-border-s !important; }
-    &--m      { border-width: $u-border-m !important; }
     &--l      { border-width: $u-border-l !important; }
+    &--m      { border-width: $u-border-m !important; }
     &--custom { --custom-border-width: #{$u-border-xxs}; border-width: var(--custom-border-width) !important; }
+
+    @include breakpoint(S) {
+      &--none\@s   { border-width: $u-border-none !important; }
+      &--xxs\@s    { border-width: $u-border-xxs !important; }
+      &--xs\@s     { border-width: $u-border-xs !important; }
+      &--s\@s      { border-width: $u-border-s !important; }
+      &--m\@s      { border-width: $u-border-m !important; }
+      &--l\@s      { border-width: $u-border-l !important; }
+      &--custom\@s { --custom-border-width-s: #{$u-border-xxs}; border-width: var(--custom-border-width-s) !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m   { border-width: $u-border-none !important; }
+      &--xxs\@m    { border-width: $u-border-xxs !important; }
+      &--xs\@m     { border-width: $u-border-xs !important; }
+      &--s\@m      { border-width: $u-border-s !important; }
+      &--m\@m      { border-width: $u-border-m !important; }
+      &--l\@m      { border-width: $u-border-l !important; }
+      &--custom\@m { --custom-border-width-m: #{$u-border-xxs}; border-width: var(--custom-border-width-m) !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l   { border-width: $u-border-none !important; }
+      &--xxs\@l    { border-width: $u-border-xxs !important; }
+      &--xs\@l     { border-width: $u-border-xs !important; }
+      &--s\@l      { border-width: $u-border-s !important; }
+      &--m\@l      { border-width: $u-border-m !important; }
+      &--l\@l      { border-width: $u-border-l !important; }
+      &--custom\@l { --custom-border-width-l: #{$u-border-xxs}; border-width: var(--custom-border-width-l) !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl   { border-width: $u-border-none !important; }
+      &--xxs\@xl    { border-width: $u-border-xxs !important; }
+      &--xs\@xl     { border-width: $u-border-xs !important; }
+      &--s\@xl      { border-width: $u-border-s !important; }
+      &--m\@xl      { border-width: $u-border-m !important; }
+      &--l\@xl      { border-width: $u-border-l !important; }
+      &--custom\@xl { --custom-border-width-xl: #{$u-border-xxs}; border-width: var(--custom-border-width-xl) !important; }
+    }
+
   }
   &-top {
     &--none   { border-top-width: $u-border-none !important; }
@@ -54,6 +97,7 @@
     &--custom { --custom-border-left-width: #{$u-border-xxs}; border-left-width: var(--custom-border-left-width) !important; }
   }
 
+  // Color
   &--transparent    { border-color: transparent !important }
   &--white          { border-color: $color-fsa-white !important }
   &--black          { border-color: $color-fsa-black !important }
