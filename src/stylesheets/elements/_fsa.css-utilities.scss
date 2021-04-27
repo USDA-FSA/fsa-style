@@ -8,7 +8,7 @@
 // Text -----------------------------------------------------------------------
 .fsa-border {
 
-  // Width
+  // Border Width
   & {
 
     &--none   { border-width: $u-border-none !important; }
@@ -61,6 +61,7 @@
 
   }
   &-top {
+
     &--none   { border-top-width: $u-border-none !important; }
     &--xxs    { border-top-width: $u-border-xxs !important; }
     &--xs     { border-top-width: $u-border-xs !important; }
@@ -68,8 +69,50 @@
     &--m      { border-top-width: $u-border-m !important; }
     &--l      { border-top-width: $u-border-l !important; }
     &--custom { --custom-border-top-width: #{$u-border-xxs}; border-top-width: var(--custom-border-top-width) !important; }
+
+    @include breakpoint(S) {
+      &--none\@s   { border-top-width: $u-border-none !important; }
+      &--xxs\@s    { border-top-width: $u-border-xxs !important; }
+      &--xs\@s     { border-top-width: $u-border-xs !important; }
+      &--s\@s      { border-top-width: $u-border-s !important; }
+      &--m\@s      { border-top-width: $u-border-m !important; }
+      &--l\@s      { border-top-width: $u-border-l !important; }
+      &--custom\@s { --custom-border-top-width-s: #{$u-border-xxs}; border-top-width: var(--custom-border-top-width-s) !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m   { border-top-width: $u-border-none !important; }
+      &--xxs\@m    { border-top-width: $u-border-xxs !important; }
+      &--xs\@m     { border-top-width: $u-border-xs !important; }
+      &--s\@m      { border-top-width: $u-border-s !important; }
+      &--m\@m      { border-top-width: $u-border-m !important; }
+      &--l\@m      { border-top-width: $u-border-l !important; }
+      &--custom\@m { --custom-border-top-width-m: #{$u-border-xxs}; border-top-width: var(--custom-border-top-width-m) !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l   { border-top-width: $u-border-none !important; }
+      &--xxs\@l    { border-top-width: $u-border-xxs !important; }
+      &--xs\@l     { border-top-width: $u-border-xs !important; }
+      &--s\@l      { border-top-width: $u-border-s !important; }
+      &--m\@l      { border-top-width: $u-border-m !important; }
+      &--l\@l      { border-top-width: $u-border-l !important; }
+      &--custom\@l { --custom-border-top-width-l: #{$u-border-xxs}; border-top-width: var(--custom-border-top-width-l) !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl   { border-top-width: $u-border-none !important; }
+      &--xxs\@xl    { border-top-width: $u-border-xxs !important; }
+      &--xs\@xl     { border-top-width: $u-border-xs !important; }
+      &--s\@xl      { border-top-width: $u-border-s !important; }
+      &--m\@xl      { border-top-width: $u-border-m !important; }
+      &--l\@xl      { border-top-width: $u-border-l !important; }
+      &--custom\@xl { --custom-border-top-width-xl: #{$u-border-xxs}; border-top-width: var(--custom-border-top-width-xl) !important; }
+    }
+
   }
   &-right {
+
     &--none   { border-right-width: $u-border-none !important; }
     &--xxs    { border-right-width: $u-border-xxs !important; }
     &--xs     { border-right-width: $u-border-xs !important; }
@@ -77,8 +120,50 @@
     &--m      { border-right-width: $u-border-m !important; }
     &--l      { border-right-width: $u-border-l !important; }
     &--custom { --custom-border-right-width: #{$u-border-xxs}; border-right-width: var(--custom-border-right-width) !important; }
+
+    @include breakpoint(S) {
+      &--none\@s   { border-right-width: $u-border-none !important; }
+      &--xxs\@s    { border-right-width: $u-border-xxs !important; }
+      &--xs\@s     { border-right-width: $u-border-xs !important; }
+      &--s\@s      { border-right-width: $u-border-s !important; }
+      &--m\@s      { border-right-width: $u-border-m !important; }
+      &--l\@s      { border-right-width: $u-border-l !important; }
+      &--custom\@s { --custom-border-right-width-s: #{$u-border-xxs}; border-right-width: var(--custom-border-right-width-s) !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m   { border-right-width: $u-border-none !important; }
+      &--xxs\@m    { border-right-width: $u-border-xxs !important; }
+      &--xs\@m     { border-right-width: $u-border-xs !important; }
+      &--s\@m      { border-right-width: $u-border-s !important; }
+      &--m\@m      { border-right-width: $u-border-m !important; }
+      &--l\@m      { border-right-width: $u-border-l !important; }
+      &--custom\@m { --custom-border-right-width-m: #{$u-border-xxs}; border-right-width: var(--custom-border-right-width-m) !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l   { border-right-width: $u-border-none !important; }
+      &--xxs\@l    { border-right-width: $u-border-xxs !important; }
+      &--xs\@l     { border-right-width: $u-border-xs !important; }
+      &--s\@l      { border-right-width: $u-border-s !important; }
+      &--m\@l      { border-right-width: $u-border-m !important; }
+      &--l\@l      { border-right-width: $u-border-l !important; }
+      &--custom\@l { --custom-border-right-width-l: #{$u-border-xxs}; border-right-width: var(--custom-border-right-width-l) !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl   { border-right-width: $u-border-none !important; }
+      &--xxs\@xl    { border-right-width: $u-border-xxs !important; }
+      &--xs\@xl     { border-right-width: $u-border-xs !important; }
+      &--s\@xl      { border-right-width: $u-border-s !important; }
+      &--m\@xl      { border-right-width: $u-border-m !important; }
+      &--l\@xl      { border-right-width: $u-border-l !important; }
+      &--custom\@xl { --custom-border-right-width-xl: #{$u-border-xxs}; border-right-width: var(--custom-border-right-width-xl) !important; }
+    }
+
   }
   &-bottom {
+
     &--none   { border-bottom-width: $u-border-none !important; }
     &--xxs    { border-bottom-width: $u-border-xxs !important; }
     &--xs     { border-bottom-width: $u-border-xs !important; }
@@ -86,8 +171,50 @@
     &--m      { border-bottom-width: $u-border-m !important; }
     &--l      { border-bottom-width: $u-border-l !important; }
     &--custom { --custom-border-bottom-width: #{$u-border-xxs}; border-bottom-width: var(--custom-border-bottom-width) !important; }
+
+    @include breakpoint(S) {
+      &--none\@s   { border-bottom-width: $u-border-none !important; }
+      &--xxs\@s    { border-bottom-width: $u-border-xxs !important; }
+      &--xs\@s     { border-bottom-width: $u-border-xs !important; }
+      &--s\@s      { border-bottom-width: $u-border-s !important; }
+      &--m\@s      { border-bottom-width: $u-border-m !important; }
+      &--l\@s      { border-bottom-width: $u-border-l !important; }
+      &--custom\@s { --custom-border-bottom-width-s: #{$u-border-xxs}; border-bottom-width: var(--custom-border-bottom-width-s) !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m   { border-bottom-width: $u-border-none !important; }
+      &--xxs\@m    { border-bottom-width: $u-border-xxs !important; }
+      &--xs\@m     { border-bottom-width: $u-border-xs !important; }
+      &--s\@m      { border-bottom-width: $u-border-s !important; }
+      &--m\@m      { border-bottom-width: $u-border-m !important; }
+      &--l\@m      { border-bottom-width: $u-border-l !important; }
+      &--custom\@m { --custom-border-bottom-width-m: #{$u-border-xxs}; border-bottom-width: var(--custom-border-bottom-width-m) !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l   { border-bottom-width: $u-border-none !important; }
+      &--xxs\@l    { border-bottom-width: $u-border-xxs !important; }
+      &--xs\@l     { border-bottom-width: $u-border-xs !important; }
+      &--s\@l      { border-bottom-width: $u-border-s !important; }
+      &--m\@l      { border-bottom-width: $u-border-m !important; }
+      &--l\@l      { border-bottom-width: $u-border-l !important; }
+      &--custom\@l { --custom-border-bottom-width-l: #{$u-border-xxs}; border-bottom-width: var(--custom-border-bottom-width-l) !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl   { border-bottom-width: $u-border-none !important; }
+      &--xxs\@xl    { border-bottom-width: $u-border-xxs !important; }
+      &--xs\@xl     { border-bottom-width: $u-border-xs !important; }
+      &--s\@xl      { border-bottom-width: $u-border-s !important; }
+      &--m\@xl      { border-bottom-width: $u-border-m !important; }
+      &--l\@xl      { border-bottom-width: $u-border-l !important; }
+      &--custom\@xl { --custom-border-bottom-width-xl: #{$u-border-xxs}; border-bottom-width: var(--custom-border-bottom-width-xl) !important; }
+    }
+
   }
   &-left {
+
     &--none   { border-left-width: $u-border-none !important; }
     &--xxs    { border-left-width: $u-border-xxs !important; }
     &--xs     { border-left-width: $u-border-xs !important; }
@@ -95,9 +222,50 @@
     &--m      { border-left-width: $u-border-m !important; }
     &--l      { border-left-width: $u-border-l !important; }
     &--custom { --custom-border-left-width: #{$u-border-xxs}; border-left-width: var(--custom-border-left-width) !important; }
+
+    @include breakpoint(S) {
+      &--none\@s   { border-left-width: $u-border-none !important; }
+      &--xxs\@s    { border-left-width: $u-border-xxs !important; }
+      &--xs\@s     { border-left-width: $u-border-xs !important; }
+      &--s\@s      { border-left-width: $u-border-s !important; }
+      &--m\@s      { border-left-width: $u-border-m !important; }
+      &--l\@s      { border-left-width: $u-border-l !important; }
+      &--custom\@s { --custom-border-left-width-s: #{$u-border-xxs}; border-left-width: var(--custom-border-left-width-s) !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m   { border-left-width: $u-border-none !important; }
+      &--xxs\@m    { border-left-width: $u-border-xxs !important; }
+      &--xs\@m     { border-left-width: $u-border-xs !important; }
+      &--s\@m      { border-left-width: $u-border-s !important; }
+      &--m\@m      { border-left-width: $u-border-m !important; }
+      &--l\@m      { border-left-width: $u-border-l !important; }
+      &--custom\@m { --custom-border-left-width-m: #{$u-border-xxs}; border-left-width: var(--custom-border-left-width-m) !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l   { border-left-width: $u-border-none !important; }
+      &--xxs\@l    { border-left-width: $u-border-xxs !important; }
+      &--xs\@l     { border-left-width: $u-border-xs !important; }
+      &--s\@l      { border-left-width: $u-border-s !important; }
+      &--m\@l      { border-left-width: $u-border-m !important; }
+      &--l\@l      { border-left-width: $u-border-l !important; }
+      &--custom\@l { --custom-border-left-width-: #{$u-border-xxs}; border-left-width: var(--custom-border-left-width-) !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl   { border-left-width: $u-border-none !important; }
+      &--xxs\@xl    { border-left-width: $u-border-xxs !important; }
+      &--xs\@xl     { border-left-width: $u-border-xs !important; }
+      &--s\@xl      { border-left-width: $u-border-s !important; }
+      &--m\@xl      { border-left-width: $u-border-m !important; }
+      &--l\@xl      { border-left-width: $u-border-l !important; }
+      &--custom\@xl { --custom-border-left-width-xl: #{$u-border-xxs}; border-left-width: var(--custom-border-left-width-xl) !important; }
+    }
+
   }
 
-  // Color
+  // Border Color
   &--transparent    { border-color: transparent !important }
   &--white          { border-color: $color-fsa-white !important }
   &--black          { border-color: $color-fsa-black !important }
@@ -131,8 +299,150 @@
   &--yellow-200     { border-color: $color-fsa-yellow-200 !important }
   &--yellow-100     { border-color: $color-fsa-yellow-100 !important }
 
+  @include breakpoint(S) {
+    &--transparent\@s    { border-color: transparent !important }
+    &--white\@s          { border-color: $color-fsa-white !important }
+    &--black\@s          { border-color: $color-fsa-black !important }
+    &--primary\@s        { border-color: $color-fsa-primary !important }
+    &--primary-300\@s    { border-color: $color-fsa-primary-300 !important }
+    &--primary-200\@s    { border-color: $color-fsa-primary-200 !important }
+    &--primary-100\@s    { border-color: $color-fsa-primary-100 !important }
+    &--primary-900\@s    { border-color: $color-fsa-primary-900 !important }
+    &--secondary\@s      { border-color: $color-fsa-secondary !important }
+    &--secondary-300\@s  { border-color: $color-fsa-secondary-300 !important }
+    &--secondary-200\@s  { border-color: $color-fsa-secondary-200 !important }
+    &--secondary-100\@s  { border-color: $color-fsa-secondary-100 !important }
+    &--secondary-900\@s  { border-color: $color-fsa-secondary-900 !important }
+    &--tertiary\@s       { border-color: $color-fsa-tertiary !important }
+    &--tertiary-300\@s   { border-color: $color-fsa-tertiary-300 !important }
+    &--tertiary-200\@s   { border-color: $color-fsa-tertiary-200 !important }
+    &--tertiary-100\@s   { border-color: $color-fsa-tertiary-100 !important }
+    &--tertiary-900\@s   { border-color: $color-fsa-tertiary-900 !important }
+    &--aqua\@s           { border-color: $color-fsa-aqua !important }
+    &--aqua-300\@s       { border-color: $color-fsa-aqua-300 !important }
+    &--aqua-200\@s       { border-color: $color-fsa-aqua-200 !important }
+    &--aqua-100\@s       { border-color: $color-fsa-aqua-100 !important }
+    &--aqua-900\@s       { border-color: $color-fsa-aqua-900 !important }
+    &--red\@s            { border-color: $color-fsa-red !important }
+    &--red-300\@s        { border-color: $color-fsa-red-300 !important }
+    &--red-200\@s        { border-color: $color-fsa-red-200 !important }
+    &--red-100\@s        { border-color: $color-fsa-red-100 !important }
+    &--red-900\@s        { border-color: $color-fsa-red-900 !important }
+    &--yellow\@s         { border-color: $color-fsa-yellow !important }
+    &--yellow-300\@s     { border-color: $color-fsa-yellow-300 !important }
+    &--yellow-200\@s     { border-color: $color-fsa-yellow-200 !important }
+    &--yellow-100\@s     { border-color: $color-fsa-yellow-100 !important }
+  }
+
+  @include breakpoint(M) {
+    &--transparent\@m    { border-color: transparent !important }
+    &--white\@m          { border-color: $color-fsa-white !important }
+    &--black\@m          { border-color: $color-fsa-black !important }
+    &--primary\@m        { border-color: $color-fsa-primary !important }
+    &--primary-300\@m    { border-color: $color-fsa-primary-300 !important }
+    &--primary-200\@m    { border-color: $color-fsa-primary-200 !important }
+    &--primary-100\@m    { border-color: $color-fsa-primary-100 !important }
+    &--primary-900\@m    { border-color: $color-fsa-primary-900 !important }
+    &--secondary\@m      { border-color: $color-fsa-secondary !important }
+    &--secondary-300\@m  { border-color: $color-fsa-secondary-300 !important }
+    &--secondary-200\@m  { border-color: $color-fsa-secondary-200 !important }
+    &--secondary-100\@m  { border-color: $color-fsa-secondary-100 !important }
+    &--secondary-900\@m  { border-color: $color-fsa-secondary-900 !important }
+    &--tertiary\@m       { border-color: $color-fsa-tertiary !important }
+    &--tertiary-300\@m   { border-color: $color-fsa-tertiary-300 !important }
+    &--tertiary-200\@m   { border-color: $color-fsa-tertiary-200 !important }
+    &--tertiary-100\@m   { border-color: $color-fsa-tertiary-100 !important }
+    &--tertiary-900\@m   { border-color: $color-fsa-tertiary-900 !important }
+    &--aqua\@m           { border-color: $color-fsa-aqua !important }
+    &--aqua-300\@m       { border-color: $color-fsa-aqua-300 !important }
+    &--aqua-200\@m       { border-color: $color-fsa-aqua-200 !important }
+    &--aqua-100\@m       { border-color: $color-fsa-aqua-100 !important }
+    &--aqua-900\@m       { border-color: $color-fsa-aqua-900 !important }
+    &--red\@m            { border-color: $color-fsa-red !important }
+    &--red-300\@m        { border-color: $color-fsa-red-300 !important }
+    &--red-200\@m        { border-color: $color-fsa-red-200 !important }
+    &--red-100\@m        { border-color: $color-fsa-red-100 !important }
+    &--red-900\@m        { border-color: $color-fsa-red-900 !important }
+    &--yellow\@m         { border-color: $color-fsa-yellow !important }
+    &--yellow-300\@m     { border-color: $color-fsa-yellow-300 !important }
+    &--yellow-200\@m     { border-color: $color-fsa-yellow-200 !important }
+    &--yellow-100\@m     { border-color: $color-fsa-yellow-100 !important }
+  }
+
+  @include breakpoint(L) {
+    &--transparent\@l    { border-color: transparent !important }
+    &--white\@l          { border-color: $color-fsa-white !important }
+    &--black\@l          { border-color: $color-fsa-black !important }
+    &--primary\@l        { border-color: $color-fsa-primary !important }
+    &--primary-300\@l    { border-color: $color-fsa-primary-300 !important }
+    &--primary-200\@l    { border-color: $color-fsa-primary-200 !important }
+    &--primary-100\@l    { border-color: $color-fsa-primary-100 !important }
+    &--primary-900\@l    { border-color: $color-fsa-primary-900 !important }
+    &--secondary\@l      { border-color: $color-fsa-secondary !important }
+    &--secondary-300\@l  { border-color: $color-fsa-secondary-300 !important }
+    &--secondary-200\@l  { border-color: $color-fsa-secondary-200 !important }
+    &--secondary-100\@l  { border-color: $color-fsa-secondary-100 !important }
+    &--secondary-900\@l  { border-color: $color-fsa-secondary-900 !important }
+    &--tertiary\@l       { border-color: $color-fsa-tertiary !important }
+    &--tertiary-300\@l   { border-color: $color-fsa-tertiary-300 !important }
+    &--tertiary-200\@l   { border-color: $color-fsa-tertiary-200 !important }
+    &--tertiary-100\@l   { border-color: $color-fsa-tertiary-100 !important }
+    &--tertiary-900\@l   { border-color: $color-fsa-tertiary-900 !important }
+    &--aqua\@l           { border-color: $color-fsa-aqua !important }
+    &--aqua-300\@l       { border-color: $color-fsa-aqua-300 !important }
+    &--aqua-200\@l       { border-color: $color-fsa-aqua-200 !important }
+    &--aqua-100\@l       { border-color: $color-fsa-aqua-100 !important }
+    &--aqua-900\@l       { border-color: $color-fsa-aqua-900 !important }
+    &--red\@l            { border-color: $color-fsa-red !important }
+    &--red-300\@l        { border-color: $color-fsa-red-300 !important }
+    &--red-200\@l        { border-color: $color-fsa-red-200 !important }
+    &--red-100\@l        { border-color: $color-fsa-red-100 !important }
+    &--red-900\@l        { border-color: $color-fsa-red-900 !important }
+    &--yellow\@l         { border-color: $color-fsa-yellow !important }
+    &--yellow-300\@l     { border-color: $color-fsa-yellow-300 !important }
+    &--yellow-200\@l     { border-color: $color-fsa-yellow-200 !important }
+    &--yellow-100\@l     { border-color: $color-fsa-yellow-100 !important }
+  }
+
+  @include breakpoint(XL) {
+    &--transparent\@xl    { border-color: transparent !important }
+    &--white\@xl          { border-color: $color-fsa-white !important }
+    &--black\@xl          { border-color: $color-fsa-black !important }
+    &--primary\@xl        { border-color: $color-fsa-primary !important }
+    &--primary-300\@xl    { border-color: $color-fsa-primary-300 !important }
+    &--primary-200\@xl    { border-color: $color-fsa-primary-200 !important }
+    &--primary-100\@xl    { border-color: $color-fsa-primary-100 !important }
+    &--primary-900\@xl    { border-color: $color-fsa-primary-900 !important }
+    &--secondary\@xl      { border-color: $color-fsa-secondary !important }
+    &--secondary-300\@xl  { border-color: $color-fsa-secondary-300 !important }
+    &--secondary-200\@xl  { border-color: $color-fsa-secondary-200 !important }
+    &--secondary-100\@xl  { border-color: $color-fsa-secondary-100 !important }
+    &--secondary-900\@xl  { border-color: $color-fsa-secondary-900 !important }
+    &--tertiary\@xl       { border-color: $color-fsa-tertiary !important }
+    &--tertiary-300\@xl   { border-color: $color-fsa-tertiary-300 !important }
+    &--tertiary-200\@xl   { border-color: $color-fsa-tertiary-200 !important }
+    &--tertiary-100\@xl   { border-color: $color-fsa-tertiary-100 !important }
+    &--tertiary-900\@xl   { border-color: $color-fsa-tertiary-900 !important }
+    &--aqua\@xl           { border-color: $color-fsa-aqua !important }
+    &--aqua-300\@xl       { border-color: $color-fsa-aqua-300 !important }
+    &--aqua-200\@xl       { border-color: $color-fsa-aqua-200 !important }
+    &--aqua-100\@xl       { border-color: $color-fsa-aqua-100 !important }
+    &--aqua-900\@xl       { border-color: $color-fsa-aqua-900 !important }
+    &--red\@xl            { border-color: $color-fsa-red !important }
+    &--red-300\@xl        { border-color: $color-fsa-red-300 !important }
+    &--red-200\@xl        { border-color: $color-fsa-red-200 !important }
+    &--red-100\@xl        { border-color: $color-fsa-red-100 !important }
+    &--red-900\@xl        { border-color: $color-fsa-red-900 !important }
+    &--yellow\@xl         { border-color: $color-fsa-yellow !important }
+    &--yellow-300\@xl     { border-color: $color-fsa-yellow-300 !important }
+    &--yellow-200\@xl     { border-color: $color-fsa-yellow-200 !important }
+    &--yellow-100\@xl     { border-color: $color-fsa-yellow-100 !important }
+  }
+
+  // Border Radius
   &-radius {}
 
+  // Border Between
   &-between {}
 
 }
