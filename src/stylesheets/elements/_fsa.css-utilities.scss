@@ -443,9 +443,6 @@
 
   }
 
-  // Border Radius
-  &-radius {}
-
   // Border Between Color
   &-between-vertical,
   &-between-horizontal {
@@ -727,6 +724,54 @@
       &--custom\@xl > * + * { --custom-border-between-horizontal-xl: #{$u-border-xxs}; border-top-width: var(--custom-border-between-horizontal-xl) !important; }
     }
 
+  }
+
+}
+
+// Border Radius --------------------------------------------------------------
+.fsa-radius {
+
+  &--none   { border-radius: 0; }
+  &--s      { border-radius: $u-radius-s; }
+  &--m      { border-radius: $u-radius-m; }
+  &--l      { border-radius: $u-radius-l; }
+  &--full   { border-radius: $u-radius-full; }
+  &--circle { border-radius: $u-radius-circle; display: inline-flex; align-items: center; justify-content: center; }
+
+  @include breakpoint(S) {
+    &--none\@s   { border-radius: 0; }
+    &--s\@s      { border-radius: $u-radius-s; }
+    &--m\@s      { border-radius: $u-radius-m; }
+    &--l\@s      { border-radius: $u-radius-l; }
+    &--full\@s   { border-radius: $u-radius-full; }
+    &--circle\@s { border-radius: $u-radius-circle; display: inline-flex; align-items: center; justify-content: center; }
+  }
+
+  @include breakpoint(M) {
+    &--none\@m   { border-radius: 0; }
+    &--s\@m      { border-radius: $u-radius-s; }
+    &--m\@m      { border-radius: $u-radius-m; }
+    &--l\@m      { border-radius: $u-radius-l; }
+    &--full\@m   { border-radius: $u-radius-full; }
+    &--circle\@m { border-radius: $u-radius-circle; display: inline-flex; align-items: center; justify-content: center; }
+  }
+
+  @include breakpoint(L) {
+    &--none\@l   { border-radius: 0; }
+    &--s\@l      { border-radius: $u-radius-s; }
+    &--m\@l      { border-radius: $u-radius-m; }
+    &--l\@l      { border-radius: $u-radius-l; }
+    &--full\@l   { border-radius: $u-radius-full; }
+    &--circle\@l { border-radius: $u-radius-circle; display: inline-flex; align-items: center; justify-content: center; }
+  }
+
+  @include breakpoint(XL) {
+    &--none\@xl   { border-radius: 0; }
+    &--s\@xl      { border-radius: $u-radius-s; }
+    &--m\@xl      { border-radius: $u-radius-m; }
+    &--l\@xl      { border-radius: $u-radius-l; }
+    &--full\@xl   { border-radius: $u-radius-full; }
+    &--circle\@xl { border-radius: $u-radius-circle; display: inline-flex; align-items: center; justify-content: center; }
   }
 
 }
