@@ -446,8 +446,9 @@
   // Border Radius
   &-radius {}
 
-  // Border Between
-  &-between {
+  // Border Between Color
+  &-between-vertical,
+  &-between-horizontal {
 
     &--transparent   > * + * { border-color: transparent !important }
     &--white         > * + * { border-color: $color-fsa-white !important }
@@ -623,6 +624,8 @@
     }
 
   }
+
+  // Border Between Width
   &-between-vertical {
 
     &--none   > * + * { border-left-width: $u-border-none !important; }
