@@ -779,6 +779,10 @@
 // Links ----------------------------------------------------------------------
 .fsa-link {
 
+  &--inline       { display: inline !important; }
+  &--inline-block { display: inline-block !important; }
+  &--block        { display: block !important; }
+
   &--white         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 20%) !important} }
   &--black         { &,&:visited { color: $color-fsa-black !important;         }  &:hover { color: shade($color-fsa-black, 20%) !important} }
   &--primary-900   { &,&:visited { color: $color-fsa-primary-900 !important;   }  &:hover { color: $color-fsa-black             !important} }
@@ -812,6 +816,11 @@
   &--yellow-100    { &,&:visited { color: $color-fsa-yellow-100 !important;    }  &:hover { color: $color-fsa-white             !important} }
 
   @include breakpoint(S) {
+
+    &--inline\@s       { display: inline !important; }
+    &--inline-block\@s { display: inline-block !important; }
+    &--block\@s        { display: block !important; }
+
     &--white\@s         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 20%) !important} }
     &--black\@s         { &,&:visited { color: $color-fsa-black !important;         }  &:hover { color: shade($color-fsa-black, 20%) !important} }
     &--primary-900\@s   { &,&:visited { color: $color-fsa-primary-900 !important;   }  &:hover { color: $color-fsa-black             !important} }
@@ -843,9 +852,15 @@
     &--yellow-300\@s    { &,&:visited { color: $color-fsa-yellow-300 !important;    }  &:hover { color: $color-fsa-white             !important} }
     &--yellow-200\@s    { &,&:visited { color: $color-fsa-yellow-200 !important;    }  &:hover { color: $color-fsa-white             !important} }
     &--yellow-100\@s    { &,&:visited { color: $color-fsa-yellow-100 !important;    }  &:hover { color: $color-fsa-white             !important} }
+
   }
 
   @include breakpoint(M) {
+
+    &--inline\@m       { display: inline !important; }
+    &--inline-block\@m { display: inline-block !important; }
+    &--block\@m        { display: block !important; }
+
     &--white\@m         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 20%) !important} }
     &--black\@m         { &,&:visited { color: $color-fsa-black !important;         }  &:hover { color: shade($color-fsa-black, 20%) !important} }
     &--primary-900\@m   { &,&:visited { color: $color-fsa-primary-900 !important;   }  &:hover { color: $color-fsa-black             !important} }
@@ -877,9 +892,15 @@
     &--yellow-300\@m    { &,&:visited { color: $color-fsa-yellow-300 !important;    }  &:hover { color: $color-fsa-white             !important} }
     &--yellow-200\@m    { &,&:visited { color: $color-fsa-yellow-200 !important;    }  &:hover { color: $color-fsa-white             !important} }
     &--yellow-100\@m    { &,&:visited { color: $color-fsa-yellow-100 !important;    }  &:hover { color: $color-fsa-white             !important} }
+
   }
 
   @include breakpoint(L) {
+
+    &--inline\@l       { display: inline !important; }
+    &--inline-block\@l { display: inline-block !important; }
+    &--block\@l        { display: block !important; }
+
     &--white\@l         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 20%) !important} }
     &--black\@l         { &,&:visited { color: $color-fsa-black !important;         }  &:hover { color: shade($color-fsa-black, 20%) !important} }
     &--primary-900\@l   { &,&:visited { color: $color-fsa-primary-900 !important;   }  &:hover { color: $color-fsa-black             !important} }
@@ -911,9 +932,15 @@
     &--yellow-300\@l    { &,&:visited { color: $color-fsa-yellow-300 !important;    }  &:hover { color: $color-fsa-white             !important} }
     &--yellow-200\@l    { &,&:visited { color: $color-fsa-yellow-200 !important;    }  &:hover { color: $color-fsa-white             !important} }
     &--yellow-100\@l    { &,&:visited { color: $color-fsa-yellow-100 !important;    }  &:hover { color: $color-fsa-white             !important} }
+
   }
 
   @include breakpoint(XL) {
+
+    &--inline\@xl       { display: inline !important; }
+    &--inline-block\@xl { display: inline-block !important; }
+    &--block\@xl        { display: block !important; }
+
     &--white\@xl         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 20%) !important} }
     &--black\@xl         { &,&:visited { color: $color-fsa-black !important;         }  &:hover { color: shade($color-fsa-black, 20%) !important} }
     &--primary-900\@xl   { &,&:visited { color: $color-fsa-primary-900 !important;   }  &:hover { color: $color-fsa-black             !important} }
@@ -945,6 +972,7 @@
     &--yellow-300\@xl    { &,&:visited { color: $color-fsa-yellow-300 !important;    }  &:hover { color: $color-fsa-white             !important} }
     &--yellow-200\@xl    { &,&:visited { color: $color-fsa-yellow-200 !important;    }  &:hover { color: $color-fsa-white             !important} }
     &--yellow-100\@xl    { &,&:visited { color: $color-fsa-yellow-100 !important;    }  &:hover { color: $color-fsa-white             !important} }
+
   }
 
 }

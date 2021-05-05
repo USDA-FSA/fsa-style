@@ -15,13 +15,9 @@
 }
 
 ///////////////////////////////////////////////////////////////////////
-.fsa-circle {
-  outline: 4px solid orangered;
-}
-///////////////////////////////////////////////////////////////////////
 
-///////////////////////////////////////////////////////////////////////
 .fsa-btn--plain {
+
   outline: 4px solid orangered;
   text-decoration: none !important;
   color: inherit;
@@ -29,10 +25,16 @@
   padding: 0;
   height: inherit;
   font-weight: normal;
-}
-.fsa-btn--plain:hover {
-  text-decoration: none !important;
-  color: inherit !important;
-  background-color: transparent !important;
-  padding: 0 !important;
+
+  &:hover {
+    text-decoration: none !important;
+    color: inherit !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+  }
+
+  &:active {
+    color: inherit !important;
+  }
+
 }
