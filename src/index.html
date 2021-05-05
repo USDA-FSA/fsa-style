@@ -2837,35 +2837,40 @@
               </div>
             </div>
             <h4 class="docs__sub_style">Example</h4>
-            <p><code>&lt;label&gt;</code> elsewhere in DOM, combined with <a onclick="trackLink('On-page','Component Box')" href="#component__box">Box</a>, <a onclick="trackLink('On-page','Component Level')" href="#component__level">Level</a>, <a onclick="trackLink('On-page','Utilities Padding')" href="#utilities__padding">Padding Utilities</a>, and <a onclick="trackLink('On-page','Component Divider')" href="#component__divider">Divider</a>.</p>
+            <p>
+              <code>&lt;label&gt;</code> elsewhere in DOM,
+              combined with
+              <a onclick="trackLink('On-page','Component Box')" href="#component__box">Box</a>,
+              <a onclick="trackLink('On-page','Component Level')" href="#component__level">Level</a>,
+              <a onclick="trackLink('SR On-page',this.href)" href="#utilities__border-width" >Border Width</a>,
+              <a onclick="trackLink('SR On-page',this.href)" href="#utilities__border-between" >Border Between</a>,
+              and
+              <a onclick="trackLink('On-page','Utilities Padding')" href="#utilities__padding">Padding</a>.
             <div class="fsa-grid">
               <div class="fsa-grid__1 fsa-grid__1/2@m fsa-grid__1/4@l">
-                <div class="fsa-box fsa-p--none">
-                  <div class="fsa-level fsa-level--justify-between fsa-p--xs fsa-p-l--s fsa-p-r--s">
+                <div class="fsa-box fsa-p--none fsa-border-between-horizontal--xxs fsa-border--xxs">
+                  <div class="fsa-level fsa-level--justify-between fsa-p--xs">
                     <label for="switch-thing__01">Thing 1</label>
                     <label class="fsa-switch">
                       <input type="checkbox" class="fsa-switch__checkbox" id="switch-thing__01" name="switch-thing__01" checked>
                       <span class="fsa-switch__track"></span>
                     </label>
                   </div>
-                  <div class="fsa-divider"></div>
-                  <div class="fsa-level fsa-level--justify-between fsa-p--xs fsa-p-l--s fsa-p-r--s">
+                  <div class="fsa-level fsa-level--justify-between fsa-p--xs">
                     <label for="switch-thing__02">Thing 2</label>
                     <label class="fsa-switch">
                       <input type="checkbox" class="fsa-switch__checkbox" id="switch-thing__02" name="switch-thing__02">
                       <span class="fsa-switch__track"></span>
                     </label>
                   </div>
-                  <div class="fsa-divider"></div>
-                  <div class="fsa-level fsa-level--justify-between fsa-p--xs fsa-p-l--s fsa-p-r--s">
+                  <div class="fsa-level fsa-level--justify-between fsa-p--xs">
                     <label for="switch-thing__03">Thing 3</label>
                     <label class="fsa-switch">
                       <input type="checkbox" class="fsa-switch__checkbox" id="switch-thing__03" name="switch-thing__03" disabled>
                       <span class="fsa-switch__track"></span>
                     </label>
                   </div>
-                  <div class="fsa-divider"></div>
-                  <div class="fsa-level fsa-level--justify-between fsa-p--xs fsa-p-l--s fsa-p-r--s">
+                  <div class="fsa-level fsa-level--justify-between fsa-p--xs">
                     <label for="switch-thing__04">Thing 4</label>
                     <label class="fsa-switch">
                       <input type="checkbox" class="fsa-switch__checkbox" id="switch-thing__04" name="switch-thing__04">
@@ -7522,7 +7527,41 @@
           <h4 class="docs__sub_style">Example: paired with CSS Utilities</h4>
           <div class="fsa-grid">
             <div class="fsa-grid__1 fsa-grid__auto@m">
-              <p class="docs__code-sample"><code>class="fsa-box <strong>fsa-border--secondary-200 fsa-p--xs fsa-border--s</strong>"</code></p>
+              <p class="docs__code-sample"><code>class="fsa-box <strong>fsa-border--tertiary fsa-p--xs fsa-border--s</strong>"</code></p>
+              <p>
+                Combine with
+                <a href="#utilities__border-width" onclick="trackLink('SR On-page',this.href)">Border Width</a>,
+                <a href="#utilities__border-between" onclick="trackLink('SR On-page',this.href)">Border Between</a>,
+                <a href="#utilities__border-radius" onclick="trackLink('SR On-page',this.href)">Border Radius</a>,
+                <a href="#utilities__padding" onclick="trackLink('SR On-page',this.href)">Border Color</a>,
+                and
+                <a href="#utilities__border-color" onclick="trackLink('SR On-page',this.href)">Padding</a>.
+              </p>
+              <div class="fsa-box fsa-p--none fsa-border--secondary-200 fsa-border-between-horizontal--xxs fsa-border-between-horizontal--secondary-200 fsa-radius--s fsa-bg--secondary-100">
+                <a href="link.html" class="fsa-level fsa-level--justify-between fsa-p--xs fsa-p-l--s fsa-p-r--s">
+                  <span>Organizations</span>
+                  <span class="fsa-badge fsa-badge--neutral">1</span>
+                </a>
+                <a href="link.html" class="fsa-level fsa-level--justify-between fsa-p--xs fsa-p-l--s fsa-p-r--s">
+                  <span>Repositories</span>
+                  <span class="fsa-badge fsa-badge--neutral">30</span>
+                </a>
+                <a href="link.html" class="fsa-level fsa-level--justify-between fsa-p--xs fsa-p-l--s fsa-p-r--s">
+                  <span>Issues</span>
+                  <span class="fsa-badge fsa-badge--neutral">270</span>
+                </a>
+                <a href="link.html" class="fsa-level fsa-level--justify-between fsa-p--xs fsa-p-l--s fsa-p-r--s">
+                  <span>Milestones</span>
+                  <span class="fsa-badge fsa-badge--neutral">9</span>
+                </a>
+                <a href="link.html" class="fsa-level fsa-level--justify-between fsa-p--xs fsa-p-l--s fsa-p-r--s">
+                  <span>Projects</span>
+                  <span class="fsa-badge fsa-badge--neutral">11</span>
+                </a>
+              </div>
+            </div>
+            <div class="fsa-grid__1 fsa-grid__auto@m">
+              <p class="docs__code-sample"><code>class="fsa-box <strong>fsa-border--tertiary fsa-p--xs fsa-border--s</strong>"</code></p>
               <p>
                 Combine with
                 <a href="#utilities__border-width" onclick="trackLink('SR On-page',this.href)">Border Width</a>,
@@ -7530,7 +7569,7 @@
                 and
                 <a href="#utilities__border-color" onclick="trackLink('SR On-page',this.href)">Padding</a>.
               </p>
-              <div class="fsa-box fsa-border--secondary-200 fsa-p--xs fsa-border--s">
+              <div class="fsa-box fsa-border--tertiary fsa-p--xs fsa-border--s">
                 Deserunt db excepturi rem asperiores. Sapiente aliquid, hic natus.
               </div>
             </div>
@@ -7560,6 +7599,29 @@
           <a class="fsa-btn fsa-btn--secondary fsa-btn--small docs__section-link" onclick="trackDocsClick(this)" href="http://usda-fsa.github.io/fsa-design-system/components/divider">Docs <span class="sr-only">for Divider</span></a>
         </div>
         <div class="docs__bd">
+          #utilities__border-between-color
+          <div class="fsa-alert fsa-alert--success fsa-alert--no-icon" role="alert">
+            <div class="fsa-alert__body">
+              <p class="fsa-alert__text">
+                The Divider component is a self-contained, single-purpose element to insert a horizontal line.
+                To add horizontal styled borders between elements, consider the <a onclick="trackLink('SR On-page',this.href)" href="#utilities__border-between" >Border Between</a> utilities.
+              </p>
+            </div>
+          </div>
+          <div class="fsa-alert fsa-alert--warning">
+            <div class="fsa-alert__body">
+              <h3 class="fsa-alert__heading">Deprecated</h3>
+              <p class="fsa-text-size--4"><code>fsa-media</code> has been deprecated in favor of the <a href="#component__level"><code>fsa-level</code> layout component</a>. For example, below is an implementation of Media using Level:</p>
+              <div class="fsa-level fsa-level--align-top fsa-level--gutter-m">
+                <div>
+                  <img class="fsa-media__img" src="img/100x100.jpg" alt="">
+                </div>
+                <div>
+                  Lorem ipsum sed do eiusmod tempor incididunt dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                </div>
+              </div>
+            </div>
+          </div>
           <h4 class="docs__sub_style">Default</h4>
           <div class="fsa-divider"></div>
           <h4 class="docs__sub_style">Strong</h4>
@@ -7568,35 +7630,6 @@
           <div class="fsa-divider fsa-divider--stronger"></div>
           <h4 class="docs__sub_style">Example</h4>
           <div class="fsa-grid">
-            <div class="fsa-grid__1 fsa-grid__auto@m">
-              <p>Combined with <a href="#component__box">Box</a>, <a href="#component__level">Level</a>, and <a href="#utilities__padding">Padding Utilities</a>.</p>
-              <div class="fsa-box fsa-p--none">
-                <a href="link.html" class="fsa-level fsa-level--justify-between fsa-p--xs fsa-p-l--s fsa-p-r--s">
-                  Organizations
-                  <span class="fsa-badge">1</span>
-                </a>
-                <div class="fsa-divider"></div>
-                <a href="link.html" class="fsa-level fsa-level--justify-between fsa-p--xs fsa-p-l--s fsa-p-r--s">
-                  Repositories
-                  <span class="fsa-badge">30</span>
-                </a>
-                <div class="fsa-divider"></div>
-                <a href="link.html" class="fsa-level fsa-level--justify-between fsa-p--xs fsa-p-l--s fsa-p-r--s">
-                  Issues
-                  <span class="fsa-badge">270</span>
-                </a>
-                <div class="fsa-divider"></div>
-                <a href="link.html" class="fsa-level fsa-level--justify-between fsa-p--xs fsa-p-l--s fsa-p-r--s">
-                  Milestones
-                  <span class="fsa-badge">9</span>
-                </a>
-                <div class="fsa-divider"></div>
-                <a href="link.html" class="fsa-level fsa-level--justify-between fsa-p--xs fsa-p-l--s fsa-p-r--s">
-                  Projects
-                  <span class="fsa-badge">11</span>
-                </a>
-              </div>
-            </div>
             <div class="fsa-grid__1 fsa-grid__auto@m">
               <p>With variety of <a href="#utilities__margin">Margin Utilities</a>.</p>
               <div class="fsa-divider fsa-m-b--xs"></div>
