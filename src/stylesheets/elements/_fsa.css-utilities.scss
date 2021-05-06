@@ -1756,9 +1756,15 @@
 
   &--sans {
 
-    &-light { font-family: $font-sans; font-weight: $font-light; }
-    &-bold  { font-family: $font-sans; font-weight: $font-bold; }
+    &         { font-family: $font-sans; font-weight: $font-normal; }
+    &-regular { font-family: $font-sans; font-weight: $font-normal; }
+    &-light   { font-family: $font-sans; font-weight: $font-light; }
+    &-bold    { font-family: $font-sans; font-weight: $font-bold; }
 
+  }
+
+  &--mono {
+    font-family: $font-mono;
   }
 
 }
