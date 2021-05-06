@@ -736,7 +736,7 @@
   &--m      { border-radius: $u-radius-m; }
   &--l      { border-radius: $u-radius-l; }
   &--full   { border-radius: $u-radius-full; }
-  &--circle { border-radius: $u-radius-circle; display: inline-flex; align-items: center; justify-content: center; }
+  &--oval   { border-radius: $u-radius-oval; }
 
   @include breakpoint(S) {
     &--none\@s   { border-radius: 0; }
@@ -744,7 +744,7 @@
     &--m\@s      { border-radius: $u-radius-m; }
     &--l\@s      { border-radius: $u-radius-l; }
     &--full\@s   { border-radius: $u-radius-full; }
-    &--circle\@s { border-radius: $u-radius-circle; display: inline-flex; align-items: center; justify-content: center; }
+    &--oval\@s   { border-radius: $u-radius-oval; }
   }
 
   @include breakpoint(M) {
@@ -753,7 +753,7 @@
     &--m\@m      { border-radius: $u-radius-m; }
     &--l\@m      { border-radius: $u-radius-l; }
     &--full\@m   { border-radius: $u-radius-full; }
-    &--circle\@m { border-radius: $u-radius-circle; display: inline-flex; align-items: center; justify-content: center; }
+    &--oval\@m   { border-radius: $u-radius-oval; }
   }
 
   @include breakpoint(L) {
@@ -762,7 +762,7 @@
     &--m\@l      { border-radius: $u-radius-m; }
     &--l\@l      { border-radius: $u-radius-l; }
     &--full\@l   { border-radius: $u-radius-full; }
-    &--circle\@l { border-radius: $u-radius-circle; display: inline-flex; align-items: center; justify-content: center; }
+    &--oval\@l   { border-radius: $u-radius-oval; }
   }
 
   @include breakpoint(XL) {
@@ -771,7 +771,7 @@
     &--m\@xl      { border-radius: $u-radius-m; }
     &--l\@xl      { border-radius: $u-radius-l; }
     &--full\@xl   { border-radius: $u-radius-full; }
-    &--circle\@xl { border-radius: $u-radius-circle; display: inline-flex; align-items: center; justify-content: center; }
+    &--oval\@xl   { border-radius: $u-radius-oval; }
   }
 
 }
