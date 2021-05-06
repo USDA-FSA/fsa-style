@@ -779,11 +779,14 @@
 // Links ----------------------------------------------------------------------
 .fsa-link {
 
+  &--underline      { text-decoration: underline !important; }
+  &--underline-none { text-decoration: none !important; }
+
   &--inline       { display: inline !important; }
   &--inline-block { display: inline-block !important; }
   &--block        { display: block !important; }
 
-  &--white         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 20%) !important} }
+  &--white         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 10%) !important} }
   &--black         { &,&:visited { color: $color-fsa-black !important;         }  &:hover { color: shade($color-fsa-black, 20%) !important} }
   &--primary-900   { &,&:visited { color: $color-fsa-primary-900 !important;   }  &:hover { color: $color-fsa-black             !important} }
   &--primary       { &,&:visited { color: $color-fsa-primary !important;       }  &:hover { color: $color-fsa-black             !important} }
@@ -821,7 +824,10 @@
     &--inline-block\@s { display: inline-block !important; }
     &--block\@s        { display: block !important; }
 
-    &--white\@s         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 20%) !important} }
+    &--underline\@s      { text-decoration: underline !important; }
+    &--underline-none\@s { text-decoration: none !important; }
+
+    &--white\@s         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 10%) !important} }
     &--black\@s         { &,&:visited { color: $color-fsa-black !important;         }  &:hover { color: shade($color-fsa-black, 20%) !important} }
     &--primary-900\@s   { &,&:visited { color: $color-fsa-primary-900 !important;   }  &:hover { color: $color-fsa-black             !important} }
     &--primary\@s       { &,&:visited { color: $color-fsa-primary !important;       }  &:hover { color: $color-fsa-black             !important} }
@@ -861,7 +867,10 @@
     &--inline-block\@m { display: inline-block !important; }
     &--block\@m        { display: block !important; }
 
-    &--white\@m         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 20%) !important} }
+    &--underline\@m      { text-decoration: underline !important; }
+    &--underline-none\@m { text-decoration: none !important; }
+
+    &--white\@m         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 10%) !important} }
     &--black\@m         { &,&:visited { color: $color-fsa-black !important;         }  &:hover { color: shade($color-fsa-black, 20%) !important} }
     &--primary-900\@m   { &,&:visited { color: $color-fsa-primary-900 !important;   }  &:hover { color: $color-fsa-black             !important} }
     &--primary\@m       { &,&:visited { color: $color-fsa-primary !important;       }  &:hover { color: $color-fsa-black             !important} }
@@ -901,7 +910,10 @@
     &--inline-block\@l { display: inline-block !important; }
     &--block\@l        { display: block !important; }
 
-    &--white\@l         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 20%) !important} }
+    &--underline\@l      { text-decoration: underline !important; }
+    &--underline-none\@l { text-decoration: none !important; }
+
+    &--white\@l         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 10%) !important} }
     &--black\@l         { &,&:visited { color: $color-fsa-black !important;         }  &:hover { color: shade($color-fsa-black, 20%) !important} }
     &--primary-900\@l   { &,&:visited { color: $color-fsa-primary-900 !important;   }  &:hover { color: $color-fsa-black             !important} }
     &--primary\@l       { &,&:visited { color: $color-fsa-primary !important;       }  &:hover { color: $color-fsa-black             !important} }
@@ -941,7 +953,10 @@
     &--inline-block\@xl { display: inline-block !important; }
     &--block\@xl        { display: block !important; }
 
-    &--white\@xl         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 20%) !important} }
+    &--underline\@xl      { text-decoration: underline !important; }
+    &--underline-none\@xl { text-decoration: none !important; }
+
+    &--white\@xl         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 10%) !important} }
     &--black\@xl         { &,&:visited { color: $color-fsa-black !important;         }  &:hover { color: shade($color-fsa-black, 20%) !important} }
     &--primary-900\@xl   { &,&:visited { color: $color-fsa-primary-900 !important;   }  &:hover { color: $color-fsa-black             !important} }
     &--primary\@xl       { &,&:visited { color: $color-fsa-primary !important;       }  &:hover { color: $color-fsa-black             !important} }
