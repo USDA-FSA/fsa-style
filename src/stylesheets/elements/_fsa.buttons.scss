@@ -49,6 +49,12 @@ $button-flat-active      : transparent;
 $button-flat-border      : transparent;
 $button-flat-border-width: 0;
 
+$button-plain             : transparent;
+$button-plain-padding     : 0;
+$button-plain-hover       : transparent;
+$button-plain-text        : inherit;
+$button-plain-border-width: 0;
+
 @mixin fsa-button($variation: default) {
 
 
@@ -338,6 +344,45 @@ $button-flat-border-width: 0;
 
   }
 
+  @elseif $variation == 'plain' {
+
+    text-align: left;
+    height: auto;
+    background-color: $button-plain;
+    padding: $button-plain-padding;
+    font-weight: normal;
+    border: $button-plain-border-width;
+    box-shadow: none;
+    // scss-lint:disable ImportantRule
+    text-decoration: none; // ¯\_(ツ)_/¯
+
+    &:hover:not([disabled]) {
+      color: $color-fsa-link-hover;
+      background-color: $button-plain-hover;
+    }
+
+    &,
+    &:visited,
+    .fsa-alert &,
+    .fsa-alert &:visited {
+      color: $button-plain-text;
+    }
+
+    &:active:not([disabled]) {
+      color: $color-fsa-base;
+      box-shadow: none;
+    }
+
+    // scss-lint:disable SelectorFormat
+    &[disabled] {
+      color: inherit;
+      &:hover {
+        color: inherit;
+      }
+    }
+
+  }
+
 }
 
 .fsa-btn {
@@ -356,8 +401,9 @@ $button-flat-border-width: 0;
   &--medium    { @include fsa-button(medium);    }
   &--large     { @include fsa-button(large);     }
   &--flat      { @include fsa-button(flat);      }
+  &--plain     { @include fsa-button(plain);     }
 
-    @include breakpoint(S) {
+  @include breakpoint(S) {
     &--small\@s { @include fsa-button(small); }
     &--medium\@s { @include fsa-button(medium); }
     &--large\@s { @include fsa-button(large); }
