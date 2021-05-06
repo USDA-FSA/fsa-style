@@ -1754,18 +1754,38 @@
 // Font -----------------------------------------------------------------------
 .fsa-font {
 
-  &--sans {
+  &--sans,
+  &--sans-regular { font-family: $font-sans; font-weight: $font-normal; }
+  &--sans-light   { font-family: $font-sans; font-weight: $font-light; }
+  &--sans-bold    { font-family: $font-sans; font-weight: $font-bold; }
 
-    &         { font-family: $font-sans; font-weight: $font-normal; }
-    &-regular { font-family: $font-sans; font-weight: $font-normal; }
-    &-light   { font-family: $font-sans; font-weight: $font-light; }
-    &-bold    { font-family: $font-sans; font-weight: $font-bold; }
+  &--mono         { font-family: $font-mono; }
 
+  @include breakpoint(S) {
+    &--sans\@s,
+    &--sans-regular\@s { font-family: $font-sans; font-weight: $font-normal; }
+    &--sans-light\@s   { font-family: $font-sans; font-weight: $font-light; }
+    &--sans-bold\@s    { font-family: $font-sans; font-weight: $font-bold; }
+  }
+  @include breakpoint(M) {
+    &--sans\@m,
+    &--sans-regular\@m { font-family: $font-sans; font-weight: $font-normal; }
+    &--sans-light\@m   { font-family: $font-sans; font-weight: $font-light; }
+    &--sans-bold\@m    { font-family: $font-sans; font-weight: $font-bold; }
+  }
+  @include breakpoint(L) {
+    &--sans\@l,
+    &--sans-regular\@l { font-family: $font-sans; font-weight: $font-normal; }
+    &--sans-light\@l   { font-family: $font-sans; font-weight: $font-light; }
+    &--sans-bold\@l    { font-family: $font-sans; font-weight: $font-bold; }
+  }
+  @include breakpoint(XL) {
+    &--sans\@xl,
+    &--sans-regular\@xl { font-family: $font-sans; font-weight: $font-normal; }
+    &--sans-light\@xl   { font-family: $font-sans; font-weight: $font-light; }
+    &--sans-bold\@xl    { font-family: $font-sans; font-weight: $font-bold; }
   }
 
-  &--mono {
-    font-family: $font-mono;
-  }
 
 }
 

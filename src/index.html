@@ -257,6 +257,7 @@
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" onclick="trackNavClick(this)" href="#utilities__border-between-color">Border Between Color</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" onclick="trackNavClick(this)" href="#utilities__ellipsis">Ellipsis</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" onclick="trackNavClick(this)" href="#utilities__floats">Floats</a></li>
+                <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" onclick="trackNavClick(this)" href="#utilities__font">Font</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" onclick="trackNavClick(this)" href="#utilities__link-color">Link Color</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" onclick="trackNavClick(this)" href="#utilities__link-display">Link Display</a></li>
                 <li class="docs__primary-nav-sub-item"><a class="docs__primary-nav-sub-link" onclick="trackNavClick(this)" href="#utilities__link-underline">Link Underline</a></li>
@@ -9454,6 +9455,71 @@
               </span>
               <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_float">
                 <iframe title="Responsive Demo: float" src="demo/rwd__float.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="docs__jump-target" id="utilities__font">
+          <div class="docs__section-title">
+            <h3 class="docs__figure"><a class="docs__anchor" aria-hidden="true" href="#utilities__font">#</a>Font</h3>
+            <a class="fsa-btn fsa-btn--secondary fsa-btn--small docs__section-link" onclick="trackDocsClick(this)" href="http://usda-fsa.github.io/fsa-design-system/utilities/#font">Docs <span class="sr-only">for Font</span></a>
+          </div>
+          <div>
+            <div class="docs__color-utilities" id="demo-background-target-font">
+              <div class="fsa-grid">
+                <div class="fsa-grid__1 fsa-grid__auto@m">
+                  <h4 class="docs__sub_style fsa-m-t--none">Base</h4>
+                  <div class="fsa-text-size--5">Lorem ipsum dolor sit amet.</div>
+                </div>
+                <div class="fsa-grid__1 fsa-grid__auto@m">
+                  <h4 class="docs__sub_style fsa-m-t--none">Sans Regular <span class="fsa-font--sans">(Override)</span></h4>
+                  <div class="fsa-font--sans fsa-text-size--5">Lorem ipsum dolor sit amet.</div>
+                </div>
+                <div class="fsa-grid__1 fsa-grid__auto@m">
+                  <h4 class="docs__sub_style fsa-m-t--none">Sans Light</h4>
+                  <div class="fsa-font--sans-light fsa-text-size--5">Lorem ipsum dolor sit amet.</div>
+                </div>
+                <div class="fsa-grid__1 fsa-grid__auto@m">
+                  <h4 class="docs__sub_style fsa-m-t--none">Sans Bold</h4>
+                  <div class="fsa-font--sans-bold fsa-text-size--5">Lorem ipsum dolor sit amet.</div>
+                </div>
+                <div class="fsa-grid__1 fsa-grid__auto@m">
+                  <h4 class="docs__sub_style fsa-m-t--none">Monospace</h4>
+                  <div class="fsa-font--mono fsa-text-size--5">Lorem ipsum dolor sit amet.</div>
+                </div>
+              </div>
+            </div>
+            <h4>Responsive</h4>
+            <div class="fsa-show@l">
+              <p>Selectively apply Font at any Media Query breakpoint.</p>
+              <p>
+                <code>class="fsa-font--<strong>[variation]@[breakpoint]</strong>"</code>
+                <code>breakpoint</code> is one of
+                <code title="small">s</code>,
+                <code title="medium">m</code>,
+                <code title="large">l</code>, or
+                <code title="extra large">xl</code>
+              </p>
+            </div>
+            <div class="fsa-hide@l">
+              <div class="fsa-alert fsa-alert--info fsa-alert--no-icon" role="alert">
+                <div class="fsa-alert__body">
+                  <p class="fsa-alert__text">View this page on a large screen to view complete Responsive Web Design options.</p>
+                </div>
+              </div>
+            </div>
+            <div class="docs__rwd-demo-block">
+              <div class="docs__rwd-embed-container">
+                <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+                  <button onclick="trackRWDDemo('Font',this)" data-behavior="toggle-rwd-size" data-target="rwd-demo_font" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait"><span class="sr-only">Portrait</span> Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                  <button onclick="trackRWDDemo('Font',this)" data-behavior="toggle-rwd-size" data-target="rwd-demo_font" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape"><span class="sr-only">Landscape</span> Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                  <button onclick="trackRWDDemo('Font',this)" data-behavior="toggle-rwd-size" data-target="rwd-demo_font" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                  <button onclick="trackRWDDemo('Font',this)" data-behavior="toggle-rwd-size" data-target="rwd-demo_font" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+                  <a onclick="trackRWDDemo('Font',this)" class="fsa-btn-group__item" href="demo/rwd__font.html" target="_blank" title="View in its own browser window">New window</a>
+                </span>
+                <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_font">
+                  <iframe title="Responsive Demo: Text Color" src="demo/rwd__font.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true"> </iframe>
+                </div>
               </div>
             </div>
           </div>
