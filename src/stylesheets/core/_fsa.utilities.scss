@@ -319,6 +319,56 @@ $breakpoints: (
 }
 
 // -----------------------------------------------------------------------------
+// Lists
+
+@mixin fsa-list-shared {
+  margin-bottom: 1em;
+  margin-top: 1em;
+  padding-left: 1.4em; // MAGIC NUMBER: Approximately 24px left padding at default font size. Must be in **em** units to avoid 2-digit <ol> rendered numbers receding too far on left for bigger text. For example, here's what happens when using px or rem unit: https://cloud.githubusercontent.com/assets/1165933/18491589/b149cec6-79cc-11e6-9280-936838977b64.png
+  > * {
+    margin-bottom: .5em;
+  }
+}
+
+@mixin fsa-list-bullet {
+  @include fsa-list-shared();
+  list-style-type: disc;
+  > * { display: list-item; }
+}
+
+@mixin fsa-list-number {
+  @include fsa-list-shared();
+  list-style-type: decimal;
+  > * { display: list-item; }
+}
+
+@mixin fsa-list-unstyled {
+  @include reset-ul();
+  > * {
+    @include reset-li();
+  }
+}
+
+@mixin fsa-list-inline {
+
+  @include reset-ul();
+  display: flex;
+  margin-bottom: 1em;
+
+  > * {
+
+    @include reset-li();
+    margin-right: $size-small;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+  }
+}
+
+
+// -----------------------------------------------------------------------------
 // Reset <button>
 @mixin reset-button() {
   text-align: left;
