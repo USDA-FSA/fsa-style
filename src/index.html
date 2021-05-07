@@ -4698,56 +4698,112 @@
             <a class="fsa-btn fsa-btn--secondary fsa-btn--small docs__section-link" onclick="trackDocsClick(this)" href="http://usda-fsa.github.io/fsa-design-system/components/lists">Docs <span class="sr-only">for Lists</span></a>
           </div>
           <div class="docs__bd">
-            <h4 class="docs__sub_style">Unordered</h4>
-            <p class="docs__code-sample"><code>&lt;ul&gt;</code></p>
-            <ul>
-              <li>List item one</li>
-              <li>List item two</li>
-              <li>List item three</li>
-            </ul>
-            <h4 class="docs__sub_style">Ordered</h4>
-            <p class="docs__code-sample"><code>&lt;ol&gt;</code></p>
-            <ol>
-              <li>List item one</li>
-              <li>List item two</li>
-              <li>List item three</li>
-            </ol>
-            <h4 class="docs__sub_style">Inline</h4>
-            <p class="docs__code-sample"><code>class="fsa-list<strong>--inline</strong>"</code></p>
-            <ul class="fsa-list--inline">
-              <li>List item one</li>
-              <li>List item two</li>
-              <li>List item three</li>
-            </ul>
-            <h4 class="docs__sub_style">Unstyled</h4>
-            <p>Use Sass Mixins <code>@include reset-ul()</code> and <code>@include reset-li()</code> where possible over <code>class="fsa-list<strong>--unstyled</strong>"</code></p>
-            <p class="docs__code-sample"><code>&lt;<strong>ul</strong> class="fsa-list<strong>--unstyled</strong>"&gt;</code></p>
-            <ul class="fsa-list--unstyled">
-              <li>List item one</li>
-              <li>List item two</li>
-              <li>List item three</li>
-            </ul>
-            <p class="docs__code-sample"><code>&lt;<strong>ol</strong> class="fsa-list<strong>--unstyled</strong>"&gt;</code></p>
-            <ol class="fsa-list--unstyled">
-              <li>List item one</li>
-              <li>List item two</li>
-              <li>List item three</li>
-            </ol>
-            <h4 class="docs__sub_style">Definition</h4>
-            <p class="docs__code-sample"><code>&lt;dl&gt;</code></p>
-            <dl>
-              <dt>Definition List Title</dt>
-              <dd>This is a definition list division.</dd>
-              <dt>Inkscape</dt>
-              <dd>Open Source vector graphics editor</dd>
-              <dt>SVG</dt>
-              <dd>Scalable Vector Graphics</dd>
-              <dd>W3C standard</dd>
-              <dt>GIMP</dt>
-              <dd>GNU Image Manipulation Program</dd>
-              <dt>Drupal</dt>
-              <dd>Content Management System</dd>
-            </dl>
+            <div class="fsa-grid">
+              <div class="fsa-grid__1 fsa-grid__1/3@m">
+                <h4 class="docs__sub_style">Bullet <span class="fsa-font--sans">(Default)</span></h4>
+                <p class="docs__code-sample"><code>&lt;ul&gt;</code></p>
+                <ul>
+                  <li>List item one</li>
+                  <li>List item two</li>
+                  <li>List item three</li>
+                </ul>
+              </div>
+              <div class="fsa-grid__1 fsa-grid__1/3@m">
+                <h4 class="docs__sub_style">Bullet <span class="fsa-font--sans">(Override / Explicit)</span></h4>
+                <p class="docs__code-sample"><code>class="fsa-list<strong>--bullet</strong>"</code></p>
+                <ul class="fsa-list--bullet">
+                  <li>List item one</li>
+                  <li>List item two</li>
+                  <li>List item three</li>
+                </ul>
+              </div>
+              <div class="fsa-grid__1 fsa-grid__1/3@m">
+                <h4 class="docs__sub_style">Unstyled</h4>
+                <p class="docs__code-sample"><code>class="fsa-list<strong>--unstyled</strong>"</code></p>
+                <ul class="fsa-list--unstyled">
+                  <li>List item one</li>
+                  <li>List item two</li>
+                  <li>List item three</li>
+                </ul>
+              </div>
+              <div class="fsa-grid__1 fsa-grid__1/3@m">
+                <h4 class="docs__sub_style">Number <span class="fsa-font--sans">(Default)</span></h4>
+                <p class="docs__code-sample"><code>&lt;ol&gt;</code></p>
+                <ol>
+                  <li>List item one</li>
+                  <li>List item two</li>
+                  <li>List item three</li>
+                </ol>
+              </div>
+              <div class="fsa-grid__1 fsa-grid__1/3@m">
+                <h4 class="docs__sub_style">Number <span class="fsa-font--sans">(Override / Explicit)</span></h4>
+                <p class="docs__code-sample"><code>class="fsa-list<strong>--number</strong>"</code></p>
+                <ol class="fsa-list--number">
+                  <li>List item one</li>
+                  <li>List item two</li>
+                  <li>List item three</li>
+                </ol>
+              </div>
+              <div class="fsa-grid__1 fsa-grid__1/3@m">
+                <h4 class="docs__sub_style">Inline</h4>
+                <p class="docs__code-sample"><code>class="fsa-list<strong>--inline</strong>"</code></p>
+                <ul class="fsa-list--inline">
+                  <li>List item one</li>
+                  <li>List item two</li>
+                  <li>List item three</li>
+                </ul>
+              </div>
+              <div class="fsa-grid__1 fsa-grid__1/3@m">
+                <h4 class="docs__sub_style">Definition</h4>
+                <p class="docs__code-sample"><code>&lt;dl&gt;</code></p>
+                <dl>
+                  <dt>Definition List Title</dt>
+                  <dd>This is a definition list division.</dd>
+                  <dt>Inkscape</dt>
+                  <dd>Open Source vector graphics editor</dd>
+                  <dt>SVG</dt>
+                  <dd>Scalable Vector Graphics</dd>
+                  <dd>W3C standard</dd>
+                  <dt>GIMP</dt>
+                  <dd>GNU Image Manipulation Program</dd>
+                  <dt>Drupal</dt>
+                  <dd>Content Management System</dd>
+                </dl>
+              </div>
+            </div>
+            <h4 class="docs__sub_style">Responsive</h4>
+            <div class="fsa-show@l">
+              <p>Selectively apply List styles at any Media Query breakpoint.</p>
+              <p>
+                <code>class="fsa-list--<strong>[variation]@[breakpoint]</strong>"</code>
+                <code>breakpoint</code> is one of
+                <code title="small">s</code>,
+                <code title="medium">m</code>,
+                <code title="large">l</code>, or
+                <code title="extra large">xl</code>
+              </p>
+            </div>
+            <div class="fsa-hide@l">
+              <div class="fsa-alert fsa-alert--info fsa-alert--no-icon" role="alert">
+                <div class="fsa-alert__body">
+                  <p class="fsa-alert__text">View this page on a large screen to view complete Responsive Web Design options.</p>
+                </div>
+              </div>
+            </div>
+            <div class="docs__rwd-demo-block">
+              <div class="docs__rwd-embed-container">
+                <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+                  <button onclick="trackRWDDemo('Lists',this)" data-behavior="toggle-rwd-size" data-target="rwd-demo_lists" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait"><span class="sr-only">Portrait</span> Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+                  <button onclick="trackRWDDemo('Lists',this)" data-behavior="toggle-rwd-size" data-target="rwd-demo_lists" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape"><span class="sr-only">Landscape</span> Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+                  <button onclick="trackRWDDemo('Lists',this)" data-behavior="toggle-rwd-size" data-target="rwd-demo_lists" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+                  <button onclick="trackRWDDemo('Lists',this)" data-behavior="toggle-rwd-size" data-target="rwd-demo_lists" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+                  <a onclick="trackRWDDemo('Lists',this)" class="fsa-btn-group__item" href="demo/rwd__lists.html" target="_blank" title="View in its own browser window">New window</a>
+                </span>
+                <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_lists">
+                  <iframe title="Responsive Demo: Lists" src="demo/rwd__lists.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true"> </iframe>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="docs__jump-target" id="component__tables">
