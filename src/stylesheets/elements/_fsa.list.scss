@@ -1,19 +1,6 @@
 ////////////////////////////////////////////////////////////////////////
 // Lists
 
-ul,
-ol {
-
-  margin-bottom: 1em;
-  margin-top: 1em;
-  padding-left: 1.4em; // Approximately 24px left padding at default font size. Must be in **em** units to avoid 2-digit <ol> rendered numbers receding too far on left for bigger text. For example, here's what happens when using px or rem unit: https://cloud.githubusercontent.com/assets/1165933/18491589/b149cec6-79cc-11e6-9280-936838977b64.png
-
-}
-
-li {
-  margin-bottom: .5em;
-}
-
 dl,
 dt,
 dd {
@@ -36,6 +23,65 @@ dt {
 
 }
 
+@mixin fsa-list-shared {
+  margin-bottom: 1em;
+  margin-top: 1em;
+  padding-left: 1.4em; // MAGIC NUMBER: Approximately 24px left padding at default font size. Must be in **em** units to avoid 2-digit <ol> rendered numbers receding too far on left for bigger text. For example, here's what happens when using px or rem unit: https://cloud.githubusercontent.com/assets/1165933/18491589/b149cec6-79cc-11e6-9280-936838977b64.png
+  > * {
+    margin-bottom: .5em;
+  }
+}
+
+@mixin fsa-list-bullet {
+  @include fsa-list-shared();
+  list-style-type: disc;
+  > * { display: list-item; }
+}
+
+@mixin fsa-list-number {
+  @include fsa-list-shared();
+  list-style-type: decimal;
+  > * { display: list-item; }
+}
+
+@mixin fsa-list-unstyled {
+  @include reset-ul();
+  > * {
+    @include reset-li();
+  }
+}
+
+@mixin fsa-list-inline {
+  @include reset-ul();
+  display: flex;
+  margin-bottom: 1em;
+  > * {
+
+    @include reset-li();
+    margin-right: $size-small;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+  }
+}
+
+.fsa-list {
+  &--bullet   { @include fsa-list-bullet();   }
+  &--number   { @include fsa-list-number();   }
+  &--unstyled { @include fsa-list-unstyled(); }
+  &--inline   { @include fsa-list-inline();   }
+}
+
+ul { @extend .fsa-list--bullet; }
+ol { @extend .fsa-list--number; }
+
+.usa-unstyled-list {
+  // scss-lint:disable PlaceholderInExtend
+  @extend .fsa-list--unstyled;
+}
+
 h1,
 h2,
 h3,
@@ -48,42 +94,3 @@ p {
     margin-top: 0;
   }
 }
-
-.fsa-list {
-
-  &--unstyled {
-
-    @include reset-ul();
-
-    > * {
-      @include reset-li();
-    }
-
-  }
-
-  &--inline {
-
-    @include reset-ul();
-    display: flex;
-    margin-bottom: 1em;
-
-    > * {
-
-      @include reset-li();
-      margin-right: $size-small;
-
-      &:last-child {
-        margin-right: 0;
-      }
-
-    }
-
-  }
-
-}
-
-.usa-unstyled-list {
-  // scss-lint:disable PlaceholderInExtend
-  @extend .fsa-list--unstyled;
-}
-
