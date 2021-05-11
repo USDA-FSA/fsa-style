@@ -1,20 +1,19 @@
 
+var Helper = (function () {
 
-export let Helper = {
-
-  defaults: {},
+  var defaults = {};
 
   //PRIVATE METHODS
 
   // Utility method to loop thru NodeList correctly
-  _forEach: (array, callback, scope) => {
-    for (let i = 0; i < array.length; i++) {
+  var _forEach = function(array, callback, scope) {
+    for (var i = 0; i < array.length; i++) {
       callback.call(scope, i, array[i]); // passes back stuff we need
     }
-  },
+  };
 
   // Utilitity method
-  _getClosest: (elem, selector) => {
+  var _getClosest = function(elem, selector){
 
     // Element.matches() polyfill
     if (!Element.prototype.matches) {
@@ -25,7 +24,7 @@ export let Helper = {
       Element.prototype.oMatchesSelector ||
       Element.prototype.webkitMatchesSelector ||
       function(s) {
-        let matches = (this.document || this.ownerDocument).querySelectorAll(s),
+        var matches = (this.document || this.ownerDocument).querySelectorAll(s),
         i = matches.length;
         while (--i >= 0 && matches.item(i) !== this) {}
           return i > -1;
@@ -38,54 +37,66 @@ export let Helper = {
     }
 
     return null;
-  },
+  };
 
-  _getAnimationString: (el) => {
-    let str = "";
-    let t;
-    let animations = {
+  var _getAnimationString = function(el){
+    var str = "";
+    var t;
+    var animations = {
       'animation':'animationend',
       'OAnimation':'oAnimationEnd',
       'MozAnimation':'animationend',
       'WebkitAnimation':'webkitAnimationEnd'
     };
-    for (let t in animations) {
+    for (t in animations) {
       if ( typeof el.style[t] !== 'undefined' ) str = animations[t];
     }
     return str;
-  },
+  }
 
-  _hasClass: (elem, classname) => {
+  var _hasClass = function(elem, classname) {
     return (' ' + elem.className + ' ').indexOf(' ' + classname + ' ') > -1;
-  },
+  };
 
 
   // PUBLIC METHODS
-  forEach: ( array, callback, scope ) => {
-    return Helper._forEach( array, callback, scope );
-  },
+  var forEach = function( array, callback, scope ){
+    return _forEach( array, callback, scope );
+  }
 
-  getClosest: (elem, selector) => {
-    return Helper._getClosest( elem, selector );
-  },
+  var getClosest = function(elem, selector){
+    return _getClosest( elem, selector );
+  }
 
-  getAnimationString: (elem) => {
-    return Helper._getAnimationString(elem);
-  },
+  var getAnimationString = function(elem){
+    return _getAnimationString(elem);
+  }
 
-  hasClass: (elem, classname) => {
-    return Helper._hasClass(elem, classname);
-  },
+  var hasClass = function(elem, classname){
+    return _hasClass(elem, classname);
+  }
 
-  isIE10Down: () => {
+  var isIE10Down = (function() {
     if (new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})").exec(navigator.userAgent) != null) {
       return parseFloat( RegExp.$1 );
     }
     else {
       return false;
     }
-  },
+  })();
 
-  isIE11: '-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style
+  var isIE11 = '-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style;
 
-};
+  //Object Literal Return
+  return {
+    forEach: forEach, //( array, callback, scope )
+    getClosest: getClosest, //( elem, selector )
+    getAnimationString: getAnimationString, //( elem ),
+    hasClass: hasClass, //( elem, classname )
+    isIE10Down: isIE10Down,
+    isIE11: isIE11
+  };
+
+})();
+
+module.exports = Helper;
