@@ -762,6 +762,8 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   &__icons {
     & {
+      border-top: 1px solid $color-fsa-tertiary-200;
+      border-left: 1px solid $color-fsa-tertiary-200;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       @include breakpoint(S) {
@@ -776,14 +778,14 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     }
     & > * {
       text-align: center;
+      border-right: 1px solid $color-fsa-tertiary-200;
+      border-bottom: 1px solid $color-fsa-tertiary-200;
     }
     &__link {
       & {
         padding: $size-medium $size-small;
         display: block;
         color: inherit;
-        border: 1px solid transparent;
-        border-radius: $u-radius-s;
         text-decoration: none;
       }
       &:visited {
@@ -791,8 +793,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       }
       &:hover {
         color: $color-fsa-secondary;
-        border-color: $color-fsa-secondary-100;
-        background-color: white;
+        // background-color: white;
       }
     }
     &__caption {
