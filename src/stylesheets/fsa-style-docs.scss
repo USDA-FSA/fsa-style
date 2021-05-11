@@ -757,6 +757,49 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
   }
 
+  // -----------------------------------------------------------------------------
+  // Icon Grid
+
+  &__icons {
+    & {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      @include breakpoint(S) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @include breakpoint(M) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      @include breakpoint(L) {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+    & > * {
+      text-align: center;
+    }
+    &__link {
+      & {
+        padding: $size-medium $size-small;
+        display: block;
+        color: inherit;
+        border: 1px solid transparent;
+        border-radius: $u-radius-s;
+        text-decoration: none;
+      }
+      &:visited {
+        color: inherit;
+      }
+      &:hover {
+        color: $color-fsa-secondary;
+        border-color: $color-fsa-secondary-100;
+        background-color: white;
+      }
+    }
+    &__caption {
+      margin-top: $size-small;
+    }
+  }
+
 }
 
 .fsa-checkerboard {
