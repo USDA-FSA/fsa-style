@@ -92,7 +92,7 @@ th {
 
     position: sticky;
     top: -1px;
-    background-color: $color-fsa-site-bg;
+    background-color: $color-fsa-base-bg;
     z-index: 3;
     box-shadow: 0 1px 0 0 $color-fsa-tertiary-200;
 
@@ -275,16 +275,16 @@ th {
 
     &:after {
       content: '';
-      background-size: 100%;
-      width: 12px;
-      height: 12px;
+      background-size: $icon-size-1;
+      width: $icon-size-1;
+      height: $icon-size-1;
       display: inline-block;
       vertical-align: middle;
       position: relative;
       top: -2px;
-      margin-left: 4px;
-      opacity: .2;
-      background-image: url('#{$image-path}/chevron-up.svg');
+      margin-left: 2px;
+      opacity: .5;
+      background-image: url('#{$image-path}/material-design-icons/ic_expand_less_24px.svg');
     }
 
     &--descending:after,
@@ -293,11 +293,11 @@ th {
     }
 
     &--ascending:after {
-      background-image: url('#{$image-path}/chevron-up.svg');
+      background-image: url('#{$image-path}/material-design-icons/ic_expand_less_24px.svg');
     }
 
     &--descending:after {
-      background-image: url('#{$image-path}/chevron-down.svg');
+      background-image: url('#{$image-path}/material-design-icons/ic_expand_more_24px.svg');
     }
 
     &:hover:not(.fsa-table__sort--descending, .fsa-table__sort--ascending) {

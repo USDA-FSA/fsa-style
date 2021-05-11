@@ -205,7 +205,9 @@
 
   &__text {
 
-    display: block;
+    display: flex;
+    gap: $size-small;
+    align-items: center;
     padding: ($nav-spacing-unit - $size-base) $nav-spacing-unit;
 
     @include breakpoint(M) {
@@ -222,16 +224,14 @@
     .fsa-nav-global__link--has-sub-menu & {
       &:after {
 
-        $size: $size-default;
+        $size: $size-medium;
 
         content: '';
         display: inline-block;
         vertical-align: middle;
-
-        margin-left: ($size-small);
-        width: ($size * .66);
-        height: ($size * .66);
-        background-image: url('#{$image-path}/angle-arrow-down.svg');
+        width: ($size * .75);
+        height: ($size * .75);
+        background-image: url('#{$image-path}/material-design-icons/ic_expand_more_24px.svg');
         background-size: 100%;
         background-repeat: no-repeat;
 
@@ -240,17 +240,12 @@
           height: $size;
         }
 
-        @include breakpoint(L, down) {
-          float: right;
-          margin-top: $size-default / 2;
-        }
-
       }
     }
 
     [aria-expanded="true"] & {
       &:after {
-        background-image: url('#{$image-path}/angle-arrow-down-hover.svg');
+        background-image: url('#{$image-path}/material-design-icons/ic_expand_more_white_24px.svg');
       }
     }
 

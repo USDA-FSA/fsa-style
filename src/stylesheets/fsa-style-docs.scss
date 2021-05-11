@@ -578,7 +578,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     }
 
     &__value {
-      @include font-size(0)
+      @include font-size(0);
       display: block;
     }
 
@@ -744,6 +744,19 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     outline-offset: 2px;
   }
 
+  &__color-utilities {
+
+    $nudge: $size-default;
+    margin-left: -$nudge;
+    margin-right: -$nudge;
+    padding: $nudge;
+
+    &.fsa-bg--tertiary-900 .docs__sub_style {
+      color: $color-fsa-tertiary-200
+    }
+
+  }
+
 }
 
 .fsa-checkerboard {
@@ -796,149 +809,8 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
 }
 
-.color-fsa-page-bg {
-  background-color: $color-fsa-site-bg;
-  border: 1px solid $color-fsa-tertiary-200;
-}
-
-.color-fsa-white {
-  background-color: $color-fsa-white;
-  border: 1px solid $color-fsa-tertiary-200;
-}
-
-.color-fsa-primary-dark {
-  background-color: $color-fsa-primary-900;
-}
-.color-fsa-primary {
-  background-color: $color-fsa-primary;
-}
-.color-fsa-primary-light {
-  background-color: $color-fsa-primary-300;
-}
-.color-fsa-primary-lighter {
-  background-color: $color-fsa-primary-200;
-}
-.color-fsa-primary-lightest {
-  background-color: $color-fsa-primary-100;
-}
-
-.color-fsa-secondary-dark {
-  background-color: $color-fsa-secondary-900;
-}
-.color-fsa-secondary {
-  background-color: $color-fsa-secondary;
-}
-.color-fsa-secondary-light {
-  background-color: $color-fsa-secondary-300;
-}
-.color-fsa-secondary-lighter {
-  background-color: $color-fsa-secondary-200;
-}
-.color-fsa-secondary-lightest {
-  background-color: $color-fsa-secondary-100;
-}
-
-.color-fsa-tertiary-dark {
-  background-color: $color-fsa-tertiary-900;
-}
-.color-fsa-tertiary {
-  background-color: $color-fsa-tertiary;
-}
-.color-fsa-tertiary-light {
-  background-color: $color-fsa-tertiary-300;
-}
-.color-fsa-tertiary-lighter {
-  background-color: $color-fsa-tertiary-200;
-}
-.color-fsa-tertiary-lightest {
-  background-color: $color-fsa-tertiary-100;
-}
-
-.color-fsa-aqua-dark {
-  background-color: $color-fsa-aqua-900;
-}
-.color-fsa-aqua {
-  background-color: $color-fsa-aqua;
-}
-.color-fsa-aqua-light {
-  background-color: $color-fsa-aqua-300;
-}
-.color-fsa-aqua-lighter {
-  background-color: $color-fsa-aqua-200;
-}
-.color-fsa-aqua-lightest {
-  background-color: $color-fsa-aqua-100;
-}
-
-.color-fsa-red-dark {
-  background-color: $color-fsa-red-900;
-}
-.color-fsa-red {
-  background-color: $color-fsa-red;
-}
-.color-fsa-red-light {
-  background-color: $color-fsa-red-300;
-}
-.color-fsa-red-lighter {
-  background-color: $color-fsa-red-200;
-}
-.color-fsa-red-lightest {
-  background-color: $color-fsa-red-100;
-}
-
-.color-fsa-blank {
-  background-color: white;
-  color: $color-fsa-tertiary-200;
-  outline: 2px dashed $color-fsa-tertiary-100;
-  outline-offset: -2px;
-}
-.color-fsa-yellow {
-  background-color: $color-fsa-yellow;
-  code {
-    color: $color-fsa-base;
-  }
-}
-.color-fsa-yellow-light {
-  background-color: $color-fsa-yellow-300;
-  code {
-    color: $color-fsa-base;
-  }
-}
-.color-fsa-yellow-lighter {
-  background-color: $color-fsa-yellow-200;
-  code {
-    color: $color-fsa-base;
-  }
-}
-.color-fsa-yellow-lightest {
-  background-color: $color-fsa-yellow-100;
-  code {
-    color: $color-fsa-base;
-  }
-}
-
-.color-fsa-site-bg {
-  background-color: $color-fsa-site-bg;
-  border: 1px dashed $color-fsa-tertiary-200;
-}
 .color-fsa-link {
   background-color: $color-fsa-link;
-}
-.color-fsa-link-hover {
-  background-color: $color-fsa-link-hover;
-}
-.color-fsa-link-visited {
-  background-color: $color-fsa-link-visited;
-}
-
-.color-fsa-aqua,
-.color-fsa-aqua-light,
-.color-fsa-red-light,
-[class*="lighter"],
-[class*="lightest"] {
-  code {
-    color: $color-base;
-  }
 }
 
 .docs__rwd-demo-block {
@@ -992,7 +864,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       font-family: Consolas, $font-mono;
       font-size: $font-size-7;
       font-weight: $font-bold;
-      color: $color-fsa-site-bg;
+      color: $color-fsa-base-bg;
       line-height: 1;
       transform: scaleX(.8);
       transform-origin: left;
@@ -1004,7 +876,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       right: $size-small;
       height: $size-medium;
       width: calc(100% - 110px);
-      background-color: $color-fsa-site-bg;
+      background-color: $color-fsa-base-bg;
     }
   }
 }
@@ -1016,7 +888,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 }
 
 [class*="docs-highlight"] {
-  text-decoration: line-through;
   text-decoration: line-through;
   text-decoration-color: black;
 }
@@ -1096,89 +967,3 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   }
 
 }
-
-
-
-// .cp_embed_wrapper {
-//   /* required for resize to work */
-//   overflow: hidden;
-
-//   /* make resizeble! */
-//   resize: both;
-//   min-width: 240px;
-//   max-width: 100%;
-
-//   /* default height */
-//   height: 400px;
-
-//   @include breakpoint(L) {
-//     border: $size-small solid $color-fsa-tertiary-100;
-//     background: white;
-//     padding: $size-default;
-//   }
-
-// }
-// .cp_embed_wrapper iframe {
-//   height: 100% !important;
-// }
-
-/* COLOR VALUE DUMP ********************************************************* */
-
-// .color-fsa-primary       { color: $color-fsa-primary }
-// .color-fsa-primary-300   { color: $color-fsa-primary-300 }
-// .color-fsa-primary-200   { color: $color-fsa-primary-200 }
-// .color-fsa-primary-100   { color: $color-fsa-primary-100 }
-// .color-fsa-primary-900   { color: $color-fsa-primary-900 }
-// .color-fsa-secondary     { color: $color-fsa-secondary }
-// .color-fsa-secondary-300 { color: $color-fsa-secondary-300 }
-// .color-fsa-secondary-200 { color: $color-fsa-secondary-200 }
-// .color-fsa-secondary-100 { color: $color-fsa-secondary-100 }
-// .color-fsa-secondary-900 { color: $color-fsa-secondary-900 }
-// .color-fsa-tertiary      { color: $color-fsa-tertiary }
-// .color-fsa-tertiary-300  { color: $color-fsa-tertiary-300 }
-// .color-fsa-tertiary-200  { color: $color-fsa-tertiary-200 }
-// .color-fsa-tertiary-100  { color: $color-fsa-tertiary-100 }
-// .color-fsa-tertiary-900  { color: $color-fsa-tertiary-900 }
-// .color-fsa-aqua          { color: $color-fsa-aqua }
-// .color-fsa-aqua-300      { color: $color-fsa-aqua-300 }
-// .color-fsa-aqua-200      { color: $color-fsa-aqua-200 }
-// .color-fsa-aqua-100      { color: $color-fsa-aqua-100 }
-// .color-fsa-aqua-900      { color: $color-fsa-aqua-900 }
-// .color-fsa-red           { color: $color-fsa-red }
-// .color-fsa-red-300       { color: $color-fsa-red-300 }
-// .color-fsa-red-200       { color: $color-fsa-red-200 }
-// .color-fsa-red-100       { color: $color-fsa-red-100 }
-// .color-fsa-red-900       { color: $color-fsa-red-900 }
-// .color-base              { color: $color-base }
-// .color-white             { color: $color-white }
-// .color-fsa-base          { color: $color-fsa-base }
-// .color-fsa-link          { color: $color-fsa-link }
-
-// #2f2c2a, base
-// #fff, white
-// #0068ad, link
-// #236430, primary
-// #dee8e0, primary-100
-// #b2c9b7, primary-200
-// #4d8157, primary-300
-// #1a4b24, primary-900
-// #205493, secondary
-// #dee5ef, secondary-100
-// #a6bbd4, secondary-200
-// #4f78aa, secondary-300
-// #183f6e, secondary-900
-// #494440, tertiary
-// #f0f0f0, tertiary-100
-// #dbdad9, tertiary-200
-// #75716e, tertiary-300
-// #2f2c2a, tertiary-900
-// #00a6d2, aqua
-// #e1f3f8, aqua-100
-// #9bdaf1, aqua-200
-// #02bfe7, aqua-300
-// #046b99, aqua-900
-// #cd2026, red
-// #f9e4e5, red-100
-// #f0bcbe, red-200
-// #e1797d, red-300
-// #981b1e, red-900

@@ -49,6 +49,12 @@ $button-flat-active      : transparent;
 $button-flat-border      : transparent;
 $button-flat-border-width: 0;
 
+$button-plain             : transparent;
+$button-plain-padding     : 0;
+$button-plain-hover       : transparent;
+$button-plain-text        : inherit;
+$button-plain-border-width: 0;
+
 @mixin fsa-button($variation: default) {
 
 
@@ -83,6 +89,9 @@ $button-flat-border-width: 0;
     font-family: $button-font-family;
     font-weight: $button-font-weight;
     display: inline-block;
+    display: inline-flex;
+    gap: $size-small;
+    align-items: center;
     border-radius: $button-border-radius;
 
     // scss-lint:disable Shorthand
@@ -239,7 +248,8 @@ $button-flat-border-width: 0;
 
   @elseif $variation == 'block' {
     width: 100%;
-    display: block;
+    display: flex;
+    justify-content: center;
   }
 
   @elseif $variation == 'inline' {
@@ -334,6 +344,45 @@ $button-flat-border-width: 0;
 
   }
 
+  @elseif $variation == 'plain' {
+
+    text-align: left;
+    height: auto;
+    background-color: $button-plain;
+    padding: $button-plain-padding;
+    font-weight: normal;
+    border: $button-plain-border-width;
+    box-shadow: none;
+    // scss-lint:disable ImportantRule
+    text-decoration: none; // ¯\_(ツ)_/¯
+
+    &:hover:not([disabled]) {
+      color: $color-fsa-link-hover;
+      background-color: $button-plain-hover;
+    }
+
+    &,
+    &:visited,
+    .fsa-alert &,
+    .fsa-alert &:visited {
+      color: $button-plain-text;
+    }
+
+    &:active:not([disabled]) {
+      color: $color-fsa-base;
+      box-shadow: none;
+    }
+
+    // scss-lint:disable SelectorFormat
+    &[disabled] {
+      color: inherit;
+      &:hover {
+        color: inherit;
+      }
+    }
+
+  }
+
 }
 
 .fsa-btn {
@@ -352,6 +401,7 @@ $button-flat-border-width: 0;
   &--medium    { @include fsa-button(medium);    }
   &--large     { @include fsa-button(large);     }
   &--flat      { @include fsa-button(flat);      }
+  &--plain     { @include fsa-button(plain);     }
 
   @include breakpoint(S) {
     &--small\@s { @include fsa-button(small); }
@@ -359,6 +409,7 @@ $button-flat-border-width: 0;
     &--large\@s { @include fsa-button(large); }
     &--block\@s { @include fsa-button(block); }
     &--inline\@s { @include fsa-button(inline); }
+    &--plain\@s { @include fsa-button(plain); }
   }
   @include breakpoint(M) {
     &--small\@m { @include fsa-button(small); }
@@ -366,6 +417,7 @@ $button-flat-border-width: 0;
     &--large\@m { @include fsa-button(large); }
     &--block\@m { @include fsa-button(block); }
     &--inline\@m { @include fsa-button(inline); }
+    &--plain\@m { @include fsa-button(plain); }
   }
   @include breakpoint(L) {
     &--small\@l { @include fsa-button(small); }
@@ -373,6 +425,7 @@ $button-flat-border-width: 0;
     &--large\@l { @include fsa-button(large); }
     &--block\@l { @include fsa-button(block); }
     &--inline\@l { @include fsa-button(inline); }
+    &--plain\@l { @include fsa-button(plain); }
   }
   @include breakpoint(XL) {
     &--small\@xl { @include fsa-button(small); }
@@ -380,6 +433,7 @@ $button-flat-border-width: 0;
     &--large\@xl { @include fsa-button(large); }
     &--block\@xl { @include fsa-button(block); }
     &--inline\@xl { @include fsa-button(inline); }
+    &--plain\@xl { @include fsa-button(plain); }
   }
 
 }

@@ -7,9 +7,11 @@ $label-dismiss-width: 1.33em;
     @include reset-button();
     @include font-size(0);
     font-family: $font-sans; // brute-force to override any inheritance (e.g. within an <h1>)
-    font-weight: $font-normal; // brute-force to override any inheritance (e.g. within an <h1>)
+    font-weight: $font-bold;
     line-height: 1;
-    display: inline-block;
+    display: inline-flex;
+    gap: $size-base;
+    align-items: center;
     background-color: $marker-bgc;
     color: $marker-text-color;
     text-transform: uppercase;
@@ -87,13 +89,17 @@ $label-dismiss-width: 1.33em;
     right: 0;
     bottom: 0;
     text-align: center;
-    background-image: url('#{$image-path}/close.svg');;
+    background-image: url('#{$image-path}/material-design-icons/ic_close_24px.svg');
+    background-size: 16px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 48%;
     &[disabled] {
       opacity: 0.4;
       cursor: not-allowed;
+    }
+    &:active {
+      opacity: .6;
+      outline: 1px solid orangered;
     }
   }
 

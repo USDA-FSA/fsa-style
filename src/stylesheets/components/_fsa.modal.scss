@@ -82,7 +82,7 @@
     right: 0;
     padding: ($size-default * 1.5);
     z-index: 2;
-    background-image: url('#{$image-path}/close.svg');
+    background-image: url('#{$image-path}/material-design-icons/ic_close_24px.svg');
     background-position: center;
     background-repeat: no-repeat;
 
@@ -108,7 +108,7 @@
 
     position: relative;
     padding: $size-medium;
-    background-color: $color-fsa-site-bg;
+    background-color: $color-fsa-base-bg;
     background-clip: padding-box;
     box-shadow: 0 $size-default $size-default 0 rgba(0, 0, 0, .25);
     margin-bottom: $size-medium;

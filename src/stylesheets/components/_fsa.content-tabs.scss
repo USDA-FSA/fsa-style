@@ -179,7 +179,9 @@
 
   &__label-text {
 
-    display: block;
+    display: flex;
+    gap: $size-small;
+    align-items: center;
     padding-top: $tab-padding;
     padding-bottom: ($tab-padding + $size-base);
     position: relative;

@@ -132,7 +132,7 @@
       line-height: 1;
       width: $button-width;
       text-align: center;
-      background-size: 45%;
+      background-size: $icon-size-1;
       background-repeat: no-repeat;
       background-position: 50%;
 
@@ -150,7 +150,7 @@
     // scss-lint:disable SelectorFormat
     .fsa-spinbox--large & {
       width: $button-width-large;
-      background-size: 37%;
+      background-size: $icon-size-2;
     }
 
     &[disabled] {
@@ -176,11 +176,11 @@
     }
 
     &--increment {
-      background-image: url('#{$image-path}/angle-arrow-up-primary.svg');
+      background-image: url('#{$image-path}/material-design-icons/ic_expand_less_24px.svg');
     }
 
     &--decrement {
-      background-image: url('#{$image-path}/angle-arrow-down-primary.svg');
+      background-image: url('#{$image-path}/material-design-icons/ic_expand_more_24px.svg');
       border-top: 0;
       &:focus {
         box-shadow: 0 0 0 1px $form-focus-color inset, 0 1px 0 1px $form-focus-color inset, 1px 0 0 1px $form-focus-color inset;
