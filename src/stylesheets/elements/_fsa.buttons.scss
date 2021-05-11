@@ -409,6 +409,7 @@ $button-plain-border-width: 0;
     &--large\@s { @include fsa-button(large); }
     &--block\@s { @include fsa-button(block); }
     &--inline\@s { @include fsa-button(inline); }
+    &--plain\@s { @include fsa-button(plain); }
   }
   @include breakpoint(M) {
     &--small\@m { @include fsa-button(small); }
@@ -416,6 +417,7 @@ $button-plain-border-width: 0;
     &--large\@m { @include fsa-button(large); }
     &--block\@m { @include fsa-button(block); }
     &--inline\@m { @include fsa-button(inline); }
+    &--plain\@m { @include fsa-button(plain); }
   }
   @include breakpoint(L) {
     &--small\@l { @include fsa-button(small); }
@@ -423,6 +425,7 @@ $button-plain-border-width: 0;
     &--large\@l { @include fsa-button(large); }
     &--block\@l { @include fsa-button(block); }
     &--inline\@l { @include fsa-button(inline); }
+    &--plain\@l { @include fsa-button(plain); }
   }
   @include breakpoint(XL) {
     &--small\@xl { @include fsa-button(small); }
@@ -430,6 +433,7 @@ $button-plain-border-width: 0;
     &--large\@xl { @include fsa-button(large); }
     &--block\@xl { @include fsa-button(block); }
     &--inline\@xl { @include fsa-button(inline); }
+    &--plain\@xl { @include fsa-button(plain); }
   }
 
 }
