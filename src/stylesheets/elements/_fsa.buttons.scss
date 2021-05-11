@@ -93,6 +93,7 @@ $button-plain-border-width: 0;
     gap: $size-small;
     align-items: center;
     border-radius: $button-border-radius;
+    vertical-align: middle;
 
     // scss-lint:disable Shorthand
     padding:

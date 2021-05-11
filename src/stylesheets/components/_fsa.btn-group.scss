@@ -5,6 +5,7 @@
   & {
     @include fsa-space-between();
     display: inline-flex;
+    vertical-align: middle;
     white-space: nowrap;
   }
 
@@ -39,6 +40,7 @@
       @include fsa-button;
       @include fsa-button(secondary);
       display: flex;
+      justify-content: center;
       flex: auto;
     }
 
