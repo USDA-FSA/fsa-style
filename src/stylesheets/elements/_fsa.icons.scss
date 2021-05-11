@@ -25,6 +25,7 @@
     width: $icon-size-1;
     height: $icon-size-1;
     vertical-align: middle;
+    flex-shrink: 0;
 
     h1 > &,
     h2 > &,
