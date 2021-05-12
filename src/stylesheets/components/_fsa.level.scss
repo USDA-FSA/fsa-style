@@ -28,7 +28,7 @@ $level: fsa-level;
     }
 
     &--full#{$bp}   { display: flex; } // default, effectively an override
-    &--inline#{$bp} { display: inline-flex; }
+    &--inline#{$bp} { display: inline-flex; vertical-align: bottom; }
     &--none#{$bp}   { display: initial; } // remove flex'ing, reverts to whatever *initial* (implicit) property of display this element may have (e.g. <span> = inline; <div> = block)
 
     &--no-wrap#{$bp} { flex-wrap: initial; } // default
