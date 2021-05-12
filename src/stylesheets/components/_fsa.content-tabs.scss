@@ -180,6 +180,7 @@
   &__label-text {
 
     display: flex;
+    justify-content: center;
     gap: $size-small;
     align-items: center;
     padding-top: $tab-padding;
