@@ -1,4 +1,40 @@
 ///////////////////////////////////////////////////////////////////////
+.EXP-shadow {
+  & {}
+  &__name {
+    font-weight: bold;
+    margin-bottom: .5em;
+  }
+  &__item {
+    & {
+      padding: $size-extra-large;
+      background-color: white;
+    }
+    &--scratch  {
+      box-shadow: 0 0 $size-medium rgba(0, 0, 0, .3);
+    }
+    &--popout  {
+      box-shadow: 0 $size-default $size-default 0 rgba(0, 0, 0, .25);
+    }
+    &--overlay {
+      box-shadow: 0 $size-base $size-small 0 rgba(0, 0, 0, .25);
+    }
+    &--raised  {
+
+    }
+    &--flat    {
+
+    }
+    &--none    {
+      box-shadow: none;
+    }
+  }
+  &__used-by {
+    padding: $size-medium $size-small $size-small;
+  }
+}
+
+///////////////////////////////////////////////////////////////////////
 .exp-a {
   & * {
     // background-color: red;
