@@ -64,6 +64,9 @@ th {
 
 .fsa-table-container {
   &--scroll {
+    & > * {
+      margin: 0;
+    }
     & {
       @include overflow-gradient();
       margin: 2em 0;
@@ -78,9 +81,6 @@ th {
 
 .fsa-table {
 
-  .fsa-table-container--scroll > & {
-    margin: 0;
-  }
 
   & {
     background-color: $table-bgc;
