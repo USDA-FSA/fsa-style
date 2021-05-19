@@ -791,7 +791,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
         padding: $size-medium $size-small;
         color: inherit;
         text-decoration: none;
-        border-radius: $u-radius-s;
+        border-radius: $radius-s;
       }
       &:visited {
         color: inherit;
