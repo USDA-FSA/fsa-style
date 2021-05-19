@@ -63,14 +63,16 @@ th {
 }
 
 .fsa-table-container {
-  &[style*=--custom-table-height] {
-    --custom-border-width: auto;
-    height: var(--custom-table-height);
-    background-color: red;
-  }
   &--scroll {
-    margin: 2em 0;
-    overflow: auto;
+    & {
+      @include overflow-gradient();
+      margin: 2em 0;
+      overflow: auto;
+    }
+    &[style*=--custom-table-height] {
+      --custom-border-width: auto;
+      max-height: var(--custom-table-height);
+    }
   }
 }
 
