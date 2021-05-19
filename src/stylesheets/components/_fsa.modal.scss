@@ -110,7 +110,7 @@
     padding: $size-medium;
     background-color: $color-fsa-base-bg;
     background-clip: padding-box;
-    box-shadow: 0 $size-default $size-default 0 rgba(0, 0, 0, .25);
+    box-shadow: $shadow-size-popout;
     margin-bottom: $size-medium;
 
     // scss-lint:disable SelectorFormat
