@@ -116,6 +116,11 @@ $radius-oval : 100%;
 // Shadows
 $shadow-color: transparentize($color-fsa-tertiary, .85);
 
+$shadow-size-popout:  0 11px 15px -7px $shadow-color, 0 24px 38px 3px  $shadow-color, 0 9px 46px 8px   $shadow-color;
+$shadow-size-overlay: 0 5px 5px -3px $shadow-color,   0 8px 10px 1px   $shadow-color, 0 3px 14px 2px   $shadow-color;
+$shadow-size-raised:  0 2px 4px -1px $shadow-color,   0 4px 5px 0      $shadow-color, 0 1px 10px 0     $shadow-color;
+$shadow-size-none:    none;
+
 // ---------------------------------------------------------------------------
 // Typography
 
