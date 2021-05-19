@@ -33,11 +33,11 @@
   }
 
   &--light {
-    @include overflow-gradient( $bgAll: #ffffff, $bgShadow: $color-fsa-tertiary-100 );
+    @include overflow-gradient( $bgAll: #ffffff, $bgShadow: red );
   }
 
   &--contrast {
-    @include overflow-gradient( $bgAll: $color-fsa-tertiary-100 );
+    @include overflow-gradient( $bgAll: red );
   }
 
   &--justified {}
