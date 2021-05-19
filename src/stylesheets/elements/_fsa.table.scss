@@ -62,7 +62,23 @@ th {
 
 }
 
+.fsa-table-container {
+  &[style*=--custom-table-height] {
+    --custom-border-width: auto;
+    height: var(--custom-table-height);
+    background-color: red;
+  }
+  &--scroll {
+    margin: 2em 0;
+    overflow: auto;
+  }
+}
+
 .fsa-table {
+
+  .fsa-table-container--scroll > & {
+    margin: 0;
+  }
 
   & {
     background-color: $table-bgc;
@@ -70,6 +86,14 @@ th {
     @include breakpoint(M, down) {
       @include font-size(2);
     }
+  }
+
+  thead {
+
+    tr {
+      background-color: $table-header-bgc;
+    }
+
   }
 
   th,
@@ -124,10 +148,53 @@ th {
     background-color: $color-fsa-selection-bg;
   }
 
-  thead {
+  &__sort {
 
-    tr {
-      background-color: $table-header-bgc;
+    @include reset-button;
+    display: block;
+    width: 100%;
+
+    .fsa-text-align--right & {
+      text-align: right;
+    }
+
+    &:focus,
+    &:hover {
+      color: $color-fsa-tertiary-900;
+      outline-offset: 4px;
+    }
+
+    &:after {
+      content: '';
+      background-size: $icon-size-1;
+      width: $icon-size-1;
+      height: $icon-size-1;
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      top: -2px;
+      margin-left: 2px;
+      opacity: .5;
+      background-image: url('#{$image-path}/material-design-icons/ic_expand_less_24px.svg');
+    }
+
+    &--descending:after,
+    &--ascending:after {
+      opacity: 1;
+    }
+
+    &--ascending:after {
+      background-image: url('#{$image-path}/material-design-icons/ic_expand_less_24px.svg');
+    }
+
+    &--descending:after {
+      background-image: url('#{$image-path}/material-design-icons/ic_expand_more_24px.svg');
+    }
+
+    &:hover:not(.fsa-table__sort--descending, .fsa-table__sort--ascending) {
+      &:after {
+        opacity: 1;
+      }
     }
 
   }
@@ -256,57 +323,6 @@ th {
   &--valign-middle {}
 
   &--valign-bottom {}
-
-  &__sort {
-
-    @include reset-button;
-    display: block;
-    width: 100%;
-
-    .fsa-text-align--right & {
-      text-align: right;
-    }
-
-    &:focus,
-    &:hover {
-      color: $color-fsa-tertiary-900;
-      outline-offset: 4px;
-    }
-
-    &:after {
-      content: '';
-      background-size: $icon-size-1;
-      width: $icon-size-1;
-      height: $icon-size-1;
-      display: inline-block;
-      vertical-align: middle;
-      position: relative;
-      top: -2px;
-      margin-left: 2px;
-      opacity: .5;
-      background-image: url('#{$image-path}/material-design-icons/ic_expand_less_24px.svg');
-    }
-
-    &--descending:after,
-    &--ascending:after {
-      opacity: 1;
-    }
-
-    &--ascending:after {
-      background-image: url('#{$image-path}/material-design-icons/ic_expand_less_24px.svg');
-    }
-
-    &--descending:after {
-      background-image: url('#{$image-path}/material-design-icons/ic_expand_more_24px.svg');
-    }
-
-    &:hover:not(.fsa-table__sort--descending, .fsa-table__sort--ascending) {
-      &:after {
-        opacity: 1;
-      }
-    }
-
-  }
 
 }
 
