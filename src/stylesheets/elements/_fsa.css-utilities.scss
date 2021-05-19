@@ -11,256 +11,256 @@
   // Border Width
   & {
 
-    &--none   { border-width: $u-border-none !important; }
-    &--xxs    { border-width: $u-border-xxs !important; }
-    &--xs     { border-width: $u-border-xs !important; }
-    &--s      { border-width: $u-border-s !important; }
-    &--l      { border-width: $u-border-l !important; }
-    &--m      { border-width: $u-border-m !important; }
-    &--custom { --custom-border-width: #{$u-border-xxs}; border-width: var(--custom-border-width) !important; }
+    &--none   { border-width: $border-none !important; }
+    &--xxs    { border-width: $border-xxs !important; }
+    &--xs     { border-width: $border-xs !important; }
+    &--s      { border-width: $border-s !important; }
+    &--l      { border-width: $border-l !important; }
+    &--m      { border-width: $border-m !important; }
+    &--custom { --custom-border-width: #{$border-xxs}; border-width: var(--custom-border-width) !important; }
 
     @include breakpoint(S) {
-      &--none\@s   { border-width: $u-border-none !important; }
-      &--xxs\@s    { border-width: $u-border-xxs !important; }
-      &--xs\@s     { border-width: $u-border-xs !important; }
-      &--s\@s      { border-width: $u-border-s !important; }
-      &--m\@s      { border-width: $u-border-m !important; }
-      &--l\@s      { border-width: $u-border-l !important; }
-      &--custom\@s { --custom-border-width-s: #{$u-border-xxs}; border-width: var(--custom-border-width-s) !important; }
+      &--none\@s   { border-width: $border-none !important; }
+      &--xxs\@s    { border-width: $border-xxs !important; }
+      &--xs\@s     { border-width: $border-xs !important; }
+      &--s\@s      { border-width: $border-s !important; }
+      &--m\@s      { border-width: $border-m !important; }
+      &--l\@s      { border-width: $border-l !important; }
+      &--custom\@s { --custom-border-width-s: #{$border-xxs}; border-width: var(--custom-border-width-s) !important; }
     }
 
     @include breakpoint(M) {
-      &--none\@m   { border-width: $u-border-none !important; }
-      &--xxs\@m    { border-width: $u-border-xxs !important; }
-      &--xs\@m     { border-width: $u-border-xs !important; }
-      &--s\@m      { border-width: $u-border-s !important; }
-      &--m\@m      { border-width: $u-border-m !important; }
-      &--l\@m      { border-width: $u-border-l !important; }
-      &--custom\@m { --custom-border-width-m: #{$u-border-xxs}; border-width: var(--custom-border-width-m) !important; }
+      &--none\@m   { border-width: $border-none !important; }
+      &--xxs\@m    { border-width: $border-xxs !important; }
+      &--xs\@m     { border-width: $border-xs !important; }
+      &--s\@m      { border-width: $border-s !important; }
+      &--m\@m      { border-width: $border-m !important; }
+      &--l\@m      { border-width: $border-l !important; }
+      &--custom\@m { --custom-border-width-m: #{$border-xxs}; border-width: var(--custom-border-width-m) !important; }
     }
 
     @include breakpoint(L) {
-      &--none\@l   { border-width: $u-border-none !important; }
-      &--xxs\@l    { border-width: $u-border-xxs !important; }
-      &--xs\@l     { border-width: $u-border-xs !important; }
-      &--s\@l      { border-width: $u-border-s !important; }
-      &--m\@l      { border-width: $u-border-m !important; }
-      &--l\@l      { border-width: $u-border-l !important; }
-      &--custom\@l { --custom-border-width-l: #{$u-border-xxs}; border-width: var(--custom-border-width-l) !important; }
+      &--none\@l   { border-width: $border-none !important; }
+      &--xxs\@l    { border-width: $border-xxs !important; }
+      &--xs\@l     { border-width: $border-xs !important; }
+      &--s\@l      { border-width: $border-s !important; }
+      &--m\@l      { border-width: $border-m !important; }
+      &--l\@l      { border-width: $border-l !important; }
+      &--custom\@l { --custom-border-width-l: #{$border-xxs}; border-width: var(--custom-border-width-l) !important; }
     }
 
     @include breakpoint(XL) {
-      &--none\@xl   { border-width: $u-border-none !important; }
-      &--xxs\@xl    { border-width: $u-border-xxs !important; }
-      &--xs\@xl     { border-width: $u-border-xs !important; }
-      &--s\@xl      { border-width: $u-border-s !important; }
-      &--m\@xl      { border-width: $u-border-m !important; }
-      &--l\@xl      { border-width: $u-border-l !important; }
-      &--custom\@xl { --custom-border-width-xl: #{$u-border-xxs}; border-width: var(--custom-border-width-xl) !important; }
+      &--none\@xl   { border-width: $border-none !important; }
+      &--xxs\@xl    { border-width: $border-xxs !important; }
+      &--xs\@xl     { border-width: $border-xs !important; }
+      &--s\@xl      { border-width: $border-s !important; }
+      &--m\@xl      { border-width: $border-m !important; }
+      &--l\@xl      { border-width: $border-l !important; }
+      &--custom\@xl { --custom-border-width-xl: #{$border-xxs}; border-width: var(--custom-border-width-xl) !important; }
     }
 
   }
   &-top {
 
-    &--none   { border-top-width: $u-border-none !important; }
-    &--xxs    { border-top-width: $u-border-xxs !important; }
-    &--xs     { border-top-width: $u-border-xs !important; }
-    &--s      { border-top-width: $u-border-s !important; }
-    &--m      { border-top-width: $u-border-m !important; }
-    &--l      { border-top-width: $u-border-l !important; }
-    &--custom { --custom-border-top-width: #{$u-border-xxs}; border-top-width: var(--custom-border-top-width) !important; }
+    &--none   { border-top-width: $border-none !important; }
+    &--xxs    { border-top-width: $border-xxs !important; }
+    &--xs     { border-top-width: $border-xs !important; }
+    &--s      { border-top-width: $border-s !important; }
+    &--m      { border-top-width: $border-m !important; }
+    &--l      { border-top-width: $border-l !important; }
+    &--custom { --custom-border-top-width: #{$border-xxs}; border-top-width: var(--custom-border-top-width) !important; }
 
     @include breakpoint(S) {
-      &--none\@s   { border-top-width: $u-border-none !important; }
-      &--xxs\@s    { border-top-width: $u-border-xxs !important; }
-      &--xs\@s     { border-top-width: $u-border-xs !important; }
-      &--s\@s      { border-top-width: $u-border-s !important; }
-      &--m\@s      { border-top-width: $u-border-m !important; }
-      &--l\@s      { border-top-width: $u-border-l !important; }
-      &--custom\@s { --custom-border-top-width-s: #{$u-border-xxs}; border-top-width: var(--custom-border-top-width-s) !important; }
+      &--none\@s   { border-top-width: $border-none !important; }
+      &--xxs\@s    { border-top-width: $border-xxs !important; }
+      &--xs\@s     { border-top-width: $border-xs !important; }
+      &--s\@s      { border-top-width: $border-s !important; }
+      &--m\@s      { border-top-width: $border-m !important; }
+      &--l\@s      { border-top-width: $border-l !important; }
+      &--custom\@s { --custom-border-top-width-s: #{$border-xxs}; border-top-width: var(--custom-border-top-width-s) !important; }
     }
 
     @include breakpoint(M) {
-      &--none\@m   { border-top-width: $u-border-none !important; }
-      &--xxs\@m    { border-top-width: $u-border-xxs !important; }
-      &--xs\@m     { border-top-width: $u-border-xs !important; }
-      &--s\@m      { border-top-width: $u-border-s !important; }
-      &--m\@m      { border-top-width: $u-border-m !important; }
-      &--l\@m      { border-top-width: $u-border-l !important; }
-      &--custom\@m { --custom-border-top-width-m: #{$u-border-xxs}; border-top-width: var(--custom-border-top-width-m) !important; }
+      &--none\@m   { border-top-width: $border-none !important; }
+      &--xxs\@m    { border-top-width: $border-xxs !important; }
+      &--xs\@m     { border-top-width: $border-xs !important; }
+      &--s\@m      { border-top-width: $border-s !important; }
+      &--m\@m      { border-top-width: $border-m !important; }
+      &--l\@m      { border-top-width: $border-l !important; }
+      &--custom\@m { --custom-border-top-width-m: #{$border-xxs}; border-top-width: var(--custom-border-top-width-m) !important; }
     }
 
     @include breakpoint(L) {
-      &--none\@l   { border-top-width: $u-border-none !important; }
-      &--xxs\@l    { border-top-width: $u-border-xxs !important; }
-      &--xs\@l     { border-top-width: $u-border-xs !important; }
-      &--s\@l      { border-top-width: $u-border-s !important; }
-      &--m\@l      { border-top-width: $u-border-m !important; }
-      &--l\@l      { border-top-width: $u-border-l !important; }
-      &--custom\@l { --custom-border-top-width-l: #{$u-border-xxs}; border-top-width: var(--custom-border-top-width-l) !important; }
+      &--none\@l   { border-top-width: $border-none !important; }
+      &--xxs\@l    { border-top-width: $border-xxs !important; }
+      &--xs\@l     { border-top-width: $border-xs !important; }
+      &--s\@l      { border-top-width: $border-s !important; }
+      &--m\@l      { border-top-width: $border-m !important; }
+      &--l\@l      { border-top-width: $border-l !important; }
+      &--custom\@l { --custom-border-top-width-l: #{$border-xxs}; border-top-width: var(--custom-border-top-width-l) !important; }
     }
 
     @include breakpoint(XL) {
-      &--none\@xl   { border-top-width: $u-border-none !important; }
-      &--xxs\@xl    { border-top-width: $u-border-xxs !important; }
-      &--xs\@xl     { border-top-width: $u-border-xs !important; }
-      &--s\@xl      { border-top-width: $u-border-s !important; }
-      &--m\@xl      { border-top-width: $u-border-m !important; }
-      &--l\@xl      { border-top-width: $u-border-l !important; }
-      &--custom\@xl { --custom-border-top-width-xl: #{$u-border-xxs}; border-top-width: var(--custom-border-top-width-xl) !important; }
+      &--none\@xl   { border-top-width: $border-none !important; }
+      &--xxs\@xl    { border-top-width: $border-xxs !important; }
+      &--xs\@xl     { border-top-width: $border-xs !important; }
+      &--s\@xl      { border-top-width: $border-s !important; }
+      &--m\@xl      { border-top-width: $border-m !important; }
+      &--l\@xl      { border-top-width: $border-l !important; }
+      &--custom\@xl { --custom-border-top-width-xl: #{$border-xxs}; border-top-width: var(--custom-border-top-width-xl) !important; }
     }
 
   }
   &-right {
 
-    &--none   { border-right-width: $u-border-none !important; }
-    &--xxs    { border-right-width: $u-border-xxs !important; }
-    &--xs     { border-right-width: $u-border-xs !important; }
-    &--s      { border-right-width: $u-border-s !important; }
-    &--m      { border-right-width: $u-border-m !important; }
-    &--l      { border-right-width: $u-border-l !important; }
-    &--custom { --custom-border-right-width: #{$u-border-xxs}; border-right-width: var(--custom-border-right-width) !important; }
+    &--none   { border-right-width: $border-none !important; }
+    &--xxs    { border-right-width: $border-xxs !important; }
+    &--xs     { border-right-width: $border-xs !important; }
+    &--s      { border-right-width: $border-s !important; }
+    &--m      { border-right-width: $border-m !important; }
+    &--l      { border-right-width: $border-l !important; }
+    &--custom { --custom-border-right-width: #{$border-xxs}; border-right-width: var(--custom-border-right-width) !important; }
 
     @include breakpoint(S) {
-      &--none\@s   { border-right-width: $u-border-none !important; }
-      &--xxs\@s    { border-right-width: $u-border-xxs !important; }
-      &--xs\@s     { border-right-width: $u-border-xs !important; }
-      &--s\@s      { border-right-width: $u-border-s !important; }
-      &--m\@s      { border-right-width: $u-border-m !important; }
-      &--l\@s      { border-right-width: $u-border-l !important; }
-      &--custom\@s { --custom-border-right-width-s: #{$u-border-xxs}; border-right-width: var(--custom-border-right-width-s) !important; }
+      &--none\@s   { border-right-width: $border-none !important; }
+      &--xxs\@s    { border-right-width: $border-xxs !important; }
+      &--xs\@s     { border-right-width: $border-xs !important; }
+      &--s\@s      { border-right-width: $border-s !important; }
+      &--m\@s      { border-right-width: $border-m !important; }
+      &--l\@s      { border-right-width: $border-l !important; }
+      &--custom\@s { --custom-border-right-width-s: #{$border-xxs}; border-right-width: var(--custom-border-right-width-s) !important; }
     }
 
     @include breakpoint(M) {
-      &--none\@m   { border-right-width: $u-border-none !important; }
-      &--xxs\@m    { border-right-width: $u-border-xxs !important; }
-      &--xs\@m     { border-right-width: $u-border-xs !important; }
-      &--s\@m      { border-right-width: $u-border-s !important; }
-      &--m\@m      { border-right-width: $u-border-m !important; }
-      &--l\@m      { border-right-width: $u-border-l !important; }
-      &--custom\@m { --custom-border-right-width-m: #{$u-border-xxs}; border-right-width: var(--custom-border-right-width-m) !important; }
+      &--none\@m   { border-right-width: $border-none !important; }
+      &--xxs\@m    { border-right-width: $border-xxs !important; }
+      &--xs\@m     { border-right-width: $border-xs !important; }
+      &--s\@m      { border-right-width: $border-s !important; }
+      &--m\@m      { border-right-width: $border-m !important; }
+      &--l\@m      { border-right-width: $border-l !important; }
+      &--custom\@m { --custom-border-right-width-m: #{$border-xxs}; border-right-width: var(--custom-border-right-width-m) !important; }
     }
 
     @include breakpoint(L) {
-      &--none\@l   { border-right-width: $u-border-none !important; }
-      &--xxs\@l    { border-right-width: $u-border-xxs !important; }
-      &--xs\@l     { border-right-width: $u-border-xs !important; }
-      &--s\@l      { border-right-width: $u-border-s !important; }
-      &--m\@l      { border-right-width: $u-border-m !important; }
-      &--l\@l      { border-right-width: $u-border-l !important; }
-      &--custom\@l { --custom-border-right-width-l: #{$u-border-xxs}; border-right-width: var(--custom-border-right-width-l) !important; }
+      &--none\@l   { border-right-width: $border-none !important; }
+      &--xxs\@l    { border-right-width: $border-xxs !important; }
+      &--xs\@l     { border-right-width: $border-xs !important; }
+      &--s\@l      { border-right-width: $border-s !important; }
+      &--m\@l      { border-right-width: $border-m !important; }
+      &--l\@l      { border-right-width: $border-l !important; }
+      &--custom\@l { --custom-border-right-width-l: #{$border-xxs}; border-right-width: var(--custom-border-right-width-l) !important; }
     }
 
     @include breakpoint(XL) {
-      &--none\@xl   { border-right-width: $u-border-none !important; }
-      &--xxs\@xl    { border-right-width: $u-border-xxs !important; }
-      &--xs\@xl     { border-right-width: $u-border-xs !important; }
-      &--s\@xl      { border-right-width: $u-border-s !important; }
-      &--m\@xl      { border-right-width: $u-border-m !important; }
-      &--l\@xl      { border-right-width: $u-border-l !important; }
-      &--custom\@xl { --custom-border-right-width-xl: #{$u-border-xxs}; border-right-width: var(--custom-border-right-width-xl) !important; }
+      &--none\@xl   { border-right-width: $border-none !important; }
+      &--xxs\@xl    { border-right-width: $border-xxs !important; }
+      &--xs\@xl     { border-right-width: $border-xs !important; }
+      &--s\@xl      { border-right-width: $border-s !important; }
+      &--m\@xl      { border-right-width: $border-m !important; }
+      &--l\@xl      { border-right-width: $border-l !important; }
+      &--custom\@xl { --custom-border-right-width-xl: #{$border-xxs}; border-right-width: var(--custom-border-right-width-xl) !important; }
     }
 
   }
   &-bottom {
 
-    &--none   { border-bottom-width: $u-border-none !important; }
-    &--xxs    { border-bottom-width: $u-border-xxs !important; }
-    &--xs     { border-bottom-width: $u-border-xs !important; }
-    &--s      { border-bottom-width: $u-border-s !important; }
-    &--m      { border-bottom-width: $u-border-m !important; }
-    &--l      { border-bottom-width: $u-border-l !important; }
-    &--custom { --custom-border-bottom-width: #{$u-border-xxs}; border-bottom-width: var(--custom-border-bottom-width) !important; }
+    &--none   { border-bottom-width: $border-none !important; }
+    &--xxs    { border-bottom-width: $border-xxs !important; }
+    &--xs     { border-bottom-width: $border-xs !important; }
+    &--s      { border-bottom-width: $border-s !important; }
+    &--m      { border-bottom-width: $border-m !important; }
+    &--l      { border-bottom-width: $border-l !important; }
+    &--custom { --custom-border-bottom-width: #{$border-xxs}; border-bottom-width: var(--custom-border-bottom-width) !important; }
 
     @include breakpoint(S) {
-      &--none\@s   { border-bottom-width: $u-border-none !important; }
-      &--xxs\@s    { border-bottom-width: $u-border-xxs !important; }
-      &--xs\@s     { border-bottom-width: $u-border-xs !important; }
-      &--s\@s      { border-bottom-width: $u-border-s !important; }
-      &--m\@s      { border-bottom-width: $u-border-m !important; }
-      &--l\@s      { border-bottom-width: $u-border-l !important; }
-      &--custom\@s { --custom-border-bottom-width-s: #{$u-border-xxs}; border-bottom-width: var(--custom-border-bottom-width-s) !important; }
+      &--none\@s   { border-bottom-width: $border-none !important; }
+      &--xxs\@s    { border-bottom-width: $border-xxs !important; }
+      &--xs\@s     { border-bottom-width: $border-xs !important; }
+      &--s\@s      { border-bottom-width: $border-s !important; }
+      &--m\@s      { border-bottom-width: $border-m !important; }
+      &--l\@s      { border-bottom-width: $border-l !important; }
+      &--custom\@s { --custom-border-bottom-width-s: #{$border-xxs}; border-bottom-width: var(--custom-border-bottom-width-s) !important; }
     }
 
     @include breakpoint(M) {
-      &--none\@m   { border-bottom-width: $u-border-none !important; }
-      &--xxs\@m    { border-bottom-width: $u-border-xxs !important; }
-      &--xs\@m     { border-bottom-width: $u-border-xs !important; }
-      &--s\@m      { border-bottom-width: $u-border-s !important; }
-      &--m\@m      { border-bottom-width: $u-border-m !important; }
-      &--l\@m      { border-bottom-width: $u-border-l !important; }
-      &--custom\@m { --custom-border-bottom-width-m: #{$u-border-xxs}; border-bottom-width: var(--custom-border-bottom-width-m) !important; }
+      &--none\@m   { border-bottom-width: $border-none !important; }
+      &--xxs\@m    { border-bottom-width: $border-xxs !important; }
+      &--xs\@m     { border-bottom-width: $border-xs !important; }
+      &--s\@m      { border-bottom-width: $border-s !important; }
+      &--m\@m      { border-bottom-width: $border-m !important; }
+      &--l\@m      { border-bottom-width: $border-l !important; }
+      &--custom\@m { --custom-border-bottom-width-m: #{$border-xxs}; border-bottom-width: var(--custom-border-bottom-width-m) !important; }
     }
 
     @include breakpoint(L) {
-      &--none\@l   { border-bottom-width: $u-border-none !important; }
-      &--xxs\@l    { border-bottom-width: $u-border-xxs !important; }
-      &--xs\@l     { border-bottom-width: $u-border-xs !important; }
-      &--s\@l      { border-bottom-width: $u-border-s !important; }
-      &--m\@l      { border-bottom-width: $u-border-m !important; }
-      &--l\@l      { border-bottom-width: $u-border-l !important; }
-      &--custom\@l { --custom-border-bottom-width-l: #{$u-border-xxs}; border-bottom-width: var(--custom-border-bottom-width-l) !important; }
+      &--none\@l   { border-bottom-width: $border-none !important; }
+      &--xxs\@l    { border-bottom-width: $border-xxs !important; }
+      &--xs\@l     { border-bottom-width: $border-xs !important; }
+      &--s\@l      { border-bottom-width: $border-s !important; }
+      &--m\@l      { border-bottom-width: $border-m !important; }
+      &--l\@l      { border-bottom-width: $border-l !important; }
+      &--custom\@l { --custom-border-bottom-width-l: #{$border-xxs}; border-bottom-width: var(--custom-border-bottom-width-l) !important; }
     }
 
     @include breakpoint(XL) {
-      &--none\@xl   { border-bottom-width: $u-border-none !important; }
-      &--xxs\@xl    { border-bottom-width: $u-border-xxs !important; }
-      &--xs\@xl     { border-bottom-width: $u-border-xs !important; }
-      &--s\@xl      { border-bottom-width: $u-border-s !important; }
-      &--m\@xl      { border-bottom-width: $u-border-m !important; }
-      &--l\@xl      { border-bottom-width: $u-border-l !important; }
-      &--custom\@xl { --custom-border-bottom-width-xl: #{$u-border-xxs}; border-bottom-width: var(--custom-border-bottom-width-xl) !important; }
+      &--none\@xl   { border-bottom-width: $border-none !important; }
+      &--xxs\@xl    { border-bottom-width: $border-xxs !important; }
+      &--xs\@xl     { border-bottom-width: $border-xs !important; }
+      &--s\@xl      { border-bottom-width: $border-s !important; }
+      &--m\@xl      { border-bottom-width: $border-m !important; }
+      &--l\@xl      { border-bottom-width: $border-l !important; }
+      &--custom\@xl { --custom-border-bottom-width-xl: #{$border-xxs}; border-bottom-width: var(--custom-border-bottom-width-xl) !important; }
     }
 
   }
   &-left {
 
-    &--none   { border-left-width: $u-border-none !important; }
-    &--xxs    { border-left-width: $u-border-xxs !important; }
-    &--xs     { border-left-width: $u-border-xs !important; }
-    &--s      { border-left-width: $u-border-s !important; }
-    &--m      { border-left-width: $u-border-m !important; }
-    &--l      { border-left-width: $u-border-l !important; }
-    &--custom { --custom-border-left-width: #{$u-border-xxs}; border-left-width: var(--custom-border-left-width) !important; }
+    &--none   { border-left-width: $border-none !important; }
+    &--xxs    { border-left-width: $border-xxs !important; }
+    &--xs     { border-left-width: $border-xs !important; }
+    &--s      { border-left-width: $border-s !important; }
+    &--m      { border-left-width: $border-m !important; }
+    &--l      { border-left-width: $border-l !important; }
+    &--custom { --custom-border-left-width: #{$border-xxs}; border-left-width: var(--custom-border-left-width) !important; }
 
     @include breakpoint(S) {
-      &--none\@s   { border-left-width: $u-border-none !important; }
-      &--xxs\@s    { border-left-width: $u-border-xxs !important; }
-      &--xs\@s     { border-left-width: $u-border-xs !important; }
-      &--s\@s      { border-left-width: $u-border-s !important; }
-      &--m\@s      { border-left-width: $u-border-m !important; }
-      &--l\@s      { border-left-width: $u-border-l !important; }
-      &--custom\@s { --custom-border-left-width-s: #{$u-border-xxs}; border-left-width: var(--custom-border-left-width-s) !important; }
+      &--none\@s   { border-left-width: $border-none !important; }
+      &--xxs\@s    { border-left-width: $border-xxs !important; }
+      &--xs\@s     { border-left-width: $border-xs !important; }
+      &--s\@s      { border-left-width: $border-s !important; }
+      &--m\@s      { border-left-width: $border-m !important; }
+      &--l\@s      { border-left-width: $border-l !important; }
+      &--custom\@s { --custom-border-left-width-s: #{$border-xxs}; border-left-width: var(--custom-border-left-width-s) !important; }
     }
 
     @include breakpoint(M) {
-      &--none\@m   { border-left-width: $u-border-none !important; }
-      &--xxs\@m    { border-left-width: $u-border-xxs !important; }
-      &--xs\@m     { border-left-width: $u-border-xs !important; }
-      &--s\@m      { border-left-width: $u-border-s !important; }
-      &--m\@m      { border-left-width: $u-border-m !important; }
-      &--l\@m      { border-left-width: $u-border-l !important; }
-      &--custom\@m { --custom-border-left-width-m: #{$u-border-xxs}; border-left-width: var(--custom-border-left-width-m) !important; }
+      &--none\@m   { border-left-width: $border-none !important; }
+      &--xxs\@m    { border-left-width: $border-xxs !important; }
+      &--xs\@m     { border-left-width: $border-xs !important; }
+      &--s\@m      { border-left-width: $border-s !important; }
+      &--m\@m      { border-left-width: $border-m !important; }
+      &--l\@m      { border-left-width: $border-l !important; }
+      &--custom\@m { --custom-border-left-width-m: #{$border-xxs}; border-left-width: var(--custom-border-left-width-m) !important; }
     }
 
     @include breakpoint(L) {
-      &--none\@l   { border-left-width: $u-border-none !important; }
-      &--xxs\@l    { border-left-width: $u-border-xxs !important; }
-      &--xs\@l     { border-left-width: $u-border-xs !important; }
-      &--s\@l      { border-left-width: $u-border-s !important; }
-      &--m\@l      { border-left-width: $u-border-m !important; }
-      &--l\@l      { border-left-width: $u-border-l !important; }
-      &--custom\@l { --custom-border-left-width-: #{$u-border-xxs}; border-left-width: var(--custom-border-left-width-) !important; }
+      &--none\@l   { border-left-width: $border-none !important; }
+      &--xxs\@l    { border-left-width: $border-xxs !important; }
+      &--xs\@l     { border-left-width: $border-xs !important; }
+      &--s\@l      { border-left-width: $border-s !important; }
+      &--m\@l      { border-left-width: $border-m !important; }
+      &--l\@l      { border-left-width: $border-l !important; }
+      &--custom\@l { --custom-border-left-width-: #{$border-xxs}; border-left-width: var(--custom-border-left-width-) !important; }
     }
 
     @include breakpoint(XL) {
-      &--none\@xl   { border-left-width: $u-border-none !important; }
-      &--xxs\@xl    { border-left-width: $u-border-xxs !important; }
-      &--xs\@xl     { border-left-width: $u-border-xs !important; }
-      &--s\@xl      { border-left-width: $u-border-s !important; }
-      &--m\@xl      { border-left-width: $u-border-m !important; }
-      &--l\@xl      { border-left-width: $u-border-l !important; }
-      &--custom\@xl { --custom-border-left-width-xl: #{$u-border-xxs}; border-left-width: var(--custom-border-left-width-xl) !important; }
+      &--none\@xl   { border-left-width: $border-none !important; }
+      &--xxs\@xl    { border-left-width: $border-xxs !important; }
+      &--xs\@xl     { border-left-width: $border-xs !important; }
+      &--s\@xl      { border-left-width: $border-s !important; }
+      &--m\@xl      { border-left-width: $border-m !important; }
+      &--l\@xl      { border-left-width: $border-l !important; }
+      &--custom\@xl { --custom-border-left-width-xl: #{$border-xxs}; border-left-width: var(--custom-border-left-width-xl) !important; }
     }
 
   }
@@ -625,103 +625,103 @@
   // Border Between Width
   &-between-vertical {
 
-    &--none   > * + * { border-left-width: $u-border-none !important; }
-    &--xxs    > * + * { border-left-width: $u-border-xxs !important;  }
-    &--xs     > * + * { border-left-width: $u-border-xs !important;   }
-    &--s      > * + * { border-left-width: $u-border-s !important;    }
-    &--l      > * + * { border-left-width: $u-border-l !important;    }
-    &--m      > * + * { border-left-width: $u-border-m !important;    }
-    &--custom > * + * { --custom-border-between-vertical: #{$u-border-xxs}; border-left-width: var(--custom-border-between-vertical) !important; }
+    &--none   > * + * { border-left-width: $border-none !important; }
+    &--xxs    > * + * { border-left-width: $border-xxs !important;  }
+    &--xs     > * + * { border-left-width: $border-xs !important;   }
+    &--s      > * + * { border-left-width: $border-s !important;    }
+    &--l      > * + * { border-left-width: $border-l !important;    }
+    &--m      > * + * { border-left-width: $border-m !important;    }
+    &--custom > * + * { --custom-border-between-vertical: #{$border-xxs}; border-left-width: var(--custom-border-between-vertical) !important; }
 
     @include breakpoint(S) {
-      &--none\@s   > * + * { border-left-width: $u-border-none !important; }
-      &--xxs\@s    > * + * { border-left-width: $u-border-xxs !important;  }
-      &--xs\@s     > * + * { border-left-width: $u-border-xs !important;   }
-      &--s\@s      > * + * { border-left-width: $u-border-s !important;    }
-      &--m\@s      > * + * { border-left-width: $u-border-m !important;    }
-      &--l\@s      > * + * { border-left-width: $u-border-l !important;    }
-      &--custom\@s > * + * { --custom-border-between-vertical-s: #{$u-border-xxs}; border-left-width: var(--custom-border-between-vertical-s) !important; }
+      &--none\@s   > * + * { border-left-width: $border-none !important; }
+      &--xxs\@s    > * + * { border-left-width: $border-xxs !important;  }
+      &--xs\@s     > * + * { border-left-width: $border-xs !important;   }
+      &--s\@s      > * + * { border-left-width: $border-s !important;    }
+      &--m\@s      > * + * { border-left-width: $border-m !important;    }
+      &--l\@s      > * + * { border-left-width: $border-l !important;    }
+      &--custom\@s > * + * { --custom-border-between-vertical-s: #{$border-xxs}; border-left-width: var(--custom-border-between-vertical-s) !important; }
     }
 
     @include breakpoint(M) {
-      &--none\@m   > * + * { border-left-width: $u-border-none !important; }
-      &--xxs\@m    > * + * { border-left-width: $u-border-xxs !important;  }
-      &--xs\@m     > * + * { border-left-width: $u-border-xs !important;   }
-      &--s\@m      > * + * { border-left-width: $u-border-s !important;    }
-      &--m\@m      > * + * { border-left-width: $u-border-m !important;    }
-      &--l\@m      > * + * { border-left-width: $u-border-l !important;    }
-      &--custom\@m > * + * { --custom-border-between-vertical-m: #{$u-border-xxs}; border-left-width: var(--custom-border-between-vertical-m) !important; }
+      &--none\@m   > * + * { border-left-width: $border-none !important; }
+      &--xxs\@m    > * + * { border-left-width: $border-xxs !important;  }
+      &--xs\@m     > * + * { border-left-width: $border-xs !important;   }
+      &--s\@m      > * + * { border-left-width: $border-s !important;    }
+      &--m\@m      > * + * { border-left-width: $border-m !important;    }
+      &--l\@m      > * + * { border-left-width: $border-l !important;    }
+      &--custom\@m > * + * { --custom-border-between-vertical-m: #{$border-xxs}; border-left-width: var(--custom-border-between-vertical-m) !important; }
     }
 
     @include breakpoint(L) {
-      &--none\@l   > * + * { border-left-width: $u-border-none !important; }
-      &--xxs\@l    > * + * { border-left-width: $u-border-xxs !important;  }
-      &--xs\@l     > * + * { border-left-width: $u-border-xs !important;   }
-      &--s\@l      > * + * { border-left-width: $u-border-s !important;    }
-      &--m\@l      > * + * { border-left-width: $u-border-m !important;    }
-      &--l\@l      > * + * { border-left-width: $u-border-l !important;    }
-      &--custom\@l > * + * { --custom-border-between-vertical-l: #{$u-border-xxs}; border-left-width: var(--custom-border-between-vertical-l) !important; }
+      &--none\@l   > * + * { border-left-width: $border-none !important; }
+      &--xxs\@l    > * + * { border-left-width: $border-xxs !important;  }
+      &--xs\@l     > * + * { border-left-width: $border-xs !important;   }
+      &--s\@l      > * + * { border-left-width: $border-s !important;    }
+      &--m\@l      > * + * { border-left-width: $border-m !important;    }
+      &--l\@l      > * + * { border-left-width: $border-l !important;    }
+      &--custom\@l > * + * { --custom-border-between-vertical-l: #{$border-xxs}; border-left-width: var(--custom-border-between-vertical-l) !important; }
     }
 
     @include breakpoint(XL) {
-      &--none\@xl   > * + * { border-left-width: $u-border-none !important; }
-      &--xxs\@xl    > * + * { border-left-width: $u-border-xxs !important;  }
-      &--xs\@xl     > * + * { border-left-width: $u-border-xs !important;   }
-      &--s\@xl      > * + * { border-left-width: $u-border-s !important;    }
-      &--m\@xl      > * + * { border-left-width: $u-border-m !important;    }
-      &--l\@xl      > * + * { border-left-width: $u-border-l !important;    }
-      &--custom\@xl > * + * { --custom-border-between-vertical-xl: #{$u-border-xxs}; border-left-width: var(--custom-border-between-vertical-xl) !important; }
+      &--none\@xl   > * + * { border-left-width: $border-none !important; }
+      &--xxs\@xl    > * + * { border-left-width: $border-xxs !important;  }
+      &--xs\@xl     > * + * { border-left-width: $border-xs !important;   }
+      &--s\@xl      > * + * { border-left-width: $border-s !important;    }
+      &--m\@xl      > * + * { border-left-width: $border-m !important;    }
+      &--l\@xl      > * + * { border-left-width: $border-l !important;    }
+      &--custom\@xl > * + * { --custom-border-between-vertical-xl: #{$border-xxs}; border-left-width: var(--custom-border-between-vertical-xl) !important; }
     }
 
   }
   &-between-horizontal {
 
-    &--none   > * + * { border-top-width: $u-border-none !important; }
-    &--xxs    > * + * { border-top-width: $u-border-xxs !important; }
-    &--xs     > * + * { border-top-width: $u-border-xs !important; }
-    &--s      > * + * { border-top-width: $u-border-s !important; }
-    &--m      > * + * { border-top-width: $u-border-m !important; }
-    &--l      > * + * { border-top-width: $u-border-l !important; }
-    &--custom > * + * { --custom-border-between-horizontal: #{$u-border-xxs}; border-top-width: var(--custom-border-between-horizontal) !important; }
+    &--none   > * + * { border-top-width: $border-none !important; }
+    &--xxs    > * + * { border-top-width: $border-xxs !important; }
+    &--xs     > * + * { border-top-width: $border-xs !important; }
+    &--s      > * + * { border-top-width: $border-s !important; }
+    &--m      > * + * { border-top-width: $border-m !important; }
+    &--l      > * + * { border-top-width: $border-l !important; }
+    &--custom > * + * { --custom-border-between-horizontal: #{$border-xxs}; border-top-width: var(--custom-border-between-horizontal) !important; }
 
     @include breakpoint(S) {
-      &--none\@s   > * + * { border-top-width: $u-border-none !important; }
-      &--xxs\@s    > * + * { border-top-width: $u-border-xxs !important; }
-      &--xs\@s     > * + * { border-top-width: $u-border-xs !important; }
-      &--s\@s      > * + * { border-top-width: $u-border-s !important; }
-      &--m\@s      > * + * { border-top-width: $u-border-m !important; }
-      &--l\@s      > * + * { border-top-width: $u-border-l !important; }
-      &--custom\@s > * + * { --custom-border-between-horizontal-s: #{$u-border-xxs}; border-top-width: var(--custom-border-between-horizontal-s) !important; }
+      &--none\@s   > * + * { border-top-width: $border-none !important; }
+      &--xxs\@s    > * + * { border-top-width: $border-xxs !important; }
+      &--xs\@s     > * + * { border-top-width: $border-xs !important; }
+      &--s\@s      > * + * { border-top-width: $border-s !important; }
+      &--m\@s      > * + * { border-top-width: $border-m !important; }
+      &--l\@s      > * + * { border-top-width: $border-l !important; }
+      &--custom\@s > * + * { --custom-border-between-horizontal-s: #{$border-xxs}; border-top-width: var(--custom-border-between-horizontal-s) !important; }
     }
 
     @include breakpoint(M) {
-      &--none\@m   > * + * { border-top-width: $u-border-none !important; }
-      &--xxs\@m    > * + * { border-top-width: $u-border-xxs !important; }
-      &--xs\@m     > * + * { border-top-width: $u-border-xs !important; }
-      &--s\@m      > * + * { border-top-width: $u-border-s !important; }
-      &--m\@m      > * + * { border-top-width: $u-border-m !important; }
-      &--l\@m      > * + * { border-top-width: $u-border-l !important; }
-      &--custom\@s > * + * { --custom-border-between-horizontal-m: #{$u-border-xxs}; border-top-width: var(--custom-border-between-horizontal-m) !important; }
+      &--none\@m   > * + * { border-top-width: $border-none !important; }
+      &--xxs\@m    > * + * { border-top-width: $border-xxs !important; }
+      &--xs\@m     > * + * { border-top-width: $border-xs !important; }
+      &--s\@m      > * + * { border-top-width: $border-s !important; }
+      &--m\@m      > * + * { border-top-width: $border-m !important; }
+      &--l\@m      > * + * { border-top-width: $border-l !important; }
+      &--custom\@s > * + * { --custom-border-between-horizontal-m: #{$border-xxs}; border-top-width: var(--custom-border-between-horizontal-m) !important; }
     }
 
     @include breakpoint(L) {
-      &--none\@l   > * + * { border-top-width: $u-border-none !important; }
-      &--xxs\@l    > * + * { border-top-width: $u-border-xxs !important; }
-      &--xs\@l     > * + * { border-top-width: $u-border-xs !important; }
-      &--s\@l      > * + * { border-top-width: $u-border-s !important; }
-      &--m\@l      > * + * { border-top-width: $u-border-m !important; }
-      &--l\@l      > * + * { border-top-width: $u-border-l !important; }
-      &--custom\@s > * + * { --custom-border-between-horizontal-l: #{$u-border-xxs}; border-top-width: var(--custom-border-between-horizontal-l) !important; }
+      &--none\@l   > * + * { border-top-width: $border-none !important; }
+      &--xxs\@l    > * + * { border-top-width: $border-xxs !important; }
+      &--xs\@l     > * + * { border-top-width: $border-xs !important; }
+      &--s\@l      > * + * { border-top-width: $border-s !important; }
+      &--m\@l      > * + * { border-top-width: $border-m !important; }
+      &--l\@l      > * + * { border-top-width: $border-l !important; }
+      &--custom\@s > * + * { --custom-border-between-horizontal-l: #{$border-xxs}; border-top-width: var(--custom-border-between-horizontal-l) !important; }
     }
 
     @include breakpoint(XL) {
-      &--none\@xl   > * + * { border-top-width: $u-border-none !important; }
-      &--xxs\@xl    > * + * { border-top-width: $u-border-xxs !important; }
-      &--xs\@xl     > * + * { border-top-width: $u-border-xs !important; }
-      &--s\@xl      > * + * { border-top-width: $u-border-s !important; }
-      &--m\@xl      > * + * { border-top-width: $u-border-m !important; }
-      &--l\@xl      > * + * { border-top-width: $u-border-l !important; }
-      &--custom\@xl > * + * { --custom-border-between-horizontal-xl: #{$u-border-xxs}; border-top-width: var(--custom-border-between-horizontal-xl) !important; }
+      &--none\@xl   > * + * { border-top-width: $border-none !important; }
+      &--xxs\@xl    > * + * { border-top-width: $border-xxs !important; }
+      &--xs\@xl     > * + * { border-top-width: $border-xs !important; }
+      &--s\@xl      > * + * { border-top-width: $border-s !important; }
+      &--m\@xl      > * + * { border-top-width: $border-m !important; }
+      &--l\@xl      > * + * { border-top-width: $border-l !important; }
+      &--custom\@xl > * + * { --custom-border-between-horizontal-xl: #{$border-xxs}; border-top-width: var(--custom-border-between-horizontal-xl) !important; }
     }
 
   }
@@ -731,47 +731,47 @@
 // Border Radius --------------------------------------------------------------
 .fsa-radius {
 
-  &--none   { border-radius: 0; }
-  &--s      { border-radius: $u-radius-s; }
-  &--m      { border-radius: $u-radius-m; }
-  &--l      { border-radius: $u-radius-l; }
-  &--full   { border-radius: $u-radius-full; }
-  &--oval   { border-radius: $u-radius-oval; }
+  &--none   { border-radius: $radius-none; }
+  &--s      { border-radius: $radius-s; }
+  &--m      { border-radius: $radius-m; }
+  &--l      { border-radius: $radius-l; }
+  &--full   { border-radius: $radius-full; }
+  &--oval   { border-radius: $radius-oval; }
 
   @include breakpoint(S) {
-    &--none\@s   { border-radius: 0; }
-    &--s\@s      { border-radius: $u-radius-s; }
-    &--m\@s      { border-radius: $u-radius-m; }
-    &--l\@s      { border-radius: $u-radius-l; }
-    &--full\@s   { border-radius: $u-radius-full; }
-    &--oval\@s   { border-radius: $u-radius-oval; }
+    &--none\@s   { border-radius: $radius-none; }
+    &--s\@s      { border-radius: $radius-s; }
+    &--m\@s      { border-radius: $radius-m; }
+    &--l\@s      { border-radius: $radius-l; }
+    &--full\@s   { border-radius: $radius-full; }
+    &--oval\@s   { border-radius: $radius-oval; }
   }
 
   @include breakpoint(M) {
-    &--none\@m   { border-radius: 0; }
-    &--s\@m      { border-radius: $u-radius-s; }
-    &--m\@m      { border-radius: $u-radius-m; }
-    &--l\@m      { border-radius: $u-radius-l; }
-    &--full\@m   { border-radius: $u-radius-full; }
-    &--oval\@m   { border-radius: $u-radius-oval; }
+    &--none\@m   { border-radius: $radius-none; }
+    &--s\@m      { border-radius: $radius-s; }
+    &--m\@m      { border-radius: $radius-m; }
+    &--l\@m      { border-radius: $radius-l; }
+    &--full\@m   { border-radius: $radius-full; }
+    &--oval\@m   { border-radius: $radius-oval; }
   }
 
   @include breakpoint(L) {
-    &--none\@l   { border-radius: 0; }
-    &--s\@l      { border-radius: $u-radius-s; }
-    &--m\@l      { border-radius: $u-radius-m; }
-    &--l\@l      { border-radius: $u-radius-l; }
-    &--full\@l   { border-radius: $u-radius-full; }
-    &--oval\@l   { border-radius: $u-radius-oval; }
+    &--none\@l   { border-radius: $radius-none; }
+    &--s\@l      { border-radius: $radius-s; }
+    &--m\@l      { border-radius: $radius-m; }
+    &--l\@l      { border-radius: $radius-l; }
+    &--full\@l   { border-radius: $radius-full; }
+    &--oval\@l   { border-radius: $radius-oval; }
   }
 
   @include breakpoint(XL) {
-    &--none\@xl   { border-radius: 0; }
-    &--s\@xl      { border-radius: $u-radius-s; }
-    &--m\@xl      { border-radius: $u-radius-m; }
-    &--l\@xl      { border-radius: $u-radius-l; }
-    &--full\@xl   { border-radius: $u-radius-full; }
-    &--oval\@xl   { border-radius: $u-radius-oval; }
+    &--none\@xl   { border-radius: $radius-none; }
+    &--s\@xl      { border-radius: $radius-s; }
+    &--m\@xl      { border-radius: $radius-m; }
+    &--l\@xl      { border-radius: $radius-l; }
+    &--full\@xl   { border-radius: $radius-full; }
+    &--oval\@xl   { border-radius: $radius-oval; }
   }
 
 }
