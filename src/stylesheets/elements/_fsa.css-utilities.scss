@@ -776,6 +776,44 @@
 
 }
 
+// Shadow / Elevation ---------------------------------------------------------
+.fsa-shadow {
+
+  &--popout  { box-shadow: $shadow-size-popout; }
+  &--overlay { box-shadow: $shadow-size-overlay ; }
+  &--raised  { box-shadow: $shadow-size-raised; }
+  &--none    { box-shadow: none; }
+
+  @include breakpoint(S) {
+    &--popout\@s  { box-shadow: $shadow-size-popout; }
+    &--overlay\@s { box-shadow: $shadow-size-overlay ; }
+    &--raised\@s  { box-shadow: $shadow-size-raised; }
+    &--none\@s    { box-shadow: none; }
+  }
+
+  @include breakpoint(M) {
+    &--popout\@m  { box-shadow: $shadow-size-popout; }
+    &--overlay\@m { box-shadow: $shadow-size-overlay ; }
+    &--raised\@m  { box-shadow: $shadow-size-raised; }
+    &--none\@m    { box-shadow: none; }
+  }
+
+  @include breakpoint(L) {
+    &--popout\@l  { box-shadow: $shadow-size-popout; }
+    &--overlay\@l { box-shadow: $shadow-size-overlay ; }
+    &--raised\@l  { box-shadow: $shadow-size-raised; }
+    &--none\@l    { box-shadow: none; }
+  }
+
+  @include breakpoint(XL) {
+    &--popout\@xl  { box-shadow: $shadow-size-popout; }
+    &--overlay\@xl { box-shadow: $shadow-size-overlay ; }
+    &--raised\@xl  { box-shadow: $shadow-size-raised; }
+    &--none\@xl    { box-shadow: none; }
+  }
+
+}
+
 // Links ----------------------------------------------------------------------
 .fsa-link {
 

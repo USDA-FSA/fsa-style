@@ -12,42 +12,83 @@
   <link rel="stylesheet" href="css/fsa-style-docs.css" media="all">
 </head>
 <body>
-  <div class="fsa-p--l">
-    <div class="fsa-whiteout" id="fsa-whiteout" aria-hidden="true"></div>
-    <div class="fsa-growl-container">
-      <div class="fsa-growl" id="UNIQUE-ID-AC598060D7502E9E" aria-hidden="true" tabindex="0" role="dialog">
-        <div class="fsa-growl__hd">
-          <button class="fsa-growl__close" data-behavior="growl-dismiss" type="button" title="Close Notification" aria-label="Close Notification"></button>
-        </div>
-        <div class="fsa-growl__bd">
-          <p>Something happened. You're probably just fine.</p>
-          <p>
-            <button data-behavior="growl-dismiss" class="fsa-btn fsa-btn--small fsa-btn--secondary" type="button">OK</button>
-          </p>
-        </div>
+  <div class="fsa-whiteout" id="fsa-whiteout" aria-hidden="true"></div>
+  <div class="fsa-growl-container">
+    <div class="fsa-growl" id="UNIQUE-ID-AC598060D7502E9E" aria-hidden="true" tabindex="0" role="dialog">
+      <div class="fsa-growl__hd">
+        <button class="fsa-growl__close" data-behavior="growl-dismiss" type="button" title="Close Notification" aria-label="Close Notification"></button>
+      </div>
+      <div class="fsa-growl__bd">
+        <p>Something happened. You're probably just fine.</p>
+        <p>
+          <button data-behavior="growl-dismiss" class="fsa-btn fsa-btn--small fsa-btn--secondary" type="button">OK</button>
+        </p>
       </div>
     </div>
-    <h3>Proposed</h3>
-    <div class="EXP-shadow fsa-level fsa-level--grow-auto fsa-level--align-top fsa-level--gutter-xl fsa-m-b--m">
-      <div>
-        <div class="EXP-shadow__name">popout</div>
-        <div class="EXP-shadow__item EXP-shadow__item--popout"></div>
-        <div class="EXP-shadow__used-by">Modal</div>
+  </div>
+  <div class="fsa-p--s">
+    <div class="docs__jump-target" id="utilities__shadows">
+      <div class="docs__section-title">
+        <h3 class="docs__figure"><a class="docs__anchor" aria-hidden="true" href="#utilities__shadows">#</a>Shadows</h3>
+        <a class="fsa-btn fsa-btn--secondary fsa-btn--small docs__section-link" onclick="trackDocsClick(this)" href="http://usda-fsa.github.io/fsa-design-system/utilities/#shadows">Docs <span class="sr-only">for Shadows</span></a>
       </div>
       <div>
-        <div class="EXP-shadow__name">overlay</div>
-        <div class="EXP-shadow__item EXP-shadow__item--overlay"></div>
-        <div class="EXP-shadow__used-by">Growl<br>Date Picker</div>
-      </div>
-      <div>
-        <div class="EXP-shadow__name">raised</div>
-        <div class="EXP-shadow__item EXP-shadow__item--raised"></div>
-        <div class="EXP-shadow__used-by">asdf</div>
-      </div>
-      <div>
-        <div class="EXP-shadow__name">none</div>
-        <div class="EXP-shadow__item EXP-shadow__item--none"></div>
-        <div class="EXP-shadow__used-by">...</div>
+        <div class="docs__color-utilities" id="demo-background-target-shadows">
+          <div class="fsa-border--xxs fsa-p--l fsa-p-t--s fsa-p-b--m">
+            <div class="fsa-level@l fsa-level--grow-auto fsa-level--align-top fsa-level--gutter-xl">
+              <div class="fsa-m--xl">
+                <h4 class="docs__sub_style fsa-m-t--none">Popout</h4>
+                <div class="fsa-p--xl fsa-bg--white fsa-shadow--popout"></div>
+              </div>
+              <div class="fsa-m--xl">
+                <h4 class="docs__sub_style fsa-m-t--none">Overlay</h4>
+                <div class="fsa-p--xl fsa-bg--white fsa-shadow--overlay"></div>
+              </div>
+              <div class="fsa-m--xl">
+                <h4 class="docs__sub_style fsa-m-t--none">Raised</h4>
+                <div class="fsa-p--xl fsa-bg--white fsa-shadow--raised"></div>
+              </div>
+              <div class="fsa-m--xl">
+                <h4 class="docs__sub_style fsa-m-t--none">None</h4>
+                <div class="fsa-p--xl fsa-bg--white fsa-shadow--none"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h4>Responsive</h4>
+        <div class="fsa-show@l">
+          <p>Selectively apply at any Media Query breakpoint.</p>
+          <p>
+            <code>class="fsa-shadow-<strong>-[variation]@[breakpoint]</strong>"</code>
+            where
+            <code>breakpoint</code> is one of
+            <code title="small">s</code>,
+            <code title="medium">m</code>,
+            <code title="large">l</code>, or
+            <code title="extra large">xl</code>
+          </p>
+        </div>
+        <div class="fsa-hide@l">
+          <div class="fsa-alert fsa-alert--info fsa-alert--no-icon" role="alert">
+            <div class="fsa-alert__body">
+              <p class="fsa-alert__text">View this page on a large screen to view complete Responsive Web Design options.</p>
+            </div>
+          </div>
+        </div>
+        <div class="docs__rwd-demo-block">
+          <div class="docs__rwd-embed-container">
+            <span class="fsa-btn-group fsa-btn-group--small" role="group" data-component>
+              <button onclick="trackRWDDemo('Shadows',this)" data-behavior="toggle-rwd-size" data-target="rwd-demo_shadows" data-size="phone" class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button" title="Portrait"><span class="sr-only">Portrait</span> Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--portrait"></span></button>
+              <button onclick="trackRWDDemo('Shadows',this)" data-behavior="toggle-rwd-size" data-target="rwd-demo_shadows" data-size="phone-big" class="fsa-btn-group__item" type="button" title="Landscape"><span class="sr-only">Landscape</span> Phone <span class="docs__rwd-demo-icon docs__rwd-demo-icon--landscape"></span></button>
+              <button onclick="trackRWDDemo('Shadows',this)" data-behavior="toggle-rwd-size" data-target="rwd-demo_shadows" data-size="tablet" class="fsa-btn-group__item" type="button">Tablet</button>
+              <button onclick="trackRWDDemo('Shadows',this)" data-behavior="toggle-rwd-size" data-target="rwd-demo_shadows" data-size="desktop" class="fsa-btn-group__item" type="button">Desktop</button>
+              <a onclick="trackRWDDemo('Shadows',this)" class="fsa-btn-group__item" href="demo/rwd__shadows.html" target="_blank" title="View in its own browser window">New window</a>
+            </span>
+            <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_shadows">
+              <iframe title="Responsive Demo: Shadows" src="demo/rwd__shadows.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true"> </iframe>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <h2>New</h2>
