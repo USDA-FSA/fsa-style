@@ -96,8 +96,33 @@ $marker-bgc-warning: $color-fsa-yellow-200;
 $marker-bgc-success: $color-fsa-primary-200;
 
 // ---------------------------------------------------------------------------
-// Typography
+// Borders
 
+$border-none : 0;
+$border-xxs  : 1px;
+$border-xs   : ($size-base / 2);
+$border-s    : $size-base;
+$border-m    : $size-small;
+$border-l    : $size-default;
+
+$radius-none : 0;
+$radius-s    : $size-base;
+$radius-m    : ($size-base * 2);
+$radius-l    : ($size-base * 4);
+$radius-full : 999.9rem;
+$radius-oval : 100%;
+
+// ---------------------------------------------------------------------------
+// Shadows
+$shadow-color: transparentize($color-fsa-tertiary, .85);
+
+$shadow-size-popout:  0 $size-default  $size-default (-$size-default) $shadow-color, 0 $size-medium $size-large   $size-base  $shadow-color   , 0 $size-small    $size-extra-large $size-small    $shadow-color;
+$shadow-size-overlay: 0 $size-base     $size-base    (-($size-base))  $shadow-color, 0 $size-small  $size-default ($size-base/2) $shadow-color, 0 $size-base     $size-default     ($size-base/2) $shadow-color;
+$shadow-size-raised:  0 ($size-base/2) $size-base    (-($size-base))  $shadow-color, 0 $size-base   $size-base 0  $shadow-color               , 0 ($size-base/2) $size-default     0              $shadow-color;
+$shadow-size-none:    none;
+
+// ---------------------------------------------------------------------------
+// Typography
 
 // Font Size Scale
 $font-size-0 : $h6-font-size;           // 13px
@@ -165,23 +190,6 @@ $form-between-space            : $size-base + ($size-base / 2);
 
 $fsa-grid-gutter: ($base-font-size * 1.5);
 $fsa-grid-columns: 12;
-
-// ---------------------------------------------------------------------------
-// Border Utilities
-
-$u-border-none : 0;
-$u-border-xxs  : 1px;
-$u-border-xs   : ($size-base / 2);
-$u-border-s    : $size-base;
-$u-border-m    : $size-small;
-$u-border-l    : $size-default;
-
-$u-radius-none   : 0;
-$u-radius-s      : $button-border-radius;
-$u-radius-m      : ($u-radius-s * 2);
-$u-radius-l      : ($u-radius-s * 4);
-$u-radius-full   : 999rem;
-$u-radius-oval : 100%;
 
 // ---------------------------------------------------------------------------
 // Breakpoint Settings (screen width)

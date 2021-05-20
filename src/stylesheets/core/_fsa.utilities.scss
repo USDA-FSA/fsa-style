@@ -514,7 +514,7 @@ $breakpoints: (
     // Defaults:
     $bgAll: $color-fsa-base-bg,
     $bgEdge: transparent,
-    $bgShadow: transparentize($color-fsa-tertiary, .7),
+    $bgShadow: $shadow-color,
     $size: $size-large
   ) {
 

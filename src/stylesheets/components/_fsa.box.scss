@@ -35,9 +35,9 @@ $box-padding: $size-medium;
 
     // Background Radius
     &--br-0#{$box-breakpoint} { border-radius: 0; }
-    &--br-1#{$box-breakpoint} { border-radius: $u-radius-s; }
-    &--br-2#{$box-breakpoint} { border-radius: $u-radius-m; }
-    &--br-3#{$box-breakpoint} { border-radius: $u-radius-l; }
+    &--br-1#{$box-breakpoint} { border-radius: $radius-s; }
+    &--br-2#{$box-breakpoint} { border-radius: $radius-m; }
+    &--br-3#{$box-breakpoint} { border-radius: $radius-l; }
   }
 }
 

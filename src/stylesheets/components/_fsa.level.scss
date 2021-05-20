@@ -28,7 +28,7 @@ $level: fsa-level;
     }
 
     &--full#{$bp}   { display: flex; } // default, effectively an override
-    &--inline#{$bp} { display: inline-flex; }
+    &--inline#{$bp} { display: inline-flex; vertical-align: bottom; }
     &--none#{$bp}   { display: initial; } // remove flex'ing, reverts to whatever *initial* (implicit) property of display this element may have (e.g. <span> = inline; <div> = block)
 
     &--no-wrap#{$bp} { flex-wrap: initial; } // default
@@ -86,20 +86,20 @@ $level: fsa-level;
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 @include levelBase();
-.#{$level} {
+// .#{$level} {
 
-  &--selected {
-    &,
-    &:focus,
-    &:visited,
-    &:hover {
-      box-shadow: -2px 0 0 0 $color-fsa-secondary inset;
-      background-color: $color-fsa-selection-bg;
-      border-radius: 0;;
-    }
-  }
+//   &--selected {
+//     &,
+//     &:focus,
+//     &:visited,
+//     &:hover {
+//       box-shadow: -2px 0 0 0 $color-fsa-secondary inset;
+//       background-color: $color-fsa-selection-bg;
+//       border-radius: 0;;
+//     }
+//   }
 
-}
+// }
 @include breakpoint(S)  { @include levelBase(\@s); }
 @include breakpoint(M)  { @include levelBase(\@m); }
 @include breakpoint(L)  { @include levelBase(\@l); }
