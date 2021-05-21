@@ -352,7 +352,7 @@ $button-plain-border-width: 0;
     background-color: $button-plain;
     padding: $button-plain-padding;
     font-weight: normal;
-    border: $button-plain-border-width;
+    border-width: $button-plain-border-width;
     box-shadow: none;
     // scss-lint:disable ImportantRule
     text-decoration: none; // ¯\_(ツ)_/¯
