@@ -20,7 +20,7 @@ $timeline: fsa-timeline;
 
     & {
       border: 1px solid $color-fsa-tertiary-200;
-      margin: 1em 0;
+      margin: $size-medium 0;
       padding: $size-default;
       border-radius: $size-base;
       position: relative;
@@ -65,6 +65,25 @@ $timeline: fsa-timeline;
       border-color: $color-fsa-aqua-200;
     }
 
+  }
+
+  &__icon {
+    & {
+      position: absolute;
+      padding: $size-base $size-small;
+      left: $size-small;
+      top: -($size-base/2);
+      background-color: $color-fsa-base-bg;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 1;
+      color: $color-fsa-tertiary;
+
+    }
+    .#{$timeline}__item--user & {
+      display: none;
+    }
   }
 
   &__hd {
