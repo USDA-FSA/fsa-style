@@ -224,7 +224,9 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       white-space: nowrap;
 
       @include breakpoint(L) {
-        margin-right: $size-base;
+        &:not(:last-child) {
+          margin-right: $size-base;
+        }
       }
 
       // scss-lint:disable NestingDepth
@@ -254,6 +256,9 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       @include breakpoint(M) {
         margin-right: $size-small;
         font-size: $font-size-3;
+        &:only-child {
+          margin-right: initial;
+        }
       }
 
       &--sub {
@@ -276,14 +281,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
             // IE 11 doesn't support :focus-within, so let's just suppress it
             display: none;
           }
-        }
-      }
-
-      &--github {
-        font-size: $font-size-1;
-        text-transform: uppercase;
-        @include breakpoint(M) {
-          font-size: $font-size-2;
         }
       }
 
@@ -391,9 +388,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       display: inline-block;
       vertical-align: middle;
       margin-right: $size-small;
-      width: $size-medium;
-      height: $size-medium;
-      margin-top: -2px;
     }
 
   }
