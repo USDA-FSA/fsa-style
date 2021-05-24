@@ -983,37 +983,100 @@
 // Shadow / Elevation ---------------------------------------------------------
 .fsa-shadow {
 
-  &--popout  { box-shadow: $shadow-size-popout; }
-  &--overlay { box-shadow: $shadow-size-overlay ; }
-  &--raised  { box-shadow: $shadow-size-raised; }
-  &--none    { box-shadow: none; }
+  // Default
+  & {
+    &--popout  { box-shadow: $shadow-size-popout; }
+    &--overlay { box-shadow: $shadow-size-overlay ; }
+    &--raised  { box-shadow: $shadow-size-raised; }
+    &--none    { box-shadow: none; }
+  }
+
+  // Hover
+  &\:hover {
+    &--popout:hover  { box-shadow: $shadow-size-popout; }
+    &--overlay:hover { box-shadow: $shadow-size-overlay ; }
+    &--raised:hover  { box-shadow: $shadow-size-raised; }
+    &--none:hover    { box-shadow: none; }
+  }
 
   @include breakpoint(S) {
-    &--popout\@s  { box-shadow: $shadow-size-popout; }
-    &--overlay\@s { box-shadow: $shadow-size-overlay ; }
-    &--raised\@s  { box-shadow: $shadow-size-raised; }
-    &--none\@s    { box-shadow: none; }
+
+    // Default
+    & {
+      &--popout\@s  { box-shadow: $shadow-size-popout; }
+      &--overlay\@s { box-shadow: $shadow-size-overlay ; }
+      &--raised\@s  { box-shadow: $shadow-size-raised; }
+      &--none\@s    { box-shadow: none; }
+    }
+
+    // Hover
+    &\:hover {
+      &--popout\@s:hover  { box-shadow: $shadow-size-popout; }
+      &--overlay\@s:hover { box-shadow: $shadow-size-overlay ; }
+      &--raised\@s:hover  { box-shadow: $shadow-size-raised; }
+      &--none\@s:hover    { box-shadow: none; }
+    }
+
   }
 
   @include breakpoint(M) {
-    &--popout\@m  { box-shadow: $shadow-size-popout; }
-    &--overlay\@m { box-shadow: $shadow-size-overlay ; }
-    &--raised\@m  { box-shadow: $shadow-size-raised; }
-    &--none\@m    { box-shadow: none; }
+
+    // Default
+    & {
+      &--popout\@m  { box-shadow: $shadow-size-popout; }
+      &--overlay\@m { box-shadow: $shadow-size-overlay ; }
+      &--raised\@m  { box-shadow: $shadow-size-raised; }
+      &--none\@m    { box-shadow: none; }
+    }
+
+    // Hover
+    &\:hover {
+      &--popout\@m:hover  { box-shadow: $shadow-size-popout; }
+      &--overlay\@m:hover { box-shadow: $shadow-size-overlay ; }
+      &--raised\@m:hover  { box-shadow: $shadow-size-raised; }
+      &--none\@m:hover    { box-shadow: none; }
+    }
+
   }
 
   @include breakpoint(L) {
-    &--popout\@l  { box-shadow: $shadow-size-popout; }
-    &--overlay\@l { box-shadow: $shadow-size-overlay ; }
-    &--raised\@l  { box-shadow: $shadow-size-raised; }
-    &--none\@l    { box-shadow: none; }
+
+    // Default
+    & {
+      &--popout\@l  { box-shadow: $shadow-size-popout; }
+      &--overlay\@l { box-shadow: $shadow-size-overlay ; }
+      &--raised\@l  { box-shadow: $shadow-size-raised; }
+      &--none\@l    { box-shadow: none; }
+    }
+
+    // Hover
+    &\:hover {
+      &--popout\@l:hover  { box-shadow: $shadow-size-popout; }
+      &--overlay\@l:hover { box-shadow: $shadow-size-overlay ; }
+      &--raised\@l:hover  { box-shadow: $shadow-size-raised; }
+      &--none\@l:hover    { box-shadow: none; }
+    }
+
   }
 
   @include breakpoint(XL) {
-    &--popout\@xl  { box-shadow: $shadow-size-popout; }
-    &--overlay\@xl { box-shadow: $shadow-size-overlay ; }
-    &--raised\@xl  { box-shadow: $shadow-size-raised; }
-    &--none\@xl    { box-shadow: none; }
+
+    // Default
+    & {
+      &--popout\@xl  { box-shadow: $shadow-size-popout; }
+      &--overlay\@xl { box-shadow: $shadow-size-overlay ; }
+      &--raised\@xl  { box-shadow: $shadow-size-raised; }
+      &--none\@xl    { box-shadow: none; }
+    }
+
+    // Hover
+    &\:hover {
+      &--popout\@xl:hover  { box-shadow: $shadow-size-popout; }
+      &--overlay\@xl:hover { box-shadow: $shadow-size-overlay ; }
+      &--raised\@xl:hover  { box-shadow: $shadow-size-raised; }
+      &--none\@xl:hover    { box-shadow: none; }
+    }
+
   }
 
 }
