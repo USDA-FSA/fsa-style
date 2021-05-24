@@ -13,10 +13,11 @@ $('body').on('click', '[data-behavior~="toggle-rwd-size"]', function(event) {
   ;
 
   $self
-    .addClass('fsa-btn-group__item--active')
+    .removeClass('fsa-bg:hover--tertiary-100')
+    .addClass('fsa-bg--secondary-100')
     .attr('aria-selected', true)
     .siblings()
-    .removeClass('fsa-btn-group__item--active')
+    .removeClass('fsa-bg--secondary-100')
     .removeAttr('aria-selected')
   ;
 

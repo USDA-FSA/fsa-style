@@ -75,7 +75,7 @@
     &::-ms-thumb {
       @include range-focus;
       background-color: $color-focus;
-      border: 0;
+      border-width: 0;
     }
   }
 
@@ -109,7 +109,7 @@
   &::-ms-track {
     @include range-track;
     height: $size-base;
-    border: 0;
+    border-width: 0;
   }
 
   &::-webkit-slider-thumb {
@@ -128,7 +128,7 @@
     margin-top: 0;
     width: $size-default;
     height: $size-default;
-    border: 0;
+    border-width: 0;
     // border-radius: 0;
     background-color: $color-fsa-secondary;
   }
@@ -136,13 +136,13 @@
   &::-ms-fill-lower {
     @include range-ms-fill;
     background-color: $color-fsa-secondary;
-    border: 0;
+    border-width: 0;
   }
 
   &::-ms-fill-upper {
     @include range-ms-fill;
     background-color: $color-fsa-tertiary-200;
-    border: 0;
+    border-width: 0;
   }
 
 }

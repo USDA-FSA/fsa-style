@@ -27,7 +27,7 @@ $timeline: fsa-timeline;
     }
 
     &--system {
-      border: 0;
+      border-width: 0;
       padding: 0;
       padding-left: ($size-base * 12.5);
     }

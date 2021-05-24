@@ -53,6 +53,7 @@ $button-plain             : transparent;
 $button-plain-padding     : 0;
 $button-plain-hover       : transparent;
 $button-plain-text        : inherit;
+$button-plain-active      : transparent;
 $button-plain-border-width: 0;
 
 @mixin fsa-button($variation: default) {
@@ -352,7 +353,7 @@ $button-plain-border-width: 0;
     background-color: $button-plain;
     padding: $button-plain-padding;
     font-weight: normal;
-    border: $button-plain-border-width;
+    border-width: $button-plain-border-width;
     box-shadow: none;
     // scss-lint:disable ImportantRule
     text-decoration: none; // ¯\_(ツ)_/¯
@@ -371,6 +372,7 @@ $button-plain-border-width: 0;
 
     &:active:not([disabled]) {
       color: $color-fsa-base;
+      background-color: $button-plain-active;
       box-shadow: none;
     }
 

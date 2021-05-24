@@ -75,7 +75,7 @@ tt {
 
   code {
 
-    border: 0;
+    border-width: 0;
     display: block;
 
   }
@@ -166,7 +166,7 @@ blockquote {
 hr {
   margin-top: 2em;
   margin-bottom: 2em;
-  border: 0;
+  border-width: 0;
   height: 1px;
   background: $color-fsa-tertiary-200;
   clear: both;
@@ -174,7 +174,7 @@ hr {
 
 form,
 fieldset {
-  border: 0;
+  border-width: 0;
   margin: 0;
   padding: 0;
 }
