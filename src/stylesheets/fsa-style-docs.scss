@@ -152,6 +152,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       @include breakpoint(L) {
 
         @include position(fixed, 0px 0px 0 0px); // scss-lint:disable ZeroUnit
+        box-shadow: $shadow-size-overlay ;
         margin: 0;
         background-color: $color-fsa-primary-900;
         color: $color-white;
@@ -322,6 +323,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
         padding-top: $size-base;
         padding-bottom: $size-small;
         overflow: auto;
+        box-shadow: $shadow-size-overlay;
 
         .docs__nav--fixed & {
           max-height: calc(100vh - 42px);
