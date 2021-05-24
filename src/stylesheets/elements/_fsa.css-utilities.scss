@@ -305,39 +305,39 @@
     }
 
     // Hover
-    & {
-      &\:hover--transparent:hover    { border-color: transparent !important }
-      &\:hover--white:hover          { border-color: $color-fsa-white !important }
-      &\:hover--black:hover          { border-color: $color-fsa-black !important }
-      &\:hover--primary:hover        { border-color: $color-fsa-primary !important }
-      &\:hover--primary-300:hover    { border-color: $color-fsa-primary-300 !important }
-      &\:hover--primary-200:hover    { border-color: $color-fsa-primary-200 !important }
-      &\:hover--primary-100:hover    { border-color: $color-fsa-primary-100 !important }
-      &\:hover--primary-900:hover    { border-color: $color-fsa-primary-900 !important }
-      &\:hover--secondary:hover      { border-color: $color-fsa-secondary !important }
-      &\:hover--secondary-300:hover  { border-color: $color-fsa-secondary-300 !important }
-      &\:hover--secondary-200:hover  { border-color: $color-fsa-secondary-200 !important }
-      &\:hover--secondary-100:hover  { border-color: $color-fsa-secondary-100 !important }
-      &\:hover--secondary-900:hover  { border-color: $color-fsa-secondary-900 !important }
-      &\:hover--tertiary:hover       { border-color: $color-fsa-tertiary !important }
-      &\:hover--tertiary-300:hover   { border-color: $color-fsa-tertiary-300 !important }
-      &\:hover--tertiary-200:hover   { border-color: $color-fsa-tertiary-200 !important }
-      &\:hover--tertiary-100:hover   { border-color: $color-fsa-tertiary-100 !important }
-      &\:hover--tertiary-900:hover   { border-color: $color-fsa-tertiary-900 !important }
-      &\:hover--aqua:hover           { border-color: $color-fsa-aqua !important }
-      &\:hover--aqua-300:hover       { border-color: $color-fsa-aqua-300 !important }
-      &\:hover--aqua-200:hover       { border-color: $color-fsa-aqua-200 !important }
-      &\:hover--aqua-100:hover       { border-color: $color-fsa-aqua-100 !important }
-      &\:hover--aqua-900:hover       { border-color: $color-fsa-aqua-900 !important }
-      &\:hover--red:hover            { border-color: $color-fsa-red !important }
-      &\:hover--red-300:hover        { border-color: $color-fsa-red-300 !important }
-      &\:hover--red-200:hover        { border-color: $color-fsa-red-200 !important }
-      &\:hover--red-100:hover        { border-color: $color-fsa-red-100 !important }
-      &\:hover--red-900:hover        { border-color: $color-fsa-red-900 !important }
-      &\:hover--yellow:hover         { border-color: $color-fsa-yellow !important }
-      &\:hover--yellow-300:hover     { border-color: $color-fsa-yellow-300 !important }
-      &\:hover--yellow-200:hover     { border-color: $color-fsa-yellow-200 !important }
-      &\:hover--yellow-100:hover     { border-color: $color-fsa-yellow-100 !important }
+    &\:hover {
+      &--transparent:hover    { border-color: transparent !important }
+      &--white:hover          { border-color: $color-fsa-white !important }
+      &--black:hover          { border-color: $color-fsa-black !important }
+      &--primary:hover        { border-color: $color-fsa-primary !important }
+      &--primary-300:hover    { border-color: $color-fsa-primary-300 !important }
+      &--primary-200:hover    { border-color: $color-fsa-primary-200 !important }
+      &--primary-100:hover    { border-color: $color-fsa-primary-100 !important }
+      &--primary-900:hover    { border-color: $color-fsa-primary-900 !important }
+      &--secondary:hover      { border-color: $color-fsa-secondary !important }
+      &--secondary-300:hover  { border-color: $color-fsa-secondary-300 !important }
+      &--secondary-200:hover  { border-color: $color-fsa-secondary-200 !important }
+      &--secondary-100:hover  { border-color: $color-fsa-secondary-100 !important }
+      &--secondary-900:hover  { border-color: $color-fsa-secondary-900 !important }
+      &--tertiary:hover       { border-color: $color-fsa-tertiary !important }
+      &--tertiary-300:hover   { border-color: $color-fsa-tertiary-300 !important }
+      &--tertiary-200:hover   { border-color: $color-fsa-tertiary-200 !important }
+      &--tertiary-100:hover   { border-color: $color-fsa-tertiary-100 !important }
+      &--tertiary-900:hover   { border-color: $color-fsa-tertiary-900 !important }
+      &--aqua:hover           { border-color: $color-fsa-aqua !important }
+      &--aqua-300:hover       { border-color: $color-fsa-aqua-300 !important }
+      &--aqua-200:hover       { border-color: $color-fsa-aqua-200 !important }
+      &--aqua-100:hover       { border-color: $color-fsa-aqua-100 !important }
+      &--aqua-900:hover       { border-color: $color-fsa-aqua-900 !important }
+      &--red:hover            { border-color: $color-fsa-red !important }
+      &--red-300:hover        { border-color: $color-fsa-red-300 !important }
+      &--red-200:hover        { border-color: $color-fsa-red-200 !important }
+      &--red-100:hover        { border-color: $color-fsa-red-100 !important }
+      &--red-900:hover        { border-color: $color-fsa-red-900 !important }
+      &--yellow:hover         { border-color: $color-fsa-yellow !important }
+      &--yellow-300:hover     { border-color: $color-fsa-yellow-300 !important }
+      &--yellow-200:hover     { border-color: $color-fsa-yellow-200 !important }
+      &--yellow-100:hover     { border-color: $color-fsa-yellow-100 !important }
     }
 
     @include breakpoint(S) {
@@ -379,39 +379,39 @@
       }
 
       // Hover
-      & {
-        &\:hover--transparent\@s:hover    { border-color: transparent !important }
-        &\:hover--white\@s:hover          { border-color: $color-fsa-white !important }
-        &\:hover--black\@s:hover          { border-color: $color-fsa-black !important }
-        &\:hover--primary\@s:hover        { border-color: $color-fsa-primary !important }
-        &\:hover--primary-300\@s:hover    { border-color: $color-fsa-primary-300 !important }
-        &\:hover--primary-200\@s:hover    { border-color: $color-fsa-primary-200 !important }
-        &\:hover--primary-100\@s:hover    { border-color: $color-fsa-primary-100 !important }
-        &\:hover--primary-900\@s:hover    { border-color: $color-fsa-primary-900 !important }
-        &\:hover--secondary\@s:hover      { border-color: $color-fsa-secondary !important }
-        &\:hover--secondary-300\@s:hover  { border-color: $color-fsa-secondary-300 !important }
-        &\:hover--secondary-200\@s:hover  { border-color: $color-fsa-secondary-200 !important }
-        &\:hover--secondary-100\@s:hover  { border-color: $color-fsa-secondary-100 !important }
-        &\:hover--secondary-900\@s:hover  { border-color: $color-fsa-secondary-900 !important }
-        &\:hover--tertiary\@s:hover       { border-color: $color-fsa-tertiary !important }
-        &\:hover--tertiary-300\@s:hover   { border-color: $color-fsa-tertiary-300 !important }
-        &\:hover--tertiary-200\@s:hover   { border-color: $color-fsa-tertiary-200 !important }
-        &\:hover--tertiary-100\@s:hover   { border-color: $color-fsa-tertiary-100 !important }
-        &\:hover--tertiary-900\@s:hover   { border-color: $color-fsa-tertiary-900 !important }
-        &\:hover--aqua\@s:hover           { border-color: $color-fsa-aqua !important }
-        &\:hover--aqua-300\@s:hover       { border-color: $color-fsa-aqua-300 !important }
-        &\:hover--aqua-200\@s:hover       { border-color: $color-fsa-aqua-200 !important }
-        &\:hover--aqua-100\@s:hover       { border-color: $color-fsa-aqua-100 !important }
-        &\:hover--aqua-900\@s:hover       { border-color: $color-fsa-aqua-900 !important }
-        &\:hover--red\@s:hover            { border-color: $color-fsa-red !important }
-        &\:hover--red-300\@s:hover        { border-color: $color-fsa-red-300 !important }
-        &\:hover--red-200\@s:hover        { border-color: $color-fsa-red-200 !important }
-        &\:hover--red-100\@s:hover        { border-color: $color-fsa-red-100 !important }
-        &\:hover--red-900\@s:hover        { border-color: $color-fsa-red-900 !important }
-        &\:hover--yellow\@s:hover         { border-color: $color-fsa-yellow !important }
-        &\:hover--yellow-300\@s:hover     { border-color: $color-fsa-yellow-300 !important }
-        &\:hover--yellow-200\@s:hover     { border-color: $color-fsa-yellow-200 !important }
-        &\:hover--yellow-100\@s:hover     { border-color: $color-fsa-yellow-100 !important }
+      &\:hover {
+        &--transparent\@s:hover    { border-color: transparent !important }
+        &--white\@s:hover          { border-color: $color-fsa-white !important }
+        &--black\@s:hover          { border-color: $color-fsa-black !important }
+        &--primary\@s:hover        { border-color: $color-fsa-primary !important }
+        &--primary-300\@s:hover    { border-color: $color-fsa-primary-300 !important }
+        &--primary-200\@s:hover    { border-color: $color-fsa-primary-200 !important }
+        &--primary-100\@s:hover    { border-color: $color-fsa-primary-100 !important }
+        &--primary-900\@s:hover    { border-color: $color-fsa-primary-900 !important }
+        &--secondary\@s:hover      { border-color: $color-fsa-secondary !important }
+        &--secondary-300\@s:hover  { border-color: $color-fsa-secondary-300 !important }
+        &--secondary-200\@s:hover  { border-color: $color-fsa-secondary-200 !important }
+        &--secondary-100\@s:hover  { border-color: $color-fsa-secondary-100 !important }
+        &--secondary-900\@s:hover  { border-color: $color-fsa-secondary-900 !important }
+        &--tertiary\@s:hover       { border-color: $color-fsa-tertiary !important }
+        &--tertiary-300\@s:hover   { border-color: $color-fsa-tertiary-300 !important }
+        &--tertiary-200\@s:hover   { border-color: $color-fsa-tertiary-200 !important }
+        &--tertiary-100\@s:hover   { border-color: $color-fsa-tertiary-100 !important }
+        &--tertiary-900\@s:hover   { border-color: $color-fsa-tertiary-900 !important }
+        &--aqua\@s:hover           { border-color: $color-fsa-aqua !important }
+        &--aqua-300\@s:hover       { border-color: $color-fsa-aqua-300 !important }
+        &--aqua-200\@s:hover       { border-color: $color-fsa-aqua-200 !important }
+        &--aqua-100\@s:hover       { border-color: $color-fsa-aqua-100 !important }
+        &--aqua-900\@s:hover       { border-color: $color-fsa-aqua-900 !important }
+        &--red\@s:hover            { border-color: $color-fsa-red !important }
+        &--red-300\@s:hover        { border-color: $color-fsa-red-300 !important }
+        &--red-200\@s:hover        { border-color: $color-fsa-red-200 !important }
+        &--red-100\@s:hover        { border-color: $color-fsa-red-100 !important }
+        &--red-900\@s:hover        { border-color: $color-fsa-red-900 !important }
+        &--yellow\@s:hover         { border-color: $color-fsa-yellow !important }
+        &--yellow-300\@s:hover     { border-color: $color-fsa-yellow-300 !important }
+        &--yellow-200\@s:hover     { border-color: $color-fsa-yellow-200 !important }
+        &--yellow-100\@s:hover     { border-color: $color-fsa-yellow-100 !important }
       }
 
     }
@@ -455,39 +455,39 @@
       }
 
       // Hover
-      & {
-        &\:hover--transparent\@m:hover    { border-color: transparent !important }
-        &\:hover--white\@m:hover          { border-color: $color-fsa-white !important }
-        &\:hover--black\@m:hover          { border-color: $color-fsa-black !important }
-        &\:hover--primary\@m:hover        { border-color: $color-fsa-primary !important }
-        &\:hover--primary-300\@m:hover    { border-color: $color-fsa-primary-300 !important }
-        &\:hover--primary-200\@m:hover    { border-color: $color-fsa-primary-200 !important }
-        &\:hover--primary-100\@m:hover    { border-color: $color-fsa-primary-100 !important }
-        &\:hover--primary-900\@m:hover    { border-color: $color-fsa-primary-900 !important }
-        &\:hover--secondary\@m:hover      { border-color: $color-fsa-secondary !important }
-        &\:hover--secondary-300\@m:hover  { border-color: $color-fsa-secondary-300 !important }
-        &\:hover--secondary-200\@m:hover  { border-color: $color-fsa-secondary-200 !important }
-        &\:hover--secondary-100\@m:hover  { border-color: $color-fsa-secondary-100 !important }
-        &\:hover--secondary-900\@m:hover  { border-color: $color-fsa-secondary-900 !important }
-        &\:hover--tertiary\@m:hover       { border-color: $color-fsa-tertiary !important }
-        &\:hover--tertiary-300\@m:hover   { border-color: $color-fsa-tertiary-300 !important }
-        &\:hover--tertiary-200\@m:hover   { border-color: $color-fsa-tertiary-200 !important }
-        &\:hover--tertiary-100\@m:hover   { border-color: $color-fsa-tertiary-100 !important }
-        &\:hover--tertiary-900\@m:hover   { border-color: $color-fsa-tertiary-900 !important }
-        &\:hover--aqua\@m:hover           { border-color: $color-fsa-aqua !important }
-        &\:hover--aqua-300\@m:hover       { border-color: $color-fsa-aqua-300 !important }
-        &\:hover--aqua-200\@m:hover       { border-color: $color-fsa-aqua-200 !important }
-        &\:hover--aqua-100\@m:hover       { border-color: $color-fsa-aqua-100 !important }
-        &\:hover--aqua-900\@m:hover       { border-color: $color-fsa-aqua-900 !important }
-        &\:hover--red\@m:hover            { border-color: $color-fsa-red !important }
-        &\:hover--red-300\@m:hover        { border-color: $color-fsa-red-300 !important }
-        &\:hover--red-200\@m:hover        { border-color: $color-fsa-red-200 !important }
-        &\:hover--red-100\@m:hover        { border-color: $color-fsa-red-100 !important }
-        &\:hover--red-900\@m:hover        { border-color: $color-fsa-red-900 !important }
-        &\:hover--yellow\@m:hover         { border-color: $color-fsa-yellow !important }
-        &\:hover--yellow-300\@m:hover     { border-color: $color-fsa-yellow-300 !important }
-        &\:hover--yellow-200\@m:hover     { border-color: $color-fsa-yellow-200 !important }
-        &\:hover--yellow-100\@m:hover     { border-color: $color-fsa-yellow-100 !important }
+      &\:hover {
+        &--transparent\@m:hover    { border-color: transparent !important }
+        &--white\@m:hover          { border-color: $color-fsa-white !important }
+        &--black\@m:hover          { border-color: $color-fsa-black !important }
+        &--primary\@m:hover        { border-color: $color-fsa-primary !important }
+        &--primary-300\@m:hover    { border-color: $color-fsa-primary-300 !important }
+        &--primary-200\@m:hover    { border-color: $color-fsa-primary-200 !important }
+        &--primary-100\@m:hover    { border-color: $color-fsa-primary-100 !important }
+        &--primary-900\@m:hover    { border-color: $color-fsa-primary-900 !important }
+        &--secondary\@m:hover      { border-color: $color-fsa-secondary !important }
+        &--secondary-300\@m:hover  { border-color: $color-fsa-secondary-300 !important }
+        &--secondary-200\@m:hover  { border-color: $color-fsa-secondary-200 !important }
+        &--secondary-100\@m:hover  { border-color: $color-fsa-secondary-100 !important }
+        &--secondary-900\@m:hover  { border-color: $color-fsa-secondary-900 !important }
+        &--tertiary\@m:hover       { border-color: $color-fsa-tertiary !important }
+        &--tertiary-300\@m:hover   { border-color: $color-fsa-tertiary-300 !important }
+        &--tertiary-200\@m:hover   { border-color: $color-fsa-tertiary-200 !important }
+        &--tertiary-100\@m:hover   { border-color: $color-fsa-tertiary-100 !important }
+        &--tertiary-900\@m:hover   { border-color: $color-fsa-tertiary-900 !important }
+        &--aqua\@m:hover           { border-color: $color-fsa-aqua !important }
+        &--aqua-300\@m:hover       { border-color: $color-fsa-aqua-300 !important }
+        &--aqua-200\@m:hover       { border-color: $color-fsa-aqua-200 !important }
+        &--aqua-100\@m:hover       { border-color: $color-fsa-aqua-100 !important }
+        &--aqua-900\@m:hover       { border-color: $color-fsa-aqua-900 !important }
+        &--red\@m:hover            { border-color: $color-fsa-red !important }
+        &--red-300\@m:hover        { border-color: $color-fsa-red-300 !important }
+        &--red-200\@m:hover        { border-color: $color-fsa-red-200 !important }
+        &--red-100\@m:hover        { border-color: $color-fsa-red-100 !important }
+        &--red-900\@m:hover        { border-color: $color-fsa-red-900 !important }
+        &--yellow\@m:hover         { border-color: $color-fsa-yellow !important }
+        &--yellow-300\@m:hover     { border-color: $color-fsa-yellow-300 !important }
+        &--yellow-200\@m:hover     { border-color: $color-fsa-yellow-200 !important }
+        &--yellow-100\@m:hover     { border-color: $color-fsa-yellow-100 !important }
       }
 
     }
@@ -531,39 +531,39 @@
       }
 
       // Hover
-      & {
-        &\:hover--transparent\@l:hover    { border-color: transparent !important }
-        &\:hover--white\@l:hover          { border-color: $color-fsa-white !important }
-        &\:hover--black\@l:hover          { border-color: $color-fsa-black !important }
-        &\:hover--primary\@l:hover        { border-color: $color-fsa-primary !important }
-        &\:hover--primary-300\@l:hover    { border-color: $color-fsa-primary-300 !important }
-        &\:hover--primary-200\@l:hover    { border-color: $color-fsa-primary-200 !important }
-        &\:hover--primary-100\@l:hover    { border-color: $color-fsa-primary-100 !important }
-        &\:hover--primary-900\@l:hover    { border-color: $color-fsa-primary-900 !important }
-        &\:hover--secondary\@l:hover      { border-color: $color-fsa-secondary !important }
-        &\:hover--secondary-300\@l:hover  { border-color: $color-fsa-secondary-300 !important }
-        &\:hover--secondary-200\@l:hover  { border-color: $color-fsa-secondary-200 !important }
-        &\:hover--secondary-100\@l:hover  { border-color: $color-fsa-secondary-100 !important }
-        &\:hover--secondary-900\@l:hover  { border-color: $color-fsa-secondary-900 !important }
-        &\:hover--tertiary\@l:hover       { border-color: $color-fsa-tertiary !important }
-        &\:hover--tertiary-300\@l:hover   { border-color: $color-fsa-tertiary-300 !important }
-        &\:hover--tertiary-200\@l:hover   { border-color: $color-fsa-tertiary-200 !important }
-        &\:hover--tertiary-100\@l:hover   { border-color: $color-fsa-tertiary-100 !important }
-        &\:hover--tertiary-900\@l:hover   { border-color: $color-fsa-tertiary-900 !important }
-        &\:hover--aqua\@l:hover           { border-color: $color-fsa-aqua !important }
-        &\:hover--aqua-300\@l:hover       { border-color: $color-fsa-aqua-300 !important }
-        &\:hover--aqua-200\@l:hover       { border-color: $color-fsa-aqua-200 !important }
-        &\:hover--aqua-100\@l:hover       { border-color: $color-fsa-aqua-100 !important }
-        &\:hover--aqua-900\@l:hover       { border-color: $color-fsa-aqua-900 !important }
-        &\:hover--red\@l:hover            { border-color: $color-fsa-red !important }
-        &\:hover--red-300\@l:hover        { border-color: $color-fsa-red-300 !important }
-        &\:hover--red-200\@l:hover        { border-color: $color-fsa-red-200 !important }
-        &\:hover--red-100\@l:hover        { border-color: $color-fsa-red-100 !important }
-        &\:hover--red-900\@l:hover        { border-color: $color-fsa-red-900 !important }
-        &\:hover--yellow\@l:hover         { border-color: $color-fsa-yellow !important }
-        &\:hover--yellow-300\@l:hover     { border-color: $color-fsa-yellow-300 !important }
-        &\:hover--yellow-200\@l:hover     { border-color: $color-fsa-yellow-200 !important }
-        &\:hover--yellow-100\@l:hover     { border-color: $color-fsa-yellow-100 !important }
+      &\:hover {
+        &--transparent\@l:hover    { border-color: transparent !important }
+        &--white\@l:hover          { border-color: $color-fsa-white !important }
+        &--black\@l:hover          { border-color: $color-fsa-black !important }
+        &--primary\@l:hover        { border-color: $color-fsa-primary !important }
+        &--primary-300\@l:hover    { border-color: $color-fsa-primary-300 !important }
+        &--primary-200\@l:hover    { border-color: $color-fsa-primary-200 !important }
+        &--primary-100\@l:hover    { border-color: $color-fsa-primary-100 !important }
+        &--primary-900\@l:hover    { border-color: $color-fsa-primary-900 !important }
+        &--secondary\@l:hover      { border-color: $color-fsa-secondary !important }
+        &--secondary-300\@l:hover  { border-color: $color-fsa-secondary-300 !important }
+        &--secondary-200\@l:hover  { border-color: $color-fsa-secondary-200 !important }
+        &--secondary-100\@l:hover  { border-color: $color-fsa-secondary-100 !important }
+        &--secondary-900\@l:hover  { border-color: $color-fsa-secondary-900 !important }
+        &--tertiary\@l:hover       { border-color: $color-fsa-tertiary !important }
+        &--tertiary-300\@l:hover   { border-color: $color-fsa-tertiary-300 !important }
+        &--tertiary-200\@l:hover   { border-color: $color-fsa-tertiary-200 !important }
+        &--tertiary-100\@l:hover   { border-color: $color-fsa-tertiary-100 !important }
+        &--tertiary-900\@l:hover   { border-color: $color-fsa-tertiary-900 !important }
+        &--aqua\@l:hover           { border-color: $color-fsa-aqua !important }
+        &--aqua-300\@l:hover       { border-color: $color-fsa-aqua-300 !important }
+        &--aqua-200\@l:hover       { border-color: $color-fsa-aqua-200 !important }
+        &--aqua-100\@l:hover       { border-color: $color-fsa-aqua-100 !important }
+        &--aqua-900\@l:hover       { border-color: $color-fsa-aqua-900 !important }
+        &--red\@l:hover            { border-color: $color-fsa-red !important }
+        &--red-300\@l:hover        { border-color: $color-fsa-red-300 !important }
+        &--red-200\@l:hover        { border-color: $color-fsa-red-200 !important }
+        &--red-100\@l:hover        { border-color: $color-fsa-red-100 !important }
+        &--red-900\@l:hover        { border-color: $color-fsa-red-900 !important }
+        &--yellow\@l:hover         { border-color: $color-fsa-yellow !important }
+        &--yellow-300\@l:hover     { border-color: $color-fsa-yellow-300 !important }
+        &--yellow-200\@l:hover     { border-color: $color-fsa-yellow-200 !important }
+        &--yellow-100\@l:hover     { border-color: $color-fsa-yellow-100 !important }
       }
 
     }
@@ -607,39 +607,39 @@
       }
 
       // Hover
-      & {
-        &\:hover--transparent\@xl:hover    { border-color: transparent !important }
-        &\:hover--white\@xl:hover          { border-color: $color-fsa-white !important }
-        &\:hover--black\@xl:hover          { border-color: $color-fsa-black !important }
-        &\:hover--primary\@xl:hover        { border-color: $color-fsa-primary !important }
-        &\:hover--primary-300\@xl:hover    { border-color: $color-fsa-primary-300 !important }
-        &\:hover--primary-200\@xl:hover    { border-color: $color-fsa-primary-200 !important }
-        &\:hover--primary-100\@xl:hover    { border-color: $color-fsa-primary-100 !important }
-        &\:hover--primary-900\@xl:hover    { border-color: $color-fsa-primary-900 !important }
-        &\:hover--secondary\@xl:hover      { border-color: $color-fsa-secondary !important }
-        &\:hover--secondary-300\@xl:hover  { border-color: $color-fsa-secondary-300 !important }
-        &\:hover--secondary-200\@xl:hover  { border-color: $color-fsa-secondary-200 !important }
-        &\:hover--secondary-100\@xl:hover  { border-color: $color-fsa-secondary-100 !important }
-        &\:hover--secondary-900\@xl:hover  { border-color: $color-fsa-secondary-900 !important }
-        &\:hover--tertiary\@xl:hover       { border-color: $color-fsa-tertiary !important }
-        &\:hover--tertiary-300\@xl:hover   { border-color: $color-fsa-tertiary-300 !important }
-        &\:hover--tertiary-200\@xl:hover   { border-color: $color-fsa-tertiary-200 !important }
-        &\:hover--tertiary-100\@xl:hover   { border-color: $color-fsa-tertiary-100 !important }
-        &\:hover--tertiary-900\@xl:hover   { border-color: $color-fsa-tertiary-900 !important }
-        &\:hover--aqua\@xl:hover           { border-color: $color-fsa-aqua !important }
-        &\:hover--aqua-300\@xl:hover       { border-color: $color-fsa-aqua-300 !important }
-        &\:hover--aqua-200\@xl:hover       { border-color: $color-fsa-aqua-200 !important }
-        &\:hover--aqua-100\@xl:hover       { border-color: $color-fsa-aqua-100 !important }
-        &\:hover--aqua-900\@xl:hover       { border-color: $color-fsa-aqua-900 !important }
-        &\:hover--red\@xl:hover            { border-color: $color-fsa-red !important }
-        &\:hover--red-300\@xl:hover        { border-color: $color-fsa-red-300 !important }
-        &\:hover--red-200\@xl:hover        { border-color: $color-fsa-red-200 !important }
-        &\:hover--red-100\@xl:hover        { border-color: $color-fsa-red-100 !important }
-        &\:hover--red-900\@xl:hover        { border-color: $color-fsa-red-900 !important }
-        &\:hover--yellow\@xl:hover         { border-color: $color-fsa-yellow !important }
-        &\:hover--yellow-300\@xl:hover     { border-color: $color-fsa-yellow-300 !important }
-        &\:hover--yellow-200\@xl:hover     { border-color: $color-fsa-yellow-200 !important }
-        &\:hover--yellow-100\@xl:hover     { border-color: $color-fsa-yellow-100 !important }
+      &\:hover {
+        &--transparent\@xl:hover    { border-color: transparent !important }
+        &--white\@xl:hover          { border-color: $color-fsa-white !important }
+        &--black\@xl:hover          { border-color: $color-fsa-black !important }
+        &--primary\@xl:hover        { border-color: $color-fsa-primary !important }
+        &--primary-300\@xl:hover    { border-color: $color-fsa-primary-300 !important }
+        &--primary-200\@xl:hover    { border-color: $color-fsa-primary-200 !important }
+        &--primary-100\@xl:hover    { border-color: $color-fsa-primary-100 !important }
+        &--primary-900\@xl:hover    { border-color: $color-fsa-primary-900 !important }
+        &--secondary\@xl:hover      { border-color: $color-fsa-secondary !important }
+        &--secondary-300\@xl:hover  { border-color: $color-fsa-secondary-300 !important }
+        &--secondary-200\@xl:hover  { border-color: $color-fsa-secondary-200 !important }
+        &--secondary-100\@xl:hover  { border-color: $color-fsa-secondary-100 !important }
+        &--secondary-900\@xl:hover  { border-color: $color-fsa-secondary-900 !important }
+        &--tertiary\@xl:hover       { border-color: $color-fsa-tertiary !important }
+        &--tertiary-300\@xl:hover   { border-color: $color-fsa-tertiary-300 !important }
+        &--tertiary-200\@xl:hover   { border-color: $color-fsa-tertiary-200 !important }
+        &--tertiary-100\@xl:hover   { border-color: $color-fsa-tertiary-100 !important }
+        &--tertiary-900\@xl:hover   { border-color: $color-fsa-tertiary-900 !important }
+        &--aqua\@xl:hover           { border-color: $color-fsa-aqua !important }
+        &--aqua-300\@xl:hover       { border-color: $color-fsa-aqua-300 !important }
+        &--aqua-200\@xl:hover       { border-color: $color-fsa-aqua-200 !important }
+        &--aqua-100\@xl:hover       { border-color: $color-fsa-aqua-100 !important }
+        &--aqua-900\@xl:hover       { border-color: $color-fsa-aqua-900 !important }
+        &--red\@xl:hover            { border-color: $color-fsa-red !important }
+        &--red-300\@xl:hover        { border-color: $color-fsa-red-300 !important }
+        &--red-200\@xl:hover        { border-color: $color-fsa-red-200 !important }
+        &--red-100\@xl:hover        { border-color: $color-fsa-red-100 !important }
+        &--red-900\@xl:hover        { border-color: $color-fsa-red-900 !important }
+        &--yellow\@xl:hover         { border-color: $color-fsa-yellow !important }
+        &--yellow-300\@xl:hover     { border-color: $color-fsa-yellow-300 !important }
+        &--yellow-200\@xl:hover     { border-color: $color-fsa-yellow-200 !important }
+        &--yellow-100\@xl:hover     { border-color: $color-fsa-yellow-100 !important }
       }
 
     }
@@ -1129,42 +1129,42 @@
   }
 
   // Hover
-  & {
+  &\:hover {
 
-    &\:hover--underline:hover      { text-decoration: underline !important; }
-    &\:hover--underline-none:hover { text-decoration: none !important; }
+    &--underline:hover      { text-decoration: underline !important; }
+    &--underline-none:hover { text-decoration: none !important; }
 
-    &\:hover--white:hover         { &,&:visited { color: $color-fsa-white !important;         } }
-    &\:hover--black:hover         { &,&:visited { color: $color-fsa-black !important;         } }
-    &\:hover--primary-900:hover   { &,&:visited { color: $color-fsa-primary-900 !important;   } }
-    &\:hover--primary:hover       { &,&:visited { color: $color-fsa-primary !important;       } }
-    &\:hover--primary-300:hover   { &,&:visited { color: $color-fsa-primary-300 !important;   } }
-    &\:hover--primary-200:hover   { &,&:visited { color: $color-fsa-primary-200 !important;   } }
-    &\:hover--primary-100:hover   { &,&:visited { color: $color-fsa-primary-100 !important;   } }
-    &\:hover--secondary-900:hover { &,&:visited { color: $color-fsa-secondary-900 !important; } }
-    &\:hover--secondary:hover     { &,&:visited { color: $color-fsa-secondary !important;     } }
-    &\:hover--secondary-300:hover { &,&:visited { color: $color-fsa-secondary-300 !important; } }
-    &\:hover--secondary-200:hover { &,&:visited { color: $color-fsa-secondary-200 !important; } }
-    &\:hover--secondary-100:hover { &,&:visited { color: $color-fsa-secondary-100 !important; } }
-    &\:hover--tertiary-900:hover  { &,&:visited { color: $color-fsa-tertiary-900 !important;  } }
-    &\:hover--tertiary:hover      { &,&:visited { color: $color-fsa-tertiary !important;      } }
-    &\:hover--tertiary-300:hover  { &,&:visited { color: $color-fsa-tertiary-300 !important;  } }
-    &\:hover--tertiary-200:hover  { &,&:visited { color: $color-fsa-tertiary-200 !important;  } }
-    &\:hover--tertiary-100:hover  { &,&:visited { color: $color-fsa-tertiary-100 !important;  } }
-    &\:hover--aqua-900:hover      { &,&:visited { color: $color-fsa-aqua-900 !important;      } }
-    &\:hover--aqua:hover          { &,&:visited { color: $color-fsa-aqua !important;          } }
-    &\:hover--aqua-300:hover      { &,&:visited { color: $color-fsa-aqua-300 !important;      } }
-    &\:hover--aqua-200:hover      { &,&:visited { color: $color-fsa-aqua-200 !important;      } }
-    &\:hover--aqua-100:hover      { &,&:visited { color: $color-fsa-aqua-100 !important;      } }
-    &\:hover--red-900:hover       { &,&:visited { color: $color-fsa-red-900 !important;       } }
-    &\:hover--red:hover           { &,&:visited { color: $color-fsa-red !important;           } }
-    &\:hover--red-300:hover       { &,&:visited { color: $color-fsa-red-300 !important;       } }
-    &\:hover--red-200:hover       { &,&:visited { color: $color-fsa-red-200 !important;       } }
-    &\:hover--red-100:hover       { &,&:visited { color: $color-fsa-red-100 !important;       } }
-    &\:hover--yellow:hover        { &,&:visited { color: $color-fsa-yellow !important;        } }
-    &\:hover--yellow-300:hover    { &,&:visited { color: $color-fsa-yellow-300 !important;    } }
-    &\:hover--yellow-200:hover    { &,&:visited { color: $color-fsa-yellow-200 !important;    } }
-    &\:hover--yellow-100:hover    { &,&:visited { color: $color-fsa-yellow-100 !important;    } }
+    &--white:hover         { &,&:visited { color: $color-fsa-white !important;         } }
+    &--black:hover         { &,&:visited { color: $color-fsa-black !important;         } }
+    &--primary-900:hover   { &,&:visited { color: $color-fsa-primary-900 !important;   } }
+    &--primary:hover       { &,&:visited { color: $color-fsa-primary !important;       } }
+    &--primary-300:hover   { &,&:visited { color: $color-fsa-primary-300 !important;   } }
+    &--primary-200:hover   { &,&:visited { color: $color-fsa-primary-200 !important;   } }
+    &--primary-100:hover   { &,&:visited { color: $color-fsa-primary-100 !important;   } }
+    &--secondary-900:hover { &,&:visited { color: $color-fsa-secondary-900 !important; } }
+    &--secondary:hover     { &,&:visited { color: $color-fsa-secondary !important;     } }
+    &--secondary-300:hover { &,&:visited { color: $color-fsa-secondary-300 !important; } }
+    &--secondary-200:hover { &,&:visited { color: $color-fsa-secondary-200 !important; } }
+    &--secondary-100:hover { &,&:visited { color: $color-fsa-secondary-100 !important; } }
+    &--tertiary-900:hover  { &,&:visited { color: $color-fsa-tertiary-900 !important;  } }
+    &--tertiary:hover      { &,&:visited { color: $color-fsa-tertiary !important;      } }
+    &--tertiary-300:hover  { &,&:visited { color: $color-fsa-tertiary-300 !important;  } }
+    &--tertiary-200:hover  { &,&:visited { color: $color-fsa-tertiary-200 !important;  } }
+    &--tertiary-100:hover  { &,&:visited { color: $color-fsa-tertiary-100 !important;  } }
+    &--aqua-900:hover      { &,&:visited { color: $color-fsa-aqua-900 !important;      } }
+    &--aqua:hover          { &,&:visited { color: $color-fsa-aqua !important;          } }
+    &--aqua-300:hover      { &,&:visited { color: $color-fsa-aqua-300 !important;      } }
+    &--aqua-200:hover      { &,&:visited { color: $color-fsa-aqua-200 !important;      } }
+    &--aqua-100:hover      { &,&:visited { color: $color-fsa-aqua-100 !important;      } }
+    &--red-900:hover       { &,&:visited { color: $color-fsa-red-900 !important;       } }
+    &--red:hover           { &,&:visited { color: $color-fsa-red !important;           } }
+    &--red-300:hover       { &,&:visited { color: $color-fsa-red-300 !important;       } }
+    &--red-200:hover       { &,&:visited { color: $color-fsa-red-200 !important;       } }
+    &--red-100:hover       { &,&:visited { color: $color-fsa-red-100 !important;       } }
+    &--yellow:hover        { &,&:visited { color: $color-fsa-yellow !important;        } }
+    &--yellow-300:hover    { &,&:visited { color: $color-fsa-yellow-300 !important;    } }
+    &--yellow-200:hover    { &,&:visited { color: $color-fsa-yellow-200 !important;    } }
+    &--yellow-100:hover    { &,&:visited { color: $color-fsa-yellow-100 !important;    } }
 
   }
 
@@ -1215,42 +1215,42 @@
     }
 
     // Hover
-    & {
+    &\:hover {
 
-      &\:hover--underline\@s:hover      { text-decoration: underline !important; }
-      &\:hover--underline-none\@s:hover { text-decoration: none !important; }
+      &--underline\@s:hover      { text-decoration: underline !important; }
+      &--underline-none\@s:hover { text-decoration: none !important; }
 
-      &\:hover--white\@s:hover         { &,&:visited { color: $color-fsa-white !important;         } }
-      &\:hover--black\@s:hover         { &,&:visited { color: $color-fsa-black !important;         } }
-      &\:hover--primary-900\@s:hover   { &,&:visited { color: $color-fsa-primary-900 !important;   } }
-      &\:hover--primary\@s:hover       { &,&:visited { color: $color-fsa-primary !important;       } }
-      &\:hover--primary-300\@s:hover   { &,&:visited { color: $color-fsa-primary-300 !important;   } }
-      &\:hover--primary-200\@s:hover   { &,&:visited { color: $color-fsa-primary-200 !important;   } }
-      &\:hover--primary-100\@s:hover   { &,&:visited { color: $color-fsa-primary-100 !important;   } }
-      &\:hover--secondary-900\@s:hover { &,&:visited { color: $color-fsa-secondary-900 !important; } }
-      &\:hover--secondary\@s:hover     { &,&:visited { color: $color-fsa-secondary !important;     } }
-      &\:hover--secondary-300\@s:hover { &,&:visited { color: $color-fsa-secondary-300 !important; } }
-      &\:hover--secondary-200\@s:hover { &,&:visited { color: $color-fsa-secondary-200 !important; } }
-      &\:hover--secondary-100\@s:hover { &,&:visited { color: $color-fsa-secondary-100 !important; } }
-      &\:hover--tertiary-900\@s:hover  { &,&:visited { color: $color-fsa-tertiary-900 !important;  } }
-      &\:hover--tertiary\@s:hover      { &,&:visited { color: $color-fsa-tertiary !important;      } }
-      &\:hover--tertiary-300\@s:hover  { &,&:visited { color: $color-fsa-tertiary-300 !important;  } }
-      &\:hover--tertiary-200\@s:hover  { &,&:visited { color: $color-fsa-tertiary-200 !important;  } }
-      &\:hover--tertiary-100\@s:hover  { &,&:visited { color: $color-fsa-tertiary-100 !important;  } }
-      &\:hover--aqua-900\@s:hover      { &,&:visited { color: $color-fsa-aqua-900 !important;      } }
-      &\:hover--aqua\@s:hover          { &,&:visited { color: $color-fsa-aqua !important;          } }
-      &\:hover--aqua-300\@s:hover      { &,&:visited { color: $color-fsa-aqua-300 !important;      } }
-      &\:hover--aqua-200\@s:hover      { &,&:visited { color: $color-fsa-aqua-200 !important;      } }
-      &\:hover--aqua-100\@s:hover      { &,&:visited { color: $color-fsa-aqua-100 !important;      } }
-      &\:hover--red-900\@s:hover       { &,&:visited { color: $color-fsa-red-900 !important;       } }
-      &\:hover--red\@s:hover           { &,&:visited { color: $color-fsa-red !important;           } }
-      &\:hover--red-300\@s:hover       { &,&:visited { color: $color-fsa-red-300 !important;       } }
-      &\:hover--red-200\@s:hover       { &,&:visited { color: $color-fsa-red-200 !important;       } }
-      &\:hover--red-100\@s:hover       { &,&:visited { color: $color-fsa-red-100 !important;       } }
-      &\:hover--yellow\@s:hover        { &,&:visited { color: $color-fsa-yellow !important;        } }
-      &\:hover--yellow-300\@s:hover    { &,&:visited { color: $color-fsa-yellow-300 !important;    } }
-      &\:hover--yellow-200\@s:hover    { &,&:visited { color: $color-fsa-yellow-200 !important;    } }
-      &\:hover--yellow-100\@s:hover    { &,&:visited { color: $color-fsa-yellow-100 !important;    } }
+      &--white\@s:hover         { &,&:visited { color: $color-fsa-white !important;         } }
+      &--black\@s:hover         { &,&:visited { color: $color-fsa-black !important;         } }
+      &--primary-900\@s:hover   { &,&:visited { color: $color-fsa-primary-900 !important;   } }
+      &--primary\@s:hover       { &,&:visited { color: $color-fsa-primary !important;       } }
+      &--primary-300\@s:hover   { &,&:visited { color: $color-fsa-primary-300 !important;   } }
+      &--primary-200\@s:hover   { &,&:visited { color: $color-fsa-primary-200 !important;   } }
+      &--primary-100\@s:hover   { &,&:visited { color: $color-fsa-primary-100 !important;   } }
+      &--secondary-900\@s:hover { &,&:visited { color: $color-fsa-secondary-900 !important; } }
+      &--secondary\@s:hover     { &,&:visited { color: $color-fsa-secondary !important;     } }
+      &--secondary-300\@s:hover { &,&:visited { color: $color-fsa-secondary-300 !important; } }
+      &--secondary-200\@s:hover { &,&:visited { color: $color-fsa-secondary-200 !important; } }
+      &--secondary-100\@s:hover { &,&:visited { color: $color-fsa-secondary-100 !important; } }
+      &--tertiary-900\@s:hover  { &,&:visited { color: $color-fsa-tertiary-900 !important;  } }
+      &--tertiary\@s:hover      { &,&:visited { color: $color-fsa-tertiary !important;      } }
+      &--tertiary-300\@s:hover  { &,&:visited { color: $color-fsa-tertiary-300 !important;  } }
+      &--tertiary-200\@s:hover  { &,&:visited { color: $color-fsa-tertiary-200 !important;  } }
+      &--tertiary-100\@s:hover  { &,&:visited { color: $color-fsa-tertiary-100 !important;  } }
+      &--aqua-900\@s:hover      { &,&:visited { color: $color-fsa-aqua-900 !important;      } }
+      &--aqua\@s:hover          { &,&:visited { color: $color-fsa-aqua !important;          } }
+      &--aqua-300\@s:hover      { &,&:visited { color: $color-fsa-aqua-300 !important;      } }
+      &--aqua-200\@s:hover      { &,&:visited { color: $color-fsa-aqua-200 !important;      } }
+      &--aqua-100\@s:hover      { &,&:visited { color: $color-fsa-aqua-100 !important;      } }
+      &--red-900\@s:hover       { &,&:visited { color: $color-fsa-red-900 !important;       } }
+      &--red\@s:hover           { &,&:visited { color: $color-fsa-red !important;           } }
+      &--red-300\@s:hover       { &,&:visited { color: $color-fsa-red-300 !important;       } }
+      &--red-200\@s:hover       { &,&:visited { color: $color-fsa-red-200 !important;       } }
+      &--red-100\@s:hover       { &,&:visited { color: $color-fsa-red-100 !important;       } }
+      &--yellow\@s:hover        { &,&:visited { color: $color-fsa-yellow !important;        } }
+      &--yellow-300\@s:hover    { &,&:visited { color: $color-fsa-yellow-300 !important;    } }
+      &--yellow-200\@s:hover    { &,&:visited { color: $color-fsa-yellow-200 !important;    } }
+      &--yellow-100\@s:hover    { &,&:visited { color: $color-fsa-yellow-100 !important;    } }
 
     }
 
@@ -1303,42 +1303,42 @@
     }
 
     // Hover
-    & {
+    &\:hover {
 
-      &\:hover--underline\@m:hover      { text-decoration: underline !important; }
-      &\:hover--underline-none\@m:hover { text-decoration: none !important; }
+      &--underline\@m:hover      { text-decoration: underline !important; }
+      &--underline-none\@m:hover { text-decoration: none !important; }
 
-      &\:hover--white\@m:hover         { &,&:visited { color: $color-fsa-white !important;         } }
-      &\:hover--black\@m:hover         { &,&:visited { color: $color-fsa-black !important;         } }
-      &\:hover--primary-900\@m:hover   { &,&:visited { color: $color-fsa-primary-900 !important;   } }
-      &\:hover--primary\@m:hover       { &,&:visited { color: $color-fsa-primary !important;       } }
-      &\:hover--primary-300\@m:hover   { &,&:visited { color: $color-fsa-primary-300 !important;   } }
-      &\:hover--primary-200\@m:hover   { &,&:visited { color: $color-fsa-primary-200 !important;   } }
-      &\:hover--primary-100\@m:hover   { &,&:visited { color: $color-fsa-primary-100 !important;   } }
-      &\:hover--secondary-900\@m:hover { &,&:visited { color: $color-fsa-secondary-900 !important; } }
-      &\:hover--secondary\@m:hover     { &,&:visited { color: $color-fsa-secondary !important;     } }
-      &\:hover--secondary-300\@m:hover { &,&:visited { color: $color-fsa-secondary-300 !important; } }
-      &\:hover--secondary-200\@m:hover { &,&:visited { color: $color-fsa-secondary-200 !important; } }
-      &\:hover--secondary-100\@m:hover { &,&:visited { color: $color-fsa-secondary-100 !important; } }
-      &\:hover--tertiary-900\@m:hover  { &,&:visited { color: $color-fsa-tertiary-900 !important;  } }
-      &\:hover--tertiary\@m:hover      { &,&:visited { color: $color-fsa-tertiary !important;      } }
-      &\:hover--tertiary-300\@m:hover  { &,&:visited { color: $color-fsa-tertiary-300 !important;  } }
-      &\:hover--tertiary-200\@m:hover  { &,&:visited { color: $color-fsa-tertiary-200 !important;  } }
-      &\:hover--tertiary-100\@m:hover  { &,&:visited { color: $color-fsa-tertiary-100 !important;  } }
-      &\:hover--aqua-900\@m:hover      { &,&:visited { color: $color-fsa-aqua-900 !important;      } }
-      &\:hover--aqua\@m:hover          { &,&:visited { color: $color-fsa-aqua !important;          } }
-      &\:hover--aqua-300\@m:hover      { &,&:visited { color: $color-fsa-aqua-300 !important;      } }
-      &\:hover--aqua-200\@m:hover      { &,&:visited { color: $color-fsa-aqua-200 !important;      } }
-      &\:hover--aqua-100\@m:hover      { &,&:visited { color: $color-fsa-aqua-100 !important;      } }
-      &\:hover--red-900\@m:hover       { &,&:visited { color: $color-fsa-red-900 !important;       } }
-      &\:hover--red\@m:hover           { &,&:visited { color: $color-fsa-red !important;           } }
-      &\:hover--red-300\@m:hover       { &,&:visited { color: $color-fsa-red-300 !important;       } }
-      &\:hover--red-200\@m:hover       { &,&:visited { color: $color-fsa-red-200 !important;       } }
-      &\:hover--red-100\@m:hover       { &,&:visited { color: $color-fsa-red-100 !important;       } }
-      &\:hover--yellow\@m:hover        { &,&:visited { color: $color-fsa-yellow !important;        } }
-      &\:hover--yellow-300\@m:hover    { &,&:visited { color: $color-fsa-yellow-300 !important;    } }
-      &\:hover--yellow-200\@m:hover    { &,&:visited { color: $color-fsa-yellow-200 !important;    } }
-      &\:hover--yellow-100\@m:hover    { &,&:visited { color: $color-fsa-yellow-100 !important;    } }
+      &--white\@m:hover         { &,&:visited { color: $color-fsa-white !important;         } }
+      &--black\@m:hover         { &,&:visited { color: $color-fsa-black !important;         } }
+      &--primary-900\@m:hover   { &,&:visited { color: $color-fsa-primary-900 !important;   } }
+      &--primary\@m:hover       { &,&:visited { color: $color-fsa-primary !important;       } }
+      &--primary-300\@m:hover   { &,&:visited { color: $color-fsa-primary-300 !important;   } }
+      &--primary-200\@m:hover   { &,&:visited { color: $color-fsa-primary-200 !important;   } }
+      &--primary-100\@m:hover   { &,&:visited { color: $color-fsa-primary-100 !important;   } }
+      &--secondary-900\@m:hover { &,&:visited { color: $color-fsa-secondary-900 !important; } }
+      &--secondary\@m:hover     { &,&:visited { color: $color-fsa-secondary !important;     } }
+      &--secondary-300\@m:hover { &,&:visited { color: $color-fsa-secondary-300 !important; } }
+      &--secondary-200\@m:hover { &,&:visited { color: $color-fsa-secondary-200 !important; } }
+      &--secondary-100\@m:hover { &,&:visited { color: $color-fsa-secondary-100 !important; } }
+      &--tertiary-900\@m:hover  { &,&:visited { color: $color-fsa-tertiary-900 !important;  } }
+      &--tertiary\@m:hover      { &,&:visited { color: $color-fsa-tertiary !important;      } }
+      &--tertiary-300\@m:hover  { &,&:visited { color: $color-fsa-tertiary-300 !important;  } }
+      &--tertiary-200\@m:hover  { &,&:visited { color: $color-fsa-tertiary-200 !important;  } }
+      &--tertiary-100\@m:hover  { &,&:visited { color: $color-fsa-tertiary-100 !important;  } }
+      &--aqua-900\@m:hover      { &,&:visited { color: $color-fsa-aqua-900 !important;      } }
+      &--aqua\@m:hover          { &,&:visited { color: $color-fsa-aqua !important;          } }
+      &--aqua-300\@m:hover      { &,&:visited { color: $color-fsa-aqua-300 !important;      } }
+      &--aqua-200\@m:hover      { &,&:visited { color: $color-fsa-aqua-200 !important;      } }
+      &--aqua-100\@m:hover      { &,&:visited { color: $color-fsa-aqua-100 !important;      } }
+      &--red-900\@m:hover       { &,&:visited { color: $color-fsa-red-900 !important;       } }
+      &--red\@m:hover           { &,&:visited { color: $color-fsa-red !important;           } }
+      &--red-300\@m:hover       { &,&:visited { color: $color-fsa-red-300 !important;       } }
+      &--red-200\@m:hover       { &,&:visited { color: $color-fsa-red-200 !important;       } }
+      &--red-100\@m:hover       { &,&:visited { color: $color-fsa-red-100 !important;       } }
+      &--yellow\@m:hover        { &,&:visited { color: $color-fsa-yellow !important;        } }
+      &--yellow-300\@m:hover    { &,&:visited { color: $color-fsa-yellow-300 !important;    } }
+      &--yellow-200\@m:hover    { &,&:visited { color: $color-fsa-yellow-200 !important;    } }
+      &--yellow-100\@m:hover    { &,&:visited { color: $color-fsa-yellow-100 !important;    } }
 
     }
 
@@ -1391,42 +1391,42 @@
     }
 
     // Hover
-    & {
+    &\:hover {
 
-      &\:hover--underline\@l:hover      { text-decoration: underline !important; }
-      &\:hover--underline-none\@l:hover { text-decoration: none !important; }
+      &--underline\@l:hover      { text-decoration: underline !important; }
+      &--underline-none\@l:hover { text-decoration: none !important; }
 
-      &\:hover--white\@l:hover         { &,&:visited { color: $color-fsa-white !important;         } }
-      &\:hover--black\@l:hover         { &,&:visited { color: $color-fsa-black !important;         } }
-      &\:hover--primary-900\@l:hover   { &,&:visited { color: $color-fsa-primary-900 !important;   } }
-      &\:hover--primary\@l:hover       { &,&:visited { color: $color-fsa-primary !important;       } }
-      &\:hover--primary-300\@l:hover   { &,&:visited { color: $color-fsa-primary-300 !important;   } }
-      &\:hover--primary-200\@l:hover   { &,&:visited { color: $color-fsa-primary-200 !important;   } }
-      &\:hover--primary-100\@l:hover   { &,&:visited { color: $color-fsa-primary-100 !important;   } }
-      &\:hover--secondary-900\@l:hover { &,&:visited { color: $color-fsa-secondary-900 !important; } }
-      &\:hover--secondary\@l:hover     { &,&:visited { color: $color-fsa-secondary !important;     } }
-      &\:hover--secondary-300\@l:hover { &,&:visited { color: $color-fsa-secondary-300 !important; } }
-      &\:hover--secondary-200\@l:hover { &,&:visited { color: $color-fsa-secondary-200 !important; } }
-      &\:hover--secondary-100\@l:hover { &,&:visited { color: $color-fsa-secondary-100 !important; } }
-      &\:hover--tertiary-900\@l:hover  { &,&:visited { color: $color-fsa-tertiary-900 !important;  } }
-      &\:hover--tertiary\@l:hover      { &,&:visited { color: $color-fsa-tertiary !important;      } }
-      &\:hover--tertiary-300\@l:hover  { &,&:visited { color: $color-fsa-tertiary-300 !important;  } }
-      &\:hover--tertiary-200\@l:hover  { &,&:visited { color: $color-fsa-tertiary-200 !important;  } }
-      &\:hover--tertiary-100\@l:hover  { &,&:visited { color: $color-fsa-tertiary-100 !important;  } }
-      &\:hover--aqua-900\@l:hover      { &,&:visited { color: $color-fsa-aqua-900 !important;      } }
-      &\:hover--aqua\@l:hover          { &,&:visited { color: $color-fsa-aqua !important;          } }
-      &\:hover--aqua-300\@l:hover      { &,&:visited { color: $color-fsa-aqua-300 !important;      } }
-      &\:hover--aqua-200\@l:hover      { &,&:visited { color: $color-fsa-aqua-200 !important;      } }
-      &\:hover--aqua-100\@l:hover      { &,&:visited { color: $color-fsa-aqua-100 !important;      } }
-      &\:hover--red-900\@l:hover       { &,&:visited { color: $color-fsa-red-900 !important;       } }
-      &\:hover--red\@l:hover           { &,&:visited { color: $color-fsa-red !important;           } }
-      &\:hover--red-300\@l:hover       { &,&:visited { color: $color-fsa-red-300 !important;       } }
-      &\:hover--red-200\@l:hover       { &,&:visited { color: $color-fsa-red-200 !important;       } }
-      &\:hover--red-100\@l:hover       { &,&:visited { color: $color-fsa-red-100 !important;       } }
-      &\:hover--yellow\@l:hover        { &,&:visited { color: $color-fsa-yellow !important;        } }
-      &\:hover--yellow-300\@l:hover    { &,&:visited { color: $color-fsa-yellow-300 !important;    } }
-      &\:hover--yellow-200\@l:hover    { &,&:visited { color: $color-fsa-yellow-200 !important;    } }
-      &\:hover--yellow-100\@l:hover    { &,&:visited { color: $color-fsa-yellow-100 !important;    } }
+      &--white\@l:hover         { &,&:visited { color: $color-fsa-white !important;         } }
+      &--black\@l:hover         { &,&:visited { color: $color-fsa-black !important;         } }
+      &--primary-900\@l:hover   { &,&:visited { color: $color-fsa-primary-900 !important;   } }
+      &--primary\@l:hover       { &,&:visited { color: $color-fsa-primary !important;       } }
+      &--primary-300\@l:hover   { &,&:visited { color: $color-fsa-primary-300 !important;   } }
+      &--primary-200\@l:hover   { &,&:visited { color: $color-fsa-primary-200 !important;   } }
+      &--primary-100\@l:hover   { &,&:visited { color: $color-fsa-primary-100 !important;   } }
+      &--secondary-900\@l:hover { &,&:visited { color: $color-fsa-secondary-900 !important; } }
+      &--secondary\@l:hover     { &,&:visited { color: $color-fsa-secondary !important;     } }
+      &--secondary-300\@l:hover { &,&:visited { color: $color-fsa-secondary-300 !important; } }
+      &--secondary-200\@l:hover { &,&:visited { color: $color-fsa-secondary-200 !important; } }
+      &--secondary-100\@l:hover { &,&:visited { color: $color-fsa-secondary-100 !important; } }
+      &--tertiary-900\@l:hover  { &,&:visited { color: $color-fsa-tertiary-900 !important;  } }
+      &--tertiary\@l:hover      { &,&:visited { color: $color-fsa-tertiary !important;      } }
+      &--tertiary-300\@l:hover  { &,&:visited { color: $color-fsa-tertiary-300 !important;  } }
+      &--tertiary-200\@l:hover  { &,&:visited { color: $color-fsa-tertiary-200 !important;  } }
+      &--tertiary-100\@l:hover  { &,&:visited { color: $color-fsa-tertiary-100 !important;  } }
+      &--aqua-900\@l:hover      { &,&:visited { color: $color-fsa-aqua-900 !important;      } }
+      &--aqua\@l:hover          { &,&:visited { color: $color-fsa-aqua !important;          } }
+      &--aqua-300\@l:hover      { &,&:visited { color: $color-fsa-aqua-300 !important;      } }
+      &--aqua-200\@l:hover      { &,&:visited { color: $color-fsa-aqua-200 !important;      } }
+      &--aqua-100\@l:hover      { &,&:visited { color: $color-fsa-aqua-100 !important;      } }
+      &--red-900\@l:hover       { &,&:visited { color: $color-fsa-red-900 !important;       } }
+      &--red\@l:hover           { &,&:visited { color: $color-fsa-red !important;           } }
+      &--red-300\@l:hover       { &,&:visited { color: $color-fsa-red-300 !important;       } }
+      &--red-200\@l:hover       { &,&:visited { color: $color-fsa-red-200 !important;       } }
+      &--red-100\@l:hover       { &,&:visited { color: $color-fsa-red-100 !important;       } }
+      &--yellow\@l:hover        { &,&:visited { color: $color-fsa-yellow !important;        } }
+      &--yellow-300\@l:hover    { &,&:visited { color: $color-fsa-yellow-300 !important;    } }
+      &--yellow-200\@l:hover    { &,&:visited { color: $color-fsa-yellow-200 !important;    } }
+      &--yellow-100\@l:hover    { &,&:visited { color: $color-fsa-yellow-100 !important;    } }
 
     }
 
@@ -1479,42 +1479,42 @@
     }
 
     // Hover
-    & {
+    &\:hover {
 
-      &\:hover--underline\@xl:hover      { text-decoration: underline !important; }
-      &\:hover--underline-none\@xl:hover { text-decoration: none !important; }
+      &--underline\@xl:hover      { text-decoration: underline !important; }
+      &--underline-none\@xl:hover { text-decoration: none !important; }
 
-      &\:hover--white\@xl:hover         { &,&:visited { color: $color-fsa-white !important;         } }
-      &\:hover--black\@xl:hover         { &,&:visited { color: $color-fsa-black !important;         } }
-      &\:hover--primary-900\@xl:hover   { &,&:visited { color: $color-fsa-primary-900 !important;   } }
-      &\:hover--primary\@xl:hover       { &,&:visited { color: $color-fsa-primary !important;       } }
-      &\:hover--primary-300\@xl:hover   { &,&:visited { color: $color-fsa-primary-300 !important;   } }
-      &\:hover--primary-200\@xl:hover   { &,&:visited { color: $color-fsa-primary-200 !important;   } }
-      &\:hover--primary-100\@xl:hover   { &,&:visited { color: $color-fsa-primary-100 !important;   } }
-      &\:hover--secondary-900\@xl:hover { &,&:visited { color: $color-fsa-secondary-900 !important; } }
-      &\:hover--secondary\@xl:hover     { &,&:visited { color: $color-fsa-secondary !important;     } }
-      &\:hover--secondary-300\@xl:hover { &,&:visited { color: $color-fsa-secondary-300 !important; } }
-      &\:hover--secondary-200\@xl:hover { &,&:visited { color: $color-fsa-secondary-200 !important; } }
-      &\:hover--secondary-100\@xl:hover { &,&:visited { color: $color-fsa-secondary-100 !important; } }
-      &\:hover--tertiary-900\@xl:hover  { &,&:visited { color: $color-fsa-tertiary-900 !important;  } }
-      &\:hover--tertiary\@xl:hover      { &,&:visited { color: $color-fsa-tertiary !important;      } }
-      &\:hover--tertiary-300\@xl:hover  { &,&:visited { color: $color-fsa-tertiary-300 !important;  } }
-      &\:hover--tertiary-200\@xl:hover  { &,&:visited { color: $color-fsa-tertiary-200 !important;  } }
-      &\:hover--tertiary-100\@xl:hover  { &,&:visited { color: $color-fsa-tertiary-100 !important;  } }
-      &\:hover--aqua-900\@xl:hover      { &,&:visited { color: $color-fsa-aqua-900 !important;      } }
-      &\:hover--aqua\@xl:hover          { &,&:visited { color: $color-fsa-aqua !important;          } }
-      &\:hover--aqua-300\@xl:hover      { &,&:visited { color: $color-fsa-aqua-300 !important;      } }
-      &\:hover--aqua-200\@xl:hover      { &,&:visited { color: $color-fsa-aqua-200 !important;      } }
-      &\:hover--aqua-100\@xl:hover      { &,&:visited { color: $color-fsa-aqua-100 !important;      } }
-      &\:hover--red-900\@xl:hover       { &,&:visited { color: $color-fsa-red-900 !important;       } }
-      &\:hover--red\@xl:hover           { &,&:visited { color: $color-fsa-red !important;           } }
-      &\:hover--red-300\@xl:hover       { &,&:visited { color: $color-fsa-red-300 !important;       } }
-      &\:hover--red-200\@xl:hover       { &,&:visited { color: $color-fsa-red-200 !important;       } }
-      &\:hover--red-100\@xl:hover       { &,&:visited { color: $color-fsa-red-100 !important;       } }
-      &\:hover--yellow\@xl:hover        { &,&:visited { color: $color-fsa-yellow !important;        } }
-      &\:hover--yellow-300\@xl:hover    { &,&:visited { color: $color-fsa-yellow-300 !important;    } }
-      &\:hover--yellow-200\@xl:hover    { &,&:visited { color: $color-fsa-yellow-200 !important;    } }
-      &\:hover--yellow-100\@xl:hover    { &,&:visited { color: $color-fsa-yellow-100 !important;    } }
+      &--white\@xl:hover         { &,&:visited { color: $color-fsa-white !important;         } }
+      &--black\@xl:hover         { &,&:visited { color: $color-fsa-black !important;         } }
+      &--primary-900\@xl:hover   { &,&:visited { color: $color-fsa-primary-900 !important;   } }
+      &--primary\@xl:hover       { &,&:visited { color: $color-fsa-primary !important;       } }
+      &--primary-300\@xl:hover   { &,&:visited { color: $color-fsa-primary-300 !important;   } }
+      &--primary-200\@xl:hover   { &,&:visited { color: $color-fsa-primary-200 !important;   } }
+      &--primary-100\@xl:hover   { &,&:visited { color: $color-fsa-primary-100 !important;   } }
+      &--secondary-900\@xl:hover { &,&:visited { color: $color-fsa-secondary-900 !important; } }
+      &--secondary\@xl:hover     { &,&:visited { color: $color-fsa-secondary !important;     } }
+      &--secondary-300\@xl:hover { &,&:visited { color: $color-fsa-secondary-300 !important; } }
+      &--secondary-200\@xl:hover { &,&:visited { color: $color-fsa-secondary-200 !important; } }
+      &--secondary-100\@xl:hover { &,&:visited { color: $color-fsa-secondary-100 !important; } }
+      &--tertiary-900\@xl:hover  { &,&:visited { color: $color-fsa-tertiary-900 !important;  } }
+      &--tertiary\@xl:hover      { &,&:visited { color: $color-fsa-tertiary !important;      } }
+      &--tertiary-300\@xl:hover  { &,&:visited { color: $color-fsa-tertiary-300 !important;  } }
+      &--tertiary-200\@xl:hover  { &,&:visited { color: $color-fsa-tertiary-200 !important;  } }
+      &--tertiary-100\@xl:hover  { &,&:visited { color: $color-fsa-tertiary-100 !important;  } }
+      &--aqua-900\@xl:hover      { &,&:visited { color: $color-fsa-aqua-900 !important;      } }
+      &--aqua\@xl:hover          { &,&:visited { color: $color-fsa-aqua !important;          } }
+      &--aqua-300\@xl:hover      { &,&:visited { color: $color-fsa-aqua-300 !important;      } }
+      &--aqua-200\@xl:hover      { &,&:visited { color: $color-fsa-aqua-200 !important;      } }
+      &--aqua-100\@xl:hover      { &,&:visited { color: $color-fsa-aqua-100 !important;      } }
+      &--red-900\@xl:hover       { &,&:visited { color: $color-fsa-red-900 !important;       } }
+      &--red\@xl:hover           { &,&:visited { color: $color-fsa-red !important;           } }
+      &--red-300\@xl:hover       { &,&:visited { color: $color-fsa-red-300 !important;       } }
+      &--red-200\@xl:hover       { &,&:visited { color: $color-fsa-red-200 !important;       } }
+      &--red-100\@xl:hover       { &,&:visited { color: $color-fsa-red-100 !important;       } }
+      &--yellow\@xl:hover        { &,&:visited { color: $color-fsa-yellow !important;        } }
+      &--yellow-300\@xl:hover    { &,&:visited { color: $color-fsa-yellow-300 !important;    } }
+      &--yellow-200\@xl:hover    { &,&:visited { color: $color-fsa-yellow-200 !important;    } }
+      &--yellow-100\@xl:hover    { &,&:visited { color: $color-fsa-yellow-100 !important;    } }
 
     }
 
@@ -1563,40 +1563,40 @@
   }
 
   // Hover
-  & {
-    &\:hover--white:hover          { background-color: $color-fsa-white !important }
-    &\:hover--black:hover          { background-color: $color-fsa-black !important }
-    &\:hover--base:hover           { background-color: $color-fsa-base-bg !important }
-    &\:hover--transparent:hover    { background-color: transparent !important }
-    &\:hover--primary:hover        { background-color: $color-fsa-primary !important }
-    &\:hover--primary-300:hover    { background-color: $color-fsa-primary-300 !important }
-    &\:hover--primary-200:hover    { background-color: $color-fsa-primary-200 !important }
-    &\:hover--primary-100:hover    { background-color: $color-fsa-primary-100 !important }
-    &\:hover--primary-900:hover    { background-color: $color-fsa-primary-900 !important }
-    &\:hover--secondary:hover      { background-color: $color-fsa-secondary !important }
-    &\:hover--secondary-300:hover  { background-color: $color-fsa-secondary-300 !important }
-    &\:hover--secondary-200:hover  { background-color: $color-fsa-secondary-200 !important }
-    &\:hover--secondary-100:hover  { background-color: $color-fsa-secondary-100 !important }
-    &\:hover--secondary-900:hover  { background-color: $color-fsa-secondary-900 !important }
-    &\:hover--tertiary:hover       { background-color: $color-fsa-tertiary !important }
-    &\:hover--tertiary-300:hover   { background-color: $color-fsa-tertiary-300 !important }
-    &\:hover--tertiary-200:hover   { background-color: $color-fsa-tertiary-200 !important }
-    &\:hover--tertiary-100:hover   { background-color: $color-fsa-tertiary-100 !important }
-    &\:hover--tertiary-900:hover   { background-color: $color-fsa-tertiary-900 !important }
-    &\:hover--aqua:hover           { background-color: $color-fsa-aqua !important }
-    &\:hover--aqua-300:hover       { background-color: $color-fsa-aqua-300 !important }
-    &\:hover--aqua-200:hover       { background-color: $color-fsa-aqua-200 !important }
-    &\:hover--aqua-100:hover       { background-color: $color-fsa-aqua-100 !important }
-    &\:hover--aqua-900:hover       { background-color: $color-fsa-aqua-900 !important }
-    &\:hover--red:hover            { background-color: $color-fsa-red !important }
-    &\:hover--red-300:hover        { background-color: $color-fsa-red-300 !important }
-    &\:hover--red-200:hover        { background-color: $color-fsa-red-200 !important }
-    &\:hover--red-100:hover        { background-color: $color-fsa-red-100 !important }
-    &\:hover--red-900:hover        { background-color: $color-fsa-red-900 !important }
-    &\:hover--yellow:hover         { background-color: $color-fsa-yellow !important }
-    &\:hover--yellow-300:hover     { background-color: $color-fsa-yellow-300 !important }
-    &\:hover--yellow-200:hover     { background-color: $color-fsa-yellow-200 !important }
-    &\:hover--yellow-100:hover     { background-color: $color-fsa-yellow-100 !important }
+  &\:hover {
+    &--white:hover          { background-color: $color-fsa-white !important }
+    &--black:hover          { background-color: $color-fsa-black !important }
+    &--base:hover           { background-color: $color-fsa-base-bg !important }
+    &--transparent:hover    { background-color: transparent !important }
+    &--primary:hover        { background-color: $color-fsa-primary !important }
+    &--primary-300:hover    { background-color: $color-fsa-primary-300 !important }
+    &--primary-200:hover    { background-color: $color-fsa-primary-200 !important }
+    &--primary-100:hover    { background-color: $color-fsa-primary-100 !important }
+    &--primary-900:hover    { background-color: $color-fsa-primary-900 !important }
+    &--secondary:hover      { background-color: $color-fsa-secondary !important }
+    &--secondary-300:hover  { background-color: $color-fsa-secondary-300 !important }
+    &--secondary-200:hover  { background-color: $color-fsa-secondary-200 !important }
+    &--secondary-100:hover  { background-color: $color-fsa-secondary-100 !important }
+    &--secondary-900:hover  { background-color: $color-fsa-secondary-900 !important }
+    &--tertiary:hover       { background-color: $color-fsa-tertiary !important }
+    &--tertiary-300:hover   { background-color: $color-fsa-tertiary-300 !important }
+    &--tertiary-200:hover   { background-color: $color-fsa-tertiary-200 !important }
+    &--tertiary-100:hover   { background-color: $color-fsa-tertiary-100 !important }
+    &--tertiary-900:hover   { background-color: $color-fsa-tertiary-900 !important }
+    &--aqua:hover           { background-color: $color-fsa-aqua !important }
+    &--aqua-300:hover       { background-color: $color-fsa-aqua-300 !important }
+    &--aqua-200:hover       { background-color: $color-fsa-aqua-200 !important }
+    &--aqua-100:hover       { background-color: $color-fsa-aqua-100 !important }
+    &--aqua-900:hover       { background-color: $color-fsa-aqua-900 !important }
+    &--red:hover            { background-color: $color-fsa-red !important }
+    &--red-300:hover        { background-color: $color-fsa-red-300 !important }
+    &--red-200:hover        { background-color: $color-fsa-red-200 !important }
+    &--red-100:hover        { background-color: $color-fsa-red-100 !important }
+    &--red-900:hover        { background-color: $color-fsa-red-900 !important }
+    &--yellow:hover         { background-color: $color-fsa-yellow !important }
+    &--yellow-300:hover     { background-color: $color-fsa-yellow-300 !important }
+    &--yellow-200:hover     { background-color: $color-fsa-yellow-200 !important }
+    &--yellow-100:hover     { background-color: $color-fsa-yellow-100 !important }
   }
 
   // Responsive
@@ -1640,40 +1640,40 @@
     }
 
     // Hover
-    & {
-      &\:hover--white\@s:hover          { background-color: $color-fsa-white !important }
-      &\:hover--black\@s:hover          { background-color: $color-fsa-black !important }
-      &\:hover--base\@s:hover           { background-color: $color-fsa-base-bg !important }
-      &\:hover--transparent\@s:hover    { background-color: transparent !important }
-      &\:hover--primary\@s:hover        { background-color: $color-fsa-primary !important }
-      &\:hover--primary-300\@s:hover    { background-color: $color-fsa-primary-300 !important }
-      &\:hover--primary-200\@s:hover    { background-color: $color-fsa-primary-200 !important }
-      &\:hover--primary-100\@s:hover    { background-color: $color-fsa-primary-100 !important }
-      &\:hover--primary-900\@s:hover    { background-color: $color-fsa-primary-900 !important }
-      &\:hover--secondary\@s:hover      { background-color: $color-fsa-secondary !important }
-      &\:hover--secondary-300\@s:hover  { background-color: $color-fsa-secondary-300 !important }
-      &\:hover--secondary-200\@s:hover  { background-color: $color-fsa-secondary-200 !important }
-      &\:hover--secondary-100\@s:hover  { background-color: $color-fsa-secondary-100 !important }
-      &\:hover--secondary-900\@s:hover  { background-color: $color-fsa-secondary-900 !important }
-      &\:hover--tertiary\@s:hover       { background-color: $color-fsa-tertiary !important }
-      &\:hover--tertiary-300\@s:hover   { background-color: $color-fsa-tertiary-300 !important }
-      &\:hover--tertiary-200\@s:hover   { background-color: $color-fsa-tertiary-200 !important }
-      &\:hover--tertiary-100\@s:hover   { background-color: $color-fsa-tertiary-100 !important }
-      &\:hover--tertiary-900\@s:hover   { background-color: $color-fsa-tertiary-900 !important }
-      &\:hover--aqua\@s:hover           { background-color: $color-fsa-aqua !important }
-      &\:hover--aqua-300\@s:hover       { background-color: $color-fsa-aqua-300 !important }
-      &\:hover--aqua-200\@s:hover       { background-color: $color-fsa-aqua-200 !important }
-      &\:hover--aqua-100\@s:hover       { background-color: $color-fsa-aqua-100 !important }
-      &\:hover--aqua-900\@s:hover       { background-color: $color-fsa-aqua-900 !important }
-      &\:hover--red\@s:hover            { background-color: $color-fsa-red !important }
-      &\:hover--red-300\@s:hover        { background-color: $color-fsa-red-300 !important }
-      &\:hover--red-200\@s:hover        { background-color: $color-fsa-red-200 !important }
-      &\:hover--red-100\@s:hover        { background-color: $color-fsa-red-100 !important }
-      &\:hover--red-900\@s:hover        { background-color: $color-fsa-red-900 !important }
-      &\:hover--yellow\@s:hover         { background-color: $color-fsa-yellow !important }
-      &\:hover--yellow-300\@s:hover     { background-color: $color-fsa-yellow-300 !important }
-      &\:hover--yellow-200\@s:hover     { background-color: $color-fsa-yellow-200 !important }
-      &\:hover--yellow-100\@s:hover     { background-color: $color-fsa-yellow-100 !important }
+    &\:hover {
+      &--white\@s:hover          { background-color: $color-fsa-white !important }
+      &--black\@s:hover          { background-color: $color-fsa-black !important }
+      &--base\@s:hover           { background-color: $color-fsa-base-bg !important }
+      &--transparent\@s:hover    { background-color: transparent !important }
+      &--primary\@s:hover        { background-color: $color-fsa-primary !important }
+      &--primary-300\@s:hover    { background-color: $color-fsa-primary-300 !important }
+      &--primary-200\@s:hover    { background-color: $color-fsa-primary-200 !important }
+      &--primary-100\@s:hover    { background-color: $color-fsa-primary-100 !important }
+      &--primary-900\@s:hover    { background-color: $color-fsa-primary-900 !important }
+      &--secondary\@s:hover      { background-color: $color-fsa-secondary !important }
+      &--secondary-300\@s:hover  { background-color: $color-fsa-secondary-300 !important }
+      &--secondary-200\@s:hover  { background-color: $color-fsa-secondary-200 !important }
+      &--secondary-100\@s:hover  { background-color: $color-fsa-secondary-100 !important }
+      &--secondary-900\@s:hover  { background-color: $color-fsa-secondary-900 !important }
+      &--tertiary\@s:hover       { background-color: $color-fsa-tertiary !important }
+      &--tertiary-300\@s:hover   { background-color: $color-fsa-tertiary-300 !important }
+      &--tertiary-200\@s:hover   { background-color: $color-fsa-tertiary-200 !important }
+      &--tertiary-100\@s:hover   { background-color: $color-fsa-tertiary-100 !important }
+      &--tertiary-900\@s:hover   { background-color: $color-fsa-tertiary-900 !important }
+      &--aqua\@s:hover           { background-color: $color-fsa-aqua !important }
+      &--aqua-300\@s:hover       { background-color: $color-fsa-aqua-300 !important }
+      &--aqua-200\@s:hover       { background-color: $color-fsa-aqua-200 !important }
+      &--aqua-100\@s:hover       { background-color: $color-fsa-aqua-100 !important }
+      &--aqua-900\@s:hover       { background-color: $color-fsa-aqua-900 !important }
+      &--red\@s:hover            { background-color: $color-fsa-red !important }
+      &--red-300\@s:hover        { background-color: $color-fsa-red-300 !important }
+      &--red-200\@s:hover        { background-color: $color-fsa-red-200 !important }
+      &--red-100\@s:hover        { background-color: $color-fsa-red-100 !important }
+      &--red-900\@s:hover        { background-color: $color-fsa-red-900 !important }
+      &--yellow\@s:hover         { background-color: $color-fsa-yellow !important }
+      &--yellow-300\@s:hover     { background-color: $color-fsa-yellow-300 !important }
+      &--yellow-200\@s:hover     { background-color: $color-fsa-yellow-200 !important }
+      &--yellow-100\@s:hover     { background-color: $color-fsa-yellow-100 !important }
     }
 
   }
@@ -1718,40 +1718,40 @@
     }
 
     // Hover
-    & {
-      &\:hover--white\@m:hover          { background-color: $color-fsa-white !important }
-      &\:hover--black\@m:hover          { background-color: $color-fsa-black !important }
-      &\:hover--base\@m:hover           { background-color: $color-fsa-base-bg !important }
-      &\:hover--transparent\@m:hover    { background-color: transparent !important }
-      &\:hover--primary\@m:hover        { background-color: $color-fsa-primary !important }
-      &\:hover--primary-300\@m:hover    { background-color: $color-fsa-primary-300 !important }
-      &\:hover--primary-200\@m:hover    { background-color: $color-fsa-primary-200 !important }
-      &\:hover--primary-100\@m:hover    { background-color: $color-fsa-primary-100 !important }
-      &\:hover--primary-900\@m:hover    { background-color: $color-fsa-primary-900 !important }
-      &\:hover--secondary\@m:hover      { background-color: $color-fsa-secondary !important }
-      &\:hover--secondary-300\@m:hover  { background-color: $color-fsa-secondary-300 !important }
-      &\:hover--secondary-200\@m:hover  { background-color: $color-fsa-secondary-200 !important }
-      &\:hover--secondary-100\@m:hover  { background-color: $color-fsa-secondary-100 !important }
-      &\:hover--secondary-900\@m:hover  { background-color: $color-fsa-secondary-900 !important }
-      &\:hover--tertiary\@m:hover       { background-color: $color-fsa-tertiary !important }
-      &\:hover--tertiary-300\@m:hover   { background-color: $color-fsa-tertiary-300 !important }
-      &\:hover--tertiary-200\@m:hover   { background-color: $color-fsa-tertiary-200 !important }
-      &\:hover--tertiary-100\@m:hover   { background-color: $color-fsa-tertiary-100 !important }
-      &\:hover--tertiary-900\@m:hover   { background-color: $color-fsa-tertiary-900 !important }
-      &\:hover--aqua\@m:hover           { background-color: $color-fsa-aqua !important }
-      &\:hover--aqua-300\@m:hover       { background-color: $color-fsa-aqua-300 !important }
-      &\:hover--aqua-200\@m:hover       { background-color: $color-fsa-aqua-200 !important }
-      &\:hover--aqua-100\@m:hover       { background-color: $color-fsa-aqua-100 !important }
-      &\:hover--aqua-900\@m:hover       { background-color: $color-fsa-aqua-900 !important }
-      &\:hover--red\@m:hover            { background-color: $color-fsa-red !important }
-      &\:hover--red-300\@m:hover        { background-color: $color-fsa-red-300 !important }
-      &\:hover--red-200\@m:hover        { background-color: $color-fsa-red-200 !important }
-      &\:hover--red-100\@m:hover        { background-color: $color-fsa-red-100 !important }
-      &\:hover--red-900\@m:hover        { background-color: $color-fsa-red-900 !important }
-      &\:hover--yellow\@m:hover         { background-color: $color-fsa-yellow !important }
-      &\:hover--yellow-300\@m:hover     { background-color: $color-fsa-yellow-300 !important }
-      &\:hover--yellow-200\@m:hover     { background-color: $color-fsa-yellow-200 !important }
-      &\:hover--yellow-100\@m:hover     { background-color: $color-fsa-yellow-100 !important }
+    &\:hover {
+      &--white\@m:hover          { background-color: $color-fsa-white !important }
+      &--black\@m:hover          { background-color: $color-fsa-black !important }
+      &--base\@m:hover           { background-color: $color-fsa-base-bg !important }
+      &--transparent\@m:hover    { background-color: transparent !important }
+      &--primary\@m:hover        { background-color: $color-fsa-primary !important }
+      &--primary-300\@m:hover    { background-color: $color-fsa-primary-300 !important }
+      &--primary-200\@m:hover    { background-color: $color-fsa-primary-200 !important }
+      &--primary-100\@m:hover    { background-color: $color-fsa-primary-100 !important }
+      &--primary-900\@m:hover    { background-color: $color-fsa-primary-900 !important }
+      &--secondary\@m:hover      { background-color: $color-fsa-secondary !important }
+      &--secondary-300\@m:hover  { background-color: $color-fsa-secondary-300 !important }
+      &--secondary-200\@m:hover  { background-color: $color-fsa-secondary-200 !important }
+      &--secondary-100\@m:hover  { background-color: $color-fsa-secondary-100 !important }
+      &--secondary-900\@m:hover  { background-color: $color-fsa-secondary-900 !important }
+      &--tertiary\@m:hover       { background-color: $color-fsa-tertiary !important }
+      &--tertiary-300\@m:hover   { background-color: $color-fsa-tertiary-300 !important }
+      &--tertiary-200\@m:hover   { background-color: $color-fsa-tertiary-200 !important }
+      &--tertiary-100\@m:hover   { background-color: $color-fsa-tertiary-100 !important }
+      &--tertiary-900\@m:hover   { background-color: $color-fsa-tertiary-900 !important }
+      &--aqua\@m:hover           { background-color: $color-fsa-aqua !important }
+      &--aqua-300\@m:hover       { background-color: $color-fsa-aqua-300 !important }
+      &--aqua-200\@m:hover       { background-color: $color-fsa-aqua-200 !important }
+      &--aqua-100\@m:hover       { background-color: $color-fsa-aqua-100 !important }
+      &--aqua-900\@m:hover       { background-color: $color-fsa-aqua-900 !important }
+      &--red\@m:hover            { background-color: $color-fsa-red !important }
+      &--red-300\@m:hover        { background-color: $color-fsa-red-300 !important }
+      &--red-200\@m:hover        { background-color: $color-fsa-red-200 !important }
+      &--red-100\@m:hover        { background-color: $color-fsa-red-100 !important }
+      &--red-900\@m:hover        { background-color: $color-fsa-red-900 !important }
+      &--yellow\@m:hover         { background-color: $color-fsa-yellow !important }
+      &--yellow-300\@m:hover     { background-color: $color-fsa-yellow-300 !important }
+      &--yellow-200\@m:hover     { background-color: $color-fsa-yellow-200 !important }
+      &--yellow-100\@m:hover     { background-color: $color-fsa-yellow-100 !important }
     }
 
   }
@@ -1796,40 +1796,40 @@
     }
 
     // Hover
-    & {
-      &\:hover--white\@l:hover          { background-color: $color-fsa-white !important }
-      &\:hover--black\@l:hover          { background-color: $color-fsa-black !important }
-      &\:hover--base\@l:hover           { background-color: $color-fsa-base-bg !important }
-      &\:hover--transparent\@l:hover    { background-color: transparent !important }
-      &\:hover--primary\@l:hover        { background-color: $color-fsa-primary !important }
-      &\:hover--primary-300\@l:hover    { background-color: $color-fsa-primary-300 !important }
-      &\:hover--primary-200\@l:hover    { background-color: $color-fsa-primary-200 !important }
-      &\:hover--primary-100\@l:hover    { background-color: $color-fsa-primary-100 !important }
-      &\:hover--primary-900\@l:hover    { background-color: $color-fsa-primary-900 !important }
-      &\:hover--secondary\@l:hover      { background-color: $color-fsa-secondary !important }
-      &\:hover--secondary-300\@l:hover  { background-color: $color-fsa-secondary-300 !important }
-      &\:hover--secondary-200\@l:hover  { background-color: $color-fsa-secondary-200 !important }
-      &\:hover--secondary-100\@l:hover  { background-color: $color-fsa-secondary-100 !important }
-      &\:hover--secondary-900\@l:hover  { background-color: $color-fsa-secondary-900 !important }
-      &\:hover--tertiary\@l:hover       { background-color: $color-fsa-tertiary !important }
-      &\:hover--tertiary-300\@l:hover   { background-color: $color-fsa-tertiary-300 !important }
-      &\:hover--tertiary-200\@l:hover   { background-color: $color-fsa-tertiary-200 !important }
-      &\:hover--tertiary-100\@l:hover   { background-color: $color-fsa-tertiary-100 !important }
-      &\:hover--tertiary-900\@l:hover   { background-color: $color-fsa-tertiary-900 !important }
-      &\:hover--aqua\@l:hover           { background-color: $color-fsa-aqua !important }
-      &\:hover--aqua-300\@l:hover       { background-color: $color-fsa-aqua-300 !important }
-      &\:hover--aqua-200\@l:hover       { background-color: $color-fsa-aqua-200 !important }
-      &\:hover--aqua-100\@l:hover       { background-color: $color-fsa-aqua-100 !important }
-      &\:hover--aqua-900\@l:hover       { background-color: $color-fsa-aqua-900 !important }
-      &\:hover--red\@l:hover            { background-color: $color-fsa-red !important }
-      &\:hover--red-300\@l:hover        { background-color: $color-fsa-red-300 !important }
-      &\:hover--red-200\@l:hover        { background-color: $color-fsa-red-200 !important }
-      &\:hover--red-100\@l:hover        { background-color: $color-fsa-red-100 !important }
-      &\:hover--red-900\@l:hover        { background-color: $color-fsa-red-900 !important }
-      &\:hover--yellow\@l:hover         { background-color: $color-fsa-yellow !important }
-      &\:hover--yellow-300\@l:hover     { background-color: $color-fsa-yellow-300 !important }
-      &\:hover--yellow-200\@l:hover     { background-color: $color-fsa-yellow-200 !important }
-      &\:hover--yellow-100\@l:hover     { background-color: $color-fsa-yellow-100 !important }
+    &\:hover {
+      &--white\@l:hover          { background-color: $color-fsa-white !important }
+      &--black\@l:hover          { background-color: $color-fsa-black !important }
+      &--base\@l:hover           { background-color: $color-fsa-base-bg !important }
+      &--transparent\@l:hover    { background-color: transparent !important }
+      &--primary\@l:hover        { background-color: $color-fsa-primary !important }
+      &--primary-300\@l:hover    { background-color: $color-fsa-primary-300 !important }
+      &--primary-200\@l:hover    { background-color: $color-fsa-primary-200 !important }
+      &--primary-100\@l:hover    { background-color: $color-fsa-primary-100 !important }
+      &--primary-900\@l:hover    { background-color: $color-fsa-primary-900 !important }
+      &--secondary\@l:hover      { background-color: $color-fsa-secondary !important }
+      &--secondary-300\@l:hover  { background-color: $color-fsa-secondary-300 !important }
+      &--secondary-200\@l:hover  { background-color: $color-fsa-secondary-200 !important }
+      &--secondary-100\@l:hover  { background-color: $color-fsa-secondary-100 !important }
+      &--secondary-900\@l:hover  { background-color: $color-fsa-secondary-900 !important }
+      &--tertiary\@l:hover       { background-color: $color-fsa-tertiary !important }
+      &--tertiary-300\@l:hover   { background-color: $color-fsa-tertiary-300 !important }
+      &--tertiary-200\@l:hover   { background-color: $color-fsa-tertiary-200 !important }
+      &--tertiary-100\@l:hover   { background-color: $color-fsa-tertiary-100 !important }
+      &--tertiary-900\@l:hover   { background-color: $color-fsa-tertiary-900 !important }
+      &--aqua\@l:hover           { background-color: $color-fsa-aqua !important }
+      &--aqua-300\@l:hover       { background-color: $color-fsa-aqua-300 !important }
+      &--aqua-200\@l:hover       { background-color: $color-fsa-aqua-200 !important }
+      &--aqua-100\@l:hover       { background-color: $color-fsa-aqua-100 !important }
+      &--aqua-900\@l:hover       { background-color: $color-fsa-aqua-900 !important }
+      &--red\@l:hover            { background-color: $color-fsa-red !important }
+      &--red-300\@l:hover        { background-color: $color-fsa-red-300 !important }
+      &--red-200\@l:hover        { background-color: $color-fsa-red-200 !important }
+      &--red-100\@l:hover        { background-color: $color-fsa-red-100 !important }
+      &--red-900\@l:hover        { background-color: $color-fsa-red-900 !important }
+      &--yellow\@l:hover         { background-color: $color-fsa-yellow !important }
+      &--yellow-300\@l:hover     { background-color: $color-fsa-yellow-300 !important }
+      &--yellow-200\@l:hover     { background-color: $color-fsa-yellow-200 !important }
+      &--yellow-100\@l:hover     { background-color: $color-fsa-yellow-100 !important }
     }
 
   }
@@ -1874,40 +1874,40 @@
     }
 
     // Hover
-    & {
-      &\:hover--white\@xl:hover          { background-color: $color-fsa-white !important }
-      &\:hover--black\@xl:hover          { background-color: $color-fsa-black !important }
-      &\:hover--base\@xl:hover           { background-color: $color-fsa-base-bg !important }
-      &\:hover--transparent\@xl:hover    { background-color: transparent !important }
-      &\:hover--primary\@xl:hover        { background-color: $color-fsa-primary !important }
-      &\:hover--primary-300\@xl:hover    { background-color: $color-fsa-primary-300 !important }
-      &\:hover--primary-200\@xl:hover    { background-color: $color-fsa-primary-200 !important }
-      &\:hover--primary-100\@xl:hover    { background-color: $color-fsa-primary-100 !important }
-      &\:hover--primary-900\@xl:hover    { background-color: $color-fsa-primary-900 !important }
-      &\:hover--secondary\@xl:hover      { background-color: $color-fsa-secondary !important }
-      &\:hover--secondary-300\@xl:hover  { background-color: $color-fsa-secondary-300 !important }
-      &\:hover--secondary-200\@xl:hover  { background-color: $color-fsa-secondary-200 !important }
-      &\:hover--secondary-100\@xl:hover  { background-color: $color-fsa-secondary-100 !important }
-      &\:hover--secondary-900\@xl:hover  { background-color: $color-fsa-secondary-900 !important }
-      &\:hover--tertiary\@xl:hover       { background-color: $color-fsa-tertiary !important }
-      &\:hover--tertiary-300\@xl:hover   { background-color: $color-fsa-tertiary-300 !important }
-      &\:hover--tertiary-200\@xl:hover   { background-color: $color-fsa-tertiary-200 !important }
-      &\:hover--tertiary-100\@xl:hover   { background-color: $color-fsa-tertiary-100 !important }
-      &\:hover--tertiary-900\@xl:hover   { background-color: $color-fsa-tertiary-900 !important }
-      &\:hover--aqua\@xl:hover           { background-color: $color-fsa-aqua !important }
-      &\:hover--aqua-300\@xl:hover       { background-color: $color-fsa-aqua-300 !important }
-      &\:hover--aqua-200\@xl:hover       { background-color: $color-fsa-aqua-200 !important }
-      &\:hover--aqua-100\@xl:hover       { background-color: $color-fsa-aqua-100 !important }
-      &\:hover--aqua-900\@xl:hover       { background-color: $color-fsa-aqua-900 !important }
-      &\:hover--red\@xl:hover            { background-color: $color-fsa-red !important }
-      &\:hover--red-300\@xl:hover        { background-color: $color-fsa-red-300 !important }
-      &\:hover--red-200\@xl:hover        { background-color: $color-fsa-red-200 !important }
-      &\:hover--red-100\@xl:hover        { background-color: $color-fsa-red-100 !important }
-      &\:hover--red-900\@xl:hover        { background-color: $color-fsa-red-900 !important }
-      &\:hover--yellow\@xl:hover         { background-color: $color-fsa-yellow !important }
-      &\:hover--yellow-300\@xl:hover     { background-color: $color-fsa-yellow-300 !important }
-      &\:hover--yellow-200\@xl:hover     { background-color: $color-fsa-yellow-200 !important }
-      &\:hover--yellow-100\@xl:hover     { background-color: $color-fsa-yellow-100 !important }
+    &\:hover {
+      &--white\@xl:hover          { background-color: $color-fsa-white !important }
+      &--black\@xl:hover          { background-color: $color-fsa-black !important }
+      &--base\@xl:hover           { background-color: $color-fsa-base-bg !important }
+      &--transparent\@xl:hover    { background-color: transparent !important }
+      &--primary\@xl:hover        { background-color: $color-fsa-primary !important }
+      &--primary-300\@xl:hover    { background-color: $color-fsa-primary-300 !important }
+      &--primary-200\@xl:hover    { background-color: $color-fsa-primary-200 !important }
+      &--primary-100\@xl:hover    { background-color: $color-fsa-primary-100 !important }
+      &--primary-900\@xl:hover    { background-color: $color-fsa-primary-900 !important }
+      &--secondary\@xl:hover      { background-color: $color-fsa-secondary !important }
+      &--secondary-300\@xl:hover  { background-color: $color-fsa-secondary-300 !important }
+      &--secondary-200\@xl:hover  { background-color: $color-fsa-secondary-200 !important }
+      &--secondary-100\@xl:hover  { background-color: $color-fsa-secondary-100 !important }
+      &--secondary-900\@xl:hover  { background-color: $color-fsa-secondary-900 !important }
+      &--tertiary\@xl:hover       { background-color: $color-fsa-tertiary !important }
+      &--tertiary-300\@xl:hover   { background-color: $color-fsa-tertiary-300 !important }
+      &--tertiary-200\@xl:hover   { background-color: $color-fsa-tertiary-200 !important }
+      &--tertiary-100\@xl:hover   { background-color: $color-fsa-tertiary-100 !important }
+      &--tertiary-900\@xl:hover   { background-color: $color-fsa-tertiary-900 !important }
+      &--aqua\@xl:hover           { background-color: $color-fsa-aqua !important }
+      &--aqua-300\@xl:hover       { background-color: $color-fsa-aqua-300 !important }
+      &--aqua-200\@xl:hover       { background-color: $color-fsa-aqua-200 !important }
+      &--aqua-100\@xl:hover       { background-color: $color-fsa-aqua-100 !important }
+      &--aqua-900\@xl:hover       { background-color: $color-fsa-aqua-900 !important }
+      &--red\@xl:hover            { background-color: $color-fsa-red !important }
+      &--red-300\@xl:hover        { background-color: $color-fsa-red-300 !important }
+      &--red-200\@xl:hover        { background-color: $color-fsa-red-200 !important }
+      &--red-100\@xl:hover        { background-color: $color-fsa-red-100 !important }
+      &--red-900\@xl:hover        { background-color: $color-fsa-red-900 !important }
+      &--yellow\@xl:hover         { background-color: $color-fsa-yellow !important }
+      &--yellow-300\@xl:hover     { background-color: $color-fsa-yellow-300 !important }
+      &--yellow-200\@xl:hover     { background-color: $color-fsa-yellow-200 !important }
+      &--yellow-100\@xl:hover     { background-color: $color-fsa-yellow-100 !important }
     }
 
   }
