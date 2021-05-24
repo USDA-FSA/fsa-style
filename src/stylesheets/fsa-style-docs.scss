@@ -869,8 +869,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   @include breakpoint(L)   {
     text-align: center;
     display: block;
-    outline: 4px solid orangered;
-    outline-offset: 4px;
   }
 }
 
