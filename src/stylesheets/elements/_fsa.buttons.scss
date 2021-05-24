@@ -358,7 +358,7 @@ $button-plain-border-width: 0;
     // scss-lint:disable ImportantRule
     text-decoration: none; // ¯\_(ツ)_/¯
 
-    &:hover {
+    &:hover:not([disabled]) {
       color: $color-fsa-link-hover;
       background-color: $button-plain-hover;
     }
@@ -370,7 +370,7 @@ $button-plain-border-width: 0;
       color: $button-plain-text;
     }
 
-    &:active {
+    &:active:not([disabled]) {
       color: $color-fsa-base;
       background-color: $button-plain-active;
       box-shadow: none;
