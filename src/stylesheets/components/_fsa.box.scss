@@ -8,7 +8,6 @@ $box-padding: $size-medium;
     background-color: $box-bgcolor-default;
     border-radius: 0;
     padding: $box-padding;
-    transition: all .23s ease-in-out;
     > :first-child {
       margin-top: 0;
     }
