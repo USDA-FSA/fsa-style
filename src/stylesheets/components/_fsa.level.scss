@@ -119,23 +119,10 @@ $level: fsa-level;
   [role=link].#{$level},
 [role=button].#{$level} {
 
-  & {
-    color: $color-fsa-base;
-    text-decoration: none;
-  }
-
-  // &:focus {
-  //   background-color: $color-fsa-tertiary-100;
-  //   outline-offset: 3px;
-  // }
-
-  // &:hover {
-  //   background-color: $color-fsa-tertiary-100;
-  //   cursor: pointer;
-  // }
-
+  &,
   &:visited {
     color: $color-fsa-base;
+    text-decoration: none;
   }
 
 }
