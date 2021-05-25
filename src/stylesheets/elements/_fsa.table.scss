@@ -153,8 +153,8 @@ th {
   &__sort {
 
     @include reset-button;
-    display: block;
-    width: 100%;
+    display: inline-flex;
+    align-items: center;
 
     .fsa-text-align--right & {
       text-align: right;
@@ -168,16 +168,17 @@ th {
 
     &:after {
       content: '';
-      background-size: $icon-size-1;
-      width: $icon-size-1;
-      height: $icon-size-1;
-      display: inline-block;
-      vertical-align: middle;
-      position: relative;
-      top: -2px;
+      background-size: $icon-size-2;
+      width: $icon-size-2;
+      height: $icon-size-2;
       margin-left: 2px;
-      opacity: .5;
+      opacity: .4;
       background-image: url('#{$image-path}/material-design-icons/ic_expand_less_24px.svg');
+    }
+
+    &:focus:after,
+    &:hover:after {
+      opacity: 1;
     }
 
     &--descending:after,
@@ -191,12 +192,6 @@ th {
 
     &--descending:after {
       background-image: url('#{$image-path}/material-design-icons/ic_expand_more_24px.svg');
-    }
-
-    &:hover:not(.fsa-table__sort--descending, .fsa-table__sort--ascending) {
-      &:after {
-        opacity: 1;
-      }
     }
 
   }

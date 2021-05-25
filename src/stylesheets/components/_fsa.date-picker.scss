@@ -64,7 +64,7 @@ $dateCalendar: fsa-date-calendar;
       top: -1px;
       vertical-align: middle;
       background-image: url('#{$image-path}/material-design-icons/ic_calendar_today_24px.svg');
-      background-size: $size-medium;
+      background-size: ($size-medium + $size-base);
       background-repeat: no-repeat;
       background-position: center;
     }
@@ -252,7 +252,7 @@ $dateCalendar: fsa-date-calendar;
       padding: 0 $size-default $size-base $size-default;
       background-repeat: no-repeat;
       background-position: 50%;
-      background-size: $size-medium;
+      background-size: ($size-medium + .2rem);
     }
 
     &:hover {
@@ -273,7 +273,7 @@ $dateCalendar: fsa-date-calendar;
   &__prev-but {
 
     &--month {
-      background-image: url('#{$image-path}/material-design-icons/ic_chevron_left_24px.svg');
+      background-image: url('#{$image-path}/material-design-icons/ic_navigate_before_24px.svg');
     }
 
     &--year {
@@ -286,7 +286,7 @@ $dateCalendar: fsa-date-calendar;
   &__next-but {
 
     &--month {
-      background-image: url('#{$image-path}/material-design-icons/ic_chevron_right_24px.svg');
+      background-image: url('#{$image-path}/material-design-icons/ic_navigate_next_24px.svg');
     }
 
     &--year {

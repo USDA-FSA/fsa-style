@@ -77,9 +77,9 @@
         width: $size-default;
         height: $size-default;
         margin-right: $size-base;
-        background-image: url('#{$image-path}/chevron-left--link.svg');
-        background-size: 100%; // fallback
-        background-size: contain;
+        background-image: url('#{$image-path}/material-design-icons/ic_navigate_before_24px.svg');
+        background-position: center;
+        background-size: ($size-medium - $size-base);
       }
     }
 

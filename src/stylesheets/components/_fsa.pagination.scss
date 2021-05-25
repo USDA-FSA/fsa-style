@@ -1,7 +1,7 @@
 .fsa-pagination {
 
   $padding: $size-small;
-  $arrow-size: $icon-size-1;
+  $arrow-size: $icon-size-2;
 
   & {
 
@@ -146,7 +146,7 @@
     &--next {
       display: flex;
       align-items: center;
-      gap: $size-small;
+      gap: ($size-base);
       justify-content: center;
       @include breakpoint(M) {
         display: inline-flex;
@@ -162,19 +162,20 @@
     &--previous:before,
     &--next:after {
       content: '';
-      background-position: center;
-      background-repeat: no-repeat;
       display: inline-block;
       width: $arrow-size;
       height: $arrow-size;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: ($arrow-size + $size-small);
     }
 
     &--previous:before {
-      background-image: url('#{$image-path}/material-design-icons/ic_chevron_left_24px.svg');
+      background-image: url('#{$image-path}/material-design-icons/ic_navigate_before_24px.svg');
     }
 
     &--next:after {
-      background-image: url('#{$image-path}/material-design-icons/ic_chevron_right_24px.svg');
+      background-image: url('#{$image-path}/material-design-icons/ic_navigate_next_24px.svg');
     }
 
     &--disabled {

@@ -206,7 +206,7 @@
   &__text {
 
     display: flex;
-    gap: $size-small;
+    gap: $size-base;
     align-items: center;
     padding: ($nav-spacing-unit - $size-base) $nav-spacing-unit;
 
@@ -223,23 +223,14 @@
     // scss-lint:disable SelectorFormat
     .fsa-nav-global__link--has-sub-menu & {
       &:after {
-
         $size: $size-medium;
-
         content: '';
-        display: inline-block;
-        vertical-align: middle;
         width: ($size * .75);
         height: ($size * .75);
+        margin-left: auto;
         background-image: url('#{$image-path}/material-design-icons/ic_expand_more_24px.svg');
-        background-size: 100%;
+        background-size: ($size - $size-base);
         background-repeat: no-repeat;
-
-        @include breakpoint(M) {
-          width: $size;
-          height: $size;
-        }
-
       }
     }
 
