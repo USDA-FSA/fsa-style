@@ -318,7 +318,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
         top: 100%;
         background-color: $color-fsa-primary-900;
         max-height: 50vh;
-        width: 184px;
         border-top: 1em solid $color-fsa-primary;
         padding-top: $size-base;
         padding-bottom: $size-small;
@@ -372,8 +371,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
         background-color: rgba(255, 255, 255, .1);
         margin-top: $size-base;
         margin-bottom: $size-base;
-        box-shadow: 0 -1px 0 0 rgba(0, 0, 0, .2);
-        border-top: 1px solid rgba(255, 255, 255, .2);
         font-weight: $font-bold;
         font-size: $font-size-2;
         text-transform: uppercase;
