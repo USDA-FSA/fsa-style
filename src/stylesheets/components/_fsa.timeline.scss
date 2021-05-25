@@ -71,16 +71,17 @@ $timeline: fsa-timeline;
     & {
       position: absolute;
       padding: $size-base $size-small;
-      left: ($size-small - .1rem);
-      top: -($size-base/2);
-      background-color: $color-fsa-base-bg;
+      left: ($size-default - .1rem);
+      top: -($size-base / 2);
       background-color: $color-fsa-base-bg;
       display: flex;
       justify-content: center;
       align-items: center;
       line-height: 1;
       color: $color-fsa-tertiary;
-
+      height: ($size-medium + $size-base);
+      width: ($size-medium + $size-base);
+      border-radius: $radius-oval;
     }
     .#{$timeline}__item--user & {
       display: none;
