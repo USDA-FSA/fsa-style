@@ -57,7 +57,6 @@
     text-align: right;
     margin-left: auto;
     padding-left: $component-spacing;
-    padding-bottom: ($component-spacing / 4);
 
     @include breakpoint(M) {
       @include font-size(1);

@@ -50,7 +50,6 @@
   &--size-6    { width: $icon-size-6; height: $icon-size-6; }
   &--custom    { --custom-icon-size: $icon-size-1; width: var(--custom-icon-size); height: var(--custom-icon-size); }
 
-
   @include breakpoint(S) {
     &--size-auto\@s  { width: .942em;       height: .942em; }
     &--size-1\@s     { width: $icon-size-1; height: $icon-size-1; }
