@@ -22,6 +22,14 @@ $('body').on('click', '[data-behavior~="toggle-rwd-size"]', function(event) {
     .addClass('fsa-bg:hover--tertiary-100')
   ;
 
+  if ($self.attr('data-size') === 'fullscreen') {
+    $self
+      .closest('.docs__rwd-embed-container')
+      .find('[data-behavior="toggle-rwd-close-fullscreen"')
+      .focus()
+    ;
+  }
+
 })
 
 $('body').on('click', '[data-behavior~="toggle-rwd-close-fullscreen"]', function(event) {
@@ -38,6 +46,7 @@ $('body').on('click', '[data-behavior~="toggle-rwd-close-fullscreen"]', function
 
   $targetComponent
     .find('[data-size="phone"')
+    .focus()
     .click()
   ;
 
