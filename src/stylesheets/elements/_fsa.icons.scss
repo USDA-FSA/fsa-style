@@ -1,22 +1,5 @@
-// TODO: fsa-btn--plain
-//       i.e. fsa-icon--size-4@m (large icon at M breakpoint)
-
-// TODO: Responsive Sizing
-//       i.e. fsa-icon--size-4@m (large icon at M breakpoint)
-
-// TODO: Build steps
-//       particularly optimizing?
-
-// TODO: Remove inline HTML comments e.g. <!-- Font Awesome Free 5.15.2....
-
 // TODO: Attrtibutes
 //       i.e. <svg class="fsa-icon fsa-icon--size-1" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">....
-
-// TODO: Attrtibutes
-//       i.e. <svg class="fsa-icon fsa-icon--size-1" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">....
-
-// TODO: Default font-sizing, EM-based
-//       e.g. 1em when in context of base copy would be 17px, while 1em *within* an <hN> element would be...
 
 .fsa-icon {
 
@@ -43,18 +26,18 @@
 
   }
 
-  &--size-auto { width: .942em;       height: .942em; }
-  &--size-0    { width: $icon-size-0; height: $icon-size-0; }
-  &--size-1    { width: $icon-size-1; height: $icon-size-1; }
-  &--size-2    { width: $icon-size-2; height: $icon-size-2; }
-  &--size-3    { width: $icon-size-3; height: $icon-size-3; }
-  &--size-4    { width: $icon-size-4; height: $icon-size-4; }
-  &--size-5    { width: $icon-size-5; height: $icon-size-5; }
-  &--size-6    { width: $icon-size-6; height: $icon-size-6; }
+  &--size-auto { width: $icon-size-auto; height: $icon-size-auto; }
+  &--size-0    { width: $icon-size-0;    height: $icon-size-0; }
+  &--size-1    { width: $icon-size-1;    height: $icon-size-1; }
+  &--size-2    { width: $icon-size-2;    height: $icon-size-2; }
+  &--size-3    { width: $icon-size-3;    height: $icon-size-3; }
+  &--size-4    { width: $icon-size-4;    height: $icon-size-4; }
+  &--size-5    { width: $icon-size-5;    height: $icon-size-5; }
+  &--size-6    { width: $icon-size-6;    height: $icon-size-6; }
   &--custom    { --custom-icon-size: $icon-size-1; width: var(--custom-icon-size); height: var(--custom-icon-size); }
 
   @include breakpoint(S) {
-    &--size-auto\@s  { width: .942em;       height: .942em; }
+    &--size-auto\@s  { width: $icon-size-auto; height: $icon-size-auto; }
     &--size-1\@s     { width: $icon-size-1; height: $icon-size-1; }
     &--size-2\@s     { width: $icon-size-2; height: $icon-size-2; }
     &--size-3\@s     { width: $icon-size-3; height: $icon-size-3; }
@@ -65,7 +48,7 @@
   }
 
   @include breakpoint(M) {
-    &--size-auto\@m { width: .942em;       height: .942em; }
+    &--size-auto\@m { width: $icon-size-auto; height: $icon-size-auto; }
     &--size-1\@m    { width: $icon-size-1; height: $icon-size-1; }
     &--size-2\@m    { width: $icon-size-2; height: $icon-size-2; }
     &--size-3\@m    { width: $icon-size-3; height: $icon-size-3; }
@@ -76,7 +59,7 @@
   }
 
   @include breakpoint(L) {
-    &--size-auto\@l { width: .942em;       height: .942em; }
+    &--size-auto\@l { width: $icon-size-auto; height: $icon-size-auto; }
     &--size-1\@l    { width: $icon-size-1; height: $icon-size-1; }
     &--size-2\@l    { width: $icon-size-2; height: $icon-size-2; }
     &--size-3\@l    { width: $icon-size-3; height: $icon-size-3; }
@@ -87,7 +70,7 @@
   }
 
   @include breakpoint(XL) {
-    &--size-auto\@xl { width: .942em;       height: .942em; }
+    &--size-auto\@xl { width: $icon-size-auto; height: $icon-size-auto; }
     &--size-1\@xl    { width: $icon-size-1; height: $icon-size-1; }
     &--size-2\@xl    { width: $icon-size-2; height: $icon-size-2; }
     &--size-3\@xl    { width: $icon-size-3; height: $icon-size-3; }

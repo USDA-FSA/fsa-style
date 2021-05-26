@@ -19,13 +19,14 @@ $site-max-width: 1200px;
 // ---------------------------------------------------------------------------
 // Icon sizing
 
-$icon-size-0: $size-base * 3;  // 12px
-$icon-size-1: $size-base * 4.5;// 18px
-$icon-size-2: $size-base * 6;  // 24px
-$icon-size-3: $size-base * 9;  // 36px
-$icon-size-4: $size-base * 12; // 48px
-$icon-size-5: $size-base * 18; // 72px
-$icon-size-6: $size-base * 24; // 96px
+$icon-size-auto: 1.0588235294em;  // 18px at base font size
+$icon-size-0:    $size-base * 3;  // 12px
+$icon-size-1:    $size-base * 4.5;// 18px
+$icon-size-2:    $size-base * 6;  // 24px
+$icon-size-3:    $size-base * 9;  // 36px
+$icon-size-4:    $size-base * 12; // 48px
+$icon-size-5:    $size-base * 18; // 72px
+$icon-size-6:    $size-base * 24; // 96px
 
 // ---------------------------------------------------------------------------
 // Colors
