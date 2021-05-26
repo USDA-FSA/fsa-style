@@ -3,9 +3,9 @@ var $ = window.jQuery = require('jquery');
 $('body').on('click', '[data-behavior~="toggle-rwd-size"]', function(event) {
 
   var $self = $(this);
-  var $target = $('#' + $self.attr('data-target'));
   var $newClass = $self.data('size');
   var $component = $self.closest('[data-component]');
+  var $target = $component.find('.docs__rwd-embed');
 
   $target
     .removeClass('docs__rwd-embed--phone docs__rwd-embed--phone-big docs__rwd-embed--tablet docs__rwd-embed--desktop docs__rwd-embed--fullscreen')
