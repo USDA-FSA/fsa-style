@@ -36,6 +36,8 @@
   }
 
   &__link {
+    display: inline-flex;
+    gap: ($size-base / 2);
     font-weight: $font-bold;
   }
 
