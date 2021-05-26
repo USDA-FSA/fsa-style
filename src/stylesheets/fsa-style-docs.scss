@@ -873,7 +873,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
 .docs__rwd-embed {
   & {
-    will-change: transition, width, height;
+    will-change: auto;
     transition: all .23s ease-in-out;
     border: $size-base solid shade($color-fsa-tertiary-100,2%);
     margin: auto;
@@ -928,15 +928,12 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   }
   &--fullscreen {
     & {
-      transition: none;
       position: fixed;
       z-index: 1003;
       left: 0;
       top: 0;
       right: 0;
       bottom: 0;
-      width: 100vw;
-      height: 100vh;
       margin: 0;
       border: 0;
     }
@@ -944,6 +941,16 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     &:after {
       display: none;
     }
+  }
+}
+
+.docs__rwd-embed-close {
+  display: none;
+  .docs__rwd-embed--fullscreen & {
+    display: flex;
+    position: absolute;
+    right: 24px;
+    top: 12px;
   }
 }
 

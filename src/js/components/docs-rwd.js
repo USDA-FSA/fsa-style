@@ -24,6 +24,27 @@ $('body').on('click', '[data-behavior~="toggle-rwd-size"]', function(event) {
 
 })
 
+$('body').on('click', '[data-behavior~="toggle-rwd-close-fullscreen"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-target'));
+  var $targetComponent = $target.closest('.docs__rwd-demo-block');
+
+  $self
+    .closest('.docs__rwd-embed')
+    .removeClass('docs__rwd-embed--fullscreen')
+    .addClass('docs__rwd-embed--desktop')
+  ;
+
+  $targetComponent
+    .find('[data-size="phone"')
+    .click()
+  ;
+
+  // $target.focus();
+
+})
+
 $('body').on('change', '[data-behavior~="toggle-rwd-table"]', function(event) {
 
   var $self = $(this);
