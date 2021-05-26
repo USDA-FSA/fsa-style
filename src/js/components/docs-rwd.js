@@ -35,11 +35,10 @@ $('body').on('click', '[data-behavior~="toggle-rwd-size"]', function(event) {
 $('body').on('click', '[data-behavior~="toggle-rwd-close-fullscreen"]', function(event) {
 
   var $self = $(this);
-  var $target = $('#' + $self.attr('data-target'));
+  var $target = $self.closest('.docs__rwd-embed');
   var $targetComponent = $target.closest('.docs__rwd-demo-block');
 
-  $self
-    .closest('.docs__rwd-embed')
+  $target
     .removeClass('docs__rwd-embed--fullscreen')
     .addClass('docs__rwd-embed--desktop')
   ;
@@ -49,8 +48,6 @@ $('body').on('click', '[data-behavior~="toggle-rwd-close-fullscreen"]', function
     .focus()
     .click()
   ;
-
-  // $target.focus();
 
 })
 
