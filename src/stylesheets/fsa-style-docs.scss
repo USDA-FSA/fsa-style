@@ -872,11 +872,14 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 }
 
 .docs__rwd-embed {
-  transition: all .23s ease-in-out;
-  border: $size-base solid shade($color-fsa-tertiary-100,2%);
-  margin: auto;
-  margin-top: $size-medium;
-  position: relative;
+  & {
+    will-change: transition, width, height;
+    transition: all .23s ease-in-out;
+    border: $size-base solid shade($color-fsa-tertiary-100,2%);
+    margin: auto;
+    margin-top: $size-medium;
+    position: relative;
+  }
   &--phone {
     width: 340px;
     height: 580px;
@@ -921,6 +924,25 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       height: $size-medium;
       width: calc(100% - 110px);
       background-color: $color-fsa-base-bg;
+    }
+  }
+  &--fullscreen {
+    & {
+      transition: none;
+      position: fixed;
+      z-index: 1003;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      border: 0;
+    }
+    &:before,
+    &:after {
+      display: none;
     }
   }
 }

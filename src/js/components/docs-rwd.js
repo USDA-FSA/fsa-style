@@ -8,7 +8,7 @@ $('body').on('click', '[data-behavior~="toggle-rwd-size"]', function(event) {
   var $component = $self.closest('[data-component]');
 
   $target
-    .removeClass('docs__rwd-embed--phone docs__rwd-embed--phone-big docs__rwd-embed--tablet docs__rwd-embed--desktop')
+    .removeClass('docs__rwd-embed--phone docs__rwd-embed--phone-big docs__rwd-embed--tablet docs__rwd-embed--desktop docs__rwd-embed--fullscreen')
     .addClass('docs__rwd-embed--' + $newClass)
   ;
 
