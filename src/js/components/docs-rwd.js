@@ -19,6 +19,7 @@ $('body').on('click', '[data-behavior~="toggle-rwd-size"]', function(event) {
     .siblings()
     .removeClass('fsa-bg--secondary-100')
     .removeAttr('aria-selected')
+    .addClass('fsa-bg:hover--tertiary-100')
   ;
 
 })
