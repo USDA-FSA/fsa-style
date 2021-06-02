@@ -3197,7 +3197,7 @@ var datePickerController = (function datePickerController() {
 
         case "y": // A two digit representation of a year
           if (str.search(/^(0[0-9]|[1-9][0-9])/) != -1) {
-            y = str.substr(0, 2);
+            y = str.slice(-2); // CDH - changed to prevent Leap Year bug
             y = +y < 50 ? '20' + String(y) : '19' + String(y);
             str = str.substr(2);
             break;
