@@ -3065,7 +3065,7 @@ var datePickerController = (function datePickerController() {
       pt, part;
 
 
-    console.log("attempting to parse " + fmt + " from string " + str)
+    //console.log("attempting to parse " + fmt + " from string " + str)
 
     loopLabel: for (pt = 0; pt < len; pt++) {
       part = parts[pt];
@@ -3074,7 +3074,7 @@ var datePickerController = (function datePickerController() {
         continue loopLabel;
       };
 
-      console.log(pt + ": parsing " + part + " from string " + str)
+      //console.log(pt + ": parsing " + part + " from string " + str)
 
       if (str.length == 0) {
         break;
@@ -3095,7 +3095,7 @@ var datePickerController = (function datePickerController() {
           if (str.search(/^(3[01]|[12][0-9]|0[1-9])/) != -1) {
             d = str.substr(0, 2);
             str = str.substr(2);
-            console.log("d and str: " + d + " " + str)
+            //console.log("d and str: " + d + " " + str)
             break;
           } else {
             return false;
@@ -3212,7 +3212,7 @@ var datePickerController = (function datePickerController() {
       };
     };
 
-    console.log("parse end, dmy: " + d + ", " + m + ", " + y)
+    //console.log("parse end, dmy: " + d + ", " + m + ", " + y)
 
     if ((dp && d === false) || (mp && m === false) || (yp && y === false)) {
       return false;
