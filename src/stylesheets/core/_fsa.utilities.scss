@@ -460,6 +460,11 @@ $breakpoints: (
 // -----------------------------------------------------------------------------
 // Background pattern to denote "transparent"; think Photoshop
 
+// @mixin checkerboard($color: rgba(0, 0, 0, .10)) {
+//   background-color: $color;
+//   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAvSURBVHgBvY4xDQAACMMAWdOAXDRMFy/Zw0FCvy096iTTBgBq7rCFu+B6aNNDQwMyswata817IAAAAABJRU5ErkJggg==)
+// }
+
 @mixin checkerboard($color: rgba(0, 0, 0, .10)) {
 
   background-color: $color;

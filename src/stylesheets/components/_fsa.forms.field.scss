@@ -3,10 +3,10 @@
   & {
 
     position: relative;
-    margin-bottom: 1em;
+    margin-bottom: $size-medium;
 
     h1 + & {
-      margin-top: 1em;
+      margin-top: $size-medium;
     }
 
     @include breakpoint(M) {
@@ -21,11 +21,10 @@
     @include breakpoint(M) {
       content: '';
       position: absolute;
-      top: 4px;
-      left: -1em;
-      bottom: 6px;
+      left: -($size-default + ($size-base / 2));
+      top: 0;
+      bottom: 0;
       width: 4px;
-      background-color: transparent;
       transition: all .1s ease-in-out;
     }
   }
@@ -88,7 +87,7 @@
   &__column {
 
     @include breakpoint(M, down) {
-      margin-top: 1em;
+      margin-top: $size-medium;
     }
 
   }
@@ -124,13 +123,9 @@
 
   &--error {
     &:before {
-
       @include breakpoint(M) {
-        top: -4px;
-        bottom: -6px;
         background-color: $color-fsa-red;
       }
-
     }
   }
 
