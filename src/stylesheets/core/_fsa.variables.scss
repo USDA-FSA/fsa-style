@@ -190,7 +190,7 @@ $form-between-space            : $size-base + ($size-base / 2);
 // ---------------------------------------------------------------------------
 // FSA Grid Settings
 
-$fsa-grid-gutter: ($base-font-size * 1.5);
+$fsa-grid-gutter: $size-medium;
 $fsa-grid-columns: 12;
 
 // ---------------------------------------------------------------------------
