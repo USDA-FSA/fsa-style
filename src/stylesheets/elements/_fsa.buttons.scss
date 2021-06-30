@@ -31,7 +31,7 @@ $button-alt              : $color-fsa-white;
 $button-alt-text         : $color-fsa-secondary;
 $button-alt-hover        : shade($button-alt, 5%);
 $button-alt-active       : $button-default-active;
-$button-alt-border       : $color-fsa-secondary;
+$button-alt-border       : $color-fsa-secondary-300;
 $button-alt-border-width : 1px;
 
 $button-secondary        : $button-alt;
