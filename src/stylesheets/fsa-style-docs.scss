@@ -764,10 +764,10 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
         grid-template-columns: repeat(4, 1fr);
       }
       @include breakpoint(L) {
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(5, 1fr);
       }
       @include breakpoint(XL) {
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(7, 1fr);
       }
     }
     & > * {
