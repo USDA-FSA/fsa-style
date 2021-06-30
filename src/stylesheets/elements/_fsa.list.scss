@@ -65,6 +65,19 @@ ol { @extend .fsa-list--number; }
   @extend .fsa-list--unstyled;
 }
 
+[type="a"] {
+  list-style-type: lower-alpha;
+}
+[type="A"] {
+  list-style-type: upper-alpha;
+}
+[type="i"] {
+  list-style-type: lower-roman;
+}
+[type="I"] {
+  list-style-type: upper-roman;
+}
+
 h1,
 h2,
 h3,
