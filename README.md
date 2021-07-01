@@ -73,7 +73,7 @@ Lastly, refer to [Using the Boilerplate](#using-the-boilerplate) for basic guida
 
 If you don't have Node or the ability to incorporate source files into a build process (Grunt, Gulp, Webpack, etc), follow these steps to manually use the FSA Style.
 
-Download the latest assets: **https://github.com/usda-fsa/fsa-style/releases/download/2.6.0-RC1/fsa-style-2.6.0-RC1.zip**
+Download the latest assets: **https://github.com/usda-fsa/fsa-style/releases/download/2.6.0-RC2/fsa-style-2.6.0-RC2.zip**
 
 #### 1. Visual Index
 
