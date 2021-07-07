@@ -1,7 +1,7 @@
 .fsa-pagination {
 
   $padding: $size-small;
-  $arrow-size: $icon-size-2;
+  $arrow-size: $icon-size-1;
 
   & {
 
@@ -167,7 +167,7 @@
       height: $arrow-size;
       background-position: center;
       background-repeat: no-repeat;
-      background-size: ($arrow-size + $size-small);
+      // background-size: ($arrow-size + $size-small);
     }
 
     &--previous:before {

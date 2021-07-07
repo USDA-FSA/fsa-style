@@ -859,8 +859,15 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
 .docs__rwd-demo-block {
   display: none;
+  text-align: center;
+
+  h2[id] + & {
+    margin-top: -15px;
+    border-top: 0;
+    outline: 1px solid orangered;
+  }
+
   @include breakpoint(L)   {
-    text-align: center;
     display: block;
   }
 }
