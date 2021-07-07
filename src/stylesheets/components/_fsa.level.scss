@@ -112,21 +112,6 @@ $level: fsa-level;
 @include breakpoint(L)  { @include level(\@l); }
 @include breakpoint(XL) { @include level(\@xl); }
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-            a.#{$level},
-       button.#{$level},
-   [tabindex].#{$level},
-  [role=link].#{$level},
-[role=button].#{$level} {
-
-  &,
-  &:visited {
-    color: $color-fsa-base;
-    text-decoration: none;
-  }
-
-}
-
 .#{$level}-demo .#{$level} > * {
   background-color: $color-fsa-aqua-900;
   color: white;
