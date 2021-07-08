@@ -2839,7 +2839,7 @@
 
 // Visibility -----------------------------------------------------------------
 .fsa-show {
-  display: initial !important;
+  display: revert !important;
   &\@xs {
     @include breakpoint(S, down)   { display: none !important; }
     &-only {

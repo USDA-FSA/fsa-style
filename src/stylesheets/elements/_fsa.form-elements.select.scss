@@ -88,8 +88,8 @@
 }
 
 @mixin selectInline() {
-  display: initial;
-  width: initial;
+  display: revert;
+  width: revert;
 }
 
 @mixin selectFlat() {

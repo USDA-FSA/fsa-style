@@ -1,7 +1,7 @@
 $level: fsa-level;
 
 .#{$level} {
-  margin: initial;
+  margin: revert;
   padding: 0;
 }
 
@@ -29,9 +29,9 @@ $level: fsa-level;
 
     &--full#{$bp}   { display: flex; } // default, effectively an override
     &--inline#{$bp} { display: inline-flex; vertical-align: bottom; }
-    &--none#{$bp}   { display: initial; } // remove flex'ing, reverts to whatever *initial* (implicit) property of display this element may have (e.g. <span> = inline; <div> = block)
+    &--none#{$bp}   { display: revert; } // remove flex'ing, reverts to last in cascade
 
-    &--no-wrap#{$bp} { flex-wrap: initial; } // default
+    &--no-wrap#{$bp} { flex-wrap: revert; }
     &--wrap#{$bp}   { flex-wrap: wrap; }
 
     &--align-top#{$bp}      { align-items: flex-start; }
@@ -56,9 +56,9 @@ $level: fsa-level;
     &--gutter-m#{$bp}    > :not(:last-child) { margin-right: $size-medium; }
     &--gutter-l#{$bp}    > :not(:last-child) { margin-right: $size-large; }
     &--gutter-xl#{$bp}   > :not(:last-child) { margin-right: $size-extra-large; }
-    &--gutter-none#{$bp} > :not(:last-child) { margin-right: initial; }
+    &--gutter-none#{$bp} > :not(:last-child) { margin-right: revert; }
 
-    &--none#{$bp}        > :not(:last-child) { margin-right: initial; }
+    &--none#{$bp}        > :not(:last-child) { margin-right: revert; }
 
     &__item {
 

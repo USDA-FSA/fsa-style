@@ -233,7 +233,7 @@
   .fsa-icon {
     display: none;
     @include breakpoint(S) {
-      display: initial;
+      display: revert;
     }
   }
 

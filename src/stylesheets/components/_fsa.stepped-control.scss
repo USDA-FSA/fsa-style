@@ -149,7 +149,7 @@
 
       @include breakpoint(L) {
         flex: none;
-        flex: initial;
+        flex: revert;
         flex-shrink: 1;
       }
 

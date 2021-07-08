@@ -28,8 +28,8 @@
 }
 
 @mixin textFieldInline() {
-  display: initial;
-  width: initial;
+  display: revert;
+  width: revert;
 }
 
 .fsa-input,
