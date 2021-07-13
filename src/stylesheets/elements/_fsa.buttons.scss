@@ -226,7 +226,7 @@ $button-plain-border-width: 0;
 
     // scss-lint:disable SelectorFormat
     &[disabled] {
-      background-color: $color-fsa-site-bg;
+      background-color: $color-fsa-base-bg;
       color: $button-alt-text;
       &:hover {
         color: $button-alt-text;

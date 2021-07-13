@@ -2,8 +2,8 @@
 // Range
 @mixin range-focus {
   box-shadow:
-    0 0 0 3px white,
-    0 0 0 6px $form-focus-color
+    0 0 0 1px white,
+    0 0 0 4px $form-focus-color
   ;
 }
 
@@ -22,12 +22,12 @@
 }
 
 @mixin range-thumb {
-  border:0;
+  border: 2px solid $color-fsa-site-bg;
   background: $color-fsa-secondary;
   border-radius: 100%;
   cursor: pointer;
-  height: ($size-medium * .8);
-  width: ($size-medium * .8);
+  height: ($size-medium - $size-base );
+  width: ($size-medium - $size-base );
 }
 
 @mixin range-ms-fill {
