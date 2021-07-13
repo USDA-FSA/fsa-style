@@ -121,3 +121,33 @@ $level: fsa-level;
     }
   }
 }
+
+// Unset side margins for legacy overkill adjacent selectors, specifically for those immediate children of Level (kind of a refactor, however brute-force it is
+[class~="fsa-level"] > * {
+  &.fsa-input + .fsa-select,
+  &.fsa-input + .fsa-input,
+  &.fsa-input + .fsa-btn-group,
+  &.fsa-input + span.fsa-spinbox,
+  &.fsa-input + .fsa-btn,
+  &.fsa-textarea + .fsa-select,
+  &.fsa-textarea + .fsa-input,
+  &.fsa-textarea + .fsa-btn-group,
+  &.fsa-textarea + span.fsa-spinbox,
+  &.fsa-textarea + .fsa-btn {
+    margin-left: unset;
+  }
+
+  &.fsa-select + .fsa-select,
+  &.fsa-select + .fsa-input,
+  &.fsa-select + .fsa-btn-group,
+  &.fsa-select + span.fsa-spinbox,
+  &.fsa-select + .fsa-btn,
+  &.fsa-btn + .fsa-select,
+  &.fsa-btn + .fsa-input,
+  &.fsa-btn + .fsa-btn-group,
+  &.fsa-btn + span.fsa-spinbox,
+  &.fsa-btn + .fsa-btn {
+    margin-left: unset;
+  }
+
+}
