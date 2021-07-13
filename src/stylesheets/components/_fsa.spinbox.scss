@@ -32,12 +32,18 @@
     min-width: 11.5ch;
   }
 
+  &--inline {
+    display: inline-block;
+  }
+
   &__number {
 
     & {
       display: block;
       width: 90%;
       width: calc(100% - #{$button-width});
+      position: relative;
+      z-index: 1;
     }
 
     // scss-lint:disable SelectorFormat
@@ -111,6 +117,7 @@
 
   &__actions {
     position: absolute;
+    z-index: 0;
     top: 0;
     right: 0;
     bottom: 0;
@@ -193,6 +200,5 @@
 }
 
 span.fsa-spinbox {
-  @include fsa-space-between();
   display: inline-block;
 }
