@@ -61,10 +61,9 @@ $button-plain-border-width: 0;
 
   @if $variation == 'default' {
 
-    @include fsa-space-between();
-
     // -------------------------------------------------------------------------
     // reset
+    vertical-align: middle;
     white-space: nowrap;
     @include reset-button();
     @include font-smoothing(on);
@@ -72,17 +71,9 @@ $button-plain-border-width: 0;
     user-select: none;
     text-align: center;
     line-height: $button-line-height;
-    position: relative;
-    top: .1rem;
 
     // scss-lint:disable all ImportantRule
     text-decoration: none !important; // yep, intentional
-
-    @supports (-webkit-appearance:none) {
-      // Webkit only.
-      // yes, a single pixel. sorry, not sorry
-      top: 0;
-    }
 
     // -------------------------------------------------------------------------
     // normalize
@@ -94,7 +85,6 @@ $button-plain-border-width: 0;
     gap: ($size-small * .75);
     align-items: center;
     border-radius: $button-border-radius;
-    vertical-align: middle;
 
     // scss-lint:disable Shorthand
     padding: ($button-padding - .1rem);

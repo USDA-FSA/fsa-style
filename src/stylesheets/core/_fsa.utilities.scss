@@ -403,25 +403,14 @@ $breakpoints: (
 // -----------------------------------------------------------------------------
 // Space between form elements
 @mixin fsa-space-between() {
-  // scss-lint:disable UnnecessaryParentReference
-  & + .fsa-select,
-  & + .fsa-input,
-  & + .fsa-btn-group,
-  & + span.fsa-spinbox,
-  & + .fsa-btn {
-    margin-left: $form-between-space;
-  }
-  & + .fsa-btn--flat {
-    margin-left: ($form-between-space * 2);
-  }
+  // Deprecated
 }
 
 // -----------------------------------------------------------------------------
 // Shared properties between select and input text elements
 @mixin fsa-shared-form-properties() {
 
-  @include fsa-space-between();
-
+  vertical-align: middle;
   appearance: none;
   display: inline-block;
   height: $button-height;
