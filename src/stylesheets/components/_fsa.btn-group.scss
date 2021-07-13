@@ -3,10 +3,9 @@
 .fsa-btn-group {
 
   & {
-    @include fsa-space-between();
     display: inline-flex;
-    vertical-align: middle;
     white-space: nowrap;
+    vertical-align: middle;
   }
 
   &--block {

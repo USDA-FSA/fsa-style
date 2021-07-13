@@ -19,9 +19,6 @@
   ;
 
   text-overflow: ellipsis;
-  vertical-align: middle;
-  position: relative;
-  top: -.1rem;
 
   @supports (-webkit-appearance: none) {
     /* Webkit only */
@@ -73,13 +70,9 @@
 }
 
 @mixin selectLarge() {
-
+  padding-left: $form-padding + $size-base;
   height: $button-height--lg;
-  // padding-top: ($button-padding * 2) - .9rem;
-  // padding-bottom: ($button-padding * 2) - .3rem;
   font-size: $form-text-size--lg; // no we're not using mixin cuz we don't want its line-height
-  top: -.3rem;
-
 }
 
 @mixin selectBlock() {

@@ -20,3 +20,11 @@
 
 ///////////////////////////////////////////////////////////////////////
 
+.fsa-input,
+.fsa-btn,
+.fsa-btn-group,
+.fsa-spinbox,
+.fsa-select {
+  html body & {
+  }
+}
