@@ -18,13 +18,18 @@ $progress-fill-color-complete: $progress-fill-color-dark;
   }
 
   &__details {
+    @include font-size(3);
+    font-weight: normal;
     display: flex;
-    padding-top: $progress-height;
+    gap: $size-default;
+    padding-top: ($progress-height * 2);
     margin-bottom: $size-default;
     clear: both;
   }
 
-  &__label {}
+  &__label {
+    flex: 1;
+  }
 
   &__value {
     margin-left: auto;
