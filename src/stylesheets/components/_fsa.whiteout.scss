@@ -8,7 +8,7 @@
     bottom: 0;
     visibility: hidden;
     opacity: 0;
-    background-color: transparentize($color-fsa-tertiary-900, .4);
+    background-color: transparentize($color-fsa-tertiary-900, .6);
   }
 
   &[aria-hidden="false"] {
