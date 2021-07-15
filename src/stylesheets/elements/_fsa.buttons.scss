@@ -416,4 +416,8 @@ $button-plain-border-width: 0;
     &--plain\@xl { @include fsa-button(plain); }
   }
 
+  * {
+    pointer-events: none;
+  }
+
 }
