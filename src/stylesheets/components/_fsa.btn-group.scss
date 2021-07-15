@@ -3,9 +3,9 @@
 .fsa-btn-group {
 
   & {
-    @include fsa-space-between();
     display: inline-flex;
     white-space: nowrap;
+    vertical-align: middle;
   }
 
   &--block {
@@ -38,6 +38,8 @@
     & {
       @include fsa-button;
       @include fsa-button(secondary);
+      display: flex;
+      justify-content: center;
       flex: auto;
     }
 

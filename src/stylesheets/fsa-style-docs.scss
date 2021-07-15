@@ -152,6 +152,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       @include breakpoint(L) {
 
         @include position(fixed, 0px 0px 0 0px); // scss-lint:disable ZeroUnit
+        box-shadow: $shadow-size-overlay ;
         margin: 0;
         background-color: $color-fsa-primary-900;
         color: $color-white;
@@ -224,7 +225,9 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       white-space: nowrap;
 
       @include breakpoint(L) {
-        margin-right: $size-base;
+        &:not(:last-child) {
+          margin-right: $size-base;
+        }
       }
 
       // scss-lint:disable NestingDepth
@@ -254,6 +257,9 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       @include breakpoint(M) {
         margin-right: $size-small;
         font-size: $font-size-3;
+        &:only-child {
+          margin-right: initial;
+        }
       }
 
       &--sub {
@@ -276,14 +282,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
             // IE 11 doesn't support :focus-within, so let's just suppress it
             display: none;
           }
-        }
-      }
-
-      &--github {
-        font-size: $font-size-1;
-        text-transform: uppercase;
-        @include breakpoint(M) {
-          font-size: $font-size-2;
         }
       }
 
@@ -320,11 +318,11 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
         top: 100%;
         background-color: $color-fsa-primary-900;
         max-height: 50vh;
-        width: 184px;
         border-top: 1em solid $color-fsa-primary;
         padding-top: $size-base;
         padding-bottom: $size-small;
         overflow: auto;
+        box-shadow: $shadow-size-overlay;
 
         .docs__nav--fixed & {
           max-height: calc(100vh - 42px);
@@ -373,8 +371,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
         background-color: rgba(255, 255, 255, .1);
         margin-top: $size-base;
         margin-bottom: $size-base;
-        box-shadow: 0 -1px 0 0 rgba(0, 0, 0, .2);
-        border-top: 1px solid rgba(255, 255, 255, .2);
         font-weight: $font-bold;
         font-size: $font-size-2;
         text-transform: uppercase;
@@ -391,9 +387,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       display: inline-block;
       vertical-align: middle;
       margin-right: $size-small;
-      width: $size-medium;
-      height: $size-medium;
-      margin-top: -2px;
     }
 
   }
@@ -417,6 +410,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
     position: absolute;
     right: 0;
+    top: 0;
     text-transform: uppercase;
 
     .docs__figure + & {
@@ -431,7 +425,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       margin-top: 1em;
       background-color: transparent;
       padding: 0;
-      border: 0;
+      border-width: 0;
       outline: 0;
       font-weight: $font-bold;
 
@@ -570,7 +564,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       code {
         background-color: transparent;
         padding: 0;
-        border: 0;
+        border-width: 0;
         color: white;
       }
 
@@ -578,7 +572,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     }
 
     &__value {
-      @include font-size(0)
+      @include font-size(0);
       display: block;
     }
 
@@ -705,7 +699,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       code {
 
         background-color: white;
-        border: 0;
+        border-width: 0;
         padding: 0;
         display: block;
 
@@ -742,6 +736,84 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     opacity: .5;
     outline: 3px dotted rgba(0,0,0,.1);
     outline-offset: 2px;
+  }
+
+  &__color-utilities {
+
+    $nudge: $size-default;
+    margin-left: -$nudge;
+    margin-right: -$nudge;
+    padding: $nudge;
+
+    &.fsa-bg--tertiary-900 .docs__sub_style {
+      color: $color-fsa-tertiary-200
+    }
+
+  }
+
+  // -----------------------------------------------------------------------------
+  // Icon Grid
+
+  &__icons {
+    & {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      @include breakpoint(S) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @include breakpoint(M) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      @include breakpoint(L) {
+        grid-template-columns: repeat(5, 1fr);
+      }
+      @include breakpoint(XL) {
+        grid-template-columns: repeat(7, 1fr);
+      }
+    }
+    & > * {
+    }
+    &__link {
+      & {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: $size-default $size-small;
+        color: inherit;
+        text-decoration: none;
+        border-radius: $radius-s;
+        border: 1px solid transparent;
+      }
+      &--clicked {
+        &, &:hover {
+          border-color: $color-fsa-primary-200;
+          padding: $size-default;
+          justify-content: center;
+          background-color: $color-fsa-primary-100;
+          pointer-events: none;
+          font-size: $font-size-2;
+          font-weight: $font-bold;
+          color: $color-fsa-primary;
+          text-align: center;
+        }
+      }
+      &:visited {
+        color: inherit;
+      }
+      &:hover {
+        color: $color-fsa-link;
+        background-color: $color-fsa-secondary-100;
+      }
+      &:active {
+        border-color: $color-fsa-secondary-300;
+      }
+    }
+    &__caption {
+      margin-top: $size-small;
+      font-size: $font-size-2;
+      text-align: center;
+    }
   }
 
 }
@@ -796,155 +868,21 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
 }
 
-.color-fsa-page-bg {
-  background-color: $color-fsa-site-bg;
-  border: 1px solid $color-fsa-tertiary-200;
-}
-
-.color-fsa-white {
-  background-color: $color-fsa-white;
-  border: 1px solid $color-fsa-tertiary-200;
-}
-
-.color-fsa-primary-dark {
-  background-color: $color-fsa-primary-900;
-}
-.color-fsa-primary {
-  background-color: $color-fsa-primary;
-}
-.color-fsa-primary-light {
-  background-color: $color-fsa-primary-300;
-}
-.color-fsa-primary-lighter {
-  background-color: $color-fsa-primary-200;
-}
-.color-fsa-primary-lightest {
-  background-color: $color-fsa-primary-100;
-}
-
-.color-fsa-secondary-dark {
-  background-color: $color-fsa-secondary-900;
-}
-.color-fsa-secondary {
-  background-color: $color-fsa-secondary;
-}
-.color-fsa-secondary-light {
-  background-color: $color-fsa-secondary-300;
-}
-.color-fsa-secondary-lighter {
-  background-color: $color-fsa-secondary-200;
-}
-.color-fsa-secondary-lightest {
-  background-color: $color-fsa-secondary-100;
-}
-
-.color-fsa-tertiary-dark {
-  background-color: $color-fsa-tertiary-900;
-}
-.color-fsa-tertiary {
-  background-color: $color-fsa-tertiary;
-}
-.color-fsa-tertiary-light {
-  background-color: $color-fsa-tertiary-300;
-}
-.color-fsa-tertiary-lighter {
-  background-color: $color-fsa-tertiary-200;
-}
-.color-fsa-tertiary-lightest {
-  background-color: $color-fsa-tertiary-100;
-}
-
-.color-fsa-aqua-dark {
-  background-color: $color-fsa-aqua-900;
-}
-.color-fsa-aqua {
-  background-color: $color-fsa-aqua;
-}
-.color-fsa-aqua-light {
-  background-color: $color-fsa-aqua-300;
-}
-.color-fsa-aqua-lighter {
-  background-color: $color-fsa-aqua-200;
-}
-.color-fsa-aqua-lightest {
-  background-color: $color-fsa-aqua-100;
-}
-
-.color-fsa-red-dark {
-  background-color: $color-fsa-red-900;
-}
-.color-fsa-red {
-  background-color: $color-fsa-red;
-}
-.color-fsa-red-light {
-  background-color: $color-fsa-red-300;
-}
-.color-fsa-red-lighter {
-  background-color: $color-fsa-red-200;
-}
-.color-fsa-red-lightest {
-  background-color: $color-fsa-red-100;
-}
-
-.color-fsa-blank {
-  background-color: white;
-  color: $color-fsa-tertiary-200;
-  outline: 2px dashed $color-fsa-tertiary-100;
-  outline-offset: -2px;
-}
-.color-fsa-yellow {
-  background-color: $color-fsa-yellow;
-  code {
-    color: $color-fsa-base;
-  }
-}
-.color-fsa-yellow-light {
-  background-color: $color-fsa-yellow-300;
-  code {
-    color: $color-fsa-base;
-  }
-}
-.color-fsa-yellow-lighter {
-  background-color: $color-fsa-yellow-200;
-  code {
-    color: $color-fsa-base;
-  }
-}
-.color-fsa-yellow-lightest {
-  background-color: $color-fsa-yellow-100;
-  code {
-    color: $color-fsa-base;
-  }
-}
-
-.color-fsa-site-bg {
-  background-color: $color-fsa-site-bg;
-  border: 1px dashed $color-fsa-tertiary-200;
-}
 .color-fsa-link {
   background-color: $color-fsa-link;
-}
-.color-fsa-link-hover {
-  background-color: $color-fsa-link-hover;
-}
-.color-fsa-link-visited {
-  background-color: $color-fsa-link-visited;
-}
-
-.color-fsa-aqua,
-.color-fsa-aqua-light,
-.color-fsa-red-light,
-[class*="lighter"],
-[class*="lightest"] {
-  code {
-    color: $color-base;
-  }
 }
 
 .docs__rwd-demo-block {
   display: none;
+  text-align: center;
+
+  h2[id] + & {
+    margin-top: -15px;
+    border-top: 0;
+    outline: 1px solid orangered;
+  }
+
   @include breakpoint(L)   {
-    text-align: center;
     display: block;
   }
 }
@@ -956,11 +894,14 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 }
 
 .docs__rwd-embed {
-  transition: all .23s ease-in-out;
-  border: $size-base solid shade($color-fsa-tertiary-100,2%);
-  margin: auto;
-  margin-top: $size-medium;
-  position: relative;
+  & {
+    will-change: auto;
+    transition: all .23s ease-in-out;
+    border: $size-base solid shade($color-fsa-tertiary-100,2%);
+    margin: auto;
+    margin-top: $size-medium;
+    position: relative;
+  }
   &--phone {
     width: 340px;
     height: 580px;
@@ -992,7 +933,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       font-family: Consolas, $font-mono;
       font-size: $font-size-7;
       font-weight: $font-bold;
-      color: $color-fsa-site-bg;
+      color: $color-fsa-base-bg;
       line-height: 1;
       transform: scaleX(.8);
       transform-origin: left;
@@ -1004,8 +945,34 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       right: $size-small;
       height: $size-medium;
       width: calc(100% - 110px);
-      background-color: $color-fsa-site-bg;
+      background-color: $color-fsa-base-bg;
     }
+  }
+  &--fullscreen {
+    & {
+      position: fixed;
+      z-index: 1003;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0;
+      border: 0;
+    }
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.docs__rwd-embed-close {
+  display: none;
+  .docs__rwd-embed--fullscreen & {
+    display: flex;
+    position: absolute;
+    right: 24px;
+    top: 12px;
   }
 }
 
@@ -1016,7 +983,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 }
 
 [class*="docs-highlight"] {
-  text-decoration: line-through;
   text-decoration: line-through;
   text-decoration-color: black;
 }
@@ -1096,89 +1062,3 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   }
 
 }
-
-
-
-// .cp_embed_wrapper {
-//   /* required for resize to work */
-//   overflow: hidden;
-
-//   /* make resizeble! */
-//   resize: both;
-//   min-width: 240px;
-//   max-width: 100%;
-
-//   /* default height */
-//   height: 400px;
-
-//   @include breakpoint(L) {
-//     border: $size-small solid $color-fsa-tertiary-100;
-//     background: white;
-//     padding: $size-default;
-//   }
-
-// }
-// .cp_embed_wrapper iframe {
-//   height: 100% !important;
-// }
-
-/* COLOR VALUE DUMP ********************************************************* */
-
-// .color-fsa-primary       { color: $color-fsa-primary }
-// .color-fsa-primary-300   { color: $color-fsa-primary-300 }
-// .color-fsa-primary-200   { color: $color-fsa-primary-200 }
-// .color-fsa-primary-100   { color: $color-fsa-primary-100 }
-// .color-fsa-primary-900   { color: $color-fsa-primary-900 }
-// .color-fsa-secondary     { color: $color-fsa-secondary }
-// .color-fsa-secondary-300 { color: $color-fsa-secondary-300 }
-// .color-fsa-secondary-200 { color: $color-fsa-secondary-200 }
-// .color-fsa-secondary-100 { color: $color-fsa-secondary-100 }
-// .color-fsa-secondary-900 { color: $color-fsa-secondary-900 }
-// .color-fsa-tertiary      { color: $color-fsa-tertiary }
-// .color-fsa-tertiary-300  { color: $color-fsa-tertiary-300 }
-// .color-fsa-tertiary-200  { color: $color-fsa-tertiary-200 }
-// .color-fsa-tertiary-100  { color: $color-fsa-tertiary-100 }
-// .color-fsa-tertiary-900  { color: $color-fsa-tertiary-900 }
-// .color-fsa-aqua          { color: $color-fsa-aqua }
-// .color-fsa-aqua-300      { color: $color-fsa-aqua-300 }
-// .color-fsa-aqua-200      { color: $color-fsa-aqua-200 }
-// .color-fsa-aqua-100      { color: $color-fsa-aqua-100 }
-// .color-fsa-aqua-900      { color: $color-fsa-aqua-900 }
-// .color-fsa-red           { color: $color-fsa-red }
-// .color-fsa-red-300       { color: $color-fsa-red-300 }
-// .color-fsa-red-200       { color: $color-fsa-red-200 }
-// .color-fsa-red-100       { color: $color-fsa-red-100 }
-// .color-fsa-red-900       { color: $color-fsa-red-900 }
-// .color-base              { color: $color-base }
-// .color-white             { color: $color-white }
-// .color-fsa-base          { color: $color-fsa-base }
-// .color-fsa-link          { color: $color-fsa-link }
-
-// #2f2c2a, base
-// #fff, white
-// #0068ad, link
-// #236430, primary
-// #dee8e0, primary-100
-// #b2c9b7, primary-200
-// #4d8157, primary-300
-// #1a4b24, primary-900
-// #205493, secondary
-// #dee5ef, secondary-100
-// #a6bbd4, secondary-200
-// #4f78aa, secondary-300
-// #183f6e, secondary-900
-// #494440, tertiary
-// #f0f0f0, tertiary-100
-// #dbdad9, tertiary-200
-// #75716e, tertiary-300
-// #2f2c2a, tertiary-900
-// #00a6d2, aqua
-// #e1f3f8, aqua-100
-// #9bdaf1, aqua-200
-// #02bfe7, aqua-300
-// #046b99, aqua-900
-// #cd2026, red
-// #f9e4e5, red-100
-// #f0bcbe, red-200
-// #e1797d, red-300
-// #981b1e, red-900

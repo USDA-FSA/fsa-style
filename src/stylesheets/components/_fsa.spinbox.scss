@@ -14,6 +14,7 @@
 
   & {
     display: block;
+    vertical-align: middle;
     position: relative;
     min-width: 8.2rem;
     min-width: 10ch; // for browsers that support ch unit
@@ -32,12 +33,20 @@
     min-width: 11.5ch;
   }
 
+  &--inline {
+    display: inline-block;
+  }
+
   &__number {
 
     & {
       display: block;
       width: 90%;
       width: calc(100% - #{$button-width});
+    }
+    &:focus-within {
+      position: relative;
+      z-index: 1;
     }
 
     // scss-lint:disable SelectorFormat
@@ -111,6 +120,7 @@
 
   &__actions {
     position: absolute;
+    z-index: 0;
     top: 0;
     right: 0;
     bottom: 0;
@@ -121,7 +131,7 @@
     & {
       display: block;
       appearance: none;
-      border: 0;
+      border-width: 0;
       padding: 0;
       margin: 0;
       overflow: hidden;
@@ -132,7 +142,7 @@
       line-height: 1;
       width: $button-width;
       text-align: center;
-      background-size: 45%;
+      background-size: $icon-size-1;
       background-repeat: no-repeat;
       background-position: 50%;
 
@@ -150,7 +160,7 @@
     // scss-lint:disable SelectorFormat
     .fsa-spinbox--large & {
       width: $button-width-large;
-      background-size: 37%;
+      background-size: $icon-size-2;
     }
 
     &[disabled] {
@@ -176,11 +186,11 @@
     }
 
     &--increment {
-      background-image: url('#{$image-path}/angle-arrow-up-primary.svg');
+      background-image: url('#{$image-path}/material-design-icons/ic_expand_less_24px.svg');
     }
 
     &--decrement {
-      background-image: url('#{$image-path}/angle-arrow-down-primary.svg');
+      background-image: url('#{$image-path}/material-design-icons/ic_expand_more_24px.svg');
       border-top: 0;
       &:focus {
         box-shadow: 0 0 0 1px $form-focus-color inset, 0 1px 0 1px $form-focus-color inset, 1px 0 0 1px $form-focus-color inset;
@@ -193,6 +203,5 @@
 }
 
 span.fsa-spinbox {
-  @include fsa-space-between();
   display: inline-block;
 }

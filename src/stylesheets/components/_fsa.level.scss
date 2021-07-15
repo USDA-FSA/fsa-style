@@ -1,7 +1,7 @@
 $level: fsa-level;
 
 .#{$level} {
-  margin: initial;
+  margin: revert;
   padding: 0;
 }
 
@@ -28,10 +28,10 @@ $level: fsa-level;
     }
 
     &--full#{$bp}   { display: flex; } // default, effectively an override
-    &--inline#{$bp} { display: inline-flex; }
-    &--none#{$bp}   { display: initial; } // remove flex'ing, reverts to whatever *initial* (implicit) property of display this element may have (e.g. <span> = inline; <div> = block)
+    &--inline#{$bp} { display: inline-flex; vertical-align: bottom; }
+    &--none#{$bp}   { display: revert; } // remove flex'ing, reverts to last in cascade
 
-    &--no-wrap#{$bp} { flex-wrap: initial; } // default
+    &--no-wrap#{$bp} { flex-wrap: revert; }
     &--wrap#{$bp}   { flex-wrap: wrap; }
 
     &--align-top#{$bp}      { align-items: flex-start; }
@@ -56,9 +56,9 @@ $level: fsa-level;
     &--gutter-m#{$bp}    > :not(:last-child) { margin-right: $size-medium; }
     &--gutter-l#{$bp}    > :not(:last-child) { margin-right: $size-large; }
     &--gutter-xl#{$bp}   > :not(:last-child) { margin-right: $size-extra-large; }
-    &--gutter-none#{$bp} > :not(:last-child) { margin-right: initial; }
+    &--gutter-none#{$bp} > :not(:last-child) { margin-right: revert; }
 
-    &--none#{$bp}        > :not(:last-child) { margin-right: initial; }
+    &--none#{$bp}        > :not(:last-child) { margin-right: revert; }
 
     &__item {
 
@@ -86,20 +86,8 @@ $level: fsa-level;
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 @include levelBase();
-.#{$level} {
 
-  &--selected {
-    &,
-    &:focus,
-    &:visited,
-    &:hover {
-      box-shadow: -2px 0 0 0 $color-fsa-secondary inset;
-      background-color: $color-fsa-selection-bg;
-      border-radius: 0;;
-    }
-  }
-
-}
+// }
 @include breakpoint(S)  { @include levelBase(\@s); }
 @include breakpoint(M)  { @include levelBase(\@m); }
 @include breakpoint(L)  { @include levelBase(\@l); }
@@ -111,34 +99,6 @@ $level: fsa-level;
 @include breakpoint(M)  { @include level(\@m); }
 @include breakpoint(L)  { @include level(\@l); }
 @include breakpoint(XL) { @include level(\@xl); }
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-            a.#{$level},
-       button.#{$level},
-   [tabindex].#{$level},
-  [role=link].#{$level},
-[role=button].#{$level} {
-
-  & {
-    color: $color-fsa-base;
-    text-decoration: none;
-  }
-
-  &:focus {
-    background-color: $color-fsa-tertiary-100;
-    outline-offset: 3px;
-  }
-
-  &:hover {
-    background-color: $color-fsa-tertiary-100;
-    cursor: pointer;
-  }
-
-  &:visited {
-    color: $color-fsa-base;
-  }
-
-}
 
 .#{$level}-demo .#{$level} > * {
   background-color: $color-fsa-aqua-900;

@@ -8,7 +8,8 @@
     margin-bottom: 1.5em;
     border: 1px solid rgba(0,0,0,.07);
     border-left: $size-base solid $color-fsa-tertiary-900;
-    background-position: 1rem 2rem;
+    background-position: 2rem 2rem;
+    background-size: 2.8rem;
   }
 
   &::before {
@@ -21,27 +22,31 @@
     @extend .usa-alert-success;
     background-color: $color-fsa-primary-100;
     border-left-color: $color-fsa-primary;
+    background-image: url('#{$image-path}/material-design-icons/ic_check_circle_24px.svg');
   }
 
   &--warning {
     @extend .usa-alert-warning;
     border-left-color: $color-fsa-yellow;
+    background-image: url('#{$image-path}/material-design-icons/ic_warning_24px.svg');
   }
 
   &--error {
     @extend .usa-alert-error;
     background-color: $color-fsa-red-100;
     border-left-color: $color-fsa-red;
+    background-image: url('#{$image-path}/material-design-icons/ic_error_24px.svg');
   }
 
   &--info {
     @extend .usa-alert-info;
     background-color: $color-fsa-aqua-100;
     border-left-color: $color-fsa-aqua;
+    background-image: url('#{$image-path}/material-design-icons/ic_info_24px.svg');
   }
 
   &--no-icon {
-    @extend .usa-alert-no_icon;
+    background-image: none;
     padding: $size-small;
   }
 
@@ -51,13 +56,13 @@
 
     @include fsa-button-reset;
     width: $size-extra-large;
-    height: $size-extra-large;
+    height: ($size-extra-large - $size-small);
     position: absolute;
     top: 0;
     right: 0;
     padding: ($size-default * 1.5);
 
-    background-image: url('#{$image-path}/close.svg');
+    background-image: url('#{$image-path}/material-design-icons/ic_close_24px.svg');
     background-position: center;
     background-repeat: no-repeat;
 
@@ -74,6 +79,8 @@
   &__body {
 
     @extend .usa-alert-body;
+    display: block;
+
 
     .fsa-alert--no-icon & {
       padding: 0 $size-base;

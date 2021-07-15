@@ -28,8 +28,8 @@
 }
 
 @mixin textFieldInline() {
-  display: initial;
-  width: initial;
+  display: revert;
+  width: revert;
 }
 
 .fsa-input,
@@ -158,7 +158,7 @@
   appearance: none;
   font-size: $font-size-0;
   background-color: #fff;
-  border: 0;
+  border-width: 0;
   box-shadow: 0 0 0 1px $button-default inset;
   padding: ($size-base + .1rem) $size-small $size-base;
   color: $button-default;
@@ -180,7 +180,7 @@
   }
 
   &::-ms-value {
-    border: 0;
+    border-width: 0;
     background: transparent;
     padding: 0;
     margin: 0;

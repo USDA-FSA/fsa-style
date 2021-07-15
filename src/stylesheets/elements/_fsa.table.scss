@@ -62,7 +62,25 @@ th {
 
 }
 
+.fsa-table-container {
+  &--scroll {
+    & > * {
+      margin: 0;
+    }
+    & {
+      @include overflow-gradient();
+      margin: 2em 0;
+      overflow: auto;
+    }
+    &[style*=--custom-table-height] {
+      --custom-border-width: auto;
+      max-height: var(--custom-table-height);
+    }
+  }
+}
+
 .fsa-table {
+
 
   & {
     background-color: $table-bgc;
@@ -70,6 +88,14 @@ th {
     @include breakpoint(M, down) {
       @include font-size(2);
     }
+  }
+
+  thead {
+
+    tr {
+      background-color: $table-header-bgc;
+    }
+
   }
 
   th,
@@ -92,7 +118,7 @@ th {
 
     position: sticky;
     top: -1px;
-    background-color: $color-fsa-site-bg;
+    background-color: $color-fsa-base-bg;
     z-index: 3;
     box-shadow: 0 1px 0 0 $color-fsa-tertiary-200;
 
@@ -124,10 +150,48 @@ th {
     background-color: $color-fsa-selection-bg;
   }
 
-  thead {
+  &__sort {
 
-    tr {
-      background-color: $table-header-bgc;
+    @include reset-button;
+    display: inline-flex;
+    align-items: center;
+
+    .fsa-text-align--right & {
+      text-align: right;
+    }
+
+    &:focus,
+    &:hover {
+      color: $color-fsa-tertiary-900;
+      outline-offset: 4px;
+    }
+
+    &:after {
+      content: '';
+      background-size: $icon-size-2;
+      width: $icon-size-2;
+      height: $icon-size-2;
+      margin-left: 2px;
+      opacity: .4;
+      background-image: url('#{$image-path}/material-design-icons/ic_expand_less_24px.svg');
+    }
+
+    &:focus:after,
+    &:hover:after {
+      opacity: 1;
+    }
+
+    &--descending:after,
+    &--ascending:after {
+      opacity: 1;
+    }
+
+    &--ascending:after {
+      background-image: url('#{$image-path}/material-design-icons/ic_expand_less_24px.svg');
+    }
+
+    &--descending:after {
+      background-image: url('#{$image-path}/material-design-icons/ic_expand_more_24px.svg');
     }
 
   }
@@ -194,7 +258,7 @@ th {
       td {
 
         display: block;
-        border: 0;
+        border-width: 0;
         padding: 0;
         width: 100%;
         text-align: left;
@@ -256,57 +320,6 @@ th {
   &--valign-middle {}
 
   &--valign-bottom {}
-
-  &__sort {
-
-    @include reset-button;
-    display: block;
-    width: 100%;
-
-    .fsa-text-align--right & {
-      text-align: right;
-    }
-
-    &:focus,
-    &:hover {
-      color: $color-fsa-tertiary-900;
-      outline-offset: 4px;
-    }
-
-    &:after {
-      content: '';
-      background-size: 100%;
-      width: 12px;
-      height: 12px;
-      display: inline-block;
-      vertical-align: middle;
-      position: relative;
-      top: -2px;
-      margin-left: 4px;
-      opacity: .2;
-      background-image: url('#{$image-path}/chevron-up.svg');
-    }
-
-    &--descending:after,
-    &--ascending:after {
-      opacity: 1;
-    }
-
-    &--ascending:after {
-      background-image: url('#{$image-path}/chevron-up.svg');
-    }
-
-    &--descending:after {
-      background-image: url('#{$image-path}/chevron-down.svg');
-    }
-
-    &:hover:not(.fsa-table__sort--descending, .fsa-table__sort--ascending) {
-      &:after {
-        opacity: 1;
-      }
-    }
-
-  }
 
 }
 

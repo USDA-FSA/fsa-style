@@ -17,6 +17,18 @@ $size-extra-large   : $size-medium * 2; // 48px
 $site-max-width: 1200px;
 
 // ---------------------------------------------------------------------------
+// Icon sizing
+
+$icon-size-auto: 1.0588235294em;  // 18px at base font size
+$icon-size-0:    $size-base * 3;  // 12px
+$icon-size-1:    $size-base * 4.5;// 18px
+$icon-size-2:    $size-base * 6;  // 24px
+$icon-size-3:    $size-base * 9;  // 36px
+$icon-size-4:    $size-base * 12; // 48px
+$icon-size-5:    $size-base * 18; // 72px
+$icon-size-6:    $size-base * 24; // 96px
+
+// ---------------------------------------------------------------------------
 // Colors
 
 // Core Colors
@@ -74,7 +86,9 @@ $color-fsa-selection-bg: $color-fsa-secondary-100;
 // Semantic
 $color-title: $color-fsa-tertiary;
 $color-fsa-site-bg: #f7f7f7;
-// $color-fsa-site-bg: tint($color-fsa-secondary, 97%); // Super light gray bg, but with a slight tint of blue
+$color-fsa-site-backcground: $color-fsa-site-bg;
+$color-fsa-base-bg: $color-fsa-site-bg;
+$color-fsa-base-background: $color-fsa-site-bg;
 
 $marker-text-color: $color-base;
 
@@ -86,8 +100,33 @@ $marker-bgc-warning: $color-fsa-yellow-200;
 $marker-bgc-success: $color-fsa-primary-200;
 
 // ---------------------------------------------------------------------------
-// Typography
+// Borders
 
+$border-none : 0;
+$border-xxs  : 1px;
+$border-xs   : ($size-base / 2);
+$border-s    : $size-base;
+$border-m    : $size-small;
+$border-l    : $size-default;
+
+$radius-none : 0;
+$radius-s    : $size-base;
+$radius-m    : ($size-base * 2);
+$radius-l    : ($size-base * 4);
+$radius-full : 999.9rem;
+$radius-oval : 100%;
+
+// ---------------------------------------------------------------------------
+// Shadows
+$shadow-color: transparentize($color-fsa-tertiary, .85);
+
+$shadow-size-popout:  0 $size-default  $size-default (-$size-default) $shadow-color, 0 $size-medium $size-large   $size-base  $shadow-color   , 0 $size-small    $size-extra-large $size-small    $shadow-color;
+$shadow-size-overlay: 0 $size-base     $size-base    (-($size-base))  $shadow-color, 0 $size-small  $size-default ($size-base/2) $shadow-color, 0 $size-base     $size-default     ($size-base/2) $shadow-color;
+$shadow-size-raised:  0 ($size-base/2) $size-base    (-($size-base))  $shadow-color, 0 $size-base   $size-base 0  $shadow-color               , 0 ($size-base/2) $size-default     0              $shadow-color;
+$shadow-size-none:    none;
+
+// ---------------------------------------------------------------------------
+// Typography
 
 // Font Size Scale
 $font-size-0 : $h6-font-size;           // 13px
@@ -148,7 +187,7 @@ $form-checkbox-fill            : $color-fsa-secondary;
 $form-radiocheckbox-size       : 1.8rem;
 $form-padding                  : $size-small;
 $form-select-bgc               : orangered; // TODO no in use
-$form-between-space            : $size-base + ($size-base / 2);
+$form-between-space            : $size-small;
 
 // ---------------------------------------------------------------------------
 // FSA Grid Settings

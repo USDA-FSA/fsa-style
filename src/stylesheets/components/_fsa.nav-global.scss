@@ -77,7 +77,8 @@
 
   }
 
-  &__search {
+  &__search,
+  &__aside {
     margin: $size-default $size-default 0;
     @include breakpoint(L) {
       margin: 0 $size-default 1px;
@@ -127,7 +128,7 @@
 
     @include font-size(2);
     background-color: $nav-bgcolor;
-    border: 0;
+    border-width: 0;
     display: block;
     width: 100%; // block-level <button> elements don't automatically full-width themselves
     text-decoration: none;
@@ -205,7 +206,9 @@
 
   &__text {
 
-    display: block;
+    display: flex;
+    gap: $size-base;
+    align-items: center;
     padding: ($nav-spacing-unit - $size-base) $nav-spacing-unit;
 
     @include breakpoint(M) {
@@ -221,36 +224,20 @@
     // scss-lint:disable SelectorFormat
     .fsa-nav-global__link--has-sub-menu & {
       &:after {
-
-        $size: $size-default;
-
+        $size: $size-medium;
         content: '';
-        display: inline-block;
-        vertical-align: middle;
-
-        margin-left: ($size-small);
-        width: ($size * .66);
-        height: ($size * .66);
-        background-image: url('#{$image-path}/angle-arrow-down.svg');
-        background-size: 100%;
+        width: ($size * .75);
+        height: ($size * .75);
+        margin-left: auto;
+        background-image: url('#{$image-path}/material-design-icons/ic_expand_more_24px.svg');
+        background-size: ($size - $size-base);
         background-repeat: no-repeat;
-
-        @include breakpoint(M) {
-          width: $size;
-          height: $size;
-        }
-
-        @include breakpoint(L, down) {
-          float: right;
-          margin-top: $size-default / 2;
-        }
-
       }
     }
 
     [aria-expanded="true"] & {
       &:after {
-        background-image: url('#{$image-path}/angle-arrow-down-hover.svg');
+        background-image: url('#{$image-path}/material-design-icons/ic_expand_more_white_24px.svg');
       }
     }
 
@@ -263,13 +250,12 @@
     position: absolute;
     left: 0;
     right: 0;
-    box-shadow: 0 $size-default $size-medium 0 rgba(0, 0, 0, .2);
+    box-shadow: $shadow-size-overlay;
 
     @include breakpoint(L) {
       top: 100%;
       width: 24rem;
       left: -$size-base;
-      box-shadow: none;
     }
 
     .fsa-nav-global__list-item:last-child & {

@@ -3,11 +3,10 @@
   $component-bgcolor-default: $white;
   $component-border-color: $color-fsa-tertiary-200;
   $component-padding: $size-default;
-  $component-icon-size: $size-medium;
 
   & {
 
-    margin: $size-large (-$size-default);
+    margin: $size-medium (-$size-default);
     background-color: $component-bgcolor-default;
     border: 1px solid $component-border-color;
     border-left-width: 0;
@@ -28,7 +27,7 @@
 
     position: sticky;
     z-index: 1001;
-    box-shadow: 0 0 $size-medium rgba(0, 0, 0, .3);
+    box-shadow: $shadow-size-popout;
     border-right-width: 0;
     border-bottom-width: 0;
     border-left-width: 0;
@@ -39,6 +38,7 @@
 
     @include breakpoint(XL) {
 
+      box-shadow: $shadow-size-overlay;
       bottom: $size-default;
       border-right-width: 1px;
       border-bottom-width: 1px;
@@ -149,7 +149,7 @@
 
       @include breakpoint(L) {
         flex: none;
-        flex: initial;
+        flex: revert;
         flex-shrink: 1;
       }
 
@@ -183,8 +183,10 @@
 
   &__btn {
 
-    display: block;
+    display: flex;
+    align-items: center;
     width: 100%;
+    justify-content: center;
 
     @include breakpoint(L, down) {
       height: $button-height;
@@ -194,25 +196,6 @@
         ($button-padding * 1.5)
         ($button-padding - .1rem)
       ;
-    }
-
-  }
-
-  &__btn-label {
-    .fsa-stepped-control__icon + & {
-      margin-left: $size-small;
-    }
-  }
-
-  &__icon {
-
-    width: ($component-icon-size * .8);
-    height: ($component-icon-size * .8);
-    transform: translateY(-1px);
-
-    @include breakpoint(L) {
-      width: ($component-icon-size);
-      height: ($component-icon-size);
     }
 
   }

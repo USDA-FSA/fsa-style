@@ -8,6 +8,10 @@ $divider-border-width: 1px;
     clear: both;
     border-top: 1px solid $divider-border-color;
   }
+  &--vertical {
+    border-width: 0;
+    border-left: 1px solid $divider-border-color;
+  }
   &--strong {
     border-width: $divider-border-width * 2;
   }

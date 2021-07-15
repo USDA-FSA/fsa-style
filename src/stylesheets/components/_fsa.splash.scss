@@ -17,7 +17,7 @@ $splash: fsa-splash;
   }
 
   &__tophat__bd {
-    max-width: initial;
+    max-width: revert;
     color: $color-fsa-tertiary-300;
   }
 

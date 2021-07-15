@@ -5,6 +5,7 @@
   }
 
   &__list {
+    display: flex;
     margin: 0;
     padding: 0;
   }
@@ -13,7 +14,7 @@
 
     @include font-size(1);
     margin: 0;
-    display: inline-block;
+    display: inline-flex;
 
     @include breakpoint(M) {
       @include font-size(2);
@@ -28,9 +29,9 @@
 
     &:after {
       content: '/';
-      display: inline-block;
-      margin-right: $size-base;
-      margin-left: $size-base;
+      display: inline-flex;
+      margin-right: $size-small;
+      margin-left: $size-small;
     }
 
     &:last-child {
@@ -63,6 +64,7 @@
       text-decoration: none;
       display: inline-flex;
       align-items: center;
+      gap: $size-base;
     }
 
     &:visited,
@@ -77,9 +79,9 @@
         width: $size-default;
         height: $size-default;
         margin-right: $size-base;
-        background-image: url('#{$image-path}/chevron-left--link.svg');
-        background-size: 100%; // fallback
-        background-size: contain;
+        background-image: url('#{$image-path}/material-design-icons/ic_arrow_back_24px.svg');
+        background-position: center;
+        background-size: ($size-medium - $size-base);
       }
     }
 

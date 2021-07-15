@@ -5,10 +5,10 @@
 
   @include fsa-shared-form-properties();
 
-  background-image: url('#{$image-path}/arrow-down.svg');
-  background-position: right 1.3rem center;
+  background-size: ($size-medium + .2rem);
+  background-image: url('#{$image-path}/material-design-icons/ic_expand_more_24px.svg');
+  background-position: right ($size-small - .2rem) center;
   background-repeat: no-repeat;
-  background-size: 1.3rem;
 
   // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
   padding:
@@ -19,9 +19,6 @@
   ;
 
   text-overflow: ellipsis;
-  vertical-align: middle;
-  position: relative;
-  top: -.1rem;
 
   @supports (-webkit-appearance: none) {
     /* Webkit only */
@@ -73,13 +70,9 @@
 }
 
 @mixin selectLarge() {
-
+  padding-left: $form-padding + $size-base;
   height: $button-height--lg;
-  // padding-top: ($button-padding * 2) - .9rem;
-  // padding-bottom: ($button-padding * 2) - .3rem;
   font-size: $form-text-size--lg; // no we're not using mixin cuz we don't want its line-height
-  top: -.3rem;
-
 }
 
 @mixin selectBlock() {
@@ -88,12 +81,12 @@
 }
 
 @mixin selectInline() {
-  display: initial;
-  width: initial;
+  display: revert;
+  width: revert;
 }
 
 @mixin selectFlat() {
-  border: 0;
+  border-width: 0;
   background-color: transparent;
 }
 

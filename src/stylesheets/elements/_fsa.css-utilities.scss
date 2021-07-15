@@ -1,9 +1,1918 @@
 ////////////////////////////////////////////////////////////////////////
 // Styling Utilities
 
-// TODO: so much of this is repeatable, convert to mixin sometime!
+// TODO: almost all of these are repeatable, convert to MIXIN sometime, possibly making available as documented on DS site, i.e. similar in principle to Tailwind's @apply directive
 
 // scss-lint:disable ImportantRule SpaceBeforeBrace DeclarationOrder
+
+// Border ---------------------------------------------------------------------
+.fsa-border {
+
+  // Border Width
+  & {
+
+    &--none   { border-width: $border-none !important; }
+    &--xxs    { border-width: $border-xxs !important; }
+    &--xs     { border-width: $border-xs !important; }
+    &--s      { border-width: $border-s !important; }
+    &--l      { border-width: $border-l !important; }
+    &--m      { border-width: $border-m !important; }
+    &--custom { --custom-border-width: #{$border-xxs}; border-width: var(--custom-border-width) !important; }
+
+    @include breakpoint(S) {
+      &--none\@s   { border-width: $border-none !important; }
+      &--xxs\@s    { border-width: $border-xxs !important; }
+      &--xs\@s     { border-width: $border-xs !important; }
+      &--s\@s      { border-width: $border-s !important; }
+      &--m\@s      { border-width: $border-m !important; }
+      &--l\@s      { border-width: $border-l !important; }
+      &--custom\@s { --custom-border-width-s: #{$border-xxs}; border-width: var(--custom-border-width-s) !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m   { border-width: $border-none !important; }
+      &--xxs\@m    { border-width: $border-xxs !important; }
+      &--xs\@m     { border-width: $border-xs !important; }
+      &--s\@m      { border-width: $border-s !important; }
+      &--m\@m      { border-width: $border-m !important; }
+      &--l\@m      { border-width: $border-l !important; }
+      &--custom\@m { --custom-border-width-m: #{$border-xxs}; border-width: var(--custom-border-width-m) !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l   { border-width: $border-none !important; }
+      &--xxs\@l    { border-width: $border-xxs !important; }
+      &--xs\@l     { border-width: $border-xs !important; }
+      &--s\@l      { border-width: $border-s !important; }
+      &--m\@l      { border-width: $border-m !important; }
+      &--l\@l      { border-width: $border-l !important; }
+      &--custom\@l { --custom-border-width-l: #{$border-xxs}; border-width: var(--custom-border-width-l) !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl   { border-width: $border-none !important; }
+      &--xxs\@xl    { border-width: $border-xxs !important; }
+      &--xs\@xl     { border-width: $border-xs !important; }
+      &--s\@xl      { border-width: $border-s !important; }
+      &--m\@xl      { border-width: $border-m !important; }
+      &--l\@xl      { border-width: $border-l !important; }
+      &--custom\@xl { --custom-border-width-xl: #{$border-xxs}; border-width: var(--custom-border-width-xl) !important; }
+    }
+
+  }
+  &-top {
+
+    &--none   { border-top-width: $border-none !important; }
+    &--xxs    { border-top-width: $border-xxs !important; }
+    &--xs     { border-top-width: $border-xs !important; }
+    &--s      { border-top-width: $border-s !important; }
+    &--m      { border-top-width: $border-m !important; }
+    &--l      { border-top-width: $border-l !important; }
+    &--custom { --custom-border-top-width: #{$border-xxs}; border-top-width: var(--custom-border-top-width) !important; }
+
+    @include breakpoint(S) {
+      &--none\@s   { border-top-width: $border-none !important; }
+      &--xxs\@s    { border-top-width: $border-xxs !important; }
+      &--xs\@s     { border-top-width: $border-xs !important; }
+      &--s\@s      { border-top-width: $border-s !important; }
+      &--m\@s      { border-top-width: $border-m !important; }
+      &--l\@s      { border-top-width: $border-l !important; }
+      &--custom\@s { --custom-border-top-width-s: #{$border-xxs}; border-top-width: var(--custom-border-top-width-s) !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m   { border-top-width: $border-none !important; }
+      &--xxs\@m    { border-top-width: $border-xxs !important; }
+      &--xs\@m     { border-top-width: $border-xs !important; }
+      &--s\@m      { border-top-width: $border-s !important; }
+      &--m\@m      { border-top-width: $border-m !important; }
+      &--l\@m      { border-top-width: $border-l !important; }
+      &--custom\@m { --custom-border-top-width-m: #{$border-xxs}; border-top-width: var(--custom-border-top-width-m) !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l   { border-top-width: $border-none !important; }
+      &--xxs\@l    { border-top-width: $border-xxs !important; }
+      &--xs\@l     { border-top-width: $border-xs !important; }
+      &--s\@l      { border-top-width: $border-s !important; }
+      &--m\@l      { border-top-width: $border-m !important; }
+      &--l\@l      { border-top-width: $border-l !important; }
+      &--custom\@l { --custom-border-top-width-l: #{$border-xxs}; border-top-width: var(--custom-border-top-width-l) !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl   { border-top-width: $border-none !important; }
+      &--xxs\@xl    { border-top-width: $border-xxs !important; }
+      &--xs\@xl     { border-top-width: $border-xs !important; }
+      &--s\@xl      { border-top-width: $border-s !important; }
+      &--m\@xl      { border-top-width: $border-m !important; }
+      &--l\@xl      { border-top-width: $border-l !important; }
+      &--custom\@xl { --custom-border-top-width-xl: #{$border-xxs}; border-top-width: var(--custom-border-top-width-xl) !important; }
+    }
+
+  }
+  &-right {
+
+    &--none   { border-right-width: $border-none !important; }
+    &--xxs    { border-right-width: $border-xxs !important; }
+    &--xs     { border-right-width: $border-xs !important; }
+    &--s      { border-right-width: $border-s !important; }
+    &--m      { border-right-width: $border-m !important; }
+    &--l      { border-right-width: $border-l !important; }
+    &--custom { --custom-border-right-width: #{$border-xxs}; border-right-width: var(--custom-border-right-width) !important; }
+
+    @include breakpoint(S) {
+      &--none\@s   { border-right-width: $border-none !important; }
+      &--xxs\@s    { border-right-width: $border-xxs !important; }
+      &--xs\@s     { border-right-width: $border-xs !important; }
+      &--s\@s      { border-right-width: $border-s !important; }
+      &--m\@s      { border-right-width: $border-m !important; }
+      &--l\@s      { border-right-width: $border-l !important; }
+      &--custom\@s { --custom-border-right-width-s: #{$border-xxs}; border-right-width: var(--custom-border-right-width-s) !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m   { border-right-width: $border-none !important; }
+      &--xxs\@m    { border-right-width: $border-xxs !important; }
+      &--xs\@m     { border-right-width: $border-xs !important; }
+      &--s\@m      { border-right-width: $border-s !important; }
+      &--m\@m      { border-right-width: $border-m !important; }
+      &--l\@m      { border-right-width: $border-l !important; }
+      &--custom\@m { --custom-border-right-width-m: #{$border-xxs}; border-right-width: var(--custom-border-right-width-m) !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l   { border-right-width: $border-none !important; }
+      &--xxs\@l    { border-right-width: $border-xxs !important; }
+      &--xs\@l     { border-right-width: $border-xs !important; }
+      &--s\@l      { border-right-width: $border-s !important; }
+      &--m\@l      { border-right-width: $border-m !important; }
+      &--l\@l      { border-right-width: $border-l !important; }
+      &--custom\@l { --custom-border-right-width-l: #{$border-xxs}; border-right-width: var(--custom-border-right-width-l) !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl   { border-right-width: $border-none !important; }
+      &--xxs\@xl    { border-right-width: $border-xxs !important; }
+      &--xs\@xl     { border-right-width: $border-xs !important; }
+      &--s\@xl      { border-right-width: $border-s !important; }
+      &--m\@xl      { border-right-width: $border-m !important; }
+      &--l\@xl      { border-right-width: $border-l !important; }
+      &--custom\@xl { --custom-border-right-width-xl: #{$border-xxs}; border-right-width: var(--custom-border-right-width-xl) !important; }
+    }
+
+  }
+  &-bottom {
+
+    &--none   { border-bottom-width: $border-none !important; }
+    &--xxs    { border-bottom-width: $border-xxs !important; }
+    &--xs     { border-bottom-width: $border-xs !important; }
+    &--s      { border-bottom-width: $border-s !important; }
+    &--m      { border-bottom-width: $border-m !important; }
+    &--l      { border-bottom-width: $border-l !important; }
+    &--custom { --custom-border-bottom-width: #{$border-xxs}; border-bottom-width: var(--custom-border-bottom-width) !important; }
+
+    @include breakpoint(S) {
+      &--none\@s   { border-bottom-width: $border-none !important; }
+      &--xxs\@s    { border-bottom-width: $border-xxs !important; }
+      &--xs\@s     { border-bottom-width: $border-xs !important; }
+      &--s\@s      { border-bottom-width: $border-s !important; }
+      &--m\@s      { border-bottom-width: $border-m !important; }
+      &--l\@s      { border-bottom-width: $border-l !important; }
+      &--custom\@s { --custom-border-bottom-width-s: #{$border-xxs}; border-bottom-width: var(--custom-border-bottom-width-s) !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m   { border-bottom-width: $border-none !important; }
+      &--xxs\@m    { border-bottom-width: $border-xxs !important; }
+      &--xs\@m     { border-bottom-width: $border-xs !important; }
+      &--s\@m      { border-bottom-width: $border-s !important; }
+      &--m\@m      { border-bottom-width: $border-m !important; }
+      &--l\@m      { border-bottom-width: $border-l !important; }
+      &--custom\@m { --custom-border-bottom-width-m: #{$border-xxs}; border-bottom-width: var(--custom-border-bottom-width-m) !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l   { border-bottom-width: $border-none !important; }
+      &--xxs\@l    { border-bottom-width: $border-xxs !important; }
+      &--xs\@l     { border-bottom-width: $border-xs !important; }
+      &--s\@l      { border-bottom-width: $border-s !important; }
+      &--m\@l      { border-bottom-width: $border-m !important; }
+      &--l\@l      { border-bottom-width: $border-l !important; }
+      &--custom\@l { --custom-border-bottom-width-l: #{$border-xxs}; border-bottom-width: var(--custom-border-bottom-width-l) !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl   { border-bottom-width: $border-none !important; }
+      &--xxs\@xl    { border-bottom-width: $border-xxs !important; }
+      &--xs\@xl     { border-bottom-width: $border-xs !important; }
+      &--s\@xl      { border-bottom-width: $border-s !important; }
+      &--m\@xl      { border-bottom-width: $border-m !important; }
+      &--l\@xl      { border-bottom-width: $border-l !important; }
+      &--custom\@xl { --custom-border-bottom-width-xl: #{$border-xxs}; border-bottom-width: var(--custom-border-bottom-width-xl) !important; }
+    }
+
+  }
+  &-left {
+
+    &--none   { border-left-width: $border-none !important; }
+    &--xxs    { border-left-width: $border-xxs !important; }
+    &--xs     { border-left-width: $border-xs !important; }
+    &--s      { border-left-width: $border-s !important; }
+    &--m      { border-left-width: $border-m !important; }
+    &--l      { border-left-width: $border-l !important; }
+    &--custom { --custom-border-left-width: #{$border-xxs}; border-left-width: var(--custom-border-left-width) !important; }
+
+    @include breakpoint(S) {
+      &--none\@s   { border-left-width: $border-none !important; }
+      &--xxs\@s    { border-left-width: $border-xxs !important; }
+      &--xs\@s     { border-left-width: $border-xs !important; }
+      &--s\@s      { border-left-width: $border-s !important; }
+      &--m\@s      { border-left-width: $border-m !important; }
+      &--l\@s      { border-left-width: $border-l !important; }
+      &--custom\@s { --custom-border-left-width-s: #{$border-xxs}; border-left-width: var(--custom-border-left-width-s) !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m   { border-left-width: $border-none !important; }
+      &--xxs\@m    { border-left-width: $border-xxs !important; }
+      &--xs\@m     { border-left-width: $border-xs !important; }
+      &--s\@m      { border-left-width: $border-s !important; }
+      &--m\@m      { border-left-width: $border-m !important; }
+      &--l\@m      { border-left-width: $border-l !important; }
+      &--custom\@m { --custom-border-left-width-m: #{$border-xxs}; border-left-width: var(--custom-border-left-width-m) !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l   { border-left-width: $border-none !important; }
+      &--xxs\@l    { border-left-width: $border-xxs !important; }
+      &--xs\@l     { border-left-width: $border-xs !important; }
+      &--s\@l      { border-left-width: $border-s !important; }
+      &--m\@l      { border-left-width: $border-m !important; }
+      &--l\@l      { border-left-width: $border-l !important; }
+      &--custom\@l { --custom-border-left-width-: #{$border-xxs}; border-left-width: var(--custom-border-left-width-) !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl   { border-left-width: $border-none !important; }
+      &--xxs\@xl    { border-left-width: $border-xxs !important; }
+      &--xs\@xl     { border-left-width: $border-xs !important; }
+      &--s\@xl      { border-left-width: $border-s !important; }
+      &--m\@xl      { border-left-width: $border-m !important; }
+      &--l\@xl      { border-left-width: $border-l !important; }
+      &--custom\@xl { --custom-border-left-width-xl: #{$border-xxs}; border-left-width: var(--custom-border-left-width-xl) !important; }
+    }
+
+  }
+
+  // Border Color
+  & {
+
+    // Default
+    & {
+      &--transparent    { border-color: transparent !important }
+      &--white          { border-color: $color-fsa-white !important }
+      &--black          { border-color: $color-fsa-black !important }
+      &--primary        { border-color: $color-fsa-primary !important }
+      &--primary-300    { border-color: $color-fsa-primary-300 !important }
+      &--primary-200    { border-color: $color-fsa-primary-200 !important }
+      &--primary-100    { border-color: $color-fsa-primary-100 !important }
+      &--primary-900    { border-color: $color-fsa-primary-900 !important }
+      &--secondary      { border-color: $color-fsa-secondary !important }
+      &--secondary-300  { border-color: $color-fsa-secondary-300 !important }
+      &--secondary-200  { border-color: $color-fsa-secondary-200 !important }
+      &--secondary-100  { border-color: $color-fsa-secondary-100 !important }
+      &--secondary-900  { border-color: $color-fsa-secondary-900 !important }
+      &--tertiary       { border-color: $color-fsa-tertiary !important }
+      &--tertiary-300   { border-color: $color-fsa-tertiary-300 !important }
+      &--tertiary-200   { border-color: $color-fsa-tertiary-200 !important }
+      &--tertiary-100   { border-color: $color-fsa-tertiary-100 !important }
+      &--tertiary-900   { border-color: $color-fsa-tertiary-900 !important }
+      &--aqua           { border-color: $color-fsa-aqua !important }
+      &--aqua-300       { border-color: $color-fsa-aqua-300 !important }
+      &--aqua-200       { border-color: $color-fsa-aqua-200 !important }
+      &--aqua-100       { border-color: $color-fsa-aqua-100 !important }
+      &--aqua-900       { border-color: $color-fsa-aqua-900 !important }
+      &--red            { border-color: $color-fsa-red !important }
+      &--red-300        { border-color: $color-fsa-red-300 !important }
+      &--red-200        { border-color: $color-fsa-red-200 !important }
+      &--red-100        { border-color: $color-fsa-red-100 !important }
+      &--red-900        { border-color: $color-fsa-red-900 !important }
+      &--yellow         { border-color: $color-fsa-yellow !important }
+      &--yellow-300     { border-color: $color-fsa-yellow-300 !important }
+      &--yellow-200     { border-color: $color-fsa-yellow-200 !important }
+      &--yellow-100     { border-color: $color-fsa-yellow-100 !important }
+    }
+
+    // Hover
+    &\:hover {
+      &--transparent:hover    { border-color: transparent !important }
+      &--white:hover          { border-color: $color-fsa-white !important }
+      &--black:hover          { border-color: $color-fsa-black !important }
+      &--primary:hover        { border-color: $color-fsa-primary !important }
+      &--primary-300:hover    { border-color: $color-fsa-primary-300 !important }
+      &--primary-200:hover    { border-color: $color-fsa-primary-200 !important }
+      &--primary-100:hover    { border-color: $color-fsa-primary-100 !important }
+      &--primary-900:hover    { border-color: $color-fsa-primary-900 !important }
+      &--secondary:hover      { border-color: $color-fsa-secondary !important }
+      &--secondary-300:hover  { border-color: $color-fsa-secondary-300 !important }
+      &--secondary-200:hover  { border-color: $color-fsa-secondary-200 !important }
+      &--secondary-100:hover  { border-color: $color-fsa-secondary-100 !important }
+      &--secondary-900:hover  { border-color: $color-fsa-secondary-900 !important }
+      &--tertiary:hover       { border-color: $color-fsa-tertiary !important }
+      &--tertiary-300:hover   { border-color: $color-fsa-tertiary-300 !important }
+      &--tertiary-200:hover   { border-color: $color-fsa-tertiary-200 !important }
+      &--tertiary-100:hover   { border-color: $color-fsa-tertiary-100 !important }
+      &--tertiary-900:hover   { border-color: $color-fsa-tertiary-900 !important }
+      &--aqua:hover           { border-color: $color-fsa-aqua !important }
+      &--aqua-300:hover       { border-color: $color-fsa-aqua-300 !important }
+      &--aqua-200:hover       { border-color: $color-fsa-aqua-200 !important }
+      &--aqua-100:hover       { border-color: $color-fsa-aqua-100 !important }
+      &--aqua-900:hover       { border-color: $color-fsa-aqua-900 !important }
+      &--red:hover            { border-color: $color-fsa-red !important }
+      &--red-300:hover        { border-color: $color-fsa-red-300 !important }
+      &--red-200:hover        { border-color: $color-fsa-red-200 !important }
+      &--red-100:hover        { border-color: $color-fsa-red-100 !important }
+      &--red-900:hover        { border-color: $color-fsa-red-900 !important }
+      &--yellow:hover         { border-color: $color-fsa-yellow !important }
+      &--yellow-300:hover     { border-color: $color-fsa-yellow-300 !important }
+      &--yellow-200:hover     { border-color: $color-fsa-yellow-200 !important }
+      &--yellow-100:hover     { border-color: $color-fsa-yellow-100 !important }
+    }
+
+    @include breakpoint(S) {
+
+      // Default
+      & {
+        &--transparent\@s    { border-color: transparent !important }
+        &--white\@s          { border-color: $color-fsa-white !important }
+        &--black\@s          { border-color: $color-fsa-black !important }
+        &--primary\@s        { border-color: $color-fsa-primary !important }
+        &--primary-300\@s    { border-color: $color-fsa-primary-300 !important }
+        &--primary-200\@s    { border-color: $color-fsa-primary-200 !important }
+        &--primary-100\@s    { border-color: $color-fsa-primary-100 !important }
+        &--primary-900\@s    { border-color: $color-fsa-primary-900 !important }
+        &--secondary\@s      { border-color: $color-fsa-secondary !important }
+        &--secondary-300\@s  { border-color: $color-fsa-secondary-300 !important }
+        &--secondary-200\@s  { border-color: $color-fsa-secondary-200 !important }
+        &--secondary-100\@s  { border-color: $color-fsa-secondary-100 !important }
+        &--secondary-900\@s  { border-color: $color-fsa-secondary-900 !important }
+        &--tertiary\@s       { border-color: $color-fsa-tertiary !important }
+        &--tertiary-300\@s   { border-color: $color-fsa-tertiary-300 !important }
+        &--tertiary-200\@s   { border-color: $color-fsa-tertiary-200 !important }
+        &--tertiary-100\@s   { border-color: $color-fsa-tertiary-100 !important }
+        &--tertiary-900\@s   { border-color: $color-fsa-tertiary-900 !important }
+        &--aqua\@s           { border-color: $color-fsa-aqua !important }
+        &--aqua-300\@s       { border-color: $color-fsa-aqua-300 !important }
+        &--aqua-200\@s       { border-color: $color-fsa-aqua-200 !important }
+        &--aqua-100\@s       { border-color: $color-fsa-aqua-100 !important }
+        &--aqua-900\@s       { border-color: $color-fsa-aqua-900 !important }
+        &--red\@s            { border-color: $color-fsa-red !important }
+        &--red-300\@s        { border-color: $color-fsa-red-300 !important }
+        &--red-200\@s        { border-color: $color-fsa-red-200 !important }
+        &--red-100\@s        { border-color: $color-fsa-red-100 !important }
+        &--red-900\@s        { border-color: $color-fsa-red-900 !important }
+        &--yellow\@s         { border-color: $color-fsa-yellow !important }
+        &--yellow-300\@s     { border-color: $color-fsa-yellow-300 !important }
+        &--yellow-200\@s     { border-color: $color-fsa-yellow-200 !important }
+        &--yellow-100\@s     { border-color: $color-fsa-yellow-100 !important }
+      }
+
+      // Hover
+      &\:hover {
+        &--transparent\@s:hover    { border-color: transparent !important }
+        &--white\@s:hover          { border-color: $color-fsa-white !important }
+        &--black\@s:hover          { border-color: $color-fsa-black !important }
+        &--primary\@s:hover        { border-color: $color-fsa-primary !important }
+        &--primary-300\@s:hover    { border-color: $color-fsa-primary-300 !important }
+        &--primary-200\@s:hover    { border-color: $color-fsa-primary-200 !important }
+        &--primary-100\@s:hover    { border-color: $color-fsa-primary-100 !important }
+        &--primary-900\@s:hover    { border-color: $color-fsa-primary-900 !important }
+        &--secondary\@s:hover      { border-color: $color-fsa-secondary !important }
+        &--secondary-300\@s:hover  { border-color: $color-fsa-secondary-300 !important }
+        &--secondary-200\@s:hover  { border-color: $color-fsa-secondary-200 !important }
+        &--secondary-100\@s:hover  { border-color: $color-fsa-secondary-100 !important }
+        &--secondary-900\@s:hover  { border-color: $color-fsa-secondary-900 !important }
+        &--tertiary\@s:hover       { border-color: $color-fsa-tertiary !important }
+        &--tertiary-300\@s:hover   { border-color: $color-fsa-tertiary-300 !important }
+        &--tertiary-200\@s:hover   { border-color: $color-fsa-tertiary-200 !important }
+        &--tertiary-100\@s:hover   { border-color: $color-fsa-tertiary-100 !important }
+        &--tertiary-900\@s:hover   { border-color: $color-fsa-tertiary-900 !important }
+        &--aqua\@s:hover           { border-color: $color-fsa-aqua !important }
+        &--aqua-300\@s:hover       { border-color: $color-fsa-aqua-300 !important }
+        &--aqua-200\@s:hover       { border-color: $color-fsa-aqua-200 !important }
+        &--aqua-100\@s:hover       { border-color: $color-fsa-aqua-100 !important }
+        &--aqua-900\@s:hover       { border-color: $color-fsa-aqua-900 !important }
+        &--red\@s:hover            { border-color: $color-fsa-red !important }
+        &--red-300\@s:hover        { border-color: $color-fsa-red-300 !important }
+        &--red-200\@s:hover        { border-color: $color-fsa-red-200 !important }
+        &--red-100\@s:hover        { border-color: $color-fsa-red-100 !important }
+        &--red-900\@s:hover        { border-color: $color-fsa-red-900 !important }
+        &--yellow\@s:hover         { border-color: $color-fsa-yellow !important }
+        &--yellow-300\@s:hover     { border-color: $color-fsa-yellow-300 !important }
+        &--yellow-200\@s:hover     { border-color: $color-fsa-yellow-200 !important }
+        &--yellow-100\@s:hover     { border-color: $color-fsa-yellow-100 !important }
+      }
+
+    }
+
+    @include breakpoint(M) {
+
+      // Default
+      & {
+        &--transparent\@m    { border-color: transparent !important }
+        &--white\@m          { border-color: $color-fsa-white !important }
+        &--black\@m          { border-color: $color-fsa-black !important }
+        &--primary\@m        { border-color: $color-fsa-primary !important }
+        &--primary-300\@m    { border-color: $color-fsa-primary-300 !important }
+        &--primary-200\@m    { border-color: $color-fsa-primary-200 !important }
+        &--primary-100\@m    { border-color: $color-fsa-primary-100 !important }
+        &--primary-900\@m    { border-color: $color-fsa-primary-900 !important }
+        &--secondary\@m      { border-color: $color-fsa-secondary !important }
+        &--secondary-300\@m  { border-color: $color-fsa-secondary-300 !important }
+        &--secondary-200\@m  { border-color: $color-fsa-secondary-200 !important }
+        &--secondary-100\@m  { border-color: $color-fsa-secondary-100 !important }
+        &--secondary-900\@m  { border-color: $color-fsa-secondary-900 !important }
+        &--tertiary\@m       { border-color: $color-fsa-tertiary !important }
+        &--tertiary-300\@m   { border-color: $color-fsa-tertiary-300 !important }
+        &--tertiary-200\@m   { border-color: $color-fsa-tertiary-200 !important }
+        &--tertiary-100\@m   { border-color: $color-fsa-tertiary-100 !important }
+        &--tertiary-900\@m   { border-color: $color-fsa-tertiary-900 !important }
+        &--aqua\@m           { border-color: $color-fsa-aqua !important }
+        &--aqua-300\@m       { border-color: $color-fsa-aqua-300 !important }
+        &--aqua-200\@m       { border-color: $color-fsa-aqua-200 !important }
+        &--aqua-100\@m       { border-color: $color-fsa-aqua-100 !important }
+        &--aqua-900\@m       { border-color: $color-fsa-aqua-900 !important }
+        &--red\@m            { border-color: $color-fsa-red !important }
+        &--red-300\@m        { border-color: $color-fsa-red-300 !important }
+        &--red-200\@m        { border-color: $color-fsa-red-200 !important }
+        &--red-100\@m        { border-color: $color-fsa-red-100 !important }
+        &--red-900\@m        { border-color: $color-fsa-red-900 !important }
+        &--yellow\@m         { border-color: $color-fsa-yellow !important }
+        &--yellow-300\@m     { border-color: $color-fsa-yellow-300 !important }
+        &--yellow-200\@m     { border-color: $color-fsa-yellow-200 !important }
+        &--yellow-100\@m     { border-color: $color-fsa-yellow-100 !important }
+      }
+
+      // Hover
+      &\:hover {
+        &--transparent\@m:hover    { border-color: transparent !important }
+        &--white\@m:hover          { border-color: $color-fsa-white !important }
+        &--black\@m:hover          { border-color: $color-fsa-black !important }
+        &--primary\@m:hover        { border-color: $color-fsa-primary !important }
+        &--primary-300\@m:hover    { border-color: $color-fsa-primary-300 !important }
+        &--primary-200\@m:hover    { border-color: $color-fsa-primary-200 !important }
+        &--primary-100\@m:hover    { border-color: $color-fsa-primary-100 !important }
+        &--primary-900\@m:hover    { border-color: $color-fsa-primary-900 !important }
+        &--secondary\@m:hover      { border-color: $color-fsa-secondary !important }
+        &--secondary-300\@m:hover  { border-color: $color-fsa-secondary-300 !important }
+        &--secondary-200\@m:hover  { border-color: $color-fsa-secondary-200 !important }
+        &--secondary-100\@m:hover  { border-color: $color-fsa-secondary-100 !important }
+        &--secondary-900\@m:hover  { border-color: $color-fsa-secondary-900 !important }
+        &--tertiary\@m:hover       { border-color: $color-fsa-tertiary !important }
+        &--tertiary-300\@m:hover   { border-color: $color-fsa-tertiary-300 !important }
+        &--tertiary-200\@m:hover   { border-color: $color-fsa-tertiary-200 !important }
+        &--tertiary-100\@m:hover   { border-color: $color-fsa-tertiary-100 !important }
+        &--tertiary-900\@m:hover   { border-color: $color-fsa-tertiary-900 !important }
+        &--aqua\@m:hover           { border-color: $color-fsa-aqua !important }
+        &--aqua-300\@m:hover       { border-color: $color-fsa-aqua-300 !important }
+        &--aqua-200\@m:hover       { border-color: $color-fsa-aqua-200 !important }
+        &--aqua-100\@m:hover       { border-color: $color-fsa-aqua-100 !important }
+        &--aqua-900\@m:hover       { border-color: $color-fsa-aqua-900 !important }
+        &--red\@m:hover            { border-color: $color-fsa-red !important }
+        &--red-300\@m:hover        { border-color: $color-fsa-red-300 !important }
+        &--red-200\@m:hover        { border-color: $color-fsa-red-200 !important }
+        &--red-100\@m:hover        { border-color: $color-fsa-red-100 !important }
+        &--red-900\@m:hover        { border-color: $color-fsa-red-900 !important }
+        &--yellow\@m:hover         { border-color: $color-fsa-yellow !important }
+        &--yellow-300\@m:hover     { border-color: $color-fsa-yellow-300 !important }
+        &--yellow-200\@m:hover     { border-color: $color-fsa-yellow-200 !important }
+        &--yellow-100\@m:hover     { border-color: $color-fsa-yellow-100 !important }
+      }
+
+    }
+
+    @include breakpoint(L) {
+
+      // Default
+      & {
+        &--transparent\@l    { border-color: transparent !important }
+        &--white\@l          { border-color: $color-fsa-white !important }
+        &--black\@l          { border-color: $color-fsa-black !important }
+        &--primary\@l        { border-color: $color-fsa-primary !important }
+        &--primary-300\@l    { border-color: $color-fsa-primary-300 !important }
+        &--primary-200\@l    { border-color: $color-fsa-primary-200 !important }
+        &--primary-100\@l    { border-color: $color-fsa-primary-100 !important }
+        &--primary-900\@l    { border-color: $color-fsa-primary-900 !important }
+        &--secondary\@l      { border-color: $color-fsa-secondary !important }
+        &--secondary-300\@l  { border-color: $color-fsa-secondary-300 !important }
+        &--secondary-200\@l  { border-color: $color-fsa-secondary-200 !important }
+        &--secondary-100\@l  { border-color: $color-fsa-secondary-100 !important }
+        &--secondary-900\@l  { border-color: $color-fsa-secondary-900 !important }
+        &--tertiary\@l       { border-color: $color-fsa-tertiary !important }
+        &--tertiary-300\@l   { border-color: $color-fsa-tertiary-300 !important }
+        &--tertiary-200\@l   { border-color: $color-fsa-tertiary-200 !important }
+        &--tertiary-100\@l   { border-color: $color-fsa-tertiary-100 !important }
+        &--tertiary-900\@l   { border-color: $color-fsa-tertiary-900 !important }
+        &--aqua\@l           { border-color: $color-fsa-aqua !important }
+        &--aqua-300\@l       { border-color: $color-fsa-aqua-300 !important }
+        &--aqua-200\@l       { border-color: $color-fsa-aqua-200 !important }
+        &--aqua-100\@l       { border-color: $color-fsa-aqua-100 !important }
+        &--aqua-900\@l       { border-color: $color-fsa-aqua-900 !important }
+        &--red\@l            { border-color: $color-fsa-red !important }
+        &--red-300\@l        { border-color: $color-fsa-red-300 !important }
+        &--red-200\@l        { border-color: $color-fsa-red-200 !important }
+        &--red-100\@l        { border-color: $color-fsa-red-100 !important }
+        &--red-900\@l        { border-color: $color-fsa-red-900 !important }
+        &--yellow\@l         { border-color: $color-fsa-yellow !important }
+        &--yellow-300\@l     { border-color: $color-fsa-yellow-300 !important }
+        &--yellow-200\@l     { border-color: $color-fsa-yellow-200 !important }
+        &--yellow-100\@l     { border-color: $color-fsa-yellow-100 !important }
+      }
+
+      // Hover
+      &\:hover {
+        &--transparent\@l:hover    { border-color: transparent !important }
+        &--white\@l:hover          { border-color: $color-fsa-white !important }
+        &--black\@l:hover          { border-color: $color-fsa-black !important }
+        &--primary\@l:hover        { border-color: $color-fsa-primary !important }
+        &--primary-300\@l:hover    { border-color: $color-fsa-primary-300 !important }
+        &--primary-200\@l:hover    { border-color: $color-fsa-primary-200 !important }
+        &--primary-100\@l:hover    { border-color: $color-fsa-primary-100 !important }
+        &--primary-900\@l:hover    { border-color: $color-fsa-primary-900 !important }
+        &--secondary\@l:hover      { border-color: $color-fsa-secondary !important }
+        &--secondary-300\@l:hover  { border-color: $color-fsa-secondary-300 !important }
+        &--secondary-200\@l:hover  { border-color: $color-fsa-secondary-200 !important }
+        &--secondary-100\@l:hover  { border-color: $color-fsa-secondary-100 !important }
+        &--secondary-900\@l:hover  { border-color: $color-fsa-secondary-900 !important }
+        &--tertiary\@l:hover       { border-color: $color-fsa-tertiary !important }
+        &--tertiary-300\@l:hover   { border-color: $color-fsa-tertiary-300 !important }
+        &--tertiary-200\@l:hover   { border-color: $color-fsa-tertiary-200 !important }
+        &--tertiary-100\@l:hover   { border-color: $color-fsa-tertiary-100 !important }
+        &--tertiary-900\@l:hover   { border-color: $color-fsa-tertiary-900 !important }
+        &--aqua\@l:hover           { border-color: $color-fsa-aqua !important }
+        &--aqua-300\@l:hover       { border-color: $color-fsa-aqua-300 !important }
+        &--aqua-200\@l:hover       { border-color: $color-fsa-aqua-200 !important }
+        &--aqua-100\@l:hover       { border-color: $color-fsa-aqua-100 !important }
+        &--aqua-900\@l:hover       { border-color: $color-fsa-aqua-900 !important }
+        &--red\@l:hover            { border-color: $color-fsa-red !important }
+        &--red-300\@l:hover        { border-color: $color-fsa-red-300 !important }
+        &--red-200\@l:hover        { border-color: $color-fsa-red-200 !important }
+        &--red-100\@l:hover        { border-color: $color-fsa-red-100 !important }
+        &--red-900\@l:hover        { border-color: $color-fsa-red-900 !important }
+        &--yellow\@l:hover         { border-color: $color-fsa-yellow !important }
+        &--yellow-300\@l:hover     { border-color: $color-fsa-yellow-300 !important }
+        &--yellow-200\@l:hover     { border-color: $color-fsa-yellow-200 !important }
+        &--yellow-100\@l:hover     { border-color: $color-fsa-yellow-100 !important }
+      }
+
+    }
+
+    @include breakpoint(XL) {
+
+      // Default
+      & {
+        &--transparent\@xl    { border-color: transparent !important }
+        &--white\@xl          { border-color: $color-fsa-white !important }
+        &--black\@xl          { border-color: $color-fsa-black !important }
+        &--primary\@xl        { border-color: $color-fsa-primary !important }
+        &--primary-300\@xl    { border-color: $color-fsa-primary-300 !important }
+        &--primary-200\@xl    { border-color: $color-fsa-primary-200 !important }
+        &--primary-100\@xl    { border-color: $color-fsa-primary-100 !important }
+        &--primary-900\@xl    { border-color: $color-fsa-primary-900 !important }
+        &--secondary\@xl      { border-color: $color-fsa-secondary !important }
+        &--secondary-300\@xl  { border-color: $color-fsa-secondary-300 !important }
+        &--secondary-200\@xl  { border-color: $color-fsa-secondary-200 !important }
+        &--secondary-100\@xl  { border-color: $color-fsa-secondary-100 !important }
+        &--secondary-900\@xl  { border-color: $color-fsa-secondary-900 !important }
+        &--tertiary\@xl       { border-color: $color-fsa-tertiary !important }
+        &--tertiary-300\@xl   { border-color: $color-fsa-tertiary-300 !important }
+        &--tertiary-200\@xl   { border-color: $color-fsa-tertiary-200 !important }
+        &--tertiary-100\@xl   { border-color: $color-fsa-tertiary-100 !important }
+        &--tertiary-900\@xl   { border-color: $color-fsa-tertiary-900 !important }
+        &--aqua\@xl           { border-color: $color-fsa-aqua !important }
+        &--aqua-300\@xl       { border-color: $color-fsa-aqua-300 !important }
+        &--aqua-200\@xl       { border-color: $color-fsa-aqua-200 !important }
+        &--aqua-100\@xl       { border-color: $color-fsa-aqua-100 !important }
+        &--aqua-900\@xl       { border-color: $color-fsa-aqua-900 !important }
+        &--red\@xl            { border-color: $color-fsa-red !important }
+        &--red-300\@xl        { border-color: $color-fsa-red-300 !important }
+        &--red-200\@xl        { border-color: $color-fsa-red-200 !important }
+        &--red-100\@xl        { border-color: $color-fsa-red-100 !important }
+        &--red-900\@xl        { border-color: $color-fsa-red-900 !important }
+        &--yellow\@xl         { border-color: $color-fsa-yellow !important }
+        &--yellow-300\@xl     { border-color: $color-fsa-yellow-300 !important }
+        &--yellow-200\@xl     { border-color: $color-fsa-yellow-200 !important }
+        &--yellow-100\@xl     { border-color: $color-fsa-yellow-100 !important }
+      }
+
+      // Hover
+      &\:hover {
+        &--transparent\@xl:hover    { border-color: transparent !important }
+        &--white\@xl:hover          { border-color: $color-fsa-white !important }
+        &--black\@xl:hover          { border-color: $color-fsa-black !important }
+        &--primary\@xl:hover        { border-color: $color-fsa-primary !important }
+        &--primary-300\@xl:hover    { border-color: $color-fsa-primary-300 !important }
+        &--primary-200\@xl:hover    { border-color: $color-fsa-primary-200 !important }
+        &--primary-100\@xl:hover    { border-color: $color-fsa-primary-100 !important }
+        &--primary-900\@xl:hover    { border-color: $color-fsa-primary-900 !important }
+        &--secondary\@xl:hover      { border-color: $color-fsa-secondary !important }
+        &--secondary-300\@xl:hover  { border-color: $color-fsa-secondary-300 !important }
+        &--secondary-200\@xl:hover  { border-color: $color-fsa-secondary-200 !important }
+        &--secondary-100\@xl:hover  { border-color: $color-fsa-secondary-100 !important }
+        &--secondary-900\@xl:hover  { border-color: $color-fsa-secondary-900 !important }
+        &--tertiary\@xl:hover       { border-color: $color-fsa-tertiary !important }
+        &--tertiary-300\@xl:hover   { border-color: $color-fsa-tertiary-300 !important }
+        &--tertiary-200\@xl:hover   { border-color: $color-fsa-tertiary-200 !important }
+        &--tertiary-100\@xl:hover   { border-color: $color-fsa-tertiary-100 !important }
+        &--tertiary-900\@xl:hover   { border-color: $color-fsa-tertiary-900 !important }
+        &--aqua\@xl:hover           { border-color: $color-fsa-aqua !important }
+        &--aqua-300\@xl:hover       { border-color: $color-fsa-aqua-300 !important }
+        &--aqua-200\@xl:hover       { border-color: $color-fsa-aqua-200 !important }
+        &--aqua-100\@xl:hover       { border-color: $color-fsa-aqua-100 !important }
+        &--aqua-900\@xl:hover       { border-color: $color-fsa-aqua-900 !important }
+        &--red\@xl:hover            { border-color: $color-fsa-red !important }
+        &--red-300\@xl:hover        { border-color: $color-fsa-red-300 !important }
+        &--red-200\@xl:hover        { border-color: $color-fsa-red-200 !important }
+        &--red-100\@xl:hover        { border-color: $color-fsa-red-100 !important }
+        &--red-900\@xl:hover        { border-color: $color-fsa-red-900 !important }
+        &--yellow\@xl:hover         { border-color: $color-fsa-yellow !important }
+        &--yellow-300\@xl:hover     { border-color: $color-fsa-yellow-300 !important }
+        &--yellow-200\@xl:hover     { border-color: $color-fsa-yellow-200 !important }
+        &--yellow-100\@xl:hover     { border-color: $color-fsa-yellow-100 !important }
+      }
+
+    }
+
+
+  }
+
+  // Border Between Color
+  &-between-vertical,
+  &-between-horizontal {
+
+    &--transparent   > * + * { border-color: transparent !important }
+    &--white         > * + * { border-color: $color-fsa-white !important }
+    &--black         > * + * { border-color: $color-fsa-black !important }
+    &--primary       > * + * { border-color: $color-fsa-primary !important }
+    &--primary-300   > * + * { border-color: $color-fsa-primary-300 !important }
+    &--primary-200   > * + * { border-color: $color-fsa-primary-200 !important }
+    &--primary-100   > * + * { border-color: $color-fsa-primary-100 !important }
+    &--primary-900   > * + * { border-color: $color-fsa-primary-900 !important }
+    &--secondary     > * + * { border-color: $color-fsa-secondary !important }
+    &--secondary-300 > * + * { border-color: $color-fsa-secondary-300 !important }
+    &--secondary-200 > * + * { border-color: $color-fsa-secondary-200 !important }
+    &--secondary-100 > * + * { border-color: $color-fsa-secondary-100 !important }
+    &--secondary-900 > * + * { border-color: $color-fsa-secondary-900 !important }
+    &--tertiary      > * + * { border-color: $color-fsa-tertiary !important }
+    &--tertiary-300  > * + * { border-color: $color-fsa-tertiary-300 !important }
+    &--tertiary-200  > * + * { border-color: $color-fsa-tertiary-200 !important }
+    &--tertiary-100  > * + * { border-color: $color-fsa-tertiary-100 !important }
+    &--tertiary-900  > * + * { border-color: $color-fsa-tertiary-900 !important }
+    &--aqua          > * + * { border-color: $color-fsa-aqua !important }
+    &--aqua-300      > * + * { border-color: $color-fsa-aqua-300 !important }
+    &--aqua-200      > * + * { border-color: $color-fsa-aqua-200 !important }
+    &--aqua-100      > * + * { border-color: $color-fsa-aqua-100 !important }
+    &--aqua-900      > * + * { border-color: $color-fsa-aqua-900 !important }
+    &--red           > * + * { border-color: $color-fsa-red !important }
+    &--red-300       > * + * { border-color: $color-fsa-red-300 !important }
+    &--red-200       > * + * { border-color: $color-fsa-red-200 !important }
+    &--red-100       > * + * { border-color: $color-fsa-red-100 !important }
+    &--red-900       > * + * { border-color: $color-fsa-red-900 !important }
+    &--yellow        > * + * { border-color: $color-fsa-yellow !important }
+    &--yellow-300    > * + * { border-color: $color-fsa-yellow-300 !important }
+    &--yellow-200    > * + * { border-color: $color-fsa-yellow-200 !important }
+    &--yellow-100    > * + * { border-color: $color-fsa-yellow-100 !important }
+
+    @include breakpoint(S) {
+      &--transparent\@s    > * + * { border-color: transparent !important }
+      &--white\@s          > * + * { border-color: $color-fsa-white !important }
+      &--black\@s          > * + * { border-color: $color-fsa-black !important }
+      &--primary\@s        > * + * { border-color: $color-fsa-primary !important }
+      &--primary-300\@s    > * + * { border-color: $color-fsa-primary-300 !important }
+      &--primary-200\@s    > * + * { border-color: $color-fsa-primary-200 !important }
+      &--primary-100\@s    > * + * { border-color: $color-fsa-primary-100 !important }
+      &--primary-900\@s    > * + * { border-color: $color-fsa-primary-900 !important }
+      &--secondary\@s      > * + * { border-color: $color-fsa-secondary !important }
+      &--secondary-300\@s  > * + * { border-color: $color-fsa-secondary-300 !important }
+      &--secondary-200\@s  > * + * { border-color: $color-fsa-secondary-200 !important }
+      &--secondary-100\@s  > * + * { border-color: $color-fsa-secondary-100 !important }
+      &--secondary-900\@s  > * + * { border-color: $color-fsa-secondary-900 !important }
+      &--tertiary\@s       > * + * { border-color: $color-fsa-tertiary !important }
+      &--tertiary-300\@s   > * + * { border-color: $color-fsa-tertiary-300 !important }
+      &--tertiary-200\@s   > * + * { border-color: $color-fsa-tertiary-200 !important }
+      &--tertiary-100\@s   > * + * { border-color: $color-fsa-tertiary-100 !important }
+      &--tertiary-900\@s   > * + * { border-color: $color-fsa-tertiary-900 !important }
+      &--aqua\@s           > * + * { border-color: $color-fsa-aqua !important }
+      &--aqua-300\@s       > * + * { border-color: $color-fsa-aqua-300 !important }
+      &--aqua-200\@s       > * + * { border-color: $color-fsa-aqua-200 !important }
+      &--aqua-100\@s       > * + * { border-color: $color-fsa-aqua-100 !important }
+      &--aqua-900\@s       > * + * { border-color: $color-fsa-aqua-900 !important }
+      &--red\@s            > * + * { border-color: $color-fsa-red !important }
+      &--red-300\@s        > * + * { border-color: $color-fsa-red-300 !important }
+      &--red-200\@s        > * + * { border-color: $color-fsa-red-200 !important }
+      &--red-100\@s        > * + * { border-color: $color-fsa-red-100 !important }
+      &--red-900\@s        > * + * { border-color: $color-fsa-red-900 !important }
+      &--yellow\@s         > * + * { border-color: $color-fsa-yellow !important }
+      &--yellow-300\@s     > * + * { border-color: $color-fsa-yellow-300 !important }
+      &--yellow-200\@s     > * + * { border-color: $color-fsa-yellow-200 !important }
+      &--yellow-100\@s     > * + * { border-color: $color-fsa-yellow-100 !important }
+    }
+
+    @include breakpoint(M) {
+      &--transparent\@m    > * + * { border-color: transparent !important }
+      &--white\@m          > * + * { border-color: $color-fsa-white !important }
+      &--black\@m          > * + * { border-color: $color-fsa-black !important }
+      &--primary\@m        > * + * { border-color: $color-fsa-primary !important }
+      &--primary-300\@m    > * + * { border-color: $color-fsa-primary-300 !important }
+      &--primary-200\@m    > * + * { border-color: $color-fsa-primary-200 !important }
+      &--primary-100\@m    > * + * { border-color: $color-fsa-primary-100 !important }
+      &--primary-900\@m    > * + * { border-color: $color-fsa-primary-900 !important }
+      &--secondary\@m      > * + * { border-color: $color-fsa-secondary !important }
+      &--secondary-300\@m  > * + * { border-color: $color-fsa-secondary-300 !important }
+      &--secondary-200\@m  > * + * { border-color: $color-fsa-secondary-200 !important }
+      &--secondary-100\@m  > * + * { border-color: $color-fsa-secondary-100 !important }
+      &--secondary-900\@m  > * + * { border-color: $color-fsa-secondary-900 !important }
+      &--tertiary\@m       > * + * { border-color: $color-fsa-tertiary !important }
+      &--tertiary-300\@m   > * + * { border-color: $color-fsa-tertiary-300 !important }
+      &--tertiary-200\@m   > * + * { border-color: $color-fsa-tertiary-200 !important }
+      &--tertiary-100\@m   > * + * { border-color: $color-fsa-tertiary-100 !important }
+      &--tertiary-900\@m   > * + * { border-color: $color-fsa-tertiary-900 !important }
+      &--aqua\@m           > * + * { border-color: $color-fsa-aqua !important }
+      &--aqua-300\@m       > * + * { border-color: $color-fsa-aqua-300 !important }
+      &--aqua-200\@m       > * + * { border-color: $color-fsa-aqua-200 !important }
+      &--aqua-100\@m       > * + * { border-color: $color-fsa-aqua-100 !important }
+      &--aqua-900\@m       > * + * { border-color: $color-fsa-aqua-900 !important }
+      &--red\@m            > * + * { border-color: $color-fsa-red !important }
+      &--red-300\@m        > * + * { border-color: $color-fsa-red-300 !important }
+      &--red-200\@m        > * + * { border-color: $color-fsa-red-200 !important }
+      &--red-100\@m        > * + * { border-color: $color-fsa-red-100 !important }
+      &--red-900\@m        > * + * { border-color: $color-fsa-red-900 !important }
+      &--yellow\@m         > * + * { border-color: $color-fsa-yellow !important }
+      &--yellow-300\@m     > * + * { border-color: $color-fsa-yellow-300 !important }
+      &--yellow-200\@m     > * + * { border-color: $color-fsa-yellow-200 !important }
+      &--yellow-100\@m     > * + * { border-color: $color-fsa-yellow-100 !important }
+    }
+
+    @include breakpoint(L) {
+      &--transparent\@l    > * + * { border-color: transparent !important }
+      &--white\@l          > * + * { border-color: $color-fsa-white !important }
+      &--black\@l          > * + * { border-color: $color-fsa-black !important }
+      &--primary\@l        > * + * { border-color: $color-fsa-primary !important }
+      &--primary-300\@l    > * + * { border-color: $color-fsa-primary-300 !important }
+      &--primary-200\@l    > * + * { border-color: $color-fsa-primary-200 !important }
+      &--primary-100\@l    > * + * { border-color: $color-fsa-primary-100 !important }
+      &--primary-900\@l    > * + * { border-color: $color-fsa-primary-900 !important }
+      &--secondary\@l      > * + * { border-color: $color-fsa-secondary !important }
+      &--secondary-300\@l  > * + * { border-color: $color-fsa-secondary-300 !important }
+      &--secondary-200\@l  > * + * { border-color: $color-fsa-secondary-200 !important }
+      &--secondary-100\@l  > * + * { border-color: $color-fsa-secondary-100 !important }
+      &--secondary-900\@l  > * + * { border-color: $color-fsa-secondary-900 !important }
+      &--tertiary\@l       > * + * { border-color: $color-fsa-tertiary !important }
+      &--tertiary-300\@l   > * + * { border-color: $color-fsa-tertiary-300 !important }
+      &--tertiary-200\@l   > * + * { border-color: $color-fsa-tertiary-200 !important }
+      &--tertiary-100\@l   > * + * { border-color: $color-fsa-tertiary-100 !important }
+      &--tertiary-900\@l   > * + * { border-color: $color-fsa-tertiary-900 !important }
+      &--aqua\@l           > * + * { border-color: $color-fsa-aqua !important }
+      &--aqua-300\@l       > * + * { border-color: $color-fsa-aqua-300 !important }
+      &--aqua-200\@l       > * + * { border-color: $color-fsa-aqua-200 !important }
+      &--aqua-100\@l       > * + * { border-color: $color-fsa-aqua-100 !important }
+      &--aqua-900\@l       > * + * { border-color: $color-fsa-aqua-900 !important }
+      &--red\@l            > * + * { border-color: $color-fsa-red !important }
+      &--red-300\@l        > * + * { border-color: $color-fsa-red-300 !important }
+      &--red-200\@l        > * + * { border-color: $color-fsa-red-200 !important }
+      &--red-100\@l        > * + * { border-color: $color-fsa-red-100 !important }
+      &--red-900\@l        > * + * { border-color: $color-fsa-red-900 !important }
+      &--yellow\@l         > * + * { border-color: $color-fsa-yellow !important }
+      &--yellow-300\@l     > * + * { border-color: $color-fsa-yellow-300 !important }
+      &--yellow-200\@l     > * + * { border-color: $color-fsa-yellow-200 !important }
+      &--yellow-100\@l     > * + * { border-color: $color-fsa-yellow-100 !important }
+    }
+
+    @include breakpoint(XL) {
+      &--transparent\@xl    > * + * { border-color: transparent !important }
+      &--white\@xl          > * + * { border-color: $color-fsa-white !important }
+      &--black\@xl          > * + * { border-color: $color-fsa-black !important }
+      &--primary\@xl        > * + * { border-color: $color-fsa-primary !important }
+      &--primary-300\@xl    > * + * { border-color: $color-fsa-primary-300 !important }
+      &--primary-200\@xl    > * + * { border-color: $color-fsa-primary-200 !important }
+      &--primary-100\@xl    > * + * { border-color: $color-fsa-primary-100 !important }
+      &--primary-900\@xl    > * + * { border-color: $color-fsa-primary-900 !important }
+      &--secondary\@xl      > * + * { border-color: $color-fsa-secondary !important }
+      &--secondary-300\@xl  > * + * { border-color: $color-fsa-secondary-300 !important }
+      &--secondary-200\@xl  > * + * { border-color: $color-fsa-secondary-200 !important }
+      &--secondary-100\@xl  > * + * { border-color: $color-fsa-secondary-100 !important }
+      &--secondary-900\@xl  > * + * { border-color: $color-fsa-secondary-900 !important }
+      &--tertiary\@xl       > * + * { border-color: $color-fsa-tertiary !important }
+      &--tertiary-300\@xl   > * + * { border-color: $color-fsa-tertiary-300 !important }
+      &--tertiary-200\@xl   > * + * { border-color: $color-fsa-tertiary-200 !important }
+      &--tertiary-100\@xl   > * + * { border-color: $color-fsa-tertiary-100 !important }
+      &--tertiary-900\@xl   > * + * { border-color: $color-fsa-tertiary-900 !important }
+      &--aqua\@xl           > * + * { border-color: $color-fsa-aqua !important }
+      &--aqua-300\@xl       > * + * { border-color: $color-fsa-aqua-300 !important }
+      &--aqua-200\@xl       > * + * { border-color: $color-fsa-aqua-200 !important }
+      &--aqua-100\@xl       > * + * { border-color: $color-fsa-aqua-100 !important }
+      &--aqua-900\@xl       > * + * { border-color: $color-fsa-aqua-900 !important }
+      &--red\@xl            > * + * { border-color: $color-fsa-red !important }
+      &--red-300\@xl        > * + * { border-color: $color-fsa-red-300 !important }
+      &--red-200\@xl        > * + * { border-color: $color-fsa-red-200 !important }
+      &--red-100\@xl        > * + * { border-color: $color-fsa-red-100 !important }
+      &--red-900\@xl        > * + * { border-color: $color-fsa-red-900 !important }
+      &--yellow\@xl         > * + * { border-color: $color-fsa-yellow !important }
+      &--yellow-300\@xl     > * + * { border-color: $color-fsa-yellow-300 !important }
+      &--yellow-200\@xl     > * + * { border-color: $color-fsa-yellow-200 !important }
+      &--yellow-100\@xl     > * + * { border-color: $color-fsa-yellow-100 !important }
+    }
+
+  }
+
+  // Border Between Width
+  &-between-vertical {
+
+    &--none   > * + * { border-left-width: $border-none !important; }
+    &--xxs    > * + * { border-left-width: $border-xxs !important;  }
+    &--xs     > * + * { border-left-width: $border-xs !important;   }
+    &--s      > * + * { border-left-width: $border-s !important;    }
+    &--l      > * + * { border-left-width: $border-l !important;    }
+    &--m      > * + * { border-left-width: $border-m !important;    }
+    &--custom > * + * { --custom-border-between-vertical: #{$border-xxs}; border-left-width: var(--custom-border-between-vertical) !important; }
+
+    @include breakpoint(S) {
+      &--none\@s   > * + * { border-left-width: $border-none !important; }
+      &--xxs\@s    > * + * { border-left-width: $border-xxs !important;  }
+      &--xs\@s     > * + * { border-left-width: $border-xs !important;   }
+      &--s\@s      > * + * { border-left-width: $border-s !important;    }
+      &--m\@s      > * + * { border-left-width: $border-m !important;    }
+      &--l\@s      > * + * { border-left-width: $border-l !important;    }
+      &--custom\@s > * + * { --custom-border-between-vertical-s: #{$border-xxs}; border-left-width: var(--custom-border-between-vertical-s) !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m   > * + * { border-left-width: $border-none !important; }
+      &--xxs\@m    > * + * { border-left-width: $border-xxs !important;  }
+      &--xs\@m     > * + * { border-left-width: $border-xs !important;   }
+      &--s\@m      > * + * { border-left-width: $border-s !important;    }
+      &--m\@m      > * + * { border-left-width: $border-m !important;    }
+      &--l\@m      > * + * { border-left-width: $border-l !important;    }
+      &--custom\@m > * + * { --custom-border-between-vertical-m: #{$border-xxs}; border-left-width: var(--custom-border-between-vertical-m) !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l   > * + * { border-left-width: $border-none !important; }
+      &--xxs\@l    > * + * { border-left-width: $border-xxs !important;  }
+      &--xs\@l     > * + * { border-left-width: $border-xs !important;   }
+      &--s\@l      > * + * { border-left-width: $border-s !important;    }
+      &--m\@l      > * + * { border-left-width: $border-m !important;    }
+      &--l\@l      > * + * { border-left-width: $border-l !important;    }
+      &--custom\@l > * + * { --custom-border-between-vertical-l: #{$border-xxs}; border-left-width: var(--custom-border-between-vertical-l) !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl   > * + * { border-left-width: $border-none !important; }
+      &--xxs\@xl    > * + * { border-left-width: $border-xxs !important;  }
+      &--xs\@xl     > * + * { border-left-width: $border-xs !important;   }
+      &--s\@xl      > * + * { border-left-width: $border-s !important;    }
+      &--m\@xl      > * + * { border-left-width: $border-m !important;    }
+      &--l\@xl      > * + * { border-left-width: $border-l !important;    }
+      &--custom\@xl > * + * { --custom-border-between-vertical-xl: #{$border-xxs}; border-left-width: var(--custom-border-between-vertical-xl) !important; }
+    }
+
+  }
+  &-between-horizontal {
+
+    &--none   > * + * { border-top-width: $border-none !important; }
+    &--xxs    > * + * { border-top-width: $border-xxs !important; }
+    &--xs     > * + * { border-top-width: $border-xs !important; }
+    &--s      > * + * { border-top-width: $border-s !important; }
+    &--m      > * + * { border-top-width: $border-m !important; }
+    &--l      > * + * { border-top-width: $border-l !important; }
+    &--custom > * + * { --custom-border-between-horizontal: #{$border-xxs}; border-top-width: var(--custom-border-between-horizontal) !important; }
+
+    @include breakpoint(S) {
+      &--none\@s   > * + * { border-top-width: $border-none !important; }
+      &--xxs\@s    > * + * { border-top-width: $border-xxs !important; }
+      &--xs\@s     > * + * { border-top-width: $border-xs !important; }
+      &--s\@s      > * + * { border-top-width: $border-s !important; }
+      &--m\@s      > * + * { border-top-width: $border-m !important; }
+      &--l\@s      > * + * { border-top-width: $border-l !important; }
+      &--custom\@s > * + * { --custom-border-between-horizontal-s: #{$border-xxs}; border-top-width: var(--custom-border-between-horizontal-s) !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m   > * + * { border-top-width: $border-none !important; }
+      &--xxs\@m    > * + * { border-top-width: $border-xxs !important; }
+      &--xs\@m     > * + * { border-top-width: $border-xs !important; }
+      &--s\@m      > * + * { border-top-width: $border-s !important; }
+      &--m\@m      > * + * { border-top-width: $border-m !important; }
+      &--l\@m      > * + * { border-top-width: $border-l !important; }
+      &--custom\@s > * + * { --custom-border-between-horizontal-m: #{$border-xxs}; border-top-width: var(--custom-border-between-horizontal-m) !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l   > * + * { border-top-width: $border-none !important; }
+      &--xxs\@l    > * + * { border-top-width: $border-xxs !important; }
+      &--xs\@l     > * + * { border-top-width: $border-xs !important; }
+      &--s\@l      > * + * { border-top-width: $border-s !important; }
+      &--m\@l      > * + * { border-top-width: $border-m !important; }
+      &--l\@l      > * + * { border-top-width: $border-l !important; }
+      &--custom\@s > * + * { --custom-border-between-horizontal-l: #{$border-xxs}; border-top-width: var(--custom-border-between-horizontal-l) !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl   > * + * { border-top-width: $border-none !important; }
+      &--xxs\@xl    > * + * { border-top-width: $border-xxs !important; }
+      &--xs\@xl     > * + * { border-top-width: $border-xs !important; }
+      &--s\@xl      > * + * { border-top-width: $border-s !important; }
+      &--m\@xl      > * + * { border-top-width: $border-m !important; }
+      &--l\@xl      > * + * { border-top-width: $border-l !important; }
+      &--custom\@xl > * + * { --custom-border-between-horizontal-xl: #{$border-xxs}; border-top-width: var(--custom-border-between-horizontal-xl) !important; }
+    }
+
+  }
+
+}
+
+// Border Radius --------------------------------------------------------------
+.fsa-radius {
+
+  &--none   { border-radius: $radius-none; }
+  &--s      { border-radius: $radius-s; }
+  &--m      { border-radius: $radius-m; }
+  &--l      { border-radius: $radius-l; }
+  &--full   { border-radius: $radius-full; }
+  &--oval   { border-radius: $radius-oval; }
+
+  @include breakpoint(S) {
+    &--none\@s   { border-radius: $radius-none; }
+    &--s\@s      { border-radius: $radius-s; }
+    &--m\@s      { border-radius: $radius-m; }
+    &--l\@s      { border-radius: $radius-l; }
+    &--full\@s   { border-radius: $radius-full; }
+    &--oval\@s   { border-radius: $radius-oval; }
+  }
+
+  @include breakpoint(M) {
+    &--none\@m   { border-radius: $radius-none; }
+    &--s\@m      { border-radius: $radius-s; }
+    &--m\@m      { border-radius: $radius-m; }
+    &--l\@m      { border-radius: $radius-l; }
+    &--full\@m   { border-radius: $radius-full; }
+    &--oval\@m   { border-radius: $radius-oval; }
+  }
+
+  @include breakpoint(L) {
+    &--none\@l   { border-radius: $radius-none; }
+    &--s\@l      { border-radius: $radius-s; }
+    &--m\@l      { border-radius: $radius-m; }
+    &--l\@l      { border-radius: $radius-l; }
+    &--full\@l   { border-radius: $radius-full; }
+    &--oval\@l   { border-radius: $radius-oval; }
+  }
+
+  @include breakpoint(XL) {
+    &--none\@xl   { border-radius: $radius-none; }
+    &--s\@xl      { border-radius: $radius-s; }
+    &--m\@xl      { border-radius: $radius-m; }
+    &--l\@xl      { border-radius: $radius-l; }
+    &--full\@xl   { border-radius: $radius-full; }
+    &--oval\@xl   { border-radius: $radius-oval; }
+  }
+
+}
+
+// Shadow / Elevation ---------------------------------------------------------
+.fsa-shadow {
+
+  // Default
+  & {
+    &--popout  { box-shadow: $shadow-size-popout; }
+    &--overlay { box-shadow: $shadow-size-overlay ; }
+    &--raised  { box-shadow: $shadow-size-raised; }
+    &--none    { box-shadow: none; }
+  }
+
+  // Hover
+  &\:hover {
+    &--popout:hover  { box-shadow: $shadow-size-popout; }
+    &--overlay:hover { box-shadow: $shadow-size-overlay ; }
+    &--raised:hover  { box-shadow: $shadow-size-raised; }
+    &--none:hover    { box-shadow: none; }
+  }
+
+  @include breakpoint(S) {
+
+    // Default
+    & {
+      &--popout\@s  { box-shadow: $shadow-size-popout; }
+      &--overlay\@s { box-shadow: $shadow-size-overlay ; }
+      &--raised\@s  { box-shadow: $shadow-size-raised; }
+      &--none\@s    { box-shadow: none; }
+    }
+
+    // Hover
+    &\:hover {
+      &--popout\@s:hover  { box-shadow: $shadow-size-popout; }
+      &--overlay\@s:hover { box-shadow: $shadow-size-overlay ; }
+      &--raised\@s:hover  { box-shadow: $shadow-size-raised; }
+      &--none\@s:hover    { box-shadow: none; }
+    }
+
+  }
+
+  @include breakpoint(M) {
+
+    // Default
+    & {
+      &--popout\@m  { box-shadow: $shadow-size-popout; }
+      &--overlay\@m { box-shadow: $shadow-size-overlay ; }
+      &--raised\@m  { box-shadow: $shadow-size-raised; }
+      &--none\@m    { box-shadow: none; }
+    }
+
+    // Hover
+    &\:hover {
+      &--popout\@m:hover  { box-shadow: $shadow-size-popout; }
+      &--overlay\@m:hover { box-shadow: $shadow-size-overlay ; }
+      &--raised\@m:hover  { box-shadow: $shadow-size-raised; }
+      &--none\@m:hover    { box-shadow: none; }
+    }
+
+  }
+
+  @include breakpoint(L) {
+
+    // Default
+    & {
+      &--popout\@l  { box-shadow: $shadow-size-popout; }
+      &--overlay\@l { box-shadow: $shadow-size-overlay ; }
+      &--raised\@l  { box-shadow: $shadow-size-raised; }
+      &--none\@l    { box-shadow: none; }
+    }
+
+    // Hover
+    &\:hover {
+      &--popout\@l:hover  { box-shadow: $shadow-size-popout; }
+      &--overlay\@l:hover { box-shadow: $shadow-size-overlay ; }
+      &--raised\@l:hover  { box-shadow: $shadow-size-raised; }
+      &--none\@l:hover    { box-shadow: none; }
+    }
+
+  }
+
+  @include breakpoint(XL) {
+
+    // Default
+    & {
+      &--popout\@xl  { box-shadow: $shadow-size-popout; }
+      &--overlay\@xl { box-shadow: $shadow-size-overlay ; }
+      &--raised\@xl  { box-shadow: $shadow-size-raised; }
+      &--none\@xl    { box-shadow: none; }
+    }
+
+    // Hover
+    &\:hover {
+      &--popout\@xl:hover  { box-shadow: $shadow-size-popout; }
+      &--overlay\@xl:hover { box-shadow: $shadow-size-overlay ; }
+      &--raised\@xl:hover  { box-shadow: $shadow-size-raised; }
+      &--none\@xl:hover    { box-shadow: none; }
+    }
+
+  }
+
+}
+
+// Links ----------------------------------------------------------------------
+.fsa-link {
+
+  &--inline       { display: inline !important; }
+  &--inline-block { display: inline-block !important; }
+  &--block        { display: block !important; }
+
+  // Default
+  & {
+
+    &--underline      { text-decoration: underline !important; }
+    &--underline-none { text-decoration: none !important; }
+
+    &--white         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 10%) !important} }
+    &--black         { &,&:visited { color: $color-fsa-black !important;         }  &:hover { color: shade($color-fsa-black, 20%) !important} }
+    &--primary-900   { &,&:visited { color: $color-fsa-primary-900 !important;   }  &:hover { color: $color-fsa-black             !important} }
+    &--primary       { &,&:visited { color: $color-fsa-primary !important;       }  &:hover { color: $color-fsa-black             !important} }
+    &--primary-300   { &,&:visited { color: $color-fsa-primary-300 !important;   }  &:hover { color: $color-fsa-black             !important} }
+    &--primary-200   { &,&:visited { color: $color-fsa-primary-200 !important;   }  &:hover { color: $color-fsa-white             !important} }
+    &--primary-100   { &,&:visited { color: $color-fsa-primary-100 !important;   }  &:hover { color: $color-fsa-white             !important} }
+    &--secondary-900 { &,&:visited { color: $color-fsa-secondary-900 !important; }  &:hover { color: $color-fsa-black             !important} }
+    &--secondary     { &,&:visited { color: $color-fsa-secondary !important;     }  &:hover { color: $color-fsa-black             !important} }
+    &--secondary-300 { &,&:visited { color: $color-fsa-secondary-300 !important; }  &:hover { color: $color-fsa-black             !important} }
+    &--secondary-200 { &,&:visited { color: $color-fsa-secondary-200 !important; }  &:hover { color: $color-fsa-white             !important} }
+    &--secondary-100 { &,&:visited { color: $color-fsa-secondary-100 !important; }  &:hover { color: $color-fsa-white             !important} }
+    &--tertiary-900  { &,&:visited { color: $color-fsa-tertiary-900 !important;  }  &:hover { color: $color-fsa-black             !important} }
+    &--tertiary      { &,&:visited { color: $color-fsa-tertiary !important;      }  &:hover { color: $color-fsa-black             !important} }
+    &--tertiary-300  { &,&:visited { color: $color-fsa-tertiary-300 !important;  }  &:hover { color: $color-fsa-black             !important} }
+    &--tertiary-200  { &,&:visited { color: $color-fsa-tertiary-200 !important;  }  &:hover { color: $color-fsa-white             !important} }
+    &--tertiary-100  { &,&:visited { color: $color-fsa-tertiary-100 !important;  }  &:hover { color: $color-fsa-white             !important} }
+    &--aqua-900      { &,&:visited { color: $color-fsa-aqua-900 !important;      }  &:hover { color: $color-fsa-black             !important} }
+    &--aqua          { &,&:visited { color: $color-fsa-aqua !important;          }  &:hover { color: $color-fsa-black             !important} }
+    &--aqua-300      { &,&:visited { color: $color-fsa-aqua-300 !important;      }  &:hover { color: $color-fsa-black             !important} }
+    &--aqua-200      { &,&:visited { color: $color-fsa-aqua-200 !important;      }  &:hover { color: $color-fsa-white             !important} }
+    &--aqua-100      { &,&:visited { color: $color-fsa-aqua-100 !important;      }  &:hover { color: $color-fsa-white             !important} }
+    &--red-900       { &,&:visited { color: $color-fsa-red-900 !important;       }  &:hover { color: $color-fsa-black             !important} }
+    &--red           { &,&:visited { color: $color-fsa-red !important;           }  &:hover { color: $color-fsa-black             !important} }
+    &--red-300       { &,&:visited { color: $color-fsa-red-300 !important;       }  &:hover { color: $color-fsa-black             !important} }
+    &--red-200       { &,&:visited { color: $color-fsa-red-200 !important;       }  &:hover { color: $color-fsa-white             !important} }
+    &--red-100       { &,&:visited { color: $color-fsa-red-100 !important;       }  &:hover { color: $color-fsa-white             !important} }
+    &--yellow        { &,&:visited { color: $color-fsa-yellow !important;        }  &:hover { color: $color-fsa-white             !important} }
+    &--yellow-300    { &,&:visited { color: $color-fsa-yellow-300 !important;    }  &:hover { color: $color-fsa-white             !important} }
+    &--yellow-200    { &,&:visited { color: $color-fsa-yellow-200 !important;    }  &:hover { color: $color-fsa-white             !important} }
+    &--yellow-100    { &,&:visited { color: $color-fsa-yellow-100 !important;    }  &:hover { color: $color-fsa-white             !important} }
+
+  }
+
+  // Hover
+  &\:hover {
+
+    &--underline:hover      { text-decoration: underline !important; }
+    &--underline-none:hover { text-decoration: none !important; }
+
+    &--white:hover         { &,&:visited { color: $color-fsa-white !important;         } }
+    &--black:hover         { &,&:visited { color: $color-fsa-black !important;         } }
+    &--primary-900:hover   { &,&:visited { color: $color-fsa-primary-900 !important;   } }
+    &--primary:hover       { &,&:visited { color: $color-fsa-primary !important;       } }
+    &--primary-300:hover   { &,&:visited { color: $color-fsa-primary-300 !important;   } }
+    &--primary-200:hover   { &,&:visited { color: $color-fsa-primary-200 !important;   } }
+    &--primary-100:hover   { &,&:visited { color: $color-fsa-primary-100 !important;   } }
+    &--secondary-900:hover { &,&:visited { color: $color-fsa-secondary-900 !important; } }
+    &--secondary:hover     { &,&:visited { color: $color-fsa-secondary !important;     } }
+    &--secondary-300:hover { &,&:visited { color: $color-fsa-secondary-300 !important; } }
+    &--secondary-200:hover { &,&:visited { color: $color-fsa-secondary-200 !important; } }
+    &--secondary-100:hover { &,&:visited { color: $color-fsa-secondary-100 !important; } }
+    &--tertiary-900:hover  { &,&:visited { color: $color-fsa-tertiary-900 !important;  } }
+    &--tertiary:hover      { &,&:visited { color: $color-fsa-tertiary !important;      } }
+    &--tertiary-300:hover  { &,&:visited { color: $color-fsa-tertiary-300 !important;  } }
+    &--tertiary-200:hover  { &,&:visited { color: $color-fsa-tertiary-200 !important;  } }
+    &--tertiary-100:hover  { &,&:visited { color: $color-fsa-tertiary-100 !important;  } }
+    &--aqua-900:hover      { &,&:visited { color: $color-fsa-aqua-900 !important;      } }
+    &--aqua:hover          { &,&:visited { color: $color-fsa-aqua !important;          } }
+    &--aqua-300:hover      { &,&:visited { color: $color-fsa-aqua-300 !important;      } }
+    &--aqua-200:hover      { &,&:visited { color: $color-fsa-aqua-200 !important;      } }
+    &--aqua-100:hover      { &,&:visited { color: $color-fsa-aqua-100 !important;      } }
+    &--red-900:hover       { &,&:visited { color: $color-fsa-red-900 !important;       } }
+    &--red:hover           { &,&:visited { color: $color-fsa-red !important;           } }
+    &--red-300:hover       { &,&:visited { color: $color-fsa-red-300 !important;       } }
+    &--red-200:hover       { &,&:visited { color: $color-fsa-red-200 !important;       } }
+    &--red-100:hover       { &,&:visited { color: $color-fsa-red-100 !important;       } }
+    &--yellow:hover        { &,&:visited { color: $color-fsa-yellow !important;        } }
+    &--yellow-300:hover    { &,&:visited { color: $color-fsa-yellow-300 !important;    } }
+    &--yellow-200:hover    { &,&:visited { color: $color-fsa-yellow-200 !important;    } }
+    &--yellow-100:hover    { &,&:visited { color: $color-fsa-yellow-100 !important;    } }
+
+  }
+
+  @include breakpoint(S) {
+
+    &--inline\@s       { display: inline !important; }
+    &--inline-block\@s { display: inline-block !important; }
+    &--block\@s        { display: block !important; }
+
+    // Default
+    & {
+
+      &--underline\@s      { text-decoration: underline !important; }
+      &--underline-none\@s { text-decoration: none !important; }
+
+      &--white\@s         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 10%) !important} }
+      &--black\@s         { &,&:visited { color: $color-fsa-black !important;         }  &:hover { color: shade($color-fsa-black, 20%) !important} }
+      &--primary-900\@s   { &,&:visited { color: $color-fsa-primary-900 !important;   }  &:hover { color: $color-fsa-black             !important} }
+      &--primary\@s       { &,&:visited { color: $color-fsa-primary !important;       }  &:hover { color: $color-fsa-black             !important} }
+      &--primary-300\@s   { &,&:visited { color: $color-fsa-primary-300 !important;   }  &:hover { color: $color-fsa-black             !important} }
+      &--primary-200\@s   { &,&:visited { color: $color-fsa-primary-200 !important;   }  &:hover { color: $color-fsa-white             !important} }
+      &--primary-100\@s   { &,&:visited { color: $color-fsa-primary-100 !important;   }  &:hover { color: $color-fsa-white             !important} }
+      &--secondary-900\@s { &,&:visited { color: $color-fsa-secondary-900 !important; }  &:hover { color: $color-fsa-black             !important} }
+      &--secondary\@s     { &,&:visited { color: $color-fsa-secondary !important;     }  &:hover { color: $color-fsa-black             !important} }
+      &--secondary-300\@s { &,&:visited { color: $color-fsa-secondary-300 !important; }  &:hover { color: $color-fsa-black             !important} }
+      &--secondary-200\@s { &,&:visited { color: $color-fsa-secondary-200 !important; }  &:hover { color: $color-fsa-white             !important} }
+      &--secondary-100\@s { &,&:visited { color: $color-fsa-secondary-100 !important; }  &:hover { color: $color-fsa-white             !important} }
+      &--tertiary-900\@s  { &,&:visited { color: $color-fsa-tertiary-900 !important;  }  &:hover { color: $color-fsa-black             !important} }
+      &--tertiary\@s      { &,&:visited { color: $color-fsa-tertiary !important;      }  &:hover { color: $color-fsa-black             !important} }
+      &--tertiary-300\@s  { &,&:visited { color: $color-fsa-tertiary-300 !important;  }  &:hover { color: $color-fsa-black             !important} }
+      &--tertiary-200\@s  { &,&:visited { color: $color-fsa-tertiary-200 !important;  }  &:hover { color: $color-fsa-white             !important} }
+      &--tertiary-100\@s  { &,&:visited { color: $color-fsa-tertiary-100 !important;  }  &:hover { color: $color-fsa-white             !important} }
+      &--aqua-900\@s      { &,&:visited { color: $color-fsa-aqua-900 !important;      }  &:hover { color: $color-fsa-black             !important} }
+      &--aqua\@s          { &,&:visited { color: $color-fsa-aqua !important;          }  &:hover { color: $color-fsa-black             !important} }
+      &--aqua-300\@s      { &,&:visited { color: $color-fsa-aqua-300 !important;      }  &:hover { color: $color-fsa-black             !important} }
+      &--aqua-200\@s      { &,&:visited { color: $color-fsa-aqua-200 !important;      }  &:hover { color: $color-fsa-white             !important} }
+      &--aqua-100\@s      { &,&:visited { color: $color-fsa-aqua-100 !important;      }  &:hover { color: $color-fsa-white             !important} }
+      &--red-900\@s       { &,&:visited { color: $color-fsa-red-900 !important;       }  &:hover { color: $color-fsa-black             !important} }
+      &--red\@s           { &,&:visited { color: $color-fsa-red !important;           }  &:hover { color: $color-fsa-black             !important} }
+      &--red-300\@s       { &,&:visited { color: $color-fsa-red-300 !important;       }  &:hover { color: $color-fsa-black             !important} }
+      &--red-200\@s       { &,&:visited { color: $color-fsa-red-200 !important;       }  &:hover { color: $color-fsa-white             !important} }
+      &--red-100\@s       { &,&:visited { color: $color-fsa-red-100 !important;       }  &:hover { color: $color-fsa-white             !important} }
+      &--yellow\@s        { &,&:visited { color: $color-fsa-yellow !important;        }  &:hover { color: $color-fsa-white             !important} }
+      &--yellow-300\@s    { &,&:visited { color: $color-fsa-yellow-300 !important;    }  &:hover { color: $color-fsa-white             !important} }
+      &--yellow-200\@s    { &,&:visited { color: $color-fsa-yellow-200 !important;    }  &:hover { color: $color-fsa-white             !important} }
+      &--yellow-100\@s    { &,&:visited { color: $color-fsa-yellow-100 !important;    }  &:hover { color: $color-fsa-white             !important} }
+
+    }
+
+    // Hover
+    &\:hover {
+
+      &--underline\@s:hover      { text-decoration: underline !important; }
+      &--underline-none\@s:hover { text-decoration: none !important; }
+
+      &--white\@s:hover         { &,&:visited { color: $color-fsa-white !important;         } }
+      &--black\@s:hover         { &,&:visited { color: $color-fsa-black !important;         } }
+      &--primary-900\@s:hover   { &,&:visited { color: $color-fsa-primary-900 !important;   } }
+      &--primary\@s:hover       { &,&:visited { color: $color-fsa-primary !important;       } }
+      &--primary-300\@s:hover   { &,&:visited { color: $color-fsa-primary-300 !important;   } }
+      &--primary-200\@s:hover   { &,&:visited { color: $color-fsa-primary-200 !important;   } }
+      &--primary-100\@s:hover   { &,&:visited { color: $color-fsa-primary-100 !important;   } }
+      &--secondary-900\@s:hover { &,&:visited { color: $color-fsa-secondary-900 !important; } }
+      &--secondary\@s:hover     { &,&:visited { color: $color-fsa-secondary !important;     } }
+      &--secondary-300\@s:hover { &,&:visited { color: $color-fsa-secondary-300 !important; } }
+      &--secondary-200\@s:hover { &,&:visited { color: $color-fsa-secondary-200 !important; } }
+      &--secondary-100\@s:hover { &,&:visited { color: $color-fsa-secondary-100 !important; } }
+      &--tertiary-900\@s:hover  { &,&:visited { color: $color-fsa-tertiary-900 !important;  } }
+      &--tertiary\@s:hover      { &,&:visited { color: $color-fsa-tertiary !important;      } }
+      &--tertiary-300\@s:hover  { &,&:visited { color: $color-fsa-tertiary-300 !important;  } }
+      &--tertiary-200\@s:hover  { &,&:visited { color: $color-fsa-tertiary-200 !important;  } }
+      &--tertiary-100\@s:hover  { &,&:visited { color: $color-fsa-tertiary-100 !important;  } }
+      &--aqua-900\@s:hover      { &,&:visited { color: $color-fsa-aqua-900 !important;      } }
+      &--aqua\@s:hover          { &,&:visited { color: $color-fsa-aqua !important;          } }
+      &--aqua-300\@s:hover      { &,&:visited { color: $color-fsa-aqua-300 !important;      } }
+      &--aqua-200\@s:hover      { &,&:visited { color: $color-fsa-aqua-200 !important;      } }
+      &--aqua-100\@s:hover      { &,&:visited { color: $color-fsa-aqua-100 !important;      } }
+      &--red-900\@s:hover       { &,&:visited { color: $color-fsa-red-900 !important;       } }
+      &--red\@s:hover           { &,&:visited { color: $color-fsa-red !important;           } }
+      &--red-300\@s:hover       { &,&:visited { color: $color-fsa-red-300 !important;       } }
+      &--red-200\@s:hover       { &,&:visited { color: $color-fsa-red-200 !important;       } }
+      &--red-100\@s:hover       { &,&:visited { color: $color-fsa-red-100 !important;       } }
+      &--yellow\@s:hover        { &,&:visited { color: $color-fsa-yellow !important;        } }
+      &--yellow-300\@s:hover    { &,&:visited { color: $color-fsa-yellow-300 !important;    } }
+      &--yellow-200\@s:hover    { &,&:visited { color: $color-fsa-yellow-200 !important;    } }
+      &--yellow-100\@s:hover    { &,&:visited { color: $color-fsa-yellow-100 !important;    } }
+
+    }
+
+  }
+
+  @include breakpoint(M) {
+
+    &--inline\@m       { display: inline !important; }
+    &--inline-block\@m { display: inline-block !important; }
+    &--block\@m        { display: block !important; }
+
+    // Default
+    & {
+
+      &--underline\@m      { text-decoration: underline !important; }
+      &--underline-none\@m { text-decoration: none !important; }
+
+      &--white\@m         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 10%) !important} }
+      &--black\@m         { &,&:visited { color: $color-fsa-black !important;         }  &:hover { color: shade($color-fsa-black, 20%) !important} }
+      &--primary-900\@m   { &,&:visited { color: $color-fsa-primary-900 !important;   }  &:hover { color: $color-fsa-black             !important} }
+      &--primary\@m       { &,&:visited { color: $color-fsa-primary !important;       }  &:hover { color: $color-fsa-black             !important} }
+      &--primary-300\@m   { &,&:visited { color: $color-fsa-primary-300 !important;   }  &:hover { color: $color-fsa-black             !important} }
+      &--primary-200\@m   { &,&:visited { color: $color-fsa-primary-200 !important;   }  &:hover { color: $color-fsa-white             !important} }
+      &--primary-100\@m   { &,&:visited { color: $color-fsa-primary-100 !important;   }  &:hover { color: $color-fsa-white             !important} }
+      &--secondary-900\@m { &,&:visited { color: $color-fsa-secondary-900 !important; }  &:hover { color: $color-fsa-black             !important} }
+      &--secondary\@m     { &,&:visited { color: $color-fsa-secondary !important;     }  &:hover { color: $color-fsa-black             !important} }
+      &--secondary-300\@m { &,&:visited { color: $color-fsa-secondary-300 !important; }  &:hover { color: $color-fsa-black             !important} }
+      &--secondary-200\@m { &,&:visited { color: $color-fsa-secondary-200 !important; }  &:hover { color: $color-fsa-white             !important} }
+      &--secondary-100\@m { &,&:visited { color: $color-fsa-secondary-100 !important; }  &:hover { color: $color-fsa-white             !important} }
+      &--tertiary-900\@m  { &,&:visited { color: $color-fsa-tertiary-900 !important;  }  &:hover { color: $color-fsa-black             !important} }
+      &--tertiary\@m      { &,&:visited { color: $color-fsa-tertiary !important;      }  &:hover { color: $color-fsa-black             !important} }
+      &--tertiary-300\@m  { &,&:visited { color: $color-fsa-tertiary-300 !important;  }  &:hover { color: $color-fsa-black             !important} }
+      &--tertiary-200\@m  { &,&:visited { color: $color-fsa-tertiary-200 !important;  }  &:hover { color: $color-fsa-white             !important} }
+      &--tertiary-100\@m  { &,&:visited { color: $color-fsa-tertiary-100 !important;  }  &:hover { color: $color-fsa-white             !important} }
+      &--aqua-900\@m      { &,&:visited { color: $color-fsa-aqua-900 !important;      }  &:hover { color: $color-fsa-black             !important} }
+      &--aqua\@m          { &,&:visited { color: $color-fsa-aqua !important;          }  &:hover { color: $color-fsa-black             !important} }
+      &--aqua-300\@m      { &,&:visited { color: $color-fsa-aqua-300 !important;      }  &:hover { color: $color-fsa-black             !important} }
+      &--aqua-200\@m      { &,&:visited { color: $color-fsa-aqua-200 !important;      }  &:hover { color: $color-fsa-white             !important} }
+      &--aqua-100\@m      { &,&:visited { color: $color-fsa-aqua-100 !important;      }  &:hover { color: $color-fsa-white             !important} }
+      &--red-900\@m       { &,&:visited { color: $color-fsa-red-900 !important;       }  &:hover { color: $color-fsa-black             !important} }
+      &--red\@m           { &,&:visited { color: $color-fsa-red !important;           }  &:hover { color: $color-fsa-black             !important} }
+      &--red-300\@m       { &,&:visited { color: $color-fsa-red-300 !important;       }  &:hover { color: $color-fsa-black             !important} }
+      &--red-200\@m       { &,&:visited { color: $color-fsa-red-200 !important;       }  &:hover { color: $color-fsa-white             !important} }
+      &--red-100\@m       { &,&:visited { color: $color-fsa-red-100 !important;       }  &:hover { color: $color-fsa-white             !important} }
+      &--yellow\@m        { &,&:visited { color: $color-fsa-yellow !important;        }  &:hover { color: $color-fsa-white             !important} }
+      &--yellow-300\@m    { &,&:visited { color: $color-fsa-yellow-300 !important;    }  &:hover { color: $color-fsa-white             !important} }
+      &--yellow-200\@m    { &,&:visited { color: $color-fsa-yellow-200 !important;    }  &:hover { color: $color-fsa-white             !important} }
+      &--yellow-100\@m    { &,&:visited { color: $color-fsa-yellow-100 !important;    }  &:hover { color: $color-fsa-white             !important} }
+
+    }
+
+    // Hover
+    &\:hover {
+
+      &--underline\@m:hover      { text-decoration: underline !important; }
+      &--underline-none\@m:hover { text-decoration: none !important; }
+
+      &--white\@m:hover         { &,&:visited { color: $color-fsa-white !important;         } }
+      &--black\@m:hover         { &,&:visited { color: $color-fsa-black !important;         } }
+      &--primary-900\@m:hover   { &,&:visited { color: $color-fsa-primary-900 !important;   } }
+      &--primary\@m:hover       { &,&:visited { color: $color-fsa-primary !important;       } }
+      &--primary-300\@m:hover   { &,&:visited { color: $color-fsa-primary-300 !important;   } }
+      &--primary-200\@m:hover   { &,&:visited { color: $color-fsa-primary-200 !important;   } }
+      &--primary-100\@m:hover   { &,&:visited { color: $color-fsa-primary-100 !important;   } }
+      &--secondary-900\@m:hover { &,&:visited { color: $color-fsa-secondary-900 !important; } }
+      &--secondary\@m:hover     { &,&:visited { color: $color-fsa-secondary !important;     } }
+      &--secondary-300\@m:hover { &,&:visited { color: $color-fsa-secondary-300 !important; } }
+      &--secondary-200\@m:hover { &,&:visited { color: $color-fsa-secondary-200 !important; } }
+      &--secondary-100\@m:hover { &,&:visited { color: $color-fsa-secondary-100 !important; } }
+      &--tertiary-900\@m:hover  { &,&:visited { color: $color-fsa-tertiary-900 !important;  } }
+      &--tertiary\@m:hover      { &,&:visited { color: $color-fsa-tertiary !important;      } }
+      &--tertiary-300\@m:hover  { &,&:visited { color: $color-fsa-tertiary-300 !important;  } }
+      &--tertiary-200\@m:hover  { &,&:visited { color: $color-fsa-tertiary-200 !important;  } }
+      &--tertiary-100\@m:hover  { &,&:visited { color: $color-fsa-tertiary-100 !important;  } }
+      &--aqua-900\@m:hover      { &,&:visited { color: $color-fsa-aqua-900 !important;      } }
+      &--aqua\@m:hover          { &,&:visited { color: $color-fsa-aqua !important;          } }
+      &--aqua-300\@m:hover      { &,&:visited { color: $color-fsa-aqua-300 !important;      } }
+      &--aqua-200\@m:hover      { &,&:visited { color: $color-fsa-aqua-200 !important;      } }
+      &--aqua-100\@m:hover      { &,&:visited { color: $color-fsa-aqua-100 !important;      } }
+      &--red-900\@m:hover       { &,&:visited { color: $color-fsa-red-900 !important;       } }
+      &--red\@m:hover           { &,&:visited { color: $color-fsa-red !important;           } }
+      &--red-300\@m:hover       { &,&:visited { color: $color-fsa-red-300 !important;       } }
+      &--red-200\@m:hover       { &,&:visited { color: $color-fsa-red-200 !important;       } }
+      &--red-100\@m:hover       { &,&:visited { color: $color-fsa-red-100 !important;       } }
+      &--yellow\@m:hover        { &,&:visited { color: $color-fsa-yellow !important;        } }
+      &--yellow-300\@m:hover    { &,&:visited { color: $color-fsa-yellow-300 !important;    } }
+      &--yellow-200\@m:hover    { &,&:visited { color: $color-fsa-yellow-200 !important;    } }
+      &--yellow-100\@m:hover    { &,&:visited { color: $color-fsa-yellow-100 !important;    } }
+
+    }
+
+  }
+
+  @include breakpoint(L) {
+
+    &--inline\@l       { display: inline !important; }
+    &--inline-block\@l { display: inline-block !important; }
+    &--block\@l        { display: block !important; }
+
+    // Default
+    & {
+
+      &--underline\@l      { text-decoration: underline !important; }
+      &--underline-none\@l { text-decoration: none !important; }
+
+      &--white\@l         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 10%) !important} }
+      &--black\@l         { &,&:visited { color: $color-fsa-black !important;         }  &:hover { color: shade($color-fsa-black, 20%) !important} }
+      &--primary-900\@l   { &,&:visited { color: $color-fsa-primary-900 !important;   }  &:hover { color: $color-fsa-black             !important} }
+      &--primary\@l       { &,&:visited { color: $color-fsa-primary !important;       }  &:hover { color: $color-fsa-black             !important} }
+      &--primary-300\@l   { &,&:visited { color: $color-fsa-primary-300 !important;   }  &:hover { color: $color-fsa-black             !important} }
+      &--primary-200\@l   { &,&:visited { color: $color-fsa-primary-200 !important;   }  &:hover { color: $color-fsa-white             !important} }
+      &--primary-100\@l   { &,&:visited { color: $color-fsa-primary-100 !important;   }  &:hover { color: $color-fsa-white             !important} }
+      &--secondary-900\@l { &,&:visited { color: $color-fsa-secondary-900 !important; }  &:hover { color: $color-fsa-black             !important} }
+      &--secondary\@l     { &,&:visited { color: $color-fsa-secondary !important;     }  &:hover { color: $color-fsa-black             !important} }
+      &--secondary-300\@l { &,&:visited { color: $color-fsa-secondary-300 !important; }  &:hover { color: $color-fsa-black             !important} }
+      &--secondary-200\@l { &,&:visited { color: $color-fsa-secondary-200 !important; }  &:hover { color: $color-fsa-white             !important} }
+      &--secondary-100\@l { &,&:visited { color: $color-fsa-secondary-100 !important; }  &:hover { color: $color-fsa-white             !important} }
+      &--tertiary-900\@l  { &,&:visited { color: $color-fsa-tertiary-900 !important;  }  &:hover { color: $color-fsa-black             !important} }
+      &--tertiary\@l      { &,&:visited { color: $color-fsa-tertiary !important;      }  &:hover { color: $color-fsa-black             !important} }
+      &--tertiary-300\@l  { &,&:visited { color: $color-fsa-tertiary-300 !important;  }  &:hover { color: $color-fsa-black             !important} }
+      &--tertiary-200\@l  { &,&:visited { color: $color-fsa-tertiary-200 !important;  }  &:hover { color: $color-fsa-white             !important} }
+      &--tertiary-100\@l  { &,&:visited { color: $color-fsa-tertiary-100 !important;  }  &:hover { color: $color-fsa-white             !important} }
+      &--aqua-900\@l      { &,&:visited { color: $color-fsa-aqua-900 !important;      }  &:hover { color: $color-fsa-black             !important} }
+      &--aqua\@l          { &,&:visited { color: $color-fsa-aqua !important;          }  &:hover { color: $color-fsa-black             !important} }
+      &--aqua-300\@l      { &,&:visited { color: $color-fsa-aqua-300 !important;      }  &:hover { color: $color-fsa-black             !important} }
+      &--aqua-200\@l      { &,&:visited { color: $color-fsa-aqua-200 !important;      }  &:hover { color: $color-fsa-white             !important} }
+      &--aqua-100\@l      { &,&:visited { color: $color-fsa-aqua-100 !important;      }  &:hover { color: $color-fsa-white             !important} }
+      &--red-900\@l       { &,&:visited { color: $color-fsa-red-900 !important;       }  &:hover { color: $color-fsa-black             !important} }
+      &--red\@l           { &,&:visited { color: $color-fsa-red !important;           }  &:hover { color: $color-fsa-black             !important} }
+      &--red-300\@l       { &,&:visited { color: $color-fsa-red-300 !important;       }  &:hover { color: $color-fsa-black             !important} }
+      &--red-200\@l       { &,&:visited { color: $color-fsa-red-200 !important;       }  &:hover { color: $color-fsa-white             !important} }
+      &--red-100\@l       { &,&:visited { color: $color-fsa-red-100 !important;       }  &:hover { color: $color-fsa-white             !important} }
+      &--yellow\@l        { &,&:visited { color: $color-fsa-yellow !important;        }  &:hover { color: $color-fsa-white             !important} }
+      &--yellow-300\@l    { &,&:visited { color: $color-fsa-yellow-300 !important;    }  &:hover { color: $color-fsa-white             !important} }
+      &--yellow-200\@l    { &,&:visited { color: $color-fsa-yellow-200 !important;    }  &:hover { color: $color-fsa-white             !important} }
+      &--yellow-100\@l    { &,&:visited { color: $color-fsa-yellow-100 !important;    }  &:hover { color: $color-fsa-white             !important} }
+
+    }
+
+    // Hover
+    &\:hover {
+
+      &--underline\@l:hover      { text-decoration: underline !important; }
+      &--underline-none\@l:hover { text-decoration: none !important; }
+
+      &--white\@l:hover         { &,&:visited { color: $color-fsa-white !important;         } }
+      &--black\@l:hover         { &,&:visited { color: $color-fsa-black !important;         } }
+      &--primary-900\@l:hover   { &,&:visited { color: $color-fsa-primary-900 !important;   } }
+      &--primary\@l:hover       { &,&:visited { color: $color-fsa-primary !important;       } }
+      &--primary-300\@l:hover   { &,&:visited { color: $color-fsa-primary-300 !important;   } }
+      &--primary-200\@l:hover   { &,&:visited { color: $color-fsa-primary-200 !important;   } }
+      &--primary-100\@l:hover   { &,&:visited { color: $color-fsa-primary-100 !important;   } }
+      &--secondary-900\@l:hover { &,&:visited { color: $color-fsa-secondary-900 !important; } }
+      &--secondary\@l:hover     { &,&:visited { color: $color-fsa-secondary !important;     } }
+      &--secondary-300\@l:hover { &,&:visited { color: $color-fsa-secondary-300 !important; } }
+      &--secondary-200\@l:hover { &,&:visited { color: $color-fsa-secondary-200 !important; } }
+      &--secondary-100\@l:hover { &,&:visited { color: $color-fsa-secondary-100 !important; } }
+      &--tertiary-900\@l:hover  { &,&:visited { color: $color-fsa-tertiary-900 !important;  } }
+      &--tertiary\@l:hover      { &,&:visited { color: $color-fsa-tertiary !important;      } }
+      &--tertiary-300\@l:hover  { &,&:visited { color: $color-fsa-tertiary-300 !important;  } }
+      &--tertiary-200\@l:hover  { &,&:visited { color: $color-fsa-tertiary-200 !important;  } }
+      &--tertiary-100\@l:hover  { &,&:visited { color: $color-fsa-tertiary-100 !important;  } }
+      &--aqua-900\@l:hover      { &,&:visited { color: $color-fsa-aqua-900 !important;      } }
+      &--aqua\@l:hover          { &,&:visited { color: $color-fsa-aqua !important;          } }
+      &--aqua-300\@l:hover      { &,&:visited { color: $color-fsa-aqua-300 !important;      } }
+      &--aqua-200\@l:hover      { &,&:visited { color: $color-fsa-aqua-200 !important;      } }
+      &--aqua-100\@l:hover      { &,&:visited { color: $color-fsa-aqua-100 !important;      } }
+      &--red-900\@l:hover       { &,&:visited { color: $color-fsa-red-900 !important;       } }
+      &--red\@l:hover           { &,&:visited { color: $color-fsa-red !important;           } }
+      &--red-300\@l:hover       { &,&:visited { color: $color-fsa-red-300 !important;       } }
+      &--red-200\@l:hover       { &,&:visited { color: $color-fsa-red-200 !important;       } }
+      &--red-100\@l:hover       { &,&:visited { color: $color-fsa-red-100 !important;       } }
+      &--yellow\@l:hover        { &,&:visited { color: $color-fsa-yellow !important;        } }
+      &--yellow-300\@l:hover    { &,&:visited { color: $color-fsa-yellow-300 !important;    } }
+      &--yellow-200\@l:hover    { &,&:visited { color: $color-fsa-yellow-200 !important;    } }
+      &--yellow-100\@l:hover    { &,&:visited { color: $color-fsa-yellow-100 !important;    } }
+
+    }
+
+  }
+
+  @include breakpoint(XL) {
+
+    &--inline\@xl       { display: inline !important; }
+    &--inline-block\@xl { display: inline-block !important; }
+    &--block\@xl        { display: block !important; }
+
+    // Default
+    & {
+
+      &--underline\@xl      { text-decoration: underline !important; }
+      &--underline-none\@xl { text-decoration: none !important; }
+
+      &--white\@xl         { &,&:visited { color: $color-fsa-white !important;         }  &:hover { color: shade($color-fsa-white, 10%) !important} }
+      &--black\@xl         { &,&:visited { color: $color-fsa-black !important;         }  &:hover { color: shade($color-fsa-black, 20%) !important} }
+      &--primary-900\@xl   { &,&:visited { color: $color-fsa-primary-900 !important;   }  &:hover { color: $color-fsa-black             !important} }
+      &--primary\@xl       { &,&:visited { color: $color-fsa-primary !important;       }  &:hover { color: $color-fsa-black             !important} }
+      &--primary-300\@xl   { &,&:visited { color: $color-fsa-primary-300 !important;   }  &:hover { color: $color-fsa-black             !important} }
+      &--primary-200\@xl   { &,&:visited { color: $color-fsa-primary-200 !important;   }  &:hover { color: $color-fsa-white             !important} }
+      &--primary-100\@xl   { &,&:visited { color: $color-fsa-primary-100 !important;   }  &:hover { color: $color-fsa-white             !important} }
+      &--secondary-900\@xl { &,&:visited { color: $color-fsa-secondary-900 !important; }  &:hover { color: $color-fsa-black             !important} }
+      &--secondary\@xl     { &,&:visited { color: $color-fsa-secondary !important;     }  &:hover { color: $color-fsa-black             !important} }
+      &--secondary-300\@xl { &,&:visited { color: $color-fsa-secondary-300 !important; }  &:hover { color: $color-fsa-black             !important} }
+      &--secondary-200\@xl { &,&:visited { color: $color-fsa-secondary-200 !important; }  &:hover { color: $color-fsa-white             !important} }
+      &--secondary-100\@xl { &,&:visited { color: $color-fsa-secondary-100 !important; }  &:hover { color: $color-fsa-white             !important} }
+      &--tertiary-900\@xl  { &,&:visited { color: $color-fsa-tertiary-900 !important;  }  &:hover { color: $color-fsa-black             !important} }
+      &--tertiary\@xl      { &,&:visited { color: $color-fsa-tertiary !important;      }  &:hover { color: $color-fsa-black             !important} }
+      &--tertiary-300\@xl  { &,&:visited { color: $color-fsa-tertiary-300 !important;  }  &:hover { color: $color-fsa-black             !important} }
+      &--tertiary-200\@xl  { &,&:visited { color: $color-fsa-tertiary-200 !important;  }  &:hover { color: $color-fsa-white             !important} }
+      &--tertiary-100\@xl  { &,&:visited { color: $color-fsa-tertiary-100 !important;  }  &:hover { color: $color-fsa-white             !important} }
+      &--aqua-900\@xl      { &,&:visited { color: $color-fsa-aqua-900 !important;      }  &:hover { color: $color-fsa-black             !important} }
+      &--aqua\@xl          { &,&:visited { color: $color-fsa-aqua !important;          }  &:hover { color: $color-fsa-black             !important} }
+      &--aqua-300\@xl      { &,&:visited { color: $color-fsa-aqua-300 !important;      }  &:hover { color: $color-fsa-black             !important} }
+      &--aqua-200\@xl      { &,&:visited { color: $color-fsa-aqua-200 !important;      }  &:hover { color: $color-fsa-white             !important} }
+      &--aqua-100\@xl      { &,&:visited { color: $color-fsa-aqua-100 !important;      }  &:hover { color: $color-fsa-white             !important} }
+      &--red-900\@xl       { &,&:visited { color: $color-fsa-red-900 !important;       }  &:hover { color: $color-fsa-black             !important} }
+      &--red\@xl           { &,&:visited { color: $color-fsa-red !important;           }  &:hover { color: $color-fsa-black             !important} }
+      &--red-300\@xl       { &,&:visited { color: $color-fsa-red-300 !important;       }  &:hover { color: $color-fsa-black             !important} }
+      &--red-200\@xl       { &,&:visited { color: $color-fsa-red-200 !important;       }  &:hover { color: $color-fsa-white             !important} }
+      &--red-100\@xl       { &,&:visited { color: $color-fsa-red-100 !important;       }  &:hover { color: $color-fsa-white             !important} }
+      &--yellow\@xl        { &,&:visited { color: $color-fsa-yellow !important;        }  &:hover { color: $color-fsa-white             !important} }
+      &--yellow-300\@xl    { &,&:visited { color: $color-fsa-yellow-300 !important;    }  &:hover { color: $color-fsa-white             !important} }
+      &--yellow-200\@xl    { &,&:visited { color: $color-fsa-yellow-200 !important;    }  &:hover { color: $color-fsa-white             !important} }
+      &--yellow-100\@xl    { &,&:visited { color: $color-fsa-yellow-100 !important;    }  &:hover { color: $color-fsa-white             !important} }
+
+    }
+
+    // Hover
+    &\:hover {
+
+      &--underline\@xl:hover      { text-decoration: underline !important; }
+      &--underline-none\@xl:hover { text-decoration: none !important; }
+
+      &--white\@xl:hover         { &,&:visited { color: $color-fsa-white !important;         } }
+      &--black\@xl:hover         { &,&:visited { color: $color-fsa-black !important;         } }
+      &--primary-900\@xl:hover   { &,&:visited { color: $color-fsa-primary-900 !important;   } }
+      &--primary\@xl:hover       { &,&:visited { color: $color-fsa-primary !important;       } }
+      &--primary-300\@xl:hover   { &,&:visited { color: $color-fsa-primary-300 !important;   } }
+      &--primary-200\@xl:hover   { &,&:visited { color: $color-fsa-primary-200 !important;   } }
+      &--primary-100\@xl:hover   { &,&:visited { color: $color-fsa-primary-100 !important;   } }
+      &--secondary-900\@xl:hover { &,&:visited { color: $color-fsa-secondary-900 !important; } }
+      &--secondary\@xl:hover     { &,&:visited { color: $color-fsa-secondary !important;     } }
+      &--secondary-300\@xl:hover { &,&:visited { color: $color-fsa-secondary-300 !important; } }
+      &--secondary-200\@xl:hover { &,&:visited { color: $color-fsa-secondary-200 !important; } }
+      &--secondary-100\@xl:hover { &,&:visited { color: $color-fsa-secondary-100 !important; } }
+      &--tertiary-900\@xl:hover  { &,&:visited { color: $color-fsa-tertiary-900 !important;  } }
+      &--tertiary\@xl:hover      { &,&:visited { color: $color-fsa-tertiary !important;      } }
+      &--tertiary-300\@xl:hover  { &,&:visited { color: $color-fsa-tertiary-300 !important;  } }
+      &--tertiary-200\@xl:hover  { &,&:visited { color: $color-fsa-tertiary-200 !important;  } }
+      &--tertiary-100\@xl:hover  { &,&:visited { color: $color-fsa-tertiary-100 !important;  } }
+      &--aqua-900\@xl:hover      { &,&:visited { color: $color-fsa-aqua-900 !important;      } }
+      &--aqua\@xl:hover          { &,&:visited { color: $color-fsa-aqua !important;          } }
+      &--aqua-300\@xl:hover      { &,&:visited { color: $color-fsa-aqua-300 !important;      } }
+      &--aqua-200\@xl:hover      { &,&:visited { color: $color-fsa-aqua-200 !important;      } }
+      &--aqua-100\@xl:hover      { &,&:visited { color: $color-fsa-aqua-100 !important;      } }
+      &--red-900\@xl:hover       { &,&:visited { color: $color-fsa-red-900 !important;       } }
+      &--red\@xl:hover           { &,&:visited { color: $color-fsa-red !important;           } }
+      &--red-300\@xl:hover       { &,&:visited { color: $color-fsa-red-300 !important;       } }
+      &--red-200\@xl:hover       { &,&:visited { color: $color-fsa-red-200 !important;       } }
+      &--red-100\@xl:hover       { &,&:visited { color: $color-fsa-red-100 !important;       } }
+      &--yellow\@xl:hover        { &,&:visited { color: $color-fsa-yellow !important;        } }
+      &--yellow-300\@xl:hover    { &,&:visited { color: $color-fsa-yellow-300 !important;    } }
+      &--yellow-200\@xl:hover    { &,&:visited { color: $color-fsa-yellow-200 !important;    } }
+      &--yellow-100\@xl:hover    { &,&:visited { color: $color-fsa-yellow-100 !important;    } }
+
+    }
+
+  }
+
+}
+
+// Background -----------------------------------------------------------------
+.fsa-bg {
+
+  // Default
+  & {
+    &--white          { background-color: $color-fsa-white !important }
+    &--black          { background-color: $color-fsa-black !important }
+    &--base           { background-color: $color-fsa-base-bg !important }
+    &--transparent    { background-color: transparent !important }
+    &--primary        { background-color: $color-fsa-primary !important }
+    &--primary-300    { background-color: $color-fsa-primary-300 !important }
+    &--primary-200    { background-color: $color-fsa-primary-200 !important }
+    &--primary-100    { background-color: $color-fsa-primary-100 !important }
+    &--primary-900    { background-color: $color-fsa-primary-900 !important }
+    &--secondary      { background-color: $color-fsa-secondary !important }
+    &--secondary-300  { background-color: $color-fsa-secondary-300 !important }
+    &--secondary-200  { background-color: $color-fsa-secondary-200 !important }
+    &--secondary-100  { background-color: $color-fsa-secondary-100 !important }
+    &--secondary-900  { background-color: $color-fsa-secondary-900 !important }
+    &--tertiary       { background-color: $color-fsa-tertiary !important }
+    &--tertiary-300   { background-color: $color-fsa-tertiary-300 !important }
+    &--tertiary-200   { background-color: $color-fsa-tertiary-200 !important }
+    &--tertiary-100   { background-color: $color-fsa-tertiary-100 !important }
+    &--tertiary-900   { background-color: $color-fsa-tertiary-900 !important }
+    &--aqua           { background-color: $color-fsa-aqua !important }
+    &--aqua-300       { background-color: $color-fsa-aqua-300 !important }
+    &--aqua-200       { background-color: $color-fsa-aqua-200 !important }
+    &--aqua-100       { background-color: $color-fsa-aqua-100 !important }
+    &--aqua-900       { background-color: $color-fsa-aqua-900 !important }
+    &--red            { background-color: $color-fsa-red !important }
+    &--red-300        { background-color: $color-fsa-red-300 !important }
+    &--red-200        { background-color: $color-fsa-red-200 !important }
+    &--red-100        { background-color: $color-fsa-red-100 !important }
+    &--red-900        { background-color: $color-fsa-red-900 !important }
+    &--yellow         { background-color: $color-fsa-yellow !important }
+    &--yellow-300     { background-color: $color-fsa-yellow-300 !important }
+    &--yellow-200     { background-color: $color-fsa-yellow-200 !important }
+    &--yellow-100     { background-color: $color-fsa-yellow-100 !important }
+  }
+
+  // Hover
+  &\:hover {
+    &--white:hover          { background-color: $color-fsa-white !important }
+    &--black:hover          { background-color: $color-fsa-black !important }
+    &--base:hover           { background-color: $color-fsa-base-bg !important }
+    &--transparent:hover    { background-color: transparent !important }
+    &--primary:hover        { background-color: $color-fsa-primary !important }
+    &--primary-300:hover    { background-color: $color-fsa-primary-300 !important }
+    &--primary-200:hover    { background-color: $color-fsa-primary-200 !important }
+    &--primary-100:hover    { background-color: $color-fsa-primary-100 !important }
+    &--primary-900:hover    { background-color: $color-fsa-primary-900 !important }
+    &--secondary:hover      { background-color: $color-fsa-secondary !important }
+    &--secondary-300:hover  { background-color: $color-fsa-secondary-300 !important }
+    &--secondary-200:hover  { background-color: $color-fsa-secondary-200 !important }
+    &--secondary-100:hover  { background-color: $color-fsa-secondary-100 !important }
+    &--secondary-900:hover  { background-color: $color-fsa-secondary-900 !important }
+    &--tertiary:hover       { background-color: $color-fsa-tertiary !important }
+    &--tertiary-300:hover   { background-color: $color-fsa-tertiary-300 !important }
+    &--tertiary-200:hover   { background-color: $color-fsa-tertiary-200 !important }
+    &--tertiary-100:hover   { background-color: $color-fsa-tertiary-100 !important }
+    &--tertiary-900:hover   { background-color: $color-fsa-tertiary-900 !important }
+    &--aqua:hover           { background-color: $color-fsa-aqua !important }
+    &--aqua-300:hover       { background-color: $color-fsa-aqua-300 !important }
+    &--aqua-200:hover       { background-color: $color-fsa-aqua-200 !important }
+    &--aqua-100:hover       { background-color: $color-fsa-aqua-100 !important }
+    &--aqua-900:hover       { background-color: $color-fsa-aqua-900 !important }
+    &--red:hover            { background-color: $color-fsa-red !important }
+    &--red-300:hover        { background-color: $color-fsa-red-300 !important }
+    &--red-200:hover        { background-color: $color-fsa-red-200 !important }
+    &--red-100:hover        { background-color: $color-fsa-red-100 !important }
+    &--red-900:hover        { background-color: $color-fsa-red-900 !important }
+    &--yellow:hover         { background-color: $color-fsa-yellow !important }
+    &--yellow-300:hover     { background-color: $color-fsa-yellow-300 !important }
+    &--yellow-200:hover     { background-color: $color-fsa-yellow-200 !important }
+    &--yellow-100:hover     { background-color: $color-fsa-yellow-100 !important }
+  }
+
+  // Responsive
+  @include breakpoint(S) {
+
+    // Default
+    & {
+      &--white\@s          { background-color: $color-fsa-white !important }
+      &--black\@s          { background-color: $color-fsa-black !important }
+      &--base\@s           { background-color: $color-fsa-base-bg !important }
+      &--transparent\@s    { background-color: transparent !important }
+      &--primary\@s        { background-color: $color-fsa-primary !important }
+      &--primary-300\@s    { background-color: $color-fsa-primary-300 !important }
+      &--primary-200\@s    { background-color: $color-fsa-primary-200 !important }
+      &--primary-100\@s    { background-color: $color-fsa-primary-100 !important }
+      &--primary-900\@s    { background-color: $color-fsa-primary-900 !important }
+      &--secondary\@s      { background-color: $color-fsa-secondary !important }
+      &--secondary-300\@s  { background-color: $color-fsa-secondary-300 !important }
+      &--secondary-200\@s  { background-color: $color-fsa-secondary-200 !important }
+      &--secondary-100\@s  { background-color: $color-fsa-secondary-100 !important }
+      &--secondary-900\@s  { background-color: $color-fsa-secondary-900 !important }
+      &--tertiary\@s       { background-color: $color-fsa-tertiary !important }
+      &--tertiary-300\@s   { background-color: $color-fsa-tertiary-300 !important }
+      &--tertiary-200\@s   { background-color: $color-fsa-tertiary-200 !important }
+      &--tertiary-100\@s   { background-color: $color-fsa-tertiary-100 !important }
+      &--tertiary-900\@s   { background-color: $color-fsa-tertiary-900 !important }
+      &--aqua\@s           { background-color: $color-fsa-aqua !important }
+      &--aqua-300\@s       { background-color: $color-fsa-aqua-300 !important }
+      &--aqua-200\@s       { background-color: $color-fsa-aqua-200 !important }
+      &--aqua-100\@s       { background-color: $color-fsa-aqua-100 !important }
+      &--aqua-900\@s       { background-color: $color-fsa-aqua-900 !important }
+      &--red\@s            { background-color: $color-fsa-red !important }
+      &--red-300\@s        { background-color: $color-fsa-red-300 !important }
+      &--red-200\@s        { background-color: $color-fsa-red-200 !important }
+      &--red-100\@s        { background-color: $color-fsa-red-100 !important }
+      &--red-900\@s        { background-color: $color-fsa-red-900 !important }
+      &--yellow\@s         { background-color: $color-fsa-yellow !important }
+      &--yellow-300\@s     { background-color: $color-fsa-yellow-300 !important }
+      &--yellow-200\@s     { background-color: $color-fsa-yellow-200 !important }
+      &--yellow-100\@s     { background-color: $color-fsa-yellow-100 !important }
+    }
+
+    // Hover
+    &\:hover {
+      &--white\@s:hover          { background-color: $color-fsa-white !important }
+      &--black\@s:hover          { background-color: $color-fsa-black !important }
+      &--base\@s:hover           { background-color: $color-fsa-base-bg !important }
+      &--transparent\@s:hover    { background-color: transparent !important }
+      &--primary\@s:hover        { background-color: $color-fsa-primary !important }
+      &--primary-300\@s:hover    { background-color: $color-fsa-primary-300 !important }
+      &--primary-200\@s:hover    { background-color: $color-fsa-primary-200 !important }
+      &--primary-100\@s:hover    { background-color: $color-fsa-primary-100 !important }
+      &--primary-900\@s:hover    { background-color: $color-fsa-primary-900 !important }
+      &--secondary\@s:hover      { background-color: $color-fsa-secondary !important }
+      &--secondary-300\@s:hover  { background-color: $color-fsa-secondary-300 !important }
+      &--secondary-200\@s:hover  { background-color: $color-fsa-secondary-200 !important }
+      &--secondary-100\@s:hover  { background-color: $color-fsa-secondary-100 !important }
+      &--secondary-900\@s:hover  { background-color: $color-fsa-secondary-900 !important }
+      &--tertiary\@s:hover       { background-color: $color-fsa-tertiary !important }
+      &--tertiary-300\@s:hover   { background-color: $color-fsa-tertiary-300 !important }
+      &--tertiary-200\@s:hover   { background-color: $color-fsa-tertiary-200 !important }
+      &--tertiary-100\@s:hover   { background-color: $color-fsa-tertiary-100 !important }
+      &--tertiary-900\@s:hover   { background-color: $color-fsa-tertiary-900 !important }
+      &--aqua\@s:hover           { background-color: $color-fsa-aqua !important }
+      &--aqua-300\@s:hover       { background-color: $color-fsa-aqua-300 !important }
+      &--aqua-200\@s:hover       { background-color: $color-fsa-aqua-200 !important }
+      &--aqua-100\@s:hover       { background-color: $color-fsa-aqua-100 !important }
+      &--aqua-900\@s:hover       { background-color: $color-fsa-aqua-900 !important }
+      &--red\@s:hover            { background-color: $color-fsa-red !important }
+      &--red-300\@s:hover        { background-color: $color-fsa-red-300 !important }
+      &--red-200\@s:hover        { background-color: $color-fsa-red-200 !important }
+      &--red-100\@s:hover        { background-color: $color-fsa-red-100 !important }
+      &--red-900\@s:hover        { background-color: $color-fsa-red-900 !important }
+      &--yellow\@s:hover         { background-color: $color-fsa-yellow !important }
+      &--yellow-300\@s:hover     { background-color: $color-fsa-yellow-300 !important }
+      &--yellow-200\@s:hover     { background-color: $color-fsa-yellow-200 !important }
+      &--yellow-100\@s:hover     { background-color: $color-fsa-yellow-100 !important }
+    }
+
+  }
+
+  @include breakpoint(M) {
+
+    // Default
+    & {
+      &--white\@m          { background-color: $color-fsa-white !important }
+      &--black\@m          { background-color: $color-fsa-black !important }
+      &--base\@m           { background-color: $color-fsa-base-bg !important }
+      &--transparent\@m    { background-color: transparent !important }
+      &--primary\@m        { background-color: $color-fsa-primary !important }
+      &--primary-300\@m    { background-color: $color-fsa-primary-300 !important }
+      &--primary-200\@m    { background-color: $color-fsa-primary-200 !important }
+      &--primary-100\@m    { background-color: $color-fsa-primary-100 !important }
+      &--primary-900\@m    { background-color: $color-fsa-primary-900 !important }
+      &--secondary\@m      { background-color: $color-fsa-secondary !important }
+      &--secondary-300\@m  { background-color: $color-fsa-secondary-300 !important }
+      &--secondary-200\@m  { background-color: $color-fsa-secondary-200 !important }
+      &--secondary-100\@m  { background-color: $color-fsa-secondary-100 !important }
+      &--secondary-900\@m  { background-color: $color-fsa-secondary-900 !important }
+      &--tertiary\@m       { background-color: $color-fsa-tertiary !important }
+      &--tertiary-300\@m   { background-color: $color-fsa-tertiary-300 !important }
+      &--tertiary-200\@m   { background-color: $color-fsa-tertiary-200 !important }
+      &--tertiary-100\@m   { background-color: $color-fsa-tertiary-100 !important }
+      &--tertiary-900\@m   { background-color: $color-fsa-tertiary-900 !important }
+      &--aqua\@m           { background-color: $color-fsa-aqua !important }
+      &--aqua-300\@m       { background-color: $color-fsa-aqua-300 !important }
+      &--aqua-200\@m       { background-color: $color-fsa-aqua-200 !important }
+      &--aqua-100\@m       { background-color: $color-fsa-aqua-100 !important }
+      &--aqua-900\@m       { background-color: $color-fsa-aqua-900 !important }
+      &--red\@m            { background-color: $color-fsa-red !important }
+      &--red-300\@m        { background-color: $color-fsa-red-300 !important }
+      &--red-200\@m        { background-color: $color-fsa-red-200 !important }
+      &--red-100\@m        { background-color: $color-fsa-red-100 !important }
+      &--red-900\@m        { background-color: $color-fsa-red-900 !important }
+      &--yellow\@m         { background-color: $color-fsa-yellow !important }
+      &--yellow-300\@m     { background-color: $color-fsa-yellow-300 !important }
+      &--yellow-200\@m     { background-color: $color-fsa-yellow-200 !important }
+      &--yellow-100\@m     { background-color: $color-fsa-yellow-100 !important }
+    }
+
+    // Hover
+    &\:hover {
+      &--white\@m:hover          { background-color: $color-fsa-white !important }
+      &--black\@m:hover          { background-color: $color-fsa-black !important }
+      &--base\@m:hover           { background-color: $color-fsa-base-bg !important }
+      &--transparent\@m:hover    { background-color: transparent !important }
+      &--primary\@m:hover        { background-color: $color-fsa-primary !important }
+      &--primary-300\@m:hover    { background-color: $color-fsa-primary-300 !important }
+      &--primary-200\@m:hover    { background-color: $color-fsa-primary-200 !important }
+      &--primary-100\@m:hover    { background-color: $color-fsa-primary-100 !important }
+      &--primary-900\@m:hover    { background-color: $color-fsa-primary-900 !important }
+      &--secondary\@m:hover      { background-color: $color-fsa-secondary !important }
+      &--secondary-300\@m:hover  { background-color: $color-fsa-secondary-300 !important }
+      &--secondary-200\@m:hover  { background-color: $color-fsa-secondary-200 !important }
+      &--secondary-100\@m:hover  { background-color: $color-fsa-secondary-100 !important }
+      &--secondary-900\@m:hover  { background-color: $color-fsa-secondary-900 !important }
+      &--tertiary\@m:hover       { background-color: $color-fsa-tertiary !important }
+      &--tertiary-300\@m:hover   { background-color: $color-fsa-tertiary-300 !important }
+      &--tertiary-200\@m:hover   { background-color: $color-fsa-tertiary-200 !important }
+      &--tertiary-100\@m:hover   { background-color: $color-fsa-tertiary-100 !important }
+      &--tertiary-900\@m:hover   { background-color: $color-fsa-tertiary-900 !important }
+      &--aqua\@m:hover           { background-color: $color-fsa-aqua !important }
+      &--aqua-300\@m:hover       { background-color: $color-fsa-aqua-300 !important }
+      &--aqua-200\@m:hover       { background-color: $color-fsa-aqua-200 !important }
+      &--aqua-100\@m:hover       { background-color: $color-fsa-aqua-100 !important }
+      &--aqua-900\@m:hover       { background-color: $color-fsa-aqua-900 !important }
+      &--red\@m:hover            { background-color: $color-fsa-red !important }
+      &--red-300\@m:hover        { background-color: $color-fsa-red-300 !important }
+      &--red-200\@m:hover        { background-color: $color-fsa-red-200 !important }
+      &--red-100\@m:hover        { background-color: $color-fsa-red-100 !important }
+      &--red-900\@m:hover        { background-color: $color-fsa-red-900 !important }
+      &--yellow\@m:hover         { background-color: $color-fsa-yellow !important }
+      &--yellow-300\@m:hover     { background-color: $color-fsa-yellow-300 !important }
+      &--yellow-200\@m:hover     { background-color: $color-fsa-yellow-200 !important }
+      &--yellow-100\@m:hover     { background-color: $color-fsa-yellow-100 !important }
+    }
+
+  }
+
+  @include breakpoint(L) {
+
+    // Default
+    & {
+      &--white\@l          { background-color: $color-fsa-white !important }
+      &--black\@l          { background-color: $color-fsa-black !important }
+      &--base\@l           { background-color: $color-fsa-base-bg !important }
+      &--transparent\@l    { background-color: transparent !important }
+      &--primary\@l        { background-color: $color-fsa-primary !important }
+      &--primary-300\@l    { background-color: $color-fsa-primary-300 !important }
+      &--primary-200\@l    { background-color: $color-fsa-primary-200 !important }
+      &--primary-100\@l    { background-color: $color-fsa-primary-100 !important }
+      &--primary-900\@l    { background-color: $color-fsa-primary-900 !important }
+      &--secondary\@l      { background-color: $color-fsa-secondary !important }
+      &--secondary-300\@l  { background-color: $color-fsa-secondary-300 !important }
+      &--secondary-200\@l  { background-color: $color-fsa-secondary-200 !important }
+      &--secondary-100\@l  { background-color: $color-fsa-secondary-100 !important }
+      &--secondary-900\@l  { background-color: $color-fsa-secondary-900 !important }
+      &--tertiary\@l       { background-color: $color-fsa-tertiary !important }
+      &--tertiary-300\@l   { background-color: $color-fsa-tertiary-300 !important }
+      &--tertiary-200\@l   { background-color: $color-fsa-tertiary-200 !important }
+      &--tertiary-100\@l   { background-color: $color-fsa-tertiary-100 !important }
+      &--tertiary-900\@l   { background-color: $color-fsa-tertiary-900 !important }
+      &--aqua\@l           { background-color: $color-fsa-aqua !important }
+      &--aqua-300\@l       { background-color: $color-fsa-aqua-300 !important }
+      &--aqua-200\@l       { background-color: $color-fsa-aqua-200 !important }
+      &--aqua-100\@l       { background-color: $color-fsa-aqua-100 !important }
+      &--aqua-900\@l       { background-color: $color-fsa-aqua-900 !important }
+      &--red\@l            { background-color: $color-fsa-red !important }
+      &--red-300\@l        { background-color: $color-fsa-red-300 !important }
+      &--red-200\@l        { background-color: $color-fsa-red-200 !important }
+      &--red-100\@l        { background-color: $color-fsa-red-100 !important }
+      &--red-900\@l        { background-color: $color-fsa-red-900 !important }
+      &--yellow\@l         { background-color: $color-fsa-yellow !important }
+      &--yellow-300\@l     { background-color: $color-fsa-yellow-300 !important }
+      &--yellow-200\@l     { background-color: $color-fsa-yellow-200 !important }
+      &--yellow-100\@l     { background-color: $color-fsa-yellow-100 !important }
+    }
+
+    // Hover
+    &\:hover {
+      &--white\@l:hover          { background-color: $color-fsa-white !important }
+      &--black\@l:hover          { background-color: $color-fsa-black !important }
+      &--base\@l:hover           { background-color: $color-fsa-base-bg !important }
+      &--transparent\@l:hover    { background-color: transparent !important }
+      &--primary\@l:hover        { background-color: $color-fsa-primary !important }
+      &--primary-300\@l:hover    { background-color: $color-fsa-primary-300 !important }
+      &--primary-200\@l:hover    { background-color: $color-fsa-primary-200 !important }
+      &--primary-100\@l:hover    { background-color: $color-fsa-primary-100 !important }
+      &--primary-900\@l:hover    { background-color: $color-fsa-primary-900 !important }
+      &--secondary\@l:hover      { background-color: $color-fsa-secondary !important }
+      &--secondary-300\@l:hover  { background-color: $color-fsa-secondary-300 !important }
+      &--secondary-200\@l:hover  { background-color: $color-fsa-secondary-200 !important }
+      &--secondary-100\@l:hover  { background-color: $color-fsa-secondary-100 !important }
+      &--secondary-900\@l:hover  { background-color: $color-fsa-secondary-900 !important }
+      &--tertiary\@l:hover       { background-color: $color-fsa-tertiary !important }
+      &--tertiary-300\@l:hover   { background-color: $color-fsa-tertiary-300 !important }
+      &--tertiary-200\@l:hover   { background-color: $color-fsa-tertiary-200 !important }
+      &--tertiary-100\@l:hover   { background-color: $color-fsa-tertiary-100 !important }
+      &--tertiary-900\@l:hover   { background-color: $color-fsa-tertiary-900 !important }
+      &--aqua\@l:hover           { background-color: $color-fsa-aqua !important }
+      &--aqua-300\@l:hover       { background-color: $color-fsa-aqua-300 !important }
+      &--aqua-200\@l:hover       { background-color: $color-fsa-aqua-200 !important }
+      &--aqua-100\@l:hover       { background-color: $color-fsa-aqua-100 !important }
+      &--aqua-900\@l:hover       { background-color: $color-fsa-aqua-900 !important }
+      &--red\@l:hover            { background-color: $color-fsa-red !important }
+      &--red-300\@l:hover        { background-color: $color-fsa-red-300 !important }
+      &--red-200\@l:hover        { background-color: $color-fsa-red-200 !important }
+      &--red-100\@l:hover        { background-color: $color-fsa-red-100 !important }
+      &--red-900\@l:hover        { background-color: $color-fsa-red-900 !important }
+      &--yellow\@l:hover         { background-color: $color-fsa-yellow !important }
+      &--yellow-300\@l:hover     { background-color: $color-fsa-yellow-300 !important }
+      &--yellow-200\@l:hover     { background-color: $color-fsa-yellow-200 !important }
+      &--yellow-100\@l:hover     { background-color: $color-fsa-yellow-100 !important }
+    }
+
+  }
+
+  @include breakpoint(XL) {
+
+    // Default
+    & {
+      &--white\@xl          { background-color: $color-fsa-white !important }
+      &--black\@xl          { background-color: $color-fsa-black !important }
+      &--base\@xl           { background-color: $color-fsa-base-bg !important }
+      &--transparent\@xl    { background-color: transparent !important }
+      &--primary\@xl        { background-color: $color-fsa-primary !important }
+      &--primary-300\@xl    { background-color: $color-fsa-primary-300 !important }
+      &--primary-200\@xl    { background-color: $color-fsa-primary-200 !important }
+      &--primary-100\@xl    { background-color: $color-fsa-primary-100 !important }
+      &--primary-900\@xl    { background-color: $color-fsa-primary-900 !important }
+      &--secondary\@xl      { background-color: $color-fsa-secondary !important }
+      &--secondary-300\@xl  { background-color: $color-fsa-secondary-300 !important }
+      &--secondary-200\@xl  { background-color: $color-fsa-secondary-200 !important }
+      &--secondary-100\@xl  { background-color: $color-fsa-secondary-100 !important }
+      &--secondary-900\@xl  { background-color: $color-fsa-secondary-900 !important }
+      &--tertiary\@xl       { background-color: $color-fsa-tertiary !important }
+      &--tertiary-300\@xl   { background-color: $color-fsa-tertiary-300 !important }
+      &--tertiary-200\@xl   { background-color: $color-fsa-tertiary-200 !important }
+      &--tertiary-100\@xl   { background-color: $color-fsa-tertiary-100 !important }
+      &--tertiary-900\@xl   { background-color: $color-fsa-tertiary-900 !important }
+      &--aqua\@xl           { background-color: $color-fsa-aqua !important }
+      &--aqua-300\@xl       { background-color: $color-fsa-aqua-300 !important }
+      &--aqua-200\@xl       { background-color: $color-fsa-aqua-200 !important }
+      &--aqua-100\@xl       { background-color: $color-fsa-aqua-100 !important }
+      &--aqua-900\@xl       { background-color: $color-fsa-aqua-900 !important }
+      &--red\@xl            { background-color: $color-fsa-red !important }
+      &--red-300\@xl        { background-color: $color-fsa-red-300 !important }
+      &--red-200\@xl        { background-color: $color-fsa-red-200 !important }
+      &--red-100\@xl        { background-color: $color-fsa-red-100 !important }
+      &--red-900\@xl        { background-color: $color-fsa-red-900 !important }
+      &--yellow\@xl         { background-color: $color-fsa-yellow !important }
+      &--yellow-300\@xl     { background-color: $color-fsa-yellow-300 !important }
+      &--yellow-200\@xl     { background-color: $color-fsa-yellow-200 !important }
+      &--yellow-100\@xl     { background-color: $color-fsa-yellow-100 !important }
+    }
+
+    // Hover
+    &\:hover {
+      &--white\@xl:hover          { background-color: $color-fsa-white !important }
+      &--black\@xl:hover          { background-color: $color-fsa-black !important }
+      &--base\@xl:hover           { background-color: $color-fsa-base-bg !important }
+      &--transparent\@xl:hover    { background-color: transparent !important }
+      &--primary\@xl:hover        { background-color: $color-fsa-primary !important }
+      &--primary-300\@xl:hover    { background-color: $color-fsa-primary-300 !important }
+      &--primary-200\@xl:hover    { background-color: $color-fsa-primary-200 !important }
+      &--primary-100\@xl:hover    { background-color: $color-fsa-primary-100 !important }
+      &--primary-900\@xl:hover    { background-color: $color-fsa-primary-900 !important }
+      &--secondary\@xl:hover      { background-color: $color-fsa-secondary !important }
+      &--secondary-300\@xl:hover  { background-color: $color-fsa-secondary-300 !important }
+      &--secondary-200\@xl:hover  { background-color: $color-fsa-secondary-200 !important }
+      &--secondary-100\@xl:hover  { background-color: $color-fsa-secondary-100 !important }
+      &--secondary-900\@xl:hover  { background-color: $color-fsa-secondary-900 !important }
+      &--tertiary\@xl:hover       { background-color: $color-fsa-tertiary !important }
+      &--tertiary-300\@xl:hover   { background-color: $color-fsa-tertiary-300 !important }
+      &--tertiary-200\@xl:hover   { background-color: $color-fsa-tertiary-200 !important }
+      &--tertiary-100\@xl:hover   { background-color: $color-fsa-tertiary-100 !important }
+      &--tertiary-900\@xl:hover   { background-color: $color-fsa-tertiary-900 !important }
+      &--aqua\@xl:hover           { background-color: $color-fsa-aqua !important }
+      &--aqua-300\@xl:hover       { background-color: $color-fsa-aqua-300 !important }
+      &--aqua-200\@xl:hover       { background-color: $color-fsa-aqua-200 !important }
+      &--aqua-100\@xl:hover       { background-color: $color-fsa-aqua-100 !important }
+      &--aqua-900\@xl:hover       { background-color: $color-fsa-aqua-900 !important }
+      &--red\@xl:hover            { background-color: $color-fsa-red !important }
+      &--red-300\@xl:hover        { background-color: $color-fsa-red-300 !important }
+      &--red-200\@xl:hover        { background-color: $color-fsa-red-200 !important }
+      &--red-100\@xl:hover        { background-color: $color-fsa-red-100 !important }
+      &--red-900\@xl:hover        { background-color: $color-fsa-red-900 !important }
+      &--yellow\@xl:hover         { background-color: $color-fsa-yellow !important }
+      &--yellow-300\@xl:hover     { background-color: $color-fsa-yellow-300 !important }
+      &--yellow-200\@xl:hover     { background-color: $color-fsa-yellow-200 !important }
+      &--yellow-100\@xl:hover     { background-color: $color-fsa-yellow-100 !important }
+    }
+
+  }
+
+}
 
 // Margins --------------------------------------------------------------------
 .fsa-m {
@@ -584,11 +2493,213 @@
 // Font -----------------------------------------------------------------------
 .fsa-font {
 
-  &--sans {
+  &--sans,
+  &--sans-regular { font-family: $font-sans; font-weight: $font-normal; }
+  &--sans-light   { font-family: $font-sans; font-weight: $font-light; }
+  &--sans-bold    { font-family: $font-sans; font-weight: $font-bold; }
 
-    &-light { font-family: $font-sans; font-weight: $font-light; }
-    &-bold  { font-family: $font-sans; font-weight: $font-bold; }
+  &--mono         { font-family: $font-mono; }
 
+  @include breakpoint(S) {
+    &--sans\@s,
+    &--sans-regular\@s { font-family: $font-sans; font-weight: $font-normal; }
+    &--sans-light\@s   { font-family: $font-sans; font-weight: $font-light; }
+    &--sans-bold\@s    { font-family: $font-sans; font-weight: $font-bold; }
+  }
+  @include breakpoint(M) {
+    &--sans\@m,
+    &--sans-regular\@m { font-family: $font-sans; font-weight: $font-normal; }
+    &--sans-light\@m   { font-family: $font-sans; font-weight: $font-light; }
+    &--sans-bold\@m    { font-family: $font-sans; font-weight: $font-bold; }
+  }
+  @include breakpoint(L) {
+    &--sans\@l,
+    &--sans-regular\@l { font-family: $font-sans; font-weight: $font-normal; }
+    &--sans-light\@l   { font-family: $font-sans; font-weight: $font-light; }
+    &--sans-bold\@l    { font-family: $font-sans; font-weight: $font-bold; }
+  }
+  @include breakpoint(XL) {
+    &--sans\@xl,
+    &--sans-regular\@xl { font-family: $font-sans; font-weight: $font-normal; }
+    &--sans-light\@xl   { font-family: $font-sans; font-weight: $font-light; }
+    &--sans-bold\@xl    { font-family: $font-sans; font-weight: $font-bold; }
+  }
+
+
+}
+
+// Color: Foreground-----------------------------------------------------------
+.fsa-color {
+
+  // Default
+  & {
+    &--white          { color: $color-fsa-white !important }
+    &--black          { color: $color-fsa-black !important }
+    &--primary        { color: $color-fsa-primary !important }
+    &--primary-300    { color: $color-fsa-primary-300 !important }
+    &--primary-200    { color: $color-fsa-primary-200 !important }
+    &--primary-100    { color: $color-fsa-primary-100 !important }
+    &--primary-900    { color: $color-fsa-primary-900 !important }
+    &--secondary      { color: $color-fsa-secondary !important }
+    &--secondary-300  { color: $color-fsa-secondary-300 !important }
+    &--secondary-200  { color: $color-fsa-secondary-200 !important }
+    &--secondary-100  { color: $color-fsa-secondary-100 !important }
+    &--secondary-900  { color: $color-fsa-secondary-900 !important }
+    &--tertiary       { color: $color-fsa-tertiary !important }
+    &--tertiary-300   { color: $color-fsa-tertiary-300 !important }
+    &--tertiary-200   { color: $color-fsa-tertiary-200 !important }
+    &--tertiary-100   { color: $color-fsa-tertiary-100 !important }
+    &--tertiary-900   { color: $color-fsa-tertiary-900 !important }
+    &--aqua           { color: $color-fsa-aqua !important }
+    &--aqua-300       { color: $color-fsa-aqua-300 !important }
+    &--aqua-200       { color: $color-fsa-aqua-200 !important }
+    &--aqua-100       { color: $color-fsa-aqua-100 !important }
+    &--aqua-900       { color: $color-fsa-aqua-900 !important }
+    &--red            { color: $color-fsa-red !important }
+    &--red-300        { color: $color-fsa-red-300 !important }
+    &--red-200        { color: $color-fsa-red-200 !important }
+    &--red-100        { color: $color-fsa-red-100 !important }
+    &--red-900        { color: $color-fsa-red-900 !important }
+    &--yellow         { color: $color-fsa-yellow !important }
+    &--yellow-300     { color: $color-fsa-yellow-300 !important }
+    &--yellow-200     { color: $color-fsa-yellow-200 !important }
+    &--yellow-100     { color: $color-fsa-yellow-100 !important }
+  }
+
+  @include breakpoint(S) {
+    &--primary\@s        { color: $color-fsa-primary !important }
+    &--primary-300\@s    { color: $color-fsa-primary-300 !important }
+    &--primary-200\@s    { color: $color-fsa-primary-200 !important }
+    &--primary-100\@s    { color: $color-fsa-primary-100 !important }
+    &--primary-900\@s    { color: $color-fsa-primary-900 !important }
+    &--secondary\@s      { color: $color-fsa-secondary !important }
+    &--secondary-300\@s  { color: $color-fsa-secondary-300 !important }
+    &--secondary-200\@s  { color: $color-fsa-secondary-200 !important }
+    &--secondary-100\@s  { color: $color-fsa-secondary-100 !important }
+    &--secondary-900\@s  { color: $color-fsa-secondary-900 !important }
+    &--tertiary\@s       { color: $color-fsa-tertiary !important }
+    &--tertiary-300\@s   { color: $color-fsa-tertiary-300 !important }
+    &--tertiary-200\@s   { color: $color-fsa-tertiary-200 !important }
+    &--tertiary-100\@s   { color: $color-fsa-tertiary-100 !important }
+    &--tertiary-900\@s   { color: $color-fsa-tertiary-900 !important }
+    &--aqua\@s           { color: $color-fsa-aqua !important }
+    &--aqua-300\@s       { color: $color-fsa-aqua-300 !important }
+    &--aqua-200\@s       { color: $color-fsa-aqua-200 !important }
+    &--aqua-100\@s       { color: $color-fsa-aqua-100 !important }
+    &--aqua-900\@s       { color: $color-fsa-aqua-900 !important }
+    &--red\@s            { color: $color-fsa-red !important }
+    &--red-300\@s        { color: $color-fsa-red-300 !important }
+    &--red-200\@s        { color: $color-fsa-red-200 !important }
+    &--red-100\@s        { color: $color-fsa-red-100 !important }
+    &--red-900\@s        { color: $color-fsa-red-900 !important }
+    &--yellow\@s         { color: $color-fsa-yellow !important }
+    &--yellow-300\@s     { color: $color-fsa-yellow-300 !important }
+    &--yellow-200\@s     { color: $color-fsa-yellow-200 !important }
+    &--yellow-100\@s     { color: $color-fsa-yellow-100 !important }
+    &--white\@s          { color: $color-fsa-white !important }
+    &--black\@s          { color: $color-fsa-black !important }
+  }
+
+  @include breakpoint(M) {
+    &--primary\@m        { color: $color-fsa-primary !important }
+    &--primary-300\@m    { color: $color-fsa-primary-300 !important }
+    &--primary-200\@m    { color: $color-fsa-primary-200 !important }
+    &--primary-100\@m    { color: $color-fsa-primary-100 !important }
+    &--primary-900\@m    { color: $color-fsa-primary-900 !important }
+    &--secondary\@m      { color: $color-fsa-secondary !important }
+    &--secondary-300\@m  { color: $color-fsa-secondary-300 !important }
+    &--secondary-200\@m  { color: $color-fsa-secondary-200 !important }
+    &--secondary-100\@m  { color: $color-fsa-secondary-100 !important }
+    &--secondary-900\@m  { color: $color-fsa-secondary-900 !important }
+    &--tertiary\@m       { color: $color-fsa-tertiary !important }
+    &--tertiary-300\@m   { color: $color-fsa-tertiary-300 !important }
+    &--tertiary-200\@m   { color: $color-fsa-tertiary-200 !important }
+    &--tertiary-100\@m   { color: $color-fsa-tertiary-100 !important }
+    &--tertiary-900\@m   { color: $color-fsa-tertiary-900 !important }
+    &--aqua\@m           { color: $color-fsa-aqua !important }
+    &--aqua-300\@m       { color: $color-fsa-aqua-300 !important }
+    &--aqua-200\@m       { color: $color-fsa-aqua-200 !important }
+    &--aqua-100\@m       { color: $color-fsa-aqua-100 !important }
+    &--aqua-900\@m       { color: $color-fsa-aqua-900 !important }
+    &--red\@m            { color: $color-fsa-red !important }
+    &--red-300\@m        { color: $color-fsa-red-300 !important }
+    &--red-200\@m        { color: $color-fsa-red-200 !important }
+    &--red-100\@m        { color: $color-fsa-red-100 !important }
+    &--red-900\@m        { color: $color-fsa-red-900 !important }
+    &--yellow\@m         { color: $color-fsa-yellow !important }
+    &--yellow-300\@m     { color: $color-fsa-yellow-300 !important }
+    &--yellow-200\@m     { color: $color-fsa-yellow-200 !important }
+    &--yellow-100\@m     { color: $color-fsa-yellow-100 !important }
+    &--white\@m          { color: $color-fsa-white !important }
+    &--black\@m          { color: $color-fsa-black !important }
+  }
+
+  @include breakpoint(L) {
+    &--primary\@l        { color: $color-fsa-primary !important }
+    &--primary-300\@l    { color: $color-fsa-primary-300 !important }
+    &--primary-200\@l    { color: $color-fsa-primary-200 !important }
+    &--primary-100\@l    { color: $color-fsa-primary-100 !important }
+    &--primary-900\@l    { color: $color-fsa-primary-900 !important }
+    &--secondary\@l      { color: $color-fsa-secondary !important }
+    &--secondary-300\@l  { color: $color-fsa-secondary-300 !important }
+    &--secondary-200\@l  { color: $color-fsa-secondary-200 !important }
+    &--secondary-100\@l  { color: $color-fsa-secondary-100 !important }
+    &--secondary-900\@l  { color: $color-fsa-secondary-900 !important }
+    &--tertiary\@l       { color: $color-fsa-tertiary !important }
+    &--tertiary-300\@l   { color: $color-fsa-tertiary-300 !important }
+    &--tertiary-200\@l   { color: $color-fsa-tertiary-200 !important }
+    &--tertiary-100\@l   { color: $color-fsa-tertiary-100 !important }
+    &--tertiary-900\@l   { color: $color-fsa-tertiary-900 !important }
+    &--aqua\@l           { color: $color-fsa-aqua !important }
+    &--aqua-300\@l       { color: $color-fsa-aqua-300 !important }
+    &--aqua-200\@l       { color: $color-fsa-aqua-200 !important }
+    &--aqua-100\@l       { color: $color-fsa-aqua-100 !important }
+    &--aqua-900\@l       { color: $color-fsa-aqua-900 !important }
+    &--red\@l            { color: $color-fsa-red !important }
+    &--red-300\@l        { color: $color-fsa-red-300 !important }
+    &--red-200\@l        { color: $color-fsa-red-200 !important }
+    &--red-100\@l        { color: $color-fsa-red-100 !important }
+    &--red-900\@l        { color: $color-fsa-red-900 !important }
+    &--yellow\@l         { color: $color-fsa-yellow !important }
+    &--yellow-300\@l     { color: $color-fsa-yellow-300 !important }
+    &--yellow-200\@l     { color: $color-fsa-yellow-200 !important }
+    &--yellow-100\@l     { color: $color-fsa-yellow-100 !important }
+    &--white\@l          { color: $color-fsa-white !important }
+    &--black\@l          { color: $color-fsa-black !important }
+  }
+
+  @include breakpoint(XL) {
+    &--primary\@xl        { color: $color-fsa-primary !important }
+    &--primary-300\@xl    { color: $color-fsa-primary-300 !important }
+    &--primary-200\@xl    { color: $color-fsa-primary-200 !important }
+    &--primary-100\@xl    { color: $color-fsa-primary-100 !important }
+    &--primary-900\@xl    { color: $color-fsa-primary-900 !important }
+    &--secondary\@xl      { color: $color-fsa-secondary !important }
+    &--secondary-300\@xl  { color: $color-fsa-secondary-300 !important }
+    &--secondary-200\@xl  { color: $color-fsa-secondary-200 !important }
+    &--secondary-100\@xl  { color: $color-fsa-secondary-100 !important }
+    &--secondary-900\@xl  { color: $color-fsa-secondary-900 !important }
+    &--tertiary\@xl       { color: $color-fsa-tertiary !important }
+    &--tertiary-300\@xl   { color: $color-fsa-tertiary-300 !important }
+    &--tertiary-200\@xl   { color: $color-fsa-tertiary-200 !important }
+    &--tertiary-100\@xl   { color: $color-fsa-tertiary-100 !important }
+    &--tertiary-900\@xl   { color: $color-fsa-tertiary-900 !important }
+    &--aqua\@xl           { color: $color-fsa-aqua !important }
+    &--aqua-300\@xl       { color: $color-fsa-aqua-300 !important }
+    &--aqua-200\@xl       { color: $color-fsa-aqua-200 !important }
+    &--aqua-100\@xl       { color: $color-fsa-aqua-100 !important }
+    &--aqua-900\@xl       { color: $color-fsa-aqua-900 !important }
+    &--red\@xl            { color: $color-fsa-red !important }
+    &--red-300\@xl        { color: $color-fsa-red-300 !important }
+    &--red-200\@xl        { color: $color-fsa-red-200 !important }
+    &--red-100\@xl        { color: $color-fsa-red-100 !important }
+    &--red-900\@xl        { color: $color-fsa-red-900 !important }
+    &--yellow\@xl         { color: $color-fsa-yellow !important }
+    &--yellow-300\@xl     { color: $color-fsa-yellow-300 !important }
+    &--yellow-200\@xl     { color: $color-fsa-yellow-200 !important }
+    &--yellow-100\@xl     { color: $color-fsa-yellow-100 !important }
+    &--white\@xl          { color: $color-fsa-white !important }
+    &--black\@xl          { color: $color-fsa-black !important }
   }
 
 }
@@ -728,7 +2839,7 @@
 
 // Visibility -----------------------------------------------------------------
 .fsa-show {
-  display: initial !important;
+  display: revert !important;
   &\@xs {
     @include breakpoint(S, down)   { display: none !important; }
     &-only {
@@ -843,3 +2954,4 @@
   word-break: break-all;
   overflow-wrap: break-word;
 }
+

@@ -1,0 +1,30 @@
+///////////////////////////////////////////////////////////////////////
+
+.exp-a {
+  & * {
+    // background-color: red;
+  }
+  & {
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  &__item {
+    & {}
+    &--grow {
+      flex: 1;
+    }
+  }
+}
+
+///////////////////////////////////////////////////////////////////////
+
+.fsa-input,
+.fsa-btn,
+.fsa-btn-group,
+.fsa-spinbox,
+.fsa-select {
+  html body & {
+  }
+}

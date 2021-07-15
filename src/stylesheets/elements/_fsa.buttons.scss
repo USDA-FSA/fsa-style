@@ -31,7 +31,7 @@ $button-alt              : $color-fsa-white;
 $button-alt-text         : $color-fsa-secondary;
 $button-alt-hover        : shade($button-alt, 5%);
 $button-alt-active       : $button-default-active;
-$button-alt-border       : $color-fsa-secondary;
+$button-alt-border       : $color-fsa-secondary-300;
 $button-alt-border-width : 1px;
 
 $button-secondary        : $button-alt;
@@ -49,15 +49,21 @@ $button-flat-active      : transparent;
 $button-flat-border      : transparent;
 $button-flat-border-width: 0;
 
+$button-plain             : transparent;
+$button-plain-padding     : 0;
+$button-plain-hover       : transparent;
+$button-plain-text        : inherit;
+$button-plain-active      : transparent;
+$button-plain-border-width: 0;
+
 @mixin fsa-button($variation: default) {
 
 
   @if $variation == 'default' {
 
-    @include fsa-space-between();
-
     // -------------------------------------------------------------------------
     // reset
+    vertical-align: middle;
     white-space: nowrap;
     @include reset-button();
     @include font-smoothing(on);
@@ -65,17 +71,9 @@ $button-flat-border-width: 0;
     user-select: none;
     text-align: center;
     line-height: $button-line-height;
-    position: relative;
-    top: .1rem;
 
     // scss-lint:disable all ImportantRule
     text-decoration: none !important; // yep, intentional
-
-    @supports (-webkit-appearance:none) {
-      // Webkit only.
-      // yes, a single pixel. sorry, not sorry
-      top: 0;
-    }
 
     // -------------------------------------------------------------------------
     // normalize
@@ -83,14 +81,13 @@ $button-flat-border-width: 0;
     font-family: $button-font-family;
     font-weight: $button-font-weight;
     display: inline-block;
+    display: inline-flex;
+    gap: ($size-small * .75);
+    align-items: center;
     border-radius: $button-border-radius;
 
     // scss-lint:disable Shorthand
-    padding:
-      ($button-padding - .1rem)
-      ($button-padding * 1.5)
-      ($button-padding - .1rem)
-    ;
+    padding: ($button-padding - .1rem);
 
     // -------------------------------------------------------------------------
     // default
@@ -229,6 +226,7 @@ $button-flat-border-width: 0;
 
     // scss-lint:disable SelectorFormat
     &[disabled] {
+      background-color: $color-fsa-base-bg;
       color: $button-alt-text;
       &:hover {
         color: $button-alt-text;
@@ -239,11 +237,13 @@ $button-flat-border-width: 0;
 
   @elseif $variation == 'block' {
     width: 100%;
-    display: block;
+    display: flex;
+    justify-content: center;
   }
 
   @elseif $variation == 'inline' {
     display: inline-block;
+    display: inline-flex;
     width: auto;
   }
 
@@ -251,11 +251,7 @@ $button-flat-border-width: 0;
 
     height: $button-height--sm;
     // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon Shorthand
-    padding:
-      ($size-small)
-      ($size-default)
-      ($size-small)
-    ;
+    padding: ($button-padding - $size-base);
     font-size: $font-size-1; // no we're not using mixin cuz we don't want its line-height
 
   }
@@ -264,11 +260,7 @@ $button-flat-border-width: 0;
 
     height: $button-height;
     // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon Shorthand
-    padding:
-      ($button-padding - .1rem)
-      ($button-padding * 1.5)
-      ($button-padding - .1rem)
-    ;
+    padding: ($button-padding - .1rem);
     font-size: $button-font-size;
 
   }
@@ -278,10 +270,7 @@ $button-flat-border-width: 0;
     height: $button-height--lg;
 
     // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon Shorthand
-    padding:
-      (($button-padding) + .2rem)
-      ($size-medium - .6rem)
-    ;
+    padding: (($button-padding) + .2rem);
     font-size: $font-size-4; // no we're not using mixin cuz we don't want its line-height
     border-radius: ($button-border-radius * 1.5);
 
@@ -334,6 +323,46 @@ $button-flat-border-width: 0;
 
   }
 
+  @elseif $variation == 'plain' {
+
+    text-align: left;
+    height: auto;
+    background-color: $button-plain;
+    padding: $button-plain-padding;
+    font-weight: normal;
+    border-width: $button-plain-border-width;
+    box-shadow: none;
+    // scss-lint:disable ImportantRule
+    text-decoration: none; // ¯\_(ツ)_/¯
+
+    &:hover:not([disabled]) {
+      color: $color-fsa-link-hover;
+      background-color: $button-plain-hover;
+    }
+
+    &,
+    &:visited,
+    .fsa-alert &,
+    .fsa-alert &:visited {
+      color: $button-plain-text;
+    }
+
+    &:active:not([disabled]) {
+      color: $color-fsa-base;
+      background-color: $button-plain-active;
+      box-shadow: none;
+    }
+
+    // scss-lint:disable SelectorFormat
+    &[disabled] {
+      color: inherit;
+      &:hover {
+        color: inherit;
+      }
+    }
+
+  }
+
 }
 
 .fsa-btn {
@@ -352,6 +381,7 @@ $button-flat-border-width: 0;
   &--medium    { @include fsa-button(medium);    }
   &--large     { @include fsa-button(large);     }
   &--flat      { @include fsa-button(flat);      }
+  &--plain     { @include fsa-button(plain);     }
 
   @include breakpoint(S) {
     &--small\@s { @include fsa-button(small); }
@@ -359,6 +389,7 @@ $button-flat-border-width: 0;
     &--large\@s { @include fsa-button(large); }
     &--block\@s { @include fsa-button(block); }
     &--inline\@s { @include fsa-button(inline); }
+    &--plain\@s { @include fsa-button(plain); }
   }
   @include breakpoint(M) {
     &--small\@m { @include fsa-button(small); }
@@ -366,6 +397,7 @@ $button-flat-border-width: 0;
     &--large\@m { @include fsa-button(large); }
     &--block\@m { @include fsa-button(block); }
     &--inline\@m { @include fsa-button(inline); }
+    &--plain\@m { @include fsa-button(plain); }
   }
   @include breakpoint(L) {
     &--small\@l { @include fsa-button(small); }
@@ -373,6 +405,7 @@ $button-flat-border-width: 0;
     &--large\@l { @include fsa-button(large); }
     &--block\@l { @include fsa-button(block); }
     &--inline\@l { @include fsa-button(inline); }
+    &--plain\@l { @include fsa-button(plain); }
   }
   @include breakpoint(XL) {
     &--small\@xl { @include fsa-button(small); }
@@ -380,6 +413,11 @@ $button-flat-border-width: 0;
     &--large\@xl { @include fsa-button(large); }
     &--block\@xl { @include fsa-button(block); }
     &--inline\@xl { @include fsa-button(inline); }
+    &--plain\@xl { @include fsa-button(plain); }
+  }
+
+  * {
+    pointer-events: none;
   }
 
 }

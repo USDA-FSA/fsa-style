@@ -179,7 +179,10 @@
 
   &__label-text {
 
-    display: block;
+    display: flex;
+    justify-content: center;
+    gap: $size-small;
+    align-items: center;
     padding-top: $tab-padding;
     padding-bottom: ($tab-padding + $size-base);
     position: relative;

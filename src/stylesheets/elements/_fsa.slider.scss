@@ -2,8 +2,8 @@
 // Range
 @mixin range-focus {
   box-shadow:
-    0 0 0 3px white,
-    0 0 0 6px $form-focus-color
+    0 0 0 1px white,
+    0 0 0 4px $form-focus-color
   ;
 }
 
@@ -22,12 +22,12 @@
 }
 
 @mixin range-thumb {
-  border:0;
+  border: 2px solid $color-fsa-site-bg;
   background: $color-fsa-secondary;
   border-radius: 100%;
   cursor: pointer;
-  height: ($size-medium * .8);
-  width: ($size-medium * .8);
+  height: ($size-medium - $size-base );
+  width: ($size-medium - $size-base );
 }
 
 @mixin range-ms-fill {
@@ -75,7 +75,7 @@
     &::-ms-thumb {
       @include range-focus;
       background-color: $color-focus;
-      border: 0;
+      border-width: 0;
     }
   }
 
@@ -109,7 +109,7 @@
   &::-ms-track {
     @include range-track;
     height: $size-base;
-    border: 0;
+    border-width: 0;
   }
 
   &::-webkit-slider-thumb {
@@ -128,7 +128,7 @@
     margin-top: 0;
     width: $size-default;
     height: $size-default;
-    border: 0;
+    border-width: 0;
     // border-radius: 0;
     background-color: $color-fsa-secondary;
   }
@@ -136,13 +136,13 @@
   &::-ms-fill-lower {
     @include range-ms-fill;
     background-color: $color-fsa-secondary;
-    border: 0;
+    border-width: 0;
   }
 
   &::-ms-fill-upper {
     @include range-ms-fill;
     background-color: $color-fsa-tertiary-200;
-    border: 0;
+    border-width: 0;
   }
 
 }

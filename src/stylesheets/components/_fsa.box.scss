@@ -1,7 +1,6 @@
 $box-bgcolor-default: $white;
 $box-border-color: $color-fsa-tertiary-200;
 $box-padding: $size-medium;
-$box-radius: $button-border-radius;
 
 @mixin fsa-boxBase($boxBase-breakpoint:'') {
   .fsa-box#{$boxBase-breakpoint} {
@@ -9,7 +8,6 @@ $box-radius: $button-border-radius;
     background-color: $box-bgcolor-default;
     border-radius: 0;
     padding: $box-padding;
-    transition: all .23s ease-in-out;
     > :first-child {
       margin-top: 0;
     }
@@ -36,9 +34,9 @@ $box-radius: $button-border-radius;
 
     // Background Radius
     &--br-0#{$box-breakpoint} { border-radius: 0; }
-    &--br-1#{$box-breakpoint} { border-radius: $box-radius; }
-    &--br-2#{$box-breakpoint} { border-radius: ($box-radius * 2); }
-    &--br-3#{$box-breakpoint} { border-radius: ($box-radius * 4); }
+    &--br-1#{$box-breakpoint} { border-radius: $radius-s; }
+    &--br-2#{$box-breakpoint} { border-radius: $radius-m; }
+    &--br-3#{$box-breakpoint} { border-radius: $radius-l; }
   }
 }
 

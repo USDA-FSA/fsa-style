@@ -24,13 +24,14 @@ html { // http://bit.ly/1qk2tVR
   &::after,
   &::before {
     box-sizing: inherit;
+    border:0 solid $color-fsa-tertiary-200;
   }
 }
 
 body {
 
   overflow-x: initial;
-  background-color: $color-fsa-site-bg;
+  background-color: $color-fsa-base-bg;
   line-height: $base-line-height;
   color: $color-fsa-base;
 
@@ -68,13 +69,13 @@ tt {
   color: $color-fsa-red-900;
   font-family: $font-mono;
   border-radius: 2px;
-  background-color: $color-fsa-site-bg;
+  background-color: $color-fsa-base-bg;
   padding: ($size-base / 2);
   // border: 1px solid $color-fsa-tertiary-200;
 
   code {
 
-    border: 0;
+    border-width: 0;
     display: block;
 
   }
@@ -165,7 +166,7 @@ blockquote {
 hr {
   margin-top: 2em;
   margin-bottom: 2em;
-  border: 0;
+  border-width: 0;
   height: 1px;
   background: $color-fsa-tertiary-200;
   clear: both;
@@ -173,7 +174,7 @@ hr {
 
 form,
 fieldset {
-  border: 0;
+  border-width: 0;
   margin: 0;
   padding: 0;
 }

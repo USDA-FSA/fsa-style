@@ -46,14 +46,7 @@
   }
 
   &__select {
-
-    margin-bottom: -1px;
     border-right-width: 0;
-
-    &.fsa-select--large {
-      margin-bottom: -3px;
-    }
-
   }
 
   &__btn {
@@ -69,10 +62,10 @@
       $search-icon-width-small: ($size-base * 8);
       $search-icon-width-large: ($size-base * 13);
 
-      background-image: url('#{$image-path}/search.svg');
-      background-position: 50%;
-      background-repeat: no-repeat;
+      background-image: url('#{$image-path}/material-design-icons/ic_search_white_24px.svg');
       background-size: 66%;
+      background-position: center;
+      background-repeat: no-repeat;
       width: $search-icon-width-default;
 
       &.fsa-btn--small {

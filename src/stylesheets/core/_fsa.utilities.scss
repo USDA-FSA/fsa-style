@@ -319,13 +319,63 @@ $breakpoints: (
 }
 
 // -----------------------------------------------------------------------------
+// Lists
+
+@mixin fsa-list-shared {
+  margin-bottom: 1em;
+  margin-top: 1em;
+  padding-left: 1.4em; // MAGIC NUMBER: Approximately 24px left padding at default font size. Must be in **em** units to avoid 2-digit <ol> rendered numbers receding too far on left for bigger text. For example, here's what happens when using px or rem unit: https://cloud.githubusercontent.com/assets/1165933/18491589/b149cec6-79cc-11e6-9280-936838977b64.png
+  > * {
+    margin-bottom: .5em;
+  }
+}
+
+@mixin fsa-list-bullet {
+  @include fsa-list-shared();
+  list-style-type: disc;
+  > * { display: list-item; }
+}
+
+@mixin fsa-list-number {
+  @include fsa-list-shared();
+  list-style-type: decimal;
+  > * { display: list-item; }
+}
+
+@mixin fsa-list-unstyled {
+  @include reset-ul();
+  > * {
+    @include reset-li();
+  }
+}
+
+@mixin fsa-list-inline {
+
+  @include reset-ul();
+  display: flex;
+  margin-bottom: 1em;
+
+  > * {
+
+    @include reset-li();
+    margin-right: $size-small;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+  }
+}
+
+
+// -----------------------------------------------------------------------------
 // Reset <button>
 @mixin reset-button() {
   text-align: left;
   appearance: none;
   margin: 0;
   padding: 0;
-  border: 0;
+  border-width: 0;
   background: transparent;
   font: inherit;
   line-height: inherit;
@@ -353,25 +403,14 @@ $breakpoints: (
 // -----------------------------------------------------------------------------
 // Space between form elements
 @mixin fsa-space-between() {
-  // scss-lint:disable UnnecessaryParentReference
-  & + .fsa-select,
-  & + .fsa-input,
-  & + .fsa-btn-group,
-  & + span.fsa-spinbox,
-  & + .fsa-btn {
-    margin-left: $form-between-space;
-  }
-  & + .fsa-btn--flat {
-    margin-left: ($form-between-space * 2);
-  }
+  // Deprecated
 }
 
 // -----------------------------------------------------------------------------
 // Shared properties between select and input text elements
 @mixin fsa-shared-form-properties() {
 
-  @include fsa-space-between();
-
+  vertical-align: middle;
   appearance: none;
   display: inline-block;
   height: $button-height;
@@ -393,7 +432,7 @@ $breakpoints: (
 
   &[readonly] {
 
-    background-color: $color-fsa-site-bg;
+    background-color: $color-fsa-base-bg;
     cursor: default;
 
     &:focus {
@@ -462,9 +501,9 @@ $breakpoints: (
 
 @mixin overflow-gradient(
     // Defaults:
-    $bgAll: $color-fsa-site-bg,
+    $bgAll: $color-fsa-base-bg,
     $bgEdge: transparent,
-    $bgShadow: transparentize($color-fsa-tertiary, .7),
+    $bgShadow: $shadow-color,
     $size: $size-large
   ) {
 
@@ -509,7 +548,7 @@ $breakpoints: (
   appearance: none;
   margin: 0;
   padding: 0;
-  border: 0;
+  border-width: 0;
   background: transparent;
   font: inherit;
   line-height: inherit;

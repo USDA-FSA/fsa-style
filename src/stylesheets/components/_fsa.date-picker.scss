@@ -51,38 +51,38 @@ $dateCalendar: fsa-date-calendar;
 
   &__btn {
 
-    @include reset-button();
-    display: inline-block;
-    vertical-align: baseline;
-    width: $date-control-btn-width;
-    height: $date-control-btn-height;
-    overflow: hidden;
-    color: transparent;
-    text-indent: -300%;
-    position: relative;
-    top: -1px;
-    vertical-align: middle;
-    // background-image: url('#{$image-path}/calendar.png');
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUAgMAAADw5/WeAAAACVBMVEUAAABJRED///+d7TLCAAAAAXRSTlMAQObYZgAAAC9JREFUCNdjCGEMdRBlCAUBFDJq1apVS+HktMhUOAkSiUwFsSEkHpEoGAkRQTIfACPTLNlYz9hoAAAAAElFTkSuQmCC');
-    background-repeat: no-repeat;
-    background-position: center;
+    & {
+      @include reset-button();
+      display: inline-block;
+      vertical-align: baseline;
+      width: $date-control-btn-width;
+      height: $date-control-btn-height;
+      overflow: hidden;
+      color: transparent;
+      text-indent: -300%;
+      position: relative;
+      top: -1px;
+      vertical-align: middle;
+      background-image: url('#{$image-path}/material-design-icons/ic_calendar_today_24px.svg');
+      background-size: ($size-medium + $size-base);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
 
-    &:hover:not(:disabled) {
-      // background-image: url('#{$image-path}/calendar--blue.png');
-      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUAgMAAADw5/WeAAAACVBMVEUAAAAAcbz///8Qy/ePAAAAAXRSTlMAQObYZgAAAC9JREFUCNdjCGEMdRBlCAUBFDJq1apVS+HktMhUOAkSiUwFsSEkHpEoGAkRQTIfACPTLNlYz9hoAAAAAElFTkSuQmCC');
+    &:active:not(:disabled) {
+      opacity: .6;
     }
 
     &--active {
-      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUAgMAAADw5/WeAAAACVBMVEUAAAAAcbz///8Qy/ePAAAAAXRSTlMAQObYZgAAAC9JREFUCNdjCGEMdRBlCAUBFDJq1apVS+HktMhUOAkSiUwFsSEkHpEoGAkRQTIfACPTLNlYz9hoAAAAAElFTkSuQmCC');
+      // background-image: url('#{$image-path}/material-design-icons/ic_today_24px.svg');
     }
 
     &--date-is-valid {
-      // background-color: rgb(46, 133, 64);
+      // background-image: url('#{$image-path}/material-design-icons/ic_event_available_24px.svg');
     }
 
-
     &[disabled] {
-      opacity: .4;
+      opacity: .5;
     }
 
     .fsa-input--block + .#{$dateControl} &,
@@ -190,7 +190,7 @@ $dateCalendar: fsa-date-calendar;
   }
 
   &--focus {
-    box-shadow: 0 $size-base $size-small 0 rgba(0, 0, 0, .25);
+    box-shadow: $shadow-size-raised;
   }
 
   &--drag-enabled {
@@ -237,7 +237,7 @@ $dateCalendar: fsa-date-calendar;
     display: block;
     font-weight: $font-normal;
     cursor: pointer;
-    color: $color-fsa-link;
+    color: transparent;
     margin: 0 0 $size-base;
     text-align: center;
     // text-transform: uppercase;
@@ -247,8 +247,13 @@ $dateCalendar: fsa-date-calendar;
   &__prev-but,
   &__next-but {
 
-    font-size: 36px;
-    padding: 0 $size-default $size-base $size-default;
+    & {
+      font-size: 36px;
+      padding: 0 $size-default $size-base $size-default;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: ($size-medium + .2rem);
+    }
 
     &:hover {
       color: $color-fsa-link-hover;
@@ -267,9 +272,12 @@ $dateCalendar: fsa-date-calendar;
 
   &__prev-but {
 
-    &--month {}
+    &--month {
+      background-image: url('#{$image-path}/material-design-icons/ic_navigate_before_24px.svg');
+    }
 
     &--year {
+      background-image: url('#{$image-path}/material-design-icons/ic_chevron_double_left_24px.svg');
       margin-left: $size-small;
     }
 
@@ -277,9 +285,12 @@ $dateCalendar: fsa-date-calendar;
 
   &__next-but {
 
-    &--month {}
+    &--month {
+      background-image: url('#{$image-path}/material-design-icons/ic_navigate_next_24px.svg');
+    }
 
     &--year {
+      background-image: url('#{$image-path}/material-design-icons/ic_chevron_double_right_24px.svg');
       margin-right: $size-small;
     }
 
@@ -289,6 +300,7 @@ $dateCalendar: fsa-date-calendar;
 
     @include font-size(3);
     padding: $size-default $size-default;
+    color: $color-fsa-link;
 
     &.#{$dateCalendar}__disabled-item {
       @include date-calendar-disabled-item(1);
@@ -311,7 +323,18 @@ $dateCalendar: fsa-date-calendar;
   &__prev-but:not(.#{$dateCalendar}__disabled-item):hover,
   &__next-but:not(.#{$dateCalendar}__disabled-item):hover,
   &__today-but:not(.#{$dateCalendar}__disabled-item):hover {
-    box-shadow: 0 0 0 1px $color-fsa-tertiary-200 inset; // maybe try $button-secondary-border
+    color: transparent;
+    box-shadow: 0 0 0 1px $color-fsa-tertiary-200 inset;
+  }
+
+  &__prev-but:not(.#{$dateCalendar}__disabled-item):active,
+  &__next-but:not(.#{$dateCalendar}__disabled-item):active,
+  &__today-but:not(.#{$dateCalendar}__disabled-item):active {
+    box-shadow: 0 0 0 1px $color-fsa-tertiary-300 inset;
+  }
+
+  &__today-but:not(.#{$dateCalendar}__disabled-item):hover {
+    color: $color-fsa-link-hover;
   }
 
   // ----------------------------------------------------------------------------
@@ -366,7 +389,7 @@ $dateCalendar: fsa-date-calendar;
 
       /* The "mon tue wed thu fri sat sun" day header styles */
       @include font-size(1);
-      border: 0;
+      border-width: 0;
       border-top: 1px solid $date-calendar-border-color;
       text-align: center;
       vertical-align: middle;
@@ -506,7 +529,7 @@ $dateCalendar: fsa-date-calendar;
     cursor: text;
     font-weight: normal;
     text-transform: uppercase;
-    border: 0 none;
+    border-width: 0;
     padding: ($date-calendar-table-cell-padding / 2);
   }
 
