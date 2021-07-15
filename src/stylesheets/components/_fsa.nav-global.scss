@@ -77,7 +77,8 @@
 
   }
 
-  &__search {
+  &__search,
+  &__aside {
     margin: $size-default $size-default 0;
     @include breakpoint(L) {
       margin: 0 $size-default 1px;
