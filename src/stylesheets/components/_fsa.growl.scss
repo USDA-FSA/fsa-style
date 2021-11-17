@@ -179,7 +179,7 @@ $growlDistance: 110%;
   &__title {
     @include fsa-header('3');
     margin-top: 0;
-    margin-bottom: .5em;
+    margin-bottom: $size-small;
     font-family: $font-sans;
     padding-right: $size-medium;
     color: $color-base;
@@ -187,15 +187,11 @@ $growlDistance: 110%;
 
   &__bd {
 
+    @include font-size(2);
     padding-right: $size-medium;
-    font-size: $font-size-2;
 
     :first-child {
       margin-top: 0;
-    }
-
-    p {
-      margin-bottom: .5em;
     }
 
   }

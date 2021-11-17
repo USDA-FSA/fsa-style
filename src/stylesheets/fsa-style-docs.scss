@@ -247,15 +247,15 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
     &-link {
 
+      @include font-size(1);
       display: inline-block;
       margin-right: $size-small;
       text-decoration: none;
       color: $color-fsa-white;
-      font-size: $font-size-1;
 
       @include breakpoint(M) {
+        @include font-size(3);
         margin-right: $size-small;
-        font-size: $font-size-3;
         &:only-child {
           margin-right: initial;
         }
@@ -367,11 +367,11 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
       &--category {
 
+        @include font-size(2);
         background-color: rgba(255, 255, 255, .1);
         margin-top: $size-base;
         margin-bottom: $size-base;
         font-weight: $font-bold;
-        font-size: $font-size-2;
         text-transform: uppercase;
 
         &:hover {
@@ -418,7 +418,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
     @media print {
 
-      font-size: $font-size-3;
+      @include font-size(3);
       color: black !important;
       position: static;
       margin-top: 1em;
@@ -786,12 +786,12 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       }
       &--clicked {
         &, &:hover {
+          @include font-size(2);
           border-color: $color-fsa-primary-200;
           padding: $size-default;
           justify-content: center;
           background-color: $color-fsa-primary-100;
           pointer-events: none;
-          font-size: $font-size-2;
           font-weight: $font-bold;
           color: $color-fsa-primary;
           text-align: center;
@@ -809,8 +809,8 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       }
     }
     &__caption {
+      @include font-size(2);
       margin-top: $size-small;
-      font-size: $font-size-2;
       text-align: center;
     }
   }
@@ -924,13 +924,13 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     height: 50vh;
     border-top-width: $size-extra-large;
     &:before {
+      @include font-size(7);
       content: '← →';
       width: 86px;
       top: -53px;
       left: $size-default;
       position: absolute;
       font-family: Consolas, $font-mono;
-      font-size: $font-size-7;
       font-weight: $font-bold;
       color: $color-fsa-base-bg;
       line-height: 1;

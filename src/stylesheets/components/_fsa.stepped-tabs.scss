@@ -39,6 +39,7 @@
 
     & {
       @include reset-button();
+      @include font-size(0);
       height: 39px;
       cursor: initial;
       display: flex;
@@ -50,7 +51,6 @@
       background-color: $color-fsa-tertiary-100;
       color: $color-fsa-base;
       position: relative;
-      font-size: $font-size-0;
       line-height: 1;
     }
 
@@ -59,12 +59,12 @@
     }
 
     @include breakpoint(M) {
-      font-size: $font-size-2;
+      @include font-size(2);
     }
 
     @include breakpoint(L) {
+      @include font-size(3);
       font-weight: $font-bold;
-      font-size: $font-size-3;
       height: 42px;
     }
 

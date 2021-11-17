@@ -194,7 +194,7 @@
     @include font-size(5);
 
     @include breakpoint(M) {
-      font-size: $font-size-4;
+      @include font-size(4);
     }
 
     @include breakpoint(L) {

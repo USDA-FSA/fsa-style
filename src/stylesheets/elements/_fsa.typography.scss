@@ -38,8 +38,7 @@ h6, .h6 { @include fsa-header('6'); }
 .fsa-font-lead,
 .usa-font-lead {
 
-  font-size: $font-size-4;
-  line-height: $lead-line-height;
+  @include font-size(4);
   max-width: 70ch;
 
   @include breakpoint(M) {
