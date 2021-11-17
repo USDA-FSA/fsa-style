@@ -20,11 +20,5 @@
 
 ///////////////////////////////////////////////////////////////////////
 
-.fsa-input,
-.fsa-btn,
-.fsa-btn-group,
-.fsa-spinbox,
-.fsa-select {
-  html body & {
-  }
-}
+
+[grid-overlay] { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAxSURBVHgBvY6xCQBACAPNj/MI7j+GIK6jrdhYCF6XcMVB+AcV1Bx1PxrYC+hHbzpoSKIPBZMgIrzgAAAAAElFTkSuQmCC); position: fixed; height: 100vh; width: 100vw; top: 0; pointer-events: none; z-index: 9999999999999999999; opacity: .3; }

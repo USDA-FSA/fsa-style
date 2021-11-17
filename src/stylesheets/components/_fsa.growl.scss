@@ -1,5 +1,5 @@
 $growlPadding: $size-default;
-$growlMargin: 1em;
+$growlMargin: $size-medium;
 $growlDistance: 110%;
 
 @keyframes growlShow {

@@ -48,7 +48,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   &__title {
 
     margin: 0;
-    margin-top: 2em;
     margin-top: 20vh;
     color: $color-fsa-white;
     font-weight: $font-light;
@@ -113,7 +112,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   &__figure {
 
     border-bottom: 1px solid $color-fsa-tertiary-300;
-    margin-bottom: 1em;
+    margin-bottom: $size-medium;
     margin-top: $size-large;
 
     .docs__figure-group + & {
@@ -157,7 +156,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
         background-color: $color-fsa-primary-900;
         color: $color-white;
         z-index: 1002;
-        padding-top: 1em;
+        padding-top: $size-default;
         animation: peekInFromAbove 300ms ease-in-out;
 
         @media print {
@@ -178,7 +177,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     margin-right: auto;
 
     @include breakpoint(M) {
-      margin-bottom: 1em;
+      margin-bottom: $size-default;
       display: flex;
       align-items: baseline;
     }
@@ -523,7 +522,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     }
 
     &__swatch {
-      height: 7.5rem;
+      height: ($size-base * 18);
       display: flex;
     }
 
@@ -535,7 +534,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     &__attr {
 
       @include reset-ul;
-      margin: $size-small 0 1em;
+      margin: $size-small 0 $size-default;
 
       // scss-lint:disable NestingDepth
       &-item {
@@ -549,7 +548,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   &__swatch-list {
 
     @include reset-ul;
-    margin-bottom: 1em;
+    margin-bottom: $size-default;
 
     &__item {
 
@@ -636,7 +635,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       margin-right: $size-default;
 
       @include breakpoint(S) {
-        font-size: 8.4rem;
+        font-size: ($size-base * 18);
         text-align: center;
       }
 

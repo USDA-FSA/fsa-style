@@ -128,6 +128,8 @@ $shadow-size-none:    none;
 // ---------------------------------------------------------------------------
 // Typography
 
+$base-line-height: 1.2;
+
 // Font Size Scale
 $font-size-0 : $h6-font-size;           // 13px
 $font-size-1 : $small-font-size;        // 14px
@@ -192,7 +194,7 @@ $form-between-space            : $size-small;
 // ---------------------------------------------------------------------------
 // FSA Grid Settings
 
-$fsa-grid-gutter: ($base-font-size * 1.5);
+$fsa-grid-gutter: $size-medium;
 $fsa-grid-columns: 12;
 
 // ---------------------------------------------------------------------------
