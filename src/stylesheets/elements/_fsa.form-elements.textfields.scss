@@ -173,7 +173,7 @@
   height: auto;
   display: flex;
   flex-direction: row-reverse;
-  padding-top: 8px;
+  padding-top: $size-small;
 
   &:not(.fsa-input) {
     background-color: transparent;
