@@ -5,7 +5,8 @@
   & {
     @extend .usa-alert;
     padding: 1em;
-    margin-bottom: 1.5em;
+    margin-top: $size-medium;
+    margin-bottom: $size-medium;
     border: 1px solid rgba(0,0,0,.07);
     border-left: $size-base solid $color-fsa-tertiary-900;
     background-position: 2rem 2rem;
@@ -95,7 +96,7 @@
     font-family: $font-sans;
     color: $color-base;
     font-weight: $font-bold;
-    margin-bottom: .5em;
+    margin-bottom: $size-small;
 
     .fsa-alert--no-icon & {
       @include font-size(3);
@@ -108,10 +109,10 @@
   &__text {
     @extend .usa-alert-text;
     &:only-child {
-      margin-top: .5em;
+      margin-top: $size-small;
     }
     & + & {
-      margin-top: .5em;
+      margin-top: $size-small;
     }
     .fsa-alert--no-icon & {
       margin: 0;

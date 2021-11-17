@@ -80,10 +80,6 @@ tt {
 
   }
 
-  p {
-    // margin-top: 0;
-  }
-
 }
 
 kbd {
@@ -164,8 +160,8 @@ blockquote {
 }
 
 hr {
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: $size-medium;
+  margin-bottom: $size-medium;
   border-width: 0;
   height: 1px;
   background: $color-fsa-tertiary-200;
