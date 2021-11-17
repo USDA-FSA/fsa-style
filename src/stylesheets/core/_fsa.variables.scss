@@ -128,7 +128,7 @@ $shadow-size-none:    none;
 // ---------------------------------------------------------------------------
 // Typography
 
-$base-line-height: 1.2;
+$base-line-height: 2.4rem;
 
 // Font Size Scale
 $font-size-0 : $h6-font-size;           // 13px
@@ -143,7 +143,7 @@ $font-size-7 : $title-font-size;        // 52px
 $h1-font-size: $font-size-6;
 
 $lead-font-size: ($font-size-5 - .3rem);
-$lead-line-height: 1.3;
+$lead-line-height: 3.6rem;
 
 $font-sans:  'Source Sans Pro', $helvetica;
 $font-serif: $font-sans;

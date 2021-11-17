@@ -199,14 +199,14 @@ $breakpoints: (
 // Example usage: @include font-size(0); is SMALLEST available size
 // Example usage: @include font-size(9); is LARGEST available size
 @mixin font-size($scale: 3) {
-  @if $scale == 0 { font-size: $font-size-0; }                                    // 13
-  @if $scale == 1 { font-size: $font-size-1; }                                    // 14
-  @if $scale == 2 { font-size: $font-size-2; }                                    // 15
-  @if $scale == 3 { font-size: $font-size-3; }                                    // 17
-  @if $scale == 4 { font-size: $font-size-4; line-height: $heading-line-height; } // 17 REMOVE THIS ONE
-  @if $scale == 5 { font-size: $font-size-5; line-height: $heading-line-height; } // 20
-  @if $scale == 6 { font-size: $font-size-6; line-height: $heading-line-height; } // 20 REMOVE THIS ONE
-  @if $scale == 7 { font-size: $font-size-7; line-height: $heading-line-height; } // 30
+  @if $scale == 0 { font-size: $font-size-0; line-height: $base-line-height; }
+  @if $scale == 1 { font-size: $font-size-1; line-height: $base-line-height; }
+  @if $scale == 2 { font-size: $font-size-2; line-height: $base-line-height; }
+  @if $scale == 3 { font-size: $font-size-3; line-height: 2.8rem; }
+  @if $scale == 4 { font-size: $font-size-4; line-height: 2.8rem }
+  @if $scale == 5 { font-size: $font-size-5; line-height: 3.6rem; }
+  @if $scale == 6 { font-size: $font-size-6; line-height: 5.2rem; }
+  @if $scale == 7 { font-size: $font-size-7; line-height: 6.4rem; }
 }
 
 // -----------------------------------------------------------------------------
@@ -592,7 +592,9 @@ $breakpoints: (
 
   @if $variation == '1' {
 
-    @include h1(); // from USWDS mixins
+    font-size: $h1-font-size;
+    font-weight: $font-bold;
+    line-height: 5.2rem;
 
     @include breakpoint(M, down) {
       font-size: 36px;
@@ -609,29 +611,45 @@ $breakpoints: (
   }
 
   @elseif $variation == '2' {
-    @include h2(); // from USWDS mixins
-    margin-top: 1em;
+    font-size: $h2-font-size;
+    font-weight: $font-bold;
+    line-height: 3.6rem;
+    margin-top: $size-default;
+    margin-bottom: $size-default;
     font-weight: normal;
-    .fsa-text--h1 + &,
-    h1 + & {
-      margin-top: .5em;
-    }
   }
 
   @elseif $variation == '3' {
-    @include h3(); // from USWDS mixins
+    font-size: $h3-font-size;
+    font-weight: $font-bold;
+    line-height: 2.8rem;
+    margin-top: $size-medium;
+    margin-bottom: $size-small;
   }
 
   @elseif $variation == '4' {
-    @include h4(); // from USWDS mixins
+    font-size: $h4-font-size;
+    font-weight: $font-bold;
+    line-height: 2rem;
+    margin-top: $size-medium;
+    margin-bottom: $size-small;
   }
 
   @elseif $variation == '5' {
-    @include h5(); // from USWDS mixins
+    font-size: $h5-font-size;
+    font-weight: $font-bold;
+    line-height: 2rem;
+    margin-top: $size-medium;
+    margin-bottom: $size-small;
   }
 
   @elseif $variation == '6' {
-    @include h6(); // from USWDS mixins
+    font-size: $h6-font-size;
+    font-weight: $font-normal;
+    line-height: 2rem;
+    text-transform: uppercase;
+    margin-top: $size-medium;
+    margin-bottom: $size-base;
   }
 
 }
