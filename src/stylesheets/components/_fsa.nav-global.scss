@@ -338,7 +338,7 @@
 
     @include reset-ul();
     @include font-size(1);
-    margin-bottom: .5em;
+    margin-bottom: $size-small;
 
     @include breakpoint(L) {
       @include font-size(3);

@@ -64,6 +64,7 @@ $label-dismiss-width: 1.33em;
 
   &--large {
     @include font-size(3);
+    line-height: 1;
     padding-left: ($label-spacing * 1.5);
     padding-right: ($label-spacing * 1.5);
     letter-spacing: initial;
@@ -71,6 +72,8 @@ $label-dismiss-width: 1.33em;
 
   &--extra-large {
     @include font-size(4);
+    color: $color-fsa-tertiary;
+    line-height: 2.4rem;
     padding-left: ($label-spacing * 2.25);
     padding-right: ($label-spacing * 2.25);
     letter-spacing: initial;

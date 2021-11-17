@@ -421,7 +421,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       @include font-size(3);
       color: black !important;
       position: static;
-      margin-top: 1em;
+      margin-top: $size-default;
       background-color: transparent;
       padding: 0;
       border-width: 0;

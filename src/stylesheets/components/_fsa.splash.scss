@@ -47,7 +47,7 @@ $splash: fsa-splash;
     padding-top: $size-default;
     font-weight: $font-light;
     text-align: center;
-    margin-bottom: 1em;
+    margin-bottom: $size-default;
     @include breakpoint(S) {
       @include font-size(5);
     }
