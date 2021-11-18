@@ -53,8 +53,8 @@
 
     display: block;
     width: 100%;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    border-top-left-radius: $radius-none;
+    border-bottom-left-radius: $radius-none;
 
     &--icon {
 
