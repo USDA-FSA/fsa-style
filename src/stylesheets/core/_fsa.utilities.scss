@@ -202,11 +202,11 @@ $breakpoints: (
   @if $scale == 0 { font-size: $font-size-0; line-height: $base-line-height; }
   @if $scale == 1 { font-size: $font-size-1; line-height: $base-line-height; }
   @if $scale == 2 { font-size: $font-size-2; line-height: $base-line-height; }
-  @if $scale == 3 { font-size: $font-size-3; line-height: 2.8rem; }
-  @if $scale == 4 { font-size: $font-size-4; line-height: 3.6rem; }
-  @if $scale == 5 { font-size: $font-size-5; line-height: 3.6rem; }
-  @if $scale == 6 { font-size: $font-size-6; line-height: 5.2rem; }
-  @if $scale == 7 { font-size: $font-size-7; line-height: 6.4rem; }
+  @if $scale == 3 { font-size: $font-size-3; line-height: $line-height-medium; }
+  @if $scale == 4 { font-size: $font-size-4; line-height: $line-height-large; }
+  @if $scale == 5 { font-size: $font-size-5; line-height: $line-height-large; }
+  @if $scale == 6 { font-size: $font-size-6; line-height: $line-height-extra-large; }
+  @if $scale == 7 { font-size: $font-size-7; line-height: $line-height-extra-extra-large; }
 }
 
 // -----------------------------------------------------------------------------
@@ -419,7 +419,7 @@ $breakpoints: (
   font-family: $form-font;
   font-size: $form-text-size;
   color: $form-text-color;
-  line-height: 1;
+  line-height: $line-height-flat;
   background-color: $color-white;
 
   &[disabled] {
@@ -591,7 +591,7 @@ $breakpoints: (
 
     font-size: $h1-font-size;
     font-weight: $font-bold;
-    line-height: 5.2rem;
+    line-height: $line-height-extra-large;
 
     @include breakpoint(M, down) {
       font-size: 36px;
@@ -610,7 +610,7 @@ $breakpoints: (
   @elseif $variation == '2' {
     font-size: $h2-font-size;
     font-weight: $font-bold;
-    line-height: 3.6rem;
+    line-height: $line-height-large;
     margin-top: $size-default;
     margin-bottom: $size-default;
     font-weight: normal;
@@ -619,7 +619,7 @@ $breakpoints: (
   @elseif $variation == '3' {
     font-size: $h3-font-size;
     font-weight: $font-bold;
-    line-height: 2.8rem;
+    line-height: $line-height-medium;
     margin-top: $size-medium;
     margin-bottom: $size-small;
   }
@@ -627,7 +627,8 @@ $breakpoints: (
   @elseif $variation == '4' {
     font-size: $h4-font-size;
     font-weight: $font-bold;
-    line-height: 2rem;
+    line-height: $line-height-extra-small;
+    outline: 1px solid orangered;
     margin-top: $size-medium;
     margin-bottom: $size-small;
   }
@@ -635,7 +636,7 @@ $breakpoints: (
   @elseif $variation == '5' {
     font-size: $h5-font-size;
     font-weight: $font-bold;
-    line-height: 2rem;
+    line-height: $line-height-extra-small;
     margin-top: $size-medium;
     margin-bottom: $size-small;
   }
@@ -643,7 +644,7 @@ $breakpoints: (
   @elseif $variation == '6' {
     font-size: $h6-font-size;
     font-weight: $font-normal;
-    line-height: 2rem;
+    line-height: $line-height-extra-small;
     text-transform: uppercase;
     margin-top: $size-medium;
     margin-bottom: $size-base;

@@ -128,11 +128,12 @@ $shadow-size-none:    none;
 // ---------------------------------------------------------------------------
 // Typography
 
-$line-height-flat: 1;
-$line-height-small: 2.4rem;
-$line-height-medium: 2.8rem;
-$line-height-large: 3.6rem;
-$line-height-extra-large: 5.2rem;
+$line-height-flat:              1;
+$line-height-extra-small:       2rem;
+$line-height-small:             2.4rem;
+$line-height-medium:            2.8rem;
+$line-height-large:             3.6rem;
+$line-height-extra-large:       5.2rem;
 $line-height-extra-extra-large: 6.4rem;
 
 $base-line-height: $line-height-small;

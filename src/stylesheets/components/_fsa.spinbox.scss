@@ -139,7 +139,7 @@
       background-color: $button-bgc;
       border: 1px solid $button-border-color;
       border-left: 0;
-      line-height: 1;
+      line-height: $line-height-flat;
       width: $button-width;
       text-align: center;
       background-size: $icon-size-1;

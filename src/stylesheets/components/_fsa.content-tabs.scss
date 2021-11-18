@@ -216,7 +216,7 @@
       content: '\2022';
       color: $color-fsa-red;
       font-size: 24px;
-      line-height: 1;
+      line-height: $line-height-flat;
       position: absolute;
       right: $size-small;
     }

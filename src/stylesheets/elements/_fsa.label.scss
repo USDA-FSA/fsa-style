@@ -8,7 +8,7 @@ $label-dismiss-width: 1.33em;
     @include font-size(0);
     font-family: $font-sans; // brute-force to override any inheritance (e.g. within an <h1>)
     font-weight: $font-bold;
-    line-height: 1;
+    line-height: $line-height-flat;
     display: inline-flex;
     gap: $size-base;
     align-items: center;
@@ -63,7 +63,7 @@ $label-dismiss-width: 1.33em;
 
   &--large {
     @include font-size(3);
-    line-height: 1;
+    line-height: $line-height-flat;
     padding-left: ($label-spacing * 1.5);
     padding-right: ($label-spacing * 1.5);
     letter-spacing: initial;
@@ -72,7 +72,7 @@ $label-dismiss-width: 1.33em;
   &--extra-large {
     @include font-size(4);
     color: $color-fsa-tertiary;
-    line-height: 2.4rem;
+    line-height: $line-height-small;
     padding-left: ($label-spacing * 2.25);
     padding-right: ($label-spacing * 2.25);
     letter-spacing: initial;

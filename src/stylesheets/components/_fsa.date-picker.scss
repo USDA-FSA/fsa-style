@@ -125,7 +125,7 @@ $dateCalendar: fsa-date-calendar;
     border: 1px solid $date-calendar-table-cell-border-color;
     border-left: 0;
     border-right: 0;
-    line-height: 1;
+    line-height: $line-height-flat;
     text-align: center;
     vertical-align: bottom;
     cursor: pointer;
@@ -219,7 +219,7 @@ $dateCalendar: fsa-date-calendar;
   &__title-month,
   &__title-year {
     display: inline-block;
-    line-height: 1;
+    line-height: $line-height-flat;
     margin: $size-small 0 0;
     color: $date-calendar-text-color-default;
     // cursor: text;
@@ -233,7 +233,7 @@ $dateCalendar: fsa-date-calendar;
   &__prev-but,
   &__next-but,
   &__today-but {
-    line-height: 1;
+    line-height: $line-height-flat;
     display: block;
     font-weight: $font-normal;
     cursor: pointer;
@@ -373,7 +373,7 @@ $dateCalendar: fsa-date-calendar;
   &__day-name {
     display: block;
     padding: $date-calendar-table-cell-padding;
-    line-height: 1;
+    line-height: $line-height-flat;
   }
 
   &__day {

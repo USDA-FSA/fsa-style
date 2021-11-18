@@ -195,7 +195,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
         overflow: hidden;
         white-space: nowrap;
         transition: all .125s ease-in-out;
-        line-height: 1;
+        line-height: $line-height-flat;
         font-weight: $font-light;
         margin-left: -1px;
       }
@@ -630,7 +630,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
       @include font-size(7);
       flex: 1;
-      line-height: 1;
+      line-height: $line-height-flat;
       margin: 0;
       margin-right: $size-default;
 
@@ -933,7 +933,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       font-family: Consolas, $font-mono;
       font-weight: $font-bold;
       color: $color-fsa-base-bg;
-      line-height: 1;
+      line-height: $line-height-flat;
       transform: scaleX(.8);
       transform-origin: left;
     }

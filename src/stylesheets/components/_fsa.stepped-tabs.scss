@@ -51,7 +51,7 @@
       background-color: $color-fsa-tertiary-100;
       color: $color-fsa-base;
       position: relative;
-      line-height: 1;
+      line-height: $line-height-flat;
     }
 
     &:focus {

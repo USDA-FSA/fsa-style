@@ -6,7 +6,7 @@ $badge-spacing: ($size-base - .1rem);
     @include reset-button();
     @include font-size(0);
     cursor: default;
-    line-height: 1;
+    line-height: $line-height-flat;
     font-family: $font-sans; // brute-force to override any inheritance (e.g. within an <h1>)
     font-weight: $font-bold;
     letter-spacing: .5px;
@@ -73,13 +73,13 @@ $badge-spacing: ($size-base - .1rem);
 
   &--large {
     @include font-size(3);
-    line-height: 1;
+    line-height: $line-height-flat;
     min-width: 24px;
   }
 
   &--extra-large {
     @include font-size(4);
-    line-height: 2.4rem;
+    line-height: $line-height-small;
     min-width: 36px;
   }
 
