@@ -287,7 +287,7 @@ $button-plain-border-width: 0;
     box-shadow: none;
     // scss-lint:disable ImportantRule
     text-decoration: underline !important; // ¯\_(ツ)_/¯
-
+    border-radius: unset;
 
     &,
     &:visited,
@@ -334,6 +334,7 @@ $button-plain-border-width: 0;
     box-shadow: none;
     // scss-lint:disable ImportantRule
     text-decoration: none; // ¯\_(ツ)_/¯
+    border-radius: unset;
 
     &:hover:not([disabled]) {
       color: $color-fsa-link-hover;
