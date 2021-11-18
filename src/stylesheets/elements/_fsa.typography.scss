@@ -44,6 +44,7 @@ h6, .h6 { @include fsa-header('6'); }
   @include breakpoint(M) {
     font-weight: $font-light;
     font-size: $lead-font-size;
+    margin-bottom: $size-medium;
   }
 
   strong {
