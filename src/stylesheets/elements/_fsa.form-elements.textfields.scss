@@ -156,6 +156,7 @@
 
 @mixin file-upload-button() {
   @include font-size(0);
+  font-weight: $font-bold;
   appearance: none;
   background-color: #fff;
   border-width: 0;

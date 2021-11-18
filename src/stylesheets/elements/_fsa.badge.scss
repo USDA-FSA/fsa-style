@@ -73,11 +73,13 @@ $badge-spacing: ($size-base - .1rem);
 
   &--large {
     @include font-size(3);
+    line-height: 1;
     min-width: 24px;
   }
 
   &--extra-large {
     @include font-size(4);
+    line-height: 2.4rem;
     min-width: 36px;
   }
 
