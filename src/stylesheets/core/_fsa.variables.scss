@@ -128,7 +128,14 @@ $shadow-size-none:    none;
 // ---------------------------------------------------------------------------
 // Typography
 
-$base-line-height: 2.4rem;
+$line-height-flat: 1;
+$line-height-small: 2.4rem;
+$line-height-medium: 2.8rem;
+$line-height-large: 3.6rem;
+$line-height-extra-large: 5.2rem;
+$line-height-extra-extra-large: 6.4rem;
+
+$base-line-height: $line-height-small;
 
 // Font Size Scale
 $font-size-0 : $h6-font-size;           // 13px
