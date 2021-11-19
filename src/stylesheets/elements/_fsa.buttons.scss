@@ -1,9 +1,9 @@
 /* ---------------------------------------------------------------------------*/
 /* BASE: BUTTONS                                                              */
 
-$button-height            : 3.9rem; // 39px
-$button-height--sm        : 3rem; // 30px
-$button-height--lg        : 4.8rem;
+$button-height            : $form-height-default;
+$button-height--sm        : $form-height-small; // 30px
+$button-height--lg        : $form-height-large;
 $button-padding           : $size-default;
 $button-text              : $color-fsa-white;
 $button-line-height       : 1;
