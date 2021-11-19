@@ -878,7 +878,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   h2[id] + & {
     margin-top: -15px;
     border-top: 0;
-    outline: 1px solid orangered;
   }
 
   @include breakpoint(L)   {
