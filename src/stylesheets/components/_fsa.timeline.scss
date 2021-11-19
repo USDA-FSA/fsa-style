@@ -96,6 +96,10 @@ $timeline: fsa-timeline;
 
   &__action {
     margin-left: $size-small;
+    display: flex;
+    > :not(:last-child) {
+      margin-right: $size-default;
+    }
     @include breakpoint(S) {
       float: right;
     }
