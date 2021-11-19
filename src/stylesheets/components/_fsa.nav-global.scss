@@ -307,7 +307,7 @@
     text-transform: uppercase;
     margin: 0;
     color: $nav-highlight-text-color-strong;
-    padding: ($nav-spacing-unit / 3) ($nav-spacing-unit + $size-base);
+    padding: ($nav-spacing-unit - $size-base) ($nav-spacing-unit + $size-base) $size-base;
 
     // scss-lint:disable SelectorFormat
     .fsa-nav-global__list-item--multi-column & {
@@ -338,7 +338,7 @@
 
     @include reset-ul();
     @include font-size(1);
-    margin-bottom: $size-small;
+    margin-bottom: $size-base;
 
     @include breakpoint(L) {
       @include font-size(3);
