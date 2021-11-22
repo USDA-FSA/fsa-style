@@ -322,8 +322,8 @@ $breakpoints: (
 // Lists
 
 @mixin fsa-list-shared {
-  margin-bottom: $size-default;
-  margin-top: $size-default;
+  margin-bottom: $size-small;
+  margin-top: $size-small;
   padding-left: 1.4em; // MAGIC NUMBER: Approximately 24px left padding at default font size. Must be in **em** units to avoid 2-digit <ol> rendered numbers receding too far on left for bigger text. For example, here's what happens when using px or rem unit: https://cloud.githubusercontent.com/assets/1165933/18491589/b149cec6-79cc-11e6-9280-936838977b64.png
 }
 
@@ -350,7 +350,7 @@ $breakpoints: (
 
   @include reset-ul();
   display: flex;
-  margin-bottom: $size-default;
+  margin-bottom: $size-small;
 
   > * {
 
