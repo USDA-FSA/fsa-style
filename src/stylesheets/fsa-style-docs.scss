@@ -524,6 +524,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     &__swatch {
       height: ($size-base * 18);
       display: flex;
+      border-radius: $radius-m;
     }
 
     &__title {
@@ -554,6 +555,15 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
       @include reset-li;
       padding: $size-extra-large $size-default $size-default;
+
+      &:first-child {
+        border-top-left-radius: $radius-m;
+        border-top-right-radius: $radius-m;
+      }
+      &:last-child {
+        border-bottom-left-radius: $radius-m;
+        border-bottom-right-radius: $radius-m;
+      }
 
       // scss-lint:disable NestingDepth
       &--main {
