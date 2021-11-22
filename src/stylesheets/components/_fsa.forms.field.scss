@@ -33,7 +33,7 @@
 
   &__label {
 
-    display: block;
+    display: flex;
 
     .fsa-field--error & {
       font-weight: $font-bold;
@@ -44,24 +44,23 @@
   &__label-desc {
     font-style: italic;
     font-weight: $font-normal;
-    float: right;
+    margin-left: auto;
     color: $color-fsa-tertiary-300;
-    font-size: $form-text-size--sm;
-    margin-top: 3px; // magic number
+    font-size: $form-text-size--sm; // not useing mixin, as we want to *inherit* line-height
   }
 
   &__help {
+    @include font-size(2);
     margin-top: $size-base;
     display: block;
     color: $color-fsa-tertiary-300;
-    font-size: $form-text-size--sm;
   }
 
   &__message {
 
     @include font-size(2);
     font-weight: $font-bold;
-    padding-top: $size-small;
+    padding-top: $size-base;
 
     display: block;
     overflow: hidden;
