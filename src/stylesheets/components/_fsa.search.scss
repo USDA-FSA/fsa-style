@@ -64,15 +64,17 @@
 
       background-image: url('#{$image-path}/material-design-icons/ic_search_white_24px.svg');
       background-size: 66%;
-      background-position: center;
+      background-position: $size-small center;
       background-repeat: no-repeat;
       width: $search-icon-width-default;
 
       &.fsa-btn--small {
         width: $search-icon-width-small;
+        background-position: 6px center; // magic number
       }
       &.fsa-btn--large {
         width: $search-icon-width-large;
+        background-position: 10px center; // magic number
       }
 
     }
