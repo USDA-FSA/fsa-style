@@ -55,7 +55,7 @@
 
   &__label {
 
-    padding: $size-base 0;
+    padding: ($size-base / 2) 0;
 
     .fsa-select-multi__check + & {
       display: block;
