@@ -50,7 +50,7 @@
 
   &__secondary {
 
-    font-size: 1.2rem;
+    font-size: $font-size-0 - .1rem;
     position: relative;
     display: flex;
     align-items: flex-end;
@@ -253,7 +253,7 @@
       @include fsa-ellipsis();
       display: block;
       max-width: $size-base * 39;
-      font-size: 17px;
+      font-size: $font-size-3;
       font-weight: bold;
       @include breakpoint(S) {
         max-width: $size-base * 67;

@@ -215,10 +215,8 @@
     .fsa-content-tabs__label--unsaved &:after {
       content: '\2022';
       color: $color-fsa-red;
-      font-size: 24px;
+      font-size: $size-medium;
       line-height: $line-height-flat;
-      position: absolute;
-      right: $size-small;
     }
 
     .fsa-content-tabs__label:hover & {

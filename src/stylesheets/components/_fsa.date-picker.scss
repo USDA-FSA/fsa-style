@@ -248,7 +248,7 @@ $dateCalendar: fsa-date-calendar;
   &__next-but {
 
     & {
-      font-size: 36px;
+      font-size: $size-large;
       padding: 0 $size-default $size-base $size-default;
       background-repeat: no-repeat;
       background-position: 50%;

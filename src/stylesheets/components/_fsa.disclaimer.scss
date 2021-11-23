@@ -7,7 +7,7 @@
     height: auto;
     padding-top: $size-base;
     padding-bottom: $size-base;
-    font-size: 1.2rem;
+    font-size: $font-size-0 - .1rem;
 
     @include media($small-screen) {
       font-size: $h6-font-size;
@@ -52,7 +52,7 @@
       background-color: $color-fsa-yellow;
       color: black;
       padding: 0 $size-base;
-      font-size: 10px;
+      font-size: $font-size-0 - .2rem;
       text-transform: uppercase;
     }
   }

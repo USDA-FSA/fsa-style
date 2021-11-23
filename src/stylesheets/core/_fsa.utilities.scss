@@ -594,7 +594,7 @@ $breakpoints: (
     line-height: $line-height-extra-large;
 
     @include breakpoint(M, down) {
-      font-size: 36px;
+      font-size: $size-large;
     }
 
     .fsa-breadcrumb + & {

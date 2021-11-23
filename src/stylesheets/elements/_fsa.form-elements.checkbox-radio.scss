@@ -100,7 +100,7 @@
     content: 'CSS ERROR: checkbox or radio requires a <label> element immediately following it. Refer to FSA Design System for guidance. ';
     color: orangered;
     border: 4px solid orangered;
-    font-size: 2rem;
+    font-size: $font-size-4;
     font-weight: bold;
   }
 }
