@@ -34,6 +34,7 @@
   &__label {
 
     display: flex;
+    gap: $size-base;
 
     .fsa-field--error & {
       font-weight: $font-bold;
