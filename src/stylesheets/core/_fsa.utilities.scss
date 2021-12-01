@@ -577,7 +577,7 @@ $breakpoints: (
 // ----------------------------------------------------------------------------
 // h1 - h6 header elements
 
-@mixin fsa-header($variation: '1') {
+@mixin fsa-header($variant: '1') {
 
   color: $color-title;
   font-family: $font-sans;
@@ -587,7 +587,7 @@ $breakpoints: (
     margin-top: $size-base;
   }
 
-  @if $variation == '1' {
+  @if $variant == '1' {
 
     font-size: $h1-font-size;
     font-weight: $font-bold;
@@ -607,7 +607,7 @@ $breakpoints: (
 
   }
 
-  @elseif $variation == '2' {
+  @elseif $variant == '2' {
     font-size: $h2-font-size;
     font-weight: $font-bold;
     line-height: $line-height-large;
@@ -616,7 +616,7 @@ $breakpoints: (
     font-weight: normal;
   }
 
-  @elseif $variation == '3' {
+  @elseif $variant == '3' {
     font-size: $h3-font-size;
     font-weight: $font-bold;
     line-height: $line-height-medium;
@@ -624,7 +624,7 @@ $breakpoints: (
     margin-bottom: $size-small;
   }
 
-  @elseif $variation == '4' {
+  @elseif $variant == '4' {
     font-size: $h4-font-size;
     font-weight: $font-bold;
     line-height: $line-height-extra-small;
@@ -632,7 +632,7 @@ $breakpoints: (
     margin-bottom: $size-small;
   }
 
-  @elseif $variation == '5' {
+  @elseif $variant == '5' {
     font-size: $h5-font-size;
     font-weight: $font-bold;
     line-height: $line-height-extra-small;
@@ -640,7 +640,7 @@ $breakpoints: (
     margin-bottom: $size-small;
   }
 
-  @elseif $variation == '6' {
+  @elseif $variant == '6' {
     font-size: $h6-font-size;
     font-weight: $font-normal;
     line-height: $line-height-extra-small;

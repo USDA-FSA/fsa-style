@@ -56,10 +56,10 @@ $button-plain-text        : inherit;
 $button-plain-active      : transparent;
 $button-plain-border-width: 0;
 
-@mixin fsa-button($variation: default) {
+@mixin fsa-button($variant: default) {
 
 
-  @if $variation == 'default' {
+  @if $variant == 'default' {
 
     // -------------------------------------------------------------------------
     // reset
@@ -148,7 +148,7 @@ $button-plain-border-width: 0;
 
   }
 
-  @elseif $variation == 'primary' {
+  @elseif $variant == 'primary' {
 
     background-color: $button-primary;
 
@@ -174,7 +174,7 @@ $button-plain-border-width: 0;
 
   }
 
-  @elseif $variation == 'tertiary' {
+  @elseif $variant == 'tertiary' {
 
     background-color: $button-tertiary;
 
@@ -197,7 +197,7 @@ $button-plain-border-width: 0;
 
   }
 
-  @elseif $variation == 'secondary' {
+  @elseif $variant == 'secondary' {
 
     background-color: $button-alt;
     box-shadow: 0 0 0 $button-alt-border-width $button-alt-border inset;
@@ -235,19 +235,19 @@ $button-plain-border-width: 0;
 
   }
 
-  @elseif $variation == 'block' {
+  @elseif $variant == 'block' {
     width: 100%;
     display: flex;
     justify-content: center;
   }
 
-  @elseif $variation == 'inline' {
+  @elseif $variant == 'inline' {
     display: inline-block;
     display: inline-flex;
     width: auto;
   }
 
-  @elseif $variation == 'small' {
+  @elseif $variant == 'small' {
 
     height: $button-height--sm;
     // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon Shorthand
@@ -256,7 +256,7 @@ $button-plain-border-width: 0;
 
   }
 
-  @elseif $variation == 'medium' {
+  @elseif $variant == 'medium' {
 
     height: $button-height;
     // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon Shorthand
@@ -265,7 +265,7 @@ $button-plain-border-width: 0;
 
   }
 
-  @elseif $variation == 'large' {
+  @elseif $variant == 'large' {
 
     height: $button-height--lg;
 
@@ -276,7 +276,7 @@ $button-plain-border-width: 0;
 
   }
 
-  @elseif $variation == 'flat' {
+  @elseif $variant == 'flat' {
 
     text-align: left;
     height: auto;
@@ -323,7 +323,7 @@ $button-plain-border-width: 0;
 
   }
 
-  @elseif $variation == 'plain' {
+  @elseif $variant == 'plain' {
 
     text-align: left;
     height: auto;

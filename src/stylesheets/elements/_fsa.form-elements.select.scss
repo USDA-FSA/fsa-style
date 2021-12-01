@@ -93,7 +93,7 @@
 .fsa-select {
 
   // --------------------------------------------------------------------------
-  // Variations
+  // Variants
 
   &          { @include selectMedium(); }
   &--small   { @include selectSmall();  }
