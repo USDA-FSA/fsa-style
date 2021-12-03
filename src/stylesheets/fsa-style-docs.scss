@@ -934,17 +934,19 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     border-top-width: $size-extra-large;
     &:before {
       @include font-size(7);
-      content: '← →';
-      width: 86px;
-      top: -53px;
-      left: $size-default;
+      content:
+        url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjAgMTFINy44M2w1LjU5LTUuNTlMMTIgNGwtOCA4IDggOCAxLjQxLTEuNDFMNy44MyAxM0gyMHYtMnoiPjwvcGF0aD48L3N2Zz4=)
+        ' '
+        url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgNGwtMS40MSAxLjQxTDE2LjE3IDExSDR2MmgxMi4xN2wtNS41OCA1LjU5TDEyIDIwbDgtOHoiLz48L3N2Zz4=)
+        ' '
+        url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTcuNjUgNi4zNUMxNi4yIDQuOSAxNC4yMSA0IDEyIDRjLTQuNDIgMC03Ljk5IDMuNTgtNy45OSA4czMuNTcgOCA3Ljk5IDhjMy43MyAwIDYuODQtMi41NSA3LjczLTZoLTIuMDhjLS44MiAyLjMzLTMuMDQgNC01LjY1IDQtMy4zMSAwLTYtMi42OS02LTZzMi42OS02IDYtNmMxLjY2IDAgMy4xNC42OSA0LjIyIDEuNzhMMTMgMTFoN1Y0bC0yLjM1IDIuMzV6Ij48L3BhdGg+PC9zdmc+)
+        ' '
+        url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTAgMjB2LTZoNHY2aDV2LThoM0wxMiAzIDIgMTJoM3Y4eiI+PC9wYXRoPjwvc3ZnPg==)
+      ;
+      top: -55px; // magic number
+      left: $size-small;
       position: absolute;
-      font-family: Consolas, $font-mono;
-      font-weight: $font-bold;
-      color: $color-fsa-base-bg;
       line-height: $line-height-flat;
-      transform: scaleX(.8);
-      transform-origin: left;
     }
     &:after {
       content: '';
@@ -952,7 +954,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       top: -35px;
       right: $size-small;
       height: $size-medium;
-      width: calc(100% - 110px);
+      width: calc(100% - 158px});  // magic number
       background-color: $color-fsa-base-bg;
     }
   }
