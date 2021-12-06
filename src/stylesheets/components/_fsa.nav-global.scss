@@ -331,18 +331,10 @@
   &__sub-menu-group {
 
     @include breakpoint(L) {
-
-      display: inline-block;
-      width: 100%;
-
-      @supports (-webkit-appearance:none) {
-        // Webkit only.
-        break-before: column;
-        display: block;
-        width: auto;
-      }
-
-
+      break-inside: avoid;
+      break-after: column;
+      display: block;
+      width: auto;
     }
 
   }
