@@ -954,7 +954,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       top: -35px;
       right: $size-small;
       height: $size-medium;
-      width: calc(100% - 158px});  // magic number
+      width: calc(100% - 158px);  // magic number
       background-color: $color-fsa-base-bg;
     }
   }
