@@ -151,6 +151,52 @@
   box-sizing: border-box; // yeah, this is lame
 }
 
+.fsa-input-affix {
+
+  & {
+    border: 1px solid $form-outline-color;
+    display: inline-flex;
+    align-items: stretch;
+    background-color: $color-white;
+    &:focus-within {
+      outline: 3px solid $color-focus;
+    }
+  }
+
+  &__item {
+    display: block;
+    width: 100%;
+    border: 0;
+    &:focus {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  }
+
+  &--block {
+    display: flex;
+  }
+
+  &__prefix,
+  &__suffix {
+    display: flex;
+    align-items: center;
+    color: $color-fsa-tertiary-300;
+    font-weight: bold;
+    cursor: text;
+  }
+
+  &__prefix {
+    padding-left: $size-small;
+  }
+
+  &__suffix {
+    padding-right: $size-small;
+  }
+
+}
+
+
 ////////////////////////////////////////////////////////////////////////
 // File (Upload)
 
