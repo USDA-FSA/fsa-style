@@ -1,4 +1,4 @@
-/*! FSA Style v2.6.0 | http://usda-fsa.github.io/fsa-design-system/ */
+/*! FSA Style v2.6.1 | http://usda-fsa.github.io/fsa-design-system/ */
 
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -866,166 +866,134 @@ USAGE:
 </div>
 ```
 */
-html body [depth] *, html body
-.depth * {
+html body .depth * {
   outline: 1px solid rgba(0, 0, 0, 0.1);
   outline-offset: -1px;
 }
 
-html body [depth], html body
-.depth {
+html body .depth {
   background-color: rgba(0, 0, 0, 0.08);
 }
 
-html body [depth] *, html body
-.depth * {
+html body .depth * {
   background-color: rgba(255, 0, 0, 0.08);
 }
 
-html body [depth] * *, html body
-.depth * * {
+html body .depth * * {
   background-color: rgba(0, 255, 0, 0.08);
 }
 
-html body [depth] * * *, html body
-.depth * * * {
+html body .depth * * * {
   background-color: rgba(0, 0, 255, 0.08);
 }
 
-html body [depth] * * * *, html body
-.depth * * * * {
+html body .depth * * * * {
   background-color: rgba(255, 0, 255, 0.08);
 }
 
-html body [depth] * * * * *, html body
-.depth * * * * * {
+html body .depth * * * * * {
   background-color: rgba(0, 255, 255, 0.08);
 }
 
-html body [depth] * * * * * *, html body
-.depth * * * * * * {
+html body .depth * * * * * * {
   background-color: rgba(255, 255, 0, 0.08);
 }
 
-html body [depth] * * * * * * *, html body
-.depth * * * * * * * {
+html body .depth * * * * * * * {
   background-color: rgba(255, 0, 0, 0.08);
 }
 
-html body [depth] * * * * * * * *, html body
-.depth * * * * * * * * {
+html body .depth * * * * * * * * {
   background-color: rgba(0, 255, 0, 0.08);
 }
 
-html body [depth] * * * * * * * * *, html body
-.depth * * * * * * * * * {
+html body .depth * * * * * * * * * {
   background-color: rgba(0, 0, 255, 0.08);
 }
 
-html body [depth]--with-outline *, html body
-.depth--with-outline * {
+html body .depth--with-outline * {
   outline: 1px solid rgba(0, 0, 0, 0.1);
   outline-offset: -1px;
 }
 
-html body [depth]--with-outline, html body
-.depth--with-outline {
+html body .depth--with-outline {
   background-color: rgba(0, 0, 0, 0.08);
 }
 
-html body [depth]--with-outline *, html body
-.depth--with-outline * {
+html body .depth--with-outline * {
   background-color: rgba(255, 0, 0, 0.08);
 }
 
-html body [depth]--with-outline * *, html body
-.depth--with-outline * * {
+html body .depth--with-outline * * {
   background-color: rgba(0, 255, 0, 0.08);
 }
 
-html body [depth]--with-outline * * *, html body
-.depth--with-outline * * * {
+html body .depth--with-outline * * * {
   background-color: rgba(0, 0, 255, 0.08);
 }
 
-html body [depth]--with-outline * * * *, html body
-.depth--with-outline * * * * {
+html body .depth--with-outline * * * * {
   background-color: rgba(255, 0, 255, 0.08);
 }
 
-html body [depth]--with-outline * * * * *, html body
-.depth--with-outline * * * * * {
+html body .depth--with-outline * * * * * {
   background-color: rgba(0, 255, 255, 0.08);
 }
 
-html body [depth]--with-outline * * * * * *, html body
-.depth--with-outline * * * * * * {
+html body .depth--with-outline * * * * * * {
   background-color: rgba(255, 255, 0, 0.08);
 }
 
-html body [depth]--with-outline * * * * * * *, html body
-.depth--with-outline * * * * * * * {
+html body .depth--with-outline * * * * * * * {
   background-color: rgba(255, 0, 0, 0.08);
 }
 
-html body [depth]--with-outline * * * * * * * *, html body
-.depth--with-outline * * * * * * * * {
+html body .depth--with-outline * * * * * * * * {
   background-color: rgba(0, 255, 0, 0.08);
 }
 
-html body [depth]--with-outline * * * * * * * * *, html body
-.depth--with-outline * * * * * * * * * {
+html body .depth--with-outline * * * * * * * * * {
   background-color: rgba(0, 0, 255, 0.08);
 }
 
-html body [depth]--no-root *, html body
-.depth--no-root * {
+html body .depth--no-root * {
   outline: 1px solid rgba(0, 0, 0, 0.1);
   outline-offset: -1px;
 }
 
-html body [depth]--no-root *, html body
-.depth--no-root * {
+html body .depth--no-root * {
   background-color: rgba(255, 0, 0, 0.08);
 }
 
-html body [depth]--no-root * *, html body
-.depth--no-root * * {
+html body .depth--no-root * * {
   background-color: rgba(0, 255, 0, 0.08);
 }
 
-html body [depth]--no-root * * *, html body
-.depth--no-root * * * {
+html body .depth--no-root * * * {
   background-color: rgba(0, 0, 255, 0.08);
 }
 
-html body [depth]--no-root * * * *, html body
-.depth--no-root * * * * {
+html body .depth--no-root * * * * {
   background-color: rgba(255, 0, 255, 0.08);
 }
 
-html body [depth]--no-root * * * * *, html body
-.depth--no-root * * * * * {
+html body .depth--no-root * * * * * {
   background-color: rgba(0, 255, 255, 0.08);
 }
 
-html body [depth]--no-root * * * * * *, html body
-.depth--no-root * * * * * * {
+html body .depth--no-root * * * * * * {
   background-color: rgba(255, 255, 0, 0.08);
 }
 
-html body [depth]--no-root * * * * * * *, html body
-.depth--no-root * * * * * * * {
+html body .depth--no-root * * * * * * * {
   background-color: rgba(255, 0, 0, 0.08);
 }
 
-html body [depth]--no-root * * * * * * * *, html body
-.depth--no-root * * * * * * * * {
+html body .depth--no-root * * * * * * * * {
   background-color: rgba(0, 255, 0, 0.08);
 }
 
-html body [depth]--no-root * * * * * * * * *, html body
-.depth--no-root * * * * * * * * * {
+html body .depth--no-root * * * * * * * * * {
   background-color: rgba(0, 0, 255, 0.08);
 }
 
