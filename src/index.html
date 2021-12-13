@@ -3851,122 +3851,128 @@
           </div>
           <div class="docs__bd">
             <div>
-              <div>
-                <h4 class="docs__sub_style">Default</h4>
-                <p class="docs__code-sample"><code>class="<strong>fsa-input</strong>"</code></p>
-                <p class="fsa-level@l">
-                  <span><input class="fsa-input" type="text" name="some_name" value="" placeholder="Placeholder"></span>
-                  <span><input class="fsa-input" type="text" name="some_name" value="Value" placeholder="Placeholder"></span>
-                  <span><input class="fsa-input" type="password" name="some_name" value="pa55w0rd"></span>
-                  <span><input class="fsa-input" disabled="" type="text" name="some_name" value="disabled"></span>
-                  <span><input class="fsa-input" readonly="" type="text" name="some_name" value="readonly"></span>
-                </p>
-              </div>
-              <div>
-                <h4 class="docs__sub_style">Small</h4>
-                <p class="docs__code-sample"><code>class="fsa-input <strong>fsa-input--small</strong>"</code></p>
-                <p class="fsa-level@l">
-                  <span><input class="fsa-input fsa-input--small" type="text" name="some_name" value="" placeholder="Placeholder"></span>
-                  <span><input class="fsa-input fsa-input--small" type="text" name="some_name" value="Value" placeholder="Placeholder"></span>
-                  <span><input class="fsa-input fsa-input--small" type="password" name="some_name" value="pa55w0rd"></span>
-                  <span><input class="fsa-input fsa-input--small" disabled="" type="text" name="some_name" value="disabled"></span>
-                  <span><input class="fsa-input fsa-input--small" readonly="" type="text" name="some_name" value="disabled"></span>
-                </p>
-              </div>
-              <div>
-                <h4 class="docs__sub_style">Large</h4>
-                <p class="docs__code-sample"><code>class="fsa-input <strong>fsa-input--large</strong>"</code></p>
-                <p class="fsa-level@l">
-                  <span><input class="fsa-input fsa-input--large" type="text" name="some_name" value="" placeholder="Placeholder"></span>
-                  <span><input class="fsa-input fsa-input--large" type="text" name="some_name" value="Value" placeholder="Placeholder"></span>
-                  <span><input class="fsa-input fsa-input--large" type="password" name="some_name" value="pa55w0rd"></span>
-                  <span><input class="fsa-input fsa-input--large" disabled="" type="text" name="some_name" value="disabled"></span>
-                </p>
-              </div>
-            </div>
-            <h4 class="docs__sub_style">Full-width (Block)</h4>
-            <p class="docs__code-sample"><code>class="fsa-input <strong>fsa-input--block</strong>"</code></p>
-            <p>
-              <input class="fsa-input fsa-input--block" type="text" name="some_name" value="" placeholder="Placeholder">
-            </p>
-            <p>
-              <input class="fsa-input fsa-input--block" type="text" name="some_name" value="Value" placeholder="Placeholder">
-            </p>
-            <p>
-              <input class="fsa-input fsa-input--block" type="password" name="some_name" value="pa55w0rd">
-            </p>
-            <p>
-              <input class="fsa-input fsa-input--block" disabled="" type="text" name="some_name" value="disabled">
-            </p>
-            <p>
-              <input class="fsa-input fsa-input--block" readonly="" type="text" name="some_name" value="readonly">
-            </p>
-            <p>
-              <input accept="image/png, image/jpeg, image/gif" multiple class="fsa-input fsa-input--block" id="uploadexample01" name="uploadexample01" type="file" value="">
-            </p>
-            <h4 class="docs__sub_style">Error</h4>
-            <p class="docs__code-sample"><code>class="fsa-input <strong>fsa-input--error</strong>"</code></p>
-            <p class="fsa-level@l">
-              <input class="fsa-input fsa-input--error" type="text" name="some_name" value="Value" placeholder="Placeholder">
-              <input class="fsa-input fsa-input--error" type="password" name="some_name" value="pa55w0rd">
-            </p>
-            <h4 class="docs__sub_style">Custom Width</h4>
-            <p>Though rarely necessary, the width of <code>.fsa-input</code> can be overridden by using the <code>size</code> attribute, which specifies the width of the input in characters. From a display perspective, one character is equivalent to <code>1em</code> (approximately <code>17px</code> with <code>fsa-style</code>'s typography system).</p>
-            <h5>Examples</h5>
-            <p class="docs__code-sample"><code>&lt;input class="fsa-input" <strong>size="[#]"</strong> .... &gt;</code></p>
-            <div class="fsa-level@l">
-              <div>
-                <div class="docs__code-sample"><code>size="<strong>2</strong>"</code></div>
-                <input class="fsa-input" size="2" type="text" name="some_name" value="">
-              </div>
-              <div>
-                <div class="docs__code-sample"><code>size="<strong>14</strong>"</code></div>
-                <input class="fsa-input" size="14" type="text" name="some_name" value="">
-              </div>
-              <div>
-                <div class="docs__code-sample"><code>size="<strong>55</strong>"</code></div>
-                <input class="fsa-input" size="55" type="text" name="some_name" value="">
-              </div>
-            </div>
-            <h4 class="docs__sub_style">Responsive</h4>
-            <div class="fsa-hide@l">
-              <div class="fsa-alert fsa-alert--info fsa-alert--no-icon" role="alert">
-                <div class="fsa-alert__body">
-                  <p class="fsa-alert__text">View this page on a large screen to view complete Responsive Web Design options.</p>
-                </div>
-              </div>
-            </div>
-            <div class="fsa-show@l">
-              <p>Selectively override several style properties at each Media Query breakpoint.</p>
-              <p>
-                <code>fsa-select--<strong>[property]@[breakpoint]</strong></code>, where
-                <code>property</code> is one of
-                <code>small</code>,
-                <code>medium</code>,
-                <code>large</code>,
-                <code>block</code>,
-                or
-                <code>inline</code>;
-                and <code>breakpoint</code> is one of
-                <code title="small">s</code>,
-                <code title="medium">m</code>,
-                <code title="large">l</code>,
-                or
-                <code title="extra large">xl</code>
+              <h4 class="docs__sub_style">Default</h4>
+              <p class="docs__code-sample"><code>class="<strong>fsa-input</strong>"</code></p>
+              <p class="fsa-level@l">
+                <span><input class="fsa-input" type="text" name="some_name" value="" placeholder="Placeholder"></span>
+                <span><input class="fsa-input" type="text" name="some_name" value="Value" placeholder="Placeholder"></span>
+                <span><input class="fsa-input" type="password" name="some_name" value="pa55w0rd"></span>
+                <span><input class="fsa-input" disabled="" type="text" name="some_name" value="disabled"></span>
+                <span><input class="fsa-input" readonly="" type="text" name="some_name" value="readonly"></span>
               </p>
             </div>
-            <div class="docs__rwd-demo-block" data-component>
-              <div class="docs__rwd-embed-container">
-                <div class="fsa-level fsa-level--justify-center fsa-level--gutter-xs" role="group">
-                  <button onclick="trackRWDDemo('Text Input',this)" data-behavior="toggle-rwd-size" data-size="phone" class="fsa-btn fsa-btn--plain fsa-p--s fsa-radius--full fsa-color--secondary fsa-bg--secondary-100" aria-selected="true" type="button" title="Portrait" aria-label="Portrait"><svg class="fsa-icon fsa-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 1h-8C6.12 1 5 2.12 5 3.5v17C5 21.88 6.12 23 7.5 23h8c1.38 0 2.5-1.12 2.5-2.5v-17C18 2.12 16.88 1 15.5 1zm-4 21c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4.5-4H7V4h9v14z"/></svg></button>
-                  <button onclick="trackRWDDemo('Text Input',this)" data-behavior="toggle-rwd-size" data-size="phone-big" class="fsa-btn fsa-btn--plain fsa-p--s fsa-radius--full fsa-color--secondary fsa-bg:hover--tertiary-100" type="button" title="Landscape" aria-label="Landscape"><svg style="transform: rotate(-90deg);" class="fsa-icon fsa-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 1h-8C6.12 1 5 2.12 5 3.5v17C5 21.88 6.12 23 7.5 23h8c1.38 0 2.5-1.12 2.5-2.5v-17C18 2.12 16.88 1 15.5 1zm-4 21c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4.5-4H7V4h9v14z"/></svg></button>
-                  <button onclick="trackRWDDemo('Text Input',this)" data-behavior="toggle-rwd-size" data-size="tablet" class="fsa-btn fsa-btn--plain fsa-p--s fsa-radius--full fsa-color--secondary fsa-bg:hover--tertiary-100" type="button" title="Tablet" aria-label="Tablet"><svg class="fsa-icon fsa-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.5 0h-14C3.12 0 2 1.12 2 2.5v19C2 22.88 3.12 24 4.5 24h14c1.38 0 2.5-1.12 2.5-2.5v-19C21 1.12 19.88 0 18.5 0zm-7 23c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm7.5-4H4V3h15v16z"/></svg></button>
-                  <button onclick="trackRWDDemo('Text Input',this)" data-behavior="toggle-rwd-size" data-size="desktop" class="fsa-btn fsa-btn--plain fsa-p--s fsa-radius--full fsa-color--secondary fsa-bg:hover--tertiary-100" type="button" title="Desktop" aria-label="Desktop"><svg class="fsa-icon fsa-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7l-2 3v1h8v-1l-2-3h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 12H3V4h18v10z"/></svg></button>
-                  <button onclick="trackRWDDemo('Text Input',this)" data-behavior="toggle-rwd-size" data-size="fullscreen" class="fsa-btn fsa-btn--plain fsa-p--s fsa-radius--full fsa-color--secondary fsa-bg:hover--tertiary-100" type="button" title="Fullscreen" aria-label="Fullscreen"><svg class="fsa-icon fsa-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 3l2.3 2.3-2.89 2.87 1.42 1.42L18.7 6.7 21 9V3zM3 9l2.3-2.3 2.87 2.89 1.42-1.42L6.7 5.3 9 3H3zm6 12l-2.3-2.3 2.89-2.87-1.42-1.42L5.3 17.3 3 15v6zm12-6l-2.3 2.3-2.87-2.89-1.42 1.42 2.89 2.87L15 21h6z"/></svg></button>
+            <div>
+              <h4 class="docs__sub_style">Small</h4>
+              <p class="docs__code-sample"><code>class="fsa-input <strong>fsa-input--small</strong>"</code></p>
+              <p class="fsa-level@l">
+                <span><input class="fsa-input fsa-input--small" type="text" name="some_name" value="" placeholder="Placeholder"></span>
+                <span><input class="fsa-input fsa-input--small" type="text" name="some_name" value="Value" placeholder="Placeholder"></span>
+                <span><input class="fsa-input fsa-input--small" type="password" name="some_name" value="pa55w0rd"></span>
+                <span><input class="fsa-input fsa-input--small" disabled="" type="text" name="some_name" value="disabled"></span>
+                <span><input class="fsa-input fsa-input--small" readonly="" type="text" name="some_name" value="disabled"></span>
+              </p>
+            </div>
+            <div>
+              <h4 class="docs__sub_style">Large</h4>
+              <p class="docs__code-sample"><code>class="fsa-input <strong>fsa-input--large</strong>"</code></p>
+              <p class="fsa-level@l">
+                <span><input class="fsa-input fsa-input--large" type="text" name="some_name" value="" placeholder="Placeholder"></span>
+                <span><input class="fsa-input fsa-input--large" type="text" name="some_name" value="Value" placeholder="Placeholder"></span>
+                <span><input class="fsa-input fsa-input--large" type="password" name="some_name" value="pa55w0rd"></span>
+                <span><input class="fsa-input fsa-input--large" disabled="" type="text" name="some_name" value="disabled"></span>
+              </p>
+            </div>
+            <div>
+              <h4 class="docs__sub_style">Full-width <span class="fsa-font--sans">(Block)</span></h4>
+              <p class="docs__code-sample"><code>class="fsa-input <strong>fsa-input--block</strong>"</code></p>
+              <p>
+                <input class="fsa-input fsa-input--block" type="text" name="some_name" value="" placeholder="Placeholder">
+              </p>
+              <p>
+                <input class="fsa-input fsa-input--block" type="text" name="some_name" value="Value" placeholder="Placeholder">
+              </p>
+              <p>
+                <input class="fsa-input fsa-input--block" type="password" name="some_name" value="pa55w0rd">
+              </p>
+              <p>
+                <input class="fsa-input fsa-input--block" disabled="" type="text" name="some_name" value="disabled">
+              </p>
+              <p>
+                <input class="fsa-input fsa-input--block" readonly="" type="text" name="some_name" value="readonly">
+              </p>
+              <p>
+                <input accept="image/png, image/jpeg, image/gif" multiple class="fsa-input fsa-input--block" id="uploadexample01" name="uploadexample01" type="file" value="">
+              </p>
+            </div>
+            <div>
+              <h4 class="docs__sub_style">Error</h4>
+              <p class="docs__code-sample"><code>class="fsa-input <strong>fsa-input--error</strong>"</code></p>
+              <p class="fsa-level@l">
+                <input class="fsa-input fsa-input--error" type="text" name="some_name" value="Value" placeholder="Placeholder">
+                <input class="fsa-input fsa-input--error" type="password" name="some_name" value="pa55w0rd">
+              </p>
+            </div>
+            <div>
+              <h4 class="docs__sub_style">Custom Width</h4>
+              <p>Though rarely necessary, the width of <code>.fsa-input</code> can be overridden by using the <code>size</code> attribute, which specifies the width of the input in characters. From a display perspective, one character is equivalent to <code>1em</code> (approximately <code>17px</code> with <code>fsa-style</code>'s typography system).</p>
+              <h5>Examples</h5>
+              <p class="docs__code-sample"><code>&lt;input class="fsa-input" <strong>size="[#]"</strong> .... &gt;</code></p>
+              <div class="fsa-level@l">
+                <div>
+                  <div class="docs__code-sample"><code>size="<strong>2</strong>"</code></div>
+                  <input class="fsa-input" size="2" type="text" name="some_name" value="">
                 </div>
-                <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_input">
-                  <button data-behavior="toggle-rwd-close-fullscreen" type="button" class="docs__rwd-embed-close fsa-btn fsa-btn--plain fsa-p--xs fsa-radius--full fsa-color--tertiary fsa-bg--white fsa-bg:hover--tertiary-100 fsa-link:hover--tertiary-900" title="Close" aria-label="Close"><svg class="fsa-icon fsa-icon--size-3" aria-hidden="true" focusable="false" role="img" fill="#494440" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg></button>
-                  <iframe title="Responsive Demo: buttons" src="demo/rwd__input.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+                <div>
+                  <div class="docs__code-sample"><code>size="<strong>14</strong>"</code></div>
+                  <input class="fsa-input" size="14" type="text" name="some_name" value="">
+                </div>
+                <div>
+                  <div class="docs__code-sample"><code>size="<strong>55</strong>"</code></div>
+                  <input class="fsa-input" size="55" type="text" name="some_name" value="">
+                </div>
+              </div>
+            </div>
+            <div>
+              <h4 class="docs__sub_style">Responsive</h4>
+              <div class="fsa-hide@l">
+                <div class="fsa-alert fsa-alert--info fsa-alert--no-icon" role="alert">
+                  <div class="fsa-alert__body">
+                    <p class="fsa-alert__text">View this page on a large screen to view complete Responsive Web Design options.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="fsa-show@l">
+                <p>Selectively override several style properties at each Media Query breakpoint.</p>
+                <p>
+                  <code>fsa-select--<strong>[property]@[breakpoint]</strong></code>, where
+                  <code>property</code> is one of
+                  <code>small</code>,
+                  <code>medium</code>,
+                  <code>large</code>,
+                  <code>block</code>,
+                  or
+                  <code>inline</code>;
+                  and <code>breakpoint</code> is one of
+                  <code title="small">s</code>,
+                  <code title="medium">m</code>,
+                  <code title="large">l</code>,
+                  or
+                  <code title="extra large">xl</code>
+                </p>
+              </div>
+              <div class="docs__rwd-demo-block" data-component>
+                <div class="docs__rwd-embed-container">
+                  <div class="fsa-level fsa-level--justify-center fsa-level--gutter-xs" role="group">
+                    <button onclick="trackRWDDemo('Text Input',this)" data-behavior="toggle-rwd-size" data-size="phone" class="fsa-btn fsa-btn--plain fsa-p--s fsa-radius--full fsa-color--secondary fsa-bg--secondary-100" aria-selected="true" type="button" title="Portrait" aria-label="Portrait"><svg class="fsa-icon fsa-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 1h-8C6.12 1 5 2.12 5 3.5v17C5 21.88 6.12 23 7.5 23h8c1.38 0 2.5-1.12 2.5-2.5v-17C18 2.12 16.88 1 15.5 1zm-4 21c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4.5-4H7V4h9v14z"/></svg></button>
+                    <button onclick="trackRWDDemo('Text Input',this)" data-behavior="toggle-rwd-size" data-size="phone-big" class="fsa-btn fsa-btn--plain fsa-p--s fsa-radius--full fsa-color--secondary fsa-bg:hover--tertiary-100" type="button" title="Landscape" aria-label="Landscape"><svg style="transform: rotate(-90deg);" class="fsa-icon fsa-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 1h-8C6.12 1 5 2.12 5 3.5v17C5 21.88 6.12 23 7.5 23h8c1.38 0 2.5-1.12 2.5-2.5v-17C18 2.12 16.88 1 15.5 1zm-4 21c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4.5-4H7V4h9v14z"/></svg></button>
+                    <button onclick="trackRWDDemo('Text Input',this)" data-behavior="toggle-rwd-size" data-size="tablet" class="fsa-btn fsa-btn--plain fsa-p--s fsa-radius--full fsa-color--secondary fsa-bg:hover--tertiary-100" type="button" title="Tablet" aria-label="Tablet"><svg class="fsa-icon fsa-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.5 0h-14C3.12 0 2 1.12 2 2.5v19C2 22.88 3.12 24 4.5 24h14c1.38 0 2.5-1.12 2.5-2.5v-19C21 1.12 19.88 0 18.5 0zm-7 23c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm7.5-4H4V3h15v16z"/></svg></button>
+                    <button onclick="trackRWDDemo('Text Input',this)" data-behavior="toggle-rwd-size" data-size="desktop" class="fsa-btn fsa-btn--plain fsa-p--s fsa-radius--full fsa-color--secondary fsa-bg:hover--tertiary-100" type="button" title="Desktop" aria-label="Desktop"><svg class="fsa-icon fsa-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7l-2 3v1h8v-1l-2-3h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 12H3V4h18v10z"/></svg></button>
+                    <button onclick="trackRWDDemo('Text Input',this)" data-behavior="toggle-rwd-size" data-size="fullscreen" class="fsa-btn fsa-btn--plain fsa-p--s fsa-radius--full fsa-color--secondary fsa-bg:hover--tertiary-100" type="button" title="Fullscreen" aria-label="Fullscreen"><svg class="fsa-icon fsa-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 3l2.3 2.3-2.89 2.87 1.42 1.42L18.7 6.7 21 9V3zM3 9l2.3-2.3 2.87 2.89 1.42-1.42L6.7 5.3 9 3H3zm6 12l-2.3-2.3 2.89-2.87-1.42-1.42L5.3 17.3 3 15v6zm12-6l-2.3 2.3-2.87-2.89-1.42 1.42 2.89 2.87L15 21h6z"/></svg></button>
+                  </div>
+                  <div class="docs__rwd-embed docs__rwd-embed--phone" id="rwd-demo_input">
+                    <button data-behavior="toggle-rwd-close-fullscreen" type="button" class="docs__rwd-embed-close fsa-btn fsa-btn--plain fsa-p--xs fsa-radius--full fsa-color--tertiary fsa-bg--white fsa-bg:hover--tertiary-100 fsa-link:hover--tertiary-900" title="Close" aria-label="Close"><svg class="fsa-icon fsa-icon--size-3" aria-hidden="true" focusable="false" role="img" fill="#494440" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg></button>
+                    <iframe title="Responsive Demo: buttons" src="demo/rwd__input.html" class="docs__rwd-iframe" allowtransparency="true" frameborder="0" scrolling="yes" allowfullscreen="true" > </iframe>
+                  </div>
                 </div>
               </div>
             </div>

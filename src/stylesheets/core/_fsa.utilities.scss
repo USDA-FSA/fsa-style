@@ -407,20 +407,22 @@ $breakpoints: (
 // Shared properties between select and input text elements
 @mixin fsa-shared-form-properties() {
 
-  vertical-align: middle;
-  appearance: none;
-  display: inline-block;
-  height: $button-height;
-  border: 1px solid $form-outline-color;
-  max-width: 100%;
-  margin: 0;
-  border-radius: $form-border-radius;
-  box-shadow: none;
-  font-family: $form-font;
-  font-size: $form-text-size;
-  color: $form-text-color;
-  line-height: $line-height-flat;
-  background-color: $color-white;
+  & {
+    vertical-align: middle;
+    appearance: none;
+    display: inline-block;
+    height: $button-height;
+    border: 1px solid $form-outline-color;
+    max-width: 100%;
+    margin: 0;
+    border-radius: $form-border-radius;
+    box-shadow: none;
+    font-family: $form-font;
+    font-size: $form-text-size;
+    color: $form-text-color;
+    line-height: $line-height-flat;
+    background-color: $color-white;
+  }
 
   &[disabled] {
     background-color: $form-disabled-bg-color;
@@ -439,7 +441,6 @@ $breakpoints: (
     }
 
   }
-
 
 }
 
@@ -546,21 +547,25 @@ $breakpoints: (
 // -----------------------------------------------------------------------------
 // button reset ?
 @mixin fsa-button-reset {
-  text-align: left;
-  appearance: none;
-  margin: 0;
-  padding: 0;
-  border-width: 0;
-  background: transparent;
-  font: inherit;
-  line-height: inherit;
-  cursor: pointer;
-  user-select: text;
+
+  & {
+    text-align: left;
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    background: transparent;
+    font: inherit;
+    line-height: inherit;
+    cursor: pointer;
+    user-select: text;
+  }
 
   &::-moz-focus-inner {
     padding: 0;
     border: 0;
   }
+
 }
 
 @mixin fudgeMargin($fudge-amount: $size-extra-large) {
@@ -579,9 +584,11 @@ $breakpoints: (
 
 @mixin fsa-header($variant: '1') {
 
-  color: $color-title;
-  font-family: $font-sans;
-  font-weight: $font-bold;
+  & {
+    color: $color-title;
+    font-family: $font-sans;
+    font-weight: $font-bold;
+  }
 
   & + p {
     margin-top: $size-base;

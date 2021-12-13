@@ -177,13 +177,31 @@
     display: flex;
   }
 
+  &--disabled {
+    background-color: $form-disabled-bg-color;
+    color: $form-text-color-disabled;
+  }
+
+  &--readonly {
+    background-color: $color-fsa-base-bg;
+  }
+
   &__prefix,
   &__suffix {
-    display: flex;
-    align-items: center;
-    color: $color-fsa-tertiary-300;
-    font-weight: bold;
-    cursor: text;
+    & {
+      display: flex;
+      align-items: center;
+      color: $color-fsa-tertiary-300;
+      font-weight: bold;
+      cursor: text;
+    }
+    .fsa-input-affix--disabled & {
+      color: $form-text-color-disabled;
+    }
+    .fsa-input-affix--readonly & {
+      color: $form-text-color-disabled;
+      cursor: default;
+    }
   }
 
   &__prefix {
