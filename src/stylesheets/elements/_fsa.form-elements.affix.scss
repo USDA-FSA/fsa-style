@@ -53,6 +53,10 @@
 
   &__prefix {
     padding-left: $size-small;
+    &,
+    & + .fsa-input--large {
+      padding-left: $size-small;
+    }
   }
 
   &__suffix {
