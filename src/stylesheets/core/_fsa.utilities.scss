@@ -587,7 +587,6 @@ $breakpoints: (
   & {
     color: $color-title;
     font-family: $font-sans;
-    font-weight: $font-bold;
   }
 
   & + p {
@@ -597,7 +596,6 @@ $breakpoints: (
   @if $variant == '1' {
 
     font-size: $h1-font-size;
-    font-weight: $font-bold;
     line-height: $line-height-extra-large;
 
     @include breakpoint(M, down) {
@@ -616,7 +614,6 @@ $breakpoints: (
 
   @elseif $variant == '2' {
     font-size: $h2-font-size;
-    font-weight: $font-bold;
     line-height: $line-height-large;
     margin-top: $size-default;
     margin-bottom: $size-default;
