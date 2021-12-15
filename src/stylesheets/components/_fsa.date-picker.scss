@@ -53,6 +53,8 @@ $dateCalendar: fsa-date-calendar;
 
     & {
       @include reset-button();
+      border: 1px solid $form-outline-color;
+      background-color: $color-fsa-tertiary-100;
       display: inline-block;
       vertical-align: baseline;
       width: $date-control-btn-width;
@@ -61,7 +63,7 @@ $dateCalendar: fsa-date-calendar;
       color: transparent;
       text-indent: -300%;
       position: relative;
-      top: -1px;
+      top: 0;
       vertical-align: middle;
       background-image: url('#{$image-path}/material-design-icons/ic_calendar_today_24px.svg');
       background-size: ($size-medium + $size-base);
@@ -70,7 +72,11 @@ $dateCalendar: fsa-date-calendar;
     }
 
     &:active:not(:disabled) {
-      opacity: .6;
+      background-color: $color-fsa-white;
+    }
+
+    &:hover {
+      background-color: $color-fsa-white;
     }
 
     &--active {
