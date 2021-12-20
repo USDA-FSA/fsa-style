@@ -81,7 +81,7 @@
     @include fsa-header('3');
     margin-top: 0;
     font-family: $font-sans;
-    color: $white;
+    color: $color-fsa-white !important;
   }
 
   &__list {

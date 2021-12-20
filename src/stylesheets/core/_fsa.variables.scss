@@ -71,9 +71,9 @@ $color-fsa-yellow-100: $color-gold-lightest;
 // Base
 $color-base:  $color-fsa-tertiary-900;
 $color-white: #fff;
-$white: $color-white;
 $color-black: #000;
 $color-fsa-white: $color-white; // Just in case
+$white: $color-fsa-white;  // Just in case
 $color-fsa-black: $color-black; // Just in case
 $color-fsa-base: $color-base;
 
