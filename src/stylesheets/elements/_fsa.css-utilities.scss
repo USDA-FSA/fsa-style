@@ -1086,6 +1086,7 @@
 
   &--inline       { display: inline !important; }
   &--inline-block { display: inline-block !important; }
+  &--fill,
   &--block        { display: block !important; }
 
   // Default
@@ -1172,6 +1173,7 @@
 
     &--inline\@s       { display: inline !important; }
     &--inline-block\@s { display: inline-block !important; }
+    &--fill\@s,
     &--block\@s        { display: block !important; }
 
     // Default
@@ -1260,6 +1262,7 @@
 
     &--inline\@m       { display: inline !important; }
     &--inline-block\@m { display: inline-block !important; }
+    &--fill\@m,
     &--block\@m        { display: block !important; }
 
     // Default
@@ -1348,6 +1351,7 @@
 
     &--inline\@l       { display: inline !important; }
     &--inline-block\@l { display: inline-block !important; }
+    &--fill\@l,
     &--block\@l        { display: block !important; }
 
     // Default
@@ -1436,6 +1440,7 @@
 
     &--inline\@xl       { display: inline !important; }
     &--inline-block\@xl { display: inline-block !important; }
+    &--fill\@xl,
     &--block\@xl        { display: block !important; }
 
     // Default

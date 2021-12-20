@@ -99,6 +99,7 @@
   &--small   { @include selectSmall();  }
   &--medium  { @include selectMedium(); }
   &--large   { @include selectLarge();  }
+  &--fill,
   &--block   { @include selectBlock();  }
   &--inline  { @include selectInline();  }
   &--flat,
@@ -108,6 +109,7 @@
     &--small\@s  { @include selectSmall();  }
     &--medium\@s { @include selectMedium(); }
     &--large\@s  { @include selectLarge();  }
+    &--fill\@s,
     &--block\@s  { @include selectBlock();  }
     &--inline\@s { @include selectInline(); }
     &--flat\@s,
@@ -118,6 +120,7 @@
     &--small\@m  { @include selectSmall(); }
     &--medium\@m { @include selectMedium(); }
     &--large\@m  { @include selectLarge(); }
+    &--fill\@m,
     &--block\@m  { @include selectBlock(); }
     &--inline\@m { @include selectInline(); }
     &--flat\@m,
@@ -128,6 +131,7 @@
     &--small\@l  { @include selectSmall(); }
     &--medium\@l { @include selectMedium(); }
     &--large\@l  { @include selectLarge(); }
+    &--fill\@l,
     &--block\@l  { @include selectBlock(); }
     &--inline\@l { @include selectInline(); }
     &--flat\@l,
@@ -138,6 +142,7 @@
     &--small\@xl  { @include selectSmall(); }
     &--medium\@xl { @include selectMedium(); }
     &--large\@xl  { @include selectLarge(); }
+    &--fill\@xl,
     &--block\@xl  { @include selectBlock(); }
     &--inline\@xl { @include selectInline(); }
     &--flat\@xl,

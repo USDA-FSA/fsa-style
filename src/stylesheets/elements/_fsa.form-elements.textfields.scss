@@ -42,6 +42,7 @@
   &--small   { @include textFieldSmall();  }
   &--medium  { @include textFieldMedium(); }
   &--large   { @include textFieldLarge();  }
+  &--fill,
   &--block   { @include textFieldBlock();  }
   &--inline  { @include textFieldBlock();  }
 
@@ -49,6 +50,7 @@
     &--small\@s  { @include textFieldSmall(); }
     &--medium\@s { @include textFieldMedium(); }
     &--large\@s  { @include textFieldLarge(); }
+    &--fill\@s,
     &--block\@s  { @include textFieldBlock(); }
     &--inline\@s { @include textFieldInline(); }
   }
@@ -57,6 +59,7 @@
     &--small\@m  { @include textFieldSmall(); }
     &--medium\@m { @include textFieldMedium(); }
     &--large\@m  { @include textFieldLarge(); }
+    &--fill\@m,
     &--block\@m  { @include textFieldBlock(); }
     &--inline\@m { @include textFieldInline(); }
   }
@@ -65,6 +68,7 @@
     &--small\@l  { @include textFieldSmall(); }
     &--medium\@l { @include textFieldMedium(); }
     &--large\@l  { @include textFieldLarge(); }
+    &--fill\@l,
     &--block\@l  { @include textFieldBlock(); }
     &--inline\@l { @include textFieldInline(); }
   }
@@ -73,6 +77,7 @@
     &--small\@xl  { @include textFieldSmall(); }
     &--medium\@xl { @include textFieldMedium(); }
     &--large\@xl  { @include textFieldLarge(); }
+    &--fill\@xl,
     &--block\@xl  { @include textFieldBlock(); }
     &--inline\@xl { @include textFieldInline(); }
   }

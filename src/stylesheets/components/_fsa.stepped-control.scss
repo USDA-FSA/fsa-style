@@ -110,6 +110,7 @@
       padding-left: $size-small;
     }
 
+    &--fill,
     &--block {
       flex-basis: 100%;
       @include breakpoint(L) {

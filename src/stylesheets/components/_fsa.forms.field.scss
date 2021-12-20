@@ -115,6 +115,7 @@
 
   // Variants ----------------------------------------------------------------
 
+  &--fill,
   &--block {
     @include breakpoint(M) {
       max-width: none;

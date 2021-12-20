@@ -32,11 +32,13 @@ $dateCalendar: fsa-date-calendar;
       margin-left: -$date-control-btn-small-width;
     }
 
+    .fsa-input--fill + &,
     .fsa-input--block + &,
     .fsa-field__item + & {
       margin-left: initial;
     }
 
+    .fsa-input--fill + &,
     .fsa-input--block + &,
     .fsa-field__item + & {
       position: relative;
@@ -91,6 +93,7 @@ $dateCalendar: fsa-date-calendar;
       opacity: .5;
     }
 
+    .fsa-input--fill + .#{$dateControl} &,
     .fsa-input--block + .#{$dateControl} &,
     .fsa-field__item + .#{$dateControl} & {
       position: absolute;
@@ -104,6 +107,7 @@ $dateCalendar: fsa-date-calendar;
       height: $date-control-btn-small-height;
     }
 
+    .fsa-input--fill.fsa-input--small + .#{$dateControl} &,
     .fsa-input--block.fsa-input--small + .#{$dateControl} &,
     .fsa-field__item.fsa-input--small + .#{$dateControl} & {
       top: -$date-control-btn-small-height;

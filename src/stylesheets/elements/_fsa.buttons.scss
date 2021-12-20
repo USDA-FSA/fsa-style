@@ -376,6 +376,7 @@ $button-plain-border-width: 0;
   &--secondary,
   &--alt       { @include fsa-button(secondary); }
   &--tertiary  { @include fsa-button(tertiary);  }
+  &--fill,
   &--block     { @include fsa-button(block);     }
   &--inline    { @include fsa-button(inline);    }
   &--small     { @include fsa-button(small);     }
@@ -388,6 +389,7 @@ $button-plain-border-width: 0;
     &--small\@s { @include fsa-button(small); }
     &--medium\@s { @include fsa-button(medium); }
     &--large\@s { @include fsa-button(large); }
+    &--fill\@s
     &--block\@s { @include fsa-button(block); }
     &--inline\@s { @include fsa-button(inline); }
     &--plain\@s { @include fsa-button(plain); }
@@ -396,6 +398,7 @@ $button-plain-border-width: 0;
     &--small\@m { @include fsa-button(small); }
     &--medium\@m { @include fsa-button(medium); }
     &--large\@m { @include fsa-button(large); }
+    &--fill,
     &--block\@m { @include fsa-button(block); }
     &--inline\@m { @include fsa-button(inline); }
     &--plain\@m { @include fsa-button(plain); }
@@ -404,6 +407,7 @@ $button-plain-border-width: 0;
     &--small\@l { @include fsa-button(small); }
     &--medium\@l { @include fsa-button(medium); }
     &--large\@l { @include fsa-button(large); }
+    &--fill\@l
     &--block\@l { @include fsa-button(block); }
     &--inline\@l { @include fsa-button(inline); }
     &--plain\@l { @include fsa-button(plain); }
@@ -412,6 +416,7 @@ $button-plain-border-width: 0;
     &--small\@xl { @include fsa-button(small); }
     &--medium\@xl { @include fsa-button(medium); }
     &--large\@xl { @include fsa-button(large); }
+    &--fill\@xl,
     &--block\@xl { @include fsa-button(block); }
     &--inline\@xl { @include fsa-button(inline); }
     &--plain\@xl { @include fsa-button(plain); }
