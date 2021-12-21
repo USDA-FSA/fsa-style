@@ -43,13 +43,13 @@ $splash: fsa-splash;
   &__progress {}
 
   &__title {
+    @include font-size(4);
     padding-top: $size-default;
-    font-size: $font-size-4;
     font-weight: $font-light;
     text-align: center;
-    margin-bottom: 1em;
+    margin-bottom: $size-default;
     @include breakpoint(S) {
-      font-size: $font-size-5;
+      @include font-size(5);
     }
   }
 

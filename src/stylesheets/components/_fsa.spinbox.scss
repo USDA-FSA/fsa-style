@@ -3,8 +3,8 @@
   $button-width: $size-medium + .1rem;
   $button-width-large: $size-large;
   $button-width-small: ($size-large / 2);
-  $button-bgc: $color-fsa-white;
-  $button-bgc-focus: $color-fsa-tertiary-100;
+  $button-bgc: $color-fsa-tertiary-100;
+  $button-bgc-focus: $color-fsa-white;
   $button-border-color: $form-outline-color;
   $button-border-color-hover: $form-focus-color;
   $button-arrow-color: $form-focus-color;
@@ -13,22 +13,22 @@
   $button-arrow-size-small: 8px;
 
   & {
+    @include font-size(3);
     display: block;
     vertical-align: middle;
     position: relative;
     min-width: 8.2rem;
     min-width: 10ch; // for browsers that support ch unit
-    font-size: $font-size-3;
   }
 
   &--small {
-    font-size: $font-size-2;
+    @include font-size(2);
     min-width: 7.2rem;
     min-width: 9.5ch;
   }
 
   &--large {
-    font-size: $font-size-4;
+    @include font-size(4);
     min-width: 10rem;
     min-width: 11.5ch;
   }
@@ -139,7 +139,7 @@
       background-color: $button-bgc;
       border: 1px solid $button-border-color;
       border-left: 0;
-      line-height: 1;
+      line-height: $line-height-flat;
       width: $button-width;
       text-align: center;
       background-size: $icon-size-1;

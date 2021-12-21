@@ -32,7 +32,7 @@ body {
 
   overflow-x: initial;
   background-color: $color-fsa-base-bg;
-  line-height: $base-line-height;
+  line-height: $line-height-medium;
   color: $color-fsa-base;
 
   @media print {
@@ -68,7 +68,7 @@ tt {
   font-size: 90%;
   color: $color-fsa-red-900;
   font-family: $font-mono;
-  border-radius: 2px;
+  border-radius: ($radius-s / 2);
   background-color: $color-fsa-base-bg;
   padding: ($size-base / 2);
   // border: 1px solid $color-fsa-tertiary-200;
@@ -80,20 +80,16 @@ tt {
 
   }
 
-  p {
-    // margin-top: 0;
-  }
-
 }
 
 kbd {
+  @include font-size(0);
   background-color: white;
   padding: ($size-base * .25) ($size-base + ($size-base / 2));
   color: $color-fsa-tertiary;
   border: 1px solid $color-fsa-tertiary-200;
   box-shadow: 0 1px 0 $color-fsa-tertiary-200;
-  border-radius: 3px;
-  font-size: $font-size-0;
+  border-radius: ($radius-s = .1rem);
   font-weight: $font-bold;
   display: inline-block;
   white-space: nowrap;
@@ -164,8 +160,8 @@ blockquote {
 }
 
 hr {
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: $size-medium;
+  margin-bottom: $size-medium;
   border-width: 0;
   height: 1px;
   background: $color-fsa-tertiary-200;

@@ -14,8 +14,8 @@
       border-top: 1px solid $color-fsa-tertiary-100;
       background-color: transparent;
       padding: initial;
-      padding-top: .5em;
-      margin: 2em 0 0;
+      padding-top: $size-small;
+      margin: $size-medium 0 0;
     }
 
     &--fullscreen {

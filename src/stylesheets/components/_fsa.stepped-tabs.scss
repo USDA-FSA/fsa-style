@@ -8,7 +8,7 @@
   $colorDark: $color-fsa-secondary-900;
   $labelPadding: $size-small;
 
-  $arrowMagicNumber: 2.1rem;
+  $arrowMagicNumber: 2rem;
 
   & {
     display: none;
@@ -39,7 +39,8 @@
 
     & {
       @include reset-button();
-      height: 39px;
+      @include font-size(0);
+      height: $form-height-default - $size-small;
       cursor: initial;
       display: flex;
       align-items: center;
@@ -50,8 +51,7 @@
       background-color: $color-fsa-tertiary-100;
       color: $color-fsa-base;
       position: relative;
-      font-size: $font-size-0;
-      line-height: 1;
+      line-height: $line-height-flat;
     }
 
     &:focus {
@@ -59,13 +59,13 @@
     }
 
     @include breakpoint(M) {
-      font-size: $font-size-2;
+      @include font-size(2);
     }
 
     @include breakpoint(L) {
+      @include font-size(3);
       font-weight: $font-bold;
-      font-size: $font-size-3;
-      height: 42px;
+      height: $form-height-default;
     }
 
     .fsa-stepped-tabs__item:first-child & {
@@ -82,21 +82,16 @@
       pointer-events: none;
       position: absolute;
       content: '';
-      top: -3px;
+      top: -4px;
       width: 0;
       height: 0;
       border-style: solid;
-      border-width: $arrowMagicNumber 0 $arrowMagicNumber ($arrowMagicNumber - .9rem); // super magical number
+      border-width: $arrowMagicNumber 0 $arrowMagicNumber ($arrowMagicNumber - .8rem); // super magical number
       z-index: 1;
-
-      @include breakpoint(M) {
-        top: -1px;
-      }
 
       @include breakpoint(L) {
         top: 0;
       }
-
 
     }
 

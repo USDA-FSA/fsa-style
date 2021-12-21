@@ -199,14 +199,14 @@ $breakpoints: (
 // Example usage: @include font-size(0); is SMALLEST available size
 // Example usage: @include font-size(9); is LARGEST available size
 @mixin font-size($scale: 3) {
-  @if $scale == 0 { font-size: $font-size-0; }                                    // 13
-  @if $scale == 1 { font-size: $font-size-1; }                                    // 14
-  @if $scale == 2 { font-size: $font-size-2; }                                    // 15
-  @if $scale == 3 { font-size: $font-size-3; }                                    // 17
-  @if $scale == 4 { font-size: $font-size-4; line-height: $heading-line-height; } // 17 REMOVE THIS ONE
-  @if $scale == 5 { font-size: $font-size-5; line-height: $heading-line-height; } // 20
-  @if $scale == 6 { font-size: $font-size-6; line-height: $heading-line-height; } // 20 REMOVE THIS ONE
-  @if $scale == 7 { font-size: $font-size-7; line-height: $heading-line-height; } // 30
+  @if $scale == 0 { font-size: $font-size-0; line-height: $base-line-height; }
+  @if $scale == 1 { font-size: $font-size-1; line-height: $base-line-height; }
+  @if $scale == 2 { font-size: $font-size-2; line-height: $base-line-height; }
+  @if $scale == 3 { font-size: $font-size-3; line-height: $line-height-medium; }
+  @if $scale == 4 { font-size: $font-size-4; line-height: $line-height-large; }
+  @if $scale == 5 { font-size: $font-size-5; line-height: $line-height-large; }
+  @if $scale == 6 { font-size: $font-size-6; line-height: $line-height-extra-large; }
+  @if $scale == 7 { font-size: $font-size-7; line-height: $line-height-extra-extra-large; }
 }
 
 // -----------------------------------------------------------------------------
@@ -322,12 +322,9 @@ $breakpoints: (
 // Lists
 
 @mixin fsa-list-shared {
-  margin-bottom: 1em;
-  margin-top: 1em;
+  margin-bottom: $size-small;
+  margin-top: $size-small;
   padding-left: 1.4em; // MAGIC NUMBER: Approximately 24px left padding at default font size. Must be in **em** units to avoid 2-digit <ol> rendered numbers receding too far on left for bigger text. For example, here's what happens when using px or rem unit: https://cloud.githubusercontent.com/assets/1165933/18491589/b149cec6-79cc-11e6-9280-936838977b64.png
-  > * {
-    margin-bottom: .5em;
-  }
 }
 
 @mixin fsa-list-bullet {
@@ -353,7 +350,7 @@ $breakpoints: (
 
   @include reset-ul();
   display: flex;
-  margin-bottom: 1em;
+  margin-bottom: $size-small;
 
   > * {
 
@@ -410,20 +407,22 @@ $breakpoints: (
 // Shared properties between select and input text elements
 @mixin fsa-shared-form-properties() {
 
-  vertical-align: middle;
-  appearance: none;
-  display: inline-block;
-  height: $button-height;
-  border: 1px solid $form-outline-color;
-  max-width: 100%;
-  margin: 0;
-  border-radius: $form-border-radius;
-  box-shadow: none;
-  font-family: $form-font;
-  font-size: $form-text-size;
-  color: $form-text-color;
-  line-height: 1;
-  background-color: $color-white;
+  & {
+    vertical-align: middle;
+    appearance: none;
+    display: inline-block;
+    height: $button-height;
+    border: 1px solid $form-outline-color;
+    max-width: 100%;
+    margin: 0;
+    border-radius: $form-border-radius;
+    box-shadow: none;
+    font-family: $form-font;
+    font-size: $form-text-size;
+    color: $form-text-color;
+    line-height: $line-height-flat;
+    background-color: $color-white;
+  }
 
   &[disabled] {
     background-color: $form-disabled-bg-color;
@@ -443,11 +442,15 @@ $breakpoints: (
 
   }
 
-
 }
 
 // -----------------------------------------------------------------------------
 // Background pattern to denote "transparent"; think Photoshop
+
+// @mixin checkerboard($color: rgba(0, 0, 0, .10)) {
+//   background-color: $color;
+//   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAvSURBVHgBvY4xDQAACMMAWdOAXDRMFy/Zw0FCvy096iTTBgBq7rCFu+B6aNNDQwMyswata817IAAAAABJRU5ErkJggg==)
+// }
 
 @mixin checkerboard($color: rgba(0, 0, 0, .10)) {
 
@@ -544,21 +547,25 @@ $breakpoints: (
 // -----------------------------------------------------------------------------
 // button reset ?
 @mixin fsa-button-reset {
-  text-align: left;
-  appearance: none;
-  margin: 0;
-  padding: 0;
-  border-width: 0;
-  background: transparent;
-  font: inherit;
-  line-height: inherit;
-  cursor: pointer;
-  user-select: text;
+
+  & {
+    text-align: left;
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    background: transparent;
+    font: inherit;
+    line-height: inherit;
+    cursor: pointer;
+    user-select: text;
+  }
 
   &::-moz-focus-inner {
     padding: 0;
     border: 0;
   }
+
 }
 
 @mixin fudgeMargin($fudge-amount: $size-extra-large) {
@@ -575,22 +582,24 @@ $breakpoints: (
 // ----------------------------------------------------------------------------
 // h1 - h6 header elements
 
-@mixin fsa-header($variation: '1') {
+@mixin fsa-header($variant: '1') {
 
-  color: $color-title;
-  font-family: $font-sans;
-  font-weight: $font-bold;
-
-  & + p {
-    margin-top: .5em;
+  & {
+    color: $color-title;
+    font-family: $font-sans;
   }
 
-  @if $variation == '1' {
+  & + p {
+    margin-top: $size-base;
+  }
 
-    @include h1(); // from USWDS mixins
+  @if $variant == '1' {
+
+    font-size: $h1-font-size;
+    line-height: $line-height-extra-large;
 
     @include breakpoint(M, down) {
-      font-size: 36px;
+      font-size: $size-large;
     }
 
     .fsa-breadcrumb + & {
@@ -603,30 +612,45 @@ $breakpoints: (
 
   }
 
-  @elseif $variation == '2' {
-    @include h2(); // from USWDS mixins
-    margin-top: 1em;
+  @elseif $variant == '2' {
+    font-size: $h2-font-size;
+    line-height: $line-height-large;
+    margin-top: $size-default;
+    margin-bottom: $size-default;
     font-weight: normal;
-    .fsa-text--h1 + &,
-    h1 + & {
-      margin-top: .5em;
-    }
   }
 
-  @elseif $variation == '3' {
-    @include h3(); // from USWDS mixins
+  @elseif $variant == '3' {
+    font-size: $h3-font-size;
+    font-weight: $font-bold;
+    line-height: $line-height-medium;
+    margin-top: $size-medium;
+    margin-bottom: $size-small;
   }
 
-  @elseif $variation == '4' {
-    @include h4(); // from USWDS mixins
+  @elseif $variant == '4' {
+    font-size: $h4-font-size;
+    font-weight: $font-bold;
+    line-height: $line-height-extra-small;
+    margin-top: $size-medium;
+    margin-bottom: $size-small;
   }
 
-  @elseif $variation == '5' {
-    @include h5(); // from USWDS mixins
+  @elseif $variant == '5' {
+    font-size: $h5-font-size;
+    font-weight: $font-bold;
+    line-height: $line-height-extra-small;
+    margin-top: $size-medium;
+    margin-bottom: $size-small;
   }
 
-  @elseif $variation == '6' {
-    @include h6(); // from USWDS mixins
+  @elseif $variant == '6' {
+    font-size: $h6-font-size;
+    font-weight: $font-normal;
+    line-height: $line-height-extra-small;
+    text-transform: uppercase;
+    margin-top: $size-medium;
+    margin-bottom: $size-base;
   }
 
 }

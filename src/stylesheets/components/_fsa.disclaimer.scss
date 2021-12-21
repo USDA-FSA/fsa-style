@@ -5,9 +5,9 @@
 
     background-color: $color-fsa-primary-900;
     height: auto;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    font-size: 1.2rem;
+    padding-top: $size-base;
+    padding-bottom: $size-base;
+    font-size: $font-size-0 - .1rem;
 
     @include media($small-screen) {
       font-size: $h6-font-size;
@@ -34,15 +34,15 @@
 
   &__official {
     margin-right: auto;
+    display: flex;
+    align-items: center;
   }
 
   &__agency {
   }
 
   &__flag-icon {
-    float: left;
-    margin-right: .7rem;
-    margin-top: 2px;
+    margin-right: $size-small;
     width: 2rem;
   }
 
@@ -52,7 +52,7 @@
       background-color: $color-fsa-yellow;
       color: black;
       padding: 0 $size-base;
-      font-size: 10px;
+      font-size: $font-size-0 - .2rem;
       text-transform: uppercase;
     }
   }

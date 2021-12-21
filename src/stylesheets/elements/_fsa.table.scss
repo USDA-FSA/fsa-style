@@ -10,7 +10,7 @@ table {
 
   width: 100%;
   border-spacing: 0;
-  margin: 2em 0;
+  margin: $size-medium 0;
   min-width: 100%;
 
 }
@@ -69,7 +69,7 @@ th {
     }
     & {
       @include overflow-gradient();
-      margin: 2em 0;
+      margin: $size-medium 0;
       overflow: auto;
     }
     &[style*=--custom-table-height] {
@@ -268,7 +268,7 @@ th {
           text-transform: uppercase;
           display: block;
           font-weight: $font-bold;
-          margin-top: 1em;
+          margin-top: $size-default;
           color: $color-title;
         }
 

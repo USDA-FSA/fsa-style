@@ -48,7 +48,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   &__title {
 
     margin: 0;
-    margin-top: 2em;
     margin-top: 20vh;
     color: $color-fsa-white;
     font-weight: $font-light;
@@ -113,7 +112,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   &__figure {
 
     border-bottom: 1px solid $color-fsa-tertiary-300;
-    margin-bottom: 1em;
+    margin-bottom: $size-medium;
     margin-top: $size-large;
 
     .docs__figure-group + & {
@@ -157,7 +156,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
         background-color: $color-fsa-primary-900;
         color: $color-white;
         z-index: 1002;
-        padding-top: 1em;
+        padding-top: $size-default;
         animation: peekInFromAbove 300ms ease-in-out;
 
         @media print {
@@ -178,7 +177,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     margin-right: auto;
 
     @include breakpoint(M) {
-      margin-bottom: 1em;
+      margin-bottom: $size-default;
       display: flex;
       align-items: baseline;
     }
@@ -196,7 +195,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
         overflow: hidden;
         white-space: nowrap;
         transition: all .125s ease-in-out;
-        line-height: 1;
+        line-height: $line-height-flat;
         font-weight: $font-light;
         margin-left: -1px;
       }
@@ -248,15 +247,15 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
     &-link {
 
+      @include font-size(1);
       display: inline-block;
       margin-right: $size-small;
       text-decoration: none;
       color: $color-fsa-white;
-      font-size: $font-size-1;
 
       @include breakpoint(M) {
+        @include font-size(3);
         margin-right: $size-small;
-        font-size: $font-size-3;
         &:only-child {
           margin-right: initial;
         }
@@ -368,11 +367,11 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
       &--category {
 
+        @include font-size(2);
         background-color: rgba(255, 255, 255, .1);
         margin-top: $size-base;
         margin-bottom: $size-base;
         font-weight: $font-bold;
-        font-size: $font-size-2;
         text-transform: uppercase;
 
         &:hover {
@@ -419,10 +418,10 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
     @media print {
 
-      font-size: $font-size-3;
+      @include font-size(3);
       color: black !important;
       position: static;
-      margin-top: 1em;
+      margin-top: $size-default;
       background-color: transparent;
       padding: 0;
       border-width: 0;
@@ -523,8 +522,9 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     }
 
     &__swatch {
-      height: 7.5rem;
+      height: ($size-base * 18);
       display: flex;
+      border-radius: $radius-m;
     }
 
     &__title {
@@ -535,7 +535,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     &__attr {
 
       @include reset-ul;
-      margin: $size-small 0 1em;
+      margin: $size-small 0 $size-default;
 
       // scss-lint:disable NestingDepth
       &-item {
@@ -549,12 +549,21 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   &__swatch-list {
 
     @include reset-ul;
-    margin-bottom: 1em;
+    margin-bottom: $size-default;
 
     &__item {
 
       @include reset-li;
       padding: $size-extra-large $size-default $size-default;
+
+      &:first-child {
+        border-top-left-radius: $radius-m;
+        border-top-right-radius: $radius-m;
+      }
+      &:last-child {
+        border-bottom-left-radius: $radius-m;
+        border-bottom-right-radius: $radius-m;
+      }
 
       // scss-lint:disable NestingDepth
       &--main {
@@ -631,12 +640,12 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
 
       @include font-size(7);
       flex: 1;
-      line-height: 1;
+      line-height: $line-height-flat;
       margin: 0;
       margin-right: $size-default;
 
       @include breakpoint(S) {
-        font-size: 8.4rem;
+        font-size: ($size-base * 18);
         text-align: center;
       }
 
@@ -787,12 +796,12 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       }
       &--clicked {
         &, &:hover {
+          @include font-size(2);
           border-color: $color-fsa-primary-200;
           padding: $size-default;
           justify-content: center;
           background-color: $color-fsa-primary-100;
           pointer-events: none;
-          font-size: $font-size-2;
           font-weight: $font-bold;
           color: $color-fsa-primary;
           text-align: center;
@@ -810,8 +819,8 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       }
     }
     &__caption {
+      @include font-size(2);
       margin-top: $size-small;
-      font-size: $font-size-2;
       text-align: center;
     }
   }
@@ -879,7 +888,6 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   h2[id] + & {
     margin-top: -15px;
     border-top: 0;
-    outline: 1px solid orangered;
   }
 
   @include breakpoint(L)   {
@@ -925,18 +933,20 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
     height: 50vh;
     border-top-width: $size-extra-large;
     &:before {
-      content: '← →';
-      width: 86px;
-      top: -53px;
-      left: $size-default;
+      @include font-size(7);
+      content:
+        url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjAgMTFINy44M2w1LjU5LTUuNTlMMTIgNGwtOCA4IDggOCAxLjQxLTEuNDFMNy44MyAxM0gyMHYtMnoiPjwvcGF0aD48L3N2Zz4=)
+        ' '
+        url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgNGwtMS40MSAxLjQxTDE2LjE3IDExSDR2MmgxMi4xN2wtNS41OCA1LjU5TDEyIDIwbDgtOHoiLz48L3N2Zz4=)
+        ' '
+        url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTcuNjUgNi4zNUMxNi4yIDQuOSAxNC4yMSA0IDEyIDRjLTQuNDIgMC03Ljk5IDMuNTgtNy45OSA4czMuNTcgOCA3Ljk5IDhjMy43MyAwIDYuODQtMi41NSA3LjczLTZoLTIuMDhjLS44MiAyLjMzLTMuMDQgNC01LjY1IDQtMy4zMSAwLTYtMi42OS02LTZzMi42OS02IDYtNmMxLjY2IDAgMy4xNC42OSA0LjIyIDEuNzhMMTMgMTFoN1Y0bC0yLjM1IDIuMzV6Ij48L3BhdGg+PC9zdmc+)
+        ' '
+        url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTAgMjB2LTZoNHY2aDV2LThoM0wxMiAzIDIgMTJoM3Y4eiI+PC9wYXRoPjwvc3ZnPg==)
+      ;
+      top: -55px; // magic number
+      left: $size-small;
       position: absolute;
-      font-family: Consolas, $font-mono;
-      font-size: $font-size-7;
-      font-weight: $font-bold;
-      color: $color-fsa-base-bg;
-      line-height: 1;
-      transform: scaleX(.8);
-      transform-origin: left;
+      line-height: $line-height-flat;
     }
     &:after {
       content: '';
@@ -944,7 +954,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
       top: -35px;
       right: $size-small;
       height: $size-medium;
-      width: calc(100% - 110px);
+      width: calc(100% - 158px);  // magic number
       background-color: $color-fsa-base-bg;
     }
   }

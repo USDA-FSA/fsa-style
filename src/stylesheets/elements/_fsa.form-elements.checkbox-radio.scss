@@ -8,7 +8,7 @@
   > * {
 
     @include reset-li();
-    margin-top: .5em;
+    margin-top: $size-base;
 
     > .fsa-form-list {
       margin-left: $size-medium;
@@ -30,8 +30,7 @@
   cursor: pointer;
 
   &__other {
-    // margin-left: 1.7em;
-    margin-top: .5em;
+    margin-top: $size-small;
     max-height: 0;
     overflow: hidden;
     transition: all .46s ease-in-out;
@@ -97,11 +96,11 @@
     display: block;
     background-color: $color-fsa-tertiary-200;
     padding: $size-default;
-    margin-bottom: 1em;
+    margin-bottom: $size-small;
     content: 'CSS ERROR: checkbox or radio requires a <label> element immediately following it. Refer to FSA Design System for guidance. ';
     color: orangered;
     border: 4px solid orangered;
-    font-size: 2rem;
+    font-size: $font-size-4;
     font-weight: bold;
   }
 }

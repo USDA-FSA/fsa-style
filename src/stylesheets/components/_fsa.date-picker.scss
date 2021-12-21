@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////
 // Date Picker
 
-$date-control-btn-width: 3.9rem; // from fsa-btn
+$date-control-btn-width: $form-height-default; // from fsa-btn
 $date-control-btn-height: $date-control-btn-width;
 $date-control-btn-small-width: 3rem; // from fsa-btn
 $date-control-btn-small-height: $date-control-btn-small-width;
@@ -32,11 +32,13 @@ $dateCalendar: fsa-date-calendar;
       margin-left: -$date-control-btn-small-width;
     }
 
+    .fsa-input--fill + &,
     .fsa-input--block + &,
     .fsa-field__item + & {
       margin-left: initial;
     }
 
+    .fsa-input--fill + &,
     .fsa-input--block + &,
     .fsa-field__item + & {
       position: relative;
@@ -53,6 +55,8 @@ $dateCalendar: fsa-date-calendar;
 
     & {
       @include reset-button();
+      border: 1px solid $form-outline-color;
+      background-color: $color-fsa-tertiary-100;
       display: inline-block;
       vertical-align: baseline;
       width: $date-control-btn-width;
@@ -61,7 +65,7 @@ $dateCalendar: fsa-date-calendar;
       color: transparent;
       text-indent: -300%;
       position: relative;
-      top: -1px;
+      top: 0;
       vertical-align: middle;
       background-image: url('#{$image-path}/material-design-icons/ic_calendar_today_24px.svg');
       background-size: ($size-medium + $size-base);
@@ -70,7 +74,11 @@ $dateCalendar: fsa-date-calendar;
     }
 
     &:active:not(:disabled) {
-      opacity: .6;
+      background-color: $color-fsa-white;
+    }
+
+    &:hover {
+      background-color: $color-fsa-white;
     }
 
     &--active {
@@ -85,6 +93,7 @@ $dateCalendar: fsa-date-calendar;
       opacity: .5;
     }
 
+    .fsa-input--fill + .#{$dateControl} &,
     .fsa-input--block + .#{$dateControl} &,
     .fsa-field__item + .#{$dateControl} & {
       position: absolute;
@@ -98,6 +107,7 @@ $dateCalendar: fsa-date-calendar;
       height: $date-control-btn-small-height;
     }
 
+    .fsa-input--fill.fsa-input--small + .#{$dateControl} &,
     .fsa-input--block.fsa-input--small + .#{$dateControl} &,
     .fsa-field__item.fsa-input--small + .#{$dateControl} & {
       top: -$date-control-btn-small-height;
@@ -125,7 +135,7 @@ $dateCalendar: fsa-date-calendar;
     border: 1px solid $date-calendar-table-cell-border-color;
     border-left: 0;
     border-right: 0;
-    line-height: 1;
+    line-height: $line-height-flat;
     text-align: center;
     vertical-align: bottom;
     cursor: pointer;
@@ -156,7 +166,7 @@ $dateCalendar: fsa-date-calendar;
   // ----------------------------------------------------------------------------
   // ----------------------------------------------------------------------------
   // ----------------------------------------------------------------------------
-  // Root Variations
+  // Root Variants
 
   &--static {
 
@@ -219,7 +229,7 @@ $dateCalendar: fsa-date-calendar;
   &__title-month,
   &__title-year {
     display: inline-block;
-    line-height: 1;
+    line-height: $line-height-flat;
     margin: $size-small 0 0;
     color: $date-calendar-text-color-default;
     // cursor: text;
@@ -233,7 +243,7 @@ $dateCalendar: fsa-date-calendar;
   &__prev-but,
   &__next-but,
   &__today-but {
-    line-height: 1;
+    line-height: $line-height-flat;
     display: block;
     font-weight: $font-normal;
     cursor: pointer;
@@ -248,7 +258,7 @@ $dateCalendar: fsa-date-calendar;
   &__next-but {
 
     & {
-      font-size: 36px;
+      font-size: $size-large;
       padding: 0 $size-default $size-base $size-default;
       background-repeat: no-repeat;
       background-position: 50%;
@@ -373,7 +383,7 @@ $dateCalendar: fsa-date-calendar;
   &__day-name {
     display: block;
     padding: $date-calendar-table-cell-padding;
-    line-height: 1;
+    line-height: $line-height-flat;
   }
 
   &__day {

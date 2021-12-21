@@ -26,8 +26,8 @@ body::before {
   background: rgba(255, 0, 0, .8);
   padding: 2px 2px 3px;
   font-family: Consolas, Menlo, Monaco, "Lucida Console", "Courier New", monospace;
-  font-size: 14px;
-  line-height: 1;
+  font-size: $font-size-1;
+  line-height: $line-height-flat;
 
   @include breakpoint(S) {
     background: rgba(0, 0, 0, 1);

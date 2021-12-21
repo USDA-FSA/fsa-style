@@ -81,23 +81,23 @@
     @include fsa-header('3');
     margin-top: 0;
     font-family: $font-sans;
-    color: $white;
+    color: $color-fsa-white !important;
   }
 
   &__list {
 
     @include reset-ul();
-    margin-bottom: 2em;
+    margin-bottom: $size-medium;
 
     @include breakpoint(L) {
-      margin-bottom: 1em;
+      margin-bottom: $size-medium;
     }
 
   }
 
   &__list-item {
     @include reset-li();
-    margin-bottom: .5em;
+    margin-bottom: $size-default;
   }
 
   &__secondary-list {

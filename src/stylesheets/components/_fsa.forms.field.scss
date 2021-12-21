@@ -3,10 +3,10 @@
   & {
 
     position: relative;
-    margin-bottom: 1em;
+    margin-bottom: $size-default;
 
     h1 + & {
-      margin-top: 1em;
+      margin-top: $size-medium;
     }
 
     @include breakpoint(M) {
@@ -21,11 +21,10 @@
     @include breakpoint(M) {
       content: '';
       position: absolute;
-      top: 4px;
-      left: -1em;
-      bottom: 6px;
+      left: -($size-default + ($size-base / 2));
+      top: 0;
+      bottom: 0;
       width: 4px;
-      background-color: transparent;
       transition: all .1s ease-in-out;
     }
   }
@@ -34,7 +33,8 @@
 
   &__label {
 
-    display: block;
+    display: flex;
+    gap: $size-base;
 
     .fsa-field--error & {
       font-weight: $font-bold;
@@ -45,24 +45,23 @@
   &__label-desc {
     font-style: italic;
     font-weight: $font-normal;
-    float: right;
+    margin-left: auto;
     color: $color-fsa-tertiary-300;
-    font-size: $form-text-size--sm;
-    margin-top: 3px; // magic number
+    font-size: $form-text-size--sm; // not useing mixin, as we want to *inherit* line-height
   }
 
   &__help {
+    @include font-size(2);
     margin-top: $size-base;
     display: block;
     color: $color-fsa-tertiary-300;
-    font-size: $form-text-size--sm;
   }
 
   &__message {
 
+    @include font-size(2);
     font-weight: $font-bold;
-    font-size: $font-size-2;
-    padding-top: $size-small;
+    padding-top: $size-base;
 
     display: block;
     overflow: hidden;
@@ -88,7 +87,7 @@
   &__column {
 
     @include breakpoint(M, down) {
-      margin-top: 1em;
+      margin-top: $size-medium;
     }
 
   }
@@ -114,8 +113,9 @@
 
   }
 
-  // Variations ----------------------------------------------------------------
+  // Variants ----------------------------------------------------------------
 
+  &--fill,
   &--block {
     @include breakpoint(M) {
       max-width: none;
@@ -124,13 +124,9 @@
 
   &--error {
     &:before {
-
       @include breakpoint(M) {
-        top: -4px;
-        bottom: -6px;
         background-color: $color-fsa-red;
       }
-
     }
   }
 

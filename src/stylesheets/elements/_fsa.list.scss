@@ -9,7 +9,7 @@ dd {
 }
 
 dl {
-  margin: 0 0 1em;
+  margin: 0 0 $size-default;
 }
 
 dt {
@@ -18,7 +18,7 @@ dt {
   margin-bottom: 0;
 
   dd + & {
-    margin-top: .75em;
+    margin-top: $size-small;
   }
 
 }

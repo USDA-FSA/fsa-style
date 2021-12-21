@@ -2,6 +2,8 @@
 
 p {
   line-height: inherit;
+  margin-top: $size-small;
+  margin-bottom: $size-small;
 }
 
 a {
@@ -36,13 +38,15 @@ h6, .h6 { @include fsa-header('6'); }
 .fsa-font-lead,
 .usa-font-lead {
 
-  font-size: $font-size-4;
-  line-height: $lead-line-height;
+  @include font-size(4);
+  line-height: $line-height-medium;
   max-width: 70ch;
 
   @include breakpoint(M) {
     font-weight: $font-light;
     font-size: $lead-font-size;
+    line-height: $lead-line-height;
+    margin-bottom: $size-medium;
   }
 
   strong {

@@ -31,17 +31,18 @@
     }
   }
 
-
   &:focus-within {
-    z-index: 99;
+    z-index: 999;
   }
 
   &__bd {
 
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
-    max-width: ($site-max-width + 24px);
+    & {
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0;
+      max-width: ($site-max-width + 24px);
+    }
 
     .fsa-nav-global--fullscreen > & {
       max-width: none;
@@ -60,11 +61,13 @@
 
   &__list {
 
-    @include reset-ul();
-    display: flex;
-    position: relative;
-    flex-wrap: wrap;
-    z-index: 3;
+    & {
+      @include reset-ul();
+      display: flex;
+      position: relative;
+      flex-wrap: wrap;
+      z-index: 3;
+    }
 
     &:focus-within {
       z-index: 99;
@@ -87,10 +90,12 @@
 
   &__list-item {
 
-    @include reset-li();
-    display: inline-block;
-    flex: auto;
-    flex-basis: 100%;
+    & {
+      @include reset-li();
+      display: inline-block;
+      flex: auto;
+      flex-basis: 100%;
+    }
 
     @media (min-width: 320px) {
       flex-basis: 50%;
@@ -126,15 +131,17 @@
 
   &__link {
 
-    @include font-size(2);
-    background-color: $nav-bgcolor;
-    border-width: 0;
-    display: block;
-    width: 100%; // block-level <button> elements don't automatically full-width themselves
-    text-decoration: none;
-    padding: 0;
-    color: $nav-text-color;
-    text-align: left;
+    & {
+      @include font-size(2);
+      background-color: $nav-bgcolor;
+      border-width: 0;
+      display: block;
+      width: 100%; // block-level <button> elements don't automatically full-width themselves
+      text-decoration: none;
+      padding: 0;
+      color: $nav-text-color;
+      text-align: left;
+    }
 
     @include breakpoint(M) {
       @include font-size(3);
@@ -206,10 +213,12 @@
 
   &__text {
 
-    display: flex;
-    gap: $size-base;
-    align-items: center;
-    padding: ($nav-spacing-unit - $size-base) $nav-spacing-unit;
+    & {
+      display: flex;
+      gap: $size-small;
+      align-items: center;
+      padding: ($nav-spacing-unit - $size-base) $nav-spacing-unit;
+    }
 
     @include breakpoint(M) {
       padding: $nav-spacing-unit;
@@ -245,12 +254,14 @@
 
   &__sub-menu {
 
-    display: none;
-    background-color: $nav-highlight-bgcolor;
-    position: absolute;
-    left: 0;
-    right: 0;
-    box-shadow: $shadow-size-overlay;
+    & {
+      display: none;
+      background-color: $nav-highlight-bgcolor;
+      position: absolute;
+      left: 0;
+      right: 0;
+      box-shadow: $shadow-size-overlay;
+    }
 
     @include breakpoint(L) {
       top: 100%;
@@ -302,12 +313,14 @@
 
   &__sub-menu-title {
 
-    @include font-size(2);
-    font-family: $font-sans;
-    text-transform: uppercase;
-    margin: 0;
-    color: $nav-highlight-text-color-strong;
-    padding: ($nav-spacing-unit / 3) ($nav-spacing-unit + $size-base);
+    & {
+      @include font-size(2);
+      font-family: $font-sans;
+      text-transform: uppercase;
+      margin: 0;
+      color: $nav-highlight-text-color-strong;
+      padding: ($nav-spacing-unit - $size-base) ($nav-spacing-unit + $size-base) $size-base;
+    }
 
     // scss-lint:disable SelectorFormat
     .fsa-nav-global__list-item--multi-column & {
@@ -318,27 +331,21 @@
   &__sub-menu-group {
 
     @include breakpoint(L) {
-
-      display: inline-block;
-      width: 100%;
-
-      @supports (-webkit-appearance:none) {
-        // Webkit only.
-        break-before: column;
-        display: block;
-        width: auto;
-      }
-
-
+      break-inside: avoid;
+      break-after: column;
+      display: block;
+      width: auto;
     }
 
   }
 
   &__sub-menu-list {
 
-    @include reset-ul();
-    @include font-size(1);
-    margin-bottom: .5em;
+    & {
+      @include reset-ul();
+      @include font-size(1);
+      margin-bottom: $size-base;
+    }
 
     @include breakpoint(L) {
       @include font-size(3);
@@ -355,10 +362,12 @@
     $text-color: $nav-highlight-text-color;
     $text-color-highlight: $nav-highlight-text-color-strong;
 
-    display: block;
-    color: $text-color;
-    text-decoration: none;
-    padding: ($nav-spacing-unit / 3) ($nav-spacing-unit + $size-base);
+    & {
+      display: block;
+      color: $text-color;
+      text-decoration: none;
+      padding: ($nav-spacing-unit / 3) ($nav-spacing-unit + $size-base);
+    }
 
     &:visited {
       color: $text-color;

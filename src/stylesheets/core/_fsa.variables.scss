@@ -71,9 +71,9 @@ $color-fsa-yellow-100: $color-gold-lightest;
 // Base
 $color-base:  $color-fsa-tertiary-900;
 $color-white: #fff;
-$white: $color-white;
 $color-black: #000;
 $color-fsa-white: $color-white; // Just in case
+$white: $color-fsa-white;  // Just in case
 $color-fsa-black: $color-black; // Just in case
 $color-fsa-base: $color-base;
 
@@ -128,6 +128,16 @@ $shadow-size-none:    none;
 // ---------------------------------------------------------------------------
 // Typography
 
+$line-height-flat:              1;
+$line-height-extra-small:       2rem;
+$line-height-small:             2.4rem;
+$line-height-medium:            2.8rem;
+$line-height-large:             3.6rem;
+$line-height-extra-large:       5.2rem;
+$line-height-extra-extra-large: 6.4rem;
+
+$base-line-height: $line-height-small;
+
 // Font Size Scale
 $font-size-0 : $h6-font-size;           // 13px
 $font-size-1 : $small-font-size;        // 14px
@@ -141,7 +151,7 @@ $font-size-7 : $title-font-size;        // 52px
 $h1-font-size: $font-size-6;
 
 $lead-font-size: ($font-size-5 - .3rem);
-$lead-line-height: 1.3;
+$lead-line-height: 3.6rem;
 
 $font-sans:  'Source Sans Pro', $helvetica;
 $font-serif: $font-sans;
@@ -185,14 +195,15 @@ $form-checkbox-radio-outline-color : shade($form-outline-color, 30%);
 $form-checkbox-radio-fill      : $color-fsa-secondary;
 $form-checkbox-fill            : $color-fsa-secondary;
 $form-radiocheckbox-size       : 1.8rem;
+$form-height-default           : 4rem;
+$form-height-small             : 3.2rem;
+$form-height-large             : 4.8rem;
 $form-padding                  : $size-small;
-$form-select-bgc               : orangered; // TODO no in use
-$form-between-space            : $size-small;
 
 // ---------------------------------------------------------------------------
 // FSA Grid Settings
 
-$fsa-grid-gutter: ($base-font-size * 1.5);
+$fsa-grid-gutter: $size-medium;
 $fsa-grid-columns: 12;
 
 // ---------------------------------------------------------------------------

@@ -104,7 +104,7 @@
   &__title {
     @include fsa-header('2');
     margin-top: 0;
-    margin-bottom: .5em;
+    margin-bottom: $size-small;
     font-weight: normal;
     margin-right: $size-default; // to prevent awkward space with Close button
   }

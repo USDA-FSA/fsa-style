@@ -8,6 +8,7 @@
     vertical-align: middle;
   }
 
+  &--fill,
   &--block {
     display: flex;
   }
@@ -17,18 +18,22 @@
   }
 
   @include breakpoint(S) {
+    &--fill\@s,
     &--block\@s  { display: flex; }
     &--inline\@s { display: inline-flex; }
   }
   @include breakpoint(M) {
+    &--fill\@m,
     &--block\@m  { display: flex; }
     &--inline\@m { display: inline-flex; }
   }
   @include breakpoint(L) {
+    &--fill\@l,
     &--block\@l  { display: flex; }
     &--inline\@l { display: inline-flex; }
   }
   @include breakpoint(XL) {
+    &--fill\@xl,
     &--block\@xl  { display: flex; }
     &--inline\@xl { display: inline-flex; }
   }
@@ -92,17 +97,17 @@
     }
 
     &:not(:first-child):not(:last-child) {
-      border-radius: 0;
+      border-radius: $radius-none;
     }
 
     &:first-child {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
+      border-top-right-radius: $radius-none;
+      border-bottom-right-radius: $radius-none;
     }
 
     &:last-child {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
+      border-top-left-radius: $radius-none;
+      border-bottom-left-radius: $radius-none;
     }
 
     &:only-child {
