@@ -17,6 +17,13 @@
       color: $form-text-color-disabled;
     }
 
+    // scss-lint:disable SelectorFormat
+    .fsa-select-multi--error & {
+      border-color: $form-error-color;
+      box-shadow: 0 0 0 1px $form-error-color;
+      background-color: $form-error-color-bg;
+    }
+
   }
 
   &__list-sub {
