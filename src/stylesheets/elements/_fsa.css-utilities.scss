@@ -1084,10 +1084,10 @@
 // Links ----------------------------------------------------------------------
 .fsa-link {
 
-  &--inline       { display: inline !important; }
-  &--inline-block { display: inline-block !important; }
+  &--inline       { display: inline !important; width: auto !important; }
+  &--inline-block { display: inline-block !important; width: auto !important; }
   &--fill,
-  &--block        { display: block !important; }
+  &--block        { display: block !important; width: 100%; }
 
   // Default
   & {
@@ -1171,10 +1171,10 @@
 
   @include breakpoint(S) {
 
-    &--inline\@s       { display: inline !important; }
-    &--inline-block\@s { display: inline-block !important; }
+    &--inline\@s       { display: inline !important; width: auto !important; }
+    &--inline-block\@s { display: inline-block !important; width: auto !important; }
     &--fill\@s,
-    &--block\@s        { display: block !important; }
+    &--block\@s        { display: block !important; width: 100% !important; }
 
     // Default
     & {
@@ -1260,10 +1260,10 @@
 
   @include breakpoint(M) {
 
-    &--inline\@m       { display: inline !important; }
-    &--inline-block\@m { display: inline-block !important; }
+    &--inline\@m       { display: inline !important; width: auto !important; }
+    &--inline-block\@m { display: inline-block !important; width: auto !important; }
     &--fill\@m,
-    &--block\@m        { display: block !important; }
+    &--block\@m        { display: block !important; width: 100% !important; }
 
     // Default
     & {
@@ -1349,10 +1349,10 @@
 
   @include breakpoint(L) {
 
-    &--inline\@l       { display: inline !important; }
-    &--inline-block\@l { display: inline-block !important; }
+    &--inline\@l       { display: inline !important; width: auto !important; }
+    &--inline-block\@l { display: inline-block !important; width: auto !important; }
     &--fill\@l,
-    &--block\@l        { display: block !important; }
+    &--block\@l        { display: block !important; width: 100% !important; }
 
     // Default
     & {
@@ -1438,10 +1438,10 @@
 
   @include breakpoint(XL) {
 
-    &--inline\@xl       { display: inline !important; }
-    &--inline-block\@xl { display: inline-block !important; }
+    &--inline\@xl       { display: inline !important; width: auto !important; }
+    &--inline-block\@xl { display: inline-block !important; width: auto !important; }
     &--fill\@xl,
-    &--block\@xl        { display: block !important; }
+    &--block\@xl        { display: block !important; width: 100% !important; }
 
     // Default
     & {

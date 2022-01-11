@@ -4,6 +4,7 @@
 
   & {
     display: inline-flex;
+    width: auto;
     white-space: nowrap;
     vertical-align: middle;
   }
@@ -11,31 +12,33 @@
   &--fill,
   &--block {
     display: flex;
+    width: 100%;
   }
 
   &--inline {
     display: inline-flex;
+    width: auto;
   }
 
   @include breakpoint(S) {
     &--fill\@s,
-    &--block\@s  { display: flex; }
-    &--inline\@s { display: inline-flex; }
+    &--block\@s  { display: flex; width: 100%; }
+    &--inline\@s { display: inline-flex; width: auto; }
   }
   @include breakpoint(M) {
     &--fill\@m,
-    &--block\@m  { display: flex; }
-    &--inline\@m { display: inline-flex; }
+    &--block\@m  { display: flex; width: 100%; }
+    &--inline\@m { display: inline-flex; width: auto; }
   }
   @include breakpoint(L) {
     &--fill\@l,
-    &--block\@l  { display: flex; }
-    &--inline\@l { display: inline-flex; }
+    &--block\@l  { display: flex; width: 100%; }
+    &--inline\@l { display: inline-flex; width: auto; }
   }
   @include breakpoint(XL) {
     &--fill\@xl,
-    &--block\@xl  { display: flex; }
-    &--inline\@xl { display: inline-flex; }
+    &--block\@xl  { display: flex; width: 100%; }
+    &--inline\@xl { display: inline-flex; width: auto; }
   }
 
   &__item {

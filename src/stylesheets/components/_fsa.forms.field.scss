@@ -119,6 +119,7 @@
   &--block {
     @include breakpoint(M) {
       max-width: none;
+      width: 100%;
     }
   }
 
