@@ -612,7 +612,7 @@ $breakpoints: (
 
   }
 
-  @elseif $variant == '2' {
+  @else if $variant == '2' {
     font-size: $h2-font-size;
     line-height: $line-height-large;
     margin-top: $size-default;
@@ -620,7 +620,7 @@ $breakpoints: (
     font-weight: normal;
   }
 
-  @elseif $variant == '3' {
+  @else if $variant == '3' {
     font-size: $h3-font-size;
     font-weight: $font-bold;
     line-height: $line-height-medium;
@@ -628,7 +628,7 @@ $breakpoints: (
     margin-bottom: $size-small;
   }
 
-  @elseif $variant == '4' {
+  @else if $variant == '4' {
     font-size: $h4-font-size;
     font-weight: $font-bold;
     line-height: $line-height-extra-small;
@@ -636,7 +636,7 @@ $breakpoints: (
     margin-bottom: $size-small;
   }
 
-  @elseif $variant == '5' {
+  @else if $variant == '5' {
     font-size: $h5-font-size;
     font-weight: $font-bold;
     line-height: $line-height-extra-small;
@@ -644,7 +644,7 @@ $breakpoints: (
     margin-bottom: $size-small;
   }
 
-  @elseif $variant == '6' {
+  @else if $variant == '6' {
     font-size: $h6-font-size;
     font-weight: $font-normal;
     line-height: $line-height-extra-small;

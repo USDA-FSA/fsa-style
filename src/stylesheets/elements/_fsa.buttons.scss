@@ -148,7 +148,7 @@ $button-plain-border-width: 0;
 
   }
 
-  @elseif $variant == 'primary' {
+  @else if $variant == 'primary' {
 
     background-color: $button-primary;
 
@@ -174,7 +174,7 @@ $button-plain-border-width: 0;
 
   }
 
-  @elseif $variant == 'tertiary' {
+  @else if $variant == 'tertiary' {
 
     background-color: $button-tertiary;
 
@@ -197,7 +197,7 @@ $button-plain-border-width: 0;
 
   }
 
-  @elseif $variant == 'secondary' {
+  @else if $variant == 'secondary' {
 
     background-color: $button-alt;
     box-shadow: 0 0 0 $button-alt-border-width $button-alt-border inset;
@@ -235,19 +235,19 @@ $button-plain-border-width: 0;
 
   }
 
-  @elseif $variant == 'block' {
+  @else if $variant == 'block' {
     width: 100%;
     display: flex;
     justify-content: center;
   }
 
-  @elseif $variant == 'inline' {
+  @else if $variant == 'inline' {
     display: inline-block;
     display: inline-flex;
     width: auto;
   }
 
-  @elseif $variant == 'small' {
+  @else if $variant == 'small' {
 
     height: $button-height--sm;
     // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon Shorthand
@@ -256,7 +256,7 @@ $button-plain-border-width: 0;
 
   }
 
-  @elseif $variant == 'medium' {
+  @else if $variant == 'medium' {
 
     height: $button-height;
     // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon Shorthand
@@ -265,7 +265,7 @@ $button-plain-border-width: 0;
 
   }
 
-  @elseif $variant == 'large' {
+  @else if $variant == 'large' {
 
     height: $button-height--lg;
 
@@ -276,7 +276,7 @@ $button-plain-border-width: 0;
 
   }
 
-  @elseif $variant == 'flat' {
+  @else if $variant == 'flat' {
 
     text-align: left;
     height: auto;
@@ -323,7 +323,7 @@ $button-plain-border-width: 0;
 
   }
 
-  @elseif $variant == 'plain' {
+  @else if $variant == 'plain' {
 
     text-align: left;
     height: auto;

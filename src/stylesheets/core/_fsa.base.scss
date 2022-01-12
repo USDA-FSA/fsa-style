@@ -89,7 +89,7 @@ kbd {
   color: $color-fsa-tertiary;
   border: 1px solid $color-fsa-tertiary-200;
   box-shadow: 0 1px 0 $color-fsa-tertiary-200;
-  border-radius: ($radius-s = .1rem);
+  border-radius: $radius-s;
   font-weight: $font-bold;
   display: inline-block;
   white-space: nowrap;
