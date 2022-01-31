@@ -5,6 +5,7 @@
   $component-spacing: $size-small;
 
   & {
+    width: 100%;
     background-color: $component-bgcolor;
     padding-top: $component-spacing;
     padding-bottom: ($component-spacing / 2);
