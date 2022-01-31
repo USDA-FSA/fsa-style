@@ -21,6 +21,12 @@
     min-width: 10ch; // for browsers that support ch unit
   }
 
+  &--error {
+    // border-color: $form-error-color;
+    // box-shadow: 0 0 0 1px $form-error-color inset;
+    // background-color: $form-error-color-bg;
+  }
+
   &--small {
     @include font-size(2);
     min-width: 7.2rem;
@@ -67,7 +73,14 @@
       display: block;
       width: 100%;
       appearance: initial;
+      background: transparent;
       -moz-appearance: textfield;
+    }
+
+    &.fsa-input--error {
+      .fsa-spinbox--error & {
+        box-shadow: none;
+      }
     }
 
     &[disabled] {}
