@@ -12,7 +12,7 @@
   $nav-spacing-unit: $size-default;
 
   & {
-
+    width: 100%;
     @media print {
       border-bottom-color: $color-fsa-tertiary-200;
     }
