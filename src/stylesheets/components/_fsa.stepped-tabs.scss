@@ -13,6 +13,7 @@
   & {
     display: none;
     @media (min-width: 20em) {
+      width: 100%;
       margin: $size-medium 0;
       display: block;
       overflow: auto;
