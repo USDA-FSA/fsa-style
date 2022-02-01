@@ -53,15 +53,18 @@
     }
 
     &--group {
-      @include font-size(2);
-      padding-top: $size-base;
-      padding-bottom: $size-base;
-      font-weight: $font-bold;
-      text-transform: uppercase;
-      background-color: $color-fsa-tertiary-100;
-      position: sticky;
-      top: 0;
-      z-index: 1;
+
+      & {
+        @include font-size(2);
+        padding-top: $size-base;
+        padding-bottom: $size-base;
+        font-weight: $font-bold;
+        text-transform: uppercase;
+        background-color: $color-fsa-tertiary-100;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
 
       .fsa-select-multi--error & {
         background-color: shade($form-error-color-bg, 4%);
@@ -69,24 +72,9 @@
 
     }
 
-    // &:hover:not(.fsa-select-multi__item--group) {
-
-    //   background-color: tint($color-fsa-tertiary, 94%);
-
-    //   // scss-lint:disable SelectorFormat
-    //   .fsa-select-multi--disabled & {
-    //     background-color: $form-disabled-bg-color;
-    //   }
-
-    // }
-
-    &:active {
-      background-color: white;
-    }
-
   }
 
-  &__check {}
+  // &__check {}
 
   &__label {
 
