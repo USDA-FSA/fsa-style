@@ -4,6 +4,7 @@
 
   & {
     @extend .usa-alert;
+    width: 100%;
     padding: $size-default;
     margin-top: $size-medium;
     margin-bottom: $size-medium;

@@ -5,6 +5,7 @@
   $component-spacing: $size-base; // .4rem / 4px
 
   & {
+    width: 100%;
     background-color: $component-bgcolor;
     color: $component-text-color;
   }

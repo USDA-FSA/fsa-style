@@ -5,6 +5,12 @@
     display: inline-flex;
     align-items: stretch;
     background-color: $color-white;
+    .fsa-spinbox--error & {
+      border-color: $form-error-color;
+      box-shadow: 0 0 0 1px $form-error-color inset;
+      background-color: $form-error-color-bg;
+    }
+
     &:focus-within {
       outline: 3px solid $color-focus;
     }

@@ -1,15 +1,21 @@
 .fsa-select-multi {
 
+  & {
+    position: relative;
+  }
+
   &__list {
 
-    @include reset-ul();
-    overflow: auto;
-    scroll-behavior: smooth;
-    max-height: 190px;
-    padding: $size-base 0;
-    border: 1px solid $form-outline-color;
-    border-radius: $form-border-radius;
-    background-color: $color-fsa-white;
+    & {
+      @include reset-ul();
+      resize: vertical;
+      overflow: auto;
+      scroll-behavior: smooth;
+      height: 190px;
+      border: 1px solid $form-outline-color;
+      border-radius: $form-border-radius;
+      background-color: $color-fsa-white;
+    }
 
     // scss-lint:disable SelectorFormat
     .fsa-select-multi--disabled & {
@@ -32,33 +38,43 @@
     max-height: 190px;
     padding: $size-base 0 0 ($size-base * 2);
     background-color: $color-fsa-white;
-
   }
 
   &__item {
 
-    @include reset-li();
-    position: relative;
-    padding: 0 $size-small;
+    & {
+      @include reset-li();
+      position: relative;
+      padding: 0 $size-small;
+    }
 
-    &:hover {
+    &:first-child:not(.fsa-select-multi__item--group) {
+      margin-top: $size-base;
+    }
 
-      background-color: tint($color-fsa-tertiary, 94%);
+    &--group {
 
-      // scss-lint:disable SelectorFormat
-      .fsa-select-multi--disabled & {
-        background-color: $form-disabled-bg-color;
+      & {
+        @include font-size(2);
+        padding-top: $size-base;
+        padding-bottom: $size-base;
+        font-weight: $font-bold;
+        text-transform: uppercase;
+        background-color: $color-fsa-tertiary-100;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
+
+      .fsa-select-multi--error & {
+        background-color: shade($form-error-color-bg, 4%);
       }
 
     }
 
-    &:active {
-      background-color: white;
-    }
-
   }
 
-  &__check {}
+  // &__check {}
 
   &__label {
 

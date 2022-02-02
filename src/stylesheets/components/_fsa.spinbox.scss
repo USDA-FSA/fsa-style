@@ -16,9 +16,15 @@
     @include font-size(3);
     display: block;
     vertical-align: middle;
+    background-color: $color-white;
     position: relative;
     min-width: 8.2rem;
     min-width: 10ch; // for browsers that support ch unit
+  }
+
+  &--error {
+    box-shadow: 0 0 0 2px $form-error-color inset;
+    background-color: $form-error-color-bg;
   }
 
   &--small {
@@ -67,7 +73,14 @@
       display: block;
       width: 100%;
       appearance: initial;
+      background: transparent;
       -moz-appearance: textfield;
+    }
+
+    &.fsa-input--error {
+      .fsa-spinbox--error & {
+        box-shadow: none;
+      }
     }
 
     &[disabled] {}
@@ -98,12 +111,9 @@
 
     .fsa-adjust__spinbox & {
 
-      // background-color: transparent;
-      // border-color: transparentize($form-outline-color, .5);
 
       &:hover,
       &:focus {
-        // background-color: $color-white;
         &:not([disabled]) {
           border-color: $button-border-color-hover;
         }

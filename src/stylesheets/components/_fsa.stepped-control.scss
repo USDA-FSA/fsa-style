@@ -13,6 +13,7 @@
     border-right-width: 0;
     padding: $component-padding;
     transition: all .23s ease-in-out;
+    width: 100%;
 
     @include breakpoint(L) {
       border-left-width: 1px;
