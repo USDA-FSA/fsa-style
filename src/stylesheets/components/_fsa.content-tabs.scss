@@ -40,8 +40,12 @@
     box-shadow: none;
   }
 
-  &--vertical-left {}
-  &--vertical-right {}
+  &--vertical-left {
+    box-shadow: -1px 0 0 0 $color-fsa-tertiary-200 inset;
+  }
+  &--vertical-right {
+    box-shadow: 1px 0 0 0 $color-fsa-tertiary-200 inset;
+  }
 
   &--light {
     @include overflow-gradient( $bgAll: #ffffff, $bgShadow: $color-fsa-tertiary-100 );
@@ -99,9 +103,18 @@
       flex: 1;
       text-align: right;
     }
+
     .fsa-content-tabs--vertical-left &,
     .fsa-content-tabs--vertical-right & {
+      margin-top: $size-default;
       text-align: initial;
+    }
+
+    .fsa-content-tabs--vertical-left & {
+      padding-right: $tab-padding * 1.5;
+    }
+    .fsa-content-tabs--vertical-right & {
+      padding-left: $tab-padding * 1.5;
     }
 
     // scss-lint:disable SelectorFormat
@@ -217,6 +230,17 @@
     padding-bottom: ($tab-padding + $size-base);
     position: relative;
 
+    .fsa-content-tabs--vertical-left & {
+      padding-top: ($tab-padding / 2);
+      padding-bottom: ($tab-padding / 2);
+      padding-right: $tab-padding * 1.5;
+    }
+    .fsa-content-tabs--vertical-right & {
+      padding-top: ($tab-padding / 2);
+      padding-bottom: ($tab-padding / 2);
+      padding-left: $tab-padding * 1.5;
+    }
+
     @media print {
       color: $color-fsa-tertiary-300;
     }
@@ -235,6 +259,13 @@
     .fsa-content-tabs__label--active & {
 
       box-shadow: 0 (-$size-base) 0 0 $color-fsa-secondary inset;
+
+      .fsa-content-tabs--vertical-left & {
+        box-shadow: (-$size-base) 0 0 0 $color-fsa-secondary inset;
+      }
+      .fsa-content-tabs--vertical-right & {
+        box-shadow: ($size-base) 0 0 0 $color-fsa-secondary inset;
+      }
 
       @media print {
         font-weight: $font-bold;
@@ -258,10 +289,23 @@
 
     .fsa-content-tabs__label:hover & {
       box-shadow: 0 (-$size-base) 0 0 $color-fsa-tertiary-300 inset;
+      .fsa-content-tabs--vertical-left & {
+        box-shadow: (-$size-base) 0 0 0 $color-fsa-tertiary-300 inset;
+      }
+      .fsa-content-tabs--vertical-right & {
+        box-shadow: ($size-base) 0 0 0 $color-fsa-tertiary-300 inset;
+      }
     }
 
     .fsa-content-tabs__label:active & {
       box-shadow: 0 (-$size-base) 0 0 $color-fsa-secondary inset;
+      .fsa-content-tabs--vertical-left & {
+        box-shadow: (-$size-base) 0 0 0 $color-fsa-secondary inset;
+      }
+      .fsa-content-tabs--vertical-right & {
+        box-shadow: (4$size-base) 0 0 0 $color-fsa-secondary inset;
+      }
+
     }
 
   }
