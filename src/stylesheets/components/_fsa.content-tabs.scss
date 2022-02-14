@@ -33,6 +33,16 @@
     margin-top: $size-default;
   }
 
+  &--vertical-left,
+  &--vertical-right {
+    flex-direction: column;
+    align-items: initial;
+    box-shadow: none;
+  }
+
+  &--vertical-left {}
+  &--vertical-right {}
+
   &--light {
     @include overflow-gradient( $bgAll: #ffffff, $bgShadow: $color-fsa-tertiary-100 );
   }
@@ -60,6 +70,11 @@
       margin-left: 0;
     }
 
+    .fsa-content-tabs--vertical-left &,
+    .fsa-content-tabs--vertical-right & {
+      display: block;
+    }
+
     // scss-lint:disable SelectorFormat
     .fsa-content-tabs--justified & {
       @include breakpoint(L) {
@@ -79,9 +94,15 @@
 
   &__aside {
 
-    display: block;
-    flex: 1;
-    text-align: right;
+    & {
+      display: block;
+      flex: 1;
+      text-align: right;
+    }
+    .fsa-content-tabs--vertical-left &,
+    .fsa-content-tabs--vertical-right & {
+      text-align: initial;
+    }
 
     // scss-lint:disable SelectorFormat
     .fsa-content-tabs--justified &,
@@ -103,26 +124,36 @@
     display: table-cell;
     vertical-align: bottom;
 
+    .fsa-content-tabs--vertical-left &,
+    .fsa-content-tabs--vertical-right & {
+      display: block;
+    }
+
   }
 
   &__label {
 
-    @include font-size(2);
-    @include reset-button();
-    display: block;
-    width: 100%;
-    text-decoration: none;
-    text-align: center;
-    color: $color-fsa-tertiary;
-    padding-right: $tab-padding;
-    padding-left: $tab-padding;
-    white-space: nowrap;
+    & {
+      @include font-size(2);
+      @include reset-button();
+      display: block;
+      width: 100%;
+      text-decoration: none;
+      text-align: center;
+      color: $color-fsa-tertiary;
+      padding-right: $tab-padding;
+      padding-left: $tab-padding;
+      white-space: nowrap;
+    }
 
-    &[type] {
-      &:focus {
-        box-shadow: none;
-        // outline: none;
-      }
+    .fsa-content-tabs--vertical-left &,
+    .fsa-content-tabs--vertical-right & {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    &[type]:focus {
+      box-shadow: none;
     }
 
     @include breakpoint(L) {
@@ -193,6 +224,11 @@
     &:hover,
     &:focus {
       box-shadow: 0 (-$size-base / 2) 0 0 $color-fsa-tertiary-300 inset;
+    }
+
+    .fsa-content-tabs--vertical-left &,
+    .fsa-content-tabs--vertical-right & {
+      justify-content: initial;
     }
 
     // scss-lint:disable SelectorFormat
