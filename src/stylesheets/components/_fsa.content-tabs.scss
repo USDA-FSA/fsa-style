@@ -159,6 +159,8 @@
     .fsa-content-tabs--vertical-right & {
       padding-right: 0;
       padding-left: 0;
+      white-space: normal;
+      text-align: left;
     }
 
     &[type]:focus {
@@ -207,7 +209,7 @@
     }
 
     // scss-lint:disable SelectorFormat
-    .fsa-content-tabs--justified & {
+    .fsa-content-tabs--justified:not(.fsa-content-tabs--vertical-left):not(.fsa-content-tabs--vertical-right) & {
       @include breakpoint(L) {
         padding-left: ($tab-padding / 2);
         padding-right: ($tab-padding / 2);
@@ -218,13 +220,15 @@
 
   &__label-text {
 
-    display: flex;
-    justify-content: center;
-    gap: $size-small;
-    align-items: center;
-    padding-top: $tab-padding;
-    padding-bottom: ($tab-padding + $size-base);
-    position: relative;
+    & {
+      display: flex;
+      justify-content: center;
+      gap: $size-small;
+      align-items: center;
+      padding-top: $tab-padding;
+      padding-bottom: ($tab-padding + $size-base);
+      position: relative;
+    }
 
     .fsa-content-tabs--vertical-left & {
       padding-top: ($tab-padding / 2);
@@ -272,8 +276,26 @@
     }
 
     .fsa-content-tabs__label--small & {
+
       padding-top: ($tab-padding - $size-base);
       padding-bottom: $tab-padding;
+
+      .fsa-content-tabs--vertical-left &,
+      .fsa-content-tabs--vertical-right & {
+        padding-top: ($tab-padding / 2);
+        padding-bottom: ($tab-padding / 2);
+      }
+
+    }
+
+    .fsa-content-tabs__label--large & {
+
+      .fsa-content-tabs--vertical-left &,
+      .fsa-content-tabs--vertical-right & {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
     }
 
     .fsa-content-tabs__label--unsaved &:after {
