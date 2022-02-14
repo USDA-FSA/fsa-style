@@ -4,23 +4,18 @@
 
   & {
 
-    @include overflow-gradient();
+    &:not(.fsa-content-tabs--vertical-left):not(.fsa-content-tabs--vertical-right) {
+      @include overflow-gradient();
+    }
 
     @media (min-width: 75em) {
       background-image: none;
     }
 
     display: flex;
-    margin-left: -$size-default;
-    margin-right: -$size-default;
     align-items: center;
     box-shadow: 0 -1px 0 0 $color-fsa-tertiary-200 inset;
     width: 100%;
-
-    @include breakpoint(L) {
-      margin-left: 0;
-      margin-right: 0;
-    }
 
     @media print {
       background-color: transparent;
@@ -77,6 +72,7 @@
     .fsa-content-tabs--vertical-left &,
     .fsa-content-tabs--vertical-right & {
       display: block;
+      margin-left: 0;
     }
 
     // scss-lint:disable SelectorFormat
