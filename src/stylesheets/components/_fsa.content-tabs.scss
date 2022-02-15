@@ -1,10 +1,12 @@
-.fsa-content-tabs {
+$contentTabs: #{$contentTabs};
+
+.#{$contentTabs} {
 
   $tab-padding: $size-small;
 
   & {
 
-    &:not(.fsa-content-tabs--vertical-left):not(.fsa-content-tabs--vertical-right) {
+    &:not(.#{$contentTabs}--vertical-left):not(.#{$contentTabs}--vertical-right) {
       @include overflow-gradient();
     }
 
@@ -69,20 +71,20 @@
       margin-left: 0;
     }
 
-    .fsa-content-tabs--vertical-left &,
-    .fsa-content-tabs--vertical-right & {
+    .#{$contentTabs}--vertical-left &,
+    .#{$contentTabs}--vertical-right & {
       display: block;
       margin-left: 0;
     }
 
     // scss-lint:disable SelectorFormat
-    .fsa-content-tabs--justified & {
+    .#{$contentTabs}--justified & {
       @include breakpoint(L) {
         width: 100%;
       }
     }
 
-    .fsa-content-tabs--justified-equal & {
+    .#{$contentTabs}--justified-equal & {
       @include breakpoint(L) {
         width: 100%;
         table-layout: fixed;
@@ -100,22 +102,22 @@
       text-align: right;
     }
 
-    .fsa-content-tabs--vertical-left &,
-    .fsa-content-tabs--vertical-right & {
+    .#{$contentTabs}--vertical-left &,
+    .#{$contentTabs}--vertical-right & {
       margin-top: $size-default;
       text-align: initial;
     }
 
-    .fsa-content-tabs--vertical-left & {
+    .#{$contentTabs}--vertical-left & {
       padding-right: $tab-padding * 1.5;
     }
-    .fsa-content-tabs--vertical-right & {
+    .#{$contentTabs}--vertical-right & {
       padding-left: $tab-padding * 1.5;
     }
 
     // scss-lint:disable SelectorFormat
-    .fsa-content-tabs--justified &,
-    .fsa-content-tabs--justified-equal & {
+    .#{$contentTabs}--justified &,
+    .#{$contentTabs}--justified-equal & {
       @include breakpoint(L) {
         display: none;
       }
@@ -133,8 +135,8 @@
     display: table-cell;
     vertical-align: bottom;
 
-    .fsa-content-tabs--vertical-left &,
-    .fsa-content-tabs--vertical-right & {
+    .#{$contentTabs}--vertical-left &,
+    .#{$contentTabs}--vertical-right & {
       display: block;
     }
 
@@ -155,8 +157,8 @@
       white-space: nowrap;
     }
 
-    .fsa-content-tabs--vertical-left &,
-    .fsa-content-tabs--vertical-right & {
+    .#{$contentTabs}--vertical-left &,
+    .#{$contentTabs}--vertical-right & {
       padding-right: 0;
       padding-left: 0;
       white-space: normal;
@@ -175,14 +177,14 @@
       white-space: normal;
     }
 
-    .fsa-content-tabs__item:first-child & {
+    .#{$contentTabs}__item:first-child & {
       padding-left: 0;
       @include breakpoint(L) {
         padding-left: 0;
       }
     }
 
-    .fsa-content-tabs__item:last-child & {
+    .#{$contentTabs}__item:last-child & {
       @include breakpoint(L) {
         padding-right: 0;
       }
@@ -209,7 +211,7 @@
     }
 
     // scss-lint:disable SelectorFormat
-    .fsa-content-tabs--justified:not(.fsa-content-tabs--vertical-left):not(.fsa-content-tabs--vertical-right) & {
+    .#{$contentTabs}--justified:not(.#{$contentTabs}--vertical-left):not(.#{$contentTabs}--vertical-right) & {
       @include breakpoint(L) {
         padding-left: ($tab-padding / 2);
         padding-right: ($tab-padding / 2);
@@ -230,12 +232,12 @@
       position: relative;
     }
 
-    .fsa-content-tabs--vertical-left & {
+    .#{$contentTabs}--vertical-left & {
       padding-top: ($tab-padding / 2);
       padding-bottom: ($tab-padding / 2);
       padding-right: $tab-padding * 1.5;
     }
-    .fsa-content-tabs--vertical-right & {
+    .#{$contentTabs}--vertical-right & {
       padding-top: ($tab-padding / 2);
       padding-bottom: ($tab-padding / 2);
       padding-left: $tab-padding * 1.5;
@@ -250,20 +252,20 @@
       box-shadow: 0 (-$size-base / 2) 0 0 $color-fsa-tertiary-300 inset;
     }
 
-    .fsa-content-tabs--vertical-left &,
-    .fsa-content-tabs--vertical-right & {
+    .#{$contentTabs}--vertical-left &,
+    .#{$contentTabs}--vertical-right & {
       justify-content: initial;
     }
 
     // scss-lint:disable SelectorFormat
-    .fsa-content-tabs__label--active & {
+    .#{$contentTabs}__label--active & {
 
       box-shadow: 0 (-$size-base) 0 0 $color-fsa-secondary inset;
 
-      .fsa-content-tabs--vertical-left & {
+      .#{$contentTabs}--vertical-left & {
         box-shadow: (-$size-base) 0 0 0 $color-fsa-secondary inset;
       }
-      .fsa-content-tabs--vertical-right & {
+      .#{$contentTabs}--vertical-right & {
         box-shadow: ($size-base) 0 0 0 $color-fsa-secondary inset;
       }
 
@@ -275,52 +277,52 @@
 
     }
 
-    .fsa-content-tabs__label--small & {
+    .#{$contentTabs}__label--small & {
 
       padding-top: ($tab-padding - $size-base);
       padding-bottom: $tab-padding;
 
-      .fsa-content-tabs--vertical-left &,
-      .fsa-content-tabs--vertical-right & {
+      .#{$contentTabs}--vertical-left &,
+      .#{$contentTabs}--vertical-right & {
         padding-top: ($tab-padding / 2);
         padding-bottom: ($tab-padding / 2);
       }
 
     }
 
-    .fsa-content-tabs__label--large & {
+    .#{$contentTabs}__label--large & {
 
-      .fsa-content-tabs--vertical-left &,
-      .fsa-content-tabs--vertical-right & {
+      .#{$contentTabs}--vertical-left &,
+      .#{$contentTabs}--vertical-right & {
         padding-top: 0;
         padding-bottom: 0;
       }
 
     }
 
-    .fsa-content-tabs__label--unsaved &:after {
+    .#{$contentTabs}__label--unsaved &:after {
       content: '\2022';
       color: $color-fsa-red;
       font-size: $size-medium;
       line-height: $line-height-flat;
     }
 
-    .fsa-content-tabs__label:hover & {
+    .#{$contentTabs}__label:hover & {
       box-shadow: 0 (-$size-base) 0 0 $color-fsa-tertiary-300 inset;
-      .fsa-content-tabs--vertical-left & {
+      .#{$contentTabs}--vertical-left & {
         box-shadow: (-$size-base) 0 0 0 $color-fsa-tertiary-300 inset;
       }
-      .fsa-content-tabs--vertical-right & {
+      .#{$contentTabs}--vertical-right & {
         box-shadow: ($size-base) 0 0 0 $color-fsa-tertiary-300 inset;
       }
     }
 
-    .fsa-content-tabs__label:active & {
+    .#{$contentTabs}__label:active & {
       box-shadow: 0 (-$size-base) 0 0 $color-fsa-secondary inset;
-      .fsa-content-tabs--vertical-left & {
+      .#{$contentTabs}--vertical-left & {
         box-shadow: (-$size-base) 0 0 0 $color-fsa-secondary inset;
       }
-      .fsa-content-tabs--vertical-right & {
+      .#{$contentTabs}--vertical-right & {
         box-shadow: (4$size-base) 0 0 0 $color-fsa-secondary inset;
       }
 
