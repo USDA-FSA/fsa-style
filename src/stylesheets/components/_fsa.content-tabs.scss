@@ -1,333 +1,357 @@
-$contentTabs: #{$contentTabs};
+$contentTabs: fsa-content-tabs;
 
-.#{$contentTabs} {
+// \@s
+// \@m
+// \@l
+// \@xl
 
-  $tab-padding: $size-small;
+@mixin fsa-content-tabs($breakpoint: '') {
 
-  & {
+  .#{$contentTabs} {
 
-    &:not(.#{$contentTabs}--vertical-left):not(.#{$contentTabs}--vertical-right) {
-      @include overflow-gradient();
-    }
-
-    @media (min-width: 75em) {
-      background-image: none;
-    }
-
-    display: flex;
-    align-items: center;
-    box-shadow: 0 -1px 0 0 $color-fsa-tertiary-200 inset;
-    width: 100%;
-
-    @media print {
-      background-color: transparent;
-      background-image: none;
-    }
-
-  }
-
-  & + & {
-    margin-top: $size-default;
-  }
-
-  &--vertical-left,
-  &--vertical-right {
-    flex-direction: column;
-    align-items: initial;
-    box-shadow: none;
-  }
-
-  &--vertical-left {
-    box-shadow: -1px 0 0 0 $color-fsa-tertiary-200 inset;
-  }
-  &--vertical-right {
-    box-shadow: 1px 0 0 0 $color-fsa-tertiary-200 inset;
-  }
-
-  &--light {
-    @include overflow-gradient( $bgAll: #ffffff, $bgShadow: $color-fsa-tertiary-100 );
-  }
-
-  &--contrast {
-    @include overflow-gradient( $bgAll: $color-fsa-tertiary-100 );
-  }
-
-  &--justified {}
-
-  &__list {
-
-    display: table;
-    list-style: none;
-    padding: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: $size-default;
-
-    @include breakpoint(M) {
-      width: auto;
-    }
-
-    @include breakpoint(L) {
-      margin-left: 0;
-    }
-
-    .#{$contentTabs}--vertical-left &,
-    .#{$contentTabs}--vertical-right & {
-      display: block;
-      margin-left: 0;
-    }
-
-    // scss-lint:disable SelectorFormat
-    .#{$contentTabs}--justified & {
-      @include breakpoint(L) {
-        width: 100%;
-      }
-    }
-
-    .#{$contentTabs}--justified-equal & {
-      @include breakpoint(L) {
-        width: 100%;
-        table-layout: fixed;
-      }
-
-    }
-
-  }
-
-  &__aside {
+    $tab-padding: $size-small;
 
     & {
-      display: block;
-      flex: 1;
-      text-align: right;
-    }
 
-    .#{$contentTabs}--vertical-left &,
-    .#{$contentTabs}--vertical-right & {
-      margin-top: $size-default;
-      text-align: initial;
-    }
-
-    .#{$contentTabs}--vertical-left & {
-      padding-right: $tab-padding * 1.5;
-    }
-    .#{$contentTabs}--vertical-right & {
-      padding-left: $tab-padding * 1.5;
-    }
-
-    // scss-lint:disable SelectorFormat
-    .#{$contentTabs}--justified &,
-    .#{$contentTabs}--justified-equal & {
-      @include breakpoint(L) {
-        display: none;
+      &:not(.#{$contentTabs}--vertical-left#{$breakpoint}):not(.#{$contentTabs}--vertical-right#{$breakpoint}) {
+        @include overflow-gradient();
       }
-    }
 
-    @include breakpoint(L, down) {
-      margin-right: $size-default;
-    }
-
-  }
-
-  &__item {
-
-    display: flex;
-    display: table-cell;
-    vertical-align: bottom;
-
-    .#{$contentTabs}--vertical-left &,
-    .#{$contentTabs}--vertical-right & {
-      display: block;
-    }
-
-  }
-
-  &__label {
-
-    & {
-      @include font-size(2);
-      @include reset-button();
-      display: block;
-      width: 100%;
-      text-decoration: none;
-      text-align: center;
-      color: $color-fsa-tertiary;
-      padding-right: $tab-padding;
-      padding-left: $tab-padding;
-      white-space: nowrap;
-    }
-
-    .#{$contentTabs}--vertical-left &,
-    .#{$contentTabs}--vertical-right & {
-      padding-right: 0;
-      padding-left: 0;
-      white-space: normal;
-      text-align: left;
-    }
-
-    &[type]:focus {
-      box-shadow: none;
-    }
-
-    @include breakpoint(L) {
-      @include font-size(3);
-    }
-
-    @include breakpoint(XL) {
-      white-space: normal;
-    }
-
-    .#{$contentTabs}__item:first-child & {
-      padding-left: 0;
-      @include breakpoint(L) {
-        padding-left: 0;
+      @media (min-width: 75em) {
+        background-image: none;
       }
-    }
 
-    .#{$contentTabs}__item:last-child & {
-      @include breakpoint(L) {
-        padding-right: 0;
-      }
-    }
-
-    &:link,
-    &:visited {
-      color: $color-fsa-tertiary;
-    }
-
-    &:focus {
-      box-shadow: none;
-      outline-offset: -3px;
-    }
-
-    &--small {
-      @include font-size(2);
-    }
-
-    &--large {
-      @include breakpoint(L) {
-        @include font-size(4);
-      }
-    }
-
-    // scss-lint:disable SelectorFormat
-    .#{$contentTabs}--justified:not(.#{$contentTabs}--vertical-left):not(.#{$contentTabs}--vertical-right) & {
-      @include breakpoint(L) {
-        padding-left: ($tab-padding / 2);
-        padding-right: ($tab-padding / 2);
-      }
-    }
-
-  }
-
-  &__label-text {
-
-    & {
       display: flex;
-      justify-content: center;
-      gap: $size-small;
       align-items: center;
-      padding-top: $tab-padding;
-      padding-bottom: ($tab-padding + $size-base);
-      position: relative;
-    }
-
-    .#{$contentTabs}--vertical-left & {
-      padding-top: ($tab-padding / 2);
-      padding-bottom: ($tab-padding / 2);
-      padding-right: $tab-padding * 1.5;
-    }
-    .#{$contentTabs}--vertical-right & {
-      padding-top: ($tab-padding / 2);
-      padding-bottom: ($tab-padding / 2);
-      padding-left: $tab-padding * 1.5;
-    }
-
-    @media print {
-      color: $color-fsa-tertiary-300;
-    }
-
-    &:hover,
-    &:focus {
-      box-shadow: 0 (-$size-base / 2) 0 0 $color-fsa-tertiary-300 inset;
-    }
-
-    .#{$contentTabs}--vertical-left &,
-    .#{$contentTabs}--vertical-right & {
-      justify-content: initial;
-    }
-
-    // scss-lint:disable SelectorFormat
-    .#{$contentTabs}__label--active & {
-
-      box-shadow: 0 (-$size-base) 0 0 $color-fsa-secondary inset;
-
-      .#{$contentTabs}--vertical-left & {
-        box-shadow: (-$size-base) 0 0 0 $color-fsa-secondary inset;
-      }
-      .#{$contentTabs}--vertical-right & {
-        box-shadow: ($size-base) 0 0 0 $color-fsa-secondary inset;
-      }
+      box-shadow: 0 -1px 0 0 $color-fsa-tertiary-200 inset;
+      width: 100%;
 
       @media print {
-        font-weight: $font-bold;
-        color: black;
+        background-color: transparent;
+        background-image: none;
+      }
+
+    }
+
+    & + & {
+      margin-top: $size-default;
+    }
+
+    &--vertical-left#{$breakpoint},
+    &--vertical-right#{$breakpoint} {
+      flex-direction: column;
+      align-items: initial;
+      box-shadow: none;
+    }
+
+    &--vertical-left#{$breakpoint} {
+      box-shadow: -1px 0 0 0 $color-fsa-tertiary-200 inset;
+    }
+    &--vertical-right#{$breakpoint} {
+      box-shadow: 1px 0 0 0 $color-fsa-tertiary-200 inset;
+    }
+
+    &--light {
+      @include overflow-gradient( $bgAll: #ffffff, $bgShadow: $color-fsa-tertiary-100 );
+    }
+
+    &--contrast {
+      @include overflow-gradient( $bgAll: $color-fsa-tertiary-100 );
+    }
+
+    &--justified {}
+
+    &__list {
+
+      display: table;
+      list-style: none;
+      padding: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: $size-default;
+
+      @include breakpoint(M) {
+        width: auto;
+      }
+
+      @include breakpoint(L) {
+        margin-left: 0;
+      }
+
+      .#{$contentTabs}--vertical-left#{$breakpoint} &,
+      .#{$contentTabs}--vertical-right#{$breakpoint} & {
+        display: block;
+        margin-left: 0;
+      }
+
+      // scss-lint:disable SelectorFormat
+      .#{$contentTabs}--justified & {
+        @include breakpoint(L) {
+          width: 100%;
+        }
+      }
+
+      .#{$contentTabs}--justified-equal & {
+        @include breakpoint(L) {
+          width: 100%;
+          table-layout: fixed;
+        }
+
+      }
+
+    }
+
+    &__aside {
+
+      & {
+        display: block;
+        flex: 1;
+        text-align: right;
+      }
+
+      .#{$contentTabs}--vertical-left#{$breakpoint} &,
+      .#{$contentTabs}--vertical-right#{$breakpoint} & {
+        margin-top: $size-default;
+        text-align: initial;
+      }
+
+      .#{$contentTabs}--vertical-left#{$breakpoint} & {
+        padding-right: $tab-padding * 1.5;
+      }
+      .#{$contentTabs}--vertical-right#{$breakpoint} & {
+        padding-left: $tab-padding * 1.5;
+      }
+
+      // scss-lint:disable SelectorFormat
+      .#{$contentTabs}--justified#{$breakpoint} &,
+      .#{$contentTabs}--justified-equal#{$breakpoint} & {
+        @include breakpoint(L) {
+          display: none;
+        }
+      }
+
+      @include breakpoint(L, down) {
+        margin-right: $size-default;
+      }
+
+    }
+
+    &__item {
+
+      display: flex;
+      display: table-cell;
+      vertical-align: bottom;
+
+      .#{$contentTabs}--vertical-left#{$breakpoint} &,
+      .#{$contentTabs}--vertical-right#{$breakpoint} & {
+        display: block;
+      }
+
+    }
+
+    &__label {
+
+      & {
+        @include font-size(2);
+        @include reset-button();
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        text-align: center;
+        color: $color-fsa-tertiary;
+        padding-right: $tab-padding;
+        padding-left: $tab-padding;
+        white-space: nowrap;
+      }
+
+      .#{$contentTabs}--vertical-left#{$breakpoint} &,
+      .#{$contentTabs}--vertical-right#{$breakpoint} & {
+        padding-right: 0;
+        padding-left: 0;
+        white-space: normal;
+        text-align: left;
+      }
+
+      &[type]:focus {
         box-shadow: none;
       }
 
+      @include breakpoint(L) {
+        @include font-size(3);
+      }
+
+      @include breakpoint(XL) {
+        white-space: normal;
+      }
+
+      .#{$contentTabs}__item:first-child & {
+        padding-left: 0;
+        @include breakpoint(L) {
+          padding-left: 0;
+        }
+      }
+
+      .#{$contentTabs}__item:last-child & {
+        @include breakpoint(L) {
+          padding-right: 0;
+        }
+      }
+
+      &:link,
+      &:visited {
+        color: $color-fsa-tertiary;
+      }
+
+      &:focus {
+        box-shadow: none;
+        outline-offset: -3px;
+      }
+
+      &--small {
+        @include font-size(2);
+      }
+
+      &--large {
+        @include breakpoint(L) {
+          @include font-size(4);
+        }
+      }
+
+      // scss-lint:disable SelectorFormat
+      .#{$contentTabs}--justified#{$breakpoint}:not(.#{$contentTabs}--vertical-left#{$breakpoint}):not(.#{$contentTabs}--vertical-right#{$breakpoint}) & {
+        @include breakpoint(L) {
+          padding-left: ($tab-padding / 2);
+          padding-right: ($tab-padding / 2);
+        }
+      }
+
     }
 
-    .#{$contentTabs}__label--small & {
+    &__label-text {
 
-      padding-top: ($tab-padding - $size-base);
-      padding-bottom: $tab-padding;
+      & {
+        display: flex;
+        justify-content: center;
+        gap: $size-small;
+        align-items: center;
+        padding-top: $tab-padding;
+        padding-bottom: ($tab-padding + $size-base);
+        position: relative;
+      }
 
-      .#{$contentTabs}--vertical-left &,
-      .#{$contentTabs}--vertical-right & {
+      .#{$contentTabs}--vertical-left#{$breakpoint} & {
         padding-top: ($tab-padding / 2);
         padding-bottom: ($tab-padding / 2);
+        padding-right: $tab-padding * 1.5;
+      }
+      .#{$contentTabs}--vertical-right#{$breakpoint} & {
+        padding-top: ($tab-padding / 2);
+        padding-bottom: ($tab-padding / 2);
+        padding-left: $tab-padding * 1.5;
       }
 
-    }
-
-    .#{$contentTabs}__label--large & {
-
-      .#{$contentTabs}--vertical-left &,
-      .#{$contentTabs}--vertical-right & {
-        padding-top: 0;
-        padding-bottom: 0;
+      @media print {
+        color: $color-fsa-tertiary-300;
       }
 
-    }
-
-    .#{$contentTabs}__label--unsaved &:after {
-      content: '\2022';
-      color: $color-fsa-red;
-      font-size: $size-medium;
-      line-height: $line-height-flat;
-    }
-
-    .#{$contentTabs}__label:hover & {
-      box-shadow: 0 (-$size-base) 0 0 $color-fsa-tertiary-300 inset;
-      .#{$contentTabs}--vertical-left & {
-        box-shadow: (-$size-base) 0 0 0 $color-fsa-tertiary-300 inset;
+      &:hover,
+      &:focus {
+        box-shadow: 0 (-$size-base / 2) 0 0 $color-fsa-tertiary-300 inset;
       }
-      .#{$contentTabs}--vertical-right & {
-        box-shadow: ($size-base) 0 0 0 $color-fsa-tertiary-300 inset;
-      }
-    }
 
-    .#{$contentTabs}__label:active & {
-      box-shadow: 0 (-$size-base) 0 0 $color-fsa-secondary inset;
-      .#{$contentTabs}--vertical-left & {
-        box-shadow: (-$size-base) 0 0 0 $color-fsa-secondary inset;
+      .#{$contentTabs}--vertical-left#{$breakpoint} &,
+      .#{$contentTabs}--vertical-right#{$breakpoint} & {
+        justify-content: initial;
       }
-      .#{$contentTabs}--vertical-right & {
-        box-shadow: (4$size-base) 0 0 0 $color-fsa-secondary inset;
+
+      // scss-lint:disable SelectorFormat
+      .#{$contentTabs}__label--active & {
+
+        box-shadow: 0 (-$size-base) 0 0 $color-fsa-secondary inset;
+
+        .#{$contentTabs}--vertical-left#{$breakpoint} & {
+          box-shadow: (-$size-base) 0 0 0 $color-fsa-secondary inset;
+        }
+        .#{$contentTabs}--vertical-right#{$breakpoint} & {
+          box-shadow: ($size-base) 0 0 0 $color-fsa-secondary inset;
+        }
+
+        @media print {
+          font-weight: $font-bold;
+          color: black;
+          box-shadow: none;
+        }
+
+      }
+
+      .#{$contentTabs}__label--small & {
+
+        padding-top: ($tab-padding - $size-base);
+        padding-bottom: $tab-padding;
+
+        .#{$contentTabs}--vertical-left#{$breakpoint} &,
+        .#{$contentTabs}--vertical-right#{$breakpoint} & {
+          padding-top: ($tab-padding / 2);
+          padding-bottom: ($tab-padding / 2);
+        }
+
+      }
+
+      .#{$contentTabs}__label--large & {
+
+        .#{$contentTabs}--vertical-left#{$breakpoint} &,
+        .#{$contentTabs}--vertical-right#{$breakpoint} & {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+
+      }
+
+      .#{$contentTabs}__label--unsaved &:after {
+        content: '\2022';
+        color: $color-fsa-red;
+        font-size: $size-medium;
+        line-height: $line-height-flat;
+      }
+
+      .#{$contentTabs}__label:hover & {
+        box-shadow: 0 (-$size-base) 0 0 $color-fsa-tertiary-300 inset;
+        .#{$contentTabs}--vertical-left#{$breakpoint} & {
+          box-shadow: (-$size-base) 0 0 0 $color-fsa-tertiary-300 inset;
+        }
+        .#{$contentTabs}--vertical-right#{$breakpoint} & {
+          box-shadow: ($size-base) 0 0 0 $color-fsa-tertiary-300 inset;
+        }
+      }
+
+      .#{$contentTabs}__label:active & {
+        box-shadow: 0 (-$size-base) 0 0 $color-fsa-secondary inset;
+        .#{$contentTabs}--vertical-left#{$breakpoint} & {
+          box-shadow: (-$size-base) 0 0 0 $color-fsa-secondary inset;
+        }
+        .#{$contentTabs}--vertical-right#{$breakpoint} & {
+          box-shadow: (4$size-base) 0 0 0 $color-fsa-secondary inset;
+        }
+
       }
 
     }
 
   }
 
+}
+
+@include fsa-content-tabs();
+
+@include breakpoint(S) {
+  @include fsa-content-tabs(\@s);
+}
+@include breakpoint(M) {
+  @include fsa-content-tabs(\@m);
+}
+@include breakpoint(L) {
+  @include fsa-content-tabs(\@l);
+}
+@include breakpoint(XL) {
+  @include fsa-content-tabs(\@xl);
 }
