@@ -296,7 +296,7 @@
 
   &__sub-menu-bd {
 
-    padding: ($nav-spacing-unit) 0 ($nav-spacing-unit / 2);
+    padding: $nav-spacing-unit 0 calc($nav-spacing-unit / 2);
 
     // scss-lint:disable SelectorFormat
     .fsa-nav-global__list-item--multi-column & {
@@ -366,7 +366,7 @@
       display: block;
       color: $text-color;
       text-decoration: none;
-      padding: ($nav-spacing-unit / 3) ($nav-spacing-unit + $size-base);
+      padding: calc($nav-spacing-unit / 3) ($nav-spacing-unit + $size-base);
     }
 
     &:visited {

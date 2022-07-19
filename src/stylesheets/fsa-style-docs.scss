@@ -29,8 +29,8 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   --grid-demo-gutter: #{$fsa-grid-gutter};
   --grid-demo-bgcolor: #{transparentize($color-fsa-aqua, .92)};
   --grid-demo-repeating-width: calc(100% / var(--grid-demo-columns));
-  --grid-demo-column-width: calc((100% / var(--grid-demo-columns)) - var(--grid-demo-gutter));
-  --grid-demo-background-width: calc(100% + var(--grid-demo-gutter));
+  --grid-demo-column-width: ( calc(100% / var(--grid-demo-columns) ) - var(--grid-demo-gutter));
+  --grid-demo-background-width: (100% + var(--grid-demo-gutter));
   --grid-demo-background-columns: repeating-linear-gradient(
     to right,
     var(--grid-demo-bgcolor),
@@ -324,7 +324,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
         box-shadow: $shadow-size-overlay;
 
         .docs__nav--fixed & {
-          max-height: calc(100vh - 42px);
+          max-height: calc("100vh - 42px");
           border-top-color: $color-fsa-primary-900;
         }
 

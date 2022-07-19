@@ -46,7 +46,7 @@
 }
 
 @mixin fsa-grid-column-width($numerator, $denominator: $fsa-grid-columns) {
-  width: ($numerator / $denominator) * 100%;
+  width: calc( calc($numerator / $denominator) * 100%);
 }
 
 @mixin fsa-grid($namespace: '') {

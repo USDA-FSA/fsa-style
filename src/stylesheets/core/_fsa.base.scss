@@ -68,9 +68,9 @@ tt {
   font-size: 90%;
   color: $color-fsa-red-900;
   font-family: $font-mono;
-  border-radius: ($radius-s / 2);
+  border-radius: calc($radius-s / 2);
   background-color: $color-fsa-base-bg;
-  padding: ($size-base / 2);
+  padding: calc($size-base / 2);
   // border: 1px solid $color-fsa-tertiary-200;
 
   code {
@@ -85,7 +85,7 @@ tt {
 kbd {
   @include font-size(0);
   background-color: white;
-  padding: ($size-base * .25) ($size-base + ($size-base / 2));
+  padding: ($size-base * .25) ($size-base + calc($size-base / 2));
   color: $color-fsa-tertiary;
   border: 1px solid $color-fsa-tertiary-200;
   box-shadow: 0 1px 0 $color-fsa-tertiary-200;

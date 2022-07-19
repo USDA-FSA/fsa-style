@@ -19,7 +19,7 @@ $label-dismiss-width: 1.33em;
     cursor: initial;
     padding: $label-spacing ($label-spacing * 1.5);
     letter-spacing: .5px;
-    border-radius: ($radius-s / 2);
+    border-radius: calc($radius-s / 2);
     box-shadow: 0 -1px 0 adjust-color($color-fsa-tertiary, $alpha: -0.75) inset;
     a &,
     button & {

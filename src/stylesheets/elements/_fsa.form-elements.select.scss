@@ -192,7 +192,7 @@
     padding: 0;
 
     option {
-      padding: ($form-padding / 2) $form-padding;
+      padding: calc($form-padding / 2) $form-padding;
       &:hover {
         cursor: pointer;
         background-color: $color-fsa-tertiary-100;

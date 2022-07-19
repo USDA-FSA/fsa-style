@@ -2,7 +2,7 @@
 
   $button-width: $size-medium + .1rem;
   $button-width-large: $size-large;
-  $button-width-small: ($size-large / 2);
+  $button-width-small: calc($size-large / 2);
   $button-bgc: $color-fsa-tertiary-100;
   $button-bgc-focus: $color-fsa-white;
   $button-border-color: $form-outline-color;
@@ -48,7 +48,7 @@
     & {
       display: block;
       width: 90%;
-      width: calc(100% - #{$button-width});
+      width: (100% - #{$button-width});
     }
     &:focus-within {
       position: relative;
@@ -57,11 +57,11 @@
 
     // scss-lint:disable SelectorFormat
     .fsa-spinbox--small & {
-      width: calc(100% - #{$button-width-small});
+      width: (100% - #{$button-width-small});
     }
 
     .fsa-spinbox--large & {
-      width: calc(100% - #{$button-width-large});
+      width: (100% - #{$button-width-large});
     }
 
   }

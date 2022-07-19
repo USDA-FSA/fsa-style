@@ -86,10 +86,7 @@
 
   .fsa-slider-vertical & {
     width: var(--slider-vertical-height);
-    transform-origin:
-      calc(var(--slider-vertical-height) * .5)
-      calc(var(--slider-vertical-height) * .5)
-    ;
+    transform-origin: calc( var(--slider-vertical-height) * .5) calc( var(--slider-vertical-height) * .5);
     transform: rotate(-90deg);
     margin: 0;
   }

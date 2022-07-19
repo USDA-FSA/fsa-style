@@ -104,7 +104,7 @@ $marker-bgc-success: $color-fsa-primary-200;
 
 $border-none : 0;
 $border-xxs  : 1px;
-$border-xs   : ($size-base / 2);
+$border-xs   : calc($size-base / 2);
 $border-s    : $size-base;
 $border-m    : $size-small;
 $border-l    : $size-default;

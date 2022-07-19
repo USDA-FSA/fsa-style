@@ -114,9 +114,9 @@
       box-shadow: 0 0 0 1px $color-fsa-tertiary-200 inset;
       display: block;
       width: 100%;
-      padding: ($padding) ($padding + ($padding / 2));
+      padding: $padding ($padding + calc($padding / 2));
       text-decoration: none;
-      border-radius: ($button-border-radius / 2);
+      border-radius: calc($button-border-radius / 2);
       text-align: center;
       text-transform: uppercase;
 

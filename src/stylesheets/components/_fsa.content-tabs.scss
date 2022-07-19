@@ -169,8 +169,8 @@
     // scss-lint:disable SelectorFormat
     .fsa-content-tabs--justified & {
       @include breakpoint(L) {
-        padding-left: ($tab-padding / 2);
-        padding-right: ($tab-padding / 2);
+        padding-left: calc($tab-padding / 2);
+        padding-right: calc($tab-padding / 2);
       }
     }
 

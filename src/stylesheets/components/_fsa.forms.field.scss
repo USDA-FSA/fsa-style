@@ -103,7 +103,7 @@
 
     &--medium {
       @include breakpoint(M) {
-        max-width: ($fsa-form-width / 2);
+        max-width: calc($fsa-form-width / 2);
       }
     }
 

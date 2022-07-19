@@ -540,7 +540,7 @@ $dateCalendar: fsa-date-calendar;
     font-weight: normal;
     text-transform: uppercase;
     border-width: 0;
-    padding: ($date-calendar-table-cell-padding / 2);
+    padding: calc($date-calendar-table-cell-padding / 2);
   }
 
   // ----------------------------------------------------------------------------
