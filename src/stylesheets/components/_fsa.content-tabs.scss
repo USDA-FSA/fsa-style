@@ -169,8 +169,8 @@
     // scss-lint:disable SelectorFormat
     .fsa-content-tabs--justified & {
       @include breakpoint(L) {
-        padding-left: calc($tab-padding / 2);
-        padding-right: calc($tab-padding / 2);
+        padding-left: math.div($tab-padding, 2);
+        padding-right: math.div($tab-padding, 2);
       }
     }
 
@@ -192,7 +192,7 @@
 
     &:hover,
     &:focus {
-      box-shadow: 0 (-$size-base / 2) 0 0 $color-fsa-tertiary-300 inset;
+      box-shadow: 0 ( math.div(-$size-base, 2) ) 0 0 $color-fsa-tertiary-300 inset;
     }
 
     // scss-lint:disable SelectorFormat

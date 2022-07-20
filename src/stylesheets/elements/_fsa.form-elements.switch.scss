@@ -89,7 +89,7 @@ $switch-border-color: transparent;
     .#{$switch}__checkbox:disabled + & {}
 
     .#{$switch}__checkbox:indeterminate + & {
-      transform: translate3d(($switch-height / 2), 0, 0);
+      transform: translate3d( math.div($switch-height, 2), 0, 0);
     }
 
   }

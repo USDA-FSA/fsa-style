@@ -8,7 +8,7 @@
     width: 100%;
     background-color: $component-bgcolor;
     padding-top: $component-spacing;
-    padding-bottom: calc($component-spacing / 2);
+    padding-bottom: math.div($component-spacing, 2);
     color: $component-text-color;
   }
 
@@ -23,8 +23,8 @@
     // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon
     padding:
       ($component-spacing * 2)
-      ($component-spacing + ($component-spacing / 2))
-      ($component-spacing / 2)
+      ($component-spacing + math.div($component-spacing, 2))
+      math.div($component-spacing, 2)
     ;
     max-width: ($site-max-width + 24px);
 
@@ -161,7 +161,7 @@
     $size: $size-default;
 
     display: inline-block;
-    margin-left: calc($size-base / 2);
+    margin-left: math.div($size-base, 2);
     width: $size;
     height: ($size + .2rem);
     background-image: url('#{$image-path}/angle-arrow-down-hover.svg');

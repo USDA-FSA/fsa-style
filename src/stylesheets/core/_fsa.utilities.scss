@@ -46,7 +46,7 @@
 }
 
 @mixin fsa-grid-column-width($numerator, $denominator: $fsa-grid-columns) {
-  width: calc( calc($numerator / $denominator) * 100%);
+  width: calc( math.div($numerator, $denominator) * 100%);
 }
 
 @mixin fsa-grid($namespace: '') {
@@ -535,8 +535,8 @@ $breakpoints: (
   background-size:
     $size 100%,
     $size 100%,
-    ($size / 2) 100%,
-    ($size / 2) 100%
+    math.div($size, 2) 100%,
+    math.div($size, 2) 100%
   ;
 
   /* Opera doesn't support this in the shorthand */

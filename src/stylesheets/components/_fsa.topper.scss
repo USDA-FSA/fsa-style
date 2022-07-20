@@ -37,7 +37,7 @@
 
   &__link {
     display: inline-flex;
-    gap: calc($size-base / 2);
+    gap: math.div($size-base, 2);
     font-weight: $font-bold;
   }
 

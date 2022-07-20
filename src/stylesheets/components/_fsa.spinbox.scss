@@ -2,7 +2,7 @@
 
   $button-width: $size-medium + .1rem;
   $button-width-large: $size-large;
-  $button-width-small: calc($size-large / 2);
+  $button-width-small: math.div($size-large, 2);
   $button-bgc: $color-fsa-tertiary-100;
   $button-bgc-focus: $color-fsa-white;
   $button-border-color: $form-outline-color;

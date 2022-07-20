@@ -1,3 +1,5 @@
+const sass = require('sass');
+
 module.exports = function (grunt) {
 
   // Time how long tasks take. Can help when optimizing build times
@@ -20,15 +22,21 @@ module.exports = function (grunt) {
 
     // Sass all the style things
     sass: {
-      default: {
+      options: {
+        implementation: sass,
+        sourceMap: true,
+        outputStyle: 'expanded'
+      },
+      dist: {
+        options: {
+          implementation: sass,
+          sourceMap: true,
+          outputStyle: 'compressed'
+        },
         files: {
           'dist/css/<%= pkg.name %>.css': 'src/stylesheets/<%= pkg.name %>.scss',
           'dist/css/<%= pkg.name %>-docs.css': 'src/stylesheets/<%= pkg.name %>-docs.scss'
-        },
-        options: {
-          sourceMap: true,
-          outputStyle: 'expanded'
-        },
+        }
       },
       minify: {
         files: {
@@ -36,6 +44,7 @@ module.exports = function (grunt) {
           'dist/css/<%= pkg.name %>-docs.min.css': 'src/stylesheets/<%= pkg.name %>-docs.scss'
         },
         options: {
+          implementation: sass,
           sourceMap: true,
           outputStyle: 'compressed'
         },
@@ -57,12 +66,12 @@ module.exports = function (grunt) {
 
       // Stylesheets, fonts, img, and js **FROM** /node_modules/uswds/
 
-      uswds_stylesheets: {
+      /* uswds_stylesheets: {
         expand: true,
         src: '**',
         cwd: 'node_modules/uswds/src/stylesheets',
         dest: 'src/stylesheets/lib/uswds'
-      },
+      }, */
 
       uswds_fonts: {
         expand: true,
@@ -316,7 +325,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'copy:datepicker_bk',
-    'copy:uswds_stylesheets',
+    //'copy:uswds_stylesheets', // this will add decrecated SASS if copied
     'copy:uswds_fonts',
     'copy:uswds_img',
     'copy:uswds_js',

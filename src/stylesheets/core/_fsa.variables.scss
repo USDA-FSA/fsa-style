@@ -104,7 +104,7 @@ $marker-bgc-success: $color-fsa-primary-200;
 
 $border-none : 0;
 $border-xxs  : 1px;
-$border-xs   : calc($size-base / 2);
+$border-xs   : math.div($size-base, 2);
 $border-s    : $size-base;
 $border-m    : $size-small;
 $border-l    : $size-default;
@@ -121,8 +121,8 @@ $radius-oval : 100%;
 $shadow-color: transparentize($color-fsa-tertiary, .85);
 
 $shadow-size-popout:  0 $size-default  $size-default (-$size-default) $shadow-color, 0 $size-medium $size-large   $size-base  $shadow-color   , 0 $size-small    $size-extra-large $size-small    $shadow-color;
-$shadow-size-overlay: 0 $size-base     $size-base    (-($size-base))  $shadow-color, 0 $size-small  $size-default ($size-base/2) $shadow-color, 0 $size-base     $size-default     ($size-base/2) $shadow-color;
-$shadow-size-raised:  0 ($size-base/2) $size-base    (-($size-base))  $shadow-color, 0 $size-base   $size-base 0  $shadow-color               , 0 ($size-base/2) $size-default     0              $shadow-color;
+$shadow-size-overlay: 0 $size-base     $size-base    (-($size-base))  $shadow-color, 0 $size-small  $size-default math.div($size-base, 2) $shadow-color, 0 $size-base $size-default math.div($size-base, 2) $shadow-color;
+$shadow-size-raised:  0 math.div($size-base, 2) $size-base    (-($size-base))  $shadow-color, 0 $size-base   $size-base 0  $shadow-color, 0 math.div($size-base, 2) $size-default 0 $shadow-color;
 $shadow-size-none:    none;
 
 // ---------------------------------------------------------------------------

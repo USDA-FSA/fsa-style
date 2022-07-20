@@ -1,3 +1,5 @@
+@use 'sass:math' as math;
+
 // Vendor USWDS -------------- //
 
 @import 'lib/uswds/lib/bourbon';
@@ -28,8 +30,8 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
   --grid-demo-columns: #{$fsa-grid-columns};
   --grid-demo-gutter: #{$fsa-grid-gutter};
   --grid-demo-bgcolor: #{transparentize($color-fsa-aqua, .92)};
-  --grid-demo-repeating-width: calc(100% / var(--grid-demo-columns));
-  --grid-demo-column-width: ( calc(100% / var(--grid-demo-columns) ) - var(--grid-demo-gutter));
+  --grid-demo-repeating-width: math.div(100%, var(--grid-demo-columns));
+  --grid-demo-column-width: ( math.div(100%, var(--grid-demo-columns) ) - var(--grid-demo-gutter));
   --grid-demo-background-width: (100% + var(--grid-demo-gutter));
   --grid-demo-background-columns: repeating-linear-gradient(
     to right,
@@ -267,7 +269,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
             $size: $size-default;
             content : '';
             display: inline-block;
-            margin-left: $size-base + ($size-base / 2);
+            margin-left: $size-base + math.div($size-base, 2);
             width: $size;
             height: ($size + .2rem);
             background-image: url('#{$image-path}/angle-arrow-down-hover.png');
@@ -324,7 +326,7 @@ $color-annotation: $color-fsa-secondary; //  $color-fsa-red
         box-shadow: $shadow-size-overlay;
 
         .docs__nav--fixed & {
-          max-height: calc("100vh - 42px");
+          max-height: 95vh; // CDH FIX prev... (100vh - 42px)
           border-top-color: $color-fsa-primary-900;
         }
 

@@ -21,7 +21,7 @@
     @include breakpoint(M) {
       content: '';
       position: absolute;
-      left: -($size-default + ($size-base / 2));
+      left: -( $size-default + math.div($size-base, 2) );
       top: 0;
       bottom: 0;
       width: 4px;
@@ -103,7 +103,7 @@
 
     &--medium {
       @include breakpoint(M) {
-        max-width: calc($fsa-form-width / 2);
+        max-width: math.div($fsa-form-width, 2);
       }
     }
 

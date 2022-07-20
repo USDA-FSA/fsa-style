@@ -164,7 +164,7 @@
       outline-offset: -2px;
 
       .fsa-nav-global__text {
-        box-shadow: 0 (-($nav-spacing-unit / 3) / 2) 0 0 $nav-text-color inset;
+        box-shadow: 0 ( math.div( -( math.div($nav-spacing-unit, 3) ), 2) ) 0 0 $nav-text-color inset;
       }
 
     }
@@ -178,7 +178,7 @@
 
       .fsa-nav-global__text {
 
-        box-shadow: 0 (-($nav-spacing-unit / 3)) 0 0 $nav-highlight-color inset;
+        box-shadow: 0 (-( math.div($nav-spacing-unit, 3) )) 0 0 $nav-highlight-color inset;
 
         @media print {
           box-shadow: none;
@@ -203,7 +203,7 @@
 
       .fsa-nav-global__text {
         @include breakpoint(L) {
-          box-shadow: 0 (-($nav-spacing-unit / 3)) 0 0 $nav-highlight-text-color-strong inset;
+          box-shadow: 0 ( -(math.div($nav-spacing-unit, 3)) ) 0 0 $nav-highlight-text-color-strong inset;
         }
       }
 
@@ -296,14 +296,14 @@
 
   &__sub-menu-bd {
 
-    padding: $nav-spacing-unit 0 calc($nav-spacing-unit / 2);
+    padding: $nav-spacing-unit 0 math.div($nav-spacing-unit, 2);
 
     // scss-lint:disable SelectorFormat
     .fsa-nav-global__list-item--multi-column & {
 
       @include breakpoint(L) {
         columns: 4;
-        column-gap: $nav-spacing-unit / 2;
+        column-gap: math.div($nav-spacing-unit, 2);
         padding-bottom: ($nav-spacing-unit + $size-base);
       }
 
@@ -366,7 +366,7 @@
       display: block;
       color: $text-color;
       text-decoration: none;
-      padding: calc($nav-spacing-unit / 3) ($nav-spacing-unit + $size-base);
+      padding: math.div($nav-spacing-unit, 3) ($nav-spacing-unit + $size-base);
     }
 
     &:visited {

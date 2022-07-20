@@ -84,7 +84,7 @@
     .fsa-stepped-tabs &,
     .fsa-nav-global__text &,
     .fsa-content-tabs & {
-      margin-left: calc($size-base / 2);
+      margin-left: math.div($size-base, 2);
       margin-right: $size-base;
     }
   }

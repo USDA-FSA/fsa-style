@@ -78,7 +78,7 @@
 
   &__label {
 
-    padding: calc($size-base / 2) 0;
+    padding: math.div($size-base, 2) 0;
 
     .fsa-select-multi__check + & {
       display: block;
