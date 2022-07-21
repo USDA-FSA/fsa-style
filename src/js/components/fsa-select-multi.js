@@ -65,7 +65,6 @@ function selectMulti__setState(){
   var _selectAll = document.querySelectorAll('[data-behavior~="select-multi-all"]');
   Helper.forEach(_selectAll, function (index, value) {
 
-    //console.log(typeof value);
     //var _parent = value.closest('.fsa-select-multi');
     var _parent = Helper.getClosest(value, '.fsa-select-multi');
     var _selectAll = value;
@@ -87,4 +86,3 @@ function selectMulti__setState(){
 
 selectMulti__setState();
 
-console.log('SelectMultipleComponent loaded, its JS is NOT to be used for Production, demo purposes only');

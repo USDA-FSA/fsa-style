@@ -59,4 +59,3 @@ $('body').on('change', '[data-behavior~="toggle-demo-background"]', function(eve
 
 })
 
-console.log('DocsColor loaded, its JS is NOT to be used for Production, demo purposes only');

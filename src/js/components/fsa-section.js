@@ -12,4 +12,3 @@ $('body').on('change', '[data-behavior~="toggle-fullscreen-components"]', functi
 
 })
 
-console.log('Section loaded, its JS is NOT to be used for Production, demo purposes only');

@@ -1,7 +1,7 @@
 {
   "name": "fsa-style",
   "description": "Open Source CSS Framework of the USDA's FPAC Design System",
-  "version": "2.7.3",
+  "version": "2.7.4",
   "main": "index.js",
   "license": "SEE LICENSE in LICENSE.md",
   "repository": {
@@ -10,8 +10,9 @@
   },
   "author": "USDA FPAC - Farm Production and Conservation, ISSDOB/FBCSS",
   "contributors": [
-    "Francis Rupert <France.Rupert@gmail.com> (https://github.com/francisrupert)",
     "Casey Hill <bignamehere@gmail.com> (https://github.com/bignamehere)",
+    "Jamie Thompson <jamieraethompson@gmail.com> (https://github.com/whatnextjamie)",
+    "Francis Rupert <France.Rupert@gmail.com> (https://github.com/francisrupert)",
     "Brian Mills (https://www.linkedin.com/in/brianmills)"
   ],
   "bugs": {

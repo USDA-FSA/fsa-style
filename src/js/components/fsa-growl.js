@@ -125,4 +125,3 @@ function growl__trapTab(e){
   }
 }
 
-console.log('GrowlComponent loaded, its JS is NOT to be used for Production, demo purposes only');

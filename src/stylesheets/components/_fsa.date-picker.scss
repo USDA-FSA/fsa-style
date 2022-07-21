@@ -262,7 +262,7 @@ $dateCalendar: fsa-date-calendar;
       padding: 0 $size-default $size-base $size-default;
       background-repeat: no-repeat;
       background-position: 50%;
-      background-size: ($size-medium + .2rem);
+      background-size: $size-medium + .2;
     }
 
     &:hover {

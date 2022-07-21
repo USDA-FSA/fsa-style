@@ -133,7 +133,9 @@ module.exports = function (grunt) {
           'src/stylesheets/*.scss',
           'src/stylesheets/**/*.scss'
         ],
-        tasks: ['sass', 'scsslint', 'postcss', 'usebanner'],
+        //tasks: ['sass', 'scsslint', 'postcss', 'usebanner'],
+        tasks: ['sass', 'postcss', 'usebanner'],
+        options: { nospawn: true }
         options: { nospawn: true }
       },
       html: {

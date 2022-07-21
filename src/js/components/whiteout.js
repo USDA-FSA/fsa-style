@@ -32,7 +32,6 @@ export let Whiteout = {
   },
 
   init: () => {
-    console.log('WhiteoutComponent loaded, its JS is NOT to be used for Production, demo purposes only');
     Whiteout.initHelpers();
   }
 

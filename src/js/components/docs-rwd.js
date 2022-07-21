@@ -61,4 +61,3 @@ $('body').on('change', '[data-behavior~="toggle-rwd-table"]', function(event) {
 
 })
 
-console.log('DocsRWD loaded, its JS is NOT to be used for Production, demo purposes only');1

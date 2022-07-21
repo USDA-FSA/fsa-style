@@ -19,7 +19,6 @@ export let Modal = {
   },
 
   initHelpers: () => {
-    console.log('initHelpers')
 
     let triggers = document.querySelectorAll('[data-behavior~="open-modal"]');
     let closeButtons = document.querySelectorAll('[data-behavior~="close-modal"]');
@@ -124,7 +123,6 @@ export let Modal = {
   },
 
   init: () => {
-    console.log('ModalComponent loaded, its JS is NOT to be used for Production, demo purposes only');
     Modal.initHelpers();
   }
 

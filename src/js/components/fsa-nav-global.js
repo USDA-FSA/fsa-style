@@ -76,7 +76,7 @@ if (document.querySelectorAll('.docs__page').length == 0) {
         document.querySelector('.fsa-nav-global__link[aria-expanded="true"]').setAttribute('aria-expanded', 'false');
         document.querySelector('.fsa-nav-global__sub-menu[aria-hidden="false"]').setAttribute('aria-hidden', 'true');
       }
-      console.log('you focused an item');
+  
     });
 
   });
@@ -90,8 +90,5 @@ if (document.querySelectorAll('.docs__page').length == 0) {
       }
     });
   });
-
-
-  console.log('FSA_NAV_GLOBAL loaded, its JS ***not*** to be used for Production');
 
 }

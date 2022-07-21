@@ -55,5 +55,3 @@ if(steppedControl__elements.length){
   });
 
 }
-
-console.log('SteppedControl loaded, its JS is NOT to be used for Production, demo purposes only');

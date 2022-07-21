@@ -62,7 +62,6 @@ $('body').on('click', '[data-behavior~="fakeSystemTrackLoop"]', function(event) 
   function fakeProgressUpdate(percentageComplete) {
 
     setTimeout(function(){
-      // console.log("'percentageComplete' is " + percentageComplete + ", and 'delay' is " + (66 * percentageComplete));
       $targetBar.css('transform','scaleX(.' + percentageComplete +')');
       $targetValue.html(percentageComplete + '%');
     }, 66 * percentageComplete);
@@ -88,4 +87,3 @@ $('body').on('click', '[data-behavior~="fakeTableShow"]', function(event) {
   $('#tableProgress').removeAttr('hidden');
 })
 
-console.log('ProgressComponent loaded, its JS is NOT to be used for Production, demo purposes only');1
