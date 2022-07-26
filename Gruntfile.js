@@ -47,8 +47,8 @@ module.exports = function (grunt) {
           implementation: sass,
           sourceMap: true,
           outputStyle: 'compressed'
-        },
-      },
+        }
+      }
     },
 
     // Copies templates and assets from dependencies and/or src
@@ -135,7 +135,6 @@ module.exports = function (grunt) {
         ],
         //tasks: ['sass', 'scsslint', 'postcss', 'usebanner'],
         tasks: ['sass', 'postcss', 'usebanner'],
-        options: { nospawn: true }
         options: { nospawn: true }
       },
       html: {
