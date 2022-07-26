@@ -11,3 +11,4 @@ src/working.html
 published
 .vscode
 yarn-error\.log
+package-lock.json
