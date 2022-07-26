@@ -22,7 +22,8 @@
     "build": "grunt build",
     "start": "grunt",
     "deploy": "grunt deploy",
-    "test": "grunt test"
+    "test": "grunt test",
+    "compress": "grunt compress"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.1",
