@@ -288,6 +288,14 @@
 
     }
 
+    .fsa-nav-global__list-item--multi-column:last-child & {
+      @include breakpoint(L) {
+        right: 0;
+        left: 0;
+      }
+
+    }
+
     &[aria-hidden="false"] {
       display: block;
     }
