@@ -61,6 +61,7 @@
   &__link {
 
     & {
+      @include reset-button();
       color: $color-fsa-link;
       text-decoration: none;
       display: inline-flex;
