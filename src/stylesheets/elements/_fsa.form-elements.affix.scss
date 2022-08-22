@@ -32,6 +32,15 @@
     width: 100%;
   }
 
+  &--error {
+    border-color: $form-error-color;
+    box-shadow: 0 0 0 1px $form-error-color inset;
+    background-color: $form-error-color-bg;
+    .fsa-input {
+      z-index: -1;
+    }
+  }
+
   &--disabled {
     background-color: $form-disabled-bg-color;
     color: $form-text-color-disabled;
