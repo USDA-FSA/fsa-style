@@ -1,7 +1,7 @@
 {
   "name": "fsa-style",
   "description": "Open Source CSS Framework of the USDA's FPAC Design System",
-  "version": "2.7.4",
+  "version": "2.7.5",
   "main": "index.js",
   "license": "SEE LICENSE in LICENSE.md",
   "repository": {
@@ -48,7 +48,7 @@
     "iltorb": "^2.4.5",
     "load-grunt-tasks": "^3.5.2",
     "pixrem": "^3.0.2",
-    "sass": "^1.53.0",
+    "sass": "^1.54.5",
     "time-grunt": "^1.4.0"
   },
   "dependencies": {
