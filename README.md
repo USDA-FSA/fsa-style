@@ -1,3 +1,5 @@
+# DEPRECATION NOTICE: FSA Style will no longer be updated on this repo. The USDA-FPAC repository is the new location for this Design resource.
+
 # FSA Style - a CSS Framework implementation of the FPAC Design System
 
 USDA FPAC's **Visual Language** and **HTML/CSS Framework**, as documented by the [FPAC Design System](http://usda-fsa.github.io/fsa-design-system/).
