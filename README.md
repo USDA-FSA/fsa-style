@@ -2,6 +2,10 @@
 
 USDA FPAC's **Visual Language** and **HTML/CSS Framework**, as documented by the [FPAC Design System](http://usda-fsa.github.io/fsa-design-system/).
 
+
+This digital resouce is made available across the Department and to other Federal agencies. It supports the requirements of OMB Memorandum M-16-21, “Federal Source Code Policy: Achieving Efficiency, Transparency, and Innovation through Reusable and Open Source Software". This policy requires agencies to develop plans to release at least 20 percent of new custom-developed source code as Open Source Software (OSS) when commissioning new custom software.
+
+
 The Design System comprises of two core repositories:
 
 1. **[fsa-design-system](https://github.com/USDA-FSA/fsa-style/)**: Source code for the [Design System web site](http://usda-fsa.github.io/fsa-design-system), documenting the FSA Style and accompanying guidelines.
